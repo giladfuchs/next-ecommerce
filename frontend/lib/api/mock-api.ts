@@ -8,6 +8,10 @@ export async function mockResponse(input: string): Promise<Response> {
     let json;
 
     if (input === "/data") {
+        return new Response(JSON.stringify(json), {
+            status: 200,
+            headers: { "Content-Type": "application/json" },
+        });
         json = {
             products: mockData.products,
             categories: mockData.categories,
