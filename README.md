@@ -20,7 +20,7 @@ The layout is fully optimized for both directions, ensuring a seamless multiling
 
 Deploy your own version of this e-commerce template with Vercel (frontend only, using mock data):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce&root=frontend&env=NEXT_PUBLIC_SITE_NAME,NEXT_PUBLIC_BASE_URL,NEXT_PUBLIC_API_URL,NEXT_PUBLIC_USE_MOCK_DATA,NEXT_PUBLIC_FOOTER_DATA,NEXT_PUBLIC_ICON_IMAGE_URL&envDescription=Basic+store+env+vars&envLink=https://github.com/giladfuchs/next-ecommerce/blob/master/frontend/.env.template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce&env=NEXT_PUBLIC_SITE_NAME,NEXT_PUBLIC_BASE_URL,NEXT_PUBLIC_API_URL,NEXT_PUBLIC_USE_MOCK_DATA,NEXT_PUBLIC_FOOTER_DATA,NEXT_PUBLIC_ICON_IMAGE_URL&envDescription=Storefront+environment+variables&envLink=https://github.com/giladfuchs/next-ecommerce/blob/main/frontend/.env.template)
 ---
 
 
