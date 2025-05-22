@@ -18,9 +18,9 @@ export const GOOGLE_ANALYTICS = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 export const GOOGLE_SITE_VERIFICATION =
   process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
-export const FOOTER_DATA = process.env.NEXT_PUBLIC_FOOTER_DATA || "";
+export const FOOTER_DATA = process.env.NEXT_PUBLIC_FOOTER_DATA || "ecommerce@gmail.com,Tel-Aviv,0521234567,ecommerce,ecommerce,https://www.example.com";
 export const WHATSAPP_MESSAGE = process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE;
-export const ICON_IMAGE_URL = process.env.NEXT_PUBLIC_ICON_IMAGE_URL ?? "";
+export const ICON_IMAGE_URL = process.env.NEXT_PUBLIC_ICON_IMAGE_URL ?? "https://racit0uja2cckwpw.public.blob.vercel-storage.com/logo-social.png";
 
 export const MAX_FILE_SIZE_MB = 1;
 
