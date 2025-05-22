@@ -13,7 +13,7 @@ export const baseUrl: string =
     process.env.NEXT_PUBLIC_BASE_URL && process.env.NEXT_PUBLIC_BASE_URL.trim() !== ""
         ? process.env.NEXT_PUBLIC_BASE_URL
         : "https://your-store.vercel.app";
-export const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME;
+export const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME||"ECOMMERCE";
 export const USE_MOCK_DATA =
     process.env.NEXT_PUBLIC_USE_MOCK_DATA === undefined ||
     process.env.NEXT_PUBLIC_USE_MOCK_DATA === "true";
