@@ -2,12 +2,17 @@ const isDev = process.env.NODE_ENV === "development";
 const isTest = process.env.NODE_ENV === "test";
 const port = process.env.NEXT_PUBLIC_PORT || "4000";
 
-export const API_URL =
-  isDev || isTest
-    ? `http://localhost:${port}`
-    : process.env.NEXT_PUBLIC_API_URL;
-export const baseUrl: string = process.env.NEXT_PUBLIC_BASE_URL ?? "https://your-store.vercel.app";
+export const API_URL: string =
+    isDev || isTest
+        ? `http://localhost:${port}`
+        : process.env.NEXT_PUBLIC_API_URL && process.env.NEXT_PUBLIC_API_URL.trim() !== ""
+            ? process.env.NEXT_PUBLIC_API_URL
+            : "https://your-api.vercel.app";
 
+export const baseUrl: string =
+    process.env.NEXT_PUBLIC_BASE_URL && process.env.NEXT_PUBLIC_BASE_URL.trim() !== ""
+        ? process.env.NEXT_PUBLIC_BASE_URL
+        : "https://your-store.vercel.app";
 export const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME;
 export const GOOGLE_ANALYTICS = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 export const GOOGLE_SITE_VERIFICATION =
