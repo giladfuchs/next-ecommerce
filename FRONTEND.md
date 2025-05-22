@@ -1,19 +1,9 @@
 # Next.js E-commerce Frontend 🛍️
 
 A modern, accessible e-commerce storefront built with **Next.js 14**, **TypeScript**, **MUI**, and **Tailwind CSS** — styled primarily with MUI, extended with Tailwind utilities.  
-Includes a full admin dashboard, product editor, and order management.
+Includes a full admin dashboard, product editor, order management, and support for both **mock mode** and **real API** connections.
 
----
-
-## 🌐 Live Preview
-
-This project uses a mixed mock dataset of **Hebrew (RTL)** and **English (LTR)** product and category entries.  
-The layout is fully optimized for both directions, ensuring a seamless multilingual experience.
-
-- **🇺🇸 LTR (English):** [modern-ecommerce-store.vercel.app/en](https://modern-ecommerce-store.vercel.app/en)
-- **🇮🇱 RTL (Hebrew):** [modern-ecommerce-store.vercel.app/he](https://modern-ecommerce-store.vercel.app/he)
-- **🔐 Admin Panel:** [modern-ecommerce-store.vercel.app/admin](https://modern-ecommerce-store.vercel.app/admin) — includes a built-in login form
-
+ 
 ---
 
 ## 🚀 Getting Started
@@ -33,6 +23,29 @@ To run the project locally:
   ```
 
 ---
+
+## 🧪 E2E Testing
+
+This project uses [Playwright](https://playwright.dev/) for end-to-end tests of both the storefront and admin panel.
+
+### Run tests locally:
+Make sure your dev server is already running on port **3000**,  
+and that you’ve set up a test database with user and seed data  
+(see `backend/scripts` for setup instructions), then run:
+
+
+```bash
+pnpm test
+```
+
+This will:
+
+- Start a temporary **frontend test instance** on port **3001**
+- Start a temporary **backend test instance** on port **4013**
+- Run the **Playwright test suite** in **headed mode**
+- Exit after tests complete
+---
+
 
 ### 🛠️ Environment Variables
 
@@ -83,8 +96,8 @@ lib/
 
 ---
 
-## 🙏 Acknowledgments
+## 🙏 Credits
 
-- [Vercel Commerce](https://github.com/vercel/commerce) for the initial template.
+- Originally inspired by [Vercel Commerce](https://github.com/vercel/commerce), but rebuilt and significantly extended.
 
 ---

@@ -55,26 +55,20 @@ export async function DBToJson() {
 }
 
 
+import mockData from "../../lib/api/mock-data.json";
 
-async function jsonToDB() {
+export async function importMockData() {
     await DB.initialize();
-
-
-
     await DB.getRepository(Category).save(mockData.categories);
     await DB.getRepository(Product).save(mockData.products);
     await DB.getRepository(Order).save(mockData.orders);
-
-
     console.log("✅ Imported mock data into database");
-    process.exit(0);
 }
 
-
-DBToJson().catch((err) => {
-    console.error("❌ Failed to export mock data", err);
-    process.exit(1);
-});
+// DBToJson().catch((err) => {
+//     console.error("❌ Failed to export mock data", err);
+//     process.exit(1);
+// });
 // jsonToDB().catch((err) => {
 //     console.error("❌ Failed to import mock data", err);
 //     process.exit(1);

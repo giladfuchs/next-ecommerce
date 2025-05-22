@@ -5,7 +5,7 @@ import {
   AGTableModelType,
   NewOrderPayload,
 } from "../types";
-import { API_URL } from "../config";
+import {API_URL, USE_MOCK_DATA} from "../config";
 import { cache } from "./cache";
 type Callback = (loading: boolean) => void;
 
@@ -52,7 +52,7 @@ export async function serverFetch(
   if (isBrowser) setGlobalLoading(true);
 
   try {
-    if (process.env.NEXT_PUBLIC_USE_MOCK_DATA === "true") {
+    if (USE_MOCK_DATA) {
       const { mockResponse } = await import("./mock-api");
       return await mockResponse(input);
     }

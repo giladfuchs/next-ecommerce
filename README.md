@@ -18,19 +18,22 @@ The layout is fully optimized for both directions, ensuring a seamless multiling
 
 ## ▲ Deploy Your Own
 
-Deploy your own version of this e-commerce template with Vercel (frontend only, using mock data):
+Deploy your own version of this e-commerce storefront with mock data — no configuration required.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce&env=NEXT_PUBLIC_SITE_NAME,NEXT_PUBLIC_BASE_URL,NEXT_PUBLIC_API_URL,NEXT_PUBLIC_USE_MOCK_DATA,NEXT_PUBLIC_FOOTER_DATA,NEXT_PUBLIC_ICON_IMAGE_URL&envDescription=Storefront+environment+variables&envLink=https://github.com/giladfuchs/next-ecommerce/blob/main/frontend/.env.template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce)
+
+> 🧪 This version runs on local mock data by default.  
+> You can update environment variables later in your Vercel dashboard.  
+> The backend (`/backend`) is optional and not included in this deploy.
 ---
 
 
-## 🚀 Getting Started
+## 🚀 Getting Started (for Local Development)
 
-You’ll find full install instructions inside each folder:
+This project supports both mock-mode and fullstack development. Clone the repo and follow the appropriate setup guide:
 
-- [📦 `/frontend/README.md`](./frontend/README.md)
-- [🛠️ `/backend/README.md`](./backend/README.md)
-
+- [🛍️ FRONTEND.md](./FRONTEND.md) — for running the frontend locally with either mock data or a live backend (via env config)
+- [🛠️ backend/README.md](./backend/README.md) — for setting up the Express API, database, and local admin tools
 ---
 
 ## 🤝 Contributing

@@ -35,11 +35,11 @@ export async function CreateUser(
     process.exit(0);
 }
 
-const username = "admin";
-const email = "admin@admin.com";
-const password = "admin";
-CreateUser(username, email, password).catch((err) => {
-    console.error(err);
-    process.exit(1);
-});
+// const username = "admin";
+// const email = "admin@admin.com";
+// const password = "admin";
+// CreateUser(username, email, password).catch((err) => {
+//     console.error(err);
+//     process.exit(1);
+// });
 //SEED=true pnpm tsx scripts/insert_user.ts
