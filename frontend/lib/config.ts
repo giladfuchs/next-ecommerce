@@ -6,7 +6,7 @@ export const API_URL =
   isDev || isTest
     ? `http://localhost:${port}`
     : process.env.NEXT_PUBLIC_API_URL;
-export const baseUrl: string = process.env.NEXT_PUBLIC_BASE_URL ?? "";
+export const baseUrl: string = process.env.NEXT_PUBLIC_BASE_URL ?? "https://your-store.vercel.app";
 
 export const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME;
 export const GOOGLE_ANALYTICS = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
