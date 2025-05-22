@@ -18,7 +18,8 @@
   },
   "scripts": {
     "build": "cd frontend && pnpm build",
-    "start": "cd frontend && pnpm start"
+    "start": "cd frontend && pnpm start",
+    "postinstall": "cd frontend && pnpm install"
   }
 
 }
