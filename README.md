@@ -20,7 +20,7 @@ The layout is fully optimized for both directions, ensuring a seamless multiling
 
 Deploy your own version of this e-commerce template with Vercel (frontend only, using mock data):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/nextjs-ecommerce&env=NEXT_PUBLIC_SITE_NAME,NEXT_PUBLIC_USE_MOCK_DATA,NEXT_PUBLIC_FOOTER_DATA&envDescription=Site+configuration+for+mock+template&envLink=https://github.com/giladfuchs/nextjs-ecommerce&envDefaults=NEXT_PUBLIC_SITE_NAME:ECOMMERCE,NEXT_PUBLIC_USE_MOCK_DATA:true,NEXT_PUBLIC_FOOTER_DATA:ecommerce@gmail.com,Tel-Aviv,0521234567,ecommerce,ecommerce,https://www.example.com)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/nextjs-ecommerce)
 ---
 
 
