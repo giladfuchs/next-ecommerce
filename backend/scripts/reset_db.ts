@@ -18,10 +18,12 @@ async function delete_models() {
   const em = DB.manager;
 
   console.log("🧨 Dropping product-related tables...");
-  // await em.query(`DROP TABLE IF EXISTS "product_image" CASCADE;`);
-  // await em.query(`DROP TABLE IF EXISTS "product" CASCADE;`);
-  // await em.query(`DROP TABLE IF EXISTS "category" CASCADE;`);
-  await em.query(`DROP TABLE IF EXISTS "user" CASCADE;`);
+  await em.query(`DROP TABLE IF EXISTS "product_image" CASCADE;`);
+  await em.query(`DROP TABLE IF EXISTS "product" CASCADE;`);
+  await em.query(`DROP TABLE IF EXISTS "category" CASCADE;`);
+  await em.query(`DROP TABLE IF EXISTS "order_item" CASCADE;`);
+  await em.query(`DROP TABLE IF EXISTS "order" CASCADE;`);
+  // await em.query(`DROP TABLE IF EXISTS "user" CASCADE;`);
   console.log("✅ Tables dropped.");
 }
 

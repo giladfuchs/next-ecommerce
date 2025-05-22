@@ -7,7 +7,6 @@ import {
 } from "../types";
 import { API_URL } from "../config";
 import { cache } from "./cache";
-
 type Callback = (loading: boolean) => void;
 
 let subscribers: Callback[] = [];
@@ -53,6 +52,11 @@ export async function serverFetch(
   if (isBrowser) setGlobalLoading(true);
 
   try {
+    if (process.env.NEXT_PUBLIC_USE_MOCK_DATA === "true") {
+      const { mockResponse } = await import("./mock-api");
+      return await mockResponse(input);
+    }
+
     return await fetch(`${API_URL}${input}`, {
       ...restInit,
       headers: finalHeaders,

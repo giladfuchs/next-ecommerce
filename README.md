@@ -18,10 +18,9 @@ The layout is fully optimized for both directions, ensuring a seamless multiling
 
 ## ▲ Deploy Your Own
 
-Deploy your own version of this e-commerce template with Vercel:
+Deploy your own version of this e-commerce template with Vercel (frontend only, using mock data):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce)
-
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce&root=frontend&project-name=nextjs-ecommerce&repo-name=nextjs-ecommerce)
 ---
 
 

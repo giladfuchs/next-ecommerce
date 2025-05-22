@@ -22,7 +22,7 @@
     "dev": "tsx src/dev.ts",
     "nodemon": "nodemon --exec tsx src/dev.ts",
     "debug": "npx --node-arg=--inspect-brk tsx src/dev.ts",
-    "debug:script": "node --inspect-brk node_modules/.bin/tsx scripts/insert_data.ts",
+    "debug:script": "node --inspect-brk node_modules/.bin/tsx scripts/real_data.ts",
     "typecheck": "tsc --noEmit",
     "build": "pnpm typecheck && tsc",
     "start": "node dist/index.js",

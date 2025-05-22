@@ -49,13 +49,13 @@ After your database is ready, you can insert initial categories and test product
 - ▶️ For local development:
 
 ```bash
-pnpm tsx scripts/insert_data.ts
+pnpm tsx scripts/real_data.ts
 ```
 
 - 🧪 For test database (with seed flag):
 
 ```bash
-SEED=true pnpm tsx scripts/insert_data.ts
+SEED=true pnpm tsx scripts/real_data.ts
 ```
 
 ---
