@@ -9,6 +9,7 @@ export async function mockResponse(input: string): Promise<Response> {
 
     if (input === "/data") {
         json = {
+
             products: mockData.products,
             categories: mockData.categories,
         };
