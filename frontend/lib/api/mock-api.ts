@@ -8,16 +8,16 @@ export async function mockResponse(input: string): Promise<Response> {
     let json;
 
     if (input === "/data") {
-        json = {
-
-            products: [],
-            categories:[]
-        };
         // json = {
         //
-        //     products: mockData.products,
-        //     categories: mockData.categories,
+        //     products: [],
+        //     categories:[]
         // };
+        json = {
+
+            products: mockData.products,
+            categories: mockData.categories,
+        };
     } else if (input === "/auth/orders") {
         json = mockData.orders;
     } else if (input.startsWith("/auth/order/")) {
