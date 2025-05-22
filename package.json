@@ -1,0 +1,24 @@
+{
+  "name": "next-ecommerce-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend for Next.js e-commerce platform",
+  "author": "GILAD",
+  "license": "MIT",
+  "keywords": [
+    "nextjs",
+    "ecommerce",
+    "typescript",
+    "storefront",
+    "admin-dashboard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giladfuchs/next-ecommerce"
+  },
+  "scripts": {
+    "build": "cd frontend && pnpm build",
+    "start": "cd frontend && pnpm start"
+  }
+
+}
