@@ -9,7 +9,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { metadata_site_title } from "../../lib/assets/i18n/seo_heb";
+import { metadata_site_title } from "../../lib/assets/i18n/localizedMetadata";
 import { FOOTER_DATA, WHATSAPP_MESSAGE } from "../../lib/config";
 import { localeCache } from "../../lib/api";
 

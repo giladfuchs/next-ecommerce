@@ -53,7 +53,7 @@ export async function serverFetch(
 
   try {
     if (USE_MOCK_DATA) {
-      const { mockResponse } = await import("./mock-api");
+      const { mockResponse } = require("./mock-api");
       return await mockResponse(input);
     }
 

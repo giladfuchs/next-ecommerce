@@ -6,7 +6,7 @@ import {
   metadata_site_title,
   metadata_site_description,
   metadata_keywords,
-} from "../lib/assets/i18n/seo_heb";
+} from "../lib/assets/i18n/localizedMetadata";
 import { baseUrl, ICON_IMAGE_URL } from "../lib/config";
 
 export const metadata: Metadata = {

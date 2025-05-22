@@ -7,7 +7,7 @@ import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "lib/config";
 import {
   getCategoryTitle,
   getCategoryDescription,
-} from "lib/assets/i18n/seo_heb";
+} from "lib/assets/i18n/localizedMetadata";
 import { Product } from "lib/types";
 import { safeDecodeURIComponent } from "lib/helper";
 

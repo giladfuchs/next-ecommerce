@@ -31,7 +31,7 @@ import AccessibilityBar from "../components/shared/AccessibilityBar";
 import {
   metadata_site_description,
   metadata_site_title,
-} from "lib/assets/i18n/seo_heb";
+} from "lib/assets/i18n/localizedMetadata";
 import { localeCache } from "../lib/api";
 
 export const metadata = {
