@@ -20,6 +20,6 @@
     "build": "cd frontend && pnpm build",
     "start": "cd frontend && pnpm start",
     "postinstall": "cd frontend && pnpm install"
-  }
-
+  },
+  "packageManager": "pnpm@10.8.1"
 }
