@@ -1,6 +1,6 @@
 import {array_obj_to_obj_with_key} from "../types";
-import {mockData} from "./mock-data";
 
+import mockData from "./mock-data.json";
 
 export async function mockResponse(input: string): Promise<Response> {
 
@@ -8,13 +8,7 @@ export async function mockResponse(input: string): Promise<Response> {
     let json;
 
     if (input === "/data") {
-        // json = {
-        //
-        //     products: [],
-        //     categories:[]
-        // };
         json = {
-
             products: mockData.products,
             categories: mockData.categories,
         };
