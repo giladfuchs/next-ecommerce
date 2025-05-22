@@ -5,6 +5,10 @@
   "description": "Frontend for Next.js e-commerce platform",
   "author": "GILAD",
   "license": "MIT",
+  "scripts": {
+    "build": "cd frontend && pnpm install && pnpm build",
+    "start": "cd frontend && pnpm start"
+  },
   "keywords": [
     "nextjs",
     "ecommerce",
@@ -15,11 +19,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/giladfuchs/next-ecommerce"
-  },
-  "scripts": {
-    "build": "cd frontend && pnpm build",
-    "start": "cd frontend && pnpm start",
-    "postinstall": "cd frontend && pnpm install"
   },
   "packageManager": "pnpm@10.8.1"
 }
