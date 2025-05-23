@@ -18,7 +18,7 @@ export default function AdminLayout({
 
     if (!token || isExpired) {
       localStorage.clear();
-      router.replace("/login"); // use replace to prevent back nav to /admin
+      router.replace("/login");
     } else {
       setIsAllowed(true);
     }

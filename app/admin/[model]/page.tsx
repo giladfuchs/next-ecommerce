@@ -1,20 +1,19 @@
 "use client";
 
-import * as React from "react";
-import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+import { ColDef } from "ag-grid-community";
 import { Button, Container, Grid, TextField } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ImageIcon from "@mui/icons-material/Image";
-import { FormattedMessage, useIntl } from "react-intl";
-import { ColDef } from "ag-grid-community";
 
-import { AGTableModelType, get_columns_by_title, ModelType } from "lib/types";
-import { getCategories, getOrders, getProducts } from "lib/api";
-import { cache } from "lib/api/cache";
 import AGTable from "components/admin/table/AGTable";
 import { useLoading } from "lib/provider/LoadingProvider";
 import { LoadingTable } from "components/shared/Loading";
+
+import { AGTableModelType, get_columns_by_title, ModelType } from "lib/types";
+import { getCategories, getOrders, getProducts, cache } from "lib/api";
 
 export default function AdminPage({
   params,

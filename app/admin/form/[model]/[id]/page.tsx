@@ -1,25 +1,21 @@
 "use client";
-
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+import { toast } from "sonner";
 import { Container, Typography } from "@mui/material";
-import FormChild from "../../../../../components/admin/form/FormChild";
+
+import FormChild from "components/admin/form/FormChild";
 import {
+  AGTableModelType,
   array_obj_to_obj_with_key,
   create_form_fields,
+  form_fields_to_data,
   FormField,
   get_form_by_model,
   ModelType,
-  Image,
-  AGTableModelType,
-} from "../../../../../lib/types";
-import { useEffect, useState } from "react";
-import {
-  getCategories,
-  getProducts,
-  submitModel,
-} from "../../../../../lib/api";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation";
-import { FormattedMessage, useIntl } from "react-intl";
+} from "lib/types";
+import { cache, getCategories, getProducts, submitModel } from "lib/api";
 
 export default function FormPage({
   params,
@@ -30,10 +26,6 @@ export default function FormPage({
   const intl = useIntl();
 
   const { model, id } = params;
-  const [list, setList] = useState<Record<string, any[]>>({
-    products: [],
-    categories: [],
-  });
   const [fields, setFields] = useState<FormField[]>([]);
   const [fieldError, setFieldError] = useState<string | null>(null);
 
@@ -41,11 +33,10 @@ export default function FormPage({
 
   useEffect(() => {
     const init = async () => {
-      const products = await getProducts();
-      const categories = await getCategories();
-      setList({ products, categories });
-
-      const model_objs = model === ModelType.product ? products : categories;
+      const model_objs =
+        model === ModelType.product
+          ? await getProducts()
+          : await getCategories();
       const obj = is_add
         ? {}
         : (array_obj_to_obj_with_key(model_objs, Number(id), "id") ?? {});
@@ -59,64 +50,26 @@ export default function FormPage({
   const title = is_add ? `form.add.${model}` : `form.edit.${model}`;
 
   const handleSubmit = async (send_fields: FormField[]) => {
-    const data = Object.fromEntries(
-      send_fields.map((f) => {
-        let value = f.value;
-
-        if (typeof value === "string") {
-          value = value.trim();
-          if (value === "") return [f.key, null];
-        }
-
-        if (f.type === "number" && typeof value === "string") {
-          const num = parseFloat(value);
-          return [f.key, isNaN(num) ? null : num];
-        }
-
-        return [f.key, value];
-      }),
-    );
-    if (model === ModelType.product) {
-      const images: Image[] = Array.isArray(data.images) ? data.images : [];
-
-      const filteredImages = images
-        .map((img) => ({
-          url: (img.url ?? "").trim(),
-          altText: (img.altText ?? "").trim(),
-        }))
-        .filter((img) => img.url !== "" || img.altText !== "");
-
-      const hasInvalidImage = filteredImages.some(
-        (img) => img.url === "" || img.altText === "",
-      );
-
-      if (filteredImages.length === 0) {
-        setFieldError("form.error.required.images");
-        return;
-      }
-
-      if (hasInvalidImage) {
-        setFieldError("form.error.required.imageFields");
-        return;
-      }
-      data.images = filteredImages;
-
-      if (!data.category) {
-        setFieldError("form.error.required.category_id");
-        return;
-      }
-      const category = array_obj_to_obj_with_key(
-        list.categories ?? [],
-        data.category,
-        "title",
-      );
-      data.category_id = category?.id;
-      delete data.category;
-    }
-
-    setFieldError(null);
-
     try {
+      const data = form_fields_to_data(send_fields);
+
+      if (model === ModelType.product) {
+        if (!data.category) {
+          throw "form.error.required.category_id";
+        }
+
+        const category = array_obj_to_obj_with_key(
+          cache.getByModel(ModelType.category) ?? [],
+          data.category,
+          "title",
+        );
+
+        data.category_id = category?.id;
+        delete data.category;
+      }
+
+      setFieldError(null);
+
       const result: AGTableModelType = (await submitModel(
         model,
         id,
@@ -126,8 +79,14 @@ export default function FormPage({
       toast.success(intl.formatMessage({ id: "form.success" }), {
         description: `ID: ${result.id}`,
       });
+
       router.push(`/admin/${model}`);
     } catch (err: any) {
+      if (typeof err === "string") {
+        setFieldError(err);
+        return;
+      }
+
       const rawMessage = err?.message || "Unknown error";
       const match = rawMessage.match(/Missing required field: (\w+)/i);
       const fieldKey = match?.[1]?.toLowerCase();

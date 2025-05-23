@@ -1,14 +1,14 @@
 "use client";
-
-import React, { useState } from "react";
+import { useState, ChangeEvent } from "react";
+import { useIntl, FormattedMessage } from "react-intl";
+import { toast } from "sonner";
 import { Box, Button, Typography } from "@mui/material";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { toast } from "sonner";
-import { setGlobalLoading, uploadImage } from "../../../../lib/api";
-import { MAX_FILE_SIZE_MB } from "../../../../lib/config";
-import { useIntl, FormattedMessage } from "react-intl";
-import { useLoading } from "../../../../lib/provider/LoadingProvider";
+
+import { useLoading } from "lib/provider/LoadingProvider";
+import { setGlobalLoading, uploadImage } from "lib/api";
+import { MAX_FILE_SIZE_MB } from "lib/config";
 
 export default function UploadImagePage() {
   const [file, setFile] = useState<File | null>(null);
@@ -44,7 +44,7 @@ export default function UploadImagePage() {
     toast.success(intl.formatMessage({ id: "image.copy.success" }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
     if (!selectedFile) return;
 
@@ -159,15 +159,15 @@ export default function UploadImagePage() {
                 },
               }}
             >
-              <button onClick={copyToClipboard}>
+              <Button onClick={copyToClipboard}>
                 <FormattedMessage id="image.copy.tooltip" />
                 <ContentCopyIcon />
-              </button>
+              </Button>
 
-              <button onClick={() => window.open(imageUrl as string, "_blank")}>
+              <Button onClick={() => window.open(imageUrl as string, "_blank")}>
                 <FormattedMessage id="image.open.tooltip" />
                 <OpenInNewIcon />
-              </button>
+              </Button>
             </Box>
 
             <Typography

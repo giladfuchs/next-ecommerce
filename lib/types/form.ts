@@ -101,3 +101,43 @@ export const create_form_fields = (
     );
   });
 };
+
+export const form_fields_to_data = (
+  send_fields: FormField[],
+): { [key: string]: any } => {
+  return Object.fromEntries(
+    send_fields.map((f) => {
+      let value = f.value;
+
+      if (f.type === FormType.ImagesEditor && Array.isArray(value)) {
+        const images = value
+          .map((img) => ({
+            url: (img.url ?? "").trim(),
+            altText: (img.altText ?? "").trim(),
+          }))
+          .filter((img) => img.url !== "" || img.altText !== "");
+
+        if (images.length === 0) throw "form.error.required.images";
+
+        const hasInvalid = images.some(
+          (img) => img.url === "" || img.altText === "",
+        );
+        if (hasInvalid) throw "form.error.required.imageFields";
+
+        return [f.key, images];
+      }
+
+      if (typeof value === "string") {
+        value = value.trim();
+        if (value === "") return [f.key, null];
+      }
+
+      if (f.type === "number" && typeof value === "string") {
+        const num = parseFloat(value);
+        return [f.key, isNaN(num) ? null : num];
+      }
+
+      return [f.key, value];
+    }),
+  );
+};

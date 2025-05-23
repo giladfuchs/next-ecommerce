@@ -204,8 +204,26 @@ html.font-size-110 {
 html.font-size-120 {
   --font-scale-factor: 1.2;
 }
+html.font-size-130 {
+  --font-scale-factor: 1.3;
+}
+html.font-size-140 {
+  --font-scale-factor: 1.4;
+}
 html.font-size-150 {
   --font-scale-factor: 1.5;
+}
+html.font-size-160 {
+  --font-scale-factor: 1.6;
+}
+html.font-size-170 {
+  --font-scale-factor: 1.7;
+}
+html.font-size-180 {
+  --font-scale-factor: 1.8;
+}
+html.font-size-190 {
+  --font-scale-factor: 1.9;
 }
 html.font-size-200 {
   --font-scale-factor: 2;

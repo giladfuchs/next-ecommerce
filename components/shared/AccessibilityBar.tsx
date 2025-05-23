@@ -57,6 +57,8 @@ const ActionItem = ({
 );
 
 export default function AccessibilityBar() {
+  const buttonIconOpenRef = useRef<HTMLButtonElement | null>(null);
+
   const [open, setOpen] = useState(false);
   const [fontSize, setFontSize] = useState(100);
   const [highContrast, setHighContrast] = useState(false);
@@ -73,7 +75,13 @@ export default function AccessibilityBar() {
       "font-size-100",
       "font-size-110",
       "font-size-120",
+      "font-size-130",
+      "font-size-140",
       "font-size-150",
+      "font-size-160",
+      "font-size-170",
+      "font-size-180",
+      "font-size-190",
       "font-size-200",
     ];
     document.documentElement.classList.remove(...sizes);
@@ -90,28 +98,34 @@ export default function AccessibilityBar() {
 
   useEffect(() => {
     if (!open) return;
+
     const handleClickOutside = (event: MouseEvent) => {
       const panel = panelRef.current;
-      if (panel && !panel.contains(event.target as Node)) {
+      const button = buttonIconOpenRef.current;
+
+      if (
+        panel &&
+        !panel.contains(event.target as Node) &&
+        button &&
+        !button.contains(event.target as Node)
+      ) {
         setOpen(false);
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [open]);
 
-  const skipSizes = [140, 160, 180];
   const increaseFont = () => {
     if (fontSize >= 200) return;
-    const next = fontSize + 20;
-    setFontSize(skipSizes.includes(next) ? 200 : next);
+    setFontSize(fontSize + 10);
   };
   const decreaseFont = () => {
     if (fontSize <= 80) return;
-    const next = fontSize - 20;
-    setFontSize(skipSizes.includes(next) ? 120 : next);
+    setFontSize(fontSize - 10);
   };
   const reset = () => {
     setFontSize(100);
@@ -129,6 +143,7 @@ export default function AccessibilityBar() {
       style={{ display: "flex", alignItems: "center" }}
     >
       <IconButton
+        ref={buttonIconOpenRef}
         onClick={() => setOpen(!open)}
         sx={{
           backgroundColor: "#124cda",
@@ -146,6 +161,9 @@ export default function AccessibilityBar() {
           ref={panelRef}
           className="accessibility-panel"
           sx={{
+            ...(fontSize > 140 && {
+              mt: 25,
+            }),
             ml: 1,
             width: 200,
             p: 2,
