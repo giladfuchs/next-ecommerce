@@ -63,7 +63,6 @@ export default function ImagesEditor({
               <Grid
                 item
                 xs={12}
-
                 key={index}
                 data-testid={`form-image-${index}`}
               >
@@ -169,7 +168,7 @@ export default function ImagesEditor({
                   </Box>
                 )}
 
-                <Divider   />
+                <Divider />
               </Grid>
             ))}
           </Grid>

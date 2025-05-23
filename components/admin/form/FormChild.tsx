@@ -84,40 +84,40 @@ export const FieldRenderer = ({ field, onChange }: FormFieldProps) => {
     case FormType.NUMBER:
     default:
       return (
-          <TextField
-              fullWidth
-              variant="outlined"
-              label={intl.formatMessage({ id: `form.label.${field.key}` })}
-              placeholder={placeholder}
-              value={field.value}
-              type={field.type === FormType.NUMBER ? "number" : "text"}
-              multiline={field.type === FormType.TEXTAREA}
-              rows={field.type === FormType.TEXTAREA ? 5 : undefined}
-              onChange={(e) => onChange(e.target.value, field.key)}
-              data-testid={`form-input-${field.key}`}
-              sx={
-                  field.type === FormType.TEXTAREA
-                      ? {
-                          "& .MuiInputBase-root": {
-                              alignItems: "flex-start",
-                              padding: 0,
-                          },
-                          "& textarea": {
-                              maxHeight: "6rem",
-                              overflowY: "auto",
-                              padding: "0.75rem",
-                              fontSize: "1rem",
-                              lineHeight: 1.5,
-                              resize: "none",
-                              boxSizing: "border-box",
-                          },
-                          "& .MuiOutlinedInput-notchedOutline": {
-                              borderWidth: "0.0625rem"
-                          },
-                      }
-                      : undefined
-              }
-          />
+        <TextField
+          fullWidth
+          variant="outlined"
+          label={intl.formatMessage({ id: `form.label.${field.key}` })}
+          placeholder={placeholder}
+          value={field.value}
+          type={field.type === FormType.NUMBER ? "number" : "text"}
+          multiline={field.type === FormType.TEXTAREA}
+          rows={field.type === FormType.TEXTAREA ? 5 : undefined}
+          onChange={(e) => onChange(e.target.value, field.key)}
+          data-testid={`form-input-${field.key}`}
+          sx={
+            field.type === FormType.TEXTAREA
+              ? {
+                  "& .MuiInputBase-root": {
+                    alignItems: "flex-start",
+                    padding: 0,
+                  },
+                  "& textarea": {
+                    maxHeight: "6rem",
+                    overflowY: "auto",
+                    padding: "0.75rem",
+                    fontSize: "1rem",
+                    lineHeight: 1.5,
+                    resize: "none",
+                    boxSizing: "border-box",
+                  },
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderWidth: "0.0625rem",
+                  },
+                }
+              : undefined
+          }
+        />
       );
   }
 };

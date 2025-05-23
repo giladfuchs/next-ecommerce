@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import dotenv from "dotenv";
 import { CreateUser } from "./insert_user";
-import {importMockData} from "./mock_data";
+import { importMockData } from "./mock_data";
 
 dotenv.config();
 /**
@@ -20,30 +20,29 @@ dotenv.config();
  */
 
 async function runSeed() {
-    const userFlag = process.argv.find((arg) => arg.startsWith("--user="));
+  const userFlag = process.argv.find((arg) => arg.startsWith("--user="));
 
-    if (userFlag) {
-        const [, userData] = userFlag.split("=");
-        const [username, email, password] = userData.split(",");
+  if (userFlag) {
+    const [, userData] = userFlag.split("=");
+    const [username, email, password] = userData.split(",");
 
-        if (!username || !email || !password) {
-            console.error("❌ Invalid format. Use --user=username,email,password");
-            process.exit(1);
-        }
-
-        await CreateUser(username, email, password);
-        console.log("✅ User created:", email);
+    if (!username || !email || !password) {
+      console.error("❌ Invalid format. Use --user=username,email,password");
+      process.exit(1);
     }
 
-    try {
-        await importMockData();
-        console.log("✅ Mock data imported.");
-        process.exit(0);
-    } catch (err) {
-        console.error("❌ Failed to import mock data:", err);
-        process.exit(1);
-    }
+    await CreateUser(username, email, password);
+    console.log("✅ User created:", email);
+  }
+
+  try {
+    await importMockData();
+    console.log("✅ Mock data imported.");
+    process.exit(0);
+  } catch (err) {
+    console.error("❌ Failed to import mock data:", err);
+    process.exit(1);
+  }
 }
 
 runSeed();
-

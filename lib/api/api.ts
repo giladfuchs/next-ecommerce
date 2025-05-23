@@ -5,7 +5,7 @@ import {
   AGTableModelType,
   NewOrderPayload,
 } from "../types";
-import {API_URL, USE_MOCK_DATA} from "../config";
+import { API_URL, USE_MOCK_DATA } from "../config";
 import { cache } from "./cache";
 type Callback = (loading: boolean) => void;
 

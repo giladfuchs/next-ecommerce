@@ -3,7 +3,6 @@
 A modern, accessible e-commerce storefront built with **Next.js 14**, **TypeScript**, **MUI**, and **Tailwind CSS** — styled primarily with MUI, extended with Tailwind utilities.  
 Includes a full admin dashboard, product editor, order management, and support for both **mock mode** and **real API** connections.
 
- 
 ---
 
 ## 🚀 Getting Started
@@ -29,10 +28,10 @@ To run the project locally:
 This project uses [Playwright](https://playwright.dev/) for end-to-end tests of both the storefront and admin panel.
 
 ### Run tests locally:
+
 Make sure your dev server is already running on port **3000**,  
 and that you’ve set up a test database with user and seed data  
 (see `backend/scripts` for setup instructions), then run:
-
 
 ```bash
 pnpm test
@@ -44,8 +43,8 @@ This will:
 - Start a temporary **backend test instance** on port **4013**
 - Run the **Playwright test suite** in **headed mode**
 - Exit after tests complete
----
 
+---
 
 ### 🛠️ Environment Variables
 

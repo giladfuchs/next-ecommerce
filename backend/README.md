@@ -4,7 +4,6 @@ A lightweight, production-ready e-commerce backend built with **Express**, **Typ
 Designed to power a Next.js storefront and admin panel — including product management, category structure, cart submission, and order tracking.
 
 ---
- 
 
 ## 🚀 Getting Started
 
@@ -21,8 +20,9 @@ To run the project locally:
   ```bash
   pnpm dev
   ```
- 
+
 ---
+
 ### 🧰 Database Setup
 
 This project requires a PostgreSQL database.
@@ -35,17 +35,14 @@ You have a few options:
 
   You can copy and adapt it for your own local setup (the original is intended for testing).
 
-
 - ☁️ **Supabase (Free Option)**  
   You can create a free hosted database using [supabase.com](https://supabase.com).
 
 ---
 
-
 ### 🧪 Initial Data
 
-After your database is ready, you can insert initial categories, products, and user using  seed script.
-
+After your database is ready, you can insert initial categories, products, and user using seed script.
 
 ```bash
 pnpm tsx scripts/seed.ts
@@ -56,6 +53,7 @@ pnpm tsx scripts/seed.ts
 ```bash
 SEED=true pnpm tsx scripts/seed.ts
 ```
+
 📄 For more usage examples, see [`scripts/seed.ts`](./scripts/seed.ts).
 
 ---
@@ -65,13 +63,17 @@ SEED=true pnpm tsx scripts/seed.ts
 The backend uses [Vitest](https://vitest.dev/) and [Supertest](https://github.com/visionmedia/supertest) to test all API routes.
 
 To run the full test suite:
+
 ```bash
 pnpm test
 ```
+
 - Or, use the convenience shell script:
+
 ```bash
 ./tests/run_test.sh
 ```
+
 ---
 
 ### 🛠️ Environment Variables
@@ -112,4 +114,4 @@ WHATSAPP_NUMBER=+1234567890
 
 ```
 
- ---
+---

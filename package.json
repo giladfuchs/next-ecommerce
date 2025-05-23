@@ -21,7 +21,7 @@
     "debug": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "prettier": "npx prettier --write frontend",
+    "prettier": "npx prettier --write .",
     "typecheck": "tsc --noEmit",
     "test": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 &  pnpm exec playwright test --headed",
     "test:file": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 &  pnpm exec playwright test e2e/crud.spec.ts --headed",
