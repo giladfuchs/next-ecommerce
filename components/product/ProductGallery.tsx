@@ -42,19 +42,45 @@ export function ProductGallery({
           <div className="absolute bottom-[15%] flex w-full justify-center">
             <div className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/80 text-neutral-500 backdrop-blur-sm dark:border-black dark:bg-neutral-900/80">
               <button
-                onClick={() => setImageIndex(previousImageIndex)}
-                aria-label="Previous product image"
+                onClick={() =>
+                  setImageIndex(
+                    localeCache.isRtl() ? previousImageIndex : nextImageIndex,
+                  )
+                }
+                aria-label={
+                  localeCache.isRtl()
+                    ? "Previous product image"
+                    : "Next product image"
+                }
                 className={buttonClassName}
               >
-                <ChevronLeftIcon className="h-5 w-5" />
+                {localeCache.isRtl() ? (
+                  <ChevronRightIcon className="h-5 w-5" />
+                ) : (
+                  <ChevronLeftIcon className="h-5 w-5" />
+                )}
               </button>
+
               <div className="mx-1 h-6 w-px bg-neutral-500" />
+
               <button
-                onClick={() => setImageIndex(nextImageIndex)}
-                aria-label="Next product image"
+                onClick={() =>
+                  setImageIndex(
+                    localeCache.isRtl() ? nextImageIndex : previousImageIndex,
+                  )
+                }
+                aria-label={
+                  localeCache.isRtl()
+                    ? "Next product image"
+                    : "Previous product image"
+                }
                 className={buttonClassName}
               >
-                <ChevronRightIcon className="h-5 w-5" />
+                {localeCache.isRtl() ? (
+                  <ChevronLeftIcon className="h-5 w-5" />
+                ) : (
+                  <ChevronRightIcon className="h-5 w-5" />
+                )}
               </button>
             </div>
           </div>
