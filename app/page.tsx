@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: baseUrl,
   },
 };
-
+export const revalidate = 60;
 export default async function HomePage() {
   const products = await getProducts();
 
