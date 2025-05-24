@@ -12,9 +12,7 @@ const SingleProductLayout = ({ product }: { product: Product }) => (
         <ProductDescription product={product} />
       </div>
       <div className="h-full w-full basis-full lg:basis-4/6">
-        <ProductGallery
-          images={product.images}
-        />
+        <ProductGallery images={product.images} />
       </div>
     </div>
   </div>

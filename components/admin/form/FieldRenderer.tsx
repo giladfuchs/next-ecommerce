@@ -40,7 +40,9 @@ export const FieldRenderer = ({ field, onChange }: FormFieldProps) => {
       return (
         <ImagesEditor
           placeholder={placeholder}
-          images={Array.isArray(field.value) ? (field.value as ProductImage[]) : []}
+          images={
+            Array.isArray(field.value) ? (field.value as ProductImage[]) : []
+          }
           onChange={(updatedImages) => onChange(updatedImages, field.key)}
         />
       );

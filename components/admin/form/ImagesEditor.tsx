@@ -29,7 +29,11 @@ export default function ImagesEditor({
   const intl = useIntl();
   const [imagesState, setImagesState] = React.useState<ProductImage[]>(images);
 
-  const handleChange = (index: number, field: keyof ProductImage, value: string) => {
+  const handleChange = (
+    index: number,
+    field: keyof ProductImage,
+    value: string,
+  ) => {
     const updated = [...imagesState];
     updated[index] = { ...updated[index], [field]: value } as ProductImage;
     onChange(updated);

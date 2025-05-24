@@ -8,11 +8,7 @@ import { GridTileImage } from "components/products/grid/tile";
 import { localeCache } from "lib/api";
 import { ProductImage } from "lib/types";
 
-export function ProductGallery({
-  images,
-}: {
-  images: ProductImage[];
-}) {
+export function ProductGallery({ images }: { images: ProductImage[] }) {
   const [imageIndex, setImageIndex] = useState(0);
   const isRtl = localeCache.isRtl();
   const next = () => setImageIndex((prev) => (prev + 1) % images.length);
