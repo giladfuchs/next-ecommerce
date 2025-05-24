@@ -107,7 +107,7 @@ export async function checkoutAfterAddingProducts(page: Page) {
   await addProductToCart(page, secondUrl, false);
 
   await page.waitForSelector("[data-testid='cart']");
-  await page.getByTestId("cart-checkout-desktop").locator("button").click();
+  await page.getByTestId("cart-checkout-button").locator("button").click();
 
   await expect(page).toHaveURL(/\/checkout/);
   await expect(page.getByTestId("checkout-page")).toBeVisible();

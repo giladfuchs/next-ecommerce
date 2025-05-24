@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { ReactNode } from "react";
 import { localeCache } from "../api";
 
@@ -18,8 +18,8 @@ const theme = createTheme({
     borderRadius: 8,
   },
   typography: {
-    fontSize: 16, // base size before --font-scale-factor kicks in
-    fontFamily: "inherit", // let html/body control font (for readable-font)
+    fontSize: 16,
+    fontFamily: "inherit",
   },
   components: {
     MuiTextField: {
@@ -38,6 +38,26 @@ const theme = createTheme({
               borderColor: "#24bfa7",
               borderWidth: 1,
             },
+          },
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          marginTop: 8,
+          marginBottom: 8,
+          fontSize: "inherit",
+          "& input": {
+            padding: "30.5px 14px 11.5px !important",
+            textAlign: localeCache.isRtl() ? "right" : "left",
+            fontSize: "inherit",
+          },
+          "& legend": {
+            display: "none",
+          },
+          "& fieldset": {
+            top: 0,
           },
         },
       },

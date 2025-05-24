@@ -73,5 +73,4 @@ export type NewOrderPayload = {
   email: string;
   phone: string;
   cart: Cart;
-  agreed?: boolean;
 };

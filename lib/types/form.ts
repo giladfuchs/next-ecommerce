@@ -1,6 +1,8 @@
+import * as Yup from "yup";
+import { IntlShape } from "react-intl";
 import { FormType, ModelType } from "./enums";
 import { Image } from "./entities";
-
+// -- Admin Mui Form--
 export class FieldInput {
   constructor(
     public type: FormType,
@@ -141,3 +143,35 @@ export const form_fields_to_data = (
     }),
   );
 };
+
+//--formik ----
+
+export type CheckoutFormValues = {
+  name: string;
+  email: string;
+  phone: string;
+  agreed: boolean;
+};
+export const checkout_fields = [
+  { name: "name", type: "text" },
+  { name: "email", type: "text" },
+  { name: "phone", type: "tel" },
+];
+
+export const getCheckoutValidationSchema = (intl: IntlShape) =>
+  Yup.object().shape({
+    name: Yup.string()
+      .min(2)
+      .max(255)
+      .required(intl.formatMessage({ id: "form.error.name" })),
+    email: Yup.string()
+      .email(intl.formatMessage({ id: "form.error.email" }))
+      .max(255)
+      .required(intl.formatMessage({ id: "form.error.email" })),
+    phone: Yup.string()
+      .matches(/^05\d{8}$/, intl.formatMessage({ id: "form.error.phone" }))
+      .required(intl.formatMessage({ id: "form.error.phone" })),
+    agreed: Yup.boolean()
+      .oneOf([true], intl.formatMessage({ id: "form.error.agree" }))
+      .required(),
+  });

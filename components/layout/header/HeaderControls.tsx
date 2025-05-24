@@ -16,8 +16,8 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-import Cart from "components/cart/Cart";
 import { AdminNav } from "./AdminNav";
+import Cart from "components/cart";
 
 function Search() {
   const intl = useIntl();

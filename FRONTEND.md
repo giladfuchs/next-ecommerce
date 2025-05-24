@@ -80,7 +80,7 @@ app/
 
 components/
 ├── admin/          → AG Grid Table, Model forms
-├── cart/           → Cart modal and UI
+├── cart/           → Index modal and UI
 ├── checkout/       → Checkout info and summary
 ├── layout/         → Header, Footer
 ├── product/        → Product display, gallery, cards

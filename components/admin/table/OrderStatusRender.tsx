@@ -2,7 +2,7 @@
 
 import { ICellRendererParams } from "ag-grid-community";
 import { OrderStatus } from "lib/types";
-import { OrderStatusChip } from "components/shared/OrderStatusChip";
+import { OrderDisplay } from "components/shared/OrderDisplay";
 
 export default function OrderStatusRender({
   value,
@@ -11,7 +11,7 @@ export default function OrderStatusRender({
 
   return (
     <div style={{ padding: "4px 0" }}>
-      <OrderStatusChip status={value} />
+      <OrderDisplay status={value} />
     </div>
   );
 }

@@ -61,7 +61,7 @@ type Props = {
   style?: CSSProperties; // allow parent to inject custom hover
 };
 
-export const OrderStatusChip = ({
+export const OrderDisplay = ({
   status,
   size = "small",
   clickable = false,

@@ -56,7 +56,7 @@ To contribute, fork the repository and submit a pull request with your enhanceme
 - 🧾 **Admin dashboard** with full model management (products, categories, orders, images)
 - 🧠 SEO & Open Graph via **Next.js 14 Metadata API**
 - ♿ **Accessibility bar** with font scaling and contrast settings
-- 🛒 **Cart powered by Redux** with **persisted state**
+- 🛒 **Index powered by Redux** with **persisted state**
 - 🧪 **Playwright-based E2E tests** for key storefront and admin flows
 
 ### 🔌 Backend (`/backend`)

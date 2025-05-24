@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { toast } from "sonner";
 import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
 import { TreeItem } from "@mui/x-tree-view/TreeItem";
 import {
@@ -12,8 +13,8 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { toast } from "sonner";
 import ImageIcon from "@mui/icons-material/Image";
+
 import { Image } from "lib/types";
 
 export default function ImagesEditor({

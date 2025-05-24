@@ -1,8 +1,7 @@
 "use client";
-
+import { useIntl } from "react-intl";
 import { AgGridReact } from "ag-grid-react";
 import { ColDef } from "ag-grid-community";
-import { useIntl } from "react-intl";
 import ActionRender from "./ActionRender";
 import OrderItemsRender from "./OrderItemsRender";
 import OrderStatusRender from "./OrderStatusRender";
@@ -29,7 +28,7 @@ const AGTable = ({
     cellStyle: {
       textAlign: localeCache.isRtl() ? "right" : "left",
       direction: localeCache.dir(),
-    }, // apply per-cell
+    },
     headerClass: localeCache.isRtl()
       ? "ag-header-cell-rtl"
       : "ag-header-cell-ltr",

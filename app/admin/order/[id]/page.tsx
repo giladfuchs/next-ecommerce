@@ -1,7 +1,7 @@
 "use client";
 
 import { notFound } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
 import { Box, Divider, Typography } from "@mui/material";
@@ -12,22 +12,39 @@ import {
   OrderStatusHeader,
 } from "components/admin/Order";
 
-import { getOrderById, localeCache } from "lib/api";
-import { Order } from "lib/types";
+import { cache, getOrderById, localeCache } from "lib/api";
+import { array_obj_to_obj_with_key, ModelType, Order } from "lib/types";
 
 export default function OrderViewPage({ params }: { params: { id: string } }) {
-  const { id } = params;
   const [order, setOrder] = useState<Order | undefined | null>(undefined);
 
   useEffect(() => {
     const init = async () => {
-      const obj = await getOrderById(Number(id));
+      const obj =
+        array_obj_to_obj_with_key(
+          cache.getByModel(ModelType.order),
+          Number(params.id),
+          "id",
+        ) ?? (await getOrderById(Number(params.id)));
       setOrder(obj);
     };
     void init();
-  }, [id]);
-
+  }, []);
   if (order === null) return notFound();
+
+  const StaticOrderView = useMemo(() => {
+    if (!order) return null;
+    return (
+      <>
+        <Typography variant="h4" fontWeight="bold" textAlign="center" mb={3}>
+          <FormattedMessage id="order.title" /> #{order.id}
+        </Typography>
+        <OrderInfoList order={order} />
+        <Divider sx={{ my: 2 }} />
+        <OrderItemsList items={order.items} />
+      </>
+    );
+  }, [order?.id]);
 
   return (
     order && (
@@ -35,12 +52,7 @@ export default function OrderViewPage({ params }: { params: { id: string } }) {
         data-testid="admin-order-detail"
         sx={{ maxWidth: 800, mx: "auto", p: 3, direction: localeCache.dir() }}
       >
-        <Typography variant="h4" fontWeight="bold" textAlign="center" mb={3}>
-          <FormattedMessage id="order.title" /> #{order.id}
-        </Typography>
-        <OrderInfoList order={order} />
-        <Divider sx={{ my: 2 }} />
-        <OrderItemsList items={order.items} />
+        {StaticOrderView}
         <OrderStatusHeader status={order.status} />
         <OrderStatusActions order={order} setOrder={setOrder} />
       </Box>

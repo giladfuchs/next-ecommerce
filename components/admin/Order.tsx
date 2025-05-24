@@ -22,7 +22,7 @@ import {
 } from "@mui/material";
 import { green, red, blue, orange, purple, lime } from "@mui/material/colors";
 
-import { OrderStatusChip } from "components/shared/OrderStatusChip";
+import { OrderDisplay } from "components/shared/OrderDisplay";
 import Price from "components/shared/Price";
 import { localeCache, updateOrderStatus } from "lib/api";
 import { Order, OrderItem, OrderStatus } from "lib/types";
@@ -249,7 +249,7 @@ export const OrderStatusActions = ({
               }}
               style={{ display: "inline-block", cursor: "pointer" }}
             >
-              <OrderStatusChip status={nextStatus} size="large" clickable />
+              <OrderDisplay status={nextStatus} size="large" clickable />
             </div>
           </Grid>
         ))}
@@ -277,7 +277,7 @@ export const OrderStatusHeader = ({ status }: { status: OrderStatus }) => {
       >
         <FormattedMessage id="order.status" />:
       </h2>
-      <OrderStatusChip status={status} size="large" />
+      <OrderDisplay status={status} size="large" />
     </Box>
   );
 };
