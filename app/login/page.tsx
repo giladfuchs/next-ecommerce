@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 import { Box, Button, TextField, Typography, Container } from "@mui/material";
 import { loginUser } from "lib/api";
-import { SEVEN_DAYS } from "lib/config";
+import { SEVEN_DAYS } from "lib/config/config";
 
 export default function LoginPage() {
   const router = useRouter();

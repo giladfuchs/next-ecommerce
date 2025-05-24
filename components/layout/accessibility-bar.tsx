@@ -1,19 +1,10 @@
 "use client";
-
 import { useEffect, useState, useRef, ReactNode } from "react";
-import { Box, IconButton, Typography, Stack } from "@mui/material";
 import { FormattedMessage } from "react-intl";
-
 import AccessibleIcon from "@mui/icons-material/Accessible";
-import ZoomInIcon from "@mui/icons-material/ZoomIn";
-import ZoomOutIcon from "@mui/icons-material/ZoomOut";
-import InvertColorsIcon from "@mui/icons-material/InvertColors";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import LinkIcon from "@mui/icons-material/Link";
-import RestartAltIcon from "@mui/icons-material/RestartAlt";
-import BarcodeIcon from "@mui/icons-material/ViewColumn";
-import GavelIcon from "@mui/icons-material/Gavel";
-import { localeCache } from "../../lib/api";
+import { Box, IconButton, Typography, Stack } from "@mui/material";
+import { localeCache } from "lib/api";
+import { createAccessibilityButtons } from "lib/config/ui";
 
 const ActionItem = ({
   icon,
@@ -56,8 +47,9 @@ const ActionItem = ({
   </Box>
 );
 
-export default function AccessibilityBar() {
+const AccessibilityBar = () => {
   const buttonIconOpenRef = useRef<HTMLButtonElement | null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
 
   const [open, setOpen] = useState(false);
   const [fontSize, setFontSize] = useState(100);
@@ -66,24 +58,12 @@ export default function AccessibilityBar() {
   const [grayscale, setGrayscale] = useState(false);
   const [underlineLinks, setUnderlineLinks] = useState(false);
   const [readableFont, setReadableFont] = useState(false);
-  const panelRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const sizes = [
-      "font-size-80",
-      "font-size-90",
-      "font-size-100",
-      "font-size-110",
-      "font-size-120",
-      "font-size-130",
-      "font-size-140",
-      "font-size-150",
-      "font-size-160",
-      "font-size-170",
-      "font-size-180",
-      "font-size-190",
-      "font-size-200",
-    ];
+    const sizes = Array.from(
+      { length: 13 },
+      (_, i) => `font-size-${80 + i * 10}`,
+    );
     document.documentElement.classList.remove(...sizes);
     document.documentElement.classList.add(`font-size-${fontSize}`);
     document.documentElement.classList.toggle("grayscale", grayscale);
@@ -94,25 +74,18 @@ export default function AccessibilityBar() {
       underlineLinks,
     );
     document.documentElement.classList.toggle("readable-font", readableFont);
-  }, [fontSize, highContrast, invert, grayscale, underlineLinks, readableFont]);
+  }, [fontSize, grayscale, highContrast, invert, underlineLinks, readableFont]);
 
   useEffect(() => {
     if (!open) return;
-
     const handleClickOutside = (event: MouseEvent) => {
-      const panel = panelRef.current;
-      const button = buttonIconOpenRef.current;
-
       if (
-        panel &&
-        !panel.contains(event.target as Node) &&
-        button &&
-        !button.contains(event.target as Node)
+        !panelRef.current?.contains(event.target as Node) &&
+        !buttonIconOpenRef.current?.contains(event.target as Node)
       ) {
         setOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -120,12 +93,10 @@ export default function AccessibilityBar() {
   }, [open]);
 
   const increaseFont = () => {
-    if (fontSize >= 200) return;
-    setFontSize(fontSize + 10);
+    if (fontSize < 200) setFontSize(fontSize + 10);
   };
   const decreaseFont = () => {
-    if (fontSize <= 80) return;
-    setFontSize(fontSize - 10);
+    if (fontSize > 80) setFontSize(fontSize - 10);
   };
   const reset = () => {
     setFontSize(100);
@@ -136,9 +107,25 @@ export default function AccessibilityBar() {
     setReadableFont(false);
   };
 
+  const accessibility_buttons = createAccessibilityButtons(
+    increaseFont,
+    decreaseFont,
+    reset,
+    grayscale,
+    setGrayscale,
+    highContrast,
+    setHighContrast,
+    invert,
+    setInvert,
+    underlineLinks,
+    setUnderlineLinks,
+    readableFont,
+    setReadableFont,
+  );
+
   return (
     <div
-      className="fixed left-2 top-1/2 z-50 -translate-y-1/2"
+      className={`fixed top-1/2 z-50 -translate-y-1/2 ${localeCache.isRtl() ? "left-1" : "right-1"}`}
       dir={localeCache.dir()}
       style={{ display: "flex", alignItems: "center" }}
     >
@@ -159,11 +146,8 @@ export default function AccessibilityBar() {
       {open && (
         <Box
           ref={panelRef}
-          className="accessibility-panel"
           sx={{
-            ...(fontSize > 140 && {
-              mt: 25,
-            }),
+            ...(fontSize > 140 && { mt: 25 }),
             ml: 1,
             width: 200,
             p: 2,
@@ -183,64 +167,20 @@ export default function AccessibilityBar() {
             <FormattedMessage id="accessibility.title" />
           </Typography>
 
-          <Stack key={Math.random().toString(36)} spacing={1}>
-            <ActionItem
-              labelId="accessibility.zoomIn"
-              icon={<ZoomInIcon />}
-              onClick={increaseFont}
-              selected={false}
-            />
-            <ActionItem
-              labelId="accessibility.zoomOut"
-              icon={<ZoomOutIcon />}
-              onClick={decreaseFont}
-              selected={false}
-            />
-            <ActionItem
-              labelId="accessibility.grayscale"
-              icon={<BarcodeIcon />}
-              onClick={() => setGrayscale(!grayscale)}
-              selected={grayscale}
-            />
-            <ActionItem
-              labelId="accessibility.contrast"
-              icon={<InvertColorsIcon />}
-              onClick={() => setHighContrast(!highContrast)}
-              selected={highContrast}
-            />
-            <ActionItem
-              labelId="accessibility.invert"
-              icon={<VisibilityIcon />}
-              onClick={() => setInvert(!invert)}
-              selected={invert}
-            />
-            <ActionItem
-              labelId="accessibility.underline"
-              icon={<LinkIcon />}
-              onClick={() => setUnderlineLinks(!underlineLinks)}
-              selected={underlineLinks}
-            />
-            <ActionItem
-              labelId="accessibility.readableFont"
-              icon={<Typography fontWeight="bold">Aa</Typography>}
-              onClick={() => setReadableFont(!readableFont)}
-              selected={readableFont}
-            />
-            <ActionItem
-              labelId="accessibility.reset"
-              icon={<RestartAltIcon />}
-              onClick={reset}
-              selected={false}
-            />
-            <ActionItem
-              labelId="terms.accessibility.title"
-              icon={<GavelIcon />}
-              onClick={() => window.open("/legal/accessibility", "_blank")}
-              selected={false}
-            />
+          <Stack spacing={1}>
+            {accessibility_buttons.map(({ id, icon, onClick, selected }) => (
+              <ActionItem
+                key={id}
+                labelId={id}
+                icon={icon}
+                onClick={onClick}
+                selected={selected}
+              />
+            ))}
           </Stack>
         </Box>
       )}
     </div>
   );
-}
+};
+export default AccessibilityBar;

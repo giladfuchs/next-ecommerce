@@ -10,7 +10,7 @@ import {
   EditItemQuantityButton,
   CheckoutButton,
 } from "./cart-buttons";
-import Price from "components/shared/Price";
+import { Price } from "components/shared/elements-ssr";
 import { RootState } from "lib/store";
 import { localeCache } from "lib/api";
 import { useTheme } from "@mui/system";

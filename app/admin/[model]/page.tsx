@@ -10,7 +10,7 @@ import ImageIcon from "@mui/icons-material/Image";
 
 import AGTable from "components/admin/table/AGTable";
 import { useLoading } from "lib/provider/LoadingProvider";
-import { LoadingTable } from "components/shared/Loading";
+import { LoadingTable } from "components/shared/loading-skeleton";
 
 import { AGTableModelType, get_columns_by_title, ModelType } from "lib/types";
 import { getCategories, getOrders, getProducts, cache } from "lib/api";

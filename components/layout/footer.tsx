@@ -3,9 +3,9 @@ import { usePathname } from "next/navigation";
 import { Box, Typography, IconButton, Stack, Grid } from "@mui/material";
 
 import { metadata_site_title } from "lib/assets/i18n/localizedMetadata";
-import { FOOTER_DATA } from "lib/config";
+import { FOOTER_DATA } from "lib/config/config";
 import { localeCache } from "lib/api";
-import { SOCIAL_LINKS } from "lib/types/footer";
+import { SOCIAL_LINKS } from "lib/config/ui";
 
 export const [email, address, phone, instagram, facebook, website] =
   FOOTER_DATA.split(",");

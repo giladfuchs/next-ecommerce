@@ -1,4 +1,4 @@
-import { baseUrl } from "lib/config";
+import { baseUrl } from "lib/config/config";
 
 export default function robots() {
   return {

@@ -10,7 +10,7 @@ import Grid from "components/products/grid";
 import { Product } from "lib/types";
 import { ProductItem } from "components/products/grid";
 import { GridTileImage } from "components/products/grid/tile";
-import { PRODUCTS_PER_PAGE } from "lib/config";
+import { PRODUCTS_PER_PAGE } from "lib/config/config";
 
 const ProductsDisplay = ({ products }: { products: Product[] }) => {
   return (

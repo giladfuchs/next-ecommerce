@@ -15,18 +15,18 @@ import {
   GOOGLE_SITE_VERIFICATION,
   ICON_IMAGE_URL,
   SITE_NAME,
-} from "lib/config";
+} from "lib/config/config";
 
 import { ReduxProvider } from "../lib/provider/ReduxProvider";
 import { ThemeProviderLayout } from "../lib/provider/ThemeProviderLayout";
 import IntProvider from "../lib/provider/IntProvider";
 import { LoadingProvider } from "lib/provider/LoadingProvider";
 
-import GlobalLoadingBar from "components/shared/GlobalLoadingBar";
-import { LoadingProductsList } from "components/shared/Loading";
+import LoadingGlobal from "components/shared/loading-global";
+import { LoadingProductsList } from "components/shared/loading-skeleton";
 import Header from "components/layout/header";
 import Footer from "components/layout/footer";
-import AccessibilityBar from "../components/shared/AccessibilityBar";
+import AccessibilityBar from "../components/layout/accessibility-bar";
 
 import {
   metadata_site_description,
@@ -110,7 +110,7 @@ export default async function RootLayout({
                   id="font-scale-wrapper"
                   className="bg-theme text-theme selection:bg-teal-300 dark:bg-theme-dark dark:text-theme dark:selection:bg-pink-500 dark:selection:text-white"
                 >
-                  <GlobalLoadingBar />
+                  <LoadingGlobal />
 
                   <Box
                     sx={{

@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import { ProductButtons } from "components/products/single/product-buttons";
-import Price from "components/shared/Price";
+import { Price } from "components/shared/elements-ssr";
 import { Product } from "lib/types";
 import { localeCache } from "lib/api";
 

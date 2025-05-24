@@ -3,12 +3,10 @@ import { useState, ChangeEvent } from "react";
 import { useIntl, FormattedMessage } from "react-intl";
 import { toast } from "sonner";
 import { Box, Button, Typography } from "@mui/material";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-
+import { ContentCopy as ContentCopyIcon, OpenInNew as OpenInNewIcon } from "@mui/icons-material";
 import { useLoading } from "lib/provider/LoadingProvider";
 import { setGlobalLoading, uploadImage } from "lib/api";
-import { MAX_FILE_SIZE_MB } from "lib/config";
+import { MAX_FILE_SIZE_MB } from "lib/config/config";
 
 export default function UploadImagePage() {
   const [file, setFile] = useState<File | null>(null);

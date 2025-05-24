@@ -2,7 +2,7 @@
 import { LinearProgress } from "@mui/material";
 import { useLoading } from "lib/provider/LoadingProvider";
 
-export default function GlobalLoadingBar() {
+export default function LoadingGlobal() {
   const { loading } = useLoading();
 
   if (!loading) return null;

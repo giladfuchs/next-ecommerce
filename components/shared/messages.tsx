@@ -31,3 +31,54 @@ export function NoProductsMessage() {
     </Typography>
   );
 }
+
+export const OrderSuccessMessage = ({ orderId }: { orderId: number }) => (
+  <>
+    <Typography
+      data-testid="checkout-success"
+      variant="h5"
+      textAlign="center"
+      fontWeight="bold"
+      color="success.main"
+      mb={1}
+    >
+      <FormattedMessage id="checkout.success" />
+    </Typography>
+    <Typography
+      variant="h6"
+      textAlign="center"
+      fontWeight="bold"
+      color="success.main"
+    >
+      <FormattedMessage id="checkout.orderId" values={{ id: orderId }} />
+    </Typography>
+    <Typography
+      variant="subtitle1"
+      textAlign="center"
+      fontWeight="bold"
+      color="success.main"
+    >
+      <FormattedMessage id="checkout.email_spam1" />
+    </Typography>
+    <Typography
+      variant="subtitle1"
+      textAlign="center"
+      fontWeight="bold"
+      color="success.main"
+    >
+      <FormattedMessage id="checkout.email_spam2" />
+    </Typography>
+  </>
+);
+
+export const OrderErrorMessage = () => (
+  <Typography
+    variant="h6"
+    textAlign="center"
+    fontWeight="bold"
+    color="error"
+    sx={{ py: 4 }}
+  >
+    <FormattedMessage id="checkout.error" />
+  </Typography>
+);

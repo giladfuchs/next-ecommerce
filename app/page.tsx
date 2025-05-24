@@ -7,7 +7,7 @@ import {
   metadata_site_description,
   metadata_keywords,
 } from "lib/assets/i18n/localizedMetadata";
-import { baseUrl, ICON_IMAGE_URL } from "lib/config";
+import { baseUrl, ICON_IMAGE_URL } from "lib/config/config";
 import { getProducts } from "lib/api";
 
 export const metadata: Metadata = {

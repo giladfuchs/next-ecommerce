@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Container } from "@mui/material";
 import CheckoutLayout from "components/checkout";
-import { OrderSuccessMessage } from "components/shared/OrderDisplay";
+import { OrderSuccessMessage } from "components/shared/messages";
 
 export default function CheckoutPage() {
   const [orderSuccess, setOrderSuccess] = useState<number | null>(null);

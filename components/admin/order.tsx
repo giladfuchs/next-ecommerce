@@ -1,16 +1,6 @@
 "use client";
 import { useIntl, FormattedMessage } from "react-intl";
 import { toast } from "sonner";
-
-import {
-  PersonTwoTone,
-  MailTwoTone,
-  AccessTimeTwoTone,
-  MonetizationOnTwoTone,
-  ShoppingBagTwoTone,
-  WhatsApp,
-  PhonelinkRingTwoTone,
-} from "@mui/icons-material";
 import {
   Box,
   Grid,
@@ -20,113 +10,42 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { green, red, blue, orange, purple, lime } from "@mui/material/colors";
-
-import { OrderDisplay } from "components/shared/OrderDisplay";
-import Price from "components/shared/Price";
+import { OrderDisplay } from "components/shared/elements-client";
+import { Price } from "components/shared/elements-ssr";
 import { localeCache, updateOrderStatus } from "lib/api";
 import { Order, OrderItem, OrderStatus } from "lib/types";
-
-const statusOptions: Record<OrderStatus, OrderStatus[]> = {
-  [OrderStatus.NEW]: [
-    OrderStatus.READY,
-    OrderStatus.DONE,
-    OrderStatus.CANCELED,
-  ],
-  [OrderStatus.READY]: [OrderStatus.DONE, OrderStatus.CANCELED],
-  [OrderStatus.DONE]: [],
-  [OrderStatus.CANCELED]: [OrderStatus.NEW],
-};
-
+import {
+  getOrderInfoSections,
+  OrderInfoItem,
+  statusOptions,
+} from "lib/config/ui";
 export const OrderInfoList = ({ order }: { order: Order }) => {
+  const { left, right } = getOrderInfoSections(order);
+
+  const renderSection = (items: OrderInfoItem[]) => (
+    <List component="nav" disablePadding>
+      {items.map(({ icon, label, value, extra, iconSx }, i) => (
+        <ListItem key={label + i} disableGutters>
+          <ListItemIcon sx={{ minWidth: 40, ...(iconSx ?? {}) }}>
+            {icon}
+          </ListItemIcon>
+          <ListItemText
+            primary={<FormattedMessage id={label} />}
+            secondary={value}
+            sx={{ textAlign: localeCache.isRtl() ? "right" : "left" }}
+          />
+          {extra}
+        </ListItem>
+      ))}
+    </List>
+  );
   return (
     <Grid container spacing={2} mb={4}>
       <Grid item xs={12} sm={6}>
-        <List component="nav" disablePadding>
-          <ListItem disableGutters>
-            <ListItemIcon sx={{ minWidth: 40, color: blue[700] }}>
-              <PersonTwoTone sx={{ fontSize: "1.3rem" }} />
-            </ListItemIcon>
-            <ListItemText
-              primary={<FormattedMessage id="order.name" />}
-              secondary={order.name}
-              sx={{ textAlign: localeCache.isRtl() ? "right" : "left" }}
-            />
-          </ListItem>
-
-          <ListItem disableGutters>
-            <ListItemIcon sx={{ minWidth: 40 }}>
-              <a href={`tel:${order.phone}`} style={{ color: green[500] }}>
-                <PhonelinkRingTwoTone sx={{ fontSize: "1.3rem" }} />
-              </a>
-            </ListItemIcon>
-            <ListItemText
-              primary={<FormattedMessage id="order.phone" />}
-              secondary={order.phone}
-              sx={{ textAlign: localeCache.isRtl() ? "right" : "left" }}
-            />
-            <ListItemIcon sx={{ minWidth: 40, ml: 1 }}>
-              <a
-                href={`https://wa.me/${order.phone.replace(/^0/, "972")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#25D366" }}
-              >
-                <WhatsApp sx={{ fontSize: "1.3rem" }} />
-              </a>
-            </ListItemIcon>
-          </ListItem>
-
-          <ListItem disableGutters>
-            <ListItemIcon sx={{ minWidth: 40 }}>
-              <a href={`mailto:${order.email}`} style={{ color: red[500] }}>
-                <MailTwoTone sx={{ fontSize: "1.3rem" }} />
-              </a>
-            </ListItemIcon>
-            <ListItemText
-              primary={<FormattedMessage id="order.email" />}
-              secondary={order.email}
-              sx={{ textAlign: localeCache.isRtl() ? "right" : "left" }}
-            />
-          </ListItem>
-        </List>
+        {renderSection(left)}
       </Grid>
-
       <Grid item xs={12} sm={6}>
-        <List component="nav" disablePadding>
-          <ListItem disableGutters>
-            <ListItemIcon sx={{ minWidth: 40, color: purple[500] }}>
-              <AccessTimeTwoTone sx={{ fontSize: "1.3rem" }} />
-            </ListItemIcon>
-            <ListItemText
-              primary={<FormattedMessage id="order.date" />}
-              secondary={new Date(order.createdAt).toLocaleDateString("he-IL")}
-              sx={{ textAlign: localeCache.isRtl() ? "right" : "left" }}
-            />
-          </ListItem>
-
-          <ListItem disableGutters>
-            <ListItemIcon sx={{ minWidth: 40, color: lime[700] }}>
-              <ShoppingBagTwoTone sx={{ fontSize: "1.3rem" }} />
-            </ListItemIcon>
-            <ListItemText
-              primary={<FormattedMessage id="order.quantity" />}
-              secondary={order.totalQuantity}
-              sx={{ textAlign: localeCache.isRtl() ? "right" : "left" }}
-            />
-          </ListItem>
-
-          <ListItem disableGutters>
-            <ListItemIcon sx={{ minWidth: 40, color: orange[500] }}>
-              <MonetizationOnTwoTone sx={{ fontSize: "1.3rem" }} />
-            </ListItemIcon>
-            <ListItemText
-              primary={<FormattedMessage id="order.total" />}
-              secondary={<Price amount={order.cost} />}
-              sx={{ textAlign: localeCache.isRtl() ? "right" : "left" }}
-            />
-          </ListItem>
-        </List>
+        {renderSection(right)}
       </Grid>
     </Grid>
   );

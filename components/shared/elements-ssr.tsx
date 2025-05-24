@@ -1,14 +1,14 @@
-import React from "react";
-import { localeCache } from "../../lib/api";
+import { ComponentProps } from "react";
+import { localeCache } from "lib/api";
 
-const Price = ({
+export const Price = ({
   amount,
   className,
 }: {
   amount: number;
   className?: string;
   currencyCodeClassName?: string;
-} & React.ComponentProps<"p">) => {
+} & ComponentProps<"p">) => {
   const locale = "he-IL";
   const formatOptions: Intl.NumberFormatOptions = {
     style: "currency",
@@ -24,5 +24,3 @@ const Price = ({
     </span>
   );
 };
-
-export default Price;

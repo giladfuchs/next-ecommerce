@@ -3,15 +3,13 @@
 import { notFound } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
-
 import { Box, Divider, Typography } from "@mui/material";
 import {
   OrderInfoList,
   OrderItemsList,
   OrderStatusActions,
   OrderStatusHeader,
-} from "components/admin/Order";
-
+} from "components/admin/order";
 import { cache, getOrderById, localeCache } from "lib/api";
 import { array_obj_to_obj_with_key, ModelType, Order } from "lib/types";
 

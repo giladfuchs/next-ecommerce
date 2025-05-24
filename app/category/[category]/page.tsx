@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 const Products = dynamic(() => import("components/products"), { ssr: false });
 import { getCategory, getCategoryProducts } from "lib/api";
-import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "lib/config";
+import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "lib/config/config";
 import {
   getCategoryTitle,
   getCategoryDescription,
