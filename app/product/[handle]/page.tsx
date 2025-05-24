@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 import { getProducts } from "lib/api/catalog";
-import {  Product } from "lib/types";
+import { Product } from "lib/types";
 import { safeDecodeURIComponent } from "lib/helper";
 import SingleProductLayout from "components/products/single";
 

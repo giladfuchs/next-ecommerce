@@ -69,154 +69,162 @@ const CheckoutFormFields = ({
   const intl = useIntl();
 
   return (
-      <Formik<CheckoutFormValues>
-          initialValues={{ email: "", phone: "", name: "", agreed: false }}
-          validationSchema={getCheckoutValidationSchema(intl)}
-          onSubmit={async (values, helpers) => {
-            await onSubmit(values);
-            helpers.setSubmitting(false);
-          }}
-      >
-        {({
-            errors,
-            touched,
-            handleBlur,
-            handleChange,
-            handleSubmit,
-            isSubmitting,
-            values,
-          }) => (
-            <form noValidate onSubmit={handleSubmit} dir={localeCache.dir()}>
-              <Box sx={{ p: 2 }}>
-                <Grid container direction="column" spacing={2}>
-                    {checkout_fields.map((field) => (
-                        <Grid item key={field.name}>
-                            <FormControl
-                                fullWidth
-                                error={
-                                    touched[field.name as keyof typeof touched] &&
-                                    Boolean(errors[field.name as keyof typeof errors])
-                                }
-                                sx={{
-                                    mt: 1,
-                                    mb: 1,
-                                    fontSize: "inherit",
-                                    "& > label": {
-                                        top: 5,
-                                        left: localeCache.isRtl() ? "unset" : 14,
-                                        right: localeCache.isRtl() ? 14 : "unset",
-                                        position: "absolute",
-                                        transformOrigin: localeCache.isRtl() ? "top right" : "top left",
-                                        transform: "translate(0, -1.5px) scale(0.75)",
-                                        fontSize: "inherit",
-                                        color: "#9e9e9e",
-                                        '&[data-shrink="false"]': { top: 5 },
-                                    },
-                                    "& legend": { display: "none" },
-                                    "& fieldset": { top: 0 },
-                                }}
-                            >
-                                <InputLabel
-                                    htmlFor={`outlined-${field.name}`}
-                                    shrink
-                                    sx={{
-                                        position: "absolute",
-                                        right: localeCache.isRtl() ? 14 : "unset",
-                                        left: localeCache.isRtl() ? "unset" : 14,
-                                        transformOrigin: localeCache.isRtl() ? "top right" : "top left",
-                                        transform: "translate(0, -1.5px) scale(0.75)",
-                                        fontSize: "inherit",
-                                        color: "#9e9e9e",
-                                    }}
-                                >
-                                    <FormattedMessage id={`checkout.${field.name}`} />
-                                </InputLabel>
+    <Formik<CheckoutFormValues>
+      initialValues={{ email: "", phone: "", name: "", agreed: false }}
+      validationSchema={getCheckoutValidationSchema(intl)}
+      onSubmit={async (values, helpers) => {
+        await onSubmit(values);
+        helpers.setSubmitting(false);
+      }}
+    >
+      {({
+        errors,
+        touched,
+        handleBlur,
+        handleChange,
+        handleSubmit,
+        isSubmitting,
+        values,
+      }) => (
+        <form noValidate onSubmit={handleSubmit} dir={localeCache.dir()}>
+          <Box sx={{ p: 2 }}>
+            <Grid container direction="column" spacing={2}>
+              {checkout_fields.map((field) => (
+                <Grid item key={field.name}>
+                  <FormControl
+                    fullWidth
+                    error={
+                      touched[field.name as keyof typeof touched] &&
+                      Boolean(errors[field.name as keyof typeof errors])
+                    }
+                    sx={{
+                      mt: 1,
+                      mb: 1,
+                      fontSize: "inherit",
+                      "& > label": {
+                        top: 5,
+                        left: localeCache.isRtl() ? "unset" : 14,
+                        right: localeCache.isRtl() ? 14 : "unset",
+                        position: "absolute",
+                        transformOrigin: localeCache.isRtl()
+                          ? "top right"
+                          : "top left",
+                        transform: "translate(0, -1.5px) scale(0.75)",
+                        fontSize: "inherit",
+                        color: "#9e9e9e",
+                        '&[data-shrink="false"]': { top: 5 },
+                      },
+                      "& legend": { display: "none" },
+                      "& fieldset": { top: 0 },
+                    }}
+                  >
+                    <InputLabel
+                      htmlFor={`outlined-${field.name}`}
+                      shrink
+                      sx={{
+                        position: "absolute",
+                        right: localeCache.isRtl() ? 14 : "unset",
+                        left: localeCache.isRtl() ? "unset" : 14,
+                        transformOrigin: localeCache.isRtl()
+                          ? "top right"
+                          : "top left",
+                        transform: "translate(0, -1.5px) scale(0.75)",
+                        fontSize: "inherit",
+                        color: "#9e9e9e",
+                      }}
+                    >
+                      <FormattedMessage id={`checkout.${field.name}`} />
+                    </InputLabel>
 
-                                <OutlinedInput
-                                    id={`outlined-${field.name}`}
-                                    name={field.name}
-                                    type={field.type}
-                                    value={values[field.name as keyof typeof values]}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    inputProps={{
-                                        autoComplete: field.name === "phone" ? "tel" : field.name,
-                                        dir: localeCache.dir(),
-                                        "data-testid": `checkout-input-${field.name}`,
-                                    }}
-                                    sx={{
-                                        direction: localeCache.dir(),
-                                        fontSize: "inherit",
-                                        "& input": {
-                                            textAlign: localeCache.isRtl() ? "right" : "left",
-                                            fontSize: "inherit",
-                                        },
-                                    }}
-                                />
+                    <OutlinedInput
+                      id={`outlined-${field.name}`}
+                      name={field.name}
+                      type={field.type}
+                      value={values[field.name as keyof typeof values]}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      inputProps={{
+                        autoComplete:
+                          field.name === "phone" ? "tel" : field.name,
+                        dir: localeCache.dir(),
+                        "data-testid": `checkout-input-${field.name}`,
+                      }}
+                      sx={{
+                        direction: localeCache.dir(),
+                        fontSize: "inherit",
+                        "& input": {
+                          textAlign: localeCache.isRtl() ? "right" : "left",
+                          fontSize: "inherit",
+                        },
+                      }}
+                    />
 
-                                {touched[field.name as keyof typeof touched] &&
-                                    errors[field.name as keyof typeof errors] && (
-                                        <FormHelperText
-                                            data-testid={`checkout-error-${field.name}`}
-                                            sx={{
-                                                textAlign: localeCache.isRtl() ? "right" : "left",
-                                                marginInlineStart: localeCache.isRtl() ? 0 : 1,
-                                                marginInlineEnd: localeCache.isRtl() ? 1 : 0,
-                                            }}
-                                        >
-                                            {String(errors[field.name as keyof typeof errors])}
-                                        </FormHelperText>
-                                    )}
-                            </FormControl>
-                        </Grid>
-                    ))}
-
-                  <FormControl required error={Boolean(touched.agreed && errors.agreed)}>
-                    <Box textAlign={localeCache.isRtl() ? "right" : "left"}>
-                      <FormControlLabel
-                          labelPlacement="start"
-                          control={
-                            <Checkbox
-                                checked={values.agreed}
-                                onChange={handleChange}
-                                name="agreed"
-                                color="primary"
-                                data-testid="checkout-agree"
-                            />
-                          }
-                          label={
-                            <FormattedMessage
-                                id="checkout.agreeToTerms"
-                                values={{
-                                  link: (
-                                      <Link
-                                          href="/legal/terms"
-                                          target="_blank"
-                                          style={{ textDecoration: "underline" }}
-                                      >
-                                        <FormattedMessage id="checkout.termsLinkText" />
-                                      </Link>
-                                  ),
-                                }}
-                            />
-                          }
-                      />
-                    </Box>
-
-                    {touched.agreed && errors.agreed && (
-                        <FormHelperText data-testid="checkout-error-agreed">
-                          {String(errors.agreed)}
+                    {touched[field.name as keyof typeof touched] &&
+                      errors[field.name as keyof typeof errors] && (
+                        <FormHelperText
+                          data-testid={`checkout-error-${field.name}`}
+                          sx={{
+                            textAlign: localeCache.isRtl() ? "right" : "left",
+                            marginInlineStart: localeCache.isRtl() ? 0 : 1,
+                            marginInlineEnd: localeCache.isRtl() ? 1 : 0,
+                          }}
+                        >
+                          {String(errors[field.name as keyof typeof errors])}
                         </FormHelperText>
-                    )}
+                      )}
                   </FormControl>
-
-                  <Divider />
-                  <CheckoutActions isSubmitting={isSubmitting} />
                 </Grid>
-              </Box>
-            </form>
-        )}
-      </Formik>
+              ))}
+
+              <FormControl
+                required
+                error={Boolean(touched.agreed && errors.agreed)}
+              >
+                <Box textAlign={localeCache.isRtl() ? "right" : "left"}>
+                  <FormControlLabel
+                    labelPlacement="start"
+                    control={
+                      <Checkbox
+                        checked={values.agreed}
+                        onChange={handleChange}
+                        name="agreed"
+                        color="primary"
+                        data-testid="checkout-agree"
+                      />
+                    }
+                    label={
+                      <FormattedMessage
+                        id="checkout.agreeToTerms"
+                        values={{
+                          link: (
+                            <Link
+                              href="/legal/terms"
+                              target="_blank"
+                              style={{ textDecoration: "underline" }}
+                            >
+                              <FormattedMessage id="checkout.termsLinkText" />
+                            </Link>
+                          ),
+                        }}
+                      />
+                    }
+                  />
+                </Box>
+
+                {touched.agreed && errors.agreed && (
+                  <FormHelperText data-testid="checkout-error-agreed">
+                    {String(errors.agreed)}
+                  </FormHelperText>
+                )}
+              </FormControl>
+
+              <Divider />
+              <CheckoutActions isSubmitting={isSubmitting} />
+            </Grid>
+          </Box>
+        </form>
+      )}
+    </Formik>
   );
 };
 

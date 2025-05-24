@@ -1,9 +1,6 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-const Products = dynamic(
-    () => import("components/products"),
-    {ssr: false,},
-);
+const Products = dynamic(() => import("components/products"), { ssr: false });
 import SidebarLayout from "components/layout/sidebar";
 import {
   metadata_site_title,

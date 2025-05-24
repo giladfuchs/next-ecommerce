@@ -1,10 +1,7 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-const Products = dynamic(
-    () => import("components/products"),
-    { ssr: false },
-);
+const Products = dynamic(() => import("components/products"), { ssr: false });
 import { getCategory, getCategoryProducts } from "lib/api";
 import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "lib/config";
 import {
@@ -13,8 +10,6 @@ import {
 } from "lib/assets/i18n/localizedMetadata";
 import { Product } from "lib/types";
 import { safeDecodeURIComponent } from "lib/helper";
-
-
 
 type Props = {
   params: { category: string };

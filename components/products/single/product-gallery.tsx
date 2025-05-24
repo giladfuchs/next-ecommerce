@@ -8,85 +8,96 @@ import { GridTileImage } from "components/products/grid/tile";
 import { localeCache } from "lib/api";
 
 export function ProductGallery({
-                                   images,
-                               }: {
-    images: { src: string; altText: string }[];
+  images,
+}: {
+  images: { src: string; altText: string }[];
 }) {
-    const [imageIndex, setImageIndex] = useState(0);
-    const isRtl = localeCache.isRtl();
+  const [imageIndex, setImageIndex] = useState(0);
+  const isRtl = localeCache.isRtl();
 
-    const next = () =>
-        setImageIndex((prev) => (prev + 1) % images.length);
+  const next = () => setImageIndex((prev) => (prev + 1) % images.length);
 
-    const prev = () =>
-        setImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  const prev = () =>
+    setImageIndex((prev) => (prev - 1 + images.length) % images.length);
 
-    const handleNext = () => (isRtl ? prev() : next());
-    const handlePrev = () => (isRtl ? next() : prev());
+  const handleNext = () => (isRtl ? prev() : next());
+  const handlePrev = () => (isRtl ? next() : prev());
 
-    return (
-        <div>
-            {/* Main image viewer */}
-            <div
-                className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden"
-                dir={localeCache.dir()}
-            >
-                <Image
-                    className="h-full w-full object-contain mx-auto"
-                    fill
-                    sizes="(min-width: 1024px) 66vw, 100vw"
-                    alt={images[imageIndex].altText}
-                    src={images[imageIndex].src}
-                    priority
-                />
+  return (
+    <div>
+      {/* Main image viewer */}
+      <div
+        className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden"
+        dir={localeCache.dir()}
+      >
+        <Image
+          className="h-full w-full object-contain mx-auto"
+          fill
+          sizes="(min-width: 1024px) 66vw, 100vw"
+          alt={images[imageIndex].altText}
+          src={images[imageIndex].src}
+          priority
+        />
 
-                {images.length > 1 && (
-                    <div className="absolute bottom-[15%] flex w-full justify-center">
-                        <div className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/80 text-neutral-500 backdrop-blur-sm dark:border-black dark:bg-neutral-900/80">
-                            <button
-                                onClick={handleNext}
-                                aria-label={isRtl ? "Previous product image" : "Next product image"}
-                                className="h-full px-6 transition-all hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center"
-                            >
-                                {isRtl ? <ChevronRightIcon fontSize="small" /> : <ChevronLeftIcon fontSize="small" />}
-                            </button>
-
-                            <div className="mx-1 h-6 w-px bg-neutral-500" />
-
-                            <button
-                                onClick={handlePrev}
-                                aria-label={isRtl ? "Next product image" : "Previous product image"}
-                                className="h-full px-6 transition-all hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center"
-                            >
-                                {isRtl ? <ChevronLeftIcon fontSize="small" /> : <ChevronRightIcon fontSize="small" />}
-                            </button>
-                        </div>
-                    </div>
+        {images.length > 1 && (
+          <div className="absolute bottom-[15%] flex w-full justify-center">
+            <div className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/80 text-neutral-500 backdrop-blur-sm dark:border-black dark:bg-neutral-900/80">
+              <button
+                onClick={handleNext}
+                aria-label={
+                  isRtl ? "Previous product image" : "Next product image"
+                }
+                className="h-full px-6 transition-all hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center"
+              >
+                {isRtl ? (
+                  <ChevronRightIcon fontSize="small" />
+                ) : (
+                  <ChevronLeftIcon fontSize="small" />
                 )}
-            </div>
+              </button>
 
-            {/* Thumbnail selector */}
-            {images.length > 1 && (
-                <ul className="my-12 flex flex-wrap items-center justify-center gap-2 overflow-auto py-1 lg:mb-0">
-                    {images.map((image, idx) => (
-                        <li key={image.src} className="h-20 w-20">
-                            <button
-                                onClick={() => setImageIndex(idx)}
-                                aria-label="Select product image"
-                                className="h-full w-full"
-                            >
-                                <GridTileImage
-                                    alt={image.altText}
-                                    src={image.src}
-                                    width={80}
-                                    height={80}
-                                    active={idx === imageIndex}
-                                />
-                            </button>
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </div>
-    );
+              <div className="mx-1 h-6 w-px bg-neutral-500" />
+
+              <button
+                onClick={handlePrev}
+                aria-label={
+                  isRtl ? "Next product image" : "Previous product image"
+                }
+                className="h-full px-6 transition-all hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center"
+              >
+                {isRtl ? (
+                  <ChevronLeftIcon fontSize="small" />
+                ) : (
+                  <ChevronRightIcon fontSize="small" />
+                )}
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Thumbnail selector */}
+      {images.length > 1 && (
+        <ul className="my-12 flex flex-wrap items-center justify-center gap-2 overflow-auto py-1 lg:mb-0">
+          {images.map((image, idx) => (
+            <li key={image.src} className="h-20 w-20">
+              <button
+                onClick={() => setImageIndex(idx)}
+                aria-label="Select product image"
+                className="h-full w-full"
+              >
+                <GridTileImage
+                  alt={image.altText}
+                  src={image.src}
+                  width={80}
+                  height={80}
+                  active={idx === imageIndex}
+                />
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 }
