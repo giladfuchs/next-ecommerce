@@ -42,26 +42,6 @@ const theme = createTheme({
         },
       },
     },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: {
-          marginTop: 8,
-          marginBottom: 8,
-          fontSize: "inherit",
-          "& input": {
-            padding: "30.5px 14px 11.5px !important",
-            textAlign: localeCache.isRtl() ? "right" : "left",
-            fontSize: "inherit",
-          },
-          "& legend": {
-            display: "none",
-          },
-          "& fieldset": {
-            top: 0,
-          },
-        },
-      },
-    },
     MuiButton: {
       styleOverrides: {
         root: {

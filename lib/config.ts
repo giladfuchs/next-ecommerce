@@ -34,3 +34,5 @@ export const ICON_IMAGE_URL =
 export const MAX_FILE_SIZE_MB = 1;
 
 export const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+
+export const PRODUCTS_PER_PAGE = 3;

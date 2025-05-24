@@ -1,13 +1,17 @@
 import { Metadata } from "next";
-import { getProducts } from "lib/api";
-import ClientProduct from "components/product/ClientProduct";
+import dynamic from "next/dynamic";
+const Products = dynamic(
+    () => import("components/products"),
+    {ssr: false,},
+);
 import SidebarLayout from "components/layout/sidebar";
 import {
   metadata_site_title,
   metadata_site_description,
   metadata_keywords,
-} from "../lib/assets/i18n/localizedMetadata";
-import { baseUrl, ICON_IMAGE_URL } from "../lib/config";
+} from "lib/assets/i18n/localizedMetadata";
+import { baseUrl, ICON_IMAGE_URL } from "lib/config";
+import { getProducts } from "lib/api";
 
 export const metadata: Metadata = {
   title: metadata_site_title,
@@ -31,7 +35,7 @@ export default async function HomePage() {
   return (
     <SidebarLayout>
       <h1 className="sr-only">{metadata_site_description}</h1>
-      <ClientProduct products={products} />
+      <Products products={products} />
     </SidebarLayout>
   );
 }

@@ -1,7 +1,10 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-
+const Products = dynamic(
+    () => import("components/products"),
+    { ssr: false },
+);
 import { getCategory, getCategoryProducts } from "lib/api";
 import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "lib/config";
 import {
@@ -11,12 +14,7 @@ import {
 import { Product } from "lib/types";
 import { safeDecodeURIComponent } from "lib/helper";
 
-const ClientProduct = dynamic(
-  () => import("components/product/ClientProduct"),
-  {
-    ssr: false,
-  },
-);
+
 
 type Props = {
   params: { category: string };
@@ -94,7 +92,7 @@ export default async function CategoryPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ClientProduct products={products} />
+      <Products products={products} />
     </section>
   );
 }

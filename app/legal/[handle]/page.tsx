@@ -3,7 +3,7 @@
 import { Box, Typography } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 import { notFound } from "next/navigation";
-import { email } from "components/layout/Footer";
+import { email } from "components/layout/footer";
 import { legalContent } from "../../../lib/assets/i18n/legalContent";
 import { localeCache } from "../../../lib/api";
 

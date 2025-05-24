@@ -1,7 +1,6 @@
 import Link from "next/link";
-import HeaderControls from "./HeaderControls";
-import Logo from "components/layout/header/Logo";
-import { API_URL } from "../../../lib/config";
+import HeaderControls from "./header-controls";
+import Logo from "components/layout/header/logo";
 
 export default function Header() {
   return (
@@ -9,9 +8,9 @@ export default function Header() {
       <div className="flex w-full items-center justify-between">
         <Link
           href="/"
-          prefetch={true}
-          className="flex items-center"
+          prefetch
           data-testid="site-logo"
+          className="flex items-center"
         >
           <Logo />
         </Link>

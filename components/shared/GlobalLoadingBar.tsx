@@ -1,5 +1,4 @@
 "use client";
-
 import { LinearProgress } from "@mui/material";
 import { useLoading } from "lib/provider/LoadingProvider";
 

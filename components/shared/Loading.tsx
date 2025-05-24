@@ -1,6 +1,5 @@
-import Grid, { ProductItem } from "components/product/grid";
+import Grid, { ProductItem } from "components/products/grid";
 import { Box, Skeleton } from "@mui/material";
-import * as React from "react";
 
 export function LoadingProductsList() {
   return (

@@ -2,10 +2,9 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 import { getProducts } from "lib/api/catalog";
-import { ProductDescription } from "components/product/ProductDescription";
-import { Image, Product } from "lib/types";
-import { ProductGallery } from "../../../components/product/ProductGallery";
-import { safeDecodeURIComponent } from "../../../lib/helper";
+import {  Product } from "lib/types";
+import { safeDecodeURIComponent } from "lib/helper";
+import SingleProductLayout from "components/products/single";
 
 type Props = {
   params: { handle: string };
@@ -99,25 +98,7 @@ export default async function ProductPage({ params }: Props) {
           __html: JSON.stringify(productJsonLd),
         }}
       />
-
-      <div
-        className="mx-auto max-w-(--breakpoint-2xl) px-4"
-        data-testid="product-detail"
-      >
-        <div className="flex flex-col gap-6 rounded-lg border border-theme bg-theme p-8 md:p-12 lg:flex-row lg:gap-8 ">
-          <div className="basis-full lg:basis-2/6">
-            <ProductDescription product={product} />
-          </div>
-          <div className="h-full w-full basis-full lg:basis-4/6">
-            <ProductGallery
-              images={product.images.slice(0, 5).map((image: Image) => ({
-                src: image.url,
-                altText: image.altText,
-              }))}
-            />
-          </div>
-        </div>
-      </div>
+      <SingleProductLayout product={product} />
     </>
   );
 }

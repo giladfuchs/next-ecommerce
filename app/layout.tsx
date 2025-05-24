@@ -25,7 +25,7 @@ import { LoadingProvider } from "lib/provider/LoadingProvider";
 import GlobalLoadingBar from "components/shared/GlobalLoadingBar";
 import { LoadingProductsList } from "components/shared/Loading";
 import Header from "components/layout/header";
-import Footer from "components/layout/Footer";
+import Footer from "components/layout/footer";
 import AccessibilityBar from "../components/shared/AccessibilityBar";
 
 import {

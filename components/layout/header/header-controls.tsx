@@ -1,32 +1,30 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useIntl, FormattedMessage } from "react-intl";
-
-import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
-import LogoutIcon from "@mui/icons-material/Logout";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
+import {
+  AdminPanelSettings as AdminPanelSettingsIcon,
+  Logout as LogoutIcon,
+  Search as SearchIcon,
+} from "@mui/icons-material";
 import {
   TextField,
   InputAdornment,
   Box,
   Tooltip,
   IconButton,
-  useMediaQuery,
 } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-
-import { AdminNav } from "./AdminNav";
 import Cart from "components/cart";
-
-function Search() {
+import AdminNav from "./admin-nav";
+const Search = () => {
   const intl = useIntl();
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const [query, setQuery] = useState(searchParams.get("q") || "");
-  const lastAppliedQuery = useRef<string>(query);
+  const lastAppliedQuery = useRef(query);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -34,6 +32,7 @@ function Search() {
       if (trimmed === lastAppliedQuery.current) return;
 
       const params = new URLSearchParams(searchParams.toString());
+
       if (trimmed) {
         params.set("q", trimmed);
       } else {
@@ -56,6 +55,7 @@ function Search() {
       variant="outlined"
       size="small"
       fullWidth
+      inputProps={{ "data-testid": "search-input" }}
       InputProps={{
         endAdornment: (
           <InputAdornment position="end">
@@ -65,27 +65,26 @@ function Search() {
       }}
     />
   );
-}
+};
 
-function AuthButtons() {
+const AuthButtons = () => {
   const intl = useIntl();
   const router = useRouter();
   const pathname = usePathname();
   const [hasToken, setHasToken] = useState(false);
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
     const expiresAt = Number(localStorage.getItem("token_expires_at"));
-    const isExpired = Date.now() > expiresAt;
 
-    if (isExpired) {
+    const isValid = token && Date.now() < expiresAt;
+
+    if (!isValid) {
       localStorage.removeItem("token");
       localStorage.removeItem("token_expires_at");
-      setHasToken(false);
-      return;
     }
 
-    const token = localStorage.getItem("token");
-    setHasToken(!!token);
+    setHasToken(!!isValid);
   }, [pathname]);
 
   const handleLogout = () => {
@@ -117,40 +116,18 @@ function AuthButtons() {
       </Tooltip>
     </>
   );
-}
+};
 
 export default function HeaderControls() {
   const pathname = usePathname();
-
   const isAdmin = pathname.startsWith("/admin");
-  const isDesktop = useMediaQuery("(min-width:768px)");
-
-  if (isAdmin) {
-    return (
-      <>
-        {isDesktop ? (
-          <>
-            <div className="flex w-full md:w-1/3 justify-center px-2">
-              <AdminNav />
-            </div>
-            <div className="flex justify-end w-auto md:w-1/3"></div>
-          </>
-        ) : (
-          <>
-            <div className="flex w-full md:w-1/3 justify-center px-2"></div>
-            <div className="flex justify-end w-auto md:w-1/3">
-              <AdminNav />
-            </div>
-          </>
-        )}
-      </>
-    );
-  }
 
   const shouldHideSearch =
     pathname.startsWith("/product/") ||
     pathname.startsWith("/legal/") ||
     pathname.startsWith("/login");
+
+  if (isAdmin) return <AdminNav />;
 
   return (
     <>
@@ -160,7 +137,6 @@ export default function HeaderControls() {
           <AuthButtons />
         </Box>
       </div>
-
       <div className="flex justify-end w-auto md:w-1/3">
         <Cart />
       </div>

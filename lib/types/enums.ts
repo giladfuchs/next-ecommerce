@@ -1,7 +1,7 @@
 export enum ModelType {
-  category = "category",
   order = "order",
   product = "product",
+  category = "category",
 }
 
 export enum FormType {
