@@ -8,7 +8,7 @@ export type Category = {
   updatedAt: string;
 };
 
-export type Image = {
+export type ProductImage = {
   url: string;
   altText: string;
 };
@@ -21,8 +21,8 @@ export type Product = {
   title: string;
   description: string;
   price: number;
-  featuredImage: Image;
-  images: Image[];
+  featuredImage: ProductImage;
+  images: ProductImage[];
   updatedAt: string;
 };
 

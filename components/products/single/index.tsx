@@ -13,10 +13,7 @@ const SingleProductLayout = ({ product }: { product: Product }) => (
       </div>
       <div className="h-full w-full basis-full lg:basis-4/6">
         <ProductGallery
-          images={product.images.slice(0, 5).map((image) => ({
-            src: image.url,
-            altText: image.altText,
-          }))}
+          images={product.images}
         />
       </div>
     </div>

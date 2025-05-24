@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 
 import ImagesEditor from "./ImagesEditor";
-import { FormField, FormType, Image, ModelType } from "lib/types";
+import { FormField, FormType, ProductImage, ModelType } from "lib/types";
 import { getCategories } from "lib/api";
 
 type FormFieldProps = {
@@ -40,7 +40,7 @@ export const FieldRenderer = ({ field, onChange }: FormFieldProps) => {
       return (
         <ImagesEditor
           placeholder={placeholder}
-          images={Array.isArray(field.value) ? (field.value as Image[]) : []}
+          images={Array.isArray(field.value) ? (field.value as ProductImage[]) : []}
           onChange={(updatedImages) => onChange(updatedImages, field.key)}
         />
       );

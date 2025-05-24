@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import ImageIcon from "@mui/icons-material/Image";
 
-import { Image } from "lib/types";
+import { ProductImage } from "lib/types";
 
 export default function ImagesEditor({
   placeholder,
@@ -23,15 +23,15 @@ export default function ImagesEditor({
   onChange,
 }: {
   placeholder: string;
-  images: Image[];
+  images: ProductImage[];
   onChange: (value: any) => void;
 }) {
   const intl = useIntl();
-  const [imagesState, setImagesState] = React.useState<Image[]>(images);
+  const [imagesState, setImagesState] = React.useState<ProductImage[]>(images);
 
-  const handleChange = (index: number, field: keyof Image, value: string) => {
+  const handleChange = (index: number, field: keyof ProductImage, value: string) => {
     const updated = [...imagesState];
-    updated[index] = { ...updated[index], [field]: value } as Image;
+    updated[index] = { ...updated[index], [field]: value } as ProductImage;
     onChange(updated);
     setImagesState(updated);
   };

@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 import { IntlShape } from "react-intl";
 import { FormType, ModelType } from "./enums";
-import { Image } from "./entities";
+import { ProductImage } from "./entities";
 // -- Admin Mui Form--
 export class FieldInput {
   constructor(
@@ -29,7 +29,7 @@ export class FieldImages {
 
   constructor(
     public key: string,
-    public value: Image[] = [],
+    public value: ProductImage[] = [],
   ) {}
 }
 

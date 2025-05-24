@@ -6,15 +6,15 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { GridTileImage } from "components/products/grid/tile";
 import { localeCache } from "lib/api";
+import { ProductImage } from "lib/types";
 
 export function ProductGallery({
   images,
 }: {
-  images: { src: string; altText: string }[];
+  images: ProductImage[];
 }) {
   const [imageIndex, setImageIndex] = useState(0);
   const isRtl = localeCache.isRtl();
-
   const next = () => setImageIndex((prev) => (prev + 1) % images.length);
 
   const prev = () =>
@@ -25,7 +25,6 @@ export function ProductGallery({
 
   return (
     <div>
-      {/* Main image viewer */}
       <div
         className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden"
         dir={localeCache.dir()}
@@ -34,8 +33,8 @@ export function ProductGallery({
           className="h-full w-full object-contain mx-auto"
           fill
           sizes="(min-width: 1024px) 66vw, 100vw"
-          alt={images[imageIndex].altText}
-          src={images[imageIndex].src}
+          alt={(images[imageIndex] as ProductImage).altText}
+          src={(images[imageIndex] as ProductImage).url}
           priority
         />
 
@@ -76,11 +75,10 @@ export function ProductGallery({
         )}
       </div>
 
-      {/* Thumbnail selector */}
       {images.length > 1 && (
         <ul className="my-12 flex flex-wrap items-center justify-center gap-2 overflow-auto py-1 lg:mb-0">
           {images.map((image, idx) => (
-            <li key={image.src} className="h-20 w-20">
+            <li key={image.url} className="h-20 w-20">
               <button
                 onClick={() => setImageIndex(idx)}
                 aria-label="Select product image"
@@ -88,7 +86,7 @@ export function ProductGallery({
               >
                 <GridTileImage
                   alt={image.altText}
-                  src={image.src}
+                  src={image.url}
                   width={80}
                   height={80}
                   active={idx === imageIndex}
