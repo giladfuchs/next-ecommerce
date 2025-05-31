@@ -2,7 +2,6 @@
   "buildCommand": "pnpm prepare:api && pnpm --dir frontend build",
   "outputDirectory": "frontend/.next",
   "framework": "nextjs",
-  "rootDirectory": "frontend",
   "ignoreCommand": "echo 'Option A: Always deploy from root'",
   "env": {
     "BLOB_READ_WRITE_TOKEN": "@blob_read_write_token",
