@@ -33,7 +33,7 @@ yarn-error.log*
 
 # vercel
 .vercel
-#git diff --quiet HEAD^ HEAD . ':!api'
+#git diff --quiet HEAD^ HEAD . ':!backend'
 
 # typescript
 *.tsbuildinfo
