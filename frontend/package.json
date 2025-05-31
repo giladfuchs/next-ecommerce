@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "../node_modules/.bin/next dev",
     "debug": "NODE_OPTIONS='--inspect' next dev",
-    "build": "../node_modules/.bin/next build",
+    "build": "next build",
     "start": "../node_modules/.bin/next start",
     "prettier": "npx prettier --write ..",
     "typecheck": "../node_modules/.bin/tsc --noEmit",
