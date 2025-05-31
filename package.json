@@ -10,7 +10,7 @@
     "build": "pnpm --dir frontend build",
     "start": "pnpm --dir frontend start",
     "build:backend": "pnpm --dir backend build",
-    "copy:backend": "rm -rf frontend/app/api/dist && cp -R backend/dist frontend/backend",
+    "copy:backend": "rm -rf backend/function/dist && cp -R backend/dist frontend/backend",
     "prepare:api": "pnpm build:backend && pnpm copy:backend"
   },
   "dependencies": {
