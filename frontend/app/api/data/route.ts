@@ -2,10 +2,8 @@ import { NextResponse } from 'next/server';
 import { config } from 'dotenv';
 import path from 'path';
 
-// ✅ Load .env from root of monorepo
 config({ path: path.resolve(process.cwd(), '../.env') });
 
-console.log("🟨 DB_HOST =", process.env.DB_HOST); // ✅ Now it should print real host
 
 export async function GET() {
     try {
