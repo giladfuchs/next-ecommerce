@@ -1,0 +1,26 @@
+{
+  "buildCommand": "pnpm prepare:api && pnpm --dir frontend build",
+  "outputDirectory": "frontend/.next",
+  "framework": "nextjs",
+  "rootDirectory": "frontend",
+  "ignoreCommand": "echo 'Option A: Always deploy from root'",
+  "env": {
+    "BLOB_READ_WRITE_TOKEN": "@blob_read_write_token",
+    "DB_HOST": "@db_host",
+    "DB_PORT": "@db_port",
+    "DB_USER": "@db_user",
+    "DB_PASSWORD": "@db_password",
+    "DB_NAME": "@db_name",
+    "JWT_SECRET": "@jwt_secret",
+    "GMAIL_USER": "@gmail_user",
+    "CALLMEBOT_API_KEY": "@callmebot_api_key",
+    "WHATSAPP_NUMBER": "@whatsapp_number",
+    "FRONT_URL": "@front_url",
+    "ALLOWED_ORIGINS": "@allowed_origins",
+    "STORE_NAME": "@store_name",
+    "STORE_EMAIL": "@store_email",
+    "SEND_EMAIL_WHATSAPP": "@send_email_whatsapp",
+    "MAILERSEND_SMTP_USER": "@mailersend_smtp_user",
+    "MAILERSEND_SMTP_PASS": "@mailersend_smtp_pass"
+  }
+}

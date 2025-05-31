@@ -7,11 +7,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "pnpm --dir frontend dev",
-    "build": "pnpm --dir frontend build",
+    "build": "pnpm prepare:api && pnpm --dir frontend build",
     "start": "pnpm --dir frontend start",
     "build:backend": "pnpm --dir backend build",
-    "copy:backend": "rm -rf backend/function/dist && cp -R backend/dist frontend/backend",
-    "prepare:api": "pnpm build:backend && pnpm copy:backend"
+    "copy:functions": "rm -rf frontend/app/functions && mkdir -p frontend/app/functions && cp -r backend/functions/* frontend/app/functions/",
+    "prepare:api": "pnpm build:backend && pnpm copy:functions"
   },
   "dependencies": {
     "@emotion/react": "11.11.1",
