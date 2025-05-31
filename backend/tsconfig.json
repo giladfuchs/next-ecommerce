@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["node", "vitest", "express", "supertest"],
+    "types": ["node", "express", "supertest"],
     "target": "ES2021",
     "module": "CommonJS",
     "rootDir": ".",
