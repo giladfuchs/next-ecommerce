@@ -1,0 +1,354 @@
+{
+    "categories": [
+        {
+            "title": "Trees"
+        },
+        {
+            "title": "Shrubs"
+        },
+        {
+            "title": "Edibles"
+        },
+        {
+            "title": "Herbs"
+        },
+        {
+            "title": "צמחי בית"
+        },
+        {
+            "title": "זרעים"
+        }
+    ],
+    "products": [
+        {
+            "title": "Ice Cream Bean",
+            "description": "A striking tropical tree reaching 10–15 meters in height, with broad foliage and white blossoms. Its long pods contain sweet, vanilla-flavored pulp—hence the name. Ideal as a shade tree and for attracting pollinators. Suitable for warm climates.",
+            "price": 28.57,
+            "category": "Trees"
+        },
+        {
+            "title": "Kraasi Plum",
+            "description": "A thorny shrub or small tree growing up to about 5 meters, with white spring blossoms. Its small blue fruits are great for making jams, liqueurs, and more. Hardy and well-suited for gardens and yards.",
+            "price": 28.57,
+            "category": "Trees"
+        },
+        {
+            "title": "Japanese Raisin Tree",
+            "description": "A deciduous tree reaching 5–10 meters high, with broad foliage and white spring blooms. The edible part is the fruit stem, which thickens and sweetens, resembling a raisin. Hardy and ideal for ornamental gardens in warm regions.",
+            "price": 28.57,
+            "category": "Trees"
+        },
+        {
+            "title": "Rimon Rosh Pered (Pomegranate)",
+            "description": "An Israeli pomegranate variety growing 2–5 meters tall, with red spring blossoms. Its pinkish, sweet fruits are perfect for fresh consumption and juice. Hardy and suitable for home gardens.",
+            "price": 20,
+            "category": "Trees"
+        },
+        {
+            "title": "Rimon Akko (Pomegranate)",
+            "description": "A local pomegranate variety reaching 3–4 meters, with red blossoms in spring. Large, sweet, juicy fruits with red peels and seeds. Suitable for gardens in warm climates.",
+            "price": 20,
+            "category": "Trees"
+        },
+        {
+            "title": "Rimon Malisi (Pomegranate)",
+            "description": "A unique pomegranate variety with a light-colored peel and very soft seeds. Its taste is very sweet with almost no acidity—ideal for fresh eating. A deciduous tree suitable for private gardens.",
+            "price": 20,
+            "category": "Trees"
+        },
+        {
+            "title": "Rimon Shami (Pomegranate)",
+            "description": "A traditional variety with a red-pink peel and juicy seeds. Extremely sweet with a distinct aroma, ripens in late summer. Hardy and good for warm gardens.",
+            "price": 20,
+            "category": "Trees"
+        },
+        {
+            "title": "Long White Mulberry",
+            "description": "A deciduous tree reaching 5–10 meters with long, white, sweet fruits. Ripens in spring, ideal for fresh eating or preserves. Hardy and suited for warm climates.",
+            "price": 20,
+            "category": "Trees"
+        },
+        {
+            "title": "Ofir Mulberry",
+            "description": "A local mulberry variety with dark red sweet fruits. Deciduous and ideal for gardens in warm areas. Ripens in spring, good for eating fresh or preserving.",
+            "price": 20,
+            "category": "Trees"
+        },
+        {
+            "title": "Short White Mulberry",
+            "description": "A deciduous tree reaching 5–10 meters with short, white, sweet fruits. Ripens in spring and suitable for fresh use or preserving. Hardy and ideal for warm areas.",
+            "price": 20,
+            "category": "Trees"
+        },
+        {
+            "title": "Red Sabra Cactus",
+            "description": "A productive cactus 2–3 meters tall with medium-sized red fruits. The fruits are sweet and juicy, ideal for fresh eating or preserving. Drought-resistant and suited to hot climates.",
+            "price": 20,
+            "category": "Trees"
+        },
+        {
+            "title": "Moringa",
+            "description": "Known as the 'Miracle Tree', Moringa is a fast-growing tropical tree that adapts to dry conditions. All parts—leaves, pods, flowers, and roots—are edible and highly nutritious. Traditionally used for its medicinal and antioxidant properties.",
+            "price": 11.43,
+            "category": "Trees"
+        },
+        {
+            "title": "Strawberry Guava",
+            "description": "An evergreen shrub originating in Brazil, 2–6 meters tall. Its small red fruits taste like strawberries and are great for fresh eating, jams, and juices. Hardy and suited for warm-climate gardens.",
+            "price": 14.29,
+            "category": "Trees"
+        },
+        {
+            "title": "Fig",
+            "description": "A deciduous tree 3–10 meters tall with large, lobed leaves. Its sweet, juicy fruits are one of the Seven Species of biblical Israel. Hardy and perfect for warm-region gardens.",
+            "price": 22.86,
+            "category": "Trees"
+        },
+        {
+            "title": "Tipuana (Pride of Bolivia)",
+            "description": "A majestic deciduous tree growing up to 30 meters tall, with a wide canopy and stunning yellow spring flowers. Popular as an ornamental shade tree in private and public gardens. Thrives in warm climates.",
+            "price": 14.29,
+            "category": "Trees"
+        },
+        {
+            "title": "Indian Hawthorn",
+            "description": "Indian Hawthorn is an evergreen shrub that grows 1–2 meters tall and blooms with pink flowers in spring. Used as an ornamental plant in gardens, as a hedge, or as ground cover. Hardy and well-suited for gardens and warm regions.",
+            "price": 14.29,
+            "category": "Shrubs"
+        },
+        {
+            "title": "Elderberry",
+            "description": "Black elder is a shrub or small tree growing 3–6 meters tall, with white blossoms in spring and purple-black fruits in summer. The berries are used for syrups, jams, and wine, known for their health benefits. Hardy and suitable for warm gardens.",
+            "price": 10,
+            "category": "Edibles"
+        },
+        {
+            "title": "African Lion's Ear",
+            "description": "An evergreen shrub reaching 1–2 meters in height, with striking orange flowers blooming in spring and summer. Attracts pollinators and used as an ornamental plant. Hardy and suitable for warm gardens.",
+            "price": 11.43,
+            "category": "Edibles"
+        },
+        {
+            "title": "Small Bay Laurel",
+            "description": "A 1–3 meter tall evergreen shrub from the laurel family. Its fragrant leaves are used in cooking and contain essential oils with medicinal properties. Hardy and suitable for warm gardens.",
+            "price": 14.29,
+            "category": "Edibles"
+        },
+        {
+            "title": "Bush Lucerne",
+            "description": "An evergreen legume shrub growing 1–2 meters tall. Blooms in spring with yellow flowers and enriches the soil with nitrogen, making it an excellent ground cover. Hardy and ideal for gardens and warm climates.",
+            "price": 14.29,
+            "category": "Edibles"
+        },
+        {
+            "title": "Spiny Broom",
+            "description": "A bushy, branched shrub growing 1–4 meters tall. Blooms in spring with bright yellow flowers that attract pollinators. Hardy and well-suited for warm garden environments.",
+            "price": 22.86,
+            "category": "Edibles"
+        },
+        {
+            "title": "Sea Mallow",
+            "description": "An evergreen shrub growing 1–1.5 meters tall, with beautiful pink-purple blooms in spring and summer. Ideal for partial shade and adds color to gardens. Hardy and fits warm climates.",
+            "price": 14.29,
+            "category": "Shrubs"
+        },
+        {
+            "title": "Sweet Pea",
+            "description": "An annual climbing plant reaching 1–2 meters. Blooms in spring with fragrant, colorful flowers that attract pollinators. Hardy and great for garden cultivation in warm areas.",
+            "price": 4.29,
+            "category": "Edibles"
+        },
+        {
+            "title": "חוטמית זיפנית",
+            "description": "חוטמית זיפנית היא צמח עשבוני רב־שנתי, המתנשא לגובה של 2–3 מטרים. היא פורחת באביב בפרחים ורודים גדולים ומרשימים, מה שהופך אותה לצמח נוי פופולרי. הצמח עמיד ומתאים לגידול בגינות ובאזורים חמים.",
+            "price": 20,
+            "category": "זרעים"
+        },
+        {
+            "title": "Mediterranean Spiraea",
+            "description": "A hardy evergreen shrub growing 2–5 meters tall, with white blossoms in spring. Used as an ornamental plant in gardens and attracts many pollinators. Suitable for warm climate cultivation.",
+            "price": 11.43,
+            "category": "Shrubs"
+        },
+        {
+            "title": "Aloe Vera",
+            "description": "Aloe Vera is a succulent evergreen plant that grows 0.5–1 meters tall. Its gel is rich in medicinal properties and is used to treat burns and skin conditions. Hardy and suitable for gardens in warm climates.",
+            "price": 11.43,
+            "category": "Edibles"
+        },
+        {
+            "title": "Mint",
+            "description": "Mint is a perennial herbaceous plant from the Lamiaceae family, growing 0.5–1 meters tall. Commonly used as a culinary herb and valued for its many medicinal properties. Thrives in warm gardens.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Lemon Balm",
+            "description": "Lemon Balm is a perennial herbaceous plant from the mint family, growing 0.5–1 meters tall. Used as a culinary herb and known for its calming and mood-enhancing effects. Hardy and ideal for warm gardens.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Lemon Geranium",
+            "description": "An evergreen shrub growing 0.5–1 meters tall, with fragrant lemon-scented leaves. Grown for its ornamental appeal and medicinal properties. Hardy and suitable for warm garden environments.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Common Sage",
+            "description": "A perennial herbaceous plant from the mint family, growing 0.5–1 meters tall. Used as a culinary herb. Also includes Salvia dominica (Fragrant Sage), an evergreen shrub about 70 cm tall with wrinkled, triangular leaves and long-lasting scent. Blooms in spring with pale yellowish flowers and attracts many pollinators.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Fragrant Sage",
+            "description": "An evergreen shrub about 70 cm tall with wrinkled, triangular leaves and a strong, pleasant scent that lingers. Blooms in spring with pale yellow-white flowers and attracts many pollinators. Hardy and suitable for warm gardens.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Gray Lavender",
+            "description": "An evergreen shrub 60–80 cm tall with silvery-gray leaves and stunning purple flowers that bloom nearly year-round. Has a pleasant scent and repels mosquitoes. Ideal for warm garden environments.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Serrated Lavender",
+            "description": "An evergreen shrub 60–80 cm tall with serrated green leaves and vibrant purple flowers throughout most of the year. Emits a pleasant scent and repels mosquitoes. Hardy and suitable for warm gardens.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Feathery Lavender",
+            "description": "An evergreen shrub 60–80 cm tall with feathery leaves and long-blooming purple flowers. Has a pleasant aroma and helps repel mosquitoes. Thrives in warm garden conditions.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Lemongrass",
+            "description": "A perennial herbaceous plant reaching 1–1.5 meters tall, with narrow green leaves that emit a strong lemon scent. Used as a culinary herb in Asian cuisine and has multiple medicinal benefits. Hardy and suited for warm gardens.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Lemon Verbena",
+            "description": "An evergreen shrub growing 1–2 meters tall with lemon-scented green leaves. Used as a culinary herb and valued for its medicinal benefits. Hardy and ideal for warm climates.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Lemon Tagetes",
+            "description": "An evergreen shrub 1–2 meters tall with lemon-scented green leaves and vibrant yellow flowers. Serves as an ornamental plant and natural pest repellent. Thrives in warm garden settings.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Artemisia (Wormwood)",
+            "description": "An evergreen shrub 1–2 meters tall with silvery-green fragrant leaves. Used as a spice and known for its medicinal properties. Hardy and well-suited to warm gardens.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Rue",
+            "description": "An evergreen shrub 0.5–1 meter tall with blue-green aromatic leaves and striking yellow flowers. Used as a culinary herb and for its medicinal properties. Hardy and suitable for warm gardens.",
+            "price": 5.71,
+            "category": "Herbs"
+        },
+        {
+            "title": "Garlic Chives",
+            "description": "A perennial herbaceous plant in the Amaryllidaceae family, growing up to 30 cm tall. Has slender hollow green leaves with a mild flavor resembling a mix of onion and garlic. Blooms in spring and summer with small white flowers that attract bees and butterflies. Suitable for gardens, pots, and planters—adds flavor and aroma to any dish.",
+            "price": 7.14,
+            "category": "Herbs"
+        },
+        {
+            "title": "סנסיוורות גבוהות",
+            "description": "סנסיוורה גבוהה, הידועה גם כלשון החותנת, היא צמח בית עמיד במיוחד, המתנשא לגובה של עד 1.5 מטרים. היא בעלת עלים ארוכים, בשרניים ומפוספסים בגווני ירוק וצהוב, הגדלים בצורה זקופה. הצמח מטהר את האוויר ומסתגל למגוון רחב של תנאי תאורה, מה שהופך אותו לאידיאלי למתחילים או לאנשים עסוקים. דורש השקיה מועטה ומתאים לגידול בבית ובמשרד",
+            "price": 70,
+            "category": "צמחי בית"
+        },
+        {
+            "title": "פפרומיות",
+            "description": "פפרומיה היא צמח עשבוני סוקולנטי רב־שנתי, המתאים מאוד לגידול בתוך הבית. היא מגיעה במגוון רחב של צורות ועלים בצבעים שונים, כולל ירוק, אדום, סגול וורוד, ולעיתים עם דוגמאות מגוונות. הצמח קומפקטי, גדל לאט ואינו דורש טיפול אינטנסיבי, מה שהופך אותו לאידיאלי לחללים קטנים או לגידול על אדן חלון. מעדיף אור בינוני עד בהיר עקיף, ויש להימנע מהשקיית יתר",
+            "price": 45,
+            "category": "צמחי בית"
+        },
+        {
+            "title": "פוטוסים",
+            "description": "פוטוס הוא צמח בית מטפס או נשפך, הידוע בעמידותו וביכולתו להסתגל למגוון רחב של תנאי תאורה. הוא בעל עלים ירוקים בצורת לב, לעיתים עם כתמים בגווני צהוב או לבן, המוסיפים צבע לכל חלל. הצמח מתאים לגידול בעציצים, סלסלות תלויות או מדפים, ודורש השקיה רק כאשר האדמה מתייבשת. מומלץ להימנע מחשיפה לשמש ישירה חזקה, שעלולה לגרום לצריבת העלים",
+            "price": 35,
+            "category": "צמחי בית"
+        },
+        {
+            "title": "סנגוניום",
+            "description": "סינגוניום, הידוע גם כצמח ראש החץ, הוא צמח בית פופולרי עם עלים בצורת חץ בגווני ירוק ולעיתים ורוד או לבן. הוא צמח מטפס או נשפך, המתאים לגידול בעציצים או בסלסלות תלויות, ומוסיף מראה טרופי לכל חלל. הצמח מעדיף אור בינוני עד בהיר עקיף, ויש להימנע מחשיפה לשמש ישירה. השקיה מתבצעת כאשר השכבה העליונה של האדמה מתייבשת",
+            "price": 25,
+            "category": "צמחי בית"
+        },
+        {
+            "title": "אוזן פיל",
+            "description": "אוזן פיל, או אלוקסיה, הוא צמח טרופי מרשים בעל עלים גדולים בצורת לב, המזכירים את אוזני הפיל ומכאן שמו. הצמח מגיע במגוון מינים וגדלים, ומתאים לגידול בבית, במרפסת או בגינה מוצלת. מעדיף אור בהיר עקיף, ויש להימנע מחשיפה לשמש ישירה. דורש השקיה מרובה, במיוחד בתקופת הצמיחה, ויש לשמור על לחות גבוהה בסביבתו.",
+            "price": 25,
+            "category": "צמחי בית"
+        },
+        {
+            "title": "כובע הנזיר",
+            "description": "כובע הנזיר הוא צמח חד־שנתי מטפס או משתרע, בעל עלים עגולים ופרחים מרהיבים בגווני כתום, אדום וצהוב. הוא פורח מהחורף ועד האביב, ומושך פרפרים ודבורים לגינה. העלים והפרחים אכילים, בעלי טעם חרפרף, ומתאימים לסלטים ולתוספות קולינריות.",
+            "price": 10,
+            "category": "זרעים"
+        },
+        {
+            "title": "מרוות ירושלים",
+            "description": "מרוות ירושלים היא עשבונית רב־שנתית ים־תיכונית, המתנשאת לגובה של כ־80 ס”מ. בחורף מתפתחת שושנת עלים גדולים ושעירים, ובאביב מופיעים פרחים ארגמניים מרהיבים המסודרים על עמוד תפרחת גבוה. הצמח מושך דבורים ומאביקים אחרים, ומתאים לגינות חסכוניות במים.",
+            "price": 10,
+            "category": "זרעים"
+        },
+        {
+            "title": "Saltbush",
+            "description": "Saltbush is a desert shrub reaching 0.5–2 meters tall with gray leaves and green flowers. Highly tolerant of salinity and drought. Used for grazing and land reclamation in arid zones.",
+            "price": 10,
+            "category": "Shrubs"
+        },
+        {
+            "title": "African Sage",
+            "description": "African Sage is an evergreen shrub growing 1–2 meters tall, with yellow-orange blossoms in spring and summer. It attracts pollinators and is often used as a decorative garden plant. Hardy and suitable for warm areas.",
+            "price": 11.43,
+            "category": "Shrubs"
+        },
+        {
+            "title": "Large Bay Laurel",
+            "description": "Large Bay Laurel is an evergreen tree reaching 5–10 meters, with fragrant green leaves used as a culinary herb. Also serves as an ornamental or hedge plant. Hardy and adaptable to warm climates. Includes Small Bay Laurel (Laurus nobilis), a 1–3 meter shrub with medicinal, aromatic leaves used in cooking.",
+            "price": 28.57,
+            "category": "Shrubs"
+        },
+        {
+            "title": "Stinking Bean Trefoil",
+            "description": "A deciduous summer shrub from the legume family, growing 1–3 meters tall. Blooms in winter with yellow-green flowers. All parts except the fruit emit an unpleasant odor. Hardy and suited for warm gardens.",
+            "price": 14.29,
+            "category": "Shrubs"
+        },
+        {
+            "title": "Pigeon Pea",
+            "description": "Pigeon Pea is a perennial legume shrub growing 2–3 meters tall. Produces colorful flowers and edible pods, making it both a food source and a soil improver. Hardy and suitable for gardens.",
+            "price": 14.29,
+            "category": "Shrubs"
+        },
+        {
+            "title": "Comfrey",
+            "description": "Comfrey is a perennial herbaceous plant with green leaves and purple or pink flowers. Known for its traditional healing use on wounds and inflammation. Hardy and suitable for warm-climate gardens.",
+            "price": 10,
+            "category": "Edibles"
+        },
+        {
+            "title": "African Lion’s Ear",
+            "description": "An evergreen shrub 1–2 meters tall, with vivid orange flowers blooming in spring and summer. Attracts pollinators and is used as an ornamental plant. Hardy and suitable for warm gardens.",
+            "price": 11.43,
+            "category": "Edibles"
+        },
+        {
+            "title": "Shrubby Lucerne",
+            "description": "Shrubby Lucerne is an evergreen legume growing 1–2 meters tall. Blooms in spring with yellow flowers and enriches the soil with nitrogen. Excellent as ground cover. Hardy in warm climates.",
+            "price": 14.29,
+            "category": "Edibles"
+        }
+    ]
+}

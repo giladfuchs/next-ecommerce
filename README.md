@@ -32,7 +32,7 @@ Deploy your own version of this e-commerce storefront with mock data — no conf
 
 This project supports both mock-mode and fullstack development. Clone the repo and follow the appropriate setup guide:
 
-- [🛍️ FRONTEND.md](./FRONTEND.md) — for running the frontend locally with either mock data or a live backend (via env config)
+- [🛍️ FRONTEND.md](frontend/FRONTEND.md) — for running the frontend locally with either mock data or a live backend (via env config)
 - [🛠️ backend/README.md](backend/README.md) — for setting up the Express API, database, and local admin tools
 
 ---

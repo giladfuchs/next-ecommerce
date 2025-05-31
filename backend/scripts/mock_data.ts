@@ -53,13 +53,13 @@ export async function DBToJson() {
   process.exit(0);
 }
 
-import mockData from "../../lib/api/mock-data.json";
+import mockData from "../../frontend/lib/api/mock-data.json";
 
 export async function importMockData() {
   await DB.initialize();
-  await DB.getRepository(Category).save(mockData.categories);
-  await DB.getRepository(Product).save(mockData.products);
-  await DB.getRepository(Order).save(mockData.orders);
+  // await DB.getRepository(Category).save(mockData.categories);
+  // await DB.getRepository(Product).save(mockData.products);
+  // await DB.getRepository(Order).save(mockData.orders);
   console.log("✅ Imported mock data into database");
 }
 
