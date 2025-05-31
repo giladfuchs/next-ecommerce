@@ -17,10 +17,10 @@
     "url": "https://github.com/giladfuchs/next-ecommerce"
   },
   "scripts": {
-    "dev": "../node_modules/.bin/next dev",
     "debug": "NODE_OPTIONS='--inspect' next dev",
+    "dev": "next dev",
     "build": "next build",
-    "start": "../node_modules/.bin/next start",
+    "start": "next start",
     "prettier": "npx prettier --write ..",
     "typecheck": "../node_modules/.bin/tsc --noEmit",
     "test": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 &  pnpm exec playwright test --headed",
