@@ -46,6 +46,7 @@ export const metadata = {
     index: true,
     "max-image-preview": "large",
   },
+
   openGraph: {
     title: SITE_NAME!,
     description: metadata_site_description,
