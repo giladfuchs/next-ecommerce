@@ -6,8 +6,9 @@
   "author": "GILAD",
   "license": "MIT",
   "scripts": {
-    "dev": "pnpm --dir frontend dev",
+    "prebuild": "cp vercel.function.json vercel.json || true",
     "build": "pnpm prepare:api && pnpm --dir frontend build",
+    "dev": "pnpm --dir frontend dev",
     "start": "pnpm --dir frontend start",
     "build:backend": "pnpm --dir backend build",
     "copy:functions": "rm -rf frontend/app/functions && mkdir -p frontend/app/functions && cp -r backend/functions/* frontend/app/functions/",

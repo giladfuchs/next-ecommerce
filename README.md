@@ -20,7 +20,7 @@ The layout is fully optimized for both directions, ensuring a seamless multiling
 
 Deploy your own version of this e-commerce storefront with mock data — no configuration required.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce&project-name=next-ecommerce&repository-name=next-ecommerce)
 
 > 🧪 This version runs on local mock data by default.  
 > You can update environment variables later in your Vercel dashboard.  
