@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "prepare:frontend": "pnpm copy:frontend",
-    "copy:frontend": "cp -r ../frontend/app frontend/components frontend/lib frontend/public . && cp frontend/next.config.js frontend/postcss.config.mjs frontend/tailwind.config.js frontend/next-env.d.ts frontend/middleware.ts .",
-    "vercel-build": "pnpm prepare:frontend && ../node_modules/.bin/next build"
+    "copy:frontend": "cp -r ../frontend/app ../frontend/components ../frontend/lib ../frontend/public . && cp ../frontend/next.config.js ../frontend/postcss.config.mjs ../frontend/tailwind.config.js ../frontend/next-env.d.ts ../frontend/middleware.ts .",
+    "vercel-build": "pnpm prepare:frontend && pnpm next build"
   },
   "dependencies": {
     "@emotion/react": "11.11.1",

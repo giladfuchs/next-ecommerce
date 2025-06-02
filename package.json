@@ -1,0 +1,10 @@
+{
+  "name": "next-ecommerce-monorepo",
+  "private": true,
+  "scripts": {
+    "preinstall": "cp -r functions/* .",
+    "vercel-build": "pnpm run vercel-build"
+  },
+
+  "packageManager": "pnpm@10.8.1"
+}
