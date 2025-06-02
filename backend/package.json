@@ -1,10 +1,17 @@
 {
   "name": "next-ecommerce-backend",
   "version": "1.0.0",
-  "private": true,
   "description": "Backend API for Next.js e-commerce platform",
   "author": "GILAD",
   "license": "MIT",
+  "private": false,
+  "main": "dist/src/lib/index.js",
+  "types": "dist/src/lib/index.d.ts",
+  "files": ["dist"],
+  "exports": {
+    "./lib/db": "./dist/src/lib/db.js",
+    "./lib/entities": "./dist/src/lib/entities.js"
+  },
   "keywords": [
     "express",
     "ecommerce",
@@ -17,7 +24,6 @@
     "type": "git",
     "url": "https://github.com/giladfuchs/next-ecommerce"
   },
-  "main": "dist/index.js",
   "scripts": {
     "dev": "tsx src/dev.ts",
     "cron": "tsx scripts/cron.ts",
@@ -29,7 +35,8 @@
     "start": "node dist/index.js",
     "test": "vitest run",
     "test:watch": "vitest",
-    "codegen:recored": "NODE_ENV=test SEED=true PORT=4010 tsx src/dev.ts"
+    "codegen:recored": "NODE_ENV=test SEED=true PORT=4010 tsx src/dev.ts",
+    "pack:local": "pnpm build && pnpm pack"
   },
   "dependencies": {
     "@vercel/blob": "^1.0.0",
