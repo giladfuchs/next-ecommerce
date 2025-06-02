@@ -1,6 +1,6 @@
 import Link from "next/link";
 import HeaderControls from "./header-controls";
-import Logo from "frontend/components/layout/header/logo";
+import Logo from "components/layout/header/logo";
 
 export default function Header() {
   return (

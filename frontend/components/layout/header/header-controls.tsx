@@ -15,7 +15,7 @@ import {
   Tooltip,
   IconButton,
 } from "@mui/material";
-import Cart from "frontend/components/cart";
+import Cart from "components/cart";
 import AdminNav from "./admin-nav";
 
 const Search = () => {

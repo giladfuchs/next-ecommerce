@@ -1,4 +1,4 @@
-import { LoadingProductsList } from "frontend/components/shared/loading-skeleton";
+import { LoadingProductsList } from "components/shared/loading-skeleton";
 
 export default function Loading() {
   return <LoadingProductsList />;

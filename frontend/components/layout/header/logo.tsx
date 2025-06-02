@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ICON_IMAGE_URL } from "frontend/lib/config/config";
+import { ICON_IMAGE_URL } from "lib/config/config";
 
 export default function Logo() {
   return (

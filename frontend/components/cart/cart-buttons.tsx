@@ -8,7 +8,7 @@ import {
   Close as CloseIcon,
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
-import type { CartItem } from "frontend/lib/types";
+import type { CartItem } from "lib/types";
 
 export const DeleteItemButton = memo(
   ({

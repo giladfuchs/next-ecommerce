@@ -1,6 +1,6 @@
-import { baseUrl } from "frontend/lib/config/config";
-import { getCategories, getProducts } from "frontend/lib/api";
-import { ModelType } from "../../lib/types";
+import { baseUrl } from "lib/config/config";
+import { getCategories, getProducts } from "lib/api";
+import { ModelType } from "lib/types";
 
 export const dynamic = "force-dynamic";
 

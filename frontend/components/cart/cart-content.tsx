@@ -10,9 +10,9 @@ import {
   EditItemQuantityButton,
   CheckoutButton,
 } from "./cart-buttons";
-import { Price } from "frontend/components/shared/elements-ssr";
-import { RootState } from "frontend/lib/store";
-import { localeCache } from "frontend/lib/api";
+import { Price } from "components/shared/elements-ssr";
+import { RootState } from "lib/store";
+import { localeCache } from "lib/api";
 import { useTheme } from "@mui/system";
 export const CartHeader = ({ closeCart }: { closeCart: () => void }) => (
   <Box

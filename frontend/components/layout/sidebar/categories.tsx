@@ -9,9 +9,9 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { Category, ModelType } from "frontend/lib/types";
-import { safeDecodeURIComponent } from "frontend/lib/helper";
-import { localeCache } from "frontend/lib/api";
+import { Category, ModelType } from "lib/types";
+import { safeDecodeURIComponent } from "lib/helper";
+import { localeCache } from "lib/api";
 
 const CategoryItemList = ({ categories }: { categories: Category[] }) => {
   const router = useRouter();

@@ -1,6 +1,6 @@
-@import "../../../../node_modules/ag-grid-community/styles/ag-theme-alpine.css";
-@import "../../../../node_modules/ag-grid-community/styles/ag-grid.css";
-@import "../../../../node_modules/tailwindcss";
+@import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-alpine.css";
+@import "tailwindcss";
 
 @plugin "@tailwindcss/container-queries";
 @plugin "@tailwindcss/typography";

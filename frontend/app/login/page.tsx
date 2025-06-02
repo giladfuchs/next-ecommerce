@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 import { Box, Button, TextField, Typography, Container } from "@mui/material";
-import { loginUser } from "frontend/lib/api";
-import { SEVEN_DAYS } from "frontend/lib/config/config";
+import { loginUser } from "lib/api";
+import { SEVEN_DAYS } from "lib/config/config";
 
 export default function LoginPage() {
   const router = useRouter();

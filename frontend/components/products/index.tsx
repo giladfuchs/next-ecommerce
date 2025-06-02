@@ -5,13 +5,13 @@ import { useEffect, useRef, useState, useMemo } from "react";
 import {
   NoProductsMessage,
   SearchResultsMessage,
-} from "frontend/components/shared/messages";
-import Grid from "frontend/components/products/grid";
-import { Product } from "frontend/lib/types";
-import { ProductItem } from "frontend/components/products/grid";
-import { GridTileImage } from "frontend/components/products/grid/tile";
-import { PRODUCTS_PER_PAGE } from "frontend/lib/config/config";
-import { filterBySearch } from "frontend/lib/helper";
+} from "components/shared/messages";
+import Grid from "components/products/grid";
+import { Product } from "lib/types";
+import { ProductItem } from "components/products/grid";
+import { GridTileImage } from "components/products/grid/tile";
+import { PRODUCTS_PER_PAGE } from "lib/config/config";
+import { filterBySearch } from "lib/helper";
 
 const ProductsDisplay = ({ products }: { products: Product[] }) => {
   return (

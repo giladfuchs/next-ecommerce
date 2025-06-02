@@ -9,7 +9,7 @@ import {
   DialogActions,
   Button,
 } from "@mui/material";
-import { OrderStatus } from "frontend/lib/types";
+import { OrderStatus } from "lib/types";
 
 type Props = {
   status: OrderStatus;

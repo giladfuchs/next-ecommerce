@@ -7,32 +7,32 @@ import { GeistSans } from "geist/font/sans";
 import { Box } from "@mui/material";
 import { Toaster } from "sonner";
 
-import "../lib/assets/styles/globals.css";
-import "../lib/assets/styles/theme.scss";
+import "lib/assets/styles/globals.css";
+import "lib/assets/styles/theme.scss";
 import {
   baseUrl,
   GOOGLE_ANALYTICS,
   GOOGLE_SITE_VERIFICATION,
   ICON_IMAGE_URL,
   SITE_NAME,
-} from "frontend/lib/config/config";
+} from "lib/config/config";
 
-import { ReduxProvider } from "../lib/provider/ReduxProvider";
-import { ThemeProviderLayout } from "../lib/provider/ThemeProviderLayout";
-import IntProvider from "../lib/provider/IntProvider";
-import { LoadingProvider } from "frontend/lib/provider/LoadingProvider";
+import { ReduxProvider } from "lib/provider/ReduxProvider";
+import { ThemeProviderLayout } from "lib/provider/ThemeProviderLayout";
+import IntProvider from "lib/provider/IntProvider";
+import { LoadingProvider } from "lib/provider/LoadingProvider";
 
-import LoadingGlobal from "frontend/components/shared/loading-global";
-import { LoadingProductsList } from "frontend/components/shared/loading-skeleton";
-import Header from "frontend/components/layout/header";
-import Footer from "frontend/components/layout/footer";
-import AccessibilityBar from "../components/layout/accessibility-bar";
+import LoadingGlobal from "components/shared/loading-global";
+import { LoadingProductsList } from "components/shared/loading-skeleton";
+import Header from "components/layout/header";
+import Footer from "components/layout/footer";
+import AccessibilityBar from "components/layout/accessibility-bar";
 
 import {
   metadata_site_description,
   metadata_site_title,
-} from "frontend/lib/assets/i18n/localizedMetadata";
-import { localeCache } from "../lib/api";
+} from "lib/assets/i18n/localizedMetadata";
+import { localeCache } from "lib/api";
 
 export const metadata = {
   metadataBase: new URL(baseUrl),

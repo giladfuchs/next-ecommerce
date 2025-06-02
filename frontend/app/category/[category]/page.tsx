@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-const Products = dynamic(() => import("frontend/components/products"), { ssr: false });
-import { getCategory, getCategoryProducts } from "frontend/lib/api";
-import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "frontend/lib/config/config";
+const Products = dynamic(() => import("components/products"), { ssr: false });
+import { getCategory, getCategoryProducts } from "lib/api";
+import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "lib/config/config";
 import {
   getCategoryTitle,
   getCategoryDescription,
-} from "frontend/lib/assets/i18n/localizedMetadata";
-import { Product } from "frontend/lib/types";
-import { safeDecodeURIComponent } from "frontend/lib/helper";
+} from "lib/assets/i18n/localizedMetadata";
+import { Product } from "lib/types";
+import { safeDecodeURIComponent } from "lib/helper";
 
 type Props = {
   params: { category: string };
@@ -56,7 +56,7 @@ export async function generateMetadata({
   };
 }
 export async function generateStaticParams() {
-  const categories = await (await import("frontend/lib/api")).getCategories();
+  const categories = await (await import("lib/api")).getCategories();
 
   return categories.map((category) => ({
     category: encodeURIComponent(category.title),

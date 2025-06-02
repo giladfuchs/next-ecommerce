@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Grid, Button, Typography } from "@mui/material";
 import FieldRenderer from "./field-renderer";
-import { FormField } from "frontend/lib/types";
+import { FormField } from "lib/types";
 
 interface DynamicFormProps {
   title: string;

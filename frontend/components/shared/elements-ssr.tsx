@@ -1,5 +1,5 @@
 import { ComponentProps } from "react";
-import { localeCache } from "frontend/lib/api";
+import { localeCache } from "lib/api";
 
 export const Price = ({
   amount,

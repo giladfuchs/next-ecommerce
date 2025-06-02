@@ -17,8 +17,8 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { ProductImage } from "frontend/lib/types";
-import { MAX_IMAGES } from "frontend/lib/config/config";
+import { ProductImage } from "lib/types";
+import { MAX_IMAGES } from "lib/config/config";
 
 export default function ImagesEditor({
   placeholder,

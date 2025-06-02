@@ -9,10 +9,10 @@ import {
   OrderItemsList,
   OrderStatusActions,
   OrderStatusHeader,
-} from "frontend/components/admin/order-view";
-import { cache, getOrderById, localeCache } from "frontend/lib/api";
-import {  ModelType, Order } from "frontend/lib/types";
-import {array_obj_to_obj_with_key} from "frontend/lib/helper";
+} from "components/admin/order-view";
+import { cache, getOrderById, localeCache } from "lib/api";
+import {  ModelType, Order } from "lib/types";
+import {array_obj_to_obj_with_key} from "lib/helper";
 
 export default function OrderViewPage({ params }: { params: { id: string } }) {
   const [order, setOrder] = useState<Order | undefined | null>(undefined);

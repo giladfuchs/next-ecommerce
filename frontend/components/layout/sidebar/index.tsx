@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Categories from "./categories";
-import { getCategories } from "frontend/lib/api";
+import { getCategories } from "lib/api";
 
 export default async function SidebarLayout({
   children,

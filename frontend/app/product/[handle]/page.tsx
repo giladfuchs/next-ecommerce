@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
-import { getProducts } from "frontend/lib/api/catalog";
-import { Product } from "frontend/lib/types";
-import { safeDecodeURIComponent } from "frontend/lib/helper";
-import SingleProductLayout from "frontend/components/products/single";
+import { getProducts } from "lib/api/catalog";
+import { Product } from "lib/types";
+import { safeDecodeURIComponent } from "lib/helper";
+import SingleProductLayout from "components/products/single";
 
 type Props = {
   params: { handle: string };

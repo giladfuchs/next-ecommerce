@@ -1,5 +1,5 @@
 import React from "react";
-import SidebarLayout from "../../components/layout/sidebar";
+import SidebarLayout from "components/layout/sidebar";
 export default function CategoryLayout({
   children,
 }: {

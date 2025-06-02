@@ -1,6 +1,6 @@
 import ProductDescription from "./product-description";
 import ProductGallery from "./product-gallery";
-import { Product } from "frontend/lib/types";
+import { Product } from "lib/types";
 
 const SingleProductLayout = ({ product }: { product: Product }) => (
   <div

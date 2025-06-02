@@ -10,12 +10,12 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { OrderDisplay } from "frontend/components/shared/elements-client";
-import { Price } from "frontend/components/shared/elements-ssr";
-import { localeCache, updateOrderStatus } from "frontend/lib/api";
-import { Order, OrderItem, OrderStatus } from "frontend/lib/types";
-import { getOrderInfoSections, OrderInfoItem } from "frontend/lib/config/ui";
-import { statusOptions } from "frontend/lib/config/mappings";
+import { OrderDisplay } from "components/shared/elements-client";
+import { Price } from "components/shared/elements-ssr";
+import { localeCache, updateOrderStatus } from "lib/api";
+import { Order, OrderItem, OrderStatus } from "lib/types";
+import { getOrderInfoSections, OrderInfoItem } from "lib/config/ui";
+import { statusOptions } from "lib/config/mappings";
 export const OrderInfoList = ({ order }: { order: Order }) => {
   const { left, right } = getOrderInfoSections(order);
 

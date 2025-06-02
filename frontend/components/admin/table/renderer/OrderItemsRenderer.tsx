@@ -1,6 +1,6 @@
 "use client";
 import { ICellRendererParams } from "ag-grid-community";
-import { OrderItem } from "frontend/lib/types";
+import { OrderItem } from "lib/types";
 
 export default function OrderItemsRenderer({
   value,

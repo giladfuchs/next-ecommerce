@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import clsx from "clsx";
-import { Price } from "frontend/components/shared/elements-ssr";
+import { Price } from "components/shared/elements-ssr";
 
 export default function Label({
   title,

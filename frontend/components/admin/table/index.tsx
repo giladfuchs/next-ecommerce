@@ -7,8 +7,8 @@ import {
   OrderItemsRenderer,
   OrderStatusRenderer,
 } from "./renderer";
-import { AGTableModelType } from "frontend/lib/types";
-import { localeCache } from "frontend/lib/api";
+import { AGTableModelType } from "lib/types";
+import { localeCache } from "lib/api";
 
 const defaultColDef: ColDef = {
   resizable: true,

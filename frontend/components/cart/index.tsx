@@ -10,10 +10,10 @@ import {
   CartHeader,
   CartItemList,
 } from "./cart-content";
-import { RootState } from "frontend/lib/store";
-import { updateItem } from "frontend/lib/store/cartSlice";
+import { RootState } from "lib/store";
+import { updateItem } from "lib/store/cartSlice";
 import { OpenCart } from "./cart-buttons";
-import { localeCache } from "frontend/lib/api";
+import { localeCache } from "lib/api";
 
 export default function Cart() {
   const router = useRouter();

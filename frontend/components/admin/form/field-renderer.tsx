@@ -9,8 +9,8 @@ import {
 } from "@mui/material";
 
 import ImagesEditor from "./images-editor";
-import { FormField, FormType, ProductImage, ModelType } from "frontend/lib/types";
-import { getCategories } from "frontend/lib/api";
+import { FormField, FormType, ProductImage, ModelType } from "lib/types";
+import { getCategories } from "lib/api";
 
 type FormFieldProps = {
   field: FormField;

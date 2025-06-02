@@ -1,8 +1,8 @@
 import { Box, Grid } from "@mui/material";
 import ProductButtons from "./product-buttons";
-import { Price } from "frontend/components/shared/elements-ssr";
-import { Product } from "frontend/lib/types";
-import { localeCache } from "frontend/lib/api";
+import { Price } from "components/shared/elements-ssr";
+import { Product } from "lib/types";
+import { localeCache } from "lib/api";
 
 export default function ProductDescription({ product }: { product: Product }) {
   const isLongTitle = product.title.length > 30;

@@ -2,9 +2,9 @@
 import { FormattedMessage } from "react-intl";
 import { notFound } from "next/navigation";
 import { Box, Typography } from "@mui/material";
-import { email } from "frontend/components/layout/footer";
-import { legal_sections } from "frontend/lib/config/legal_sections";
-import { localeCache } from "frontend/lib/api";
+import { email } from "components/layout/footer";
+import { legal_sections } from "lib/config/legal_sections";
+import { localeCache } from "lib/api";
 
 export default function LegalPage({ params }: { params: { handle: string } }) {
   const { handle } = params;
