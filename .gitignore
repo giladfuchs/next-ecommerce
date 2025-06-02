@@ -2,3 +2,4 @@
 .idea
 .vscode
 .env
+frontend/pnpm-lock.yaml
