@@ -23,7 +23,6 @@ const nextConfig = {
       components: path.resolve(__dirname, "components"),
     };
 
-
     config.resolve.fallback = {
       ...config.resolve.fallback,
       mysql: false,
