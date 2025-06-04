@@ -15,7 +15,7 @@ export async function GET() {
         const { products, categories } = await getData();
 
         return NextResponse.json({ products, categories });
-    } catch (error: any) {
+    } catch (error) {
         const err = toHttpError(error);
         return NextResponse.json({ error: err.message }, { status: err.status });
     }
