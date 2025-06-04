@@ -7,10 +7,13 @@
   "private": false,
   "main": "dist/src/lib/index.js",
   "types": "dist/src/lib/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     "./lib/db": "./dist/src/lib/db.js",
-    "./lib/entities": "./dist/src/lib/entities.js"
+    "./lib/entities": "./dist/src/lib/entities.js",
+    "./controller/public": "./dist/src/controller/public.js"
   },
   "keywords": [
     "express",
@@ -35,8 +38,7 @@
     "start": "node dist/index.js",
     "test": "vitest run",
     "test:watch": "vitest",
-    "codegen:recored": "NODE_ENV=test SEED=true PORT=4010 tsx src/dev.ts",
-    "pack:local": "pnpm build && pnpm pack"
+    "codegen:recored": "NODE_ENV=test SEED=true PORT=4010 tsx src/dev.ts"
   },
   "dependencies": {
     "@vercel/blob": "^1.0.0",
