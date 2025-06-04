@@ -10,7 +10,6 @@ import { Toaster } from "sonner";
 import "lib/assets/styles/globals.css";
 import "lib/assets/styles/theme.scss";
 
-
 import {
   baseUrl,
   GOOGLE_ANALYTICS,

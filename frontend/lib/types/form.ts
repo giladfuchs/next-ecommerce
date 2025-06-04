@@ -3,7 +3,7 @@ import { IntlShape } from "react-intl";
 import { FormType, ModelType } from "./enums";
 import { ProductImage } from "./entities";
 import { cache, localeCache } from "../api";
-import {array_obj_to_obj_with_key} from "../helper";
+import { array_obj_to_obj_with_key } from "../helper";
 
 // -- Admin Mui Form--
 export class FieldInput {
@@ -61,8 +61,6 @@ export const get_form_by_model = (model: ModelType): FormField[] => {
       return [...category_fields];
   }
 };
-
-
 
 export const create_form_fields = (
   source: FormField[],

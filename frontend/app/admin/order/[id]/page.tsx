@@ -11,8 +11,8 @@ import {
   OrderStatusHeader,
 } from "components/admin/order-view";
 import { cache, getOrderById, localeCache } from "lib/api";
-import {  ModelType, Order } from "lib/types";
-import {array_obj_to_obj_with_key} from "lib/helper";
+import { ModelType, Order } from "lib/types";
+import { array_obj_to_obj_with_key } from "lib/helper";
 
 export default function OrderViewPage({ params }: { params: { id: string } }) {
   const [order, setOrder] = useState<Order | undefined | null>(undefined);

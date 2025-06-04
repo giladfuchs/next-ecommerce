@@ -17,7 +17,7 @@ import {
 } from "lib/types";
 import { submitModel } from "lib/api";
 import { modelFetchers } from "lib/config/mappings";
-import {array_obj_to_obj_with_key, extract_missing_field} from "lib/helper";
+import { array_obj_to_obj_with_key, extract_missing_field } from "lib/helper";
 
 export default function FormPage({
   params: { model, id },

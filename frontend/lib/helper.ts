@@ -29,7 +29,7 @@ export const extract_missing_field = (message: string): string | null => {
 };
 
 export const array_obj_to_obj_with_key = (
-    iterable: any[],
-    value: any,
-    key: string,
+  iterable: any[],
+  value: any,
+  key: string,
 ) => iterable.find((o: any) => o[key]?.toString() === value.toString());

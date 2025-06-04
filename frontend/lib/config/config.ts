@@ -3,9 +3,9 @@ const isTest = process.env.NODE_ENV === "test";
 const port = process.env.NEXT_PUBLIC_PORT || "4000";
 
 export const API_URL: string =
-    isDev || isTest
-        ? `http://localhost:${port}`
-        : process.env.NEXT_PUBLIC_API_URL?.trim() || "/functions";
+  isDev || isTest
+    ? `http://localhost:${port}`
+    : process.env.NEXT_PUBLIC_API_URL?.trim() || "/functions";
 
 // export const API_URL: string = process.env.NEXT_PUBLIC_API_URL
 export const baseUrl: string =
