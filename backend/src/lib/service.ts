@@ -6,7 +6,7 @@ import path from "path";
 import { put } from "@vercel/blob";
 import nodemailer from "nodemailer";
 
-import { email_data, ModelType, NotFoundError } from "./util";
+import {email_data, ModelType, NotFoundError, toHttpError} from "./util";
 import { DB } from "./db";
 import { Category, Order, Product } from "./entities";
 
@@ -65,67 +65,14 @@ export function authMiddleware(
 }
 
 export function withErrorHandler(
-  handler: (req: Request, res: Response, next: NextFunction) => Promise<any>,
+    handler: (req: Request, res: Response, next: NextFunction) => Promise<any>
 ) {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
       await handler(req, res, next);
     } catch (error: any) {
-      if (error instanceof Error && error.message === "no image") {
-        return res
-          .status(400)
-          .json({ error: "Missing required field: images" });
-      }
-      if (error instanceof Error && error.message === "no cart items") {
-        return res
-          .status(400)
-          .json({ error: "Order must contain at least one item" });
-      }
-      if (
-        error?.name === "QueryFailedError" &&
-        error?.code === "23505" &&
-        typeof error?.detail === "string"
-      ) {
-        return res.status(400).json({
-          error: error.detail,
-        });
-      }
-      if (
-        error?.code === "23502" &&
-        typeof error?.driverError?.column === "string"
-      ) {
-        return res.status(400).json({
-          error: `Missing required field: ${error.driverError.column}`,
-        });
-      }
-      if (
-        error?.name === "QueryFailedError" &&
-        error?.code === "23502" &&
-        typeof error?.driverError?.column === "string"
-      ) {
-        return res.status(500).json({
-          error: `Missing required field: ${error.driverError.column}`,
-        });
-      }
-
-      // Handle invalid enum value (Postgres: 22P02)
-      if (
-        error?.name === "QueryFailedError" &&
-        error?.code === "22P02" &&
-        typeof error?.driverError?.message === "string"
-      ) {
-        return res.status(500).json({
-          error: error.driverError.message,
-        });
-      }
-
-      // Handle NotFoundError (like "Order not found")
-      if (error?.name === "NotFoundError") {
-        return res.status(404).json({ error: error.message });
-      }
-
-      console.error("❌ Uncaught error in route:", error);
-      res.status(500).json({ error: "Internal server error" });
+      const err = toHttpError(error);
+      res.status(err.status).json({ error: err.message });
     }
   };
 }
