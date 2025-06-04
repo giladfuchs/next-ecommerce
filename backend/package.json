@@ -11,6 +11,7 @@
     "dist"
   ],
   "exports": {
+    "./lib/util": "./dist/src/lib/util.js",
     "./lib/db": "./dist/src/lib/db.js",
     "./lib/entities": "./dist/src/lib/entities.js",
     "./controller/public": "./dist/src/controller/public.js"
