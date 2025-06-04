@@ -1,13 +1,12 @@
 export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
-import { toHttpError } from "next-ecommerce-backend/lib/util.js";
+import { toHttpError } from "next-ecommerce-backend/lib/util";
 
 export async function POST(req) {
     try {
-        const { DB } = await import("next-ecommerce-backend/lib/db.js");
-        const { checkout } = await import("next-ecommerce-backend/controller/data.js");
-
+        const { DB } = await import("next-ecommerce-backend/lib/db");
+        const { checkout } = await import("next-ecommerce-backend/controller/public");
         if (!DB.isInitialized) {
             await DB.initialize();
         }

@@ -6,7 +6,7 @@ import { toHttpError } from "next-ecommerce-backend/lib/util";
 export async function POST(req) {
     try {
         const { DB } = await import("next-ecommerce-backend/lib/db");
-        const { login } = await import("next-ecommerce-backend/controller/data");
+        const { login } = await import("next-ecommerce-backend/controller/public");
 
         if (!DB.isInitialized) {
             await DB.initialize();
