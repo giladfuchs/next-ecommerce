@@ -8,8 +8,8 @@
     "copy:frontend": "cp -r frontend/app frontend/components frontend/lib frontend/public . && cp frontend/next.config.js frontend/postcss.config.mjs frontend/tailwind.config.js frontend/next-env.d.ts frontend/middleware.ts .",
     "copy:functions": "mkdir -p app/functions && cp -r backend/functions/* app/functions/",
     "add:backend": "pnpm add ./next-ecommerce-backend.tgz",
-    "build": "cp -a functions/. . && pnpm install && pnpm prepare:frontend && next build"
-    "vercel-build": "cp -a functions/. . && pnpm install && pnpm prepare:frontend && next build",
+    "build": "cp -a functions/. . && pnpm install && pnpm prepare:frontend && next build",
+    "vercel-build": "cp -a functions/. . && pnpm install && pnpm prepare:frontend && next build"
   },
   "dependencies": {
     "@emotion/react": "11.11.1",
