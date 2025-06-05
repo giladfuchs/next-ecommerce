@@ -52,7 +52,7 @@ router.post(
 );
 
 router.delete(
-    "/:model/:id",
+    "/:model/:id/delete",
     withErrorHandler(async (req: Request, res: Response) => {
         const { model, id } = req.params;
         const result = await AuthController.deleteEntity(model, Number(id));

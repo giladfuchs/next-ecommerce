@@ -107,7 +107,7 @@ export async function fetchData(force = false) {
 }
 
 export async function deleteModel(model: ModelType, id: number): Promise<void> {
-  const res = await serverFetch(`/auth/${model}/${id}`, {
+  const res = await serverFetch(`/auth/${model}/${id}/delete`, {
     method: "DELETE",
   });
   await handleResponse(res, "delete model");

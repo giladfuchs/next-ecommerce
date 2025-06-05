@@ -2,11 +2,11 @@
 import { spawn } from "child_process";
 
 let serverProcess: ReturnType<typeof spawn>;
-export const TEST_BASE_URL = "http://localhost:3001";
-
+// export const TEST_BASE_URL = "http://localhost:3001";
+export const TEST_BASE_URL = "https://admin-lilac-phi.vercel.app";
 export default async () => {
   serverProcess = spawn("pnpm", ["dev"], {
-    cwd: "./backend",
+    cwd: "../backend",
     env: {
       ...process.env,
       NODE_ENV: "test",

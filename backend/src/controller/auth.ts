@@ -1,5 +1,5 @@
 import { DB } from "../lib/db";
-import { Product, Category, ProductImage } from "../lib/entities";
+import {Product, Category, ProductImage, Order} from "../lib/entities";
 import { ModelType, title_to_handle } from "../lib/util";
 import { findOrThrow, handleReorderCategory } from "../lib/service";
 import { HttpError } from "../lib/util";
@@ -21,12 +21,12 @@ export class AuthController {
         const order = await findOrThrow(ModelType.order, id);
         order.status = status;
 
-        const repo = DB.getRepository(ModelType.order);
+        const repo = DB.getRepository(Order);
         return await repo.save(order);
     }
 
     static async getOrders() {
-        return await DB.getRepository(ModelType.order)
+        return await DB.getRepository(Order)
             .createQueryBuilder("order")
             .leftJoinAndSelect("order.items", "items")
             .orderBy(
