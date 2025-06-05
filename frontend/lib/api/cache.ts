@@ -77,7 +77,7 @@ class LocaleCache {
         .split("; ")
         .find((row) => row.startsWith("NEXT_LOCALE="));
       const value = cookie?.split("=")[1];
-      this.locale = value === "en" ? "en" : "he";
+      this.locale = value === "he" ? "he" : "en";
       return this.locale;
     }
 
