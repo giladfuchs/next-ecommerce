@@ -26,8 +26,7 @@ export class AuthController {
     }
 
     static async getOrders() {
-        return await DB.getRepository(Order)
-            .createQueryBuilder("order")
+        return await DB.createQueryBuilder(Order, "order")
             .leftJoinAndSelect("order.items", "items")
             .orderBy(
                 `
