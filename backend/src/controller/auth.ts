@@ -1,7 +1,7 @@
 import {DB} from "../lib/db";
 import {Product, Category, ProductImage, Order} from "../lib/entities";
 import {ModelType, title_to_handle} from "../lib/util";
-import {findOrThrow, handleReorderCategory, modelMap} from "../lib/service";
+import {findOrThrow, handleReorderCategory} from "../lib/service";
 import {HttpError} from "../lib/util";
 
 export class AuthController {
@@ -124,7 +124,7 @@ export class AuthController {
         }
 
         const entity = await findOrThrow(model, id);
-        const repo = modelMap[model];
+        const repo = DB.getRepository(model === ModelType.product ? Product : Category);
         await repo.remove(entity);
 
         return {success: true};
