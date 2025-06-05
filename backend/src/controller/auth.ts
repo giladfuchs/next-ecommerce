@@ -29,15 +29,11 @@ export class AuthController {
         return await DB.createQueryBuilder(Order, "order")
             .leftJoinAndSelect("order.items", "items")
             .orderBy(
-                `
-        CASE 
+                `CASE 
           WHEN order.status = 'new' THEN 1
           WHEN order.status = 'ready' THEN 2
           ELSE 3
-        END
-      `,
-                "ASC",
-            )
+        END`, "ASC",)
             .addOrderBy("order.createdAt", "DESC")
             .getMany();
     }
