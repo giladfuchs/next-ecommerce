@@ -6,13 +6,14 @@ import { toHttpError } from "next-ecommerce-backend/lib/util";
 export async function POST(req) {
     try {
         const { DB } = await import("next-ecommerce-backend/lib/db");
-        const { checkout } = await import("next-ecommerce-backend/controller/public");
+        const { PublicController } = await import("next-ecommerce-backend/controller/public");
+
         if (!DB.isInitialized) {
             await DB.initialize();
         }
 
         const body = await req.json();
-        const result = await checkout(body);
+        const result = await PublicController.checkout(body);
 
         return NextResponse.json(result, { status: 201 });
     } catch (error) {

@@ -3,7 +3,7 @@ import { Request, Response, Router } from "express";
 import {
   withErrorHandler,
 } from "../lib/service";
-import {getData, checkout, login} from "../controller/public";
+import {PublicController} from "../controller/public";
 
 const router = Router();
 
@@ -11,14 +11,14 @@ const router = Router();
 router.post(
     "/checkout",
     withErrorHandler(async (req: Request, res: Response) => {
-        const order = await checkout(req.body);
+        const order = await PublicController.checkout(req.body);
         res.status(201).json(order);
     }),
 );
 router.get(
   "/data",
   withErrorHandler(async (req: Request, res: Response) => {
-      const { products, categories } = await getData();
+      const { products, categories } = await PublicController.getData();
       res.json({ products, categories });
   }),
 );
@@ -26,7 +26,7 @@ router.get(
 router.post(
     "/login",
     withErrorHandler(async (req, res) => {
-        const result = await login(req.body);
+        const result = await PublicController.login(req.body);
         res.json(result);
     }),
 );
