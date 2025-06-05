@@ -6,7 +6,7 @@ import path from "path";
 import { put } from "@vercel/blob";
 import nodemailer from "nodemailer";
 
-import {email_data, ModelType, NotFoundError, toHttpError} from "./util";
+import {email_data, HttpError, ModelType, NotFoundError, toHttpError} from "./util";
 import { DB } from "./db";
 import { Category, Order, Product } from "./entities";
 
@@ -64,6 +64,22 @@ export function authMiddleware(
   }
 }
 
+export function requireAuthNext(req: any) {
+  const authHeader = req.headers.get("authorization");
+
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    throw new HttpError(401, "Unauthorized - missing token");
+  }
+
+  const token = authHeader.split(" ")[1];
+
+  try {
+    jwt.verify(token, process.env.JWT_SECRET!);
+  } catch (err) {
+    console.error("❌ Invalid token", err);
+    throw new HttpError(401, "Unauthorized - invalid token");
+  }
+}
 export function withErrorHandler(
     handler: (req: Request, res: Response, next: NextFunction) => Promise<any>
 ) {
