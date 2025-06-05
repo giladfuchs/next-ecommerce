@@ -2,6 +2,7 @@ import { Request, Response, Router } from "express";
 import multer from "multer";
 import { AuthController } from "../controller/auth";
 import {handleImageUpload, withErrorHandler} from "../lib/service";
+import {ModelType} from "../lib/util";
 
 const router = Router();
 const upload = multer();
@@ -55,7 +56,7 @@ router.delete(
     "/:model/:id/delete",
     withErrorHandler(async (req: Request, res: Response) => {
         const { model, id } = req.params;
-        const result = await AuthController.deleteEntity(model, Number(id));
+        const result = await AuthController.deleteEntity(model as ModelType, Number(id));
         res.status(200).json(result);
     }),
 );

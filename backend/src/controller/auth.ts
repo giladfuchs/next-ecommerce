@@ -1,8 +1,8 @@
-import { DB } from "../lib/db";
+import {DB} from "../lib/db";
 import {Product, Category, ProductImage, Order} from "../lib/entities";
-import { ModelType, title_to_handle } from "../lib/util";
-import { findOrThrow, handleReorderCategory } from "../lib/service";
-import { HttpError } from "../lib/util";
+import {ModelType, title_to_handle} from "../lib/util";
+import {findOrThrow, handleReorderCategory, modelMap} from "../lib/service";
+import {HttpError} from "../lib/util";
 
 export class AuthController {
     static async getOrder(id: string) {
@@ -16,7 +16,7 @@ export class AuthController {
     }
 
     static async updateOrderStatus(body: any) {
-        const { id, status } = body;
+        const {id, status} = body;
 
         const order = await findOrThrow(ModelType.order, id);
         order.status = status;
@@ -49,7 +49,7 @@ export class AuthController {
         }
         body.updatedAt = new Date();
 
-        const { images, ...productData } = body;
+        const {images, ...productData} = body;
 
         const queryRunner = DB.createQueryRunner();
         await queryRunner.connect();
@@ -63,7 +63,7 @@ export class AuthController {
 
             if (add_or_id === "add") {
                 const newImages = (images || []).map((img: ProductImage, position: number) =>
-                    imageRepo.create({ ...img, position }),
+                    imageRepo.create({...img, position}),
                 );
 
                 product = productRepo.create({
@@ -76,17 +76,17 @@ export class AuthController {
                 product = await findOrThrow(ModelType.product, Number(add_or_id), ["images"]);
                 Object.assign(product, productData);
 
-                await imageRepo.delete({ product });
+                await imageRepo.delete({product});
 
                 product.images = (images || []).map((img: ProductImage, position: number) =>
-                    imageRepo.create({ ...img, product, position }),
+                    imageRepo.create({...img, product, position}),
                 );
 
                 product = await productRepo.save(product);
             }
 
             await queryRunner.commitTransaction();
-            return { ...product, images };
+            return {...product, images};
         } catch (error) {
             await queryRunner.rollbackTransaction();
             throw error;
@@ -107,7 +107,7 @@ export class AuthController {
         if (add_or_id === "add") {
             instance = repo.create(body as Category);
         } else {
-            const loaded = await repo.preload({ id: Number(add_or_id), ...body });
+            const loaded = await repo.preload({id: Number(add_or_id), ...body});
             if (!loaded) {
                 throw new HttpError(404, "Category not found");
             }
@@ -118,15 +118,16 @@ export class AuthController {
         return await handleReorderCategory(repo, saved as Category);
     }
 
-    static async deleteEntity(model: string, id: number) {
-        if (!["product", "category"].includes(model)) {
+    static async deleteEntity(model: ModelType, id: number) {
+
+        if (!new Set<ModelType>([ModelType.product, ModelType.category,]).has(model)) {
             throw new HttpError(400, "Unsupported model");
         }
 
-        const entity = await findOrThrow(model as ModelType, id);
-        const repo = DB.getRepository(model as ModelType);
+        const entity = await findOrThrow(model, id);
+        const repo = modelMap[model];
         await repo.remove(entity);
 
-        return { success: true };
+        return {success: true};
     }
 }

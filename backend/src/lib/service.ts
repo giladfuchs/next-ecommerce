@@ -10,7 +10,7 @@ import {email_data, ModelType, NotFoundError, toHttpError} from "./util";
 import { DB } from "./db";
 import { Category, Order, Product } from "./entities";
 
-const modelMap: Record<ModelType, Repository<any>> = {
+export const modelMap: Record<ModelType, Repository<any>> = {
   [ModelType.product]: DB.getRepository(Product),
   [ModelType.category]: DB.getRepository(Category),
   [ModelType.order]: DB.getRepository(Order),
