@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "..",
+    "baseUrl": ".",
     "paths": {
       "lib/*": ["lib/*"],
       "components/*": ["components/*"]
@@ -25,9 +25,7 @@
     "inlineSourceMap": false,
     "inlineSources": true,
     "plugins": [
-      {
-        "name": "next"
-      }
+      { "name": "next" }
     ]
   },
   "include": [
@@ -35,6 +33,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "backend",
+    "node_modules"
   ]
-
 }
