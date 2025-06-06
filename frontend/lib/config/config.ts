@@ -10,7 +10,7 @@ export const baseUrl: string =
 export const API_URL: string =
     isDev || isTest
         ? `http://localhost:${port}`
-        : process.env.NEXT_PUBLIC_API_URL?.trim() || `${baseUrl}/functions`;
+        : process.env.NEXT_PUBLIC_API_URL?.trim() || `${baseUrl}/api`;
 
 // export const API_URL: string = process.env.NEXT_PUBLIC_API_URL
 
