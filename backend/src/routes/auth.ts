@@ -1,13 +1,28 @@
 import { Request, Response, Router } from "express";
 import multer from "multer";
 import { AuthController } from "../controller/auth";
-import {handleImageUpload, withErrorHandler} from "../lib/service";
-import {ModelType} from "../lib/util";
+import { withErrorHandler} from "../lib/service";
+import {HttpError, ModelType} from "../lib/util";
 
 const router = Router();
 const upload = multer();
 
-router.post("/image", upload.single("image"), handleImageUpload);
+router.post("/image", upload.single("image"), async (req, res) => {
+    try {
+        const result = await AuthController.uploadImage(req.file!);
+        res.json(result);
+    } catch (err) {
+        if (err instanceof HttpError) {
+            res.status(err.status).json({ error: err.message });
+        } else {
+            console.error("❌ Unexpected upload error:", err);
+            res.status(500).json({
+                error: "Upload failed",
+                message: err instanceof Error ? err.message : String(err),
+            });
+        }
+    }
+});
 
 
 router.get(

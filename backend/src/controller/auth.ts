@@ -1,3 +1,6 @@
+import path from "path";
+import sharp from "sharp";
+import { put } from "@vercel/blob";
 import {DB} from "../lib/db";
 import {Product, Category, ProductImage, Order} from "../lib/entities";
 import {ModelType, title_to_handle} from "../lib/util";
@@ -5,6 +8,34 @@ import {findOrThrow, handleReorderCategory} from "../lib/service";
 import {HttpError} from "../lib/util";
 
 export class AuthController {
+    static async uploadImage(file: Express.Multer.File) {
+        if (!file) {
+            throw new HttpError(400, "No image uploaded");
+        }
+
+        if (!file.mimetype.startsWith("image/")) {
+            throw new HttpError(400, "Only image files are allowed");
+        }
+
+        const safeFileName = path.basename(file.originalname);
+
+        const resizedBuffer = await sharp(file.buffer)
+            .resize(500, 500, {
+                fit: "cover",
+                position: "top",
+            })
+            .withMetadata({orientation: undefined})
+            .jpeg({quality: 80})
+            .toBuffer();
+
+        const blob = await put(`products/${safeFileName}`, resizedBuffer, {
+            access: "public",
+            allowOverwrite: true,
+        });
+
+        return {url: blob.url};
+    }
+
     static async getOrder(id: string) {
         const parse_id = Number(id);
 
