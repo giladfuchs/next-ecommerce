@@ -85,7 +85,7 @@ class LocaleCache {
       const { headers } = require("next/headers");
       const cookie = headers().get("cookie") || "";
       const match = cookie.match(/NEXT_LOCALE=(en|he)/);
-      this.locale = match?.[1] === "en" ? "en" : "he";
+      this.locale = match?.[1] === "he" ? "he" : "en";
     } catch {
       this.locale = "en";
     }
