@@ -2,14 +2,15 @@
   "name": "next-ecommerce-monorepo",
   "private": true,
   "scripts": {
-    "add:backend": "pnpm add ./next-ecommerce-backend.tgz",
-    "pack:backend": "cd backend && pnpm build && pnpm pack && mv *.tgz ../next-ecommerce-backend.tgz && cd .. &&  pnpm run add:backend",
+    "add:backend": "pnpm add ./functions/next-ecommerce-backend.tgz",
+    "pack:backend": "cd backend && pnpm build && pnpm pack && mv *.tgz ../functions/next-ecommerce-backend.tgz && cd .. && pnpm run add:backend",
     "prepare:frontend": "pnpm copy:frontend && pnpm copy:functions",
     "copy:frontend": "cp -r frontend/app frontend/components frontend/lib frontend/public . && cp frontend/next.config.js frontend/postcss.config.mjs frontend/tailwind.config.js frontend/next-env.d.ts frontend/middleware.ts .",
     "copy:functions": "mkdir -p app/api && cp -r functions/api/* app/api/",
     "build": "cp functions/tsconfig.json . && pnpm install && pnpm prepare:frontend && next build"
   },
   "dependencies": {
+    "next-ecommerce-backend": "file:functions/next-ecommerce-backend.tgz",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
     "@mui/icons-material": "5.15.15",
@@ -32,7 +33,6 @@
     "jsonwebtoken": "^9.0.2",
     "multer": "1.4.5-lts.2",
     "next": "14.2.3",
-    "next-ecommerce-backend": "file:next-ecommerce-backend.tgz",
     "nodemailer": "^6.10.1",
     "pg": "^8.15.6",
     "react": "18.2.0",

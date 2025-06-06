@@ -75,8 +75,8 @@ importers:
         specifier: 14.2.3
         version: 14.2.3(@playwright/test@1.52.0)(babel-plugin-macros@3.1.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.1)
       next-ecommerce-backend:
-        specifier: file:next-ecommerce-backend.tgz
-        version: file:next-ecommerce-backend.tgz(babel-plugin-macros@3.1.0)(rollup@4.41.1)(ts-node@10.9.2(@types/node@22.13.10)(typescript@5.8.2))
+        specifier: file:functions/next-ecommerce-backend.tgz
+        version: file:functions/next-ecommerce-backend.tgz(babel-plugin-macros@3.1.0)(rollup@4.41.1)(ts-node@10.9.2(@types/node@22.13.10)(typescript@5.8.2))
       nodemailer:
         specifier: ^6.10.1
         version: 6.10.1
@@ -2464,8 +2464,8 @@ packages:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
 
-  next-ecommerce-backend@file:next-ecommerce-backend.tgz:
-    resolution: {integrity: sha512-bk6Wtq0qXn7XEO0aj71iE0Ooqm4kkVn2gNeGQL1rTfLfcEXZl7eYXlXnf3xODVT5Tu9rdcKPqQCSMdAqRFxybQ==, tarball: file:next-ecommerce-backend.tgz}
+  next-ecommerce-backend@file:functions/next-ecommerce-backend.tgz:
+    resolution: {integrity: sha512-bk6Wtq0qXn7XEO0aj71iE0Ooqm4kkVn2gNeGQL1rTfLfcEXZl7eYXlXnf3xODVT5Tu9rdcKPqQCSMdAqRFxybQ==, tarball: file:functions/next-ecommerce-backend.tgz}
     version: 1.0.0
 
   next@14.2.3:
@@ -5515,7 +5515,7 @@ snapshots:
 
   negotiator@0.6.3: {}
 
-  next-ecommerce-backend@file:next-ecommerce-backend.tgz(babel-plugin-macros@3.1.0)(rollup@4.41.1)(ts-node@10.9.2(@types/node@22.13.10)(typescript@5.8.2)):
+  next-ecommerce-backend@file:functions/next-ecommerce-backend.tgz(babel-plugin-macros@3.1.0)(rollup@4.41.1)(ts-node@10.9.2(@types/node@22.13.10)(typescript@5.8.2)):
     dependencies:
       '@vercel/blob': 1.1.1
       '@vercel/node': 5.2.1(rollup@4.41.1)
