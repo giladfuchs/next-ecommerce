@@ -2,8 +2,7 @@
   "name": "next-ecommerce-monorepo",
   "private": true,
   "scripts": {
-    "add:backend": "pnpm add ./functions/next-ecommerce-backend.tgz",
-    "pack:backend": "cd backend && pnpm build && pnpm pack && mv *.tgz ../functions/next-ecommerce-backend.tgz && cd .. && pnpm run add:backend",
+    "pack:backend": "cd backend && pnpm build && pnpm pack && cd .. && mv backend/*.tgz functions/next-ecommerce-backend.tgz && pnpm add ./functions/next-ecommerce-backend.tgz",
     "prepare:frontend": "pnpm copy:frontend && pnpm copy:functions",
     "copy:frontend": "cp -r frontend/app frontend/components frontend/lib frontend/public . && cp frontend/next.config.js frontend/postcss.config.mjs frontend/tailwind.config.js frontend/next-env.d.ts frontend/middleware.ts .",
     "copy:functions": "mkdir -p app/api && cp -r functions/api/* app/api/",

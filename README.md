@@ -18,31 +18,42 @@ The layout is fully optimized for both directions, ensuring a seamless multiling
 
 ## ▲ Deploy Your Own
 
-Deploy your own version of this e-commerce storefront with mock data — no configuration required.
+Deploy your own version of this e-commerce storefront.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce&project-name=next-ecommerce&repository-name=next-ecommerce&env=DATABASE_URL&envDescription=Set%20a%20PostgreSQL%20connection%20string)
-> 🧪 This version runs on local mock data by default.  
-> You can update environment variables later in your Vercel dashboard.  
-> The backend (`/backend`) is optional and not included in this deploy.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/giladfuchs/next-ecommerce)
+
+This deploy uses Next.js route handlers (app/api) as the server.<br/>
+After creating your project, make sure to go to the Vercel dashboard  
+and update your environment variables based on [functions/.env.example](functions/.env.example)
+
+
+
+---
+## 📦 Environment Variables
+
+To run the app locally or in production, you must configure the appropriate environment variables.
+
+See the example files for full variable lists and inline comments:
+
+- [`frontend/.env.example`](frontend/.env.example) — for frontend mode
+- [`functions/.env.example`](functions/.env.example) — for Next.js API routes & Frontend
+- [`backend/.env.example`](backend/.env.example) — for Express backend mode
 
 ---
 
 ## 🚀 Getting Started (for Local Development)
 
-This project supports both mock-mode and fullstack development. Clone the repo and follow the appropriate setup guide:
+This project supports multiple development modes:
 
-- [🛍️ frontend/FRONTEND.md](frontend/FRONTEND.md) — for running the frontend locally with either mock data or a live backend (via env config)
-- [🛠️ backend/README.md](backend/README.md) — for setting up the Express API, database, and local admin tools
+- **Fullstack** — run a real backend with PostgreSQL + Express
+- **Next.js API** — use serverless functions instead of Express
+- **Mock** — use local mock data for instant setup
 
----
+Choose the guide that fits your workflow:
 
-## 🤝 Contributing
-
-Contributions are welcome!  
-If you find this project useful, consider giving it a ⭐ on GitHub — it helps others discover it!
-
-To contribute, fork the repository and submit a pull request with your enhancements or bug fixes.
-
+- [🛍️ `frontend/README.md`](frontend/README.md) — run the frontend with mock data or connect to a backend
+- [🛠️ `backend/README.md`](backend/README.md) — set up the Express API and database
+- [⚙️ `functions/README.md`](functions/README.md) — use Next.js serverless functions for deployment
 ---
 
 ## ✨ Key Features
@@ -88,6 +99,14 @@ To contribute, fork the repository and submit a pull request with your enhanceme
 - **Vercel Blob** for cloud storage
 - **Nodemailer**, **SendGrid**, **CallMeBot** for notifications
 - **Vitest** + **Supertest** for full API test coverage
+
+---
+## 🤝 Contributing
+
+Contributions are welcome!  
+If you find this project useful, consider giving it a ⭐ on GitHub — it helps others discover it!
+
+To contribute, fork the repository and submit a pull request with your enhancements or bug fixes.
 
 ---
 

@@ -9,6 +9,7 @@ Includes a full admin dashboard, product editor, order management, and support f
 
 To run the project locally:
 
+- Make sure you create a .env file in based on [`.env.example`](.env.example)
 - Install dependencies:
 
   ```bash
@@ -44,29 +45,9 @@ This will:
 - Run the **Playwright test suite** in **headed mode**
 - Exit after tests complete
 
+ 
+
 ---
-
-### 🛠️ Environment Variables
-
-Create a `.env` file at the root of your project:
-
-```env
-# Public site branding and metadata
-NEXT_PUBLIC_SITE_NAME=YourStoreName
-NEXT_PUBLIC_BASE_URL=https://your-store.vercel.app
-NEXT_PUBLIC_API_URL=https://your-api.vercel.app
-
-# Optional: Google verification & analytics & icon for SEO/social sharing
-NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-google-verification-code
-NEXT_PUBLIC_GOOGLE_ANALYTICS=your-google-analytics-code
-NEXT_PUBLIC_ICON_IMAGE_URL=https://your-domain.com/logo.png
-
-# Footer contact & social info (comma-separated)
-NEXT_PUBLIC_FOOTER_DATA=info@example.com,123 Example St.,1234567890,instagram_handle,facebook_page,https://your-website.com
-
-# Pre-filled WhatsApp message
-NEXT_PUBLIC_WHATSAPP_MESSAGE=Hi, I came from your store website and had a question.
-```
 
 ## 📁 Structure Overview
 
@@ -93,10 +74,5 @@ lib/
 ├── assets/         → Static config like i18n translations, SEO
 ```
 
----
 
-## 🙏 Credits
-
-- Originally inspired by [Vercel Commerce](https://github.com/vercel/commerce), but rebuilt and significantly extended.
-
----
+ 

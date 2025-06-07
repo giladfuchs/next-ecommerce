@@ -1,9 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import { Repository } from "typeorm";
-import sharp from "sharp";
-import path from "path";
-import { put } from "@vercel/blob";
 import nodemailer from "nodemailer";
 
 import {email_data, HttpError, ModelType, NotFoundError, toHttpError} from "./util";
@@ -93,48 +90,7 @@ export function withErrorHandler(
   };
 }
 
-export async function handleImageUpload(
-  req: Request,
-  res: Response,
-): Promise<void> {
-  try {
-    const file = req.file;
 
-    if (!file) {
-      res.status(400).json({ error: "No image uploaded" });
-      return;
-    }
-
-    if (!file.mimetype.startsWith("image/")) {
-      res.status(400).json({ error: "Only image files are allowed" });
-      return;
-    }
-
-    const safeFileName = path.basename(file.originalname);
-
-    const resizedBuffer = await sharp(file.buffer)
-      .resize(500, 500, {
-        fit: "cover",
-        position: "top",
-      })
-      .withMetadata({ orientation: undefined })
-      .jpeg({ quality: 80 })
-      .toBuffer();
-
-    const blob = await put(`products/${safeFileName}`, resizedBuffer, {
-      access: "public",
-      allowOverwrite: true,
-    });
-
-    res.json({ url: blob.url });
-  } catch (err) {
-    console.error("❌ Upload error:", err);
-    res.status(500).json({
-      error: "Upload failed",
-      message: err instanceof Error ? err.message : String(err),
-    });
-  }
-}
 
 export async function handleReorderCategory(
   repo: Repository<Category>,

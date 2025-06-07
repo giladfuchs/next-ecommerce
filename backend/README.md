@@ -8,6 +8,7 @@ Designed to power a Next.js storefront and admin panel — including product man
 ## 🚀 Getting Started
 
 To run the project locally:
+- Make sure you create a .env file in based on [`.env.example`](.env.example)
 
 - Install dependencies:
 
@@ -75,43 +76,4 @@ pnpm test
 ```
 
 ---
-
-### 🛠️ Environment Variables
-
-Create a `.env` file at the root of your project:
-
-```env
-# PostgreSQL connection
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=your_pg_user
-DB_PASSWORD=your_pg_password
-DB_NAME=your_db_name
-
-# Vercel Blob access (for image uploads)
-BLOB_READ_WRITE_TOKEN=your-vercel-blob-token
-
-# JWT secret for authentication
-JWT_SECRET=your-secret-key
-
-# CORS and external frontend origin
-FRONT_URL=https://your-store.vercel.app
-ALLOWED_ORIGINS=https://your-store.vercel.app,http://localhost:3000
-
-SEND_EMAIL_WHATSAPP=false
-
-# Email credentials (for SMTP)
-GMAIL_USER=your-gmail@example.com
-MAILERSEND_SMTP_USER=your-smtp-username
-MAILERSEND_SMTP_PASS=your-smtp-password
-STORE_NAME=Your Store Name
-STORE_EMAIL=info@example.com
-
-# WhatsApp via CallMeBot
-CALLMEBOT_API_KEY=your-callmebot-api-key
-WHATSAPP_NUMBER=+1234567890
-
-
-```
-
----
+ 
