@@ -38,7 +38,7 @@ If you make changes to the backend source code (`/backend`), you must **rebuild 
 Before packing, make sure you've installed backend dependencies:
 
   ```bash
-  cd ..backend
+  cd ../backend
 pnpm install
   ```
 Then run from the root:
@@ -66,7 +66,7 @@ pnpm run build
   ```
 Start the dev server:
   ```bash
-  next dev
+   pnpm exec next dev
   ```
 
 
