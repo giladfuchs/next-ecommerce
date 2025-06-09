@@ -1,57 +1,16 @@
-import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import { Order } from "../src/lib/entities";
-import { generateOrderEmailHtml } from "../src/lib/service";
-import { email_data } from "../src/lib/util";
+import { sendOrderConfirmationEmail } from "../src/lib/service";
 
 dotenv.config();
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.mailersend.net",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.MAILERSEND_SMTP_USER,
-    pass: process.env.MAILERSEND_SMTP_PASS,
-  },
-});
 
-async function sendOrderConfirmationEmail(order: Order) {
-  const html = generateOrderEmailHtml(order);
 
-  const subject = `${email_data.subjectPrefix} ${order.id}`;
-  const text = `${email_data.greeting} ${order.name}, ${email_data.confirmation} ${email_data.orderNumberLabel} #${order.id}. ${email_data.totalLabel}${order.cost.toFixed(2)}`;
-
-  try {
-    //   Send to customer
-    await transporter.sendMail({
-      from: `"${process.env.STORE_NAME}" <${process.env.STORE_EMAIL}>`,
-      to: order.email,
-      replyTo: process.env.GMAIL_USER, // customer replies to Gmail
-      subject,
-      text,
-      html,
-    });
-
-    //  Send to admin (your Gmail)
-    await transporter.sendMail({
-      from: `"${process.env.STORE_NAME}" <${process.env.STORE_EMAIL}>`,
-      to: process.env.GMAIL_USER,
-      replyTo: order.email, // so you can reply to the customer
-      subject,
-      text,
-      html,
-    });
-    console.log("✅ Email sent:");
-  } catch (err) {
-    console.error("❌ Email sending failed:", err);
-  }
-}
 console.log("Script started ✅");
-// Example call (test)
 sendOrderConfirmationEmail({
+  id: 4,
   name: "lorem",
-  email: "igilfu@gmail.com",
+  email: "cambio0101@gmail.com",
   phone: "0345324322",
   totalQuantity: 2,
   cost: 112.33,
@@ -61,8 +20,8 @@ sendOrderConfirmationEmail({
       quantity: 1,
       unitAmount: "11",
       totalAmount: 11,
-      imageUrl: "...",
-      imageAlt: "...",
+      imageUrl: "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952031.jpg",
+      imageAlt: "a",
       id: 1,
       productId: 123,
       handle: "srach-boston",
@@ -73,15 +32,14 @@ sendOrderConfirmationEmail({
       quantity: 1,
       unitAmount: "101.33",
       totalAmount: 101.33,
-      imageUrl: "...",
-      imageAlt: "...",
+      imageUrl: "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1667385372949-ce58045f9d79.jpg",
+      imageAlt: "b",
       id: 2,
       productId: 124,
       handle: "kisos",
       order: undefined as any,
     },
   ],
-  id: 12,
   status: "new",
   createdAt: new Date().toISOString(),
-} as unknown as Order); // 👈 bypass type mismatch
+} as unknown as Order);

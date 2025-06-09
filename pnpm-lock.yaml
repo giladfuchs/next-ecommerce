@@ -2465,7 +2465,7 @@ packages:
     engines: {node: '>= 0.6'}
 
   next-ecommerce-backend@file:functions/next-ecommerce-backend.tgz:
-    resolution: {integrity: sha512-hRc8HAszpKhnF+ehQbC0slFo5MtvDSx9NmiUgAISuFgDVt5DeGisoIJ4AVboe7MMF44/CdwwR84xFgvotVTljw==, tarball: file:functions/next-ecommerce-backend.tgz}
+    resolution: {integrity: sha512-2/V8SEwhyLKDWbdpLfyTv3ciQ7f9LQtzFDEP4JO52RU6PYhEFBH2IuzIudys5YTvH1VS66dxAE2Hw5DQVfnf0A==, tarball: file:functions/next-ecommerce-backend.tgz}
     version: 1.0.0
 
   next@14.2.3:

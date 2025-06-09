@@ -134,12 +134,12 @@ let transporter: nodemailer.Transporter | null = null;
 function getTransporter() {
   if (!transporter)
     transporter = nodemailer.createTransport({
-      host: "smtp.mailersend.net",
-      port: 587,
+      host: process.env.EMAIL_SMTP_HOST,
+      port: Number(process.env.EMAIL_SMTP_PORT),
       secure: false,
       auth: {
-        user: process.env.MAILERSEND_SMTP_USER,
-        pass: process.env.MAILERSEND_SMTP_PASS,
+        user: process.env.EMAIL_SMTP_USER,
+        pass: process.env.EMAIL_SMTP_PASS,
       },
     });
 
@@ -199,18 +199,17 @@ export async function sendOrderConfirmationEmail(order: Order) {
   try {
     //   Send to customer
     await transporter.sendMail({
-      from: `"${process.env.STORE_NAME}" <${process.env.STORE_EMAIL}>`,
+      from: `"${process.env.EMAIL_FROM_NAME}" <${process.env.EMAIL_FROM_ADDRESS}>`,
       to: order.email,
-      replyTo: process.env.GMAIL_USER, // customer replies to Gmail
+      replyTo: process.env.EMAIL_FROM_ADDRESS, // customer replies to EMAIL_FROM_ADDRESS
       subject,
       text,
       html,
     });
-
-    //  Send to admin (your Gmail)
+    //  Send to admin (EMAIL_FROM_ADDRESS)
     await transporter.sendMail({
-      from: `"${process.env.STORE_NAME}" <${process.env.STORE_EMAIL}>`,
-      to: process.env.GMAIL_USER,
+      from: `"${order.name}" <${process.env.EMAIL_FROM_ADDRESS}>`,
+      to: process.env.EMAIL_FROM_ADDRESS,
       replyTo: order.email, // so you can reply to the customer
       subject,
       text,
@@ -223,7 +222,7 @@ export async function sendOrderConfirmationEmail(order: Order) {
 }
 
 export async function sendAdminWhatsApp(id: number) {
-  const text = `📦 התקבלה הזמנה חדשה באתר YAARASTORE!\n\n🔗 לצפייה בהזמנה: ${process.env.FRONT_URL}/admin/order/${id}`;
+  const text = `📦 התקבלה הזמנה חדשה באתר YAARASTORE!\n\n🔗 לצפייה בהזמנה: ${process.env.STORE_BASE_URL}/admin/order/${id}`;
   const url = `https://api.callmebot.com/whatsapp.php?phone=${process.env.WHATSAPP_NUMBER}&text=${encodeURIComponent(text)}&apikey=${process.env.CALLMEBOT_API_KEY}`;
 
   try {
