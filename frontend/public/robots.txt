@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://modern-ecommerce-store.vercel.app/sitemap.xml

@@ -1,0 +1,7 @@
+a
+/node_modules
+.idea
+.vscode
+.env
+#frontend/pnpm-lock.yaml
+#git diff --quiet HEAD^ HEAD -- . ':!backend/**'
