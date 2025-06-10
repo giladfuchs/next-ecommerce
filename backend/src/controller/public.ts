@@ -125,9 +125,7 @@ export class PublicController {
       await DB.query(`ALTER SEQUENCE "order_id_seq" RESTART WITH 1`);
     };
     const resetDbStep2Insert = async () => {
-      const { categories, products, orders } = (
-        await import("../../scripts/mock-data.json")
-      ).default;
+      const { categories, products, orders } = require("../../scripts/mock-data.json");
 
       const orderRepo = DB.getRepository(Order);
       const categoryRepo = DB.getRepository(Category);
