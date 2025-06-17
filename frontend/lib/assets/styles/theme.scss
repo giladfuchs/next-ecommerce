@@ -1,0 +1,28 @@
+//theme.scss
+
+:root {
+  --color-bg: #f4f9f8;
+  --color-bg-dark: #0f3f3c;
+  --color-text: #0f1f1e;
+  --color-chip: #bce3db;
+  --color-text-strong: #000000;
+  --color-label-bg: #54d99b;
+  --color-accent: #24bfa7;
+  --color-border: #b0d6d1;
+
+  --color-status-new: #009688;
+  --color-status-ready: #6cc067;
+  --color-status-done: #607d8b;
+  --color-status-canceled: #d9534f;
+}
+
+.dark {
+  --color-bg: #0f3f3c;
+  --color-text: #f4f9f8;
+  --color-text-strong: #ffffff;
+  --color-border: #3d6963;
+  --color-status-new: #80cbc4;
+  --color-status-ready: #b6e0b3;
+  --color-status-done: #b0bec5;
+  --color-status-canceled: #e48784;
+}
