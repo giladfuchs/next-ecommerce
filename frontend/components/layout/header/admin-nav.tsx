@@ -102,11 +102,14 @@ const AdminNavItems = () => {
         open={open}
         onClose={toggleDrawer}
         transitionDuration={0}
-        PaperProps={{
-          sx: {
-            height: "auto",
-            maxHeight: 300,
-            mt: 8,
+        slots={{ transition: undefined }}
+        slotProps={{
+          paper: {
+            sx: {
+              height: "auto",
+              maxHeight: 300,
+              mt: 8,
+            },
           },
         }}
       >

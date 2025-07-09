@@ -2,6 +2,7 @@ import type { Viewport } from "next";
 import Script from "next/script";
 import { ReactNode, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { GeistSans } from "geist/font/sans";
 import { Box } from "@mui/material";
@@ -135,6 +136,7 @@ export default async function RootLayout({
                   <Toaster richColors closeButton position="bottom-center" />
                   <AccessibilityBar />
                 </div>
+                <SpeedInsights />
               </LoadingProvider>
             </ThemeProviderLayout>
           </IntProvider>

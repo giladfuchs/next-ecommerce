@@ -61,7 +61,7 @@ export const DeleteConfirmDialog = ({
 }) => {
   const intl = useIntl();
   return (
-    <Dialog open={open} onClose={onClose}>
+    <Dialog open={open} onClose={onClose} slots={{ transition: undefined }}>
       <DialogTitle>
         {intl.formatMessage({ id: "delete.title" }, { title })}
       </DialogTitle>

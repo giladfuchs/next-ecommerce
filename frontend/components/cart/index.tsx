@@ -61,6 +61,7 @@ export default function Cart() {
       <Dialog
         data-testid="cart"
         open={isOpen}
+        slots={{ transition: undefined }}
         onClose={closeCart}
         hideBackdrop
         fullScreen
