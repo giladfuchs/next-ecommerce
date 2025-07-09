@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, use } from "react";
 import { useIntl } from "react-intl";
 import { toast } from "sonner";
 import { Container } from "@mui/material";
@@ -20,10 +20,11 @@ import { modelFetchers } from "lib/config/mappings";
 import { array_obj_to_obj_with_key, extract_missing_field } from "lib/helper";
 
 export default function FormPage({
-  params: { model, id },
+  params,
 }: {
-  params: { model: ModelType; id: string };
+  params: Promise<{ model: ModelType; id: string }>;
 }) {
+  const { model, id } = use(params);
   const router = useRouter();
   const intl = useIntl();
 

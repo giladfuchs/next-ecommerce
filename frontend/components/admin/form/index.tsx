@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Grid, Button, Typography } from "@mui/material";
 import FieldRenderer from "./field-renderer";
@@ -16,8 +16,11 @@ export default function DynamicForm({
   fields,
   onSubmit,
 }: DynamicFormProps) {
-  const [localFields, setLocalFields] = useState<FormField[]>(fields);
+  const [localFields, setLocalFields] = useState<FormField[]>([]);
 
+  useEffect(() => {
+    setLocalFields(fields);
+  }, [fields]);
   const handleChange = (value: any, key: string) => {
     const updatedFields = localFields.map((field) =>
       field.key === key ? { ...field, value } : field,

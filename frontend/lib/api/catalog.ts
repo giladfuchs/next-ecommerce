@@ -5,6 +5,12 @@ export async function getProducts(force = false): Promise<Product[]> {
   const { products } = await fetchData(force);
   return products;
 }
+export async function getProductByHandle(
+  handle: string,
+): Promise<Product | undefined> {
+  const products = await getProducts();
+  return products.find((p) => p.handle === handle);
+}
 
 export async function getCategories(force = false): Promise<Category[]> {
   const { categories } = await fetchData(force);

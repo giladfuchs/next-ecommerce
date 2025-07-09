@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { toast } from "sonner";
 import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
@@ -39,11 +39,13 @@ export default function ImagesEditor({
     setImagesState((prev) => {
       const updated = [...prev];
       updated[index] = { ...updated[index], [field]: value } as ProductImage;
-      onChange(updated);
-
       return updated;
     });
   };
+
+  useEffect(() => {
+    onChange(imagesState);
+  }, [imagesState]);
   const handleClipboardPaste = async (index: number) => {
     try {
       const text = await navigator.clipboard.readText();

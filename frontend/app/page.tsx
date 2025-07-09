@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
-const Products = dynamic(() => import("components/products"), { ssr: false });
+
 import SidebarLayout from "components/layout/sidebar";
 import {
   metadata_site_title,
@@ -9,6 +8,7 @@ import {
 } from "lib/assets/i18n/localizedMetadata";
 import { baseUrl, ICON_IMAGE_URL } from "lib/config/config";
 import { getProducts } from "lib/api";
+import { Products } from "../components/shared/wrappers";
 
 export const metadata: Metadata = {
   title: metadata_site_title,

@@ -6,6 +6,16 @@ export function safeDecodeURIComponent(value: string): string {
   }
 }
 
+export const getStaticHandleParams = (list: { handle: string }[]) =>
+  list.map((item) => ({ handle: item.handle }));
+
+export async function getDecodedHandle(
+  paramsPromise: Promise<{ handle: string }>,
+) {
+  const { handle } = await paramsPromise;
+  return safeDecodeURIComponent(handle);
+}
+
 export function filterBySearch<T extends object>(
   items: T[],
   searchValue: string,

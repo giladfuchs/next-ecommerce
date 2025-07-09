@@ -25,7 +25,7 @@
     "prettier": "npx prettier --write .",
     "typecheck": "tsc --noEmit",
     "test": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 &  pnpm exec playwright test --headed",
-    "test:file": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 &  pnpm exec playwright test e2e/crud.spec.ts --headed",
+    "test:file": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 &  pnpm exec playwright test e2e/order.spec.ts --headed",
     "codegen:record": "NEXT_PUBLIC_PORT=4010 NODE_ENV=test pnpm dev & sleep 2 && pnpm exec playwright codegen http://localhost:3000"
   },
   "dependencies": {
@@ -42,7 +42,7 @@
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "geist": "^1.3.1",
-    "next": "14.2.3",
+    "next": "15.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intl": "^7.1.11",
@@ -56,7 +56,7 @@
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/typography": "^0.5.16",
-    "@types/node": "22.13.10",
+    "@types/node": "24.0.12",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
     "@vercel/node": "^5.2.1",
@@ -65,7 +65,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "sass": "^1.86.3",
     "tailwindcss": "^4.0.14",
-    "typescript": "5.8.2"
+    "typescript": "5.8.3"
   },
   "packageManager": "pnpm@10.8.1"
 }

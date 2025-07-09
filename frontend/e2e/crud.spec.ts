@@ -12,7 +12,6 @@ import {
   openFirstEditForm,
   submitForm,
 } from "./helper-test";
-
 test("view first order details page", async ({ page }) => {
   await loginToAdmin(page);
   await navigateToAdminModel(page, ModelType.order);

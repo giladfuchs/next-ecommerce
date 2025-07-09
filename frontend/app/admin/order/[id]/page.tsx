@@ -1,7 +1,7 @@
 "use client";
 
 import { notFound } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { use, useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Box, Divider, Typography } from "@mui/material";
 import {
@@ -14,7 +14,13 @@ import { cache, getOrderById, localeCache } from "lib/api";
 import { ModelType, Order } from "lib/types";
 import { array_obj_to_obj_with_key } from "lib/helper";
 
-export default function OrderViewPage({ params }: { params: { id: string } }) {
+export default function OrderViewPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = use(params);
+
   const [order, setOrder] = useState<Order | undefined | null>(undefined);
 
   useEffect(() => {
@@ -22,9 +28,9 @@ export default function OrderViewPage({ params }: { params: { id: string } }) {
       const obj =
         array_obj_to_obj_with_key(
           cache.getByModel(ModelType.order),
-          Number(params.id),
+          Number(id),
           "id",
-        ) ?? (await getOrderById(Number(params.id)));
+        ) ?? (await getOrderById(Number(id)));
       setOrder(obj);
     };
     void init();

@@ -1,5 +1,12 @@
 "use client";
-import { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
+import {
+  ChangeEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  use,
+} from "react";
 import { ColDef } from "ag-grid-community";
 import { Container, Grid } from "@mui/material";
 import AGTable from "components/admin/table";
@@ -16,10 +23,11 @@ import { modelFetchers } from "lib/config/mappings";
 import { TableHeader } from "components/admin/table/table-header";
 
 export default function AdminPage({
-  params: { model },
+  params,
 }: {
-  params: { model: ModelType };
+  params: Promise<{ model: ModelType }>;
 }) {
+  const { model } = use(params);
   const { loading } = useLoading();
 
   const [rows, setRows] = useState<AGTableModelType[]>([]);
