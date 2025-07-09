@@ -1,9 +1,12 @@
-import React from "react";
+import { ReactNode } from "react";
 import SidebarLayout from "components/layout/sidebar";
-export default function CategoryLayout({
-  children,
-}: {
-  children: React.ReactNode;
+import { getCategories } from "lib/api";
+
+export default async function CategoryLayout({
+                                                 children,
+                                             }: {
+    children: ReactNode;
 }) {
-  return <SidebarLayout>{children}</SidebarLayout>;
+    const categories = (await getCategories()) ?? [];
+    return <SidebarLayout categories={categories}>{children}</SidebarLayout>;
 }

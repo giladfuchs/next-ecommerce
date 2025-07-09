@@ -20,6 +20,7 @@
     "@vercel/analytics": "^1.5.0",
     "@vercel/blob": "^1.0.0",
     "@vercel/node": "^5.2.1",
+    "@vercel/speed-insights": "^1.2.0",
     "ag-grid-community": "29.3.3",
     "ag-grid-react": "29.3.3",
     "bcryptjs": "^3.0.2",
