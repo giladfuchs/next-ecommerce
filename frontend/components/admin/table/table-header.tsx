@@ -64,7 +64,7 @@ export const TableHeader = ({
         {count}
       </p>
 
-      <FormattedMessage id="admin.search.placeholder">
+      <FormattedMessage  id="admin.search.placeholder">
         {(msg) => (
           <TextField
             variant="outlined"

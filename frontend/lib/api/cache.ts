@@ -70,26 +70,29 @@ export const cache = new MemoryCache();
 
 class LocaleCache {
   private locale: "he" | "en" = "en";
+  private getServerCookie(): string | undefined {
+    try {
+      const { cookies } = require("next/headers");
 
+      return  cookies().get("NEXT_LOCALE")?.value;
+    } catch {
+      return undefined;
+    }
+  }
   get(): "he" | "en" {
     if (typeof document !== "undefined") {
       const cookie = document.cookie
         .split("; ")
         .find((row) => row.startsWith("NEXT_LOCALE="));
       const value = cookie?.split("=")[1];
+
       this.locale = value === "he" ? "he" : "en";
       return this.locale;
     }
+    else
+      this.locale = this.getServerCookie() === "he" ? "he" : "en";
 
-    // try {
-    //   const { headers } = require("next/headers");
-    //   const headersList = await headers();
-    //   const cookie = headersList.get("cookie") || "";
-    //   const match = cookie.match(/NEXT_LOCALE=(en|he)/);
-    //   this.locale = match?.[1] === "he" ? "he" : "en";
-    // } catch {
-    //   this.locale = "en";
-    // }
+
 
     return this.locale;
   }

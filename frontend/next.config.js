@@ -6,7 +6,6 @@ const nextConfig = {
     ignoreBuildErrors: false, // Consider setting to true for dev
   },
   devIndicators: {
-    buildActivity: true,
     autoPrerender: true,
   },
   images: {

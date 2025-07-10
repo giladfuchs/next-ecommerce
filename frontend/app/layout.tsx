@@ -80,6 +80,7 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
+  console.log(localeCache.get())
   return (
     <html
       lang={localeCache.get()}

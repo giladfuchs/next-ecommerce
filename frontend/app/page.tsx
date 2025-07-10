@@ -7,7 +7,7 @@ import {
   metadata_keywords,
 } from "lib/assets/i18n/localizedMetadata";
 import { baseUrl, ICON_IMAGE_URL } from "lib/config/config";
-import { getCategories, getProducts } from "lib/api";
+import {getCategories, getProducts, localeCache} from "lib/api";
 import { Products } from "../components/shared/wrappers";
 
 export const metadata: Metadata = {
@@ -29,6 +29,7 @@ export const revalidate = 60;
 export default async function HomePage() {
   const products = await getProducts();
   const categories = (await getCategories()) ?? [];
+
   return (
     <SidebarLayout categories={categories}>
       <h1 className="sr-only">{metadata_site_description}</h1>

@@ -1,4 +1,4 @@
-import { baseUrl } from "lib/config/config";
+import { baseUrl } from "lib/config";
 import { getCategories, getProducts } from "lib/api";
 import { ModelType } from "lib/types";
 
