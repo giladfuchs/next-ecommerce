@@ -47,169 +47,172 @@ export const CartEmptyState = () => (
   </Box>
 );
 export const CartItemList = ({
-                                 cart,
-                                 optimisticUpdate,
-                                 closeCart,
-                             }: {
-    cart: RootState["cart"];
-    optimisticUpdate: (
-        productId: number,
-        updateType: "plus" | "minus" | "delete"
-    ) => void;
-    closeCart: () => void;
+  cart,
+  optimisticUpdate,
+  closeCart,
+}: {
+  cart: RootState["cart"];
+  optimisticUpdate: (
+    productId: number,
+    updateType: "plus" | "minus" | "delete",
+  ) => void;
+  closeCart: () => void;
 }) => (
-    <Box component="ul" py={2} data-testid="cart-list">
-        {cart.lines
-            .filter((item) => item?.title)
-            .sort((a, b) => a.title.localeCompare(b.title))
-            .map((item, i) => (
-                <Box
-                    component="li"
-                    key={i}
+  <Box component="ul" py={2} data-testid="cart-list">
+    {cart.lines
+      .filter((item) => item?.title)
+      .sort((a, b) => a.title.localeCompare(b.title))
+      .map((item, i) => (
+        <Box
+          component="li"
+          key={i}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+            borderBottom: "1px solid",
+            borderColor: "divider",
+            pb: 2,
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              gap: "1rem",
+              justifyContent: "space-between",
+              alignItems: "flex-start",
+              px: 1,
+              py: 2,
+            }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                width: 64,
+                height: 64,
+                flexShrink: 0,
+              }}
+            >
+              <Image
+                width={64}
+                height={64}
+                alt={item.imageAlt || item.title}
+                src={item.imageUrl}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "0.375rem",
+                  border: "1px solid var(--theme-border, #ccc)",
+                  background: "var(--theme-bg, #eee)",
+                  objectFit: "cover",
+                }}
+              />
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  zIndex: 10,
+                  [localeCache.isRtl() ? "right" : "left"]: 0,
+                }}
+              >
+                <DeleteItemButton
+                  item={item}
+                  optimisticUpdate={optimisticUpdate}
+                />
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Link href={`/product/${item.handle}`} onClick={closeCart}>
+                  <Box
+                    component="h2"
                     sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        width: "100%",
-                        borderBottom: "1px solid",
-                        borderColor: "divider",
-                        pb: 2,
+                      m: 0,
+                      fontWeight: "bold",
+                      color: "text.primary",
+                      lineHeight: 1.2,
+                      textAlign: localeCache.isRtl() ? "right" : "left",
                     }}
+                  >
+                    {item.title}
+                  </Box>
+                </Link>
+                <Box
+                  sx={{
+                    minWidth: 80,
+                    textAlign: localeCache.isRtl() ? "right" : "left",
+                  }}
                 >
-                    <Box
-                        sx={{
-                            display: "flex",
-                            gap: "1rem",
-                            justifyContent: "space-between",
-                            alignItems: "flex-start",
-                            px: 1,
-                            py: 2,
-                        }}
-                    >
-                        <Box
-                            sx={{
-                                position: "relative",
-                                width: 64,
-                                height: 64,
-                                flexShrink: 0,
-                            }}
-                        >
-                            <Image
-                                width={64}
-                                height={64}
-                                alt={item.imageAlt || item.title}
-                                src={item.imageUrl}
-                                style={{
-                                    width: "100%",
-                                    height: "100%",
-                                    borderRadius: "0.375rem",
-                                    border: "1px solid var(--theme-border, #ccc)",
-                                    background: "var(--theme-bg, #eee)",
-                                    objectFit: "cover",
-                                }}
-                            />
-                            <Box
-                                sx={{
-                                    position: "absolute",
-                                    top: 0,
-                                    zIndex: 10,
-                                    [localeCache.isRtl() ? "right" : "left"]: 0,
-                                }}
-                            >
-                                <DeleteItemButton
-                                    item={item}
-                                    optimisticUpdate={optimisticUpdate}
-                                />
-                            </Box>
-                        </Box>
-
-                        <Box
-                            sx={{
-                                flex: 1,
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "space-between",
-                            }}
-                        >
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <Link href={`/product/${item.handle}`} onClick={closeCart}>
-                                    <Box
-                                        component="h2"
-                                        sx={{
-                                            m: 0,
-                                            fontWeight: "bold",
-                                            color: "text.primary",
-                                            lineHeight: 1.2,
-                                            textAlign: localeCache.isRtl() ? "right" : "left",
-                                        }}
-                                    >
-                                        {item.title}
-                                    </Box>
-                                </Link>
-                                <Box
-                                    sx={{
-                                        minWidth: 80,
-                                        textAlign: localeCache.isRtl() ? "right" : "left",
-                                    }}
-                                >
-                                    <Price amount={item.totalAmount} />
-                                </Box>
-                            </Box>
-
-                            <Box
-                                sx={{
-                                    mt: 2,
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <Price amount={item.unitAmount} sx={{ fontSize: "0.875rem", fontWeight: 500 }} />
-
-                                <Box
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        height: "2.25rem",
-                                        borderRadius: "999px",
-                                        border: "1px solid",
-                                        borderColor: "divider",
-                                    }}
-                                    data-testid="quantity-buttons"
-                                >
-                                    <EditItemQuantityButton
-                                        item={item}
-                                        type="minus"
-                                        optimisticUpdate={optimisticUpdate}
-                                    />
-                                    <Box
-                                        sx={{
-                                            width: "1.5rem",
-                                            textAlign: "center",
-                                            fontSize: "0.875rem",
-                                        }}
-                                        data-testid="cart-item-qty"
-                                    >
-                                        {item.quantity}
-                                    </Box>
-                                    <EditItemQuantityButton
-                                        item={item}
-                                        type="plus"
-                                        optimisticUpdate={optimisticUpdate}
-                                    />
-                                </Box>
-                            </Box>
-                        </Box>
-                    </Box>
+                  <Price amount={item.totalAmount} />
                 </Box>
-            ))}
-    </Box>
+              </Box>
+
+              <Box
+                sx={{
+                  mt: 2,
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Price
+                  amount={item.unitAmount}
+                  sx={{ fontSize: "0.875rem", fontWeight: 500 }}
+                />
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    height: "2.25rem",
+                    borderRadius: "999px",
+                    border: "1px solid",
+                    borderColor: "divider",
+                  }}
+                  data-testid="quantity-buttons"
+                >
+                  <EditItemQuantityButton
+                    item={item}
+                    type="minus"
+                    optimisticUpdate={optimisticUpdate}
+                  />
+                  <Box
+                    sx={{
+                      width: "1.5rem",
+                      textAlign: "center",
+                      fontSize: "0.875rem",
+                    }}
+                    data-testid="cart-item-qty"
+                  >
+                    {item.quantity}
+                  </Box>
+                  <EditItemQuantityButton
+                    item={item}
+                    type="plus"
+                    optimisticUpdate={optimisticUpdate}
+                  />
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      ))}
+  </Box>
 );
 
 export const CartCheckoutSection = ({

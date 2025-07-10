@@ -1,5 +1,5 @@
 "use client";
-import {CSSProperties, useEffect, useState} from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import {
   Chip,
@@ -7,12 +7,14 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  Button, Autocomplete, TextField,
+  Button,
+  Autocomplete,
+  TextField,
 } from "@mui/material";
-import {Category, ModelType, OrderStatus} from "lib/types";
-import {usePathname, useRouter} from "next/navigation";
-import {safeDecodeURIComponent} from "../../lib/helper";
-import {localeCache} from "../../lib/api";
+import { Category, ModelType, OrderStatus } from "lib/types";
+import { usePathname, useRouter } from "next/navigation";
+import { safeDecodeURIComponent } from "../../lib/helper";
+import { localeCache } from "../../lib/api";
 
 type Props = {
   status: OrderStatus;
@@ -93,11 +95,10 @@ export const DeleteConfirmDialog = ({
   );
 };
 
-
 export const CategoryAutocomplete = ({
-                                       options,
-                                       allOption,
-                                     }: {
+  options,
+  allOption,
+}: {
   options: Category[];
   allOption: Category;
 }) => {
@@ -106,12 +107,12 @@ export const CategoryAutocomplete = ({
   const pathname = safeDecodeURIComponent(usePathname());
 
   const findSelected = () =>
-      options.find((item) =>
-          pathname.endsWith(`/${ModelType.category}/${item.handle}`),
-      ) ?? (pathname === "/" ? allOption : undefined);
+    options.find((item) =>
+      pathname.endsWith(`/${ModelType.category}/${item.handle}`),
+    ) ?? (pathname === "/" ? allOption : undefined);
 
   const [selectedItem, setSelectedItem] = useState<Category | undefined>(
-      findSelected(),
+    findSelected(),
   );
 
   useEffect(() => {
@@ -119,43 +120,43 @@ export const CategoryAutocomplete = ({
   }, [pathname, options]);
 
   return (
-      <Autocomplete
-          options={options}
-          getOptionLabel={(option) => option.title}
-          value={selectedItem}
-          onChange={(event, value: Category | null) => {
-            const selected = value ?? allOption;
-            setSelectedItem(selected);
-            router.push(
-                selected.handle === "all"
-                    ? "/"
-                    : `/${ModelType.category}/${selected.handle}`,
-            );
+    <Autocomplete
+      options={options}
+      getOptionLabel={(option) => option.title}
+      value={selectedItem}
+      onChange={(event, value: Category | null) => {
+        const selected = value ?? allOption;
+        setSelectedItem(selected);
+        router.push(
+          selected.handle === "all"
+            ? "/"
+            : `/${ModelType.category}/${selected.handle}`,
+        );
+      }}
+      isOptionEqualToValue={(option, value) => option.handle === value?.handle}
+      disableClearable
+      renderInput={(params) => (
+        <TextField
+          {...params}
+          label={intl.formatMessage({
+            id: `${ModelType.category}.selectCategory`,
+          })}
+          InputProps={{
+            ...params.InputProps,
+            style: {
+              direction: localeCache.dir(),
+              fontSize: "1.1em",
+            },
           }}
-          isOptionEqualToValue={(option, value) => option.handle === value?.handle}
-          disableClearable
-          renderInput={(params) => (
-              <TextField
-                  {...params}
-                  label={intl.formatMessage({
-                    id: `${ModelType.category}.selectCategory`,
-                  })}
-                  InputProps={{
-                    ...params.InputProps,
-                    style: {
-                      direction: localeCache.dir(),
-                      fontSize: "1.1em",
-                    },
-                  }}
-                  InputLabelProps={{
-                    ...params.InputLabelProps,
-                    style: {
-                      direction: localeCache.dir(),
-                      textAlign: localeCache.isRtl() ? "right" : "left",
-                    },
-                  }}
-              />
-          )}
-      />
+          InputLabelProps={{
+            ...params.InputLabelProps,
+            style: {
+              direction: localeCache.dir(),
+              textAlign: localeCache.isRtl() ? "right" : "left",
+            },
+          }}
+        />
+      )}
+    />
   );
 };

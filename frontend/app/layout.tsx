@@ -84,7 +84,6 @@ export default async function RootLayout({
   const local = (await cookies()).get("NEXT_LOCALE" as any)?.value;
   if (typeof local === "string" && ["he", "en"].includes(local))
     localeCache.set(local as "he" | "en");
-  console.log(local)
   return (
     <html
       lang={localeCache.get()}
@@ -115,29 +114,31 @@ export default async function RootLayout({
             <ThemeProviderLayout>
               <LoadingProvider>
                 <Box
-                    id="font-scale-wrapper"
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      minHeight: "100vh",
-                      bgcolor: "var(--color-bg)",
-                      color: "var(--color-text)",
-                      "::selection": {
-                        backgroundColor: "teal",
-                        color: "white",
-                      },
-                    }}
+                  id="font-scale-wrapper"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    minHeight: "100vh",
+                    bgcolor: "var(--color-bg)",
+                    color: "var(--color-text)",
+                    "::selection": {
+                      backgroundColor: "teal",
+                      color: "white",
+                    },
+                  }}
                 >
                   <LoadingGlobal />
                   <Header />
                   <Box component="main" sx={{ flexGrow: 1 }}>
-                    <Suspense fallback={<LoadingProductsList />}>{children}</Suspense>
+                    <Suspense fallback={<LoadingProductsList />}>
+                      {children}
+                    </Suspense>
                   </Box>
                   <Footer />
                   <Toaster richColors closeButton position="bottom-center" />
                   <AccessibilityBar />
                 </Box>
-                  <Analytics />
+                <Analytics />
                 <SpeedInsights />
               </LoadingProvider>
             </ThemeProviderLayout>

@@ -22,19 +22,17 @@ export function SearchResultsMessage({ count }: { count: number }) {
 }
 
 export function NoProductsMessage() {
-    return (
-        <Typography
-            data-testid="no-products"
-            textAlign="center"
-            mt={3}
-            mx={2}
-            color="text.secondary"
-        >
-            <FormattedMessage
-                id="category.noProducts"
-            />
-        </Typography>
-    );
+  return (
+    <Typography
+      data-testid="no-products"
+      textAlign="center"
+      mt={3}
+      mx={2}
+      color="text.secondary"
+    >
+      <FormattedMessage id="category.noProducts" />
+    </Typography>
+  );
 }
 
 export const OrderSuccessMessage = ({ orderId }: { orderId: number }) => (

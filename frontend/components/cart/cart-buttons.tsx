@@ -75,49 +75,47 @@ export const EditItemQuantityButton = memo(
   },
 );
 
-export const OpenCart = memo(
-    ({ quantity }: { quantity?: number }) => (
-        <Box
-            data-testid="cart-open"
-            sx={{
-                position: "relative",
-                display: "flex",
-                width: "2.75rem",
-                height: "2.75rem",
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: "0.375rem",
-                border: "1px solid",
-                borderColor: "divider",
-            }}
-        >
-            <ShoppingCartIcon fontSize="small" />
-            {quantity ? (
-                <Box
-                    sx={{
-                        position: "absolute",
-                        top: 0,
-                        right: 0,
-                        transform: "translate(40%, -40%)",
-                        width: "1rem",
-                        height: "1rem",
-                        borderRadius: "0.25rem",
-                        bgcolor: "primary.main",
-                        color: "#fff",
-                        fontSize: "0.6875rem",
-                        fontWeight: 500,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        lineHeight: 1,
-                    }}
-                >
-                    {quantity}
-                </Box>
-            ) : null}
-        </Box>
-    )
-);
+export const OpenCart = memo(({ quantity }: { quantity?: number }) => (
+  <Box
+    data-testid="cart-open"
+    sx={{
+      position: "relative",
+      display: "flex",
+      width: "2.75rem",
+      height: "2.75rem",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: "0.375rem",
+      border: "1px solid",
+      borderColor: "divider",
+    }}
+  >
+    <ShoppingCartIcon fontSize="small" />
+    {quantity ? (
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          transform: "translate(40%, -40%)",
+          width: "1rem",
+          height: "1rem",
+          borderRadius: "0.25rem",
+          bgcolor: "primary.main",
+          color: "#fff",
+          fontSize: "0.6875rem",
+          fontWeight: 500,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          lineHeight: 1,
+        }}
+      >
+        {quantity}
+      </Box>
+    ) : null}
+  </Box>
+));
 export const CheckoutButton = memo(({ onClick }: { onClick: () => void }) => (
   <Button
     data-testid="cart-checkout"

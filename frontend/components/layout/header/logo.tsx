@@ -3,22 +3,22 @@ import { Box } from "@mui/material";
 import { ICON_IMAGE_URL } from "lib/config/config";
 
 export default function Logo() {
-    return (
-        <Box
-            sx={{
-                height: "4rem",
-                display: "flex",
-                alignItems: "center",
-            }}
-        >
-            <Image
-                src={(ICON_IMAGE_URL as string) || "/favicon.ico"}
-                alt="logo"
-                width={80}
-                height={48}
-                priority
-                style={{ height: "2.75rem", width: "auto" }}
-            />
-        </Box>
-    );
+  return (
+    <Box
+      sx={{
+        height: "4rem",
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+      <Image
+        src={(ICON_IMAGE_URL as string) || "/favicon.ico"}
+        alt="logo"
+        width={80}
+        height={48}
+        priority
+        style={{ height: "2.75rem", width: "auto" }}
+      />
+    </Box>
+  );
 }

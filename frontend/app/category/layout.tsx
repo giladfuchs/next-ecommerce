@@ -5,17 +5,17 @@ import { PropsHandle } from "lib/types";
 import { getDecodedHandle } from "lib/helper";
 
 export default async function CategoryLayout({
-                                               children,
-                                               params,
-                                             }: PropsHandle & {
+  children,
+  params,
+}: PropsHandle & {
   children: ReactNode;
 }) {
-  const  currentPath= await getDecodedHandle(params);
+  const currentPath = await getDecodedHandle(params);
   const categories = (await getCategories()) ?? [];
 
   return (
-      <SidebarLayout categories={categories} currentPath={currentPath}>
-        {children}
-      </SidebarLayout>
+    <SidebarLayout categories={categories} currentPath={currentPath}>
+      {children}
+    </SidebarLayout>
   );
 }
