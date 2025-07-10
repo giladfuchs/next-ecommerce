@@ -4,7 +4,7 @@ import { getDecodedHandle, getStaticHandleParams } from "lib/helper";
 import { getCategories, getCategory, getCategoryProducts } from "lib/api";
 import { generateMetadataCategory, generateJsonLdCategory } from "lib/config";
 import { PropsHandle } from "lib/types";
-import { Products } from "components/shared/wrappers";
+import { ProductsSSR } from "../../../components/shared/elements-ssr";
 
 export const revalidate = 60;
 export const dynamic = "force-static";
@@ -44,7 +44,7 @@ export default async function CategoryPage({ params }: PropsHandle) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Products products={products} />
+      <ProductsSSR products={products} />
     </section>
   );
 }

@@ -1,13 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function AdminLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function AdminLayout({ children }: { children: ReactNode }) {
   const router = useRouter();
   const [isAllowed, setIsAllowed] = useState(false);
 
@@ -22,6 +18,11 @@ export default function AdminLayout({
     } else {
       setIsAllowed(true);
     }
+    document.body.classList.add("admin");
+
+    return () => {
+      document.body.classList.remove("admin");
+    };
   }, []);
 
   if (!isAllowed) return null;

@@ -7,3 +7,12 @@ const ProductsClient = dynamic(() => import("components/products"), {
 export const Products = (props: { products: Product[] }) => (
   <ProductsClient {...props} />
 );
+
+export const HeaderControls = dynamic(
+  () => import("components/layout/header/header-controls"),
+  { ssr: false },
+);
+export const AccessibilityBar = dynamic(
+  () => import("components/layout/accessibility-bar"),
+  { ssr: false },
+);

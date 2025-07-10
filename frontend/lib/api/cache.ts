@@ -74,7 +74,7 @@ class LocaleCache {
     try {
       const { cookies } = require("next/headers");
 
-      return  cookies().get("NEXT_LOCALE")?.value;
+      return cookies().get("NEXT_LOCALE")?.value;
     } catch {
       return undefined;
     }
@@ -89,9 +89,6 @@ class LocaleCache {
       this.locale = value === "he" ? "he" : "en";
       return this.locale;
     }
-
-
-
 
     return this.locale;
   }

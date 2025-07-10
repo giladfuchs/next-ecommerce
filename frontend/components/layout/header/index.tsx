@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HeaderControls from "./header-controls";
+import { HeaderControls } from "components/shared/wrappers";
 import Logo from "components/layout/header/logo";
 
 export default function Header() {

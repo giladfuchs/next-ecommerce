@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, useMemo } from "react";
 import {
@@ -8,41 +7,9 @@ import {
 } from "components/shared/messages";
 import Grid from "components/products/grid";
 import { Product } from "lib/types";
-import { ProductItem } from "components/products/grid";
-import { GridTileImage } from "components/products/grid/tile";
 import { PRODUCTS_PER_PAGE } from "lib/config/config";
 import { filterBySearch } from "lib/helper";
-
-const ProductsDisplay = ({ products }: { products: Product[] }) => {
-  return (
-    <>
-      {products.map((product) => (
-        <ProductItem
-          key={product.handle}
-          className="animate-fadeIn w-full max-w-full overflow-hidden"
-        >
-          <Link
-            href={`/product/${product.handle}`}
-            prefetch
-            className="relative block h-full w-full"
-            data-testid={`product-link-${product.handle}`}
-          >
-            <GridTileImage
-              src={product.featuredImage.url}
-              alt={product.title}
-              label={{
-                title: product.title,
-                amount: product.price,
-              }}
-              fill
-              sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
-            />
-          </Link>
-        </ProductItem>
-      ))}
-    </>
-  );
-};
+import { ProductsDisplay } from "../shared/elements-ssr";
 
 const ProductsInfinite = ({ products }: { products: Product[] }) => {
   const [page, setPage] = useState(1);

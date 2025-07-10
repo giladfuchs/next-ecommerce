@@ -1,4 +1,3 @@
-"use client";
 import { usePathname } from "next/navigation";
 import { Box, Typography, IconButton, Stack, Grid } from "@mui/material";
 import { metadata_site_title } from "lib/assets/i18n/localizedMetadata";
@@ -10,12 +9,10 @@ export const [email, address, phone, instagram, facebook, website] =
   FOOTER_DATA.split(",");
 
 export default function Footer() {
-  const pathname = usePathname();
-  if (pathname.startsWith("/admin")) return null;
-
   return (
     <Box
       component="footer"
+      className="hide-footer"
       sx={{
         position: "sticky",
         bottom: 0,

@@ -42,7 +42,7 @@ const AGTable = ({
       data-testid="ag-table"
       dir={localeCache.dir()}
       style={{
-        height: 600,
+        height: 700,
         width: "100%",
         overflowX: "auto",
         direction: localeCache.dir(),
