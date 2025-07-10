@@ -1,19 +1,46 @@
 "use client";
 import Link from "next/link";
+import { Box, Typography } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
 export default function NotFound() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-3xl font-bold mb-4">
-        <FormattedMessage id="notFound.title" />
-      </h1>
-      <p className="text-lg mb-8">
-        <FormattedMessage id="notFound.description" />
-      </p>
-      <Link href="/" className="text-blue-500 underline">
-        <FormattedMessage id="notFound.backHome" />
-      </Link>
-    </div>
-  );
+    return (
+        <Box
+            minHeight="100vh"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            px={2}
+        >
+            <Typography
+                variant="h1"
+                fontSize="2rem"
+                fontWeight="bold"
+                mb="1.5rem"
+                textAlign="center"
+            >
+                <FormattedMessage id="notFound.title" />
+            </Typography>
+
+            <Typography
+                fontSize="1.2rem"
+                mb="2rem"
+                textAlign="center"
+                maxWidth="40rem"
+            >
+                <FormattedMessage id="notFound.description" />
+            </Typography>
+
+            <Typography
+                component={Link}
+                href="/"
+                fontSize="1rem"
+                color="primary"
+                sx={{ textDecoration: "underline" }}
+            >
+                <FormattedMessage id="notFound.backHome" />
+            </Typography>
+        </Box>
+    );
 }

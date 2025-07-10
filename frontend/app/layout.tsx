@@ -84,7 +84,7 @@ export default async function RootLayout({
   const local = (await cookies()).get("NEXT_LOCALE" as any)?.value;
   if (typeof local === "string" && ["he", "en"].includes(local))
     localeCache.set(local as "he" | "en");
-
+  console.log(local)
   return (
     <html
       lang={localeCache.get()}
@@ -114,33 +114,30 @@ export default async function RootLayout({
           <IntProvider>
             <ThemeProviderLayout>
               <LoadingProvider>
-                <div
-                  id="font-scale-wrapper"
-                  className="bg-theme text-theme selection:bg-teal-300 dark:bg-theme-dark dark:text-theme dark:selection:bg-pink-500 dark:selection:text-white"
-                >
-                  <LoadingGlobal />
-
-                  <Box
+                <Box
+                    id="font-scale-wrapper"
                     sx={{
                       display: "flex",
                       flexDirection: "column",
                       minHeight: "100vh",
                       bgcolor: "var(--color-bg)",
+                      color: "var(--color-text)",
+                      "::selection": {
+                        backgroundColor: "teal",
+                        color: "white",
+                      },
                     }}
-                  >
-                    <Header />
-                    <Box component="main" sx={{ flexGrow: 1 }}>
-                      <Suspense fallback={<LoadingProductsList />}>
-                        {children}
-                      </Suspense>
-                    </Box>
-                    <Footer />
+                >
+                  <LoadingGlobal />
+                  <Header />
+                  <Box component="main" sx={{ flexGrow: 1 }}>
+                    <Suspense fallback={<LoadingProductsList />}>{children}</Suspense>
                   </Box>
-
-                  <Analytics />
+                  <Footer />
                   <Toaster richColors closeButton position="bottom-center" />
                   <AccessibilityBar />
-                </div>
+                </Box>
+                  <Analytics />
                 <SpeedInsights />
               </LoadingProvider>
             </ThemeProviderLayout>

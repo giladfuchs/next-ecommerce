@@ -124,62 +124,71 @@ export default function AccessibilityBar() {
   );
 
   return (
-    <div
-      className={`fixed top-1/2 z-50 -translate-y-1/2 ${localeCache.isRtl() ? "left-1" : "right-1"}`}
-      dir={localeCache.dir()}
-      style={{ display: "flex", alignItems: "center" }}
-    >
-      <IconButton
-        ref={buttonIconOpenRef}
-        onClick={() => setOpen(!open)}
-        sx={{
-          backgroundColor: "#124cda",
-          color: "var(--color-bg)",
-          "&:hover": { backgroundColor: "#124cda" },
-          "&:focus, &:active": { backgroundColor: "#124cda", opacity: 1 },
-          zIndex: 10,
-        }}
-      >
-        <AccessibleIcon />
-      </IconButton>
-
-      {open && (
-        <Box
-          ref={panelRef}
+      <Box
           sx={{
-            ...(fontSize > 140 && { mt: 25 }),
-            ml: 1,
-            width: 200,
-            p: 2,
-            borderRadius: 2,
-            boxShadow: 3,
-            border: "1px solid var(--color-border)",
-            color: "var(--color-text-strong)",
-            backgroundColor: "var(--color-bg)",
+              position: "fixed",
+              top: "70%",
+              transform: "translateY(-50%)",
+              zIndex: 50,
+              display: "flex",
+              alignItems: "center",
+              ...(localeCache.isRtl() ? { left: "0.5rem" } : { right: "0.5rem" }),
           }}
-        >
-          <Typography
-            variant="subtitle1"
-            fontWeight="bold"
-            fontSize="1rem"
-            mb={1}
+          dir={localeCache.dir()}
+      >
+          <IconButton
+              ref={buttonIconOpenRef}
+              onClick={() => setOpen(!open)}
+              sx={{
+                  backgroundColor: "#124cda",
+                  color: "var(--color-bg)",
+                  "&:hover, &:focus, &:active": {
+                      backgroundColor: "#124cda",
+                      opacity: 1,
+                  },
+                  zIndex: 10,
+              }}
           >
-            <FormattedMessage id="accessibility.title" />
-          </Typography>
+              <AccessibleIcon />
+          </IconButton>
 
-          <Stack key={Math.random().toString(36)} spacing={1}>
-            {accessibility_buttons.map(({ id, icon, onClick, selected }) => (
-              <ActionItem
-                key={id}
-                labelId={id}
-                icon={icon}
-                onClick={onClick}
-                selected={selected}
-              />
-            ))}
-          </Stack>
-        </Box>
-      )}
-    </div>
+          {open && (
+              <Box
+                  ref={panelRef}
+                  sx={{
+                      ...(fontSize > 140 && { mt: "6.25rem" }), // 100px ≈ 25 * 4px
+                      ml: "0.25rem",
+                      width: "12.5rem", // 200px
+                      p: "0.5rem",
+                      borderRadius: "0.5rem",
+                      boxShadow: 3,
+                      border: "1px solid var(--color-border)",
+                      color: "var(--color-text-strong)",
+                      backgroundColor: "var(--color-bg)",
+                  }}
+              >
+                  <Typography
+                      variant="subtitle1"
+                      fontWeight="bold"
+                      fontSize="1rem"
+                      mb={1}
+                  >
+                      <FormattedMessage id="accessibility.title" />
+                  </Typography>
+
+                  <Stack key={Math.random().toString(36)} spacing={1}>
+                      {accessibility_buttons.map(({ id, icon, onClick, selected }) => (
+                          <ActionItem
+                              key={id}
+                              labelId={id}
+                              icon={icon}
+                              onClick={onClick}
+                              selected={selected}
+                          />
+                      ))}
+                  </Stack>
+              </Box>
+          )}
+      </Box>
   );
 }

@@ -126,20 +126,50 @@ const AdminNavItems = () => {
 };
 
 export default function AdminNav() {
-  const isDesktop = useMediaQuery("(min-width:768px)");
-  return isDesktop ? (
-    <>
-      <div className="flex w-full md:w-1/3 justify-center px-2">
-        <AdminNavItems />
-      </div>
-      <div className="flex justify-end w-auto md:w-1/3" />
-    </>
-  ) : (
-    <>
-      <div className="flex w-full md:w-1/3 justify-center px-2" />
-      <div className="flex justify-end w-auto md:w-1/3">
-        <AdminNavItems />
-      </div>
-    </>
-  );
+    const isDesktop = useMediaQuery("(min-width:768px)");
+    return isDesktop ? (
+        <>
+            <Box
+                sx={{
+                    display: "flex",
+                    width: "100%",
+                    md: { width: "33.3333%" },
+                    justifyContent: "center",
+                    px: 2,
+                }}
+            >
+                <AdminNavItems />
+            </Box>
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    width: "auto",
+                    md: { width: "33.3%" },
+                }}
+            />
+        </>
+    ) : (
+        <>
+            <Box
+                sx={{
+                    display: "flex",
+                    width: "100%",
+                    md: { width: "33.3%" },
+                    justifyContent: "center",
+                    px: 2,
+                }}
+            />
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    width: "auto",
+                    md: { width: "33.3%" },
+                }}
+            >
+                <AdminNavItems />
+            </Box>
+        </>
+    );
 }

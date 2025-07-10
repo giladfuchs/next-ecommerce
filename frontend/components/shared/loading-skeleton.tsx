@@ -3,21 +3,30 @@ import { Box, Skeleton } from "@mui/material";
 
 export function LoadingProductsList() {
   return (
-    <>
-      <div className="mb-4 h-6" />
-      <Grid className="grid-cols-2 lg:grid-cols-3">
-        {Array(12)
-          .fill(0)
-          .map((_, index) => {
-            return (
-              <ProductItem
-                key={index}
-                className="animate-pulse bg-neutral-100 dark:bg-neutral-800"
-              />
-            );
-          })}
-      </Grid>
-    </>
+      <>
+        <Box sx={{ mb: 2, height: "1.5rem" }} />
+        <Grid>
+          {Array(12)
+              .fill(0)
+              .map((_, index) => (
+                  <ProductItem key={index}>
+                    <Box
+                        sx={{
+                          width: "100%",
+                          height: "100%",
+                          backgroundColor: "#f5f5f5",
+                          animation: "pulse 1.5s ease-in-out infinite",
+                          "@keyframes pulse": {
+                            "0%": { opacity: 1 },
+                            "50%": { opacity: 0.5 },
+                            "100%": { opacity: 1 },
+                          },
+                        }}
+                    />
+                  </ProductItem>
+              ))}
+        </Grid>
+      </>
   );
 }
 
@@ -36,24 +45,50 @@ export function LoadingTable() {
   );
 }
 
-export function LoadingProductPage() {
-  return (
-    <div className="mx-auto max-w-(--breakpoint-2xl) px-4">
-      <div className="flex flex-col gap-6 rounded-lg border border-theme bg-theme p-8 md:p-12 lg:flex-row lg:gap-8 animate-pulse">
-        <div className="basis-full lg:basis-2/6">
-          <div className="aspect-square w-full bg-gray-200 rounded-lg" />
-        </div>
 
-        <div className="h-full w-full basis-full lg:basis-4/6 space-y-4">
-          <div className="h-10 w-3/4 bg-gray-200 rounded" />
-          <div className="h-6 w-1/2 bg-gray-200 rounded" />
-          <div className="h-12 w-full bg-gray-300 rounded" />
-          <div className="h-4 w-full bg-gray-100 rounded" />
-          <div className="h-4 w-5/6 bg-gray-100 rounded" />
-          <div className="h-4 w-2/3 bg-gray-100 rounded" />
-          <div className="h-64 w-full bg-gray-200 rounded" />
-        </div>
-      </div>
-    </div>
-  );
+export function LoadingProductPage() {
+    return (
+        <Box
+            sx={{
+                maxWidth: "var(--breakpoint-2xl)",
+                px: 2,
+                mx: "auto",
+            }}
+        >
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: { xs: "column", lg: "row" },
+                    gap: { xs: 3, lg: 4 },
+                    borderRadius: 2,
+                    border: "1px solid var(--theme-border, #e0e0e0)",
+                    backgroundColor: "var(--theme-bg, #f9f9f9)",
+                    p: { xs: 4, md: 6 },
+                    animation: "pulse 1.5s ease-in-out infinite",
+                    "@keyframes pulse": {
+                        "0%": { opacity: 1 },
+                        "50%": { opacity: 0.5 },
+                        "100%": { opacity: 1 },
+                    },
+                }}
+            >
+                <Box sx={{ flex: { lg: "2 1 0" }, width: "100%" }}>
+                    <Skeleton
+                        variant="rounded"
+                        sx={{ width: "100%", aspectRatio: "1 / 1", borderRadius: 2 }}
+                    />
+                </Box>
+
+                <Box sx={{ flex: { lg: "4 1 0" }, width: "100%", display: "flex", flexDirection: "column", gap: 2 }}>
+                    <Skeleton variant="rounded" sx={{ width: "75%", height: 40 }} />
+                    <Skeleton variant="rounded" sx={{ width: "50%", height: 24 }} />
+                    <Skeleton variant="rounded" sx={{ width: "100%", height: 48, bgcolor: "#e0e0e0" }} />
+                    <Skeleton variant="rounded" sx={{ width: "100%", height: 16, bgcolor: "#f0f0f0" }} />
+                    <Skeleton variant="rounded" sx={{ width: "83%", height: 16, bgcolor: "#f0f0f0" }} />
+                    <Skeleton variant="rounded" sx={{ width: "66%", height: 16, bgcolor: "#f0f0f0" }} />
+                    <Skeleton variant="rounded" sx={{ width: "100%", height: 256 }} />
+                </Box>
+            </Box>
+        </Box>
+    );
 }

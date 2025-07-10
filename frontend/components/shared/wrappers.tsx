@@ -1,18 +1,27 @@
 "use client";
 import dynamic from "next/dynamic";
-import { Product } from "../../lib/types";
+import {Category, Product} from "../../lib/types";
+import {CategoryAutocomplete} from "./elements-client";
+
+
 const ProductsClient = dynamic(() => import("components/products"), {
-  ssr: false,
+    ssr: false,
 });
 export const Products = (props: { products: Product[] }) => (
-  <ProductsClient {...props} />
+    <ProductsClient {...props} />
+);
+const CategoryAutocompleteClient = dynamic(() =>
+    import("components/shared/elements-client").then(mod => ({default: mod.CategoryAutocomplete})), {ssr: false}
+);
+export const CategoryAutocomplete = (props: { options: Category[]; allOption: Category; }) => (
+    <CategoryAutocompleteClient {...props} />
 );
 
 export const HeaderControls = dynamic(
-  () => import("components/layout/header/header-controls"),
-  { ssr: false },
+    () => import("components/layout/header/header-controls"),
+    {ssr: false},
 );
 export const AccessibilityBar = dynamic(
-  () => import("components/layout/accessibility-bar"),
-  { ssr: false },
+    () => import("components/layout/accessibility-bar"),
+    {ssr: false},
 );

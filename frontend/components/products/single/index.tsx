@@ -1,20 +1,36 @@
+import {Box} from "@mui/material";
 import ProductDescription from "./product-description";
 import ProductGallery from "./product-gallery";
 import { Product } from "lib/types";
 
 const SingleProductLayout = ({ product }: { product: Product }) => (
-  <div
-    className="mx-auto max-w-(--breakpoint-2xl) px-4"
-    data-testid="product-detail"
-  >
-    <div className="flex flex-col gap-6 rounded-lg border border-theme bg-theme p-8 md:p-12 lg:flex-row lg:gap-8 ">
-      <div className="basis-full lg:basis-2/6">
-        <ProductDescription product={product} />
-      </div>
-      <div className="h-full w-full basis-full lg:basis-4/6">
-        <ProductGallery images={product.images} />
-      </div>
-    </div>
-  </div>
+    <Box
+        data-testid="product-detail"
+        sx={{
+          px: 2,
+          mx: "auto",
+          width: "100%",
+          maxWidth: "var(--breakpoint-2xl)",
+        }}
+    >
+      <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", lg: "row" },
+            gap: { xs: "1.5rem", lg: "2rem" },
+            borderRadius: "0.5rem",
+            border: "1px solid var(--theme-border)",
+            backgroundColor: "var(--theme-bg)",
+            p: { xs: "2rem", md: "3rem" },
+          }}
+      >
+        <Box sx={{ flexBasis: { lg: "33.3333%" }, width: "100%" }}>
+          <ProductDescription product={product} />
+        </Box>
+        <Box sx={{ flexBasis: { lg: "66.6667%" }, width: "100%", height: "100%" }}>
+          <ProductGallery images={product.images} />
+        </Box>
+      </Box>
+    </Box>
 );
 export default SingleProductLayout;

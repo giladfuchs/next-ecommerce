@@ -10,6 +10,7 @@ import { Product } from "lib/types";
 import { PRODUCTS_PER_PAGE } from "lib/config/config";
 import { filterBySearch } from "lib/helper";
 import { ProductsDisplay } from "../shared/elements-ssr";
+// import {Grid} from "@mui/material";
 
 const ProductsInfinite = ({ products }: { products: Product[] }) => {
   const [page, setPage] = useState(1);
@@ -81,15 +82,11 @@ const ProductsLayout = ({ products }: { products: Product[] }) => {
       {searchValue && <SearchResultsMessage count={filteredProducts.length} />}
 
       {filteredProducts.length > 0 ? (
-        <div data-testid="product-list" className="container mx-auto px-4">
-          <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <Grid data-testid="product-list" >
             <ProductsInfinite products={filteredProducts} />
           </Grid>
-        </div>
       ) : (
-        <div data-testid="no-products" className="container mx-auto px-4">
           <NoProductsMessage />
-        </div>
       )}
     </>
   );

@@ -2,81 +2,154 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Box, Button, Divider } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { GridTileImage } from "components/products/grid/tile";
+import  GridTileImage   from "components/products/grid/tile";
 import { ProductImage } from "lib/types";
 import { localeCache } from "lib/api";
 
 export default function ProductGallery({ images }: { images: ProductImage[] }) {
-  const [imageIndex, setImageIndex] = useState(0);
-  const next = () => setImageIndex((prev) => (prev + 1) % images.length);
-  const prev = () =>
-    setImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    const [imageIndex, setImageIndex] = useState(0);
+    const next = () => setImageIndex((prev) => (prev + 1) % images.length);
+    const prev = () =>
+        setImageIndex((prev) => (prev - 1 + images.length) % images.length);
 
-  return (
-    <div>
-      <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden">
-        <Image
-          className="h-full w-full object-contain mx-auto"
-          fill
-          sizes="(min-width: 1024px) 66vw, 100vw"
-          // @ts-ignore
-          alt={((images[imageIndex] || {}) as ProductImage).altText || ""}
-          // @ts-ignore
-          src={((images[imageIndex] || {}) as ProductImage).url || ""}
-          priority
-        />
-
-        {images.length > 1 && (
-          <div className="absolute bottom-[15%] flex w-full justify-center">
-            <div
-              dir="ltr"
-              className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/80 text-neutral-500 backdrop-blur-sm dark:border-black dark:bg-neutral-900/80"
+    const currentImage = images[imageIndex];
+    return (
+        <Box>
+            <Box
+                sx={{
+                    position: "relative",
+                    aspectRatio: "1 / 1",
+                    height: "100%",
+                    maxHeight: "34.375rem",
+                    width: "100%",
+                    overflow: "hidden",
+                }}
             >
-              <button
-                onClick={localeCache.isRtl() ? next : prev}
-                aria-label="Previous product image"
-                className="h-full px-6 transition-all hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center"
-              >
-                <ChevronLeftIcon fontSize="small" />
-              </button>
-
-              <div className="mx-1 h-6 w-px bg-neutral-500" />
-
-              <button
-                onClick={localeCache.isRtl() ? prev : next}
-                aria-label="Next product image"
-                className="h-full px-6 transition-all hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center"
-              >
-                <ChevronRightIcon fontSize="small" />
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {images.length > 1 && (
-        <ul className="my-12 flex flex-wrap items-center justify-center gap-2 overflow-auto py-1 lg:mb-0">
-          {images.map((image, idx) => (
-            <li key={image.url} className="h-20 w-20">
-              <button
-                onClick={() => setImageIndex(idx)}
-                aria-label="Select product image"
-                className="h-full w-full"
-              >
-                <GridTileImage
-                  alt={image.altText}
-                  src={image.url}
-                  width={80}
-                  height={80}
-                  active={idx === imageIndex}
+                <Image
+                    fill
+                    sizes="(min-width: 1024px) 66vw, 100vw"
+                    src={currentImage?.url || ""}
+                    alt={currentImage?.altText || ""}
+                    style={{
+                        objectFit: "contain",
+                        width: "100%",
+                        height: "100%",
+                        display: "block",
+                        marginInline: "auto",
+                    }}
+                    priority
                 />
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+
+                {images.length > 1 && (
+                    <Box
+                        sx={{
+                            position: "absolute",
+                            bottom: "1%",
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "center",
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                display: "flex",
+                                flexDirection: localeCache.isRtl() ? "row" : "row-reverse",
+                                alignItems: "center",
+                                gap: "2rem",
+                            }}
+                        >
+                            <Button
+                                onClick={localeCache.isRtl() ? prev : next}
+                                aria-label="Next product image"
+                                sx={{
+                                    minWidth: 0,
+                                    padding: 0,
+                                    width: "3rem",
+                                    height: "3rem",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    "&:hover": {
+                                        transform: "scale(1.2)",
+                                    },
+                                }}
+                            >
+                                <ChevronRightIcon   sx={{ fontSize: "2rem" }} />
+                            </Button>
+
+                            <Button
+                                onClick={localeCache.isRtl() ? next : prev}
+                                aria-label="Previous product image"
+                                sx={{
+                                    minWidth: 0,
+                                    padding: 0,
+                                    width: "3rem",
+                                    height: "3rem",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    "&:hover": {
+                                        transform: "scale(1.2)",
+                                    },
+                                }}
+                            >
+                                <ChevronLeftIcon sx={{ fontSize: "2rem" }} />
+                            </Button>
+                        </Box>
+                    </Box>
+                )}
+            </Box>
+
+            {images.length > 1 && (
+                <Box
+                    component="ul"
+                    sx={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                        py: 1,
+                        my: 3,
+                        overflowX: "auto",
+                        listStyle: "none",
+                        paddingInline: 0,
+                    }}
+                >
+                    {images.map((image, idx) => (
+                        <Box
+                            component="li"
+                            key={image.url}
+                            sx={{
+                                width: "5rem",
+                                height: "5rem",
+                            }}
+                        >
+                            <Button
+                                onClick={() => setImageIndex(idx)}
+                                aria-label="Select product image"
+                                sx={{
+                                    width: "100%",
+                                    height: "100%",
+                                    minWidth: 0,
+                                    padding: 0,
+                                }}
+                            >
+                                <GridTileImage
+                                    alt={image.altText}
+                                    src={image.url}
+                                    width={80}
+                                    height={80}
+                                    active={idx === imageIndex}
+                                />
+                            </Button>
+                        </Box>
+                    ))}
+                </Box>
+            )}
+        </Box>
+    );
 }

@@ -76,24 +76,48 @@ export const EditItemQuantityButton = memo(
 );
 
 export const OpenCart = memo(
-  ({ className, quantity }: { className?: string; quantity?: number }) => (
-    <Box
-      data-testid="cart-open"
-      className={`relative flex h-11 w-11 items-center justify-center rounded-md border border-theme text-theme-strong transition-colors dark:border-theme dark:text-theme-strong ${className || ""}`}
-    >
-      <ShoppingCartIcon
-        fontSize="small"
-        className="transition-all ease-in-out hover:scale-110"
-      />
-      {quantity ? (
-        <div className="absolute right-0 top-0 -mr-2 -mt-2 h-4 w-4 rounded-sm bg-blue-600 text-[11px] font-medium text-white">
-          {quantity}
-        </div>
-      ) : null}
-    </Box>
-  ),
+    ({ quantity }: { quantity?: number }) => (
+        <Box
+            data-testid="cart-open"
+            sx={{
+                position: "relative",
+                display: "flex",
+                width: "2.75rem",
+                height: "2.75rem",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "0.375rem",
+                border: "1px solid",
+                borderColor: "divider",
+            }}
+        >
+            <ShoppingCartIcon fontSize="small" />
+            {quantity ? (
+                <Box
+                    sx={{
+                        position: "absolute",
+                        top: 0,
+                        right: 0,
+                        transform: "translate(40%, -40%)",
+                        width: "1rem",
+                        height: "1rem",
+                        borderRadius: "0.25rem",
+                        bgcolor: "primary.main",
+                        color: "#fff",
+                        fontSize: "0.6875rem",
+                        fontWeight: 500,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        lineHeight: 1,
+                    }}
+                >
+                    {quantity}
+                </Box>
+            ) : null}
+        </Box>
+    )
 );
-
 export const CheckoutButton = memo(({ onClick }: { onClick: () => void }) => (
   <Button
     data-testid="cart-checkout"

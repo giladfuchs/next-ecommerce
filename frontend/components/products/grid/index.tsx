@@ -1,26 +1,46 @@
-import clsx from "clsx";
-import React from "react";
+import { Box } from "@mui/material";
+import {ReactNode} from "react";
 
-function Grid(props: React.ComponentProps<"ul">) {
-  return (
-    <ul
-      {...props}
-      className={clsx("grid grid-flow-row gap-4", props.className)}
-    >
-      {props.children}
-    </ul>
-  );
+export default function Grid({
+                                 children,
+                             }: {
+    children: ReactNode;
+}) {
+    return (
+        <Box
+            component="ul"
+            sx={{
+                display: "grid",
+                gap: "1rem",
+                gridTemplateColumns: {
+                    xs: "repeat(1, minmax(0, 1fr))",
+                    sm: "repeat(2, minmax(0, 1fr))",
+                    lg: "repeat(3, minmax(0, 1fr))",
+                },
+                listStyle: "none",
+                px: 2,
+                mx: "auto",
+                width: "100%",
+                maxWidth: "lg",
+            }}
+        >
+            {children}
+        </Box>
+    );
 }
-
-export function ProductItem(props: React.ComponentProps<"li">) {
-  return (
-    <li
-      {...props}
-      className={clsx("aspect-square transition-opacity", props.className)}
-    >
-      {props.children}
-    </li>
-  );
+export function ProductItem({ children }: { children: ReactNode }) {
+    return (
+        <Box
+            component="li"
+            sx={{
+                aspectRatio: "1 / 1",
+                width: "100%",
+                maxWidth: "100%",
+                overflow: "hidden",
+                animation: "fadeIn 0.4s ease",
+            }}
+        >
+            {children}
+        </Box>
+    );
 }
-
-export default Grid;

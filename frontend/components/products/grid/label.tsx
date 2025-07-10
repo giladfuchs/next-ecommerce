@@ -1,71 +1,79 @@
 import { Box } from "@mui/material";
-import clsx from "clsx";
 import { Price } from "components/shared/elements-ssr";
+import { localeCache } from "lib/api";
 
 export default function Label({
-  title,
-  amount,
-  position = "bottom",
-}: {
-  title: string;
-  amount: number;
-  position?: "bottom" | "center";
+                                  title,
+                                  amount,
+                                  position = "bottom",
+                              }: {
+    title: string;
+    amount: number;
+    position?: "bottom" | "center";
 }) {
-  return (
-    <Box
-      className={clsx("absolute bottom-0 left-0 w-full @container/label", {
-        "lg:px-20 lg:pb-[35%]": position === "center",
-      })}
-      sx={{
-        px: 2,
-        pb: 2,
-        display: "flex",
-        justifyContent: "flex-start",
-      }}
-    >
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          borderRadius: "9999px",
-          bgcolor: "var(--color-chip)",
-          color: "var(--color-text-strong)",
-          px: 1.5,
-          py: 0.5,
-          fontWeight: 600,
-          fontSize: "0.9em",
-          gap: 1,
-          border: "1px solid var(--color-border)",
-        }}
-      >
-        <h3
-          className="product-title mr-4 line-clamp-2 grow pl-2 leading-none tracking-tight"
-          data-testid="product-card-title"
-          style={{
-            fontSize: "1.2em",
-            color: "var(--color-text-strong)",
-          }}
-        >
-          {title}
-        </h3>
+    const isRtl = localeCache.isRtl();
 
+    return (
         <Box
-          className="price-badge black-bg"
-          sx={{
-            backgroundColor: "var(--color-accent)",
-            borderRadius: "9999px",
-            px: 1.5,
-            py: 0.5,
-            fontSize: "1.2em",
-            fontWeight: "bold",
-            width: "fit-content",
-            whiteSpace: "nowrap",
-            lineHeight: 1.3,
-          }}
+            sx={{
+                position: "absolute",
+                bottom: 0,
+                left: isRtl ? "auto" : 0,
+                right: isRtl ? 0 : "auto",
+                width: "100%",
+                px: position === "center" ? { lg: "5rem" } : "1.2rem",
+                pb: position === "center" ? { lg: "35%" } : "1.2rem",
+                display: "flex",
+                justifyContent: isRtl ? "flex-end" : "flex-start",
+            }}
         >
-          <Price amount={amount} className="price-text" />
+            <Box
+                sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    borderRadius: "9999rem",
+                    bgcolor: "var(--color-chip)",
+                    color: "var(--color-text-strong)",
+                    border: "0.1rem solid var(--color-border)",
+                    padding: "0.6rem 1rem",
+                    gap: "1.2rem",
+                    width: "17rem", // ✅ fixed width
+                }}
+            >
+                <Box
+                    component="h3"
+                    data-testid="product-card-title"
+                    sx={{
+                        fontSize: "1.1rem",
+                        lineHeight: 1.3,
+                        fontWeight: 600,
+                        color: "var(--color-text-strong)",
+                        flexGrow: 1,
+                        overflow: "hidden",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                        textAlign: isRtl ? "right" : "left",
+                    }}
+                >
+                    {title}
+                </Box>
+
+                <Box
+                    sx={{
+                        backgroundColor: "var(--color-accent)",
+                        borderRadius: "9999rem",
+                        px: "0.8rem",
+                        py: "0.4rem",
+                        fontSize: "1rem",
+                        fontWeight: "bold",
+                        lineHeight: 1.3,
+                        whiteSpace: "nowrap",
+                        color: "black",
+                    }}
+                >
+                    <Price amount={amount} />
+                </Box>
+            </Box>
         </Box>
-      </Box>
-    </Box>
-  );
+    );
 }
