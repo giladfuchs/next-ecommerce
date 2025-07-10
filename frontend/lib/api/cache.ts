@@ -89,8 +89,7 @@ class LocaleCache {
       this.locale = value === "he" ? "he" : "en";
       return this.locale;
     }
-    else
-      this.locale = this.getServerCookie() === "he" ? "he" : "en";
+
 
 
 
