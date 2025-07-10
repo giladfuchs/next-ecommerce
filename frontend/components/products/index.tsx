@@ -82,7 +82,7 @@ const ProductsLayout = ({ products }: { products: Product[] }) => {
       {searchValue && <SearchResultsMessage count={filteredProducts.length} />}
 
       {filteredProducts.length > 0 ? (
-        <Grid data-testid="product-list">
+        <Grid >
           <ProductsInfinite products={filteredProducts} />
         </Grid>
       ) : (

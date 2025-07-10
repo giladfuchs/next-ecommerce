@@ -33,7 +33,11 @@ export default function Cart() {
       quantityRef.current = cart.totalQuantity;
     }
   }, [cart?.totalQuantity, isOpen]);
-
+    useEffect(() => {
+        const handleOpen = () => setIsOpen(true);
+        window.addEventListener("open-cart", handleOpen);
+        return () => window.removeEventListener("open-cart", handleOpen);
+    }, []);
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
   const redirectToCheckout = () => {

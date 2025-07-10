@@ -12,7 +12,6 @@ export default function Label({
   position?: "bottom" | "center";
 }) {
   const isRtl = localeCache.isRtl();
-
   return (
     <Box
       sx={{
@@ -24,20 +23,22 @@ export default function Label({
         px: position === "center" ? { lg: "5rem" } : "1.2rem",
         pb: position === "center" ? { lg: "35%" } : "1.2rem",
         display: "flex",
-        justifyContent: isRtl ? "flex-end" : "flex-start",
+          justifyContent: isRtl ? "flex-start" : "flex-end",
+
       }}
     >
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
-          borderRadius: "9999rem",
+
+            borderRadius: "9999rem",
           bgcolor: "var(--color-chip)",
           color: "var(--color-text-strong)",
           border: "0.1rem solid var(--color-border)",
           padding: "0.6rem 1rem",
           gap: "1.2rem",
-          width: "17rem", // ✅ fixed width
+          width: "17rem",
         }}
       >
         <Box
@@ -52,7 +53,7 @@ export default function Label({
             overflow: "hidden",
             whiteSpace: "nowrap",
             textOverflow: "ellipsis",
-            textAlign: isRtl ? "right" : "left",
+            textAlign: isRtl ? "left" : "right",
           }}
         >
           {title}

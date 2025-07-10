@@ -7,7 +7,6 @@ import { localeCache } from "lib/api";
 export default function ProductDescription({ product }: { product: Product }) {
   const isLongTitle = product.title.length > 30;
   const isRtl = localeCache.isRtl();
-
   return (
     <>
       <Grid

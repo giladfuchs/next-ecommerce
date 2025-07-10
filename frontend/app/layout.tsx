@@ -1,5 +1,5 @@
 import type { Viewport } from "next";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 import Script from "next/script";
 import { ReactNode, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
@@ -36,6 +36,7 @@ import {
   metadata_site_title,
 } from "lib/assets/i18n/localizedMetadata";
 import { localeCache } from "lib/api";
+import {cookies} from "next/headers";
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
@@ -81,9 +82,15 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  const local = (await cookies()).get("NEXT_LOCALE" as any)?.value;
-  if (typeof local === "string" && ["he", "en"].includes(local))
-    localeCache.set(local as "he" | "en");
+
+// Avoid hydration mismatch in dev – only set localeCache in production.
+// Safe in prod since cookies are stable, but noisy in local dev.
+  if (process.env.NODE_ENV === "production") {
+    const local = (await cookies()).get("NEXT_LOCALE" as any)?.value;
+    if (typeof local === "string" && ["he", "en"].includes(local)) {
+      localeCache.set(local as "he" | "en");
+    }
+  }
   return (
     <html
       lang={localeCache.get()}

@@ -70,15 +70,6 @@ export const cache = new MemoryCache();
 
 class LocaleCache {
   private locale: "he" | "en" = "en";
-  private getServerCookie(): string | undefined {
-    try {
-      const { cookies } = require("next/headers");
-
-      return cookies().get("NEXT_LOCALE")?.value;
-    } catch {
-      return undefined;
-    }
-  }
   get(): "he" | "en" {
     if (typeof document !== "undefined") {
       const cookie = document.cookie
@@ -90,6 +81,8 @@ class LocaleCache {
       return this.locale;
     }
 
+    // return "en";
+    // return "he";
     return this.locale;
   }
 
