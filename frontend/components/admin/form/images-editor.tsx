@@ -31,6 +31,7 @@ export default function ImagesEditor({
 }) {
   const intl = useIntl();
   const [imagesState, setImagesState] = useState<ProductImage[]>(images);
+
   const handleChange = (
     index: number,
     field: keyof ProductImage,
@@ -46,6 +47,7 @@ export default function ImagesEditor({
   useEffect(() => {
     onChange(imagesState);
   }, [imagesState]);
+
   const handleClipboardPaste = async (index: number) => {
     try {
       const text = await navigator.clipboard.readText();
@@ -79,7 +81,11 @@ export default function ImagesEditor({
           itemId="images"
           label={<span data-testid="form-toggle-images">{placeholder}</span>}
         >
-          <Grid container direction="column" spacing={3}>
+          <Grid
+            {...({ container: true } as any)}
+            direction="column"
+            spacing={3}
+          >
             <Button
               sx={{ mt: 4, maxWidth: 300, alignSelf: "center" }}
               variant="outlined"
@@ -88,9 +94,10 @@ export default function ImagesEditor({
             >
               <FormattedMessage id="admin.product.image" />
             </Button>
+
             {Array.from({ length: MAX_IMAGES }, (_, index) => (
               <Grid
-                item
+                {...({ item: true } as any)}
                 xs={12}
                 key={index}
                 data-testid={`form-image-${index}`}
@@ -102,8 +109,12 @@ export default function ImagesEditor({
                   />
                 </Typography>
 
-                <Grid container spacing={1} alignItems="center">
-                  <Grid item xs>
+                <Grid
+                  {...({ container: true } as any)}
+                  spacing={1}
+                  alignItems="center"
+                >
+                  <Grid {...({ item: true } as any)} xs>
                     <TextField
                       fullWidth
                       size="small"
@@ -114,7 +125,7 @@ export default function ImagesEditor({
                       }
                     />
                   </Grid>
-                  <Grid item>
+                  <Grid {...({ item: true } as any)}>
                     <IconButton
                       onClick={() => handleClipboardPaste(index)}
                       size="small"
@@ -132,7 +143,7 @@ export default function ImagesEditor({
                   </Grid>
                 </Grid>
 
-                <Grid item xs={12} mt={1}>
+                <Grid {...({ item: true } as any)} xs={12} mt={1}>
                   <TextField
                     fullWidth
                     size="small"

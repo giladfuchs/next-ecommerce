@@ -44,7 +44,7 @@ const CheckoutSummaryItem = ({ product }: { product: CartItem }) => (
       }}
     />
     <Grid
-      item
+      {...({ item: true } as any)}
       sx={{
         display: "flex",
         flexDirection: "column",

@@ -3,7 +3,7 @@ const path = require("path");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true, // Consider setting to true for dev
+    ignoreBuildErrors: false, // Consider setting to true for dev
   },
   devIndicators: {
     buildActivity: true,

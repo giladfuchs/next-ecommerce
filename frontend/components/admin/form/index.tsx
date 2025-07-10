@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Grid, Button, Typography } from "@mui/material";
 import FieldRenderer from "./field-renderer";
@@ -21,6 +21,7 @@ export default function DynamicForm({
   useEffect(() => {
     setLocalFields(fields);
   }, [fields]);
+
   const handleChange = (value: any, key: string) => {
     const updatedFields = localFields.map((field) =>
       field.key === key ? { ...field, value } : field,
@@ -29,16 +30,16 @@ export default function DynamicForm({
   };
 
   return (
-    <Grid
-      container
+    <Grid<"form">
+      {...({ container: true } as any)}
       justifyContent="center"
       component="form"
-      onSubmit={(e) => {
+      onSubmit={(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         onSubmit(localFields);
       }}
     >
-      <Grid item xs={12} sm={10} md={6} lg={4}>
+      <Grid {...({ item: true } as any)} xs={12} sm={10} md={6} lg={4}>
         <Typography
           data-testid="form-title"
           variant="h4"
@@ -49,14 +50,18 @@ export default function DynamicForm({
           <FormattedMessage id={title} />
         </Typography>
 
-        <Grid container direction="column" spacing={3}>
+        <Grid {...({ container: true } as any)} direction="column" spacing={3}>
           {localFields.map((field) => (
-            <Grid item key={field.key}>
+            <Grid {...({ item: true } as any)} key={field.key}>
               <FieldRenderer field={field} onChange={handleChange} />
             </Grid>
           ))}
 
-          <Grid item display="flex" justifyContent="center">
+          <Grid
+            {...({ item: true } as any)}
+            display="flex"
+            justifyContent="center"
+          >
             <Button
               type="submit"
               data-testid="form-submit-button"

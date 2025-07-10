@@ -9,7 +9,7 @@ import { Add as AddIcon, Image as ImageIcon } from "@mui/icons-material";
 const ActionButtons = ({ model }: { model: ModelType }) => {
   const router = useRouter();
   return (
-    <Grid item display="flex" gap={2}>
+    <Grid {...({ item: true } as any)} display="flex" gap={2}>
       <Button
         data-testid={`add-${model}-button`}
         variant="contained"
@@ -47,7 +47,7 @@ export const TableHeader = ({
 }: Props) => {
   return (
     <Grid
-      container
+      {...({ container: true } as any)}
       spacing={2}
       alignItems="center"
       justifyContent="space-between"

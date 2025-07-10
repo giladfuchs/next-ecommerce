@@ -11,7 +11,7 @@ export default function ProductDescription({ product }: { product: Product }) {
   return (
     <>
       <Grid
-        container
+        {...({ container: true } as any)}
         direction={isLongTitle ? "column" : "row"}
         spacing={1}
         alignItems={isLongTitle ? "flex-start" : "center"}
@@ -23,7 +23,7 @@ export default function ProductDescription({ product }: { product: Product }) {
           pb: 3,
         }}
       >
-        <Grid item sx={{ flexGrow: 1, minWidth: 0 }}>
+        <Grid {...({ item: true } as any)} sx={{ flexGrow: 1, minWidth: 0 }}>
           <h1
             data-testid="product-title"
             className="product-title line-clamp-2 leading-tight tracking-tight"
@@ -42,7 +42,7 @@ export default function ProductDescription({ product }: { product: Product }) {
           </h1>
         </Grid>
 
-        <Grid item>
+        <Grid {...({ item: true } as any)}>
           <Box
             data-testid="product-price"
             className="price-badge"

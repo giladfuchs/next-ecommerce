@@ -38,10 +38,10 @@ export const OrderInfoList = ({ order }: { order: Order }) => {
   );
   return (
     <Grid container spacing={2} mb={4}>
-      <Grid item xs={12} sm={6}>
+      <Grid {...({ item: true } as any)} xs={12} sm={6}>
         {renderSection(left)}
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid {...({ item: true } as any)} xs={12} sm={6}>
         {renderSection(right)}
       </Grid>
     </Grid>
@@ -79,7 +79,7 @@ export const OrderItemsList = ({ items }: { items: OrderItem[] }) => {
               flexShrink: 0,
             }}
           />
-          <Grid item sx={{ flexGrow: 1, minWidth: 0 }}>
+          <Grid {...({ item: true } as any)} sx={{ flexGrow: 1, minWidth: 0 }}>
             <Typography
               fontWeight="bold"
               textAlign={localeCache.isRtl() ? "right" : "left"}
@@ -122,9 +122,13 @@ export const OrderStatusActions = ({
       <Typography variant="h6" gutterBottom>
         <FormattedMessage id="order.statusUpdate" />
       </Typography>
-      <Grid container justifyContent="center" spacing={2}>
+      <Grid
+        {...({ container: true } as any)}
+        justifyContent="center"
+        spacing={2}
+      >
         {nextOptions.map((nextStatus) => (
-          <Grid item key={nextStatus}>
+          <Grid {...({ item: true } as any)} key={nextStatus}>
             <div
               onClick={async () => {
                 try {

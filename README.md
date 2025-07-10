@@ -1,6 +1,6 @@
 # Next.js E-commerce Template 🛍️
 
-A modern, accessible e-commerce platform built with Next.js 14 (frontend) and Express + PostgreSQL (backend), designed for both customers and store administrators.
+A modern, accessible e-commerce platform built with Next.js 15 (frontend) and Express + PostgreSQL (backend), designed for both customers and store administrators.
 <br/>Includes a dynamic storefront, full admin dashboard, backend API, image upload, order tracking, and internationalization support.
 
 ---
@@ -64,7 +64,7 @@ Choose the guide that fits your workflow:
 - 🛍️ Dynamic storefront with product filtering and category browsing
 - ⚡ **Local cache** for categories and products (via client memory)
 - 🧾 **Admin dashboard** with full model management (products, categories, orders, images)
-- 🧠 SEO & Open Graph via **Next.js 14 Metadata API**
+- 🧠 SEO & Open Graph via **Next.js 15 Metadata API**
 - ♿ **Accessibility bar** with font scaling and contrast settings
 - 🛒 **Index powered by Redux** with **persisted state**
 - 🧪 **Playwright-based E2E tests** for key storefront and admin flows

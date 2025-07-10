@@ -10,7 +10,7 @@ export const baseUrl: string =
 //     ? `http://localhost:${port}`
 //     : process.env.NEXT_PUBLIC_API_URL?.trim() || `${baseUrl}/api`;
 
-export const API_URL: string = process.env.NEXT_PUBLIC_API_URL;
+export const API_URL: string = process.env.NEXT_PUBLIC_API_URL!;
 
 export const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "ECOMMERCE";
 export const USE_MOCK_DATA = process.env.NEXT_PUBLIC_USE_MOCK_DATA === "true";

@@ -36,7 +36,7 @@ export default function ProductButtons({ product }: { product: Product }) {
   };
 
   return (
-    <Grid item>
+    <Grid {...({ item: true } as any)}>
       <Box display="flex" alignItems="center" gap={1}>
         <Button
           onClick={handleAddToCart}
