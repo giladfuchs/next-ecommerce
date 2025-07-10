@@ -2,11 +2,16 @@ import { Box, Grid } from "@mui/material";
 import ProductButtons from "./product-buttons";
 import { Price } from "components/shared/elements-ssr";
 import { Product } from "lib/types";
-import { localeCache } from "lib/api";
 
-export default function ProductDescription({ product }: { product: Product }) {
+export default function ProductDescription({
+  product,
+  isRtl,
+}: {
+  product: Product;
+  isRtl: boolean;
+}) {
   const isLongTitle = product.title.length > 30;
-  const isRtl = localeCache.isRtl();
+
   return (
     <>
       <Grid

@@ -27,7 +27,7 @@ export default function GridTileImage({
         overflow: "hidden",
         borderRadius: "0.5rem",
         border: "2px solid",
-        borderColor: "var(--theme-border, #e0e0e0)",
+        borderColor: active ? "primary.main" : "var(--theme-border, #e0e0e0)",
         backgroundColor: "var(--theme-bg, #f9f9f9)",
         transition: "border-color 0.2s",
         "@media (hover: hover)": {

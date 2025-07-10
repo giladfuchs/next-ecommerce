@@ -36,7 +36,7 @@ import {
   metadata_site_title,
 } from "lib/assets/i18n/localizedMetadata";
 import { localeCache } from "lib/api";
-import {cookies} from "next/headers";
+import { cookies } from "next/headers";
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
@@ -82,9 +82,8 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-
-// Avoid hydration mismatch in dev – only set localeCache in production.
-// Safe in prod since cookies are stable, but noisy in local dev.
+  // Avoid hydration mismatch in dev – only set localeCache in production.
+  // Safe in prod since cookies are stable, but noisy in local dev.
   if (process.env.NODE_ENV === "production") {
     const local = (await cookies()).get("NEXT_LOCALE" as any)?.value;
     if (typeof local === "string" && ["he", "en"].includes(local)) {

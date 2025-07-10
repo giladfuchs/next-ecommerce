@@ -23,9 +23,9 @@ export const Price = ({
   } as Intl.NumberFormatOptions;
 
   return (
-      <Typography component="span" suppressHydrationWarning {...props}>
-        {new Intl.NumberFormat(locale, formatOptions).format(amount)}
-      </Typography>
+    <Typography component="span" suppressHydrationWarning {...props}>
+      {new Intl.NumberFormat(locale, formatOptions).format(amount)}
+    </Typography>
   );
 };
 

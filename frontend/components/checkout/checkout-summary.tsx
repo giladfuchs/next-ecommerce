@@ -8,76 +8,76 @@ import { localeCache } from "lib/api";
 import { CartItem } from "lib/types";
 
 const CheckoutSummaryItem = ({ product }: { product: CartItem }) => (
-    <Grid
-        key={product.productId}
-        sx={{
-            display: "flex",
-            alignItems: "center",
-            bgcolor: "var(--color-bg)",
-            borderRadius: 2,
-            p: 2,
-            gap: 2,
-            boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
-            direction: localeCache.dir(),
-            color: "var(--color-text)",
-            ".high-contrast &": {
-                bgcolor: "#000",
-                color: "#fff",
-                border: "1px solid yellow",
-            },
-        }}
+  <Grid
+    key={product.productId}
+    sx={{
+      display: "flex",
+      alignItems: "center",
+      bgcolor: "var(--color-bg)",
+      borderRadius: 2,
+      p: 2,
+      gap: 2,
+      boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
+      direction: localeCache.dir(),
+      color: "var(--color-text)",
+      ".high-contrast &": {
+        bgcolor: "#000",
+        color: "#fff",
+        border: "1px solid yellow",
+      },
+    }}
+  >
+    <Box
+      component="img"
+      src={product.imageUrl}
+      alt={product.imageAlt}
+      sx={{
+        width: 80,
+        height: 80,
+        borderRadius: 2,
+        objectFit: "cover",
+        flexShrink: 0,
+        ".high-contrast &": {
+          filter: "brightness(1.2) contrast(1.2)",
+        },
+      }}
+    />
+
+    <Box
+      sx={{
+        flex: 1,
+        minWidth: 0,
+        textAlign: localeCache.isRtl() ? "right" : "left",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
     >
-        <Box
-            component="img"
-            src={product.imageUrl}
-            alt={product.imageAlt}
-            sx={{
-                width: 80,
-                height: 80,
-                borderRadius: 2,
-                objectFit: "cover",
-                flexShrink: 0,
-                ".high-contrast &": {
-                    filter: "brightness(1.2) contrast(1.2)",
-                },
-            }}
+      <Typography noWrap>{product.title}</Typography>
+      <Price amount={product.unitAmount} />
+    </Box>
+
+    <Box
+      sx={{
+        width: "5.5rem", // fixed width ~88px
+        textAlign: localeCache.isRtl() ? "right" : "left",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: localeCache.isRtl() ? "flex-start" : "flex-end",
+      }}
+    >
+      <Typography fontWeight="bold" fontSize="1.2rem">
+        <Price amount={product.totalAmount} />
+      </Typography>
+      <Typography variant="body2">
+        <FormattedMessage
+          id="checkout.quantity"
+          values={{ quantity: product.quantity }}
         />
-
-        <Box
-            sx={{
-                flex: 1,
-                minWidth: 0,
-                textAlign: localeCache.isRtl() ? "right" : "left",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-            }}
-        >
-            <Typography noWrap>{product.title}</Typography>
-            <Price amount={product.unitAmount} />
-        </Box>
-
-        <Box
-            sx={{
-                width: "5.5rem", // fixed width ~88px
-                textAlign: localeCache.isRtl() ? "right" : "left",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: localeCache.isRtl() ? "flex-start" : "flex-end",
-            }}
-        >
-            <Typography fontWeight="bold" fontSize="1.2rem">
-                <Price amount={product.totalAmount} />
-            </Typography>
-            <Typography variant="body2">
-                <FormattedMessage
-                    id="checkout.quantity"
-                    values={{ quantity: product.quantity }}
-                />
-            </Typography>
-        </Box>
-    </Grid>
+      </Typography>
+    </Box>
+  </Grid>
 );
 export default function CheckoutSummary() {
   const cart = useSelector((state: RootState) => state.cart);

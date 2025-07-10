@@ -3,9 +3,16 @@ import ProductDescription from "./product-description";
 import ProductGallery from "./product-gallery";
 import { Product } from "lib/types";
 
-const SingleProductLayout = ({ product }: { product: Product }) => (
+const SingleProductLayout = ({
+  product,
+  isRtl,
+}: {
+  product: Product;
+  isRtl: boolean;
+}) => (
   <Box
     data-testid="product-detail"
+    dir={isRtl ? "rtl" : "ltr"}
     sx={{
       px: 2,
       mx: "auto",
@@ -25,14 +32,15 @@ const SingleProductLayout = ({ product }: { product: Product }) => (
       }}
     >
       <Box sx={{ flexBasis: { lg: "33.3333%" }, width: "100%" }}>
-        <ProductDescription product={product} />
+        <ProductDescription product={product} isRtl={isRtl} />
       </Box>
       <Box
         sx={{ flexBasis: { lg: "66.6667%" }, width: "100%", height: "100%" }}
       >
-        <ProductGallery images={product.images} />
+        <ProductGallery images={product.images} isRtl={isRtl} />
       </Box>
     </Box>
   </Box>
 );
+
 export default SingleProductLayout;

@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 export default function Grid({ children }: { children: ReactNode }) {
   return (
     <Box
-        data-testid="product-list"
+      data-testid="product-list"
       component="ul"
       sx={{
         display: "grid",

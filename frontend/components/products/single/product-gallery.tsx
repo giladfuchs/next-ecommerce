@@ -7,9 +7,14 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import GridTileImage from "components/products/grid/tile";
 import { ProductImage } from "lib/types";
-import { localeCache } from "lib/api";
 
-export default function ProductGallery({ images }: { images: ProductImage[] }) {
+export default function ProductGallery({
+  images,
+  isRtl,
+}: {
+  images: ProductImage[];
+  isRtl: boolean;
+}) {
   const [imageIndex, setImageIndex] = useState(0);
   const next = () => setImageIndex((prev) => (prev + 1) % images.length);
   const prev = () =>
@@ -56,13 +61,13 @@ export default function ProductGallery({ images }: { images: ProductImage[] }) {
             <Box
               sx={{
                 display: "flex",
-                flexDirection: localeCache.isRtl() ? "row" : "row-reverse",
+                flexDirection: isRtl ? "row" : "row-reverse",
                 alignItems: "center",
                 gap: "2rem",
               }}
             >
               <Button
-                onClick={localeCache.isRtl() ? prev : next}
+                onClick={isRtl ? prev : next}
                 aria-label="Next product image"
                 sx={{
                   minWidth: 0,
@@ -81,7 +86,7 @@ export default function ProductGallery({ images }: { images: ProductImage[] }) {
               </Button>
 
               <Button
-                onClick={localeCache.isRtl() ? next : prev}
+                onClick={isRtl ? next : prev}
                 aria-label="Previous product image"
                 sx={{
                   minWidth: 0,

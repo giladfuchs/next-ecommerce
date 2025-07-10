@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import Cart from "components/cart";
 import AdminNav from "./admin-nav";
-import {localeCache} from "../../../lib/api";
+import { localeCache } from "../../../lib/api";
 
 const Search = () => {
   const intl = useIntl();
@@ -56,11 +56,10 @@ const Search = () => {
       placeholder={intl.formatMessage({ id: "search.placeholder" })}
       variant="outlined"
       size="small"
-
       slotProps={{
         input: {
           endAdornment: (
-            <InputAdornment position={localeCache.isRtl()?'start':"end"}>
+            <InputAdornment position={localeCache.isRtl() ? "start" : "end"}>
               <SearchIcon fontSize="small" />
             </InputAdornment>
           ),
@@ -140,16 +139,15 @@ export default function HeaderControls() {
       }}
     >
       <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
-
-      <AuthButtons />
+        <AuthButtons />
       </Box>
 
       {shouldShowSearch ? (
-          <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
-            <Search />
-          </Box>
+        <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
+          <Search />
+        </Box>
       ) : (
-          <Box sx={{ flexGrow: 1 }} />
+        <Box sx={{ flexGrow: 1 }} />
       )}
 
       <Box sx={{ display: "flex", alignItems: "center" }}>
