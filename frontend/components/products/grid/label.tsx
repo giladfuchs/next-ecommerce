@@ -23,7 +23,7 @@ export default function Label({
         px: position === "center" ? { lg: "5rem" } : "1.2rem",
         pb: position === "center" ? { lg: "35%" } : "1.2rem",
         display: "flex",
-        justifyContent: isRtl ? "flex-start" : "flex-end",
+        justifyContent: isRtl ? "flex-start" : "flex-start",
       }}
     >
       <Box
@@ -52,7 +52,7 @@ export default function Label({
             overflow: "hidden",
             whiteSpace: "nowrap",
             textOverflow: "ellipsis",
-            textAlign: isRtl ? "left" : "right",
+            textAlign: isRtl ? "right" : "left",
           }}
         >
           {title}
