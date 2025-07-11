@@ -2,8 +2,8 @@ const isDev = process.env.NODE_ENV === "development";
 const isTest = process.env.NODE_ENV === "test";
 const port = process.env.NEXT_PUBLIC_PORT || "4000";
 
-// export const baseUrl: string =
-//   process.env.NEXT_PUBLIC_BASE_URL?.trim() || "https://your-store.vercel.app";
+export const baseUrl: string =
+  process.env.NEXT_PUBLIC_BASE_URL?.trim() || "https://your-store.vercel.app";
 
 export const API_URL: string =
   isDev || isTest
