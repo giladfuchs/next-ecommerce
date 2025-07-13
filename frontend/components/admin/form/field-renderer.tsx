@@ -9,8 +9,16 @@ import {
 } from "@mui/material";
 
 import ImagesEditor from "./images-editor";
-import { FormField, FormType, ProductImage, ModelType } from "@/lib/types";
+import {
+  FormField,
+  FormType,
+  ProductImage,
+  ModelType,
+  Category,
+} from "@/lib/types";
 import { getCategories } from "@/lib/api";
+import { useSelector } from "react-redux";
+import { RootState } from "@/lib/store";
 
 type FormFieldProps = {
   field: FormField;
@@ -20,21 +28,13 @@ type FormFieldProps = {
 export default function FieldRenderer({ field, onChange }: FormFieldProps) {
   const intl = useIntl();
   const placeholder = intl.formatMessage({ id: `form.label.${field.key}` });
-  const [options, setOptions] = useState<string[]>([]);
-
-  useEffect(() => {
-    const loadOptions = async () => {
-      if (
-        field.type === FormType.AutoComplete &&
-        field.key === ModelType.category
-      ) {
-        const categories = (await getCategories()).map((c) => c.title);
-        setOptions(categories);
-      }
-    };
-    void loadOptions();
-  }, [field]);
-
+  let options = [];
+  if (field.key === ModelType.category && FormType.AutoComplete === field.type)
+    options = (
+      useSelector(
+        (state: RootState) => state.admin[ModelType.category],
+      ) as Category[]
+    ).map((c) => c.title);
   switch (field.type) {
     case FormType.ImagesEditor:
       return (

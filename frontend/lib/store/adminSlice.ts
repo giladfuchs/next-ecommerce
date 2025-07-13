@@ -7,6 +7,7 @@ import { AGTableModelType, ModelType } from "lib/types";
 import { deleteModel } from "@/lib/api";
 import { modelFetchers } from "@/lib/config/mappings";
 import { create_key_to_value_map } from "@/lib/helper";
+import { RootState } from "@/lib/store/index";
 
 type AdminState = {
   [key in ModelType]?: AGTableModelType[];
@@ -51,12 +52,8 @@ export const adminSlice = createSlice({
   },
 });
 
-const selectCategoryRows = (state: any) => state.admin.category;
-
-export const selectCategoryIdToName = (id: string | number) =>
-  createSelector(
-    [selectCategoryRows],
-    (categories) => create_key_to_value_map(categories, "id", "name")[id],
-  );
-
+export const selectCategoryTitleToIdMap = createSelector(
+  (state: RootState) => state.admin.category,
+  (categories) => create_key_to_value_map(categories, "title", "id"),
+);
 export default adminSlice.reducer;

@@ -2,8 +2,7 @@ import * as Yup from "yup";
 import { IntlShape } from "react-intl";
 import { FormType, ModelType } from "./enums";
 import { ProductImage } from "./entities";
-import { cache, localeCache } from "../api";
-import { array_obj_to_obj_with_key } from "../helper";
+import { localeCache } from "../api";
 
 // -- Admin Mui Form--
 export class FieldInput {
@@ -144,19 +143,14 @@ export const form_fields_to_data = (
 export const transform_data_to_body = (
   model: ModelType,
   data: Record<string, any>,
+  categoryTitleToIdMap: Record<string, number>,
 ): Record<string, any> => {
   if (model === ModelType.product) {
     if (!data.category) {
       throw "form.error.required.category_id";
     }
 
-    const category = array_obj_to_obj_with_key(
-      cache.getByModel(ModelType.category) ?? [],
-      data.category,
-      "title",
-    );
-
-    data.category_id = category?.id;
+    data.category_id = categoryTitleToIdMap[data.category];
     delete data.category;
   }
 

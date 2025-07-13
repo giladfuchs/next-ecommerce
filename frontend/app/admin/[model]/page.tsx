@@ -33,7 +33,9 @@ export default function AdminPage({
   const { loading } = useLoading();
 
   const [searchValue, setSearchValue] = useState("");
-  const rows :AGTableModelType[]= useSelector((state: RootState) => state.admin[model]) as AGTableModelType[];
+  const rows: AGTableModelType[] = useSelector(
+    (state: RootState) => state.admin[model],
+  ) as AGTableModelType[];
   const cols: ColDef<AGTableModelType>[] = useMemo(
     () => get_columns_ag_by_model(model),
     [model],

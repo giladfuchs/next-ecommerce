@@ -10,7 +10,7 @@ import {
   OrderStatusHeader,
 } from "@/components/admin/order-view";
 import { getOrderById, localeCache } from "@/lib/api";
-import {AGTableModelType, ModelType, Order} from "@/lib/types";
+import { AGTableModelType, ModelType, Order } from "@/lib/types";
 import { array_obj_to_obj_with_key } from "@/lib/helper";
 import { useSelector } from "react-redux";
 import { RootState } from "@/lib/store";
@@ -24,7 +24,9 @@ export default function OrderViewPage({
 
   const [order, setOrder] = useState<Order | undefined | null>(undefined);
 
-  const orders: Order[] = useSelector((state: RootState) => state.admin[ModelType.order]) as Order[];
+  const orders: Order[] = useSelector(
+    (state: RootState) => state.admin[ModelType.order],
+  ) as Order[];
 
   useEffect(() => {
     const init = async () => {
