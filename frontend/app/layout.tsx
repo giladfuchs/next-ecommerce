@@ -16,24 +16,24 @@ import {
   GOOGLE_SITE_VERIFICATION,
   ICON_IMAGE_URL,
   SITE_NAME,
-} from "lib/config/config";
+} from "@/lib/config/config";
 
-import { ReduxProvider } from "lib/provider/ReduxProvider";
-import { ThemeProviderLayout } from "lib/provider/ThemeProviderLayout";
-import IntProvider from "lib/provider/IntProvider";
-import { LoadingProvider } from "lib/provider/LoadingProvider";
+import { ReduxProvider } from "@/lib/provider/ReduxProvider";
+import { ThemeProviderLayout } from "@/lib/provider/ThemeProviderLayout";
+import IntProvider from "@/lib/provider/IntProvider";
+import { LoadingProvider } from "@/lib/provider/LoadingProvider";
 
-import LoadingGlobal from "components/shared/loading-global";
-import { LoadingProductsList } from "components/shared/loading-skeleton";
-import Header from "components/layout/header";
-import Footer from "components/layout/footer";
-import { AccessibilityBar } from "components/shared/wrappers";
+import LoadingGlobal from "@/components/shared/loading-global";
+import { LoadingProductsList } from "@/components/shared/loading-skeleton";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import { AccessibilityBar } from "@/components/shared/wrappers";
 
 import {
   metadata_site_description,
   metadata_site_title,
-} from "lib/assets/i18n/localizedMetadata";
-import { localeCache } from "lib/api";
+} from "@/lib/assets/i18n/localizedMetadata";
+import { localeCache } from "@/lib/api";
 
 export const metadata = {
   metadataBase: new URL(baseUrl),

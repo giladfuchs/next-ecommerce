@@ -8,8 +8,8 @@ import {
   Close as CloseIcon,
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
-import type { CartItem } from "lib/types";
-import { localeCache } from "../../lib/api";
+import type { CartItem } from "@/lib/types";
+import { localeCache } from "@/lib/api";
 
 export const DeleteItemButton = memo(
   ({

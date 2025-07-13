@@ -8,10 +8,10 @@ import {
   OrderItemsList,
   OrderStatusActions,
   OrderStatusHeader,
-} from "components/admin/order-view";
-import { cache, getOrderById, localeCache } from "lib/api";
-import { ModelType, Order } from "lib/types";
-import { array_obj_to_obj_with_key } from "lib/helper";
+} from "@/components/admin/order-view";
+import { cache, getOrderById, localeCache } from "@/lib/api";
+import { ModelType, Order } from "@/lib/types";
+import { array_obj_to_obj_with_key } from "@/lib/helper";
 
 export default function OrderViewPage({
   params,

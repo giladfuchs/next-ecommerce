@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getDecodedHandle, getStaticHandleParams } from "lib/helper";
-import { getProducts, getProductByHandle } from "lib/api/catalog";
-import { generateMetadataProduct, generateJsonLdProduct } from "lib/config";
-import { PropsHandle } from "lib/types";
-import SingleProductLayout from "components/products/single";
+import { getDecodedHandle, getStaticHandleParams } from "@/lib/helper";
+import { getProducts, getProductByHandle } from "@/lib/api/catalog";
+import { generateMetadataProduct, generateJsonLdProduct } from "@/lib/config";
+import { PropsHandle } from "@/lib/types";
+import SingleProductLayout from "@/components/products/single";
 
 export const revalidate = 60;
 export const dynamic = "force-static";

@@ -13,8 +13,8 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import { ModelType } from "lib/types";
-import { localeCache } from "lib/api";
+import { ModelType } from "@/lib/types";
+import { localeCache } from "@/lib/api";
 
 const AdminNavItem = ({
   model,

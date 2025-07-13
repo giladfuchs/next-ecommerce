@@ -2,7 +2,7 @@
 import { Grid } from "@mui/material";
 import CheckoutForm from "./checkout-form";
 import CheckoutSummary from "./checkout-summary";
-import { OrderErrorMessage } from "components/shared/messages";
+import { OrderErrorMessage } from "@/components/shared/messages";
 export default function CheckoutLayout({
   onSuccess,
   onError,

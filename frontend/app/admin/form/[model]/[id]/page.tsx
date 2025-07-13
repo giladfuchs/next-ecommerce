@@ -4,8 +4,8 @@ import { useCallback, useEffect, useState, use } from "react";
 import { useIntl } from "react-intl";
 import { toast } from "sonner";
 import { Container } from "@mui/material";
-import DynamicForm from "components/admin/form";
-import { FormFieldError } from "components/shared/messages";
+import DynamicForm from "@/components/admin/form";
+import { FormFieldError } from "@/components/shared/messages";
 import {
   AGTableModelType,
   create_form_fields,
@@ -14,10 +14,10 @@ import {
   get_form_by_model,
   ModelType,
   transform_data_to_body,
-} from "lib/types";
-import { submitModel } from "lib/api";
-import { modelFetchers } from "lib/config/mappings";
-import { array_obj_to_obj_with_key, extract_missing_field } from "lib/helper";
+} from "@/lib/types";
+import { submitModel } from "@/lib/api";
+import { modelFetchers } from "@/lib/config/mappings";
+import { array_obj_to_obj_with_key, extract_missing_field } from "@/lib/helper";
 
 export default function FormPage({
   params,

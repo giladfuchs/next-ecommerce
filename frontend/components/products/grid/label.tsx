@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { Price } from "components/shared/elements-ssr";
-import { localeCache } from "lib/api";
+import { Price } from "@/components/shared/elements-ssr";
+import { localeCache } from "@/lib/api";
 
 export default function Label({
   title,

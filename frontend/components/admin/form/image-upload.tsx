@@ -5,8 +5,8 @@ import {
   ContentCopy as ContentCopyIcon,
   OpenInNew as OpenInNewIcon,
 } from "@mui/icons-material";
-import { image_upload_style } from "lib/assets/styles/style";
-import { MAX_FILE_SIZE_MB } from "lib/config/config";
+import { image_upload_style } from "@/lib/assets/styles/style";
+import { MAX_FILE_SIZE_MB } from "@/lib/config/config";
 import { Box, Button, Typography } from "@mui/material";
 
 export const UploadControls = ({

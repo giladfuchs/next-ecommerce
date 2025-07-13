@@ -4,10 +4,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: false, // Consider setting to true for dev
-
   },
-
-
 
   images: {
     unoptimized: true,
@@ -27,7 +24,6 @@ const nextConfig: NextConfig = {
       "@/lib": path.resolve(__dirname, "lib"),
       "@/components": path.resolve(__dirname, "components"),
     };
-
 
     return config;
   },

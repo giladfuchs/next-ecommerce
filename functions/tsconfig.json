@@ -17,8 +17,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "lib/*": ["lib/*"],
-      "components/*": ["components/*"]
+      "@/*": ["./*"]
     },
     "noUncheckedIndexedAccess": true,
     "sourceMap": true,

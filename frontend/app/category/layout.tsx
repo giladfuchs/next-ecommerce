@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
-import SidebarLayout from "components/layout/sidebar";
-import { getCategories } from "lib/api";
-import { PropsHandle } from "lib/types";
-import { getDecodedHandle } from "lib/helper";
+import SidebarLayout from "@/components/layout/sidebar";
+import { getCategories } from "@/lib/api";
+import { PropsHandle } from "@/lib/types";
+import { getDecodedHandle } from "@/lib/helper";
 
 export default async function CategoryLayout({
   children,

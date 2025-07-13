@@ -5,8 +5,8 @@ import Image from "next/image";
 import { Box, Button } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import GridTileImage from "components/products/grid/tile";
-import { ProductImage } from "lib/types";
+import GridTileImage from "@/components/products/grid/tile";
+import { ProductImage } from "@/lib/types";
 
 export type PropsProductGallery = {
   images: ProductImage[];

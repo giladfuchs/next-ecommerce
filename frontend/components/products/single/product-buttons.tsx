@@ -7,10 +7,10 @@ import {
   Share as ShareIcon,
   Facebook as FacebookIcon,
 } from "@mui/icons-material";
-import { addItem } from "lib/store/cartSlice";
-import { baseUrl } from "lib/config/config";
-import { Product, ModelType } from "lib/types";
-import { localeCache } from "lib/api";
+import { addItem } from "@/lib/store/cartSlice";
+import { baseUrl } from "@/lib/config/config";
+import { Product, ModelType } from "@/lib/types";
+import { localeCache } from "@/lib/api";
 
 export default function ProductButtons({ product }: { product: Product }) {
   const intl = useIntl();

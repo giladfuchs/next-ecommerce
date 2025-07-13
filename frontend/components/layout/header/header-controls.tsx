@@ -15,9 +15,9 @@ import {
   Tooltip,
   IconButton,
 } from "@mui/material";
-import Cart from "components/cart";
+import Cart from "@/components/cart";
 import AdminNav from "./admin-nav";
-import { localeCache } from "../../../lib/api";
+import { localeCache } from "@/lib/api";
 
 const Search = () => {
   const intl = useIntl();

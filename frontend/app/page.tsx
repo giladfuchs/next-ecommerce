@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
-import SidebarLayout from "components/layout/sidebar";
-import { ProductsSSR } from "../components/shared/elements-ssr";
+import SidebarLayout from "@/components/layout/sidebar";
+import { ProductsSSR } from "@/components/shared/elements-ssr";
 import {
   metadata_site_title,
   metadata_site_description,
   metadata_keywords,
-} from "lib/assets/i18n/localizedMetadata";
-import { baseUrl, ICON_IMAGE_URL } from "lib/config/config";
-import { getCategories, getProducts } from "lib/api";
+} from "@/lib/assets/i18n/localizedMetadata";
+import { baseUrl, ICON_IMAGE_URL } from "@/lib/config/config";
+import { getCategories, getProducts } from "@/lib/api";
 
 export const metadata: Metadata = {
   title: metadata_site_title,

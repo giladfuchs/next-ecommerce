@@ -1,5 +1,5 @@
-import { Category, Product } from "lib/types";
-import { baseUrl } from "lib/config";
+import { Category, Product } from "@/lib/types";
+import { baseUrl } from "@/lib/config";
 
 export const generateJsonLdProduct = (product: Product) => ({
   "@context": "https://schema.org",

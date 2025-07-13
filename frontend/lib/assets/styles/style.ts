@@ -1,4 +1,4 @@
-import { localeCache } from "lib/api";
+import { localeCache } from "@/lib/api";
 
 export const image_upload_style = {
   fileName: {

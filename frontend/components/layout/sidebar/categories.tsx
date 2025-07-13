@@ -1,8 +1,8 @@
 import NextLink from "next/link";
 import { ListItemButton, ListItemText, Typography, Box } from "@mui/material";
-import { Category, ModelType } from "lib/types";
-import { localeCache } from "lib/api";
-import { CategoryAutocomplete } from "components/shared/wrappers";
+import { Category, ModelType } from "@/lib/types";
+import { localeCache } from "@/lib/api";
+import { CategoryAutocomplete } from "@/components/shared/wrappers";
 
 export const CategoryItemList = ({
   categories,

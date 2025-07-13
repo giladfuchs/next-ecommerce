@@ -13,8 +13,8 @@ import {
   Switch,
   FormControlLabel,
 } from "@mui/material";
-import { loginUser, registerUser, resetMockDb } from "lib/api";
-import { SEVEN_DAYS } from "lib/config/config";
+import { loginUser, registerUser, resetMockDb } from "@/lib/api";
+import { SEVEN_DAYS } from "@/lib/config/config";
 
 export default function LoginPage() {
   const router = useRouter();

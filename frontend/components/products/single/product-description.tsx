@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import ProductButtons from "./product-buttons";
-import { Price } from "components/shared/elements-ssr";
-import { Product } from "lib/types";
+import { Price } from "@/components/shared/elements-ssr";
+import { Product } from "@/lib/types";
 
 export default function ProductDescription({
   product,

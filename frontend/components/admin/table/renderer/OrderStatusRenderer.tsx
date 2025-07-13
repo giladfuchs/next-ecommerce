@@ -1,7 +1,7 @@
 "use client";
 import { ICellRendererParams } from "ag-grid-community";
-import { OrderStatus } from "lib/types";
-import { OrderStatusDisplay } from "components/shared/elements-client";
+import { OrderStatus } from "@/lib/types";
+import { OrderStatusDisplay } from "@/components/shared/elements-client";
 
 export default function OrderStatusRenderer({
   value,

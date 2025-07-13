@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { Box } from "@mui/material";
-import { HeaderControls } from "components/shared/wrappers";
-import Logo from "components/layout/header/logo";
+import { HeaderControls } from "@/components/shared/wrappers";
+import Logo from "@/components/layout/header/logo";
 
 export default function Header() {
   return (

@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getDecodedHandle, getStaticHandleParams } from "lib/helper";
-import { getCategories, getCategory, getCategoryProducts } from "lib/api";
-import { generateMetadataCategory, generateJsonLdCategory } from "lib/config";
-import { PropsHandle } from "lib/types";
-import { ProductsSSR } from "../../../components/shared/elements-ssr";
+import { getDecodedHandle, getStaticHandleParams } from "@/lib/helper";
+import { getCategories, getCategory, getCategoryProducts } from "@/lib/api";
+import { generateMetadataCategory, generateJsonLdCategory } from "@/lib/config";
+import { PropsHandle } from "@/lib/types";
+import { ProductsSSR } from "@/components/shared/elements-ssr";
 
 export const revalidate = 60;
 export const dynamic = "force-static";

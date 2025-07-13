@@ -2,10 +2,10 @@
 import { FormattedMessage } from "react-intl";
 import { useSelector } from "react-redux";
 import { Box, Divider, Grid, Typography } from "@mui/material";
-import { Price } from "components/shared/elements-ssr";
-import { RootState } from "lib/store";
-import { localeCache } from "lib/api";
-import { CartItem } from "lib/types";
+import { Price } from "@/components/shared/elements-ssr";
+import { RootState } from "@/lib/store";
+import { localeCache } from "@/lib/api";
+import { CartItem } from "@/lib/types";
 
 const CheckoutSummaryItem = ({ product }: { product: CartItem }) => (
   <Grid

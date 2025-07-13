@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import ProductDescription from "./product-description";
-import { Product } from "lib/types";
-import { ProductGallery } from "components/shared/wrappers";
+import { Product } from "@/lib/types";
+import { ProductGallery } from "@/components/shared/wrappers";
 
 const SingleProductLayout = ({
   product,

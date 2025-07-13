@@ -6,11 +6,11 @@ import { IconButton } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { ModelType } from "lib/types";
-import { deleteModel } from "lib/api";
+import { ModelType } from "@/lib/types";
+import { deleteModel } from "@/lib/api";
 import { toast } from "sonner";
 import { useIntl } from "react-intl";
-import { DeleteConfirmDialog } from "components/shared/elements-client";
+import { DeleteConfirmDialog } from "@/components/shared/elements-client";
 
 export default function ActionRenderer({ data }: ICellRendererParams) {
   const [open, setOpen] = useState(false);

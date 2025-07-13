@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ComponentProps } from "react";
 import { Typography } from "@mui/material";
-import { localeCache } from "lib/api";
-import { Product } from "lib/types";
+import { localeCache } from "@/lib/api";
+import { Product } from "@/lib/types";
 import { ProductItem } from "../products/grid";
 import GridTileImage from "../products/grid/tile";
 import { Products } from "./wrappers";

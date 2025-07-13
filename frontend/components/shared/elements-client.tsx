@@ -11,11 +11,10 @@ import {
   Autocomplete,
   TextField,
 } from "@mui/material";
-import { Category, ModelType, OrderStatus } from "lib/types";
+import { Category, ModelType, OrderStatus } from "@/lib/types";
 import { usePathname, useRouter } from "next/navigation";
-import { safeDecodeURIComponent } from "../../lib/helper";
-import { localeCache } from "../../lib/api";
-import OrderStatusRenderer from "../admin/table/renderer/OrderStatusRenderer";
+import { safeDecodeURIComponent } from "@/lib/helper";
+import { localeCache } from "@/lib/api";
 
 type Props = {
   status: OrderStatus;

@@ -3,8 +3,8 @@ import { useEffect, useState, useRef, ReactNode } from "react";
 import { FormattedMessage } from "react-intl";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import { Box, IconButton, Typography, Stack } from "@mui/material";
-import { localeCache } from "lib/api";
-import { createAccessibilityButtons } from "lib/config/ui";
+import { localeCache } from "@/lib/api";
+import { createAccessibilityButtons } from "@/lib/config/ui";
 
 const ActionItem = ({
   icon,

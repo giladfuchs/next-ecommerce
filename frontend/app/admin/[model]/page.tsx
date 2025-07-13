@@ -9,18 +9,18 @@ import {
 } from "react";
 import { ColDef } from "ag-grid-community";
 import { Container, Grid } from "@mui/material";
-import AGTable from "components/admin/table";
-import { useLoading } from "lib/provider/LoadingProvider";
-import { LoadingTable } from "components/shared/loading-skeleton";
+import AGTable from "@/components/admin/table";
+import { useLoading } from "@/lib/provider/LoadingProvider";
+import { LoadingTable } from "@/components/shared/loading-skeleton";
 import {
   AGTableModelType,
   get_columns_ag_by_model,
   ModelType,
-} from "lib/types";
-import { cache } from "lib/api";
-import { filterBySearch } from "lib/helper";
-import { modelFetchers } from "lib/config/mappings";
-import { TableHeader } from "components/admin/table/table-header";
+} from "@/lib/types";
+import { cache } from "@/lib/api";
+import { filterBySearch } from "@/lib/helper";
+import { modelFetchers } from "@/lib/config/mappings";
+import { TableHeader } from "@/components/admin/table/table-header";
 
 export default function AdminPage({
   params,

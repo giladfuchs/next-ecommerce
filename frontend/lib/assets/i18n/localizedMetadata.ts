@@ -1,5 +1,5 @@
-import { SITE_NAME } from "../../config/config";
-import { localeCache } from "../../api";
+import { SITE_NAME } from "@/lib/config";
+import { localeCache } from "@/lib/api";
 
 export const metadata_site_title = `${SITE_NAME} - NextJs`;
 

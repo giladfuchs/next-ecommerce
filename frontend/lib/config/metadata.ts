@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import {
   getCategoryTitle,
   getCategoryDescription,
-} from "lib/assets/i18n/localizedMetadata";
-import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "lib/config";
-import { Category, Product } from "lib/types";
+} from "@/lib/assets/i18n/localizedMetadata";
+import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "@/lib/config";
+import { Category, Product } from "@/lib/types";
 
 export const generateMetadataProduct = (product: Product) => {
   return {

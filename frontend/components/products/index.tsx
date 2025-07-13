@@ -4,13 +4,12 @@ import { useEffect, useRef, useState, useMemo } from "react";
 import {
   NoProductsMessage,
   SearchResultsMessage,
-} from "components/shared/messages";
-import Grid from "components/products/grid";
-import { Product } from "lib/types";
-import { PRODUCTS_PER_PAGE } from "lib/config/config";
-import { filterBySearch } from "lib/helper";
-import { ProductsDisplay } from "../shared/elements-ssr";
-// import {Grid} from "@mui/material";
+} from "@/components/shared/messages";
+import Grid from "@/components/products/grid";
+import { ProductsDisplay } from "@/components/shared/elements-ssr";
+import { Product } from "@/lib/types";
+import { PRODUCTS_PER_PAGE } from "@/lib/config";
+import { filterBySearch } from "@/lib/helper";
 
 const ProductsInfinite = ({ products }: { products: Product[] }) => {
   const [page, setPage] = useState(1);

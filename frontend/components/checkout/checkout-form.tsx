@@ -17,8 +17,11 @@ import {
   OutlinedInput,
   Typography,
 } from "@mui/material";
-import { formikHelperTextSx, formikTextFieldSx } from "lib/assets/styles/style";
-import { RootState } from "lib/store";
+import {
+  formikHelperTextSx,
+  formikTextFieldSx,
+} from "@/lib/assets/styles/style";
+import { RootState } from "@/lib/store";
 import {
   Cart,
   CheckoutFormValues,
@@ -26,10 +29,10 @@ import {
   Order,
   checkout_fields,
   getCheckoutValidationSchema,
-} from "lib/types";
-import { submitOrder } from "lib/api";
-import { clearCart } from "lib/store/cartSlice";
-import { localeCache } from "lib/api";
+} from "@/lib/types";
+import { submitOrder } from "@/lib/api";
+import { clearCart } from "@/lib/store/cartSlice";
+import { localeCache } from "@/lib/api";
 
 const CheckoutActions = ({ isSubmitting }: { isSubmitting: boolean }) => {
   return (

@@ -24,10 +24,10 @@ import {
 } from "@mui/icons-material";
 
 import { Typography } from "@mui/material";
-import { FOOTER_DATA, WHATSAPP_MESSAGE } from "lib/config/config";
+import { FOOTER_DATA, WHATSAPP_MESSAGE } from "@/lib/config/config";
 import { blue, green, red, purple, lime, orange } from "@mui/material/colors";
-import { Order } from "lib/types";
-import { Price } from "components/shared/elements-ssr";
+import { Order } from "@/lib/types";
+import { Price } from "@/components/shared/elements-ssr";
 export const [email, address, phone, instagram, facebook, website] =
   FOOTER_DATA.split(",");
 
