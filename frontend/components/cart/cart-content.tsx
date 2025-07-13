@@ -1,7 +1,7 @@
 "use client";
+import NextLink from "next/link";
 import { FormattedMessage } from "react-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { IconButton, Typography, Box, useMediaQuery } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -58,7 +58,16 @@ export const CartItemList = ({
   ) => void;
   closeCart: () => void;
 }) => (
-  <Box component="ul" py={2} data-testid="cart-list">
+  <Box
+    component="ul"
+    py={2}
+    px={0}
+    data-testid="cart-list"
+    sx={{
+      listStyle: "none",
+      m: 0,
+    }}
+  >
     {cart.lines
       .filter((item) => item?.title)
       .sort((a, b) => a.title.localeCompare(b.title))
@@ -72,7 +81,9 @@ export const CartItemList = ({
             width: "100%",
             borderBottom: "1px solid",
             borderColor: "divider",
-            pb: 2,
+            "&:last-of-type": {
+              borderBottom: "none",
+            },
           }}
         >
           <Box
@@ -137,20 +148,25 @@ export const CartItemList = ({
                   alignItems: "center",
                 }}
               >
-                <Link href={`/product/${item.handle}`} onClick={closeCart}>
-                  <Box
-                    component="h2"
-                    sx={{
-                      m: 0,
-                      fontWeight: "bold",
-                      color: "text.primary",
-                      lineHeight: 1.2,
-                      textAlign: localeCache.isRtl() ? "right" : "left",
-                    }}
-                  >
-                    {item.title}
-                  </Box>
-                </Link>
+                <Typography
+                  component={NextLink}
+                  href={`/product/${item.handle}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="subtitle1"
+                  fontWeight="bold"
+                  color="text.primary"
+                  lineHeight={1.2}
+                  textAlign={localeCache.isRtl() ? "right" : "left"}
+                  sx={{
+                    textDecoration: "none",
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                  }}
+                >
+                  {item.title}
+                </Typography>
                 <Box
                   sx={{
                     minWidth: 80,

@@ -15,6 +15,7 @@ import { Category, ModelType, OrderStatus } from "lib/types";
 import { usePathname, useRouter } from "next/navigation";
 import { safeDecodeURIComponent } from "../../lib/helper";
 import { localeCache } from "../../lib/api";
+import OrderStatusRenderer from "../admin/table/renderer/OrderStatusRenderer";
 
 type Props = {
   status: OrderStatus;
@@ -23,7 +24,7 @@ type Props = {
   style?: CSSProperties; // allow parent to inject custom hover
 };
 
-export const OrderDisplay = ({
+export const OrderStatusDisplay = ({
   status,
   size = "small",
   clickable = false,
@@ -43,11 +44,13 @@ export const OrderDisplay = ({
   };
 
   return (
-    <Chip
-      label={intl.formatMessage({ id: `order.status.${status}` })}
-      style={baseStyle}
-      size={size === "large" ? "medium" : "small"}
-    />
+    <div className="order-status-vars">
+      <Chip
+        label={intl.formatMessage({ id: `order.status.${status}` })}
+        style={baseStyle}
+        size={size === "large" ? "medium" : "small"}
+      />
+    </div>
   );
 };
 
@@ -141,18 +144,18 @@ export const CategoryAutocomplete = ({
           label={intl.formatMessage({
             id: `${ModelType.category}.selectCategory`,
           })}
-          InputProps={{
-            ...params.InputProps,
-            style: {
-              direction: localeCache.dir(),
-              fontSize: "1.1em",
+          slotProps={{
+            input: {
+              style: {
+                direction: localeCache.dir(),
+                fontSize: "1.1em",
+              },
             },
-          }}
-          InputLabelProps={{
-            ...params.InputLabelProps,
-            style: {
-              direction: localeCache.dir(),
-              textAlign: localeCache.isRtl() ? "right" : "left",
+            inputLabel: {
+              style: {
+                direction: localeCache.dir(),
+                textAlign: localeCache.isRtl() ? "right" : "left",
+              },
             },
           }}
         />

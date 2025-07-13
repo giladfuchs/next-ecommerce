@@ -14,10 +14,11 @@ const SingleProductLayout = ({
     data-testid="product-detail"
     dir={isRtl ? "rtl" : "ltr"}
     sx={{
-      px: 2,
       mx: "auto",
       width: "100%",
-      maxWidth: "var(--breakpoint-2xl)",
+      maxWidth: "90rem", // ✅ optional limit
+      display: "flex",
+      justifyContent: "center", // ✅ centers the inner box
     }}
   >
     <Box
@@ -29,13 +30,14 @@ const SingleProductLayout = ({
         border: "1px solid var(--theme-border)",
         backgroundColor: "var(--theme-bg)",
         p: { xs: "2rem", md: "3rem" },
+        width: "100%",
       }}
     >
-      <Box sx={{ flexBasis: { lg: "33.3333%" }, width: "100%" }}>
+      <Box sx={{ flexBasis: { lg: "49.3333%" }, width: "100%" }}>
         <ProductDescription product={product} isRtl={isRtl} />
       </Box>
       <Box
-        sx={{ flexBasis: { lg: "66.6667%" }, width: "100%", height: "100%" }}
+        sx={{ flexBasis: { lg: "50.6667%" }, width: "100%", height: "100%" }}
       >
         <ProductGallery images={product.images} isRtl={isRtl} />
       </Box>

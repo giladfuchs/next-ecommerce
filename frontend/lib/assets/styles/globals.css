@@ -1,19 +1,17 @@
 @import "ag-grid-community/styles/ag-grid.css";
 @import "ag-grid-community/styles/ag-theme-alpine.css";
-@import "tailwindcss";
-
-@plugin "@tailwindcss/container-queries";
-@plugin "@tailwindcss/typography";
 
 :root {
   --font-scale-factor: 1;
-  --color-accent: #a3bf24;
-  --color-bg: #f4f9f8;
-  --color-text-strong: #000;
-  --color-chip: #f4f4f4;
-  --color-border: #ddd;
-}
 
+  --color-bg: #f4f9f8;
+  --color-text: #0f1f1e;
+  --color-text-strong: #000000;
+  --color-chip: #bce3db;
+  --color-label-bg: #54d99b;
+  --color-accent: #24bfa7;
+  --color-border: #b0d6d1;
+}
 html {
   font-family: "Assistant", sans-serif;
   font-size: calc(16px * var(--font-scale-factor));
@@ -25,6 +23,12 @@ body {
   font-size: calc(1em * var(--font-scale-factor));
   overflow-x: hidden;
   background-color: var(--color-bg);
+}
+.order-status-vars {
+  --color-status-new: #009688;
+  --color-status-ready: #6cc067;
+  --color-status-done: #607d8b;
+  --color-status-canceled: #d9534f;
 }
 
 /* LTR/RTL universal layout fixes */
@@ -99,14 +103,16 @@ html.readable-font a {
 }
 
 /* Underline mode */
-html.underline-links .MuiButton-root,
-html.underline-links .MuiButton-root *,
 html.underline-links a,
-html.underline-links h3.product-title,
-html.underline-links .autocomplete-option {
+html.underline-links a *,
+html.underline-links button,
+html.underline-links .MuiButtonBase-root,
+html.underline-links .MuiTypography-root,
+html.underline-links .MuiListItemButton-root,
+html.underline-links .MuiListItemText-root,
+html.underline-links .MuiLink-root {
   text-decoration: underline !important;
 }
-
 /* High contrast mode */
 html.high-contrast {
   --category-hover-bg: #333 !important;

@@ -54,14 +54,7 @@ export default function Cart() {
   const hasItems = cart?.lines.length > 0;
   return (
     <>
-      <button
-        data-testid="open-cart-button"
-        aria-label="Open cart"
-        onClick={openCart}
-      >
-        <OpenCart quantity={cart?.totalQuantity} />
-      </button>
-
+      <OpenCart onClick={openCart} quantity={cart?.totalQuantity} />
       <Dialog
         data-testid="cart"
         open={isOpen}
@@ -74,18 +67,21 @@ export default function Cart() {
             position: "fixed",
             top: 0,
             bottom: 0,
-            [localeCache.isRtl() ? "left" : "right"]: 0,
-            height: "100vh",
+            height: { xs: "90%", sm: "100vh" },
             width: { xs: "100%", sm: 390 },
             m: 0,
             borderRadius: 0,
-            [localeCache.isRtl() ? "borderRight" : "borderLeft"]:
-              "1px solid var(--color-border)",
             bgcolor: "var(--color-bg)",
             color: "var(--color-text)",
             display: "flex",
             flexDirection: "column",
             overflow: "hidden",
+            inset: {
+              xs: 0,
+              sm: localeCache.isRtl() ? "0 auto 0 0" : "0 0 0 auto",
+            },
+            border: "1px solid var(--color-border)",
+            borderTop: "none",
           },
         }}
       >

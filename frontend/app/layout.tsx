@@ -1,16 +1,14 @@
 import type { Viewport } from "next";
-// import { cookies } from "next/headers";
+import { cookies } from "next/headers";
 import Script from "next/script";
 import { ReactNode, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import { GeistSans } from "geist/font/sans";
 import { Box } from "@mui/material";
 import { Toaster } from "sonner";
 
 import "lib/assets/styles/globals.css";
-import "lib/assets/styles/theme.scss";
 
 import {
   baseUrl,
@@ -36,7 +34,6 @@ import {
   metadata_site_title,
 } from "lib/assets/i18n/localizedMetadata";
 import { localeCache } from "lib/api";
-import { cookies } from "next/headers";
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
@@ -91,11 +88,7 @@ export default async function RootLayout({
     }
   }
   return (
-    <html
-      lang={localeCache.get()}
-      dir={localeCache.dir()}
-      className={GeistSans.variable}
-    >
+    <html lang={localeCache.get()} dir={localeCache.dir()}>
       <body suppressHydrationWarning>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
@@ -127,6 +120,9 @@ export default async function RootLayout({
                     minHeight: "100vh",
                     bgcolor: "var(--color-bg)",
                     color: "var(--color-text)",
+                    mx: 0,
+                    px: 0,
+                    overflowX: "hidden",
                     "::selection": {
                       backgroundColor: "teal",
                       color: "white",

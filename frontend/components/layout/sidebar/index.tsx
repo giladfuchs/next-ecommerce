@@ -18,25 +18,25 @@ export default function SidebarLayout({
         maxWidth: "var(--breakpoint-2xl)",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
-        gap: 8,
-        px: 4,
-        pb: 4,
-        mx: "auto",
-        color: "text.primary",
+        alignItems: "flex-start",
       }}
     >
       <Box
         sx={{
-          order: { xs: 0, md: 0 },
-          flex: "none",
-          width: "100%",
-          maxWidth: { md: 125 },
+          flexShrink: 0,
+          width: { xs: "100%", md: "6rem" }, // ✅ FIXED: sidebar stays narrow
         }}
         data-testid="category-nav"
       >
         <Categories currentPath={currentPath} categories={categories} />
       </Box>
-      <Box sx={{ order: { xs: 1, md: 0 }, width: "100%", minHeight: "100vh" }}>
+
+      <Box
+        sx={{
+          flexGrow: 1,
+          width: "100%",
+        }}
+      >
         {children}
       </Box>
     </Box>
