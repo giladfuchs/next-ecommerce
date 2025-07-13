@@ -1,8 +1,8 @@
 import { Category, Product } from "../types";
-import { fetchData } from "./api";
+import { getData } from "./api";
 
-export async function getProducts(force = false): Promise<Product[]> {
-  const { products } = await fetchData(force);
+export async function getProducts(): Promise<Product[]> {
+  const { products } = await getData();
   return products;
 }
 export async function getProductByHandle(
@@ -12,8 +12,8 @@ export async function getProductByHandle(
   return products.find((p) => p.handle === handle);
 }
 
-export async function getCategories(force = false): Promise<Category[]> {
-  const { categories } = await fetchData(force);
+export async function getCategories(): Promise<Category[]> {
+  const { categories } = await getData();
   return categories;
 }
 

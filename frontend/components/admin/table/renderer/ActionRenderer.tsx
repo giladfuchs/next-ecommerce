@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { deleteRowById } from "@/lib/store";
 import Link from "next/link";
 import { ICellRendererParams } from "ag-grid-community";
 import { IconButton } from "@mui/material";
@@ -7,10 +8,11 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { ModelType } from "@/lib/types";
-import { deleteModel } from "@/lib/api";
+
 import { toast } from "sonner";
 import { useIntl } from "react-intl";
 import { DeleteConfirmDialog } from "@/components/shared/elements-client";
+import { useDispatch } from "react-redux";
 
 export default function ActionRenderer({ data }: ICellRendererParams) {
   const [open, setOpen] = useState(false);
@@ -36,14 +38,15 @@ export default function ActionRenderer({ data }: ICellRendererParams) {
     delete: isProduct || isCategory,
   };
 
+  const dispatch: any = useDispatch();
+
   const handleConfirmDelete = async () => {
     setOpen(false);
     if (!model || !id || isOrder) return;
 
     try {
-      await deleteModel(model, id);
+      await dispatch(deleteRowById({ model, id }));
       toast.success(intl.formatMessage({ id: "delete.success" }, { title }));
-      window.location.reload();
     } catch (err) {
       toast.error(intl.formatMessage({ id: "delete.error" }, { title }));
     }

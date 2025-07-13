@@ -1,7 +1,9 @@
+export * from "./cartSlice";
+export * from "./adminSlice";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistReducer } from "redux-persist";
 import cartReducer, { resetCartTransform } from "./cartSlice";
-
+import adminReducer from "./adminSlice";
 const isBrowser = typeof window !== "undefined";
 
 const createNoopStorage = () => ({
@@ -16,12 +18,13 @@ const safeStorage = isBrowser
 
 const rootReducer = combineReducers({
   cart: cartReducer,
+  admin: adminReducer,
 });
 
 const persistConfig = {
   key: "root",
   storage: safeStorage,
-  whitelist: ["cart"],
+  whitelist: ["cart", "admin"],
   transforms: [resetCartTransform],
 };
 
@@ -38,5 +41,5 @@ export function makeStore() {
       }),
   });
 }
-
+export const store = makeStore();
 export type RootState = ReturnType<ReturnType<typeof makeStore>["getState"]>;

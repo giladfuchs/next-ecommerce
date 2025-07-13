@@ -1,9 +1,11 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState, use } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useIntl } from "react-intl";
 import { toast } from "sonner";
 import { Container } from "@mui/material";
+import { fetchRowsByModel, RootState } from "@/lib/store";
 import DynamicForm from "@/components/admin/form";
 import { FormFieldError } from "@/components/shared/messages";
 import {
@@ -16,7 +18,6 @@ import {
   transform_data_to_body,
 } from "@/lib/types";
 import { submitModel } from "@/lib/api";
-import { modelFetchers } from "@/lib/config/mappings";
 import { array_obj_to_obj_with_key, extract_missing_field } from "@/lib/helper";
 
 export default function FormPage({
@@ -27,24 +28,25 @@ export default function FormPage({
   const { model, id } = use(params);
   const router = useRouter();
   const intl = useIntl();
+  const dispatch: any = useDispatch();
 
   const [fields, setFields] = useState<FormField[]>([]);
   const [fieldError, setFieldError] = useState<string | null>(null);
-
+  const data = useSelector((state: RootState) => state.admin[model]);
   const isAdd = id === "add";
 
-  const loadData = useCallback(async (): Promise<void> => {
-    const data: AGTableModelType[] = await modelFetchers[model]?.(false);
+  const loadData = useCallback(() => {
     const obj = isAdd
       ? {}
       : (array_obj_to_obj_with_key(data, Number(id), "id") ?? {});
 
     const fields_to_set = create_form_fields(get_form_by_model(model), obj);
     setFields(fields_to_set);
-  }, []);
+  }, [data, model, id, isAdd]);
 
   useEffect(() => {
     void loadData();
+    dispatch(fetchRowsByModel({ model }));
   }, []);
   const handleSubmit = async (send_fields: FormField[]) => {
     setFieldError(null);

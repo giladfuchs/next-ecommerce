@@ -43,3 +43,21 @@ export const array_obj_to_obj_with_key = (
   value: any,
   key: string,
 ) => iterable.find((o: any) => o[key]?.toString() === value.toString());
+
+export const create_key_to_value_map = (
+  items: any[],
+  key_field: string,
+  value_field: string,
+): Record<string | number, any> => {
+  return items.reduce(
+    (acc, curr) => {
+      const key = curr[key_field];
+      const value = curr[value_field];
+      if (typeof key === "string" || typeof key === "number") {
+        acc[key] = value;
+      }
+      return acc;
+    },
+    {} as Record<string | number, any>,
+  );
+};

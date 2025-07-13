@@ -4,9 +4,9 @@ import {
   ModelType,
   AGTableModelType,
   NewOrderPayload,
+  ResponseData,
 } from "../types";
 import { API_URL, isTest, USE_MOCK_DATA } from "../config";
-import { cache } from "./cache";
 
 type Callback = (loading: boolean) => void;
 
@@ -88,29 +88,18 @@ export async function handleResponse<T = any>(
   return response.json();
 }
 
-export async function fetchData(force = false) {
-  if (!force && cache.isFresh()) {
-    return cache.get();
-  }
+let inFlight: Promise<ResponseData> | null = null;
 
-  const inflight = cache.getInFlight();
-  if (!force && inflight) {
-    return inflight;
-  }
+export async function getData(): Promise<ResponseData> {
+  if (inFlight) return inFlight;
 
-  const promise = serverFetch(`/data`)
-    .then((res) =>
-      handleResponse(res, "fetch data").then((data) => {
-        cache.set(data);
-        return data;
-      }),
-    )
+  inFlight = serverFetch("/data")
+    .then((res) => handleResponse<ResponseData>(res, "init data"))
     .finally(() => {
-      cache.setInFlight(null);
+      inFlight = null;
     });
 
-  cache.setInFlight(promise);
-  return promise;
+  return inFlight;
 }
 
 export async function deleteModel(model: ModelType, id: number): Promise<void> {

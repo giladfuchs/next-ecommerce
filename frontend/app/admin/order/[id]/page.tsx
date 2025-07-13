@@ -9,9 +9,11 @@ import {
   OrderStatusActions,
   OrderStatusHeader,
 } from "@/components/admin/order-view";
-import { cache, getOrderById, localeCache } from "@/lib/api";
+import { getOrderById, localeCache } from "@/lib/api";
 import { ModelType, Order } from "@/lib/types";
 import { array_obj_to_obj_with_key } from "@/lib/helper";
+import { useSelector } from "react-redux";
+import { RootState } from "@/lib/store";
 
 export default function OrderViewPage({
   params,
@@ -21,15 +23,15 @@ export default function OrderViewPage({
   const { id } = use(params);
 
   const [order, setOrder] = useState<Order | undefined | null>(undefined);
+  const orders = useSelector(
+    (state: RootState) => state.admin[ModelType.order],
+  );
 
   useEffect(() => {
     const init = async () => {
       const obj =
-        array_obj_to_obj_with_key(
-          cache.getByModel(ModelType.order),
-          Number(id),
-          "id",
-        ) ?? (await getOrderById(Number(id)));
+        array_obj_to_obj_with_key(orders, Number(id), "id") ??
+        (await getOrderById(Number(id)));
       setOrder(obj);
     };
     void init();

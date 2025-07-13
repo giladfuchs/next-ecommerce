@@ -1,4 +1,3 @@
-import { usePathname } from "next/navigation";
 import { Box, Typography, IconButton, Stack, Grid } from "@mui/material";
 import { metadata_site_title } from "@/lib/assets/i18n/localizedMetadata";
 import { FOOTER_DATA } from "@/lib/config/config";
