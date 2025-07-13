@@ -23,7 +23,7 @@ export const deleteRowById = createAsyncThunk<
   { model: ModelType; id: string | number },
   { model: ModelType; id: string | number }
 >("models/delete_row", async ({ model, id }) => {
-  await deleteModel(model, id); // performs API call
+  await deleteModel(model, id as number);
   return { model, id };
 });
 export const fetchRowsByModel = createAsyncThunk<
@@ -37,7 +37,7 @@ export const fetchRowsByModel = createAsyncThunk<
 export const adminSlice = createSlice({
   name: "admin",
   initialState,
-
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchRowsByModel.fulfilled, (state, action) => {
@@ -46,7 +46,7 @@ export const adminSlice = createSlice({
       })
       .addCase(deleteRowById.fulfilled, (state, action) => {
         const { model, id } = action.payload;
-        state[model] = state[model].filter((row) => row.id !== id);
+        state[model] = state[model]!.filter((row) => row.id !== id);
       });
   },
 });
