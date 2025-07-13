@@ -96,7 +96,7 @@ export default async function RootLayout({
       dir={localeCache.dir()}
       className={GeistSans.variable}
     >
-      <body>
+      <body suppressHydrationWarning>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
           strategy="afterInteractive"

@@ -1,12 +1,22 @@
 "use client";
 import dynamic from "next/dynamic";
 import { Category, Product } from "../../lib/types";
+import { PropsProductGallery } from "components/products/single/product-gallery";
 
 const ProductsClient = dynamic(() => import("components/products"), {
   ssr: false,
 });
 export const Products = (props: { products: Product[] }) => (
   <ProductsClient {...props} />
+);
+const ProductGalleryClient = dynamic(
+  () => import("components/products/single/product-gallery"),
+  {
+    ssr: false,
+  },
+);
+export const ProductGallery = (props: PropsProductGallery) => (
+  <ProductGalleryClient {...props} />
 );
 const CategoryAutocompleteClient = dynamic(
   () =>

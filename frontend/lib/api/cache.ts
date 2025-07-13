@@ -82,7 +82,7 @@ class LocaleCache {
     }
 
     // return "en";
-    // return "he";
+    return "he";
     return this.locale;
   }
 

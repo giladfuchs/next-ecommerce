@@ -5,7 +5,7 @@ import {
   AGTableModelType,
   NewOrderPayload,
 } from "../types";
-import { API_URL, USE_MOCK_DATA } from "../config/config";
+import { API_URL, USE_MOCK_DATA } from "../config";
 import { cache } from "./cache";
 type Callback = (loading: boolean) => void;
 
@@ -26,16 +26,9 @@ export async function serverFetch(
   input: string,
   init: RequestInit = {},
 ): Promise<Response> {
-  const {
-    redirect,
-    headers, // unused in your usage
-    cache: initCache,
-    body,
-    ...restInit
-  } = init;
+  const { body, ...restInit } = init;
 
   const isBrowser = typeof window !== "undefined";
-  const token = isBrowser ? localStorage.getItem("token") : null;
 
   let finalBody = body;
   const finalHeaders: Record<string, string> = {};
@@ -44,12 +37,23 @@ export async function serverFetch(
     finalBody = JSON.stringify(body);
     finalHeaders["Content-Type"] = "application/json";
   }
-
-  if (token) {
-    finalHeaders["Authorization"] = `Bearer ${token}`;
+  if (isBrowser) {
+    setGlobalLoading(true);
+    if (localStorage.getItem("token")) {
+      finalHeaders["Authorization"] = `Bearer ${localStorage.getItem("token")}`;
+    }
   }
 
-  if (isBrowser) setGlobalLoading(true);
+  const fetchInit: RequestInit = {
+    ...restInit,
+    headers: finalHeaders,
+    body: finalBody,
+  } as RequestInit;
+
+  if (!isBrowser && !process.env.NODE_ENV === "test") {
+    fetchInit["cache"] = "force-cache";
+    fetchInit["next"] = { revalidate: 60 };
+  }
 
   try {
     if (USE_MOCK_DATA) {
@@ -57,27 +61,29 @@ export async function serverFetch(
       return await mockResponse(input);
     }
 
-    return await fetch(`${API_URL}${input}`, {
-      ...restInit,
-      headers: finalHeaders,
-      body: finalBody,
-      credentials: "include",
-      cache: initCache || "no-store",
-    });
+    return await fetch(`${API_URL}${input}`, fetchInit);
   } finally {
     if (isBrowser) setGlobalLoading(false);
   }
 }
 
-async function handleResponse<T = any>(
+export async function handleResponse<T = any>(
   response: Response,
   context: string,
 ): Promise<T> {
   if (!response.ok) {
     const err = await response.json().catch(() => ({}));
+
+    if (response.status === 401 && typeof window !== "undefined") {
+      console.warn("⛔ Unauthorized — clearing token and redirecting to login");
+      localStorage.clear();
+      window.location.href = "/login";
+    }
+
     console.error(`❌ Failed to ${context}`);
     throw new Error(err?.error || `Failed to ${context}`);
   }
+
   return response.json();
 }
 

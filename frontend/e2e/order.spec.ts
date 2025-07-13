@@ -6,7 +6,7 @@ import {
   fillCheckoutForm,
 } from "./helper-test";
 
-test.only("add product to cart and update quantity", async ({ page }) => {
+test("add product to cart and update quantity", async ({ page }) => {
   await page.goto(`${TEST_BASE_URL}/`);
   await page.waitForSelector('[data-testid="product-list"]');
 

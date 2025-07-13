@@ -99,10 +99,14 @@ export default function ImagesEditor({
               <Grid
                 {...({ item: true } as any)}
                 xs={12}
-                key={index}
+                key={`image-block-${index}`}
                 data-testid={`form-image-${index}`}
               >
-                <Typography fontWeight="bold" mb={1}>
+                <Typography
+                  fontWeight="bold"
+                  key={`image.label-${index}`}
+                  mb={1}
+                >
                   <FormattedMessage
                     id="admin.image.label"
                     values={{ index: index + 1 }}
@@ -110,6 +114,7 @@ export default function ImagesEditor({
                 </Typography>
 
                 <Grid
+                  key={`image.grid-${index}`}
                   {...({ container: true } as any)}
                   spacing={1}
                   alignItems="center"
@@ -143,7 +148,12 @@ export default function ImagesEditor({
                   </Grid>
                 </Grid>
 
-                <Grid {...({ item: true } as any)} xs={12} mt={1}>
+                <Grid
+                  {...({ item: true } as any)}
+                  xs={12}
+                  mt={1}
+                  key={`image.alt-${index}`}
+                >
                   <TextField
                     fullWidth
                     size="small"
@@ -157,6 +167,7 @@ export default function ImagesEditor({
 
                 {imagesState[index]?.url?.trim() && (
                   <Box
+                    key={`image.box-${index}`}
                     m={1}
                     display="flex"
                     justifyContent="center"
@@ -177,7 +188,7 @@ export default function ImagesEditor({
                   </Box>
                 )}
 
-                <Divider />
+                <Divider key={`image.Divider-${index}`} />
               </Grid>
             ))}
           </Grid>

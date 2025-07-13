@@ -8,13 +8,11 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import GridTileImage from "components/products/grid/tile";
 import { ProductImage } from "lib/types";
 
-export default function ProductGallery({
-  images,
-  isRtl,
-}: {
+export type PropsProductGallery = {
   images: ProductImage[];
   isRtl: boolean;
-}) {
+};
+export default function ProductGallery({ images, isRtl }: PropsProductGallery) {
   const [imageIndex, setImageIndex] = useState(0);
   const next = () => setImageIndex((prev) => (prev + 1) % images.length);
   const prev = () =>

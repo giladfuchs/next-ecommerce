@@ -25,7 +25,7 @@
     "prettier": "npx prettier --write .",
     "typecheck": "tsc --noEmit",
     "test": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 & pnpm exec playwright test --headed",
-    "test:file": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 & pnpm exec playwright test e2e/order.spec.ts --headed",
+    "test:file": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 & pnpm exec playwright test e2e/crud.spec.ts --headed",
     "codegen:record": "NEXT_PUBLIC_PORT=4010 NODE_ENV=test pnpm dev & sleep 2 && pnpm exec playwright codegen http://localhost:3000"
   },
   "dependencies": {
