@@ -1,7 +1,7 @@
 # Next.js E-commerce Template 🛍️
 
 A modern, accessible e-commerce platform built with Next.js 15 (frontend) and Express + PostgreSQL (backend), designed for both customers and store administrators.
-<br/>Includes a dynamic storefront, full admin dashboard, backend API, image upload, order tracking, and internationalization support.
+<br/>Includes a dynamic storefront, full admin dashboard, backend API, image upload, order tracking, and multilingual support (RTL & LTR).
 
 ---
 
@@ -60,22 +60,21 @@ Choose the guide that fits your workflow:
 
 ### 🧑‍💻 Frontend (`/frontend`)
 
-- 💅 Hybrid styling with **MUI + Tailwind CSS**
+- 💅 Fully styled with **MUI v7**
 - 🛍️ Dynamic storefront with product filtering and category browsing
-- ⚡ **Local cache** for categories and products (via client memory)
 - 🧾 **Admin dashboard** with full model management (products, categories, orders, images)
 - 🧠 SEO & Open Graph via **Next.js 15 Metadata API**
 - ♿ **Accessibility bar** with font scaling and contrast settings
-- 🛒 **Index powered by Redux** with **persisted state**
+- 🛒 **Cart and admin state managed via Redux Toolkit** with **persisted state**
 - 🧪 **Playwright-based E2E tests** for key storefront and admin flows
 
 ### 🔌 Backend (`/backend`)
 
-- 🔄 RESTful CRUD API for products, categories, orders, and images
+- 🔄 RESTFUL CRUD API for products, categories, orders, and images
 - 🔐 Token-based authentication using **JWT**
 - 🗃️ **TypeORM + PostgreSQL** schema design
 - 📤 Image upload via **Vercel Blob** + processing with **Multer + Sharp**
-- ✉️ Optional: email and WhatsApp order notifications via **SendGrid + CallMeBot**
+- ✉️ Optional: email and WhatsApp order notifications
 - ✅ **100% test coverage** for API routes using **Vitest + Supertest**
 
 ---
@@ -84,8 +83,8 @@ Choose the guide that fits your workflow:
 
 ### Frontend
 
-- **Next.js 14**, **React 18**, **TypeScript**
-- **MUI 7**, **Tailwind CSS**
+- **Next.js 15**, **React 18**, **TypeScript**
+- **MUI 7**
 - **Redux Toolkit** with **redux-persist**
 - **AG Grid**, **Formik**, **Yup**, **react-intl**, **Sonner**
 - **Playwright** for E2E testing

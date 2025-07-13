@@ -61,9 +61,9 @@ components/
 ├── admin/          → AG Grid Table, Model forms
 ├── cart/           → Index modal and UI
 ├── checkout/       → Checkout info and summary
-├── layout/         → Header, Footer
+├── layout/         → Header, Footer, accessibility
 ├── product/        → Product display, gallery, cards
-├── shared/         → Loading, messages, accessibility
+├── shared/         → Loading, messages, wrappers
 
 lib/
 ├── api/            → API helpers (catalog, orders, uploads)

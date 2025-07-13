@@ -1,5 +1,4 @@
 "use client";
-
 import { notFound } from "next/navigation";
 import { use, useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
