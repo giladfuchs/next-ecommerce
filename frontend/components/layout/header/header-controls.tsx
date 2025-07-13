@@ -120,7 +120,6 @@ const AuthButtons = () => {
     </>
   );
 };
-
 export default function HeaderControls() {
   const pathname = usePathname();
   const isAdmin = pathname.startsWith("/admin");
@@ -133,23 +132,25 @@ export default function HeaderControls() {
       sx={{
         display: "flex",
         alignItems: "center",
+        justifyContent: "space-between",
         width: "100%",
-        px: 1,
-        gap: 1,
       }}
     >
-      <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
+      {/* Left: Auth buttons */}
+      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
         <AuthButtons />
       </Box>
 
-      {shouldShowSearch ? (
+      {/* Center: Search */}
+      {shouldShowSearch && (
         <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
-          <Search />
+          <Box sx={{ maxWidth: "24rem", width: "100%" }}>
+            <Search />
+          </Box>
         </Box>
-      ) : (
-        <Box sx={{ flexGrow: 1 }} />
       )}
 
+      {/* Right: Cart */}
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Cart />
       </Box>

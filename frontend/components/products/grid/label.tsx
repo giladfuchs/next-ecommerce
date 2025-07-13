@@ -5,11 +5,9 @@ import { localeCache } from "lib/api";
 export default function Label({
   title,
   amount,
-  position = "bottom",
 }: {
   title: string;
   amount: number;
-  position?: "bottom" | "center";
 }) {
   const isRtl = localeCache.isRtl();
   return (
@@ -17,26 +15,23 @@ export default function Label({
       sx={{
         position: "absolute",
         bottom: 0,
-        left: isRtl ? "auto" : 0,
-        right: isRtl ? 0 : "auto",
+        inset: isRtl ? "auto 0 0 auto" : "auto auto 0 0",
         width: "100%",
-        px: position === "center" ? { lg: "5rem" } : "1.2rem",
-        pb: position === "center" ? { lg: "35%" } : "1.2rem",
+        px: { xs: "0.4rem", md: "0.8rem" },
+        pb: "1rem",
         display: "flex",
-        justifyContent: isRtl ? "flex-start" : "flex-start",
+        justifyContent: "flex-start",
       }}
     >
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
-
           borderRadius: "9999rem",
           bgcolor: "var(--color-chip)",
           color: "var(--color-text-strong)",
-          border: "0.1rem solid var(--color-border)",
-          padding: "0.6rem 1rem",
-          gap: "1.2rem",
+          border: "1px solid var(--color-border)",
+          px: "1rem",
           width: "17rem",
         }}
       >
@@ -44,10 +39,9 @@ export default function Label({
           component="h3"
           data-testid="product-card-title"
           sx={{
-            fontSize: "1.1rem",
-            lineHeight: 1.3,
+            fontSize: "1.2rem",
+            lineHeight: 1,
             fontWeight: 600,
-            color: "var(--color-text-strong)",
             flexGrow: 1,
             overflow: "hidden",
             whiteSpace: "nowrap",
@@ -62,9 +56,8 @@ export default function Label({
           sx={{
             backgroundColor: "var(--color-accent)",
             borderRadius: "9999rem",
-            px: "0.8rem",
-            py: "0.4rem",
-            fontSize: "1rem",
+            px: "0.7rem",
+            py: "0.3rem",
             fontWeight: "bold",
             lineHeight: 1.3,
             whiteSpace: "nowrap",

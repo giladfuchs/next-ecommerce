@@ -12,7 +12,6 @@ export default function GridTileImage({
   label?: {
     title: string;
     amount: number;
-    position?: "bottom" | "center";
   };
 } & React.ComponentProps<typeof Image>) {
   return (
@@ -52,13 +51,7 @@ export default function GridTileImage({
         />
       )}
 
-      {label && (
-        <Label
-          title={label.title}
-          amount={label.amount}
-          position={label.position}
-        />
-      )}
+      {label && <Label title={label.title} amount={label.amount} />}
     </Box>
   );
 }

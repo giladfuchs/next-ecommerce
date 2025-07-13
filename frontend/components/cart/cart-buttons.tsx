@@ -9,6 +9,7 @@ import {
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
 import type { CartItem } from "lib/types";
+import { localeCache } from "../../lib/api";
 
 export const DeleteItemButton = memo(
   ({
@@ -88,8 +89,8 @@ export const OpenCart = memo(
         borderRadius: "0.375rem",
         bgcolor: "transparent",
         color: "inherit",
-        border: "1px solid",
-        borderColor: "primary.main", // restored primary border
+        border: quantity ? "1px solid" : "none",
+        borderColor: "primary.main",
       }}
     >
       <ShoppingCartIcon fontSize="small" />
@@ -98,8 +99,8 @@ export const OpenCart = memo(
           sx={{
             position: "absolute",
             top: 0,
-            right: 0,
-            transform: "translate(40%, -40%)",
+            [localeCache.isRtl() ? "right" : "left"]: 0,
+            transform: `${localeCache.isRtl() ? "translate(40%, -40%)" : "translate(-40%, -40%)"}`,
             width: "1rem",
             height: "1rem",
             borderRadius: "0.25rem",

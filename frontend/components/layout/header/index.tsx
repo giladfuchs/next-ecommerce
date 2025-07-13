@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import { HeaderControls } from "components/shared/wrappers";
 import Logo from "components/layout/header/logo";
 
@@ -20,11 +20,11 @@ export default function Header() {
         borderBottom: "1px solid var(--color-border)",
       }}
     >
-      <Container
-        maxWidth={false}
+      <Box
         sx={{
-          maxWidth: "1536px",
-          px: { xs: 0, sm: "1.5rem" },
+          mx: "auto",
+          width: "100%",
+          maxWidth: "86rem",
           height: "4rem",
           display: "flex",
           alignItems: "center",
@@ -45,7 +45,7 @@ export default function Header() {
         </Link>
 
         <HeaderControls />
-      </Container>
+      </Box>
     </Box>
   );
 }

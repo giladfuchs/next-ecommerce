@@ -120,9 +120,10 @@ export default async function RootLayout({
                     minHeight: "100vh",
                     bgcolor: "var(--color-bg)",
                     color: "var(--color-text)",
-                    mx: 0,
+                    maxWidth: "90rem",
+                    mx: "auto",
                     px: 0,
-                    overflowX: "hidden",
+                    overflowX: "clip",
                     "::selection": {
                       backgroundColor: "teal",
                       color: "white",

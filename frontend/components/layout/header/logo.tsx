@@ -9,6 +9,7 @@ export default function Logo() {
         height: "4rem",
         display: "flex",
         alignItems: "center",
+        maxWidth: { xs: "8rem", sm: "none" },
       }}
     >
       <Image
@@ -17,7 +18,11 @@ export default function Logo() {
         width={80}
         height={48}
         priority
-        style={{ height: "2.75rem", width: "auto" }}
+        style={{
+          height: "2.75rem",
+          width: "auto",
+          maxWidth: "100%", // ⬅️ ensures no overflow on small viewports
+        }}
       />
     </Box>
   );
