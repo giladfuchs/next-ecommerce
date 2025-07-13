@@ -5,8 +5,9 @@ import {
   AGTableModelType,
   NewOrderPayload,
 } from "../types";
-import { API_URL, USE_MOCK_DATA } from "../config";
+import { API_URL, isTest, USE_MOCK_DATA } from "../config";
 import { cache } from "./cache";
+
 type Callback = (loading: boolean) => void;
 
 let subscribers: Callback[] = [];
@@ -50,7 +51,7 @@ export async function serverFetch(
     body: finalBody,
   } as RequestInit;
 
-  if (!isBrowser && !process.env.NODE_ENV === "test") {
+  if (!isBrowser && !isTest) {
     fetchInit["cache"] = "force-cache";
     fetchInit["next"] = { revalidate: 60 };
   }
