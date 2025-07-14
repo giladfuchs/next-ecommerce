@@ -5,12 +5,11 @@ import {
 } from "@reduxjs/toolkit";
 import { AGTableModelType, Category, ModelType } from "lib/types";
 import { deleteModel, getData, getOrders } from "@/lib/api";
-import { modelFetchers } from "@/lib/config/mappings";
 import { create_key_to_value_map } from "@/lib/helper";
 import { RootState } from "@/lib/store/index";
 
 type AdminState = {
-  [key in ModelType]?: AGTableModelType[];
+  [key in ModelType]: AGTableModelType[];
 };
 const initialState: AdminState = Object.values(ModelType).reduce(
   (acc, model) => {

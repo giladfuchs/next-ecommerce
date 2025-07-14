@@ -2,7 +2,7 @@ class LocaleCache {
   private locale: "he" | "en" = "en";
   get(): "he" | "en" {
     // return "he";
-    return "en";
+    // return "en";
 
     if (typeof document !== "undefined") {
       const cookie = document.cookie
