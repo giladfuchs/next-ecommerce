@@ -52,7 +52,7 @@ export default function ProductButtons({
                 display: "flex",
                 alignItems: "center",
                 gap: 2,
-                overflowX: "visible",
+                overflow: "hidden",
             }}
         >
             <Button

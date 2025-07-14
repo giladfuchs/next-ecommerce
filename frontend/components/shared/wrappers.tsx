@@ -37,7 +37,6 @@ const CategoryAutocompleteClient = dynamic(
 );
 export const CategoryAutocomplete = (props: {
   options: Category[];
-  allOption: Category;
 }) => <CategoryAutocompleteClient {...props} />;
 
 export const HeaderControls = dynamic(

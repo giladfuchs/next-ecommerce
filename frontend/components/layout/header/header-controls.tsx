@@ -130,6 +130,7 @@ export default function HeaderControls() {
   return (
     <Box
       sx={{
+        gap:"0.5rem",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
