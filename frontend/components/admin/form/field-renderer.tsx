@@ -28,7 +28,7 @@ type FormFieldProps = {
 export default function FieldRenderer({ field, onChange }: FormFieldProps) {
   const intl = useIntl();
   const placeholder = intl.formatMessage({ id: `form.label.${field.key}` });
-  let options = [];
+  let options:any[] = [];
   if (field.key === ModelType.category && FormType.AutoComplete === field.type)
     options = (
       useSelector(

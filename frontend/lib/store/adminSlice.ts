@@ -3,7 +3,7 @@ import {
   createSelector,
   createSlice,
 } from "@reduxjs/toolkit";
-import { AGTableModelType, ModelType } from "lib/types";
+import {AGTableModelType, Category, ModelType} from "lib/types";
 import { deleteModel } from "@/lib/api";
 import { modelFetchers } from "@/lib/config/mappings";
 import { create_key_to_value_map } from "@/lib/helper";
@@ -54,6 +54,6 @@ export const adminSlice = createSlice({
 
 export const selectCategoryTitleToIdMap = createSelector(
   (state: RootState) => state.admin.category,
-  (categories) => create_key_to_value_map(categories, "title", "id"),
+  (categories) => create_key_to_value_map(categories as Category[], "title", "id"),
 );
 export default adminSlice.reducer;
