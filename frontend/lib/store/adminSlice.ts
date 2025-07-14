@@ -3,8 +3,8 @@ import {
   createSelector,
   createSlice,
 } from "@reduxjs/toolkit";
-import {AGTableModelType, Category, ModelType} from "lib/types";
-import { deleteModel } from "@/lib/api";
+import { AGTableModelType, Category, ModelType } from "lib/types";
+import { deleteModel, getData, getOrders } from "@/lib/api";
 import { modelFetchers } from "@/lib/config/mappings";
 import { create_key_to_value_map } from "@/lib/helper";
 import { RootState } from "@/lib/store/index";
@@ -28,11 +28,25 @@ export const deleteRowById = createAsyncThunk<
   return { model, id };
 });
 export const fetchRowsByModel = createAsyncThunk<
-  { model: ModelType; data: AGTableModelType[] },
+  { updates: Partial<AdminState> },
   { model: ModelType }
 >("models/fetch_by_model", async ({ model }) => {
-  const data = await modelFetchers[model]();
-  return { model, data };
+  if (model === ModelType.order) {
+    const data = await getOrders();
+    return {
+      updates: {
+        [ModelType.order]: data,
+      },
+    };
+  } else {
+    const data = await getData();
+    return {
+      updates: {
+        [ModelType.product]: data.products,
+        [ModelType.category]: data.categories,
+      },
+    };
+  }
 });
 
 export const adminSlice = createSlice({
@@ -41,9 +55,16 @@ export const adminSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      // .addCase(fetchRowsByModel.fulfilled, (state, action) => {
+      //     const {model, data} = action.payload;
+      //     (state[model] as AGTableModelType[]) = data;
+      // })
       .addCase(fetchRowsByModel.fulfilled, (state, action) => {
-        const { model, data } = action.payload;
-        (state[model] as AGTableModelType[]) = data;
+        const updates = action.payload.updates;
+        for (const key in updates) {
+          const model = key as ModelType;
+          (state[model] as AGTableModelType[]) = updates[model]!;
+        }
       })
       .addCase(deleteRowById.fulfilled, (state, action) => {
         const { model, id } = action.payload;
@@ -54,6 +75,7 @@ export const adminSlice = createSlice({
 
 export const selectCategoryTitleToIdMap = createSelector(
   (state: RootState) => state.admin.category,
-  (categories) => create_key_to_value_map(categories as Category[], "title", "id"),
+  (categories) =>
+    create_key_to_value_map(categories as Category[], "title", "id"),
 );
 export default adminSlice.reducer;

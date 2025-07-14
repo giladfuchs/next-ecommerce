@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import { Category, Product } from "@/lib/types";
 import { PropsProductGallery } from "@/components/products/single/product-gallery";
+import { PropsProductButtons } from "@/components/products/single/product-buttons";
 
 const ProductsClient = dynamic(() => import("components/products"), {
   ssr: false,
@@ -17,6 +18,15 @@ const ProductGalleryClient = dynamic(
 );
 export const ProductGallery = (props: PropsProductGallery) => (
   <ProductGalleryClient {...props} />
+);
+const ProductButtonsClient = dynamic(
+  () => import("components/products/single/product-buttons"),
+  {
+    ssr: false,
+  },
+);
+export const ProductButtons = (props: PropsProductButtons) => (
+  <ProductButtonsClient {...props} />
 );
 const CategoryAutocompleteClient = dynamic(
   () =>

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import ProductDescription from "./product-description";
 import { Product } from "@/lib/types";
 import { ProductGallery } from "@/components/shared/wrappers";
@@ -16,9 +16,9 @@ const SingleProductLayout = ({
     sx={{
       mx: "auto",
       width: "100%",
-      maxWidth: "90rem", // ✅ optional limit
+      maxWidth: "90rem",
       display: "flex",
-      justifyContent: "center", // ✅ centers the inner box
+      justifyContent: "center",
     }}
   >
     <Box

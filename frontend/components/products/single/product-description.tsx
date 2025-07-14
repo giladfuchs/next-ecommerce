@@ -1,7 +1,8 @@
-import { Box, Grid } from "@mui/material";
-import ProductButtons from "./product-buttons";
+import { Box, Divider, Grid } from "@mui/material";
+
 import { Price } from "@/components/shared/elements-ssr";
 import { Product } from "@/lib/types";
+import { ProductButtons } from "@/components/shared/wrappers";
 
 export default function ProductDescription({
   product,
@@ -21,7 +22,6 @@ export default function ProductDescription({
         alignItems={isLongTitle ? "flex-start" : "center"}
         justifyContent="space-between"
         sx={{
-          mb: 6,
           borderBottom: "1px solid",
           borderColor: "divider",
           pb: 3,
@@ -53,11 +53,11 @@ export default function ProductDescription({
           <Box
             data-testid="product-price"
             sx={{
-              backgroundColor: "var(--color-accent)",
+              backgroundColor: "#AAF2E7 !important",
               px: 3,
               py: "0.3em",
               borderRadius: 999,
-              fontSize: "1.2em",
+              fontSize: "1.7em",
               fontWeight: "bold",
               width: "fit-content",
               whiteSpace: "nowrap",
@@ -73,10 +73,16 @@ export default function ProductDescription({
         </Grid>
       </Grid>
 
-      <Box data-testid="add-to-cart">
-        <ProductButtons product={product} />
+      <Box
+        data-testid="add-to-cart"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        my={2}
+      >
+        <ProductButtons product={product} isRtl={isRtl} />
       </Box>
-
+      <Divider />
       <Box
         component="h3"
         data-testid="product-description"

@@ -19,7 +19,6 @@ import {
   ModelType,
 } from "@/lib/types";
 import { filterBySearch } from "@/lib/helper";
-import { modelFetchers } from "@/lib/config/mappings";
 import { TableHeader } from "@/components/admin/table/table-header";
 import { useSelector } from "react-redux";
 import { fetchRowsByModel, RootState } from "@/lib/store";
