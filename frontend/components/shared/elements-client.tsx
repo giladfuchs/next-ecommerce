@@ -106,7 +106,7 @@ export const CategoryAutocomplete = ({
     const router = useRouter();
     const pathname = safeDecodeURIComponent(usePathname());
 
-    const allOption: Category = options[0];
+    const allOption: Category = options[0]!;
 
     const findSelected = () =>
         options.find((item) =>
@@ -125,15 +125,16 @@ export const CategoryAutocomplete = ({
             options={options}
             getOptionLabel={(option) => option.title}
             value={selectedItem}
-            onChange={(event, value: Category) => {
-                const selected = value;
-                setSelectedItem(selected);
-                router.push(
-                    selected.handle === "all"
-                        ? "/"
-                        : `/${ModelType.category}/${selected.handle}`,
-                );
-            }}
+            onChange={(event, value: Category | null) => {
+            if (!value) return;
+            const selected = value;
+            setSelectedItem(selected);
+            router.push(
+                selected.handle === "all"
+                    ? "/"
+                    : `/${ModelType.category}/${selected.handle}`,
+            );
+        }}
             renderInput={(params) => (
                 <TextField
                                     label={intl.formatMessage({
