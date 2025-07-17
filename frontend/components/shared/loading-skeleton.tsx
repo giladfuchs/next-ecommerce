@@ -1,11 +1,11 @@
-import Grid, { ProductItem } from "@/components/products/grid";
+import ProductsGrid, { ProductItem } from "@/components/products/grid";
 import { Box, Skeleton } from "@mui/material";
 
 export function LoadingProductsList() {
   return (
     <>
       <Box sx={{ mb: 2, height: "1.5rem" }} />
-      <Grid>
+      <ProductsGrid>
         {Array(12)
           .fill(0)
           .map((_, index) => (
@@ -25,7 +25,7 @@ export function LoadingProductsList() {
               />
             </ProductItem>
           ))}
-      </Grid>
+      </ProductsGrid>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { ReactNode } from "react";
 
-export default function Grid({ children }: { children: ReactNode }) {
+export default function ProductsGrid({ children }: { children: ReactNode }) {
   return (
     <Box
       data-testid="product-list"
@@ -17,8 +17,7 @@ export default function Grid({ children }: { children: ReactNode }) {
         listStyle: "none",
         px: 2,
         mx: "auto",
-        width: "100%",
-        maxWidth: "lg",
+        width: {xs:'90%', md:"80%"},
       }}
     >
       {children}
@@ -26,18 +25,19 @@ export default function Grid({ children }: { children: ReactNode }) {
   );
 }
 export function ProductItem({ children }: { children: ReactNode }) {
-  return (
-    <Box
-      component="li"
-      sx={{
-        aspectRatio: "1 / 1",
-        width: "100%",
-        maxWidth: "100%",
-        overflow: "hidden",
-        animation: "fadeIn 0.4s ease",
-      }}
-    >
-      {children}
-    </Box>
-  );
+    return (
+        <Box
+            component="li"
+            sx={{
+                aspectRatio: "1 / 1",
+                width: "95%",
+
+                boxSizing: "border-box",
+                overflow: "hidden",
+                animation: "fadeIn 0.4s ease",
+            }}
+        >
+            {children}
+        </Box>
+    );
 }

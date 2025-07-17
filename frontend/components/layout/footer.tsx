@@ -25,7 +25,7 @@ export default function Footer() {
         direction: localeCache.dir(),
       }}
     >
-      <Box sx={{ maxWidth: "1320px", mx: "auto", width: "100%" }}>
+      <Box sx={{ maxWidth: "65rem", mx: "auto", width: "100%" }}>
         <Stack
           direction={{ xs: "column", sm: "row" }}
           justifyContent="space-between"

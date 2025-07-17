@@ -25,7 +25,7 @@ export default function Header() {
             gap:"0.5rem",
           mx: "auto",
           width: "100%",
-          maxWidth: "86rem",
+          maxWidth: "75rem",
           height: "4rem",
           display: "flex",
           alignItems: "center",

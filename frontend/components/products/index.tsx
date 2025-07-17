@@ -5,7 +5,7 @@ import {
   NoProductsMessage,
   SearchResultsMessage,
 } from "@/components/shared/messages";
-import Grid from "@/components/products/grid";
+import ProductsGrid from "@/components/products/grid";
 import { ProductsDisplay } from "@/components/shared/elements-ssr";
 import { Product } from "@/lib/types";
 import { PRODUCTS_PER_PAGE } from "@/lib/config";
@@ -81,9 +81,9 @@ const ProductsLayout = ({ products }: { products: Product[] }) => {
       {searchValue && <SearchResultsMessage count={filteredProducts.length} />}
 
       {filteredProducts.length > 0 ? (
-        <Grid>
+        <ProductsGrid>
           <ProductsInfinite products={filteredProducts} />
-        </Grid>
+        </ProductsGrid>
       ) : (
         <NoProductsMessage />
       )}
