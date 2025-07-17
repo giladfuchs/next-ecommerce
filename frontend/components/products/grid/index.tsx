@@ -17,7 +17,7 @@ export default function ProductsGrid({ children }: { children: ReactNode }) {
         listStyle: "none",
         px: 2,
         mx: "auto",
-        width: {xs:'90%', md:"80%"},
+        width: { xs: "90%", md: "80%" },
       }}
     >
       {children}
@@ -25,19 +25,19 @@ export default function ProductsGrid({ children }: { children: ReactNode }) {
   );
 }
 export function ProductItem({ children }: { children: ReactNode }) {
-    return (
-        <Box
-            component="li"
-            sx={{
-                aspectRatio: "1 / 1",
-                width: "95%",
+  return (
+    <Box
+      component="li"
+      sx={{
+        aspectRatio: "1 / 1",
+        width: "95%",
 
-                boxSizing: "border-box",
-                overflow: "hidden",
-                animation: "fadeIn 0.4s ease",
-            }}
-        >
-            {children}
-        </Box>
-    );
+        boxSizing: "border-box",
+        overflow: "hidden",
+        animation: "fadeIn 0.4s ease",
+      }}
+    >
+      {children}
+    </Box>
+  );
 }

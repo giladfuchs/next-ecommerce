@@ -5,7 +5,7 @@ import { Box, Button, IconButton } from "@mui/material";
 import {
   Add as AddIcon,
   Remove as RemoveIcon,
-  Close as CloseIcon,
+  Delete as DeleteIcon,
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
 import type { CartItem } from "@/lib/types";
@@ -25,16 +25,13 @@ export const DeleteItemButton = memo(
       aria-label="Remove cart item"
       size="small"
       sx={{
-        backgroundColor: "#6b7280",
-        color: "#fff",
+        color: "#e50707",
         "&:hover": {
           backgroundColor: "#4b5563",
         },
-        width: 24,
-        height: 24,
       }}
     >
-      <CloseIcon fontSize="small" />
+      <DeleteIcon fontSize="small" />
     </IconButton>
   ),
 );

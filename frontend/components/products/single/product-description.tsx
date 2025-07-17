@@ -80,9 +80,8 @@ export default function ProductDescription({
         alignItems="center"
         my={2}
         sx={{
-            overflowX: "hidden",
+          overflowX: "hidden",
         }}
-
       >
         <ProductButtons product={product} isRtl={isRtl} />
       </Box>

@@ -4,9 +4,11 @@ import { deleteRowById } from "@/lib/store";
 import Link from "next/link";
 import { ICellRendererParams } from "ag-grid-community";
 import { IconButton } from "@mui/material";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
+import {
+  Visibility as VisibilityIcon,
+  Edit as EditIcon,
+  Delete as DeleteIcon,
+} from "@mui/icons-material";
 import { ModelType } from "@/lib/types";
 
 import { toast } from "sonner";

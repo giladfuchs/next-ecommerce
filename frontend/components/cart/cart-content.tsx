@@ -2,7 +2,13 @@
 import NextLink from "next/link";
 import { FormattedMessage } from "react-intl";
 import Image from "next/image";
-import { IconButton, Typography, Box, useMediaQuery } from "@mui/material";
+import {
+  IconButton,
+  Typography,
+  Box,
+  useMediaQuery,
+  Divider,
+} from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import {
@@ -14,6 +20,7 @@ import { Price } from "@/components/shared/elements-ssr";
 import { RootState } from "@/lib/store";
 import { localeCache } from "@/lib/api";
 import { useTheme } from "@mui/system";
+import React from "react";
 export const CartHeader = ({ closeCart }: { closeCart: () => void }) => (
   <Box
     display="flex"
@@ -118,19 +125,6 @@ export const CartItemList = ({
                   objectFit: "cover",
                 }}
               />
-              <Box
-                sx={{
-                  position: "absolute",
-                  top: 0,
-                  zIndex: 10,
-                  [localeCache.isRtl() ? "right" : "left"]: 0,
-                }}
-              >
-                <DeleteItemButton
-                  item={item}
-                  optimisticUpdate={optimisticUpdate}
-                />
-              </Box>
             </Box>
 
             <Box
@@ -189,6 +183,10 @@ export const CartItemList = ({
                   amount={item.unitAmount}
                   sx={{ fontSize: "0.875rem", fontWeight: 500 }}
                 />
+                <DeleteItemButton
+                  item={item}
+                  optimisticUpdate={optimisticUpdate}
+                />
 
                 <Box
                   sx={{
@@ -199,6 +197,7 @@ export const CartItemList = ({
                     borderRadius: "999px",
                     border: "1px solid",
                     borderColor: "divider",
+                    overflow: "hidden",
                   }}
                   data-testid="quantity-buttons"
                 >

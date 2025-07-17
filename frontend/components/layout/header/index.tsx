@@ -22,7 +22,7 @@ export default function Header() {
     >
       <Box
         sx={{
-            gap:"0.5rem",
+          gap: "0.5rem",
           mx: "auto",
           width: "100%",
           maxWidth: "75rem",

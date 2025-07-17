@@ -79,7 +79,7 @@ export default function Categories({
         <div className="sr-only">
           <CategoryItemList categories={options} currentPath={currentPath} />
         </div>
-        <CategoryAutocomplete options={options}   />
+        <CategoryAutocomplete options={options} />
       </Box>
     </nav>
   );
