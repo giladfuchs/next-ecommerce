@@ -115,29 +115,35 @@ export const CategoryAutocomplete = ({ options }: { options: Category[] }) => {
   }, [pathname, options]);
 
   return (
-    <Autocomplete
-      disablePortal
-      options={options}
-      getOptionLabel={(option) => option.title}
-      value={selectedItem}
-      onChange={(event, value: Category | null) => {
-        if (!value) return;
-        const selected = value;
-        setSelectedItem(selected);
-        router.push(
-          selected.handle === "all"
-            ? "/"
-            : `/${ModelType.category}/${selected.handle}`,
-        );
-      }}
-      renderInput={(params) => (
-        <TextField
-          label={intl.formatMessage({
-            id: `${ModelType.category}.selectCategory`,
-          })}
-          {...params}
-        />
-      )}
-    />
+      <Autocomplete
+          disablePortal
+          options={options}
+          getOptionLabel={(option) => option.title}
+          value={selectedItem}
+          onChange={(event, value: Category | null) => {
+              if (!value) return;
+
+              setSelectedItem(value);
+              router.push(
+                  value.handle === "all"
+                      ? "/"
+                      : `/${ModelType.category}/${value.handle}`
+              );
+              (event?.target as HTMLInputElement)?.blur();
+          }}
+
+          renderInput={(params) => (
+              <TextField
+                  {...params}
+                  label={intl.formatMessage({
+                      id: `${ModelType.category}.selectCategory`,
+                  })}
+                  inputProps={{
+                      ...params.inputProps,
+                      readOnly: true,
+                  }}
+              />
+          )}
+      />
   );
 };

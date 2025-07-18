@@ -25,6 +25,7 @@ export const CategoryItemList = ({
           prefetch
           data-testid="category-link"
           sx={{
+            width:'10rem',
             borderRadius: 2,
             mb: 0.5,
             py: 1,
