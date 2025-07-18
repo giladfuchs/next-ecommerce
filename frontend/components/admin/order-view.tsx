@@ -37,14 +37,16 @@ export const OrderInfoList = ({ order }: { order: Order }) => {
     </List>
   );
   return (
-    <Grid container spacing={2} mb={4}>
-      <Grid {...({ item: true } as any)} xs={12} sm={6}>
-        {renderSection(left)}
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Grid container spacing={2} mb={4}>
+        <Grid {...({ item: true } as any)} xs={12} sm={6}>
+          {renderSection(left)}
+        </Grid>
+        <Grid {...({ item: true } as any)} xs={12} sm={6}>
+          {renderSection(right)}
+        </Grid>
       </Grid>
-      <Grid {...({ item: true } as any)} xs={12} sm={6}>
-        {renderSection(right)}
-      </Grid>
-    </Grid>
+    </Box>
   );
 };
 
@@ -55,6 +57,8 @@ export const OrderItemsList = ({ items }: { items: OrderItem[] }) => {
         <Grid
           key={product.id}
           sx={{
+            mx: "auto",
+            maxWidth: "30rem",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
