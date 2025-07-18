@@ -1,7 +1,7 @@
 class LocaleCache {
   private locale: "he" | "en" = "en";
   get(): "he" | "en" {
-    return "he";
+    // return "he";
     // return "en";
 
     if (typeof document !== "undefined") {

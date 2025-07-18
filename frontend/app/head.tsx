@@ -1,4 +1,4 @@
-import { API_URL } from "@/lib/config";
+import { API_URL, GOOGLE_SITE_VERIFICATION } from "@/lib/config";
 
 export default function Head() {
   return (
@@ -7,9 +7,10 @@ export default function Head() {
 
       <link rel="preconnect" href={API_URL} crossOrigin="anonymous" />
       <link rel="dns-prefetch" href={API_URL} />
-
-      {/* Fallback icon */}
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <meta
+        name="google-site-verification"
+        content={GOOGLE_SITE_VERIFICATION}
+      />
     </>
   );
 }

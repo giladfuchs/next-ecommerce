@@ -10,13 +10,7 @@ import { Toaster } from "sonner";
 
 import "lib/assets/styles/globals.css";
 
-import {
-  baseUrl,
-  GOOGLE_ANALYTICS,
-  GOOGLE_SITE_VERIFICATION,
-  ICON_IMAGE_URL,
-  SITE_NAME,
-} from "@/lib/config/config";
+import { GOOGLE_ANALYTICS } from "@/lib/config/config";
 
 import { ReduxProvider } from "@/lib/provider/ReduxProvider";
 import { ThemeProviderLayout } from "@/lib/provider/ThemeProviderLayout";
@@ -28,45 +22,10 @@ import { LoadingProductsList } from "@/components/shared/loading-skeleton";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { AccessibilityBar } from "@/components/shared/wrappers";
-
-import {
-  metadata_site_description,
-  metadata_site_title,
-} from "@/lib/assets/i18n/localizedMetadata";
 import { localeCache } from "@/lib/api";
+import { generateMetadataLayout } from "@/lib/config";
 
-export const metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: SITE_NAME!,
-    template: `%s | ${SITE_NAME}`,
-  },
-  description: metadata_site_description,
-  robots: {
-    follow: true,
-    index: true,
-    "max-image-preview": "large",
-  },
-  openGraph: {
-    title: SITE_NAME!,
-    description: metadata_site_description,
-    url: baseUrl,
-    siteName: SITE_NAME!,
-    images: [
-      {
-        url: ICON_IMAGE_URL,
-        width: 1200,
-        height: 630,
-        alt: metadata_site_title,
-      },
-    ],
-    locale: "he_IL",
-    type: "website",
-  },
-  verification: {
-    google: GOOGLE_SITE_VERIFICATION,
-  },
-};
+export const metadata = generateMetadataLayout();
 
 // noinspection JSUnusedGlobalSymbols
 export const viewport: Viewport = {

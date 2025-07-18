@@ -1,31 +1,13 @@
 import { Metadata } from "next";
-
 import SidebarLayout from "@/components/layout/sidebar";
 import { ProductsSSR } from "@/components/shared/elements-ssr";
-import {
-  metadata_site_title,
-  metadata_site_description,
-  metadata_keywords,
-} from "@/lib/assets/i18n/localizedMetadata";
-import { baseUrl, ICON_IMAGE_URL } from "@/lib/config/config";
+import { metadata_site_description } from "@/lib/assets/i18n/localizedMetadata";
 import { getCategories, getProducts } from "@/lib/api";
+import { generateMetadataHome, USE_MOCK_DATA } from "@/lib/config";
 
-export const metadata: Metadata = {
-  title: metadata_site_title,
-  description: metadata_site_description,
-  keywords: metadata_keywords,
-  openGraph: {
-    title: metadata_site_title,
-    description: metadata_site_description,
-    images: [ICON_IMAGE_URL as string],
-    url: baseUrl,
-    type: "website",
-  },
-  alternates: {
-    canonical: baseUrl,
-  },
-};
+export const metadata: Metadata = generateMetadataHome();
 export const revalidate = 60;
+
 export default async function HomePage() {
   const products = await getProducts();
   const categories = (await getCategories()) ?? [];
@@ -33,6 +15,19 @@ export default async function HomePage() {
   return (
     <SidebarLayout categories={categories}>
       <h1 className="sr-only">{metadata_site_description}</h1>
+      {USE_MOCK_DATA && (
+        <p
+          style={{
+            color: "red",
+            fontWeight: "bold",
+            textAlign: "center",
+            fontSize: "1.25rem",
+          }}
+        >
+          ⚠️ You are running in mock mode!
+        </p>
+      )}
+
       <ProductsSSR products={products} />
     </SidebarLayout>
   );
