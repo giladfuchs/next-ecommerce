@@ -132,7 +132,7 @@ export default function AccessibilityBar() {
         zIndex: 50,
         display: "flex",
         alignItems: "center",
-        ...(localeCache.isRtl() ? { left: "0.5rem" } : { right: "0.5rem" }),
+        ...(localeCache.isRtl() ? { left: "0.2rem" } : { right: "0.2rem" }),
       }}
       dir={localeCache.dir()}
     >

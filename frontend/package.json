@@ -17,6 +17,7 @@
     "url": "https://github.com/giladfuchs/next-ecommerce"
   },
   "scripts": {
+    "clean": "rm -rf .next",
     "debug": "NODE_OPTIONS='--inspect' next dev",
     "dev:webpack": "next dev",
     "dev": "next dev --turbo",
