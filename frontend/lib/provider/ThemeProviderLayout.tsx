@@ -88,6 +88,6 @@ const theme = createTheme({
   },
 });
 
-export function ThemeProviderLayout({ children }: { children: ReactNode }) {
+export default function ThemeProviderLayout({ children }: { children: ReactNode }) {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }

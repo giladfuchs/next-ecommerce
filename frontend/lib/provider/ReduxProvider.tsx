@@ -8,7 +8,7 @@ import { makeStore } from "@/lib/store";
 
 const store = makeStore();
 
-export function ReduxProvider({ children }: { children: React.ReactNode }) {
+export default function ReduxProvider({ children }: { children: React.ReactNode }) {
   const [persistor, setPersistor] = useState<any>(null);
 
   useEffect(() => {

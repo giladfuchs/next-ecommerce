@@ -6,22 +6,9 @@ import {
   NewOrderPayload,
   ResponseData,
 } from "../types";
+import {setGlobalLoading} from "@/lib/provider/LoadingProvider";
 import { API_URL, isTest, USE_MOCK_DATA } from "../config";
 
-type Callback = (loading: boolean) => void;
-
-let subscribers: Callback[] = [];
-
-export function setGlobalLoading(value: boolean) {
-  subscribers.forEach((cb) => cb(value));
-}
-
-export function subscribeGlobalLoading(cb: Callback) {
-  subscribers.push(cb);
-  return () => {
-    subscribers = subscribers.filter((fn) => fn !== cb);
-  };
-}
 
 export async function serverFetch(
   input: string,

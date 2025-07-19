@@ -3,8 +3,8 @@ import { useState } from "react";
 import { useIntl, FormattedMessage } from "react-intl";
 import { toast } from "sonner";
 import { Box, Button, Typography } from "@mui/material";
-import { useLoading } from "@/lib/provider/LoadingProvider";
-import { uploadImage, setGlobalLoading } from "@/lib/api";
+import { useLoading, setGlobalLoading } from "@/lib/provider/LoadingProvider";
+import { uploadImage } from "@/lib/api";
 import {
   UploadControls,
   UploadedImagePreview,
