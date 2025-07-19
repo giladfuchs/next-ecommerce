@@ -1,10 +1,8 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import { Box, Button } from "@mui/material";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { ChevronLeft as ChevronLeftIcon, ChevronRight as ChevronRightIcon } from "@mui/icons-material";
 import GridTileImage from "@/components/products/grid/tile";
 import { ProductImage } from "@/lib/types";
 
@@ -12,7 +10,7 @@ export type PropsProductGallery = {
   images: ProductImage[];
   isRtl: boolean;
 };
-export default function ProductGallery({ images, isRtl }: PropsProductGallery) {
+export default function ProductGalleryClient({ images, isRtl }: PropsProductGallery) {
   const [imageIndex, setImageIndex] = useState(0);
   const next = () => setImageIndex((prev) => (prev + 1) % images.length);
   const prev = () =>

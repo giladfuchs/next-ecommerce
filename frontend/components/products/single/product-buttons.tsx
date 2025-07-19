@@ -1,7 +1,7 @@
 "use client";
 import { useIntl, FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";
-import { Box, Button, Grid, IconButton, Tooltip, Stack } from "@mui/material";
+import { Box, Button, IconButton, Tooltip } from "@mui/material";
 import {
   Add as AddIcon,
   Share as ShareIcon,
@@ -15,7 +15,7 @@ export type PropsProductButtons = {
   product: Product;
   isRtl: boolean;
 };
-export default function ProductButtons({
+export default function ProductButtonsClient({
   product,
   isRtl,
 }: PropsProductButtons) {

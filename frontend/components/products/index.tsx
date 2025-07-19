@@ -1,93 +1,52 @@
 "use client";
+import { useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useRef, useState, useMemo } from "react";
+import { Box } from "@mui/material";
+import { Product } from "@/lib/types";
+import { PRODUCTS_PER_PAGE } from "@/lib/config";
+import { filterBySearch } from "@/lib/helper";
+import ProductsGrid from "@/components/products/grid";
+import { ProductsDisplay } from "@/components/shared/elements-ssr";
 import {
   NoProductsMessage,
   SearchResultsMessage,
 } from "@/components/shared/messages";
-import ProductsGrid from "@/components/products/grid";
-import { ProductsDisplay } from "@/components/shared/elements-ssr";
-import { Product } from "@/lib/types";
-import { PRODUCTS_PER_PAGE } from "@/lib/config";
-import { filterBySearch } from "@/lib/helper";
-
-const ProductsInfinite = ({ products }: { products: Product[] }) => {
-  const [page, setPage] = useState(1);
-  const sentinelRef = useRef<HTMLDivElement | null>(null);
-  const observer = useRef<IntersectionObserver | null>(null);
-  const loadingRef = useRef(false);
-
-  const visibleProducts = products.slice(0, page * PRODUCTS_PER_PAGE);
-  const hasMore = visibleProducts.length < products.length;
-
-  useEffect(() => {
-    if (!hasMore) return;
-
-    const node = sentinelRef.current;
-    if (!node) return;
-
-    observer.current?.disconnect();
-
-    const newObserver = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry?.isIntersecting && !loadingRef.current) {
-          loadingRef.current = true;
-          setPage((prev) => prev + 1);
-        }
-      },
-      { threshold: 0.1 },
-    );
-
-    newObserver.observe(node);
-    observer.current = newObserver;
-
-    return () => {
-      newObserver.disconnect();
-    };
-  }, [hasMore, page, products]);
-
-  useEffect(() => {
-    loadingRef.current = false;
-  }, [page]);
-
-  return (
-    <>
-      <ProductsDisplay products={visibleProducts} />
-      {hasMore && (
-        <div
-          ref={sentinelRef}
-          data-testid="infinite-scroll-sentinel"
-          style={{ height: 100 }}
-        />
-      )}
-    </>
-  );
-};
-const ProductsLayout = ({ products }: { products: Product[] }) => {
+import {useInfiniteScroll} from "@/components/shared/elements-client";
+export default function ProductsClient({ products }: { products: Product[] }) {
   const searchParams = useSearchParams();
   const searchValue = useMemo(
-    () => searchParams.get("q") || "",
-    [searchParams],
+      () => searchParams.get("q") || "",
+      [searchParams],
   );
 
   const filteredProducts = useMemo(
-    () => filterBySearch(products, searchValue),
-    [searchValue, products],
+      () => filterBySearch(products, searchValue),
+      [searchValue, products],
+  );
+
+  const { visibleItems, hasMore, sentinelRef } = useInfiniteScroll<Product>(
+      filteredProducts,
+      PRODUCTS_PER_PAGE,
+      "products_infinite_page",
   );
 
   return (
-    <>
-      {searchValue && <SearchResultsMessage count={filteredProducts.length} />}
-
-      {filteredProducts.length > 0 ? (
-        <ProductsGrid>
-          <ProductsInfinite products={filteredProducts} />
-        </ProductsGrid>
-      ) : (
-        <NoProductsMessage />
-      )}
-    </>
+      <>
+        {searchValue && <SearchResultsMessage count={filteredProducts.length} />}
+        {filteredProducts.length > 0 ? (
+            <ProductsGrid>
+              <ProductsDisplay products={visibleItems} />
+              {hasMore && (
+                  <Box
+                      ref={sentinelRef}
+                      data-testid="infinite-scroll-sentinel"
+                      sx={{ height: 100 }}
+                  />
+              )}
+            </ProductsGrid>
+        ) : (
+            <NoProductsMessage />
+        )}
+      </>
   );
-};
-export default ProductsLayout;
+}

@@ -47,7 +47,7 @@ const ActionItem = ({
   </Box>
 );
 
-export default function AccessibilityBar() {
+export default function AccessibilityBarClient() {
   const buttonIconOpenRef = useRef<HTMLButtonElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
 

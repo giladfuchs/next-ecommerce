@@ -1,21 +1,20 @@
 "use client";
-import React, { CSSProperties, useEffect, useState } from "react";
+import {CSSProperties, RefObject, useEffect, useRef, useState} from "react";
 import { useIntl } from "react-intl";
 import {
-  Chip,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-  Autocomplete,
-  TextField,
-  Box,
+    Chip,
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogActions,
+    Button,
+    Autocomplete,
+    TextField, AutocompleteRenderInputParams,
 } from "@mui/material";
 import { Category, ModelType, OrderStatus } from "@/lib/types";
 import { usePathname, useRouter } from "next/navigation";
 import { safeDecodeURIComponent } from "@/lib/helper";
-import { localeCache } from "@/lib/api";
+import ProductGalleryClient from "@/components/products/single/product-gallery";
 
 type Props = {
   status: OrderStatus;
@@ -98,7 +97,7 @@ export const DeleteConfirmDialog = ({
   );
 };
 
-export const CategoryAutocomplete = ({ options }: { options: Category[] }) => {
+export const CategoryAutocompleteClient = ({ options }: { options: Category[] }) => {
   const intl = useIntl();
   const router = useRouter();
   const pathname = safeDecodeURIComponent(usePathname());
@@ -132,7 +131,7 @@ export const CategoryAutocomplete = ({ options }: { options: Category[] }) => {
               (event?.target as HTMLInputElement)?.blur();
           }}
 
-          renderInput={(params) => (
+          renderInput={(params:AutocompleteRenderInputParams) => (
               <TextField
                   {...params}
                   label={intl.formatMessage({
@@ -147,3 +146,61 @@ export const CategoryAutocomplete = ({ options }: { options: Category[] }) => {
       />
   );
 };
+
+
+export function useInfiniteScroll<T>(
+    allItems: T[],
+    itemsPerPage: number,
+    sessionKey: string,
+): {
+    visibleItems: T[];
+    hasMore: boolean;
+    sentinelRef: RefObject<HTMLDivElement>;
+} {
+    const [page, setPage] = useState(() => {
+        const stored = sessionStorage.getItem(sessionKey);
+        return stored ? parseInt(stored) : 1;
+    });
+
+    const sentinelRef = useRef<HTMLDivElement | null>(null);
+    const observer = useRef<IntersectionObserver | null>(null);
+    const loadingRef = useRef(false);
+
+    const visibleItems = allItems.slice(0, page * itemsPerPage);
+    const hasMore = visibleItems.length < allItems.length;
+
+    useEffect(() => {
+        sessionStorage.setItem(sessionKey, String(page));
+    }, [page, sessionKey]);
+
+    useEffect(() => {
+        if (!hasMore) return;
+
+        const node = sentinelRef.current;
+        if (!node) return;
+
+        observer.current?.disconnect();
+
+        const newObserver = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                if (entry?.isIntersecting && !loadingRef.current) {
+                    loadingRef.current = true;
+                    setPage((prev) => prev + 1);
+                }
+            },
+            { threshold: 0.1 },
+        );
+
+        newObserver.observe(node);
+        observer.current = newObserver;
+
+        return () => newObserver.disconnect();
+    }, [hasMore, page, allItems]);
+
+    useEffect(() => {
+        loadingRef.current = false;
+    }, [page]);
+
+    return { visibleItems, hasMore, sentinelRef };
+}

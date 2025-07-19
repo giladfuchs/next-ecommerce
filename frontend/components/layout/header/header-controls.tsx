@@ -18,6 +18,7 @@ import {
 import Cart from "@/components/cart";
 import AdminNav from "./admin-nav";
 import { localeCache } from "@/lib/api";
+import ProductGalleryClient from "@/components/products/single/product-gallery";
 
 const Search = () => {
   const intl = useIntl();
@@ -120,7 +121,7 @@ const AuthButtons = () => {
     </>
   );
 };
-export default function HeaderControls() {
+export default function HeaderControlsClient() {
   const pathname = usePathname();
   const isAdmin = pathname.startsWith("/admin");
   const shouldShowSearch = pathname === "/" || pathname.startsWith("/category");
@@ -137,12 +138,11 @@ export default function HeaderControls() {
         width: "100%",
       }}
     >
-      {/* Left: Auth buttons */}
+
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
         <AuthButtons />
       </Box>
 
-      {/* Center: Search */}
       {shouldShowSearch && (
         <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
           <Box sx={{ maxWidth: "24rem", width: "100%" }}>
@@ -151,7 +151,6 @@ export default function HeaderControls() {
         </Box>
       )}
 
-      {/* Right: Cart */}
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Cart />
       </Box>
