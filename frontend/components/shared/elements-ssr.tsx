@@ -6,6 +6,7 @@ import { Product } from "@/lib/types";
 import { ProductItem } from "../products/grid";
 import GridTileImage from "../products/grid/tile";
 import { Products } from "./wrappers";
+import {shuffleArray} from "@/lib/helper";
 
 export const Price = ({
   amount,
@@ -65,7 +66,7 @@ export const ProductsDisplay = ({ products }: { products: Product[] }) => {
 export const ProductsSSR = ({ products }: { products: Product[] }) => (
   <>
     <div className="sr-only">
-      <ProductsDisplay products={products.slice(0, 5)} />
+      <ProductsDisplay products={shuffleArray(products).slice(0, 5)} />
     </div>
     <Products products={products} />
   </>

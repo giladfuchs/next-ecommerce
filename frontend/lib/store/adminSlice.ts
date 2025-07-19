@@ -54,10 +54,6 @@ export const adminSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      // .addCase(fetchRowsByModel.fulfilled, (state, action) => {
-      //     const {model, data} = action.payload;
-      //     (state[model] as AGTableModelType[]) = data;
-      // })
       .addCase(fetchRowsByModel.fulfilled, (state, action) => {
         const updates = action.payload.updates;
         for (const key in updates) {
