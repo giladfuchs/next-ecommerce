@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    unoptimized: true,
+    unoptimized: true, // Using unoptimized images due to Vercel limits — set to false to enable built-in image optimization for your own project
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
       { protocol: "https", hostname: "**" },
