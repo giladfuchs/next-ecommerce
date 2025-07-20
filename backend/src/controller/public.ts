@@ -90,7 +90,7 @@ export class PublicController {
     }
     const { username, email, password } = body;
 
-    const existing = await DB.getRepository(User).findOneBy({ email });
+    const existing = await DB.getRepository(User).findOneBy({ username });
     if (existing) {
       throw new HttpError(409, "Email already registered");
     }

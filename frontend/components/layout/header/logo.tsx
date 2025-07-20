@@ -13,7 +13,7 @@ export default function Logo() {
       }}
     >
       <Image
-        src={(ICON_IMAGE_URL as string) || "/favicon.ico"}
+        src={(ICON_IMAGE_URL as string)}
         alt="logo"
         width={80}
         height={48}
@@ -21,7 +21,7 @@ export default function Logo() {
         style={{
           height: "2.75rem",
           width: "auto",
-          maxWidth: "100%", // ⬅️ ensures no overflow on small viewports
+          maxWidth: "100%",
         }}
       />
     </Box>

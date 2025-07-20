@@ -1,6 +1,7 @@
 # Node
 node_modules/
 scripts/data
+scripts/backup
 package-lock.json
 dist/
 build/
