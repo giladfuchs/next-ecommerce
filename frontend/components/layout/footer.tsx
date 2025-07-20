@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <Box
       component="footer"
-      className="hide-footer"
+      className="hide-in-admin"
       sx={{
         position: "sticky",
         bottom: 0,

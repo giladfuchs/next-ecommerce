@@ -125,7 +125,8 @@ export default function AccessibilityBarClient() {
 
   return (
     <Box
-      sx={{
+        className="hide-in-admin"
+        sx={{
         position: "fixed",
         top: "70%",
         transform: "translateY(-50%)",

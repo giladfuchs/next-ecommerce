@@ -39,7 +39,7 @@ body {
   text-align: left;
 }
 
-body.admin .hide-footer {
+body.admin .hide-in-admin {
   display: none !important;
 }
 .sr-only {
