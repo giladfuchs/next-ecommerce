@@ -39,6 +39,7 @@ DB.initialize()
 
         // Optional: mutate order before sending
         // order.name = "email test";
+        // order.email="your_email@gmail.com"
 
         await sendOrderConfirmationEmail(order);
         await sendAdminWhatsApp(order.id);

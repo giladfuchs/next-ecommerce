@@ -9,11 +9,11 @@ import {Order} from "../src/lib/entities";
 import {PublicController} from "../src/controller/public";
 
 const MOCK_DATA_PATH = "scripts/mock-data.json";
-
 /**
  * Dumps products, categories (via PublicController), and orders to mock-data.json.
- * You can copy this file to frontend under lib/api/mock-data.json for mock mode.
+ * The format matches the public API response and is used directly for mock mode in the frontend.
  */
+
 async function DBToJsonForMockMode(): Promise<void> {
     const orders = await DB.getRepository(Order).find({relations: ["items"]});
     const {products, categories} = await PublicController.getData();
