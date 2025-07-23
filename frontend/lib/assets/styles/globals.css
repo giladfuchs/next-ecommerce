@@ -204,6 +204,9 @@ html.high-contrast .bg-blue-600 {
 .dialog-panel * {
   font-size: inherit !important;
 }
+html.invert {
+  filter: invert(100%);
+}
 
 html.grayscale {
   filter: grayscale(100%);
