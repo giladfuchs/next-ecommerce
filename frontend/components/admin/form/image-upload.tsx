@@ -61,8 +61,8 @@ export const UploadControls = ({
   );
 };
 export const UploadedImagePreview = ({ imageUrl }: { imageUrl: string }) => {
-  const copyToClipboard = async () => {
     const intl = useIntl();
+  const copyToClipboard = async () => {
 
     if (!imageUrl) return;
     await navigator.clipboard.writeText(imageUrl);

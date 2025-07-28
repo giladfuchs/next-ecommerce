@@ -5,12 +5,12 @@ const port = process.env.NEXT_PUBLIC_PORT || "4000";
 export const baseUrl: string =
   process.env.NEXT_PUBLIC_BASE_URL?.trim() || "https://your-store.vercel.app";
 
-// export const API_URL: string =
-//   isDev || isTest
-//     ? `http://localhost:${port}`
-//     : process.env.NEXT_PUBLIC_API_URL?.trim() || `${baseUrl}/api`;
-//
-export const API_URL: string = process.env.NEXT_PUBLIC_API_URL!;
+export const API_URL: string =
+  isDev || isTest
+    ? `http://localhost:${port}`
+    : process.env.NEXT_PUBLIC_API_URL?.trim() || `${baseUrl}/api`;
+
+// export const API_URL: string = process.env.NEXT_PUBLIC_API_URL!;
 export const USE_MOCK_DATA =
   process.env.NEXT_PUBLIC_USE_MOCK_DATA === "true" ||
   (!process.env.NEXT_PUBLIC_API_URL && !process.env.NEXT_PUBLIC_BASE_URL);
