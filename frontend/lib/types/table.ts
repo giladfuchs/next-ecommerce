@@ -46,7 +46,7 @@ export const columns_order: ColDef<Order>[] = [
   },
   {
     field: "cost",
-    width: 80,
+    width: 90,
   },
   {
     field: "items",
@@ -57,7 +57,7 @@ export const columns_order: ColDef<Order>[] = [
   },
   {
     field: "status",
-    width: 100,
+    width: 120,
     cellRenderer: "OrderStatusRenderer",
   },
 ] as ColDef<Order>[];

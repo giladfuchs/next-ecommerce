@@ -87,10 +87,57 @@ export enum OrderStatus {
   CANCELED = "canceled",
 }
 
-export const email_data = {
-  subjectPrefix: "אישור הזמנה - מס'",
-  greeting: "שלום",
-  confirmation: "ההזמנה שלך נקלטה.",
-  orderNumberLabel: "מספר הזמנה:",
-  totalLabel: `סה"כ לתשלום: ₪`,
-};
+
+const messages = {
+  he: {
+    subjectPrefix: "אישור הזמנה - מס'",
+    greeting: "שלום",
+    confirmation: "ההזמנה שלך נקלטה.",
+    orderNumberLabel: "מספר הזמנה:",
+    totalLabel: `סה"כ לתשלום: ₪`,
+    adminOrderNotification: (id: number) =>
+        `📦 התקבלה הזמנה חדשה באתר ${process.env.EMAIL_FROM_NAME}!\n\n🔗 לצפייה בהזמנה: ${process.env.STORE_BASE_URL}/admin/${ModelType.order}/${id}`,
+    emailOrderHtml: {
+      greeting: "שלום", // he
+      confirmation: "ההזמנה שלך התקבלה בהצלחה.",
+      total: "סה\"כ לתשלום:",
+      orderNumber: "מספר הזמנה:",
+      thanks: "תודה שקנית אצלנו 💚",
+      headers: {
+        image: "תמונה",
+        product: "מוצר",
+        quantity: "כמות",
+        price: "מחיר",
+        total: "סה\"כ",
+      },
+    },
+  },
+  en: {
+    subjectPrefix: "Order Confirmation - No.",
+    greeting: "Hello",
+    confirmation: "Your order has been received.",
+    orderNumberLabel: "Order Number:",
+    totalLabel: "Total Amount: ₪",
+    adminOrderNotification: (id: number) =>
+        `📦 A new order has been placed on ${process.env.EMAIL_FROM_NAME}!\n\n🔗 View it here: ${process.env.STORE_BASE_URL}/admin/${ModelType.order}/${id}`,
+    emailOrderHtml: {
+      greeting: "Hello",
+      confirmation: "Your order was received successfully.",
+      total: "Total to Pay:",
+      orderNumber: "Order Number:",
+      thanks: "Thank you for shopping with us 💚",
+      headers: {
+        image: "Image",
+        product: "Product",
+        quantity: "Quantity",
+        price: "Price",
+        total: "Total",
+      },
+    },
+  },};
+
+
+export function getMessages(): typeof messages["en"] {
+  const lang = process.env.LANG === "he" ? "he" : "en";
+  return messages[lang];
+}
