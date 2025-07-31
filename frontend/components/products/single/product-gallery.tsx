@@ -44,64 +44,64 @@ export default function ProductGalleryClient({ images, isRtl }: PropsProductGall
           priority
         />
 
-        {images.length > 1 && (
-          <Box
-            sx={{
-              position: "absolute",
-              bottom: "1%",
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: isRtl ? "row" : "row-reverse",
-                alignItems: "center",
-                gap: "2rem",
-              }}
-            >
-              <Button
-                onClick={isRtl ? prev : next}
-                aria-label="Next product image"
-                sx={{
-                  minWidth: 0,
-                  padding: 0,
-                  width: "3rem",
-                  height: "3rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  "&:hover": {
-                    transform: "scale(1.2)",
-                  },
-                }}
+          {images.length > 1 && (
+              <Box
+                  sx={{
+                      position: "absolute",
+                      bottom: "0.5rem",
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                  }}
               >
-                <ChevronRightIcon sx={{ fontSize: "2rem" }} />
-              </Button>
+                  <Box
+                      sx={{
+                          display: "flex",
+                          flexDirection: isRtl ? "row" : "row-reverse",
+                          alignItems: "center",
+                          gap: "2rem",
+                      }}
+                  >
+                      <Button
+                          onClick={isRtl ? prev : next}
+                          aria-label="Next product image"
+                          sx={{
+                              minWidth: 0,
+                              width: "2.5rem",
+                              height: "2.5rem",
+                              borderRadius: "50%",
+                              bgcolor: "white",
+                              boxShadow: 1,
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              "&:hover": { transform: "scale(1.2)" },
+                          }}
+                      >
+                          <ChevronRightIcon sx={{ fontSize: "2rem" }} />
+                      </Button>
 
-              <Button
-                onClick={isRtl ? next : prev}
-                aria-label="Previous product image"
-                sx={{
-                  minWidth: 0,
-                  padding: 0,
-                  width: "3rem",
-                  height: "3rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  "&:hover": {
-                    transform: "scale(1.2)",
-                  },
-                }}
-              >
-                <ChevronLeftIcon sx={{ fontSize: "2rem" }} />
-              </Button>
-            </Box>
-          </Box>
-        )}
+                      <Button
+                          onClick={isRtl ? next : prev}
+                          aria-label="Previous product image"
+                          sx={{
+                              minWidth: 0,
+                              width: "2.5rem",
+                              height: "2.5rem",
+                              borderRadius: "50%",
+                              bgcolor: "white",
+                              boxShadow: 1,
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              "&:hover": { transform: "scale(1.2)" },
+                          }}
+                      >
+                          <ChevronLeftIcon sx={{ fontSize: "2rem" }} />
+                      </Button>
+                  </Box>
+              </Box>
+          )}
       </Box>
 
       {images.length > 1 && (
@@ -133,8 +133,8 @@ export default function ProductGalleryClient({ images, isRtl }: PropsProductGall
                 onClick={() => setImageIndex(idx)}
                 aria-label="Select product image"
                 sx={{
-                  width: "100%",
-                  height: "100%",
+                  width: "98%",
+                  height: "94%",
                   minWidth: 0,
                   padding: 0,
                 }}

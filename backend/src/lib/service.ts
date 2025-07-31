@@ -4,7 +4,6 @@ import { Repository } from "typeorm";
 import nodemailer from "nodemailer";
 
 import {
-  messages,
   HttpError,
   ModelType,
   NotFoundError,
