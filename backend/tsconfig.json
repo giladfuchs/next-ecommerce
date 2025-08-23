@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "types": ["node", "vitest", "express", "supertest"],
+    "target": "ES2021",
+    "module": "CommonJS",
+    "rootDir": ".",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "sourceMap": true
+  },
+  "include": ["src", "scripts", "tests", "**/*.ts"]
+}
