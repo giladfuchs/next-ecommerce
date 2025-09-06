@@ -1,0 +1,34 @@
+# Node
+node_modules/
+scripts/data
+scripts/backup
+package-lock.json
+dist/
+build/
+.env
+.idea
+.vscode
+push_to_prod.sh
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Vercel
+.vercel/
+##git diff --quiet HEAD^ HEAD . ':!backend'
+
+# tsx cache
+.turbo/
+.cache/
+.tscache/
