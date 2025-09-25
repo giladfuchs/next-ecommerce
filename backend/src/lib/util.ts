@@ -137,6 +137,6 @@ const messages = {
 };
 
 export function getMessages(): (typeof messages)["en"] {
-  const lang = process.env.LANG === "he" ? "he" : "en";
+  const lang = process.env.LANGUAGE === "he" ? "he" : "en";
   return messages[lang];
 }

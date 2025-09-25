@@ -148,7 +148,7 @@ function getTransporter() {
 
 export function generateOrderEmailHtml(order: Order) {
   const messages = getMessages().emailOrderHtml;
-  const dir = process.env.LANG === "he" ? "rtl" : "ltr";
+  const dir = process.env.LANGUAGE === "he" ? "rtl" : "ltr";
   const align = dir === "rtl" ? "right" : "left";
   const currency = dir === "rtl" ? "₪" : "$";
 

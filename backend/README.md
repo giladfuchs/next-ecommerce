@@ -5,6 +5,7 @@ Designed to power a Next.js storefront and admin panel — including product man
 
 ---
 
+
 ## 🚀 Getting Started
 
 To run the project locally:
