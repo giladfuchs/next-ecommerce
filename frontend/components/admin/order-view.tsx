@@ -24,7 +24,16 @@ export const OrderInfoList = ({ order }: { order: Order }) => {
       {items.map(({ icon, label, value, extra, iconSx }, i) => (
         <ListItem key={label + i} disableGutters>
           <ListItemIcon sx={{ minWidth: 40, ...(iconSx ?? {}) }}>
-            {icon}
+            {label === "order.phone" ? (
+              <a
+                href={`tel:${value}`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {icon}
+              </a>
+            ) : (
+              icon
+            )}
           </ListItemIcon>
           <ListItemText
             primary={<FormattedMessage id={label} />}
@@ -36,6 +45,7 @@ export const OrderInfoList = ({ order }: { order: Order }) => {
       ))}
     </List>
   );
+
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Grid container spacing={2} mb={4}>

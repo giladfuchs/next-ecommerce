@@ -32,7 +32,7 @@
     "debug": "npx --node-arg=--inspect-brk tsx src/dev.ts",
     "debug:script": "node --inspect-brk node_modules/.bin/tsx scripts/make_backup.ts",
     "typecheck": "tsc --noEmit",
-    "prettier": "npx prettier --write .",
+    "format": "npx prettier --write .",
     "build": "pnpm typecheck && tsc",
     "start": "node dist/index.js",
     "test": "vitest run",
