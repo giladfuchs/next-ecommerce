@@ -27,10 +27,9 @@
   },
   "scripts": {
     "dev": "tsx src/dev.ts",
-    "cron": "tsx scripts/cron.ts",
     "nodemon": "nodemon --exec tsx src/dev.ts",
-    "debug": "npx --node-arg=--inspect-brk tsx src/dev.ts",
-    "debug:script": "node --inspect-brk node_modules/.bin/tsx scripts/make_backup.ts",
+    "debug": "tsx --inspect src/dev.ts",
+    "debug:script": "tsx --inspect-brk scripts/make_backup.ts",
     "typecheck": "tsc --noEmit",
     "format": "npx prettier --write .",
     "build": "pnpm typecheck && tsc",
