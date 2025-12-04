@@ -1,7 +1,4 @@
 "use client";
-import { useState } from "react";
-import { FormattedMessage } from "react-intl";
-import { useRouter, usePathname } from "next/navigation";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
   Box,
@@ -13,8 +10,12 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import { ModelType } from "@/lib/types";
+import { useRouter, usePathname } from "next/navigation";
+import { useState } from "react";
+import { FormattedMessage } from "react-intl";
+
 import { localeCache } from "@/lib/config";
+import { ModelType } from "@/lib/types";
 
 const AdminNavItem = ({
   model,

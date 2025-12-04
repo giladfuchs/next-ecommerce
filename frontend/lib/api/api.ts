@@ -1,33 +1,46 @@
-import {
+import { setGlobalLoading } from "@/lib/provider/LoadingProvider";
+
+import { API_URL, isTest, USE_MOCK_DATA } from "../config";
+
+import type {
   Order,
   OrderStatus,
   ModelType,
   AGTableModelType,
   NewOrderPayload,
   ResponseData,
+  FieldValue,
 } from "../types";
-import { setGlobalLoading } from "@/lib/provider/LoadingProvider";
-import { API_URL, isTest, USE_MOCK_DATA } from "../config";
+
+type ServerFetchInit = Omit<RequestInit, "body"> & {
+  body?: unknown;
+};
 
 export async function serverFetch(
   input: string,
-  init: RequestInit = {},
+  init: ServerFetchInit = {},
 ): Promise<Response> {
   const { body, ...restInit } = init;
 
   const isBrowser = typeof window !== "undefined";
 
-  let finalBody = body;
+  let finalBody: BodyInit | undefined = undefined;
   const finalHeaders: Record<string, string> = {};
 
-  if (body && !(body instanceof FormData)) {
-    finalBody = JSON.stringify(body);
-    finalHeaders["Content-Type"] = "application/json";
+  if (body != null) {
+    if (body instanceof FormData) {
+      finalBody = body;
+    } else {
+      finalBody = JSON.stringify(body);
+      finalHeaders["Content-Type"] = "application/json";
+    }
   }
+
   if (isBrowser) {
     setGlobalLoading(true);
-    if (localStorage.getItem("token")) {
-      finalHeaders["Authorization"] = `Bearer ${localStorage.getItem("token")}`;
+    const token = localStorage.getItem("token");
+    if (token) {
+      finalHeaders["Authorization"] = `Bearer ${token}`;
     }
   }
 
@@ -35,15 +48,19 @@ export async function serverFetch(
     ...restInit,
     headers: finalHeaders,
     body: finalBody,
-  } as RequestInit;
+  };
 
   if (!isBrowser && !isTest) {
-    fetchInit["cache"] = "force-cache";
-    fetchInit["next"] = { revalidate: 60 };
+    const serverInit = fetchInit as RequestInit & {
+      next: { revalidate: number };
+    };
+    serverInit.cache = "force-cache";
+    serverInit.next = { revalidate: 60 };
   }
 
   try {
     if (USE_MOCK_DATA) {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
       const { mockResponse } = require("./mock-api");
       return await mockResponse(input);
     }
@@ -54,12 +71,14 @@ export async function serverFetch(
   }
 }
 
-export async function handleResponse<T = any>(
+export async function handleResponse<T>(
   response: Response,
   context: string,
 ): Promise<T> {
   if (!response.ok) {
-    const err = await response.json().catch(() => ({}));
+    const err = (await response.json().catch(() => ({}))) as {
+      error?: string;
+    };
 
     if (response.status === 401 && typeof window !== "undefined") {
       console.warn("⛔ Unauthorized — clearing token and redirecting to login");
@@ -68,10 +87,10 @@ export async function handleResponse<T = any>(
     }
 
     console.error(`❌ Failed to ${context}`);
-    throw new Error(err?.error || `Failed to ${context}`);
+    throw new Error(err.error || `Failed to ${context}`);
   }
 
-  return response.json();
+  return (await response.json()) as T;
 }
 
 let inFlight: Promise<ResponseData> | null = null;
@@ -111,7 +130,7 @@ export async function uploadImage(file: File): Promise<string> {
 export async function submitModel(
   model: ModelType,
   idOrAdd: string,
-  body: any,
+  body: Record<string, FieldValue>,
 ): Promise<AGTableModelType> {
   const res = await serverFetch(`/auth/${model}/${idOrAdd}`, {
     method: "POST",
@@ -124,13 +143,13 @@ export async function submitModel(
 export async function submitOrder(order: NewOrderPayload): Promise<Order> {
   const res = await serverFetch(`/checkout`, {
     method: "POST",
-    body: order as any,
+    body: order,
   });
 
   return handleResponse<Order>(res, "submit order");
 }
 
-export async function getOrders(force = true): Promise<Order[]> {
+export async function getOrders(): Promise<Order[]> {
   const res = await serverFetch(`/auth/orders`);
   return handleResponse(res, "fetch orders");
 }
@@ -150,7 +169,7 @@ export async function updateOrderStatus(
 ): Promise<Order> {
   const res = await serverFetch(`/auth/order/status`, {
     method: "POST",
-    body: { id, status } as any,
+    body: { id, status },
   });
 
   return handleResponse(res, "update order status");
@@ -162,7 +181,7 @@ export async function loginUser(
 ): Promise<{ token: string }> {
   const res = await serverFetch(`/login`, {
     method: "POST",
-    body: { username, password } as any,
+    body: { username, password },
   });
 
   return handleResponse(res, "login");
@@ -175,7 +194,7 @@ export async function registerUser(body: {
 }): Promise<{ token: string }> {
   const res = await serverFetch(`/register`, {
     method: "POST",
-    body: body as any,
+    body: body,
   });
 
   return handleResponse(res, "login");

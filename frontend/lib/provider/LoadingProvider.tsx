@@ -1,12 +1,8 @@
 "use client";
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  ReactNode,
-} from "react";
 import { LinearProgress } from "@mui/material";
+import React, { createContext, useContext, useEffect, useState } from "react";
+
+import type { ReactNode } from "react";
 
 const LoadingContext = createContext({ loading: false });
 export const useLoading = () => useContext(LoadingContext);

@@ -1,9 +1,10 @@
-import { Metadata } from "next";
 import SidebarLayout from "@/components/layout/sidebar";
 import { ProductsSSR } from "@/components/shared/elements-ssr";
-import { metadata_site_description } from "@/lib/assets/i18n/localizedMetadata";
 import { getCategories, getProducts } from "@/lib/api";
+import { metadata_site_description } from "@/lib/assets/i18n/localizedMetadata";
 import { generateMetadataHome, USE_MOCK_DATA } from "@/lib/config";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = generateMetadataHome();
 export const revalidate = 60;

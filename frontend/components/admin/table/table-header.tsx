@@ -1,11 +1,13 @@
 "use client";
-import { ChangeEvent } from "react";
-import { FormattedMessage } from "react-intl";
-import { useRouter } from "next/navigation";
-import { Button, Grid, TextField } from "@mui/material";
 import { Add as AddIcon, Image as ImageIcon } from "@mui/icons-material";
-import { ModelType } from "@/lib/types";
+import { Button, Grid, TextField } from "@mui/material";
+import { useRouter } from "next/navigation";
+import { FormattedMessage } from "react-intl";
+
 import { localeCache } from "@/lib/config";
+import { ModelType } from "@/lib/types";
+
+import type { ChangeEvent } from "react";
 
 const ActionButtons = ({ model }: { model: ModelType }) => {
   const router = useRouter();

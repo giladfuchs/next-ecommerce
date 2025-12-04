@@ -1,8 +1,4 @@
 "use client";
-import { FormattedMessage, useIntl } from "react-intl";
-import Link from "next/link";
-import { Formik } from "formik";
-import { toast } from "sonner";
 import {
   Box,
   Button,
@@ -16,22 +12,27 @@ import {
   OutlinedInput,
   Typography,
 } from "@mui/material";
+import { Formik } from "formik";
+import Link from "next/link";
+import { FormattedMessage, useIntl } from "react-intl";
+import { toast } from "sonner";
+
+import { submitOrder } from "@/lib/api";
 import {
   formikHelperTextSx,
   formikTextFieldSx,
 } from "@/lib/assets/styles/style";
-import { RootState, useAppDispatch, useAppSelector } from "@/lib/store";
-import {
+import { localeCache } from "@/lib/config";
+import { useAppDispatch, useAppSelector } from "@/lib/store";
+import { clearCart } from "@/lib/store/cartSlice";
+import { checkout_fields, getCheckoutValidationSchema } from "@/lib/types";
+
+import type {
   Cart,
   CheckoutFormValues,
   NewOrderPayload,
   Order,
-  checkout_fields,
-  getCheckoutValidationSchema,
 } from "@/lib/types";
-import { submitOrder } from "@/lib/api";
-import { clearCart } from "@/lib/store/cartSlice";
-import { localeCache } from "@/lib/config";
 
 const CheckoutActions = ({ isSubmitting }: { isSubmitting: boolean }) => {
   return (

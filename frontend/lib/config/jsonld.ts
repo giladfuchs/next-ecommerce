@@ -1,5 +1,7 @@
-import { Category, ModelType, Product } from "@/lib/types";
 import { baseUrl } from "@/lib/config";
+import { ModelType } from "@/lib/types";
+
+import type { Category, Product } from "@/lib/types";
 
 export const generateJsonLdProduct = (product: Product) => {
   const url = `${baseUrl}/${ModelType.product}/${encodeURIComponent(product.handle)}`;

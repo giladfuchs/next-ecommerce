@@ -1,8 +1,10 @@
 "use client";
 import { Grid } from "@mui/material";
+
+import { OrderErrorMessage } from "@/components/shared/messages";
+
 import CheckoutForm from "./checkout-form";
 import CheckoutSummary from "./checkout-summary";
-import { OrderErrorMessage } from "@/components/shared/messages";
 
 export default function CheckoutLayout({
   onSuccess,

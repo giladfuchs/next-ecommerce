@@ -7,12 +7,17 @@ import { initDBMiddleware } from "./lib/db";
 
 const app = express();
 
-const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(",");
+// If running locally, allow all origins
+const allowedOrigins =
+    process.env.NODE_ENV === "development"
+        ? "*"
+        : process.env.ALLOWED_ORIGINS?.split(",");
+
 app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-  }),
+    cors({
+        origin: allowedOrigins,
+        credentials: true,
+    }),
 );
 
 app.use(express.json());

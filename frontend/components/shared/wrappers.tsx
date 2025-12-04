@@ -1,8 +1,9 @@
 "use client";
 import dynamic from "next/dynamic";
-import { Category, Product } from "@/lib/types";
-import { PropsProductGallery } from "@/components/products/single/product-gallery";
-import { PropsProductButtons } from "@/components/products/single/product-buttons";
+
+import type { PropsProductButtons } from "@/components/products/single/product-buttons";
+import type { PropsProductGallery } from "@/components/products/single/product-gallery";
+import type { Category, Product } from "@/lib/types";
 
 const ProductsClient = dynamic(() => import("@/components/products"), {
   ssr: false,

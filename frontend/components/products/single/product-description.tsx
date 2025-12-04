@@ -1,8 +1,9 @@
 import { Box, Divider, Grid } from "@mui/material";
 
 import { Price } from "@/components/shared/elements-ssr";
-import { Product } from "@/lib/types";
 import { ProductButtons } from "@/components/shared/wrappers";
+
+import type { Product } from "@/lib/types";
 
 export default function ProductDescription({
   product,

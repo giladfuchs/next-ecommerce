@@ -18,10 +18,13 @@
   - Cart auto-resets 7 days after initial creation (`createdAt`), regardless of interaction.
 */
 
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { createTransform } from "redux-persist";
-import { Cart, CartItem, Product } from "@/lib/types";
+
 import { SEVEN_DAYS } from "@/lib/config";
+
+import type { RootState } from "@/lib/store";
+import type { Cart, CartItem, Product } from "@/lib/types";
 
 function createEmptyCart(): Cart {
   return {
@@ -35,17 +38,17 @@ function createEmptyCart(): Cart {
 const initialState: Cart = createEmptyCart();
 
 export const resetCartTransform = createTransform(
-  (inboundState) => inboundState,
-  (outboundState: any) => {
+  (inboundState: RootState["cart"]) => inboundState,
+  (outboundState: RootState["cart"]) => {
     const isValid =
       outboundState?.createdAt && Array.isArray(outboundState?.lines);
     const isExpired =
       isValid && Date.now() - outboundState.createdAt > SEVEN_DAYS;
+
     return isValid && !isExpired ? { ...outboundState } : createEmptyCart();
   },
   { whitelist: ["cart"] },
 );
-
 function calculateTotals(lines: CartItem[]) {
   const totalQuantity = lines.reduce((sum, item) => sum + item.quantity, 0);
   const totalAmount = lines.reduce((sum, item) => sum + item.totalAmount, 0);

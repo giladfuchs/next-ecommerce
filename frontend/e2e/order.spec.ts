@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+
 import { TEST_BASE_URL } from "./global-setup";
 import {
   checkoutAfterAddingProducts,

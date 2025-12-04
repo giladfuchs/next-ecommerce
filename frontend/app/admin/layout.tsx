@@ -1,11 +1,11 @@
 "use client";
-
-import { ReactNode, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import "ag-grid-community/styles/ag-theme-quartz.css";
-
 import { ModuleRegistry, AllCommunityModule } from "ag-grid-community";
 ModuleRegistry.registerModules([AllCommunityModule]);
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+
+import type { ReactNode } from "react";
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
   const router = useRouter();
@@ -27,7 +27,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
     return () => {
       document.body.classList.remove("admin");
     };
-  }, []);
+  }, [router]);
 
   if (!isAllowed) return null;
 

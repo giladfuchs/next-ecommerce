@@ -1,7 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import Label from "./label";
 import { Box } from "@mui/material";
+import Image from "next/image";
+import React from "react";
+
+import Label from "./label";
 
 export default function GridTileImage({
   active,

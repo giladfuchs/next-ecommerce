@@ -1,4 +1,5 @@
 import { Box, Typography, IconButton, Grid } from "@mui/material";
+
 import { metadata_site_title } from "@/lib/assets/i18n/localizedMetadata";
 import { localeCache, SOCIAL_LINKS, email, address, phone } from "@/lib/config";
 

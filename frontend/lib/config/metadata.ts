@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import {
   getCategoryTitle,
   getCategoryDescription,
@@ -12,7 +11,10 @@ import {
   ICON_IMAGE_URL,
   SITE_NAME,
 } from "@/lib/config";
-import { Category, ModelType, Product } from "@/lib/types";
+import { ModelType } from "@/lib/types";
+
+import type { Category, Product } from "@/lib/types";
+import type { Metadata } from "next";
 export const generateMetadataHome = (): Metadata => {
   return {
     title: metadata_site_title,

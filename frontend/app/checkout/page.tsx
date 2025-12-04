@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
 import { Container } from "@mui/material";
+import { useState } from "react";
+
 import CheckoutLayout from "@/components/checkout";
 import { OrderSuccessMessage } from "@/components/shared/messages";
 

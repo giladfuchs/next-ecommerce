@@ -1,8 +1,4 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import { useIntl, FormattedMessage } from "react-intl";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { toast } from "sonner";
 import {
   AdminPanelSettings as AdminPanelSettingsIcon,
   Logout as LogoutIcon,
@@ -15,9 +11,15 @@ import {
   Tooltip,
   IconButton,
 } from "@mui/material";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useState, useEffect, useRef } from "react";
+import { useIntl, FormattedMessage } from "react-intl";
+import { toast } from "sonner";
+
 import Cart from "@/components/cart";
-import AdminNav from "./admin-nav";
 import { localeCache } from "@/lib/config";
+
+import AdminNav from "./admin-nav";
 
 const Search = () => {
   const intl = useIntl();

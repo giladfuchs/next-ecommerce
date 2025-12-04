@@ -1,16 +1,18 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import { Dialog, DialogContent } from "@mui/material";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+
+import { localeCache } from "@/lib/config";
+import { updateItem, useAppDispatch, useAppSelector } from "@/lib/store";
+
+import { OpenCart } from "./cart-buttons";
 import {
   CartCheckoutSection,
   CartEmptyState,
   CartHeader,
   CartItemList,
 } from "./cart-content";
-import { OpenCart } from "./cart-buttons";
-import { updateItem, useAppDispatch, useAppSelector } from "@/lib/store";
-import { localeCache } from "@/lib/config";
 
 export default function Cart() {
   const dispatch = useAppDispatch();
@@ -93,11 +95,7 @@ export default function Cart() {
           }}
         >
           {hasItems ? (
-            <CartItemList
-              cart={cart}
-              optimisticUpdate={optimisticUpdate}
-              closeCart={closeCart}
-            />
+            <CartItemList cart={cart} optimisticUpdate={optimisticUpdate} />
           ) : (
             <CartEmptyState />
           )}

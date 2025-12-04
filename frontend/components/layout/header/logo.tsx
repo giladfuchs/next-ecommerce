@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { Box } from "@mui/material";
+import Image from "next/image";
+
 import { ICON_IMAGE_URL } from "@/lib/config/config";
 
 export default function Logo() {

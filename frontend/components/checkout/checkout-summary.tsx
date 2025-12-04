@@ -1,10 +1,12 @@
 "use client";
-import { FormattedMessage } from "react-intl";
 import { Box, Divider, Grid, Typography } from "@mui/material";
+import { FormattedMessage } from "react-intl";
+
 import { Price } from "@/components/shared/elements-ssr";
-import { useAppSelector } from "@/lib/store";
 import { localeCache } from "@/lib/config";
-import { Cart, CartItem } from "@/lib/types";
+import { useAppSelector } from "@/lib/store";
+
+import type { Cart, CartItem } from "@/lib/types";
 
 const CheckoutSummaryItem = ({ product }: { product: CartItem }) => (
   <Grid

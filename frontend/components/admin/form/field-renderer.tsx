@@ -1,35 +1,44 @@
 "use client";
-import { useIntl } from "react-intl";
 import {
   TextField,
   Autocomplete,
   FormControlLabel,
   Switch,
 } from "@mui/material";
+import { useIntl } from "react-intl";
+
+import { useAppSelector } from "@/lib/store";
+import { FormType, ModelType } from "@/lib/types";
 
 import ImagesEditor from "./images-editor";
-import {
+
+import type {
+  FieldValue,
   FormField,
-  FormType,
   ProductImage,
-  ModelType,
   Category,
 } from "@/lib/types";
-import { useAppSelector } from "@/lib/store";
 
 type FormFieldProps = {
   field: FormField;
-  onChange: (value: any, key: string) => void;
+  onChange: (value: FieldValue, key: string) => void;
 };
 
 export default function FieldRenderer({ field, onChange }: FormFieldProps) {
   const intl = useIntl();
   const placeholder = intl.formatMessage({ id: `form.label.${field.key}` });
-  let options: any[] = [];
-  if (field.key === ModelType.category && FormType.AutoComplete === field.type)
-    options = (
-      useAppSelector((state) => state.admin[ModelType.category]) as Category[]
-    ).map((c) => c.title);
+  const categories = useAppSelector(
+    (state) => state.admin[ModelType.category],
+  ) as Category[];
+
+  let options: string[] = [];
+
+  if (
+    field.key === ModelType.category &&
+    field.type === FormType.AutoComplete
+  ) {
+    options = categories.map((c) => c.title);
+  }
   switch (field.type) {
     case FormType.ImagesEditor:
       return (
@@ -38,7 +47,9 @@ export default function FieldRenderer({ field, onChange }: FormFieldProps) {
           images={
             Array.isArray(field.value) ? (field.value as ProductImage[]) : []
           }
-          onChange={(updatedImages) => onChange(updatedImages, field.key)}
+          onChange={(updatedImages) =>
+            onChange(updatedImages as unknown as FieldValue, field.key)
+          }
         />
       );
 

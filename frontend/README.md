@@ -1,6 +1,6 @@
 # Next.js E-commerce Frontend 🛍️
 
-A modern, accessible e-commerce storefront built with **Next.js 15**, **TypeScript**, **MUI**.  
+A modern, accessible e-commerce storefront built with **Next.js 16**, **TypeScript**, **MUI**.  
 Includes a full admin dashboard, product editor, order management, and support for both **mock mode** and **real API** connections.
 
 ---

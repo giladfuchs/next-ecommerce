@@ -1,15 +1,17 @@
 "use client";
-import { memo } from "react";
-import { FormattedMessage } from "react-intl";
-import { Box, Button, IconButton } from "@mui/material";
 import {
   Add as AddIcon,
   Remove as RemoveIcon,
   Delete as DeleteIcon,
   ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
-import type { CartItem } from "@/lib/types";
+import { Box, Button, IconButton } from "@mui/material";
+import { memo } from "react";
+import { FormattedMessage } from "react-intl";
+
 import { localeCache } from "@/lib/config";
+
+import type { CartItem } from "@/lib/types";
 
 export const DeleteItemButton = memo(
   ({

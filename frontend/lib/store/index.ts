@@ -6,16 +6,16 @@ import {
   combineReducers,
   type Reducer,
 } from "@reduxjs/toolkit";
-import { persistReducer, persistStore } from "redux-persist";
-import storage from "redux-persist/lib/storage";
 import {
   useDispatch,
   useSelector,
   type TypedUseSelectorHook,
 } from "react-redux";
+import { persistReducer, persistStore } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-import cartReducer, { resetCartTransform } from "./cartSlice";
 import adminReducer from "./adminSlice";
+import cartReducer, { resetCartTransform } from "./cartSlice";
 
 const rootReducer = combineReducers({
   cart: cartReducer,

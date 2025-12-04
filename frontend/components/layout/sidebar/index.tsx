@@ -1,7 +1,9 @@
-import { ReactNode } from "react";
 import { Box } from "@mui/material";
+
 import Categories from "./categories";
-import { Category } from "@/lib/types";
+
+import type { Category } from "@/lib/types";
+import type { ReactNode } from "react";
 
 export default function SidebarLayout({
   children,

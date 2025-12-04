@@ -1,14 +1,17 @@
 "use client";
-import { useIntl, FormattedMessage } from "react-intl";
-import { Box, Button, IconButton, Tooltip } from "@mui/material";
 import {
   Add as AddIcon,
   Share as ShareIcon,
   Facebook as FacebookIcon,
 } from "@mui/icons-material";
-import { addItem, useAppDispatch } from "@/lib/store";
+import { Box, Button, IconButton, Tooltip } from "@mui/material";
+import { useIntl, FormattedMessage } from "react-intl";
+
 import { baseUrl } from "@/lib/config/config";
-import { Product, ModelType } from "@/lib/types";
+import { addItem, useAppDispatch } from "@/lib/store";
+import { ModelType } from "@/lib/types";
+
+import type { Product } from "@/lib/types";
 
 export type PropsProductButtons = {
   product: Product;

@@ -1,5 +1,6 @@
-import ProductsGrid, { ProductItem } from "@/components/products/grid";
 import { Box, Skeleton } from "@mui/material";
+
+import ProductsGrid, { ProductItem } from "@/components/products/grid";
 
 export function LoadingProductsList() {
   return (

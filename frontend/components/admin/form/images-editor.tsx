@@ -1,9 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
-import { toast } from "sonner";
-import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
-import { TreeItem } from "@mui/x-tree-view/TreeItem";
 import {
   Image as ImageIcon,
   ContentPaste as ContentPasteIcon,
@@ -17,8 +12,15 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { ProductImage } from "@/lib/types";
+import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
+import { TreeItem } from "@mui/x-tree-view/TreeItem";
+import { useEffect, useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+import { toast } from "sonner";
+
 import { MAX_IMAGES } from "@/lib/config/config";
+
+import type { ProductImage } from "@/lib/types";
 
 export default function ImagesEditor({
   placeholder,
@@ -27,7 +29,7 @@ export default function ImagesEditor({
 }: {
   placeholder: string;
   images: ProductImage[];
-  onChange: (value: any) => void;
+  onChange: (value: ProductImage[]) => void;
 }) {
   const intl = useIntl();
   const [imagesState, setImagesState] = useState<ProductImage[]>(images);
@@ -46,6 +48,7 @@ export default function ImagesEditor({
 
   useEffect(() => {
     onChange(imagesState);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [imagesState]);
 
   const handleClipboardPaste = async (index: number) => {

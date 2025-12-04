@@ -1,14 +1,15 @@
 "use client";
+import { Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 import { useIntl, FormattedMessage } from "react-intl";
 import { toast } from "sonner";
-import { Box, Button, Typography } from "@mui/material";
-import { useLoading, setGlobalLoading } from "@/lib/provider/LoadingProvider";
-import { uploadImage } from "@/lib/api";
+
 import {
   UploadControls,
   UploadedImagePreview,
 } from "@/components/admin/form/image-upload";
+import { uploadImage } from "@/lib/api";
+import { useLoading, setGlobalLoading } from "@/lib/provider/LoadingProvider";
 
 export default function UploadImagePage() {
   const { loading } = useLoading();
@@ -26,11 +27,15 @@ export default function UploadImagePage() {
       toast.success(intl.formatMessage({ id: "image.upload.success" }), {
         description: `URL: ${url}`,
       });
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const message =
+        (err instanceof Error && err.message) ||
+        intl.formatMessage({ id: "image.upload.retry" });
+
       toast.error(intl.formatMessage({ id: "image.upload.error" }), {
-        description:
-          err?.message || intl.formatMessage({ id: "image.upload.retry" }),
+        description: message,
       });
+
       setImageUrl(null);
     } finally {
       setGlobalLoading(false);

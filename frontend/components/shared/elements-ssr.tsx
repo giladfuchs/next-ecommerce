@@ -1,12 +1,16 @@
-import Link from "next/link";
-import { ComponentProps } from "react";
 import { Typography } from "@mui/material";
+import Link from "next/link";
+
+import { localeCache } from "@/lib/config";
+import { shuffleArray } from "@/lib/helper";
+
 import { ProductItem } from "../products/grid";
 import GridTileImage from "../products/grid/tile";
+
 import { Products } from "./wrappers";
-import { localeCache } from "@/lib/config";
-import { Product } from "@/lib/types";
-import { shuffleArray } from "@/lib/helper";
+
+import type { Product } from "@/lib/types";
+import type { ComponentProps } from "react";
 
 export const Price = ({
   amount,

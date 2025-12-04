@@ -1,13 +1,15 @@
-import { FormattedMessage, useIntl } from "react-intl";
-import { ChangeEvent } from "react";
-import { toast } from "sonner";
 import {
   ContentCopy as ContentCopyIcon,
   OpenInNew as OpenInNewIcon,
 } from "@mui/icons-material";
+import { Box, Button, Typography } from "@mui/material";
+import { FormattedMessage, useIntl } from "react-intl";
+import { toast } from "sonner";
+
 import { image_upload_style } from "@/lib/assets/styles/style";
 import { MAX_FILE_SIZE_MB } from "@/lib/config/config";
-import { Box, Button, Typography } from "@mui/material";
+
+import type { ChangeEvent } from "react";
 
 export const UploadControls = ({
   file,
@@ -94,6 +96,7 @@ export const UploadedImagePreview = ({ imageUrl }: { imageUrl: string }) => {
         </Typography>
       </Box>
       <Box mt={2} p={1} border="1px solid #ccc" borderRadius={2}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={imageUrl}
           alt="Uploaded"
