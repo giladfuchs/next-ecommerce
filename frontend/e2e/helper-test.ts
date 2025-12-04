@@ -1,6 +1,9 @@
-import { expect, Locator, Page } from "@playwright/test";
+import { expect } from "@playwright/test";
+
 import { TEST_BASE_URL } from "./global-setup";
-import { ModelType } from "@/lib/types";
+
+import type { ModelType } from "@/lib/types";
+import type { Locator, Page } from "@playwright/test";
 
 // ---shop
 export async function fillCheckoutForm(

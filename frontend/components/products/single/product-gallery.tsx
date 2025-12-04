@@ -1,13 +1,15 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
-import { Box, Button } from "@mui/material";
 import {
   ChevronLeft as ChevronLeftIcon,
   ChevronRight as ChevronRightIcon,
 } from "@mui/icons-material";
+import { Box, Button } from "@mui/material";
+import Image from "next/image";
+import { useState } from "react";
+
 import GridTileImage from "@/components/products/grid/tile";
-import { ProductImage } from "@/lib/types";
+
+import type { ProductImage } from "@/lib/types";
 
 export type PropsProductGallery = {
   images: ProductImage[];

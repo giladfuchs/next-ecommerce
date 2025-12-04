@@ -1,6 +1,4 @@
 "use client";
-import { useIntl, FormattedMessage } from "react-intl";
-import { toast } from "sonner";
 import {
   Box,
   Grid,
@@ -10,12 +8,18 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import { useIntl, FormattedMessage } from "react-intl";
+import { toast } from "sonner";
+
 import { OrderStatusDisplay } from "@/components/shared/elements-client";
 import { Price } from "@/components/shared/elements-ssr";
 import { updateOrderStatus } from "@/lib/api";
-import { Order, OrderItem, OrderStatus } from "@/lib/types";
-import { getOrderInfoSections, OrderInfoItem, localeCache } from "@/lib/config";
+import { getOrderInfoSections, localeCache } from "@/lib/config";
 import { statusOptions } from "@/lib/config/mappings";
+
+import type { OrderInfoItem } from "@/lib/config";
+import type { Order, OrderItem, OrderStatus } from "@/lib/types";
+
 export const OrderInfoList = ({ order }: { order: Order }) => {
   const { left, right } = getOrderInfoSections(order);
 
@@ -149,15 +153,15 @@ export const OrderStatusActions = ({
                     },
                   );
                   setOrder(updated);
-                } catch (err: any) {
+                } catch (err: unknown) {
+                  const message =
+                    (err instanceof Error && err.message) ||
+                    intl.formatMessage({ id: "order.statusUpdate.retry" });
+
                   toast.error(
                     "❌ " +
                       intl.formatMessage({ id: "order.statusUpdate.error" }),
-                    {
-                      description:
-                        err?.message ||
-                        intl.formatMessage({ id: "order.statusUpdate.retry" }),
-                    },
+                    { description: message },
                   );
                 }
               }}

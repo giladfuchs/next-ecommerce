@@ -1,6 +1,4 @@
 "use client";
-import { CSSProperties, RefObject, useEffect, useRef, useState } from "react";
-import { useIntl } from "react-intl";
 import {
   Chip,
   Dialog,
@@ -10,12 +8,17 @@ import {
   Button,
   Autocomplete,
   TextField,
-  AutocompleteRenderInputParams,
 } from "@mui/material";
-import { Category, ModelType, OrderStatus } from "@/lib/types";
 import { usePathname, useRouter } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useIntl } from "react-intl";
+
 import { safeDecodeURIComponent } from "@/lib/helper";
-import ProductGalleryClient from "@/components/products/single/product-gallery";
+import { ModelType } from "@/lib/types";
+
+import type { Category, OrderStatus } from "@/lib/types";
+import type { AutocompleteRenderInputParams } from "@mui/material";
+import type { CSSProperties, RefObject } from "react";
 
 type Props = {
   status: OrderStatus;
@@ -109,14 +112,17 @@ export const CategoryAutocompleteClient = ({
 
   const allOption: Category = options[0]!;
 
-  const findSelected = () =>
-    options.find((item) => pathname.endsWith(`${item.handle}`)) ?? allOption;
-
   const [selectedItem, setSelectedItem] = useState<Category>(allOption);
+
+  const findSelected = useCallback(() => {
+    return (
+      options.find((item) => pathname.endsWith(`${item.handle}`)) ?? allOption
+    );
+  }, [options, pathname, allOption]);
 
   useEffect(() => {
     setSelectedItem(findSelected());
-  }, [pathname, options]);
+  }, [findSelected]);
 
   return (
     <Autocomplete

@@ -1,4 +1,4 @@
-import { Category, Product } from "@/lib/types/entities";
+import type { Category, Product } from "@/lib/types/entities";
 
 export type PropsHandle = {
   params: Promise<{ handle: string }>;

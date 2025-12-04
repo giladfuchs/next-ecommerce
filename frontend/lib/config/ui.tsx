@@ -1,4 +1,3 @@
-import { ReactElement, ReactNode } from "react";
 import {
   Facebook as FacebookIcon,
   Instagram as InstagramIcon,
@@ -22,12 +21,14 @@ import {
   MonetizationOnTwoTone,
   WhatsApp,
 } from "@mui/icons-material";
-
 import { Typography } from "@mui/material";
-import { FOOTER_DATA, WHATSAPP_MESSAGE } from "@/lib/config/config";
 import { blue, green, red, purple, lime, orange } from "@mui/material/colors";
-import { Order } from "@/lib/types";
+
 import { Price } from "@/components/shared/elements-ssr";
+import { FOOTER_DATA, WHATSAPP_MESSAGE } from "@/lib/config/config";
+
+import type { Order } from "@/lib/types";
+import type { ReactElement, ReactNode } from "react";
 export const [email, address, phone, instagram, facebook, website] =
   FOOTER_DATA.split(",");
 

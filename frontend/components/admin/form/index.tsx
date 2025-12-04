@@ -1,9 +1,12 @@
 "use client";
-import { FormEvent, useEffect, useState } from "react";
-import { FormattedMessage } from "react-intl";
 import { Grid, Button, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
+
 import FieldRenderer from "./field-renderer";
-import { FormField } from "@/lib/types";
+
+import type { FormField, FieldValue } from "@/lib/types";
+import type { FormEvent } from "react";
 
 interface DynamicFormProps {
   title: string;
@@ -22,7 +25,7 @@ export default function DynamicForm({
     setLocalFields(fields);
   }, [fields]);
 
-  const handleChange = (value: any, key: string) => {
+  const handleChange = (value: FieldValue, key: string) => {
     const updatedFields = localFields.map((field) =>
       field.key === key ? { ...field, value } : field,
     );

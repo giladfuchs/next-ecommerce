@@ -1,17 +1,19 @@
 "use client";
-import { useMemo } from "react";
-import { useSearchParams } from "next/navigation";
 import { Box } from "@mui/material";
-import { Product } from "@/lib/types";
-import { PRODUCTS_PER_PAGE } from "@/lib/config";
-import { filterBySearch } from "@/lib/helper";
+import { useSearchParams } from "next/navigation";
+import { useMemo } from "react";
+
 import ProductsGrid from "@/components/products/grid";
+import { useInfiniteScroll } from "@/components/shared/elements-client";
 import { ProductsDisplay } from "@/components/shared/elements-ssr";
 import {
   NoProductsMessage,
   SearchResultsMessage,
 } from "@/components/shared/messages";
-import { useInfiniteScroll } from "@/components/shared/elements-client";
+import { PRODUCTS_PER_PAGE } from "@/lib/config";
+import { filterBySearch } from "@/lib/helper";
+
+import type { Product } from "@/lib/types";
 export default function ProductsClient({ products }: { products: Product[] }) {
   const searchParams = useSearchParams();
   const searchValue = useMemo(

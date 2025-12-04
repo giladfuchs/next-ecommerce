@@ -1,4 +1,4 @@
-import { AGTableModelType, ModelType, OrderStatus } from "../types";
+import { OrderStatus } from "../types";
 
 export const statusOptions: Record<OrderStatus, OrderStatus[]> = {
   [OrderStatus.NEW]: [

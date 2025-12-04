@@ -1,8 +1,9 @@
 "use client";
+import { Box, Divider, Typography } from "@mui/material";
 import { notFound } from "next/navigation";
 import { use, useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { Box, Divider, Typography } from "@mui/material";
+
 import {
   OrderInfoList,
   OrderItemsList,
@@ -10,10 +11,12 @@ import {
   OrderStatusHeader,
 } from "@/components/admin/order-view";
 import { getOrderById } from "@/lib/api";
-import { ModelType, Order } from "@/lib/types";
+import { localeCache } from "@/lib/config";
 import { array_obj_to_obj_with_key } from "@/lib/helper";
 import { useAppSelector } from "@/lib/store";
-import { localeCache } from "@/lib/config";
+import { ModelType } from "@/lib/types";
+
+import type { Order } from "@/lib/types";
 
 export default function OrderViewPage({
   params,
@@ -35,8 +38,7 @@ export default function OrderViewPage({
       setOrder(obj);
     };
     void init();
-  }, []);
-  if (order === null) return notFound();
+  }, [id, orders]);
 
   const StaticOrderView = useMemo(() => {
     if (!order) return null;
@@ -50,7 +52,9 @@ export default function OrderViewPage({
         <OrderItemsList items={order.items} />
       </>
     );
-  }, [order?.id]);
+  }, [order]);
+
+  if (order === null) return notFound();
 
   return (
     order && (

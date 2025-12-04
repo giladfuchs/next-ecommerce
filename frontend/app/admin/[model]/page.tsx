@@ -1,27 +1,19 @@
 "use client";
-import {
-  ChangeEvent,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-  use,
-} from "react";
 
-import type { ColDef } from "ag-grid-community";
 import { Container, Grid } from "@mui/material";
-import AGTable from "@/components/admin/table";
-import { useLoading } from "@/lib/provider/LoadingProvider";
-import { LoadingTable } from "@/components/shared/loading-skeleton";
-import { TableHeader } from "@/components/admin/table/table-header";
+import { useCallback, useEffect, useMemo, useState, use } from "react";
 
-import {
-  AGTableModelType,
-  get_columns_ag_by_model,
-  ModelType,
-} from "@/lib/types";
+import AGTable from "@/components/admin/table";
+import { TableHeader } from "@/components/admin/table/table-header";
+import { LoadingTable } from "@/components/shared/loading-skeleton";
 import { filterBySearch } from "@/lib/helper";
+import { useLoading } from "@/lib/provider/LoadingProvider";
 import { fetchRowsByModel, useAppDispatch, useAppSelector } from "@/lib/store";
+import { get_columns_ag_by_model } from "@/lib/types";
+
+import type { AGTableModelType, ModelType } from "@/lib/types";
+import type { ColDef } from "ag-grid-community";
+import type { ChangeEvent } from "react";
 
 export default function AdminPage({
   params,

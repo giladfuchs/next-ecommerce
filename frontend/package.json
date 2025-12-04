@@ -5,6 +5,7 @@
   "description": "Frontend for Next.js e-commerce platform",
   "author": "GILAD",
   "license": "MIT",
+  "type": "module",
   "keywords": [
     "nextjs",
     "ecommerce",
@@ -26,6 +27,8 @@
     "start": "next start",
     "format": "npx prettier --write .",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "test": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev:webpack & sleep 2 & pnpm exec playwright test --headed",
     "test:file": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev:webpack & sleep 2 & pnpm exec playwright test e2e/order.spec.ts --headed",
     "codegen:record": "NEXT_PUBLIC_PORT=4010 NODE_ENV=test pnpm dev:webpack & sleep 2 && pnpm exec playwright codegen http://localhost:3000"
@@ -54,14 +57,23 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@next/bundle-analyzer": "^16.0.7",
+    "@next/eslint-plugin-next": "^16.0.7",
     "@playwright/test": "1.54.2",
     "@types/node": "22.14.0",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.7",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-unused-imports": "^4.3.0",
+    "globals": "^16.5.0",
     "prettier": "3.6.2",
     "sass": "^1.86.3",
     "typescript": "5.9.2",
+    "typescript-eslint": "^8.48.1",
     "webpack": "^5.103.0"
   },
   "browserslist": [

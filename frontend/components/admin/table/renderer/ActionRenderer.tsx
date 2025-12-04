@@ -1,20 +1,20 @@
 "use client";
-import Link from "next/link";
-import { useState } from "react";
-import { useIntl } from "react-intl";
-import { toast } from "sonner";
-import { ICellRendererParams } from "ag-grid-community";
-import { IconButton } from "@mui/material";
 import {
   Delete as DeleteIcon,
   Edit as EditIcon,
   Visibility as VisibilityIcon,
 } from "@mui/icons-material";
-
-import { ModelType } from "@/lib/types";
-import { deleteRowById, useAppDispatch } from "@/lib/store";
+import { IconButton } from "@mui/material";
+import Link from "next/link";
+import { useState } from "react";
+import { useIntl } from "react-intl";
+import { toast } from "sonner";
 
 import { DeleteConfirmDialog } from "@/components/shared/elements-client";
+import { deleteRowById, useAppDispatch } from "@/lib/store";
+import { ModelType } from "@/lib/types";
+
+import type { ICellRendererParams } from "ag-grid-community";
 
 export default function ActionRenderer({ data }: ICellRendererParams) {
   const [open, setOpen] = useState(false);
@@ -43,7 +43,7 @@ export default function ActionRenderer({ data }: ICellRendererParams) {
     try {
       await dispatch(deleteRowById({ model, id }));
       toast.success(intl.formatMessage({ id: "delete.success" }, { title }));
-    } catch (err) {
+    } catch {
       toast.error(intl.formatMessage({ id: "delete.error" }, { title }));
     }
   };

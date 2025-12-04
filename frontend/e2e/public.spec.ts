@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+
 import { getByTestIdsOr, gotoHomeAndWait } from "./helper-test";
 
 test("homepage renders category list and product grid", async ({ page }) => {

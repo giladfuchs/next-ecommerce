@@ -1,6 +1,6 @@
 "use client";
-import Link from "next/link";
 import { Box, Typography } from "@mui/material";
+import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 
 export default function NotFound() {

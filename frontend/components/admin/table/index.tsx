@@ -1,21 +1,24 @@
 "use client";
-import { useIntl } from "react-intl";
-import { useRef, useState, useEffect, useMemo, useCallback } from "react";
+import { Typography } from "@mui/material";
 import { AgGridReact } from "ag-grid-react";
+import { useRef, useState, useEffect, useMemo, useCallback } from "react";
+import { useIntl } from "react-intl";
+
+import { localeCache } from "@/lib/config";
+
+import {
+  ActionRenderer,
+  OrderItemsRenderer,
+  OrderStatusRenderer,
+} from "./renderer";
+
 import type {
   ColDef,
   GridReadyEvent,
   FilterChangedEvent,
   ModelUpdatedEvent,
 } from "ag-grid-community";
-import {
-  ActionRenderer,
-  OrderItemsRenderer,
-  OrderStatusRenderer,
-} from "./renderer";
-import { AGTableModelType } from "lib/types";
-import { Typography } from "@mui/material";
-import { localeCache } from "@/lib/config";
+import type { AGTableModelType } from "lib/types";
 
 const defaultColDef: ColDef = { resizable: true, filter: true, sortable: true };
 

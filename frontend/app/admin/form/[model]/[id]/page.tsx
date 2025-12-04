@@ -1,28 +1,28 @@
 "use client";
+import { Container } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState, use } from "react";
 import { useIntl } from "react-intl";
 import { toast } from "sonner";
-import { Container } from "@mui/material";
+
+import DynamicForm from "@/components/admin/form";
+import { FormFieldError } from "@/components/shared/messages";
+import { submitModel } from "@/lib/api";
+import { array_obj_to_obj_with_key, extract_missing_field } from "@/lib/helper";
 import {
   fetchRowsByModel,
   selectCategoryTitleToIdMap,
   useAppDispatch,
   useAppSelector,
 } from "@/lib/store";
-import DynamicForm from "@/components/admin/form";
-import { FormFieldError } from "@/components/shared/messages";
 import {
-  AGTableModelType,
   create_form_fields,
   form_fields_to_data,
-  FormField,
   get_form_by_model,
-  ModelType,
   transform_data_to_body,
 } from "@/lib/types";
-import { submitModel } from "@/lib/api";
-import { array_obj_to_obj_with_key, extract_missing_field } from "@/lib/helper";
+
+import type { AGTableModelType, FormField, ModelType } from "@/lib/types";
 
 export default function FormPage({
   params,
@@ -54,8 +54,11 @@ export default function FormPage({
 
   useEffect(() => {
     void loadData();
+  }, [loadData]);
+
+  useEffect(() => {
     dispatch(fetchRowsByModel({ model }));
-  }, []);
+  }, [dispatch, model]);
 
   const categoryTitleToIdMap: Record<string, number> = useAppSelector(
     selectCategoryTitleToIdMap,
@@ -79,14 +82,23 @@ export default function FormPage({
       });
 
       router.push(`/admin/${model}`);
-    } catch (err: any) {
-      let intlId = typeof err === "string" ? err : "form.error";
+    } catch (err: unknown) {
+      let intlId = "form.error";
 
-      if (typeof err !== "string") {
-        const rawMessage = err?.message || "Unknown error";
+      if (typeof err === "string") {
+        intlId = err;
+      } else if (err && typeof err === "object") {
+        const rawMessage =
+          "message" in err &&
+          typeof (err as { message?: unknown }).message === "string"
+            ? (err as { message: string }).message
+            : "Unknown error";
+
         const fieldKey = extract_missing_field(rawMessage);
         intlId = fieldKey ? `form.error.required.${fieldKey}` : "form.error";
         console.error("❌ Failed to submit:", err);
+      } else {
+        console.error("❌ Failed to submit (unknown error type):", err);
       }
 
       setFieldError(intlId);

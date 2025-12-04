@@ -1,5 +1,6 @@
-import { Category, Product } from "../types";
 import { getData } from "./api";
+
+import type { Category, Product } from "../types";
 
 export async function getProducts(): Promise<Product[]> {
   const { products } = await getData();

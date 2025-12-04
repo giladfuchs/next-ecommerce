@@ -1,5 +1,6 @@
-import mockData from "./mock-data.json";
 import { array_obj_to_obj_with_key } from "../helper";
+
+import mockData from "./mock-data.json";
 
 export async function mockResponse(input: string): Promise<Response> {
   let json;

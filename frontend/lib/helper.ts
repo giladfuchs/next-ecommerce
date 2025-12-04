@@ -1,3 +1,5 @@
+import type { FieldValue } from "@/lib/types";
+
 export function safeDecodeURIComponent(value: string): string {
   try {
     return decodeURIComponent(value);
@@ -38,30 +40,31 @@ export const extract_missing_field = (message: string): string | null => {
   return match?.[1]?.toLowerCase() || null;
 };
 
-export const array_obj_to_obj_with_key = (
-  iterable: any[],
-  value: any,
-  key: string,
-) => iterable.find((o: any) => o[key]?.toString() === value.toString());
-
-export const create_key_to_value_map = (
-  items: any[],
-  key_field: string,
-  value_field: string,
-): Record<string | number, any> => {
+export function array_obj_to_obj_with_key<
+  T extends Record<string, unknown>,
+  K extends keyof T,
+>(iterable: T[], value: unknown, key: K): T | undefined {
+  return iterable.find((o) => o[key]?.toString() === value?.toString());
+}
+export function create_key_to_value_map<T extends Record<string, unknown>>(
+  items: T[],
+  key_field: keyof T,
+  value_field: keyof T,
+): Record<string | number, FieldValue> {
   return items.reduce(
     (acc, curr) => {
       const key = curr[key_field];
       const value = curr[value_field];
+
       if (typeof key === "string" || typeof key === "number") {
-        acc[key] = value;
+        acc[key] = value as FieldValue;
       }
+
       return acc;
     },
-    {} as Record<string | number, any>,
+    {} as Record<string | number, FieldValue>,
   );
-};
-
+}
 export const shuffleArray = <T>(array: T[]): T[] => {
   const result = [...array];
   for (let i = result.length - 1; i > 0; i--) {

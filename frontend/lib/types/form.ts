@@ -1,26 +1,31 @@
 import * as Yup from "yup";
-import { IntlShape } from "react-intl";
-import { FormType, ModelType } from "./enums";
-import { ProductImage } from "./entities";
+
 import { localeCache } from "../config";
+
+import { FormType, ModelType } from "./enums";
+
+import type { ProductImage } from "./entities";
+import type { IntlShape } from "react-intl";
+
+export type FieldValue = string | number | boolean | null;
 
 // -- Admin Mui Form--
 export class FieldInput {
   constructor(
     public type: FormType,
     public key: string,
-    public value: string | boolean = "",
+    public value: FieldValue = "",
   ) {}
 }
 
 export class FieldAutoComplete {
   readonly type: FormType = FormType.AutoComplete;
-  public value: string;
+  public value: FieldValue;
 
   constructor(
     public key: string,
-    public options: string[],
-    value?: string,
+    public options: FieldValue[],
+    value?: FieldValue,
   ) {
     this.value = value ?? options[0] ?? "";
   }
@@ -63,13 +68,15 @@ export const get_form_by_model = (model: ModelType): FormField[] => {
 
 export const create_form_fields = (
   source: FormField[],
-  target: any,
+  target: Record<string, FieldValue | ProductImage[] | undefined> | null,
 ): FormField[] => {
-  if (
+  const isEmptyTarget =
     target == null ||
-    (Array.isArray(target) && target.length === 0) ||
-    (typeof target === "object" && Object.keys(target).length === 0)
-  ) {
+    (typeof target === "object" &&
+      !Array.isArray(target) &&
+      Object.keys(target).length === 0);
+
+  if (isEmptyTarget) {
     return source.map((field) => {
       if (field instanceof FieldImages) {
         return new FieldImages(field.key, field.value);
@@ -82,27 +89,31 @@ export const create_form_fields = (
   }
 
   return source.map((field) => {
-    const updatedValue = target[field.key];
+    const updatedValue = target?.[field.key];
 
     if (field instanceof FieldImages && Array.isArray(updatedValue)) {
       return new FieldImages(field.key, updatedValue);
     }
 
     if (field instanceof FieldAutoComplete) {
-      return new FieldAutoComplete(field.key, field.options, updatedValue);
+      return new FieldAutoComplete(
+        field.key,
+        field.options,
+        (updatedValue as FieldValue) ?? "",
+      );
     }
 
-    return new FieldInput(
-      field.type,
-      field.key,
-      typeof updatedValue === "string" ? updatedValue.trim() : updatedValue,
-    );
+    const cleanedValue: FieldValue =
+      typeof updatedValue === "string"
+        ? updatedValue.trim()
+        : (updatedValue as FieldValue);
+
+    return new FieldInput(field.type, field.key, cleanedValue);
   });
 };
-
 export const form_fields_to_data = (
   send_fields: FormField[],
-): { [key: string]: any } => {
+): Record<string, FieldValue> => {
   return Object.fromEntries(
     send_fields.map((f) => {
       let value = f.value;
@@ -137,20 +148,20 @@ export const form_fields_to_data = (
 
       return [f.key, value];
     }),
-  );
+  ) as unknown as Record<string, FieldValue>;
 };
 
 export const transform_data_to_body = (
   model: ModelType,
-  data: Record<string, any>,
+  data: Record<string, FieldValue>,
   categoryTitleToIdMap: Record<string, number>,
-): Record<string, any> => {
+): Record<string, FieldValue> => {
   if (model === ModelType.product) {
     if (!data.category) {
       throw "form.error.required.category_id";
     }
 
-    data.category_id = categoryTitleToIdMap[data.category];
+    data.category_id = categoryTitleToIdMap[data.category as string]!;
     delete data.category;
   }
 

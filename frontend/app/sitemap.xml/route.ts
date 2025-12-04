@@ -1,5 +1,5 @@
-import { baseUrl } from "@/lib/config";
 import { getCategories, getProducts } from "@/lib/api";
+import { baseUrl } from "@/lib/config";
 import { ModelType } from "@/lib/types";
 
 export const dynamic = "force-dynamic";

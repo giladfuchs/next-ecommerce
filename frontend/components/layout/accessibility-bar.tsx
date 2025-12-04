@@ -1,9 +1,12 @@
 "use client";
-import { useEffect, useState, useRef, ReactNode } from "react";
-import { FormattedMessage } from "react-intl";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import { Box, IconButton, Typography, Stack } from "@mui/material";
+import { useEffect, useState, useRef } from "react";
+import { FormattedMessage } from "react-intl";
+
 import { createAccessibilityButtons, localeCache } from "lib/config";
+
+import type { ReactNode } from "react";
 
 const ActionItem = ({
   icon,

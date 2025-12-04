@@ -1,22 +1,24 @@
 "use client";
 
-import Link from "next/link";
-import { FormattedMessage } from "react-intl";
-import Image from "next/image";
-import { IconButton, Typography, Box, useMediaQuery } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { IconButton, Typography, Box, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/system";
+import Image from "next/image";
+import Link from "next/link";
+import { FormattedMessage } from "react-intl";
+
+import { Price } from "@/components/shared/elements-ssr";
+import { localeCache } from "@/lib/config";
 
 import {
   DeleteItemButton,
   EditItemQuantityButton,
   CheckoutButton,
 } from "./cart-buttons";
-import { Price } from "@/components/shared/elements-ssr";
-import { RootState } from "@/lib/store";
-import { localeCache } from "@/lib/config";
-import { useTheme } from "@mui/system";
-import { CartItem } from "@/lib/types";
+
+import type { RootState } from "@/lib/store";
+import type { CartItem } from "@/lib/types";
 
 export const CartHeader = ({ closeCart }: { closeCart: () => void }) => (
   <Box

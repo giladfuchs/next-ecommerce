@@ -1,8 +1,10 @@
 "use client";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { ReactNode } from "react";
+
 import { localeCache } from "../config";
+
+import type { ReactNode } from "react";
 
 const theme = createTheme({
   direction: localeCache.dir(),

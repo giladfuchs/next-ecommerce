@@ -1,18 +1,10 @@
 "use client";
+import { Box, Button, TextField, Typography, Container } from "@mui/material";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { useIntl, FormattedMessage } from "react-intl";
-import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
-import {
-  Box,
-  Button,
-  TextField,
-  Typography,
-  Container,
-  Switch,
-  FormControlLabel,
-} from "@mui/material";
 import { loginUser, registerUser, resetMockDb } from "@/lib/api";
 import { SEVEN_DAYS } from "@/lib/config/config";
 
@@ -30,7 +22,7 @@ export default function LoginPage() {
     if (token) {
       router.push("/admin");
     }
-  }, []);
+  }, [router]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -55,14 +47,14 @@ export default function LoginPage() {
       });
 
       router.push("/admin");
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const message = (err instanceof Error && err.message) || "";
+
       toast.error(
         intl.formatMessage({
           id: isRegister ? "register.failed" : "login.error",
         }),
-        {
-          description: err?.message,
-        },
+        { description: message },
       );
     }
   }
@@ -70,9 +62,11 @@ export default function LoginPage() {
     try {
       await resetMockDb();
       toast.success(intl.formatMessage({ id: "reset_mock_db.success" }));
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const message = (err instanceof Error && err.message) || "";
+
       toast.error(intl.formatMessage({ id: "reset_mock_db.disabled" }), {
-        description: err?.message,
+        description: message,
       });
     }
   };

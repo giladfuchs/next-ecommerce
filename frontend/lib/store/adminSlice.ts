@@ -3,10 +3,13 @@ import {
   createSelector,
   createSlice,
 } from "@reduxjs/toolkit";
-import { AGTableModelType, Category, ModelType } from "@/lib/types";
+
 import { deleteModel, getData, getOrders } from "@/lib/api";
 import { create_key_to_value_map } from "@/lib/helper";
-import { RootState } from "@/lib/store/index";
+import { ModelType } from "@/lib/types";
+
+import type { RootState } from "@/lib/store/index";
+import type { AGTableModelType, Category } from "@/lib/types";
 
 type AdminState = {
   [key in ModelType]: AGTableModelType[];
@@ -71,6 +74,9 @@ export const adminSlice = createSlice({
 export const selectCategoryTitleToIdMap = createSelector(
   (state: RootState) => state.admin.category,
   (categories) =>
-    create_key_to_value_map(categories as Category[], "title", "id"),
+    create_key_to_value_map(categories as Category[], "title", "id") as Record<
+      string,
+      number
+    >,
 );
 export default adminSlice.reducer;

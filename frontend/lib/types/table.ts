@@ -1,6 +1,7 @@
-import { ColDef } from "ag-grid-community";
-import { Category, Order, Product } from "./entities";
 import { ModelType } from "./enums";
+
+import type { Category, Order, Product } from "./entities";
+import type { ColDef } from "ag-grid-community";
 
 export type AGTableModelType = Product | Category | Order;
 export const columns_product: ColDef<Product>[] = [

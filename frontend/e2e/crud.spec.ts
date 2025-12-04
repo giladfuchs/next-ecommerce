@@ -1,6 +1,8 @@
 import { test, expect } from "@playwright/test";
-import { TEST_BASE_URL } from "./global-setup";
+
 import { ModelType } from "@/lib/types";
+
+import { TEST_BASE_URL } from "./global-setup";
 import {
   assertRowCountIncreasedByOne,
   deleteFirstRowFromModel,

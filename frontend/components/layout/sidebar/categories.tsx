@@ -1,9 +1,11 @@
-import Link from "next/link";
 import { ListItemButton, ListItemText, Typography, Box } from "@mui/material";
+import Link from "next/link";
 
 import { CategoryAutocomplete } from "@/components/shared/wrappers";
-import { Category, ModelType } from "@/lib/types";
 import { localeCache } from "@/lib/config";
+import { ModelType } from "@/lib/types";
+
+import type { Category } from "@/lib/types";
 
 export const CategoryItemList = ({
   categories,

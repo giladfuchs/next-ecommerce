@@ -1,4 +1,5 @@
 import { Box, Chip, Typography } from "@mui/material";
+
 import { Price } from "@/components/shared/elements-ssr";
 
 export default function Label({

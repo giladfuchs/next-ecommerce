@@ -1,8 +1,9 @@
 "use client";
+import { Box, Typography } from "@mui/material";
+import { notFound } from "next/navigation";
 import { use } from "react";
 import { FormattedMessage } from "react-intl";
-import { notFound } from "next/navigation";
-import { Box, Typography } from "@mui/material";
+
 import { localeCache, legal_sections, email } from "@/lib/config";
 
 export default function LegalPage({

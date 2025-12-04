@@ -1,7 +1,10 @@
-import { Box, Divider } from "@mui/material";
-import ProductDescription from "./product-description";
-import { Product } from "@/lib/types";
+import { Box } from "@mui/material";
+
 import { ProductGallery } from "@/components/shared/wrappers";
+
+import ProductDescription from "./product-description";
+
+import type { Product } from "@/lib/types";
 
 const SingleProductLayout = ({
   product,
