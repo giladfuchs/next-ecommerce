@@ -93,11 +93,7 @@ export default function Cart() {
           }}
         >
           {hasItems ? (
-            <CartItemList
-              cart={cart}
-              optimisticUpdate={optimisticUpdate}
-              closeCart={closeCart}
-            />
+            <CartItemList cart={cart} optimisticUpdate={optimisticUpdate} />
           ) : (
             <CartEmptyState />
           )}

@@ -3,7 +3,7 @@ import {
   createSelector,
   createSlice,
 } from "@reduxjs/toolkit";
-import { AGTableModelType, Category, ModelType } from "lib/types";
+import { AGTableModelType, Category, ModelType } from "@/lib/types";
 import { deleteModel, getData, getOrders } from "@/lib/api";
 import { create_key_to_value_map } from "@/lib/helper";
 import { RootState } from "@/lib/store/index";

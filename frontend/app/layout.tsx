@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "sonner";
 import { Box } from "@mui/material";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
 import ReduxProvider from "@/lib/provider/ReduxProvider";
 import ThemeProviderLayout from "@/lib/provider/ThemeProviderLayout";
@@ -44,6 +45,7 @@ export default async function RootLayout({
       localeCache.set(local as "he" | "en");
     }
   }
+
   return (
     <html lang={localeCache.get()} dir={localeCache.dir()}>
       <body suppressHydrationWarning>
@@ -65,45 +67,47 @@ export default async function RootLayout({
     `,
           }}
         />
-        <ReduxProvider>
-          <IntProvider>
-            <ThemeProviderLayout>
-              <LoadingProvider>
-                <Box
-                  id="font-scale-wrapper"
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    minHeight: "100vh",
-                    bgcolor: "var(--color-bg)",
-                    color: "var(--color-text)",
-                    maxWidth: "90rem",
-                    mx: "auto",
-                    px: 0,
-                    overflowX: "clip",
-                    "::selection": {
-                      backgroundColor: "teal",
-                      color: "white",
-                    },
-                  }}
-                >
-                  <LoadingGlobal />
-                  <Header />
-                  <Box component="main" sx={{ flexGrow: 1 }}>
-                    <Suspense fallback={<LoadingProductsList />}>
-                      {children}
-                    </Suspense>
+        <AppRouterCacheProvider options={{ key: "mui" }}>
+          <ReduxProvider>
+            <IntProvider>
+              <ThemeProviderLayout>
+                <LoadingProvider>
+                  <Box
+                    id="font-scale-wrapper"
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      minHeight: "100vh",
+                      bgcolor: "var(--color-bg)",
+                      color: "var(--color-text)",
+                      maxWidth: "90rem",
+                      mx: "auto",
+                      px: 0,
+                      overflowX: "clip",
+                      "::selection": {
+                        backgroundColor: "teal",
+                        color: "white",
+                      },
+                    }}
+                  >
+                    <LoadingGlobal />
+                    <Header />
+                    <Box component="main" sx={{ flexGrow: 1 }}>
+                      <Suspense fallback={<LoadingProductsList />}>
+                        {children}
+                      </Suspense>
+                    </Box>
+                    <Footer />
+                    <Toaster richColors closeButton position="bottom-center" />
+                    <AccessibilityBar />
                   </Box>
-                  <Footer />
-                  <Toaster richColors closeButton position="bottom-center" />
-                  <AccessibilityBar />
-                </Box>
-                <Analytics />
-                <SpeedInsights />
-              </LoadingProvider>
-            </ThemeProviderLayout>
-          </IntProvider>
-        </ReduxProvider>
+                  <Analytics />
+                  <SpeedInsights />
+                </LoadingProvider>
+              </ThemeProviderLayout>
+            </IntProvider>
+          </ReduxProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

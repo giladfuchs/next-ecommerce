@@ -26,7 +26,7 @@
     "url": "https://github.com/giladfuchs/next-ecommerce"
   },
   "scripts": {
-    "dev": "tsx src/dev.ts",
+    "dev": "tsx src/dev.ts SEED=true",
     "nodemon": "nodemon --exec tsx src/dev.ts",
     "debug": "tsx --inspect src/dev.ts",
     "debug:script": "tsx --inspect-brk scripts/make_backup.ts",

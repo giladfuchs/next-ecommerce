@@ -158,7 +158,7 @@ export function useInfiniteScroll<T>(
 ): {
   visibleItems: T[];
   hasMore: boolean;
-  sentinelRef: RefObject<HTMLDivElement>;
+  sentinelRef: RefObject<HTMLDivElement | null>;
 } {
   const [page, setPage] = useState(() => {
     const stored = sessionStorage.getItem(sessionKey);

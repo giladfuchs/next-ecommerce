@@ -1,10 +1,12 @@
 "use client";
-import NextLink from "next/link";
+
+import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import Image from "next/image";
 import { IconButton, Typography, Box, useMediaQuery } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 import {
   DeleteItemButton,
   EditItemQuantityButton,
@@ -36,6 +38,7 @@ export const CartHeader = ({ closeCart }: { closeCart: () => void }) => (
     </IconButton>
   </Box>
 );
+
 export const CartEmptyState = () => (
   <Box mt={10} display="flex" flexDirection="column" alignItems="center">
     <ShoppingCartIcon
@@ -48,17 +51,16 @@ export const CartEmptyState = () => (
     </Typography>
   </Box>
 );
+
 export const CartItemList = ({
   cart,
   optimisticUpdate,
-  closeCart,
 }: {
   cart: RootState["cart"];
   optimisticUpdate: (
     productId: number,
     updateType: "plus" | "minus" | "delete",
   ) => void;
-  closeCart: () => void;
 }) => (
   <Box
     component="ul"
@@ -137,25 +139,29 @@ export const CartItemList = ({
                   alignItems: "center",
                 }}
               >
-                <Typography
-                  component={NextLink}
+                <Link
                   href={`/product/${item.handle}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  variant="subtitle1"
-                  fontWeight="bold"
-                  color="text.primary"
-                  lineHeight={1.2}
-                  textAlign={localeCache.isRtl() ? "right" : "left"}
-                  sx={{
-                    textDecoration: "none",
-                    "&:hover": {
-                      textDecoration: "underline",
-                    },
-                  }}
+                  style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  {item.title}
-                </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    fontWeight="bold"
+                    color="text.primary"
+                    lineHeight={1.2}
+                    textAlign={localeCache.isRtl() ? "right" : "left"}
+                    sx={{
+                      textDecoration: "none",
+                      "&:hover": {
+                        textDecoration: "underline",
+                      },
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                </Link>
+
                 <Box
                   sx={{
                     minWidth: 80,
@@ -234,6 +240,7 @@ export const CartCheckoutSection = ({
 }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
@@ -263,7 +270,7 @@ export const CartCheckoutSection = ({
         </Typography>
         <Price amount={cart.cost} />
       </Box>
-      <div data-testid={`cart-checkout-button`}>
+      <div data-testid="cart-checkout-button">
         <CheckoutButton onClick={redirectToCheckout} />
       </div>
     </Box>
