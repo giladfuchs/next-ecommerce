@@ -1,0 +1,47 @@
+@import "../../../node_modules/tailwindcss";
+@import "./button.css";
+@import "./accessibility-bar.css";
+@import "./cart.css";
+@plugin "@tailwindcss/typography";
+
+@layer utilities {
+  .layout-container {
+    @apply w-full mx-auto max-w-[86rem] px-2 md:px-8;
+  }
+}
+
+:root {
+  --background: oklch(100% 0 0);
+  --foreground: oklch(15% 0 0);
+
+  --success: oklch(75% 0.16 150deg);
+  --warning: oklch(82% 0.17 75deg);
+  --error: oklch(70% 0.2 25deg);
+
+  --radius: 0.625rem;
+}
+
+[data-theme="dark"] {
+  --background: oklch(15% 0 0);
+  --foreground: oklch(98% 0 0);
+
+  --success: oklch(55% 0.18 150deg);
+  --warning: oklch(60% 0.18 75deg);
+  --error: oklch(55% 0.22 25deg);
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}

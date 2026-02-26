@@ -1,0 +1,2363 @@
+{
+  "products": [
+    {
+      "id": 48,
+      "title": "סנגוניום",
+      "handle": "סנגוניום",
+      "category_id": 5,
+      "available": true,
+      "description": "סינגוניום, הידוע גם כצמח ראש החץ, הוא צמח בית פופולרי עם עלים בצורת חץ בגווני ירוק ולעיתים ורוד או לבן. הוא צמח מטפס או נשפך, המתאים לגידול בעציצים או בסלסלות תלויות, ומוסיף מראה טרופי לכל חלל. הצמח מעדיף אור בינוני עד בהיר עקיף, ויש להימנע מחשיפה לשמש ישירה. השקיה מתבצעת כאשר השכבה העליונה של האדמה מתייבשת",
+      "price": "25",
+      "updatedAt": "2025-05-23T07:02:12.598Z",
+      "images": [
+        {
+          "id": 4226,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-606506.jpg",
+          "altText": "סנגוניום",
+          "position": 0
+        },
+        {
+          "id": 4227,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1302899.jpg",
+          "altText": "סנגוניום",
+          "position": 1
+        },
+        {
+          "id": 4228,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1239387.jpg",
+          "altText": "סנגוניום",
+          "position": 2
+        },
+        {
+          "id": 4229,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1521334884684-d80222895322.jpg",
+          "altText": "סנגוניום",
+          "position": 3
+        }
+      ],
+      "category": "צמחי-בית",
+      "featuredImage": {
+        "id": 4226,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-606506.jpg",
+        "altText": "סנגוניום",
+        "position": 0
+      }
+    },
+    {
+      "id": 34,
+      "title": "Rue",
+      "handle": "Rue",
+      "category_id": 4,
+      "available": true,
+      "description": "An evergreen shrub 0.5–1 meter tall with blue-green aromatic leaves and striking yellow flowers. Used as a culinary herb and for its medicinal properties. Hardy and suitable for warm gardens.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:02:12.004Z",
+      "images": [
+        {
+          "id": 4183,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-705310.jpg",
+          "altText": "Rue",
+          "position": 0
+        },
+        {
+          "id": 4184,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1464263866732-138a1da44860.jpg",
+          "altText": "Rue",
+          "position": 1
+        },
+        {
+          "id": 4185,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-937799.jpg",
+          "altText": "Rue",
+          "position": 2
+        },
+        {
+          "id": 4186,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1372896722-612x612.jpg",
+          "altText": "Rue",
+          "position": 3
+        },
+        {
+          "id": 4187,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1650627.jpg",
+          "altText": "Rue",
+          "position": 4
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4183,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-705310.jpg",
+        "altText": "Rue",
+        "position": 0
+      }
+    },
+    {
+      "id": 35,
+      "title": "Serrated Lavender",
+      "handle": "Serrated-Lavender",
+      "category_id": 4,
+      "available": true,
+      "description": "An evergreen shrub 60–80 cm tall with serrated green leaves and vibrant purple flowers throughout most of the year. Emits a pleasant scent and repels mosquitoes. Hardy and suitable for warm gardens.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:02:11.404Z",
+      "images": [
+        {
+          "id": 4188,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1508401531113-289ab4692d3b.jpg",
+          "altText": "Serrated Lavender",
+          "position": 0
+        },
+        {
+          "id": 4189,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1701270631286-e2d64b957fa0.jpg",
+          "altText": "Serrated Lavender",
+          "position": 1
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4188,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1508401531113-289ab4692d3b.jpg",
+        "altText": "Serrated Lavender",
+        "position": 0
+      }
+    },
+    {
+      "id": 36,
+      "title": "Lemon Verbena",
+      "handle": "Lemon-Verbena",
+      "category_id": 4,
+      "available": true,
+      "description": "An evergreen shrub growing 1–2 meters tall with lemon-scented green leaves. Used as a culinary herb and valued for its medicinal benefits. Hardy and ideal for warm climates.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:02:10.806Z",
+      "images": [
+        {
+          "id": 4190,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3965563.jpg",
+          "altText": "Lemon Verbena",
+          "position": 0
+        },
+        {
+          "id": 4191,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1568313081041-dbd174f69e3b.jpg",
+          "altText": "Lemon Verbena",
+          "position": 1
+        },
+        {
+          "id": 4192,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1452767279788-ab97000beec6.jpg",
+          "altText": "Lemon Verbena",
+          "position": 2
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4190,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3965563.jpg",
+        "altText": "Lemon Verbena",
+        "position": 0
+      }
+    },
+    {
+      "id": 49,
+      "title": "פפרומיות",
+      "handle": "פפרומיות",
+      "category_id": 5,
+      "available": true,
+      "description": "פפרומיה היא צמח עשבוני סוקולנטי רב־שנתי, המתאים מאוד לגידול בתוך הבית. היא מגיעה במגוון רחב של צורות ועלים בצבעים שונים, כולל ירוק, אדום, סגול וורוד, ולעיתים עם דוגמאות מגוונות. הצמח קומפקטי, גדל לאט ואינו דורש טיפול אינטנסיבי, מה שהופך אותו לאידיאלי לחללים קטנים או לגידול על אדן חלון. מעדיף אור בינוני עד בהיר עקיף, ויש להימנע מהשקיית יתר",
+      "price": "45",
+      "updatedAt": "2025-05-23T07:02:10.211Z",
+      "images": [
+        {
+          "id": 4230,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1715887643348-4d8f945cb0e3.jpg",
+          "altText": "פפרומיות",
+          "position": 0
+        },
+        {
+          "id": 4231,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1545241047-6083a3684587.jpg",
+          "altText": "פפרומיות",
+          "position": 1
+        },
+        {
+          "id": 4232,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1485902409384-e367af5b5c92.jpg",
+          "altText": "פפרומיות",
+          "position": 2
+        }
+      ],
+      "category": "צמחי-בית",
+      "featuredImage": {
+        "id": 4230,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1715887643348-4d8f945cb0e3.jpg",
+        "altText": "פפרומיות",
+        "position": 0
+      }
+    },
+    {
+      "id": 1,
+      "title": "Tipuana (Pride of Bolivia)",
+      "handle": "Tipuana-(Pride-of-Bolivia)",
+      "category_id": 1,
+      "available": true,
+      "description": "A majestic deciduous tree growing up to 30 meters tall, with a wide canopy and stunning yellow spring flowers. Popular as an ornamental shade tree in private and public gardens. Thrives in warm climates.",
+      "price": "14.29",
+      "updatedAt": "2025-05-23T07:02:09.617Z",
+      "images": [
+        {
+          "id": 4099,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/garden-rose-red-pink-56866.jpg",
+          "altText": "Tipuana (Pride of Bolivia)",
+          "position": 0
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4099,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/garden-rose-red-pink-56866.jpg",
+        "altText": "Tipuana (Pride of Bolivia)",
+        "position": 0
+      }
+    },
+    {
+      "id": 24,
+      "title": "Small Bay Laurel",
+      "handle": "Small-Bay-Laurel",
+      "category_id": 3,
+      "available": true,
+      "description": "A 1–3 meter tall evergreen shrub from the laurel family. Its fragrant leaves are used in cooking and contain essential oils with medicinal properties. Hardy and suitable for warm gardens.",
+      "price": "14.29",
+      "updatedAt": "2025-05-23T07:02:09.019Z",
+      "images": [
+        {
+          "id": 4157,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1445962125599-30f582ac21f4.jpg",
+          "altText": "Small Bay Laurel",
+          "position": 0
+        },
+        {
+          "id": 4158,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-824572.jpg",
+          "altText": "Small Bay Laurel",
+          "position": 1
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4157,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1445962125599-30f582ac21f4.jpg",
+        "altText": "Small Bay Laurel",
+        "position": 0
+      }
+    },
+    {
+      "id": 25,
+      "title": "African Lion's Ear",
+      "handle": "African-Lion's-Ear",
+      "category_id": 3,
+      "available": true,
+      "description": "An evergreen shrub reaching 1–2 meters in height, with striking orange flowers blooming in spring and summer. Attracts pollinators and used as an ornamental plant. Hardy and suitable for warm gardens.",
+      "price": "11.43",
+      "updatedAt": "2025-05-23T07:02:08.426Z",
+      "images": [
+        {
+          "id": 4159,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1597305877032-0668b3c6413a.jpg",
+          "altText": "African Lion's Ear",
+          "position": 0
+        },
+        {
+          "id": 4160,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1103624.jpg",
+          "altText": "African Lion's Ear",
+          "position": 1
+        },
+        {
+          "id": 4161,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3489128.jpg",
+          "altText": "African Lion's Ear",
+          "position": 2
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4159,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1597305877032-0668b3c6413a.jpg",
+        "altText": "African Lion's Ear",
+        "position": 0
+      }
+    },
+    {
+      "id": 26,
+      "title": "Bush Lucerne",
+      "handle": "Bush-Lucerne",
+      "category_id": 3,
+      "available": true,
+      "description": "An evergreen legume shrub growing 1–2 meters tall. Blooms in spring with yellow flowers and enriches the soil with nitrogen, making it an excellent ground cover. Hardy and ideal for gardens and warm climates.",
+      "price": "14.29",
+      "updatedAt": "2025-05-23T07:02:07.832Z",
+      "images": [
+        {
+          "id": 4162,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-247599.jpg",
+          "altText": "Bush Lucerne",
+          "position": 0
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4162,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-247599.jpg",
+        "altText": "Bush Lucerne",
+        "position": 0
+      }
+    },
+    {
+      "id": 27,
+      "title": "Aloe Vera",
+      "handle": "Aloe-Vera",
+      "category_id": 3,
+      "available": true,
+      "description": "Aloe Vera is a succulent evergreen plant that grows 0.5–1 meters tall. Its gel is rich in medicinal properties and is used to treat burns and skin conditions. Hardy and suitable for gardens in warm climates.",
+      "price": "11.43",
+      "updatedAt": "2025-05-23T07:02:07.241Z",
+      "images": [
+        {
+          "id": 4163,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952027.jpg",
+          "altText": "Aloe Vera",
+          "position": 0
+        },
+        {
+          "id": 4164,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-54300.jpg",
+          "altText": "Aloe Vera",
+          "position": 1
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4163,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952027.jpg",
+        "altText": "Aloe Vera",
+        "position": 0
+      }
+    },
+    {
+      "id": 37,
+      "title": "Lemon Balm",
+      "handle": "Lemon-Balm",
+      "category_id": 4,
+      "available": true,
+      "description": "Lemon Balm is a perennial herbaceous plant from the mint family, growing 0.5–1 meters tall. Used as a culinary herb and known for its calming and mood-enhancing effects. Hardy and ideal for warm gardens.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:02:06.645Z",
+      "images": [
+        {
+          "id": 4193,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1520412099551-62b6bafeb5bb.jpg",
+          "altText": "Lemon Balm",
+          "position": 0
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4193,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1520412099551-62b6bafeb5bb.jpg",
+        "altText": "Lemon Balm",
+        "position": 0
+      }
+    },
+    {
+      "id": 16,
+      "title": "Stinking Bean Trefoil",
+      "handle": "Stinking-Bean-Trefoil",
+      "category_id": 2,
+      "available": true,
+      "description": "A deciduous summer shrub from the legume family, growing 1–3 meters tall. Blooms in winter with yellow-green flowers. All parts except the fruit emit an unpleasant odor. Hardy and suited for warm gardens.",
+      "price": "14.29",
+      "updatedAt": "2025-05-23T07:02:06.053Z",
+      "images": [
+        {
+          "id": 4135,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1569171181721-31a9e143e579.jpg",
+          "altText": "Stinking Bean Trefoil",
+          "position": 0
+        },
+        {
+          "id": 4136,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1700213040248-254e9267dd3e.jpg",
+          "altText": "Stinking Bean Trefoil",
+          "position": 1
+        },
+        {
+          "id": 4137,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1701270631286-e2d64b957fa0.jpg",
+          "altText": "Stinking Bean Trefoil",
+          "position": 2
+        }
+      ],
+      "category": "Shrubs",
+      "featuredImage": {
+        "id": 4135,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1569171181721-31a9e143e579.jpg",
+        "altText": "Stinking Bean Trefoil",
+        "position": 0
+      }
+    },
+    {
+      "id": 53,
+      "title": "מרוות ירושלים",
+      "handle": "מרוות-ירושלים",
+      "category_id": 6,
+      "available": true,
+      "description": "מרוות ירושלים היא עשבונית רב־שנתית ים־תיכונית, המתנשאת לגובה של כ־80 ס”מ. בחורף מתפתחת שושנת עלים גדולים ושעירים, ובאביב מופיעים פרחים ארגמניים מרהיבים המסודרים על עמוד תפרחת גבוה. הצמח מושך דבורים ומאביקים אחרים, ומתאים לגינות חסכוניות במים.",
+      "price": "10",
+      "updatedAt": "2025-05-23T07:02:05.459Z",
+      "images": [
+        {
+          "id": 4243,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-971360.jpg",
+          "altText": "מרוות ירושלים",
+          "position": 0
+        },
+        {
+          "id": 4244,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/garden-rose-red-pink-56866.jpg",
+          "altText": "מרוות ירושלים",
+          "position": 1
+        }
+      ],
+      "category": "זרעים",
+      "featuredImage": {
+        "id": 4243,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-971360.jpg",
+        "altText": "מרוות ירושלים",
+        "position": 0
+      }
+    },
+    {
+      "id": 2,
+      "title": "Strawberry Guava",
+      "handle": "Strawberry-Guava",
+      "category_id": 1,
+      "available": true,
+      "description": "An evergreen shrub originating in Brazil, 2–6 meters tall. Its small red fruits taste like strawberries and are great for fresh eating, jams, and juices. Hardy and suited for warm-climate gardens.",
+      "price": "14.29",
+      "updatedAt": "2025-05-23T07:02:04.868Z",
+      "images": [
+        {
+          "id": 4100,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1859622.jpg",
+          "altText": "Strawberry Guava",
+          "position": 0
+        },
+        {
+          "id": 4101,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2624677.jpg",
+          "altText": "Strawberry Guava",
+          "position": 1
+        },
+        {
+          "id": 4102,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1470170.jpg",
+          "altText": "Strawberry Guava",
+          "position": 2
+        },
+        {
+          "id": 4103,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395251.jpg",
+          "altText": "Strawberry Guava",
+          "position": 3
+        },
+        {
+          "id": 4104,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4622253.jpg",
+          "altText": "Strawberry Guava",
+          "position": 4
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4100,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1859622.jpg",
+        "altText": "Strawberry Guava",
+        "position": 0
+      }
+    },
+    {
+      "id": 17,
+      "title": "Large Bay Laurel",
+      "handle": "Large-Bay-Laurel",
+      "category_id": 2,
+      "available": true,
+      "description": "Large Bay Laurel is an evergreen tree reaching 5–10 meters, with fragrant green leaves used as a culinary herb. Also serves as an ornamental or hedge plant. Hardy and adaptable to warm climates. Includes Small Bay Laurel (Laurus nobilis), a 1–3 meter shrub with medicinal, aromatic leaves used in cooking.",
+      "price": "28.57",
+      "updatedAt": "2025-05-23T07:02:04.273Z",
+      "images": [
+        {
+          "id": 4138,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1974508.jpg",
+          "altText": "Large Bay Laurel",
+          "position": 0
+        }
+      ],
+      "category": "Shrubs",
+      "featuredImage": {
+        "id": 4138,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1974508.jpg",
+        "altText": "Large Bay Laurel",
+        "position": 0
+      }
+    },
+    {
+      "id": 18,
+      "title": "Indian Hawthorn",
+      "handle": "Indian-Hawthorn",
+      "category_id": 2,
+      "available": true,
+      "description": "Indian Hawthorn is an evergreen shrub that grows 1–2 meters tall and blooms with pink flowers in spring. Used as an ornamental plant in gardens, as a hedge, or as ground cover. Hardy and well-suited for gardens and warm regions.",
+      "price": "14.29",
+      "updatedAt": "2025-05-23T07:02:03.681Z",
+      "images": [
+        {
+          "id": 4139,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1569171181721-31a9e143e579.jpg",
+          "altText": "Indian Hawthorn",
+          "position": 0
+        },
+        {
+          "id": 4140,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-217763.jpg",
+          "altText": "Indian Hawthorn",
+          "position": 1
+        },
+        {
+          "id": 4141,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2026960.jpg",
+          "altText": "Indian Hawthorn",
+          "position": 2
+        }
+      ],
+      "category": "Shrubs",
+      "featuredImage": {
+        "id": 4139,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1569171181721-31a9e143e579.jpg",
+        "altText": "Indian Hawthorn",
+        "position": 0
+      }
+    },
+    {
+      "id": 38,
+      "title": "Lemongrass",
+      "handle": "Lemongrass",
+      "category_id": 4,
+      "available": true,
+      "description": "A perennial herbaceous plant reaching 1–1.5 meters tall, with narrow green leaves that emit a strong lemon scent. Used as a culinary herb in Asian cuisine and has multiple medicinal benefits. Hardy and suited for warm gardens.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:02:03.089Z",
+      "images": [
+        {
+          "id": 4194,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1438404.jpg",
+          "altText": "Lemongrass",
+          "position": 0
+        },
+        {
+          "id": 4195,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1006293.jpg",
+          "altText": "Lemongrass",
+          "position": 1
+        },
+        {
+          "id": 4196,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/fern-leaf-roll-nature-66319.jpg",
+          "altText": "Lemongrass",
+          "position": 2
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4194,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1438404.jpg",
+        "altText": "Lemongrass",
+        "position": 0
+      }
+    },
+    {
+      "id": 54,
+      "title": "חוטמית זיפנית",
+      "handle": "חוטמית-זיפנית",
+      "category_id": 6,
+      "available": true,
+      "description": "חוטמית זיפנית היא צמח עשבוני רב־שנתי, המתנשא לגובה של 2–3 מטרים. היא פורחת באביב בפרחים ורודים גדולים ומרשימים, מה שהופך אותה לצמח נוי פופולרי. הצמח עמיד ומתאים לגידול בגינות ובאזורים חמים.",
+      "price": "20",
+      "updatedAt": "2025-05-23T07:02:02.497Z",
+      "images": [
+        {
+          "id": 4245,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1517848568502-d03fa74e1964.jpg",
+          "altText": "חוטמית זיפנית",
+          "position": 0
+        }
+      ],
+      "category": "זרעים",
+      "featuredImage": {
+        "id": 4245,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1517848568502-d03fa74e1964.jpg",
+        "altText": "חוטמית זיפנית",
+        "position": 0
+      }
+    },
+    {
+      "id": 3,
+      "title": "Ice Cream Bean",
+      "handle": "Ice-Cream-Bean",
+      "category_id": 1,
+      "available": true,
+      "description": "A striking tropical tree reaching 10–15 meters in height, with broad foliage and white blossoms. Its long pods contain sweet, vanilla-flavored pulp—hence the name. Ideal as a shade tree and for attracting pollinators. Suitable for warm climates.",
+      "price": "28.57",
+      "updatedAt": "2025-05-23T07:02:01.906Z",
+      "images": [
+        {
+          "id": 4105,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-601047.jpg",
+          "altText": "Ice Cream Bean",
+          "position": 0
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4105,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-601047.jpg",
+        "altText": "Ice Cream Bean",
+        "position": 0
+      }
+    },
+    {
+      "id": 4,
+      "title": "Rimon Malisi (Pomegranate)",
+      "handle": "Rimon-Malisi-(Pomegranate)",
+      "category_id": 1,
+      "available": true,
+      "description": "A unique pomegranate variety with a light-colored peel and very soft seeds. Its taste is very sweet with almost no acidity—ideal for fresh eating. A deciduous tree suitable for private gardens.",
+      "price": "20",
+      "updatedAt": "2025-05-23T07:02:01.312Z",
+      "images": [
+        {
+          "id": 4106,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1615835624010-93a0138bfc10.jpg",
+          "altText": "Rimon Malisi (Pomegranate)",
+          "position": 0
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4106,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1615835624010-93a0138bfc10.jpg",
+        "altText": "Rimon Malisi (Pomegranate)",
+        "position": 0
+      }
+    },
+    {
+      "id": 39,
+      "title": "Garlic Chives",
+      "handle": "Garlic-Chives",
+      "category_id": 4,
+      "available": true,
+      "description": "A perennial herbaceous plant in the Amaryllidaceae family, growing up to 30 cm tall. Has slender hollow green leaves with a mild flavor resembling a mix of onion and garlic. Blooms in spring and summer with small white flowers that attract bees and butterflies. Suitable for gardens, pots, and planters—adds flavor and aroma to any dish.",
+      "price": "7.14",
+      "updatedAt": "2025-05-23T07:02:00.716Z",
+      "images": [
+        {
+          "id": 4197,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1614601750456-23f5823d2d6b.jpg",
+          "altText": "Garlic Chives",
+          "position": 0
+        },
+        {
+          "id": 4198,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1596046070666-473705748e6c.jpg",
+          "altText": "Garlic Chives",
+          "position": 1
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4197,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1614601750456-23f5823d2d6b.jpg",
+        "altText": "Garlic Chives",
+        "position": 0
+      }
+    },
+    {
+      "id": 55,
+      "title": "כובע הנזיר",
+      "handle": "כובע-הנזיר",
+      "category_id": 6,
+      "available": true,
+      "description": "כובע הנזיר הוא צמח חד־שנתי מטפס או משתרע, בעל עלים עגולים ופרחים מרהיבים בגווני כתום, אדום וצהוב. הוא פורח מהחורף ועד האביב, ומושך פרפרים ודבורים לגינה. העלים והפרחים אכילים, בעלי טעם חרפרף, ומתאימים לסלטים ולתוספות קולינריות.",
+      "price": "10",
+      "updatedAt": "2025-05-23T07:02:00.118Z",
+      "images": [
+        {
+          "id": 4246,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1614876753060-0751185c9289.jpg",
+          "altText": "כובע הנזיר",
+          "position": 0
+        },
+        {
+          "id": 4247,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-333634.jpg",
+          "altText": "כובע הנזיר",
+          "position": 1
+        },
+        {
+          "id": 4248,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5706224.jpg",
+          "altText": "כובע הנזיר",
+          "position": 2
+        },
+        {
+          "id": 4249,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2215534.jpg",
+          "altText": "כובע הנזיר",
+          "position": 3
+        }
+      ],
+      "category": "זרעים",
+      "featuredImage": {
+        "id": 4246,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1614876753060-0751185c9289.jpg",
+        "altText": "כובע הנזיר",
+        "position": 0
+      }
+    },
+    {
+      "id": 40,
+      "title": "Artemisia (Wormwood)",
+      "handle": "Artemisia-(Wormwood)",
+      "category_id": 4,
+      "available": true,
+      "description": "An evergreen shrub 1–2 meters tall with silvery-green fragrant leaves. Used as a spice and known for its medicinal properties. Hardy and well-suited to warm gardens.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:01:59.526Z",
+      "images": [
+        {
+          "id": 4199,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1495559493698-ae68846c94e8.jpg",
+          "altText": "Artemisia (Wormwood)",
+          "position": 0
+        },
+        {
+          "id": 4200,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1634502.jpg",
+          "altText": "Artemisia (Wormwood)",
+          "position": 1
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4199,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1495559493698-ae68846c94e8.jpg",
+        "altText": "Artemisia (Wormwood)",
+        "position": 0
+      }
+    },
+    {
+      "id": 19,
+      "title": "Mediterranean Spiraea",
+      "handle": "Mediterranean-Spiraea",
+      "category_id": 2,
+      "available": true,
+      "description": "A hardy evergreen shrub growing 2–5 meters tall, with white blossoms in spring. Used as an ornamental plant in gardens and attracts many pollinators. Suitable for warm climate cultivation.",
+      "price": "11.43",
+      "updatedAt": "2025-05-23T07:01:58.931Z",
+      "images": [
+        {
+          "id": 4142,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1552248524-10d9a7e4841c.jpg",
+          "altText": "Mediterranean Spiraea",
+          "position": 0
+        },
+        {
+          "id": 4143,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1251026.jpg",
+          "altText": "Mediterranean Spiraea",
+          "position": 1
+        },
+        {
+          "id": 4144,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1072824.jpg",
+          "altText": "Mediterranean Spiraea",
+          "position": 2
+        }
+      ],
+      "category": "Shrubs",
+      "featuredImage": {
+        "id": 4142,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1552248524-10d9a7e4841c.jpg",
+        "altText": "Mediterranean Spiraea",
+        "position": 0
+      }
+    },
+    {
+      "id": 20,
+      "title": "Sea Mallow",
+      "handle": "Sea-Mallow",
+      "category_id": 2,
+      "available": true,
+      "description": "An evergreen shrub growing 1–1.5 meters tall, with beautiful pink-purple blooms in spring and summer. Ideal for partial shade and adds color to gardens. Hardy and fits warm climates.",
+      "price": "14.29",
+      "updatedAt": "2025-05-23T07:01:58.333Z",
+      "images": [
+        {
+          "id": 4145,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1587131766835-e5dfaf70ea20.jpg",
+          "altText": "Sea Mallow",
+          "position": 0
+        },
+        {
+          "id": 4146,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-370472.jpg",
+          "altText": "Sea Mallow",
+          "position": 1
+        },
+        {
+          "id": 4147,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1650627.jpg",
+          "altText": "Sea Mallow",
+          "position": 2
+        },
+        {
+          "id": 4148,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1380361370-612x612.jpg",
+          "altText": "Sea Mallow",
+          "position": 3
+        },
+        {
+          "id": 4149,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1634502.jpg",
+          "altText": "Sea Mallow",
+          "position": 4
+        }
+      ],
+      "category": "Shrubs",
+      "featuredImage": {
+        "id": 4145,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1587131766835-e5dfaf70ea20.jpg",
+        "altText": "Sea Mallow",
+        "position": 0
+      }
+    },
+    {
+      "id": 41,
+      "title": "Common Sage",
+      "handle": "Common-Sage",
+      "category_id": 4,
+      "available": true,
+      "description": "A perennial herbaceous plant from the mint family, growing 0.5–1 meters tall. Used as a culinary herb. Also includes Salvia dominica (Fragrant Sage), an evergreen shrub about 70 cm tall with wrinkled, triangular leaves and long-lasting scent. Blooms in spring with pale yellowish flowers and attracts many pollinators.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:01:57.739Z",
+      "images": [
+        {
+          "id": 4201,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1471086569966-db3eebc25a59.jpg",
+          "altText": "Common Sage",
+          "position": 0
+        },
+        {
+          "id": 4202,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5858235.jpg",
+          "altText": "Common Sage",
+          "position": 1
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4201,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1471086569966-db3eebc25a59.jpg",
+        "altText": "Common Sage",
+        "position": 0
+      }
+    },
+    {
+      "id": 28,
+      "title": "Elderberry",
+      "handle": "Elderberry",
+      "category_id": 3,
+      "available": true,
+      "description": "Black elder is a shrub or small tree growing 3–6 meters tall, with white blossoms in spring and purple-black fruits in summer. The berries are used for syrups, jams, and wine, known for their health benefits. Hardy and suitable for warm gardens.",
+      "price": "10",
+      "updatedAt": "2025-05-23T07:01:57.146Z",
+      "images": [
+        {
+          "id": 4165,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2248529.jpg",
+          "altText": "Elderberry",
+          "position": 0
+        },
+        {
+          "id": 4166,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-370473.jpg",
+          "altText": "Elderberry",
+          "position": 1
+        },
+        {
+          "id": 4167,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1365772.jpg",
+          "altText": "Elderberry",
+          "position": 2
+        },
+        {
+          "id": 4168,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1464630043472-ebd571beafc4.jpg",
+          "altText": "Elderberry",
+          "position": 3
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4165,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2248529.jpg",
+        "altText": "Elderberry",
+        "position": 0
+      }
+    },
+    {
+      "id": 5,
+      "title": "Fig",
+      "handle": "Fig",
+      "category_id": 1,
+      "available": true,
+      "description": "A deciduous tree 3–10 meters tall with large, lobed leaves. Its sweet, juicy fruits are one of the Seven Species of biblical Israel. Hardy and perfect for warm-region gardens.",
+      "price": "22.86",
+      "updatedAt": "2025-05-23T07:01:56.555Z",
+      "images": [
+        {
+          "id": 4107,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/garden-rose-red-pink-56866.jpg",
+          "altText": "Fig",
+          "position": 0
+        },
+        {
+          "id": 4108,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1090977.jpg",
+          "altText": "Fig",
+          "position": 1
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4107,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/garden-rose-red-pink-56866.jpg",
+        "altText": "Fig",
+        "position": 0
+      }
+    },
+    {
+      "id": 6,
+      "title": "Moringa",
+      "handle": "Moringa",
+      "category_id": 1,
+      "available": true,
+      "description": "Known as the 'Miracle Tree', Moringa is a fast-growing tropical tree that adapts to dry conditions. All parts—leaves, pods, flowers, and roots—are edible and highly nutritious. Traditionally used for its medicinal and antioxidant properties.",
+      "price": "11.43",
+      "updatedAt": "2025-05-23T07:01:55.957Z",
+      "images": [
+        {
+          "id": 4109,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1667385372949-ce58045f9d79.jpg",
+          "altText": "Moringa",
+          "position": 0
+        },
+        {
+          "id": 4110,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1090977.jpg",
+          "altText": "Moringa",
+          "position": 1
+        },
+        {
+          "id": 4111,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1151418.jpg",
+          "altText": "Moringa",
+          "position": 2
+        },
+        {
+          "id": 4112,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1239387.jpg",
+          "altText": "Moringa",
+          "position": 3
+        },
+        {
+          "id": 4113,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395251.jpg",
+          "altText": "Moringa",
+          "position": 4
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4109,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1667385372949-ce58045f9d79.jpg",
+        "altText": "Moringa",
+        "position": 0
+      }
+    },
+    {
+      "id": 21,
+      "title": "Pigeon Pea",
+      "handle": "Pigeon-Pea",
+      "category_id": 2,
+      "available": true,
+      "description": "Pigeon Pea is a perennial legume shrub growing 2–3 meters tall. Produces colorful flowers and edible pods, making it both a food source and a soil improver. Hardy and suitable for gardens.",
+      "price": "14.29",
+      "updatedAt": "2025-05-23T07:01:55.359Z",
+      "images": [
+        {
+          "id": 4150,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/wild-flower-background-flower-close-158711.jpg",
+          "altText": "Pigeon Pea",
+          "position": 0
+        },
+        {
+          "id": 4151,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1437275537121-331a0457c8d6.jpg",
+          "altText": "Pigeon Pea",
+          "position": 1
+        }
+      ],
+      "category": "Shrubs",
+      "featuredImage": {
+        "id": 4150,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/wild-flower-background-flower-close-158711.jpg",
+        "altText": "Pigeon Pea",
+        "position": 0
+      }
+    },
+    {
+      "id": 50,
+      "title": "סנסיוורות גבוהות",
+      "handle": "סנסיוורות-גבוהות",
+      "category_id": 5,
+      "available": true,
+      "description": "סנסיוורה גבוהה, הידועה גם כלשון החותנת, היא צמח בית עמיד במיוחד, המתנשא לגובה של עד 1.5 מטרים. היא בעלת עלים ארוכים, בשרניים ומפוספסים בגווני ירוק וצהוב, הגדלים בצורה זקופה. הצמח מטהר את האוויר ומסתגל למגוון רחב של תנאי תאורה, מה שהופך אותו לאידיאלי למתחילים או לאנשים עסוקים. דורש השקיה מועטה ומתאים לגידול בבית ובמשרד",
+      "price": "70",
+      "updatedAt": "2025-05-23T07:01:54.760Z",
+      "images": [
+        {
+          "id": 4233,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952027.jpg",
+          "altText": "סנסיוורות גבוהות",
+          "position": 0
+        }
+      ],
+      "category": "צמחי-בית",
+      "featuredImage": {
+        "id": 4233,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952027.jpg",
+        "altText": "סנסיוורות גבוהות",
+        "position": 0
+      }
+    },
+    {
+      "id": 42,
+      "title": "Lemon Tagetes",
+      "handle": "Lemon-Tagetes",
+      "category_id": 4,
+      "available": true,
+      "description": "An evergreen shrub 1–2 meters tall with lemon-scented green leaves and vibrant yellow flowers. Serves as an ornamental plant and natural pest repellent. Thrives in warm garden settings.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:01:54.164Z",
+      "images": [
+        {
+          "id": 4203,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-395676.jpg",
+          "altText": "Lemon Tagetes",
+          "position": 0
+        },
+        {
+          "id": 4204,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1637424592613-0a99407a4925.jpg",
+          "altText": "Lemon Tagetes",
+          "position": 1
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4203,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-395676.jpg",
+        "altText": "Lemon Tagetes",
+        "position": 0
+      }
+    },
+    {
+      "id": 29,
+      "title": "Comfrey",
+      "handle": "Comfrey",
+      "category_id": 3,
+      "available": true,
+      "description": "Comfrey is a perennial herbaceous plant with green leaves and purple or pink flowers. Known for its traditional healing use on wounds and inflammation. Hardy and suitable for warm-climate gardens.",
+      "price": "10",
+      "updatedAt": "2025-05-23T07:01:53.570Z",
+      "images": [
+        {
+          "id": 4169,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1613403210971-1fcefd3662b0.jpg",
+          "altText": "Comfrey",
+          "position": 0
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4169,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1613403210971-1fcefd3662b0.jpg",
+        "altText": "Comfrey",
+        "position": 0
+      }
+    },
+    {
+      "id": 30,
+      "title": "Sweet Pea",
+      "handle": "Sweet-Pea",
+      "category_id": 3,
+      "available": true,
+      "description": "An annual climbing plant reaching 1–2 meters. Blooms in spring with fragrant, colorful flowers that attract pollinators. Hardy and great for garden cultivation in warm areas.",
+      "price": "4.29",
+      "updatedAt": "2025-05-23T07:01:52.976Z",
+      "images": [
+        {
+          "id": 4170,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1446292532430-3e76f6ab6444.jpg",
+          "altText": "Sweet Pea",
+          "position": 0
+        },
+        {
+          "id": 4171,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1302305.jpg",
+          "altText": "Sweet Pea",
+          "position": 1
+        },
+        {
+          "id": 4172,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952029.jpg",
+          "altText": "Sweet Pea",
+          "position": 2
+        },
+        {
+          "id": 4173,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4505469.jpg",
+          "altText": "Sweet Pea",
+          "position": 3
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4170,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1446292532430-3e76f6ab6444.jpg",
+        "altText": "Sweet Pea",
+        "position": 0
+      }
+    },
+    {
+      "id": 7,
+      "title": "Red Sabra Cactus",
+      "handle": "Red-Sabra-Cactus",
+      "category_id": 1,
+      "available": true,
+      "description": "A productive cactus 2–3 meters tall with medium-sized red fruits. The fruits are sweet and juicy, ideal for fresh eating or preserving. Drought-resistant and suited to hot climates.",
+      "price": "20",
+      "updatedAt": "2025-05-23T07:01:52.386Z",
+      "images": [
+        {
+          "id": 4114,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1604762525950-13c07ecdab8b.jpg",
+          "altText": "Red Sabra Cactus",
+          "position": 0
+        },
+        {
+          "id": 4115,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/orchid-flower-plant-exotic-40744.jpg",
+          "altText": "Red Sabra Cactus",
+          "position": 1
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4114,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1604762525950-13c07ecdab8b.jpg",
+        "altText": "Red Sabra Cactus",
+        "position": 0
+      }
+    },
+    {
+      "id": 43,
+      "title": "Lemon Geranium",
+      "handle": "Lemon-Geranium",
+      "category_id": 4,
+      "available": true,
+      "description": "An evergreen shrub growing 0.5–1 meters tall, with fragrant lemon-scented leaves. Grown for its ornamental appeal and medicinal properties. Hardy and suitable for warm garden environments.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:01:51.789Z",
+      "images": [
+        {
+          "id": 4205,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1532611322744-369123d95bd3.jpg",
+          "altText": "Lemon Geranium",
+          "position": 0
+        },
+        {
+          "id": 4206,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1531875456634-3f5418280d20.jpg",
+          "altText": "Lemon Geranium",
+          "position": 1
+        },
+        {
+          "id": 4207,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1517200578024-62d131797ec8.jpg",
+          "altText": "Lemon Geranium",
+          "position": 2
+        },
+        {
+          "id": 4208,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1650989689559-c56d2c622019.jpg",
+          "altText": "Lemon Geranium",
+          "position": 3
+        },
+        {
+          "id": 4209,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1547516508-e910d368d995.jpg",
+          "altText": "Lemon Geranium",
+          "position": 4
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4205,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1532611322744-369123d95bd3.jpg",
+        "altText": "Lemon Geranium",
+        "position": 0
+      }
+    },
+    {
+      "id": 8,
+      "title": "Kraasi Plum",
+      "handle": "Kraasi-Plum",
+      "category_id": 1,
+      "available": true,
+      "description": "A thorny shrub or small tree growing up to about 5 meters, with white spring blossoms. Its small blue fruits are great for making jams, liqueurs, and more. Hardy and well-suited for gardens and yards.",
+      "price": "28.57",
+      "updatedAt": "2025-05-23T07:01:51.196Z",
+      "images": [
+        {
+          "id": 4116,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1621788051568-dd6bbe1f2f5f.jpg",
+          "altText": "Kraasi Plum",
+          "position": 0
+        },
+        {
+          "id": 4117,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5230925.jpg",
+          "altText": "Kraasi Plum",
+          "position": 1
+        },
+        {
+          "id": 4118,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2215534.jpg",
+          "altText": "Kraasi Plum",
+          "position": 2
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4116,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1621788051568-dd6bbe1f2f5f.jpg",
+        "altText": "Kraasi Plum",
+        "position": 0
+      }
+    },
+    {
+      "id": 44,
+      "title": "Feathery Lavender",
+      "handle": "Feathery-Lavender",
+      "category_id": 4,
+      "available": true,
+      "description": "An evergreen shrub 60–80 cm tall with feathery leaves and long-blooming purple flowers. Has a pleasant aroma and helps repel mosquitoes. Thrives in warm garden conditions.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:01:50.602Z",
+      "images": [
+        {
+          "id": 4210,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1607369799260-959137a24656.jpg",
+          "altText": "Feathery Lavender",
+          "position": 0
+        },
+        {
+          "id": 4211,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395250.jpg",
+          "altText": "Feathery Lavender",
+          "position": 1
+        },
+        {
+          "id": 4212,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5942506.jpg",
+          "altText": "Feathery Lavender",
+          "position": 2
+        },
+        {
+          "id": 4213,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1452767279788-ab97000beec6.jpg",
+          "altText": "Feathery Lavender",
+          "position": 3
+        },
+        {
+          "id": 4214,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4622253.jpg",
+          "altText": "Feathery Lavender",
+          "position": 4
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4210,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1607369799260-959137a24656.jpg",
+        "altText": "Feathery Lavender",
+        "position": 0
+      }
+    },
+    {
+      "id": 31,
+      "title": "Spiny Broom",
+      "handle": "Spiny-Broom",
+      "category_id": 3,
+      "available": true,
+      "description": "A bushy, branched shrub growing 1–4 meters tall. Blooms in spring with bright yellow flowers that attract pollinators. Hardy and well-suited for warm garden environments.",
+      "price": "22.86",
+      "updatedAt": "2025-05-23T07:01:50.010Z",
+      "images": [
+        {
+          "id": 4174,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1700213151787-e787938dd6cc.jpg",
+          "altText": "Spiny Broom",
+          "position": 0
+        },
+        {
+          "id": 4175,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1458596376782-d1c25e7da40e.jpg",
+          "altText": "Spiny Broom",
+          "position": 1
+        },
+        {
+          "id": 4176,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1931155.jpg",
+          "altText": "Spiny Broom",
+          "position": 2
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4174,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1700213151787-e787938dd6cc.jpg",
+        "altText": "Spiny Broom",
+        "position": 0
+      }
+    },
+    {
+      "id": 45,
+      "title": "Gray Lavender",
+      "handle": "Gray-Lavender",
+      "category_id": 4,
+      "available": true,
+      "description": "An evergreen shrub 60–80 cm tall with silvery-gray leaves and stunning purple flowers that bloom nearly year-round. Has a pleasant scent and repels mosquitoes. Ideal for warm garden environments.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:01:49.415Z",
+      "images": [
+        {
+          "id": 4215,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4065905.jpg",
+          "altText": "Gray Lavender",
+          "position": 0
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4215,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4065905.jpg",
+        "altText": "Gray Lavender",
+        "position": 0
+      }
+    },
+    {
+      "id": 51,
+      "title": "פוטוסים",
+      "handle": "פוטוסים",
+      "category_id": 5,
+      "available": true,
+      "description": "פוטוס הוא צמח בית מטפס או נשפך, הידוע בעמידותו וביכולתו להסתגל למגוון רחב של תנאי תאורה. הוא בעל עלים ירוקים בצורת לב, לעיתים עם כתמים בגווני צהוב או לבן, המוסיפים צבע לכל חלל. הצמח מתאים לגידול בעציצים, סלסלות תלויות או מדפים, ודורש השקיה רק כאשר האדמה מתייבשת. מומלץ להימנע מחשיפה לשמש ישירה חזקה, שעלולה לגרום לצריבת העלים",
+      "price": "35",
+      "updatedAt": "2025-05-23T07:01:48.821Z",
+      "images": [
+        {
+          "id": 4234,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1547414924-b71ebb598495.jpg",
+          "altText": "פוטוסים",
+          "position": 0
+        },
+        {
+          "id": 4235,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-584764.jpg",
+          "altText": "פוטוסים",
+          "position": 1
+        },
+        {
+          "id": 4236,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2215534.jpg",
+          "altText": "פוטוסים",
+          "position": 2
+        },
+        {
+          "id": 4237,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2421953.jpg",
+          "altText": "פוטוסים",
+          "position": 3
+        }
+      ],
+      "category": "צמחי-בית",
+      "featuredImage": {
+        "id": 4234,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1547414924-b71ebb598495.jpg",
+        "altText": "פוטוסים",
+        "position": 0
+      }
+    },
+    {
+      "id": 9,
+      "title": "Ofir Mulberry",
+      "handle": "Ofir-Mulberry",
+      "category_id": 1,
+      "available": true,
+      "description": "A local mulberry variety with dark red sweet fruits. Deciduous and ideal for gardens in warm areas. Ripens in spring, good for eating fresh or preserving.",
+      "price": "20",
+      "updatedAt": "2025-05-23T07:01:48.230Z",
+      "images": [
+        {
+          "id": 4119,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1498735599329-ed6e3798cdcb.jpg",
+          "altText": "Ofir Mulberry",
+          "position": 0
+        },
+        {
+          "id": 4120,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/daisy-flower-spring-marguerite-67857.jpg",
+          "altText": "Ofir Mulberry",
+          "position": 1
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4119,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1498735599329-ed6e3798cdcb.jpg",
+        "altText": "Ofir Mulberry",
+        "position": 0
+      }
+    },
+    {
+      "id": 10,
+      "title": "Japanese Raisin Tree",
+      "handle": "Japanese-Raisin-Tree",
+      "category_id": 1,
+      "available": true,
+      "description": "A deciduous tree reaching 5–10 meters high, with broad foliage and white spring blooms. The edible part is the fruit stem, which thickens and sweetens, resembling a raisin. Hardy and ideal for ornamental gardens in warm regions.",
+      "price": "28.57",
+      "updatedAt": "2025-05-23T07:01:47.638Z",
+      "images": [
+        {
+          "id": 4121,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-97801.jpg",
+          "altText": "Japanese Raisin Tree",
+          "position": 0
+        },
+        {
+          "id": 4122,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1181366400-612x612.jpg",
+          "altText": "Japanese Raisin Tree",
+          "position": 1
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4121,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-97801.jpg",
+        "altText": "Japanese Raisin Tree",
+        "position": 0
+      }
+    },
+    {
+      "id": 22,
+      "title": "African Sage",
+      "handle": "African-Sage",
+      "category_id": 2,
+      "available": true,
+      "description": "African Sage is an evergreen shrub growing 1–2 meters tall, with yellow-orange blossoms in spring and summer. It attracts pollinators and is often used as a decorative garden plant. Hardy and suitable for warm areas.",
+      "price": "11.43",
+      "updatedAt": "2025-05-23T07:01:47.043Z",
+      "images": [
+        {
+          "id": 4152,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1582131503261-fca1d1c0589f.jpg",
+          "altText": "African Sage",
+          "position": 0
+        },
+        {
+          "id": 4153,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395244.jpg",
+          "altText": "African Sage",
+          "position": 1
+        },
+        {
+          "id": 4154,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1200225.jpg",
+          "altText": "African Sage",
+          "position": 2
+        },
+        {
+          "id": 4155,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/basil-herbs-green-mediterranean-40720.jpg",
+          "altText": "African Sage",
+          "position": 3
+        }
+      ],
+      "category": "Shrubs",
+      "featuredImage": {
+        "id": 4152,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1582131503261-fca1d1c0589f.jpg",
+        "altText": "African Sage",
+        "position": 0
+      }
+    },
+    {
+      "id": 23,
+      "title": "Saltbush",
+      "handle": "Saltbush",
+      "category_id": 2,
+      "available": true,
+      "description": "Saltbush is a desert shrub reaching 0.5–2 meters tall with gray leaves and green flowers. Highly tolerant of salinity and drought. Used for grazing and land reclamation in arid zones.",
+      "price": "10",
+      "updatedAt": "2025-05-23T07:01:46.448Z",
+      "images": [
+        {
+          "id": 4156,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1312323.jpg",
+          "altText": "Saltbush",
+          "position": 0
+        }
+      ],
+      "category": "Shrubs",
+      "featuredImage": {
+        "id": 4156,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1312323.jpg",
+        "altText": "Saltbush",
+        "position": 0
+      }
+    },
+    {
+      "id": 11,
+      "title": "Rimon Rosh Pered (Pomegranate)",
+      "handle": "Rimon-Rosh-Pered-(Pomegranate)",
+      "category_id": 1,
+      "available": true,
+      "description": "An Israeli pomegranate variety growing 2–5 meters tall, with red spring blossoms. Its pinkish, sweet fruits are perfect for fresh consumption and juice. Hardy and suitable for home gardens.",
+      "price": "20",
+      "updatedAt": "2025-05-23T07:01:45.853Z",
+      "images": [
+        {
+          "id": 4123,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1072824.jpg",
+          "altText": "Rimon Rosh Pered (Pomegranate)",
+          "position": 0
+        },
+        {
+          "id": 4124,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1382195.jpg",
+          "altText": "Rimon Rosh Pered (Pomegranate)",
+          "position": 1
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4123,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1072824.jpg",
+        "altText": "Rimon Rosh Pered (Pomegranate)",
+        "position": 0
+      }
+    },
+    {
+      "id": 32,
+      "title": "African Lion’s Ear",
+      "handle": "African-Lion’s-Ear",
+      "category_id": 3,
+      "available": true,
+      "description": "An evergreen shrub 1–2 meters tall, with vivid orange flowers blooming in spring and summer. Attracts pollinators and is used as an ornamental plant. Hardy and suitable for warm gardens.",
+      "price": "11.43",
+      "updatedAt": "2025-05-23T07:01:45.209Z",
+      "images": [
+        {
+          "id": 4177,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1452767279788-ab97000beec6.jpg",
+          "altText": "African Lion’s Ear",
+          "position": 0
+        },
+        {
+          "id": 4178,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1605116958927-03653f6be547.jpg",
+          "altText": "African Lion’s Ear",
+          "position": 1
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4177,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1452767279788-ab97000beec6.jpg",
+        "altText": "African Lion’s Ear",
+        "position": 0
+      }
+    },
+    {
+      "id": 12,
+      "title": "Short White Mulberry",
+      "handle": "Short-White-Mulberry",
+      "category_id": 1,
+      "available": true,
+      "description": "A deciduous tree reaching 5–10 meters with short, white, sweet fruits. Ripens in spring and suitable for fresh use or preserving. Hardy and ideal for warm areas.",
+      "price": "20",
+      "updatedAt": "2025-05-23T07:01:44.571Z",
+      "images": [
+        {
+          "id": 4125,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1181366400-612x612.jpg",
+          "altText": "Short White Mulberry",
+          "position": 0
+        },
+        {
+          "id": 4126,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1525722752835-fdf3d77e9d03.jpg",
+          "altText": "Short White Mulberry",
+          "position": 1
+        },
+        {
+          "id": 4127,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1530968348606-69c989d6efc9.jpg",
+          "altText": "Short White Mulberry",
+          "position": 2
+        },
+        {
+          "id": 4128,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1584204559709-ca7d413229eb.jpg",
+          "altText": "Short White Mulberry",
+          "position": 3
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4125,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1181366400-612x612.jpg",
+        "altText": "Short White Mulberry",
+        "position": 0
+      }
+    },
+    {
+      "id": 13,
+      "title": "Rimon Shami (Pomegranate)",
+      "handle": "Rimon-Shami-(Pomegranate)",
+      "category_id": 1,
+      "available": true,
+      "description": "A traditional variety with a red-pink peel and juicy seeds. Extremely sweet with a distinct aroma, ripens in late summer. Hardy and good for warm gardens.",
+      "price": "20",
+      "updatedAt": "2025-05-23T07:01:43.977Z",
+      "images": [
+        {
+          "id": 4129,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952031.jpg",
+          "altText": "Rimon Shami (Pomegranate)",
+          "position": 0
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4129,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952031.jpg",
+        "altText": "Rimon Shami (Pomegranate)",
+        "position": 0
+      }
+    },
+    {
+      "id": 52,
+      "title": "אוזן פיל",
+      "handle": "אוזן-פיל",
+      "category_id": 5,
+      "available": true,
+      "description": "אוזן פיל, או אלוקסיה, הוא צמח טרופי מרשים בעל עלים גדולים בצורת לב, המזכירים את אוזני הפיל ומכאן שמו. הצמח מגיע במגוון מינים וגדלים, ומתאים לגידול בבית, במרפסת או בגינה מוצלת. מעדיף אור בהיר עקיף, ויש להימנע מחשיפה לשמש ישירה. דורש השקיה מרובה, במיוחד בתקופת הצמיחה, ויש לשמור על לחות גבוהה בסביבתו.",
+      "price": "25",
+      "updatedAt": "2025-05-23T07:01:43.383Z",
+      "images": [
+        {
+          "id": 4238,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1527174843116-72e8211b429f.jpg",
+          "altText": "אוזן פיל",
+          "position": 0
+        },
+        {
+          "id": 4239,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-719756.jpg",
+          "altText": "אוזן פיל",
+          "position": 1
+        },
+        {
+          "id": 4240,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1353938.jpg",
+          "altText": "אוזן פיל",
+          "position": 2
+        },
+        {
+          "id": 4241,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1604762525953-2c80447cc4a6.jpg",
+          "altText": "אוזן פיל",
+          "position": 3
+        },
+        {
+          "id": 4242,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1509423350716-97f9360b4e09.jpg",
+          "altText": "אוזן פיל",
+          "position": 4
+        }
+      ],
+      "category": "צמחי-בית",
+      "featuredImage": {
+        "id": 4238,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1527174843116-72e8211b429f.jpg",
+        "altText": "אוזן פיל",
+        "position": 0
+      }
+    },
+    {
+      "id": 14,
+      "title": "Long White Mulberry",
+      "handle": "Long-White-Mulberry",
+      "category_id": 1,
+      "available": true,
+      "description": "A deciduous tree reaching 5–10 meters with long, white, sweet fruits. Ripens in spring, ideal for fresh eating or preserves. Hardy and suited for warm climates.",
+      "price": "20",
+      "updatedAt": "2025-05-23T07:01:42.793Z",
+      "images": [
+        {
+          "id": 4130,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2552418.jpg",
+          "altText": "Long White Mulberry",
+          "position": 0
+        },
+        {
+          "id": 4131,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1302899.jpg",
+          "altText": "Long White Mulberry",
+          "position": 1
+        },
+        {
+          "id": 4132,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1713953.jpg",
+          "altText": "Long White Mulberry",
+          "position": 2
+        },
+        {
+          "id": 4133,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-132474.jpg",
+          "altText": "Long White Mulberry",
+          "position": 3
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4130,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2552418.jpg",
+        "altText": "Long White Mulberry",
+        "position": 0
+      }
+    },
+    {
+      "id": 46,
+      "title": "Mint",
+      "handle": "Mint",
+      "category_id": 4,
+      "available": true,
+      "description": "Mint is a perennial herbaceous plant from the Lamiaceae family, growing 0.5–1 meters tall. Commonly used as a culinary herb and valued for its many medicinal properties. Thrives in warm gardens.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:01:42.196Z",
+      "images": [
+        {
+          "id": 4216,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1532611322744-369123d95bd3.jpg",
+          "altText": "Mint",
+          "position": 0
+        },
+        {
+          "id": 4217,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-97260.jpg",
+          "altText": "Mint",
+          "position": 1
+        },
+        {
+          "id": 4218,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1048036.jpg",
+          "altText": "Mint",
+          "position": 2
+        },
+        {
+          "id": 4219,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-2143490032-612x612.jpg",
+          "altText": "Mint",
+          "position": 3
+        },
+        {
+          "id": 4220,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1566836610593-62a64888a216.jpg",
+          "altText": "Mint",
+          "position": 4
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4216,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1532611322744-369123d95bd3.jpg",
+        "altText": "Mint",
+        "position": 0
+      }
+    },
+    {
+      "id": 33,
+      "title": "Shrubby Lucerne",
+      "handle": "Shrubby-Lucerne",
+      "category_id": 3,
+      "available": true,
+      "description": "Shrubby Lucerne is an evergreen legume growing 1–2 meters tall. Blooms in spring with yellow flowers and enriches the soil with nitrogen. Excellent as ground cover. Hardy in warm climates.",
+      "price": "14.29",
+      "updatedAt": "2025-05-23T07:01:41.596Z",
+      "images": [
+        {
+          "id": 4179,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1616472875095-670bc3848f8d.jpg",
+          "altText": "Shrubby Lucerne",
+          "position": 0
+        },
+        {
+          "id": 4180,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1566553253535-64c91138b407.jpg",
+          "altText": "Shrubby Lucerne",
+          "position": 1
+        },
+        {
+          "id": 4181,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1487190296540-b92a6b829973.jpg",
+          "altText": "Shrubby Lucerne",
+          "position": 2
+        },
+        {
+          "id": 4182,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1506784693919-ef06d93c28d2.jpg",
+          "altText": "Shrubby Lucerne",
+          "position": 3
+        }
+      ],
+      "category": "Edibles",
+      "featuredImage": {
+        "id": 4179,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1616472875095-670bc3848f8d.jpg",
+        "altText": "Shrubby Lucerne",
+        "position": 0
+      }
+    },
+    {
+      "id": 15,
+      "title": "Rimon Akko (Pomegranate)",
+      "handle": "Rimon-Akko-(Pomegranate)",
+      "category_id": 1,
+      "available": true,
+      "description": "A local pomegranate variety reaching 3–4 meters, with red blossoms in spring. Large, sweet, juicy fruits with red peels and seeds. Suitable for gardens in warm climates.",
+      "price": "20",
+      "updatedAt": "2025-05-23T07:01:40.997Z",
+      "images": [
+        {
+          "id": 4134,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1495170.jpg",
+          "altText": "Rimon Akko (Pomegranate)",
+          "position": 0
+        }
+      ],
+      "category": "Trees",
+      "featuredImage": {
+        "id": 4134,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1495170.jpg",
+        "altText": "Rimon Akko (Pomegranate)",
+        "position": 0
+      }
+    },
+    {
+      "id": 47,
+      "title": "Fragrant Sage",
+      "handle": "Fragrant-Sage",
+      "category_id": 4,
+      "available": true,
+      "description": "An evergreen shrub about 70 cm tall with wrinkled, triangular leaves and a strong, pleasant scent that lingers. Blooms in spring with pale yellow-white flowers and attracts many pollinators. Hardy and suitable for warm gardens.",
+      "price": "5.71",
+      "updatedAt": "2025-05-23T07:01:40.396Z",
+      "images": [
+        {
+          "id": 4221,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1694424988548-1cea2d57c1e1.jpg",
+          "altText": "Fragrant Sage",
+          "position": 0
+        },
+        {
+          "id": 4222,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1599148401005-fe6d7497cb5e.jpg",
+          "altText": "Fragrant Sage",
+          "position": 1
+        },
+        {
+          "id": 4223,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1598764557991-b9f211b73b81.jpg",
+          "altText": "Fragrant Sage",
+          "position": 2
+        },
+        {
+          "id": 4224,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1570949144026-8f8141748760.jpg",
+          "altText": "Fragrant Sage",
+          "position": 3
+        },
+        {
+          "id": 4225,
+          "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1587131766835-e5dfaf70ea20.jpg",
+          "altText": "Fragrant Sage",
+          "position": 4
+        }
+      ],
+      "category": "Herbs",
+      "featuredImage": {
+        "id": 4221,
+        "url": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1694424988548-1cea2d57c1e1.jpg",
+        "altText": "Fragrant Sage",
+        "position": 0
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Trees",
+      "handle": "Trees",
+      "position": 0,
+      "updatedAt": "2025-05-23T07:01:37.612Z"
+    },
+    {
+      "id": 2,
+      "title": "Shrubs",
+      "handle": "Shrubs",
+      "position": 1,
+      "updatedAt": "2025-05-23T07:01:38.075Z"
+    },
+    {
+      "id": 3,
+      "title": "Edibles",
+      "handle": "Edibles",
+      "position": 2,
+      "updatedAt": "2025-05-23T07:01:38.526Z"
+    },
+    {
+      "id": 4,
+      "title": "Herbs",
+      "handle": "Herbs",
+      "position": 3,
+      "updatedAt": "2025-05-23T07:01:38.978Z"
+    },
+    {
+      "id": 5,
+      "title": "צמחי בית",
+      "handle": "צמחי-בית",
+      "position": 4,
+      "updatedAt": "2025-05-23T07:01:39.496Z"
+    },
+    {
+      "id": 6,
+      "title": "זרעים",
+      "handle": "זרעים",
+      "position": 5,
+      "updatedAt": "2025-05-23T07:01:39.944Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "user0@example.com",
+      "phone": "0587104338",
+      "totalQuantity": 9,
+      "cost": "214.28",
+      "status": "done",
+      "createdAt": "2025-04-29T07:07:39.272Z",
+      "items": [
+        {
+          "id": 608,
+          "productId": 27,
+          "handle": "Moringa",
+          "title": "Moringa",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1667385372949-ce58045f9d79.jpg",
+          "imageAlt": "Moringa",
+          "quantity": 1,
+          "unitAmount": "11.43",
+          "totalAmount": "11.43"
+        },
+        {
+          "id": 609,
+          "productId": 7,
+          "handle": "Rimon-Shami-(Pomegranate)",
+          "title": "Rimon Shami (Pomegranate)",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952031.jpg",
+          "imageAlt": "Rimon Shami (Pomegranate)",
+          "quantity": 3,
+          "unitAmount": "20.00",
+          "totalAmount": "60.00"
+        },
+        {
+          "id": 610,
+          "productId": 13,
+          "handle": "Japanese-Raisin-Tree",
+          "title": "Japanese Raisin Tree",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-97801.jpg",
+          "imageAlt": "Japanese Raisin Tree",
+          "quantity": 5,
+          "unitAmount": "28.57",
+          "totalAmount": "142.85"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "מיכל לוי",
+      "email": "user1@example.com",
+      "phone": "0574878209",
+      "totalQuantity": 10,
+      "cost": "289.30",
+      "status": "ready",
+      "createdAt": "2025-05-03T07:07:39.272Z",
+      "items": [
+        {
+          "id": 611,
+          "productId": 15,
+          "handle": "פוטוסים",
+          "title": "פוטוסים",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1547414924-b71ebb598495.jpg",
+          "imageAlt": "פוטוסים",
+          "quantity": 5,
+          "unitAmount": "35.00",
+          "totalAmount": "175.00"
+        },
+        {
+          "id": 612,
+          "productId": 25,
+          "handle": "סנסיוורות-גבוהות",
+          "title": "סנסיוורות גבוהות",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952027.jpg",
+          "imageAlt": "סנסיוורות גבוהות",
+          "quantity": 3,
+          "unitAmount": "70.00",
+          "totalAmount": "210.00"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Emma Williams",
+      "email": "user2@example.com",
+      "phone": "0546167266",
+      "totalQuantity": 7,
+      "cost": "134.31",
+      "status": "done",
+      "createdAt": "2025-05-13T07:07:39.272Z",
+      "items": [
+        {
+          "id": 613,
+          "productId": 17,
+          "handle": "Spiny-Broom",
+          "title": "Spiny Broom",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1700213151787-e787938dd6cc.jpg",
+          "imageAlt": "Spiny Broom",
+          "quantity": 2,
+          "unitAmount": "22.86",
+          "totalAmount": "45.72"
+        },
+        {
+          "id": 614,
+          "productId": 28,
+          "handle": "Fig",
+          "title": "Fig",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/garden-rose-red-pink-56866.jpg",
+          "imageAlt": "Fig",
+          "quantity": 2,
+          "unitAmount": "22.86",
+          "totalAmount": "45.72"
+        },
+        {
+          "id": 615,
+          "productId": 49,
+          "handle": "Small-Bay-Laurel",
+          "title": "Small Bay Laurel",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1445962125599-30f582ac21f4.jpg",
+          "imageAlt": "Small Bay Laurel",
+          "quantity": 3,
+          "unitAmount": "14.29",
+          "totalAmount": "42.87"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "James Brown",
+      "email": "user3@example.com",
+      "phone": "0524985900",
+      "totalQuantity": 8,
+      "cost": "120.00",
+      "status": "done",
+      "createdAt": "2025-05-17T07:07:39.272Z",
+      "items": [
+        {
+          "id": 616,
+          "productId": 54,
+          "handle": "Rue",
+          "title": "Rue",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-705310.jpg",
+          "imageAlt": "Rue",
+          "quantity": 2,
+          "unitAmount": "5.71",
+          "totalAmount": "11.42"
+        },
+        {
+          "id": 617,
+          "productId": 10,
+          "handle": "Rimon-Rosh-Pered-(Pomegranate)",
+          "title": "Rimon Rosh Pered (Pomegranate)",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1072824.jpg",
+          "imageAlt": "Rimon Rosh Pered (Pomegranate)",
+          "quantity": 4,
+          "unitAmount": "20.00",
+          "totalAmount": "80.00"
+        },
+        {
+          "id": 618,
+          "productId": 31,
+          "handle": "Sea-Mallow",
+          "title": "Sea Mallow",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1587131766835-e5dfaf70ea20.jpg",
+          "imageAlt": "Sea Mallow",
+          "quantity": 2,
+          "unitAmount": "14.29",
+          "totalAmount": "28.58"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Olivia Davis",
+      "email": "user4@example.com",
+      "phone": "0530890941",
+      "totalQuantity": 5,
+      "cost": "250.00",
+      "status": "new",
+      "createdAt": "2025-05-01T07:07:39.272Z",
+      "items": [
+        {
+          "id": 619,
+          "productId": 10,
+          "handle": "Rimon-Rosh-Pered-(Pomegranate)",
+          "title": "Rimon Rosh Pered (Pomegranate)",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1072824.jpg",
+          "imageAlt": "Rimon Rosh Pered (Pomegranate)",
+          "quantity": 2,
+          "unitAmount": "20.00",
+          "totalAmount": "40.00"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Liam Miller",
+      "email": "user5@example.com",
+      "phone": "0596873582",
+      "totalQuantity": 8,
+      "cost": "114.32",
+      "status": "new",
+      "createdAt": "2025-05-05T07:07:39.272Z",
+      "items": [
+        {
+          "id": 620,
+          "productId": 26,
+          "handle": "Pigeon-Pea",
+          "title": "Pigeon Pea",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/wild-flower-background-flower-close-158711.jpg",
+          "imageAlt": "Pigeon Pea",
+          "quantity": 3,
+          "unitAmount": "14.29",
+          "totalAmount": "42.87"
+        },
+        {
+          "id": 621,
+          "productId": 44,
+          "handle": "Stinking-Bean-Trefoil",
+          "title": "Stinking Bean Trefoil",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1569171181721-31a9e143e579.jpg",
+          "imageAlt": "Stinking Bean Trefoil",
+          "quantity": 5,
+          "unitAmount": "14.29",
+          "totalAmount": "71.45"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Sophia Wilson",
+      "email": "user6@example.com",
+      "phone": "0555530343",
+      "totalQuantity": 8,
+      "cost": "100.02",
+      "status": "ready",
+      "createdAt": "2025-04-29T07:07:39.272Z",
+      "items": [
+        {
+          "id": 622,
+          "productId": 29,
+          "handle": "Elderberry",
+          "title": "Elderberry",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2248529.jpg",
+          "imageAlt": "Elderberry",
+          "quantity": 2,
+          "unitAmount": "10.00",
+          "totalAmount": "20.00"
+        },
+        {
+          "id": 623,
+          "productId": 32,
+          "handle": "Mediterranean-Spiraea",
+          "title": "Mediterranean Spiraea",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1552248524-10d9a7e4841c.jpg",
+          "imageAlt": "Mediterranean Spiraea",
+          "quantity": 2,
+          "unitAmount": "11.43",
+          "totalAmount": "22.86"
+        },
+        {
+          "id": 624,
+          "productId": 47,
+          "handle": "Bush-Lucerne",
+          "title": "Bush Lucerne",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-247599.jpg",
+          "imageAlt": "Bush Lucerne",
+          "quantity": 4,
+          "unitAmount": "14.29",
+          "totalAmount": "57.16"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Noah Moore",
+      "email": "user7@example.com",
+      "phone": "0523451522",
+      "totalQuantity": 2,
+      "cost": "90.00",
+      "status": "done",
+      "createdAt": "2025-05-10T07:07:39.272Z",
+      "items": [
+        {
+          "id": 625,
+          "productId": 51,
+          "handle": "פפרומיות",
+          "title": "פפרומיות",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1715887643348-4d8f945cb0e3.jpg",
+          "imageAlt": "פפרומיות",
+          "quantity": 2,
+          "unitAmount": "45.00",
+          "totalAmount": "90.00"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Isabella Taylor",
+      "email": "user8@example.com",
+      "phone": "0536621259",
+      "totalQuantity": 7,
+      "cost": "267.16",
+      "status": "canceled",
+      "createdAt": "2025-05-18T07:07:39.272Z",
+      "items": [
+        {
+          "id": 626,
+          "productId": 14,
+          "handle": "Ofir-Mulberry",
+          "title": "Ofir Mulberry",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1498735599329-ed6e3798cdcb.jpg",
+          "imageAlt": "Ofir Mulberry",
+          "quantity": 1,
+          "unitAmount": "20.00",
+          "totalAmount": "20.00"
+        },
+        {
+          "id": 627,
+          "productId": 3,
+          "handle": "Shrubby-Lucerne",
+          "title": "Shrubby Lucerne",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1616472875095-670bc3848f8d.jpg",
+          "imageAlt": "Shrubby Lucerne",
+          "quantity": 4,
+          "unitAmount": "14.29",
+          "totalAmount": "57.16"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "אופיר כהן",
+      "email": "user9@example.com",
+      "phone": "0513093114",
+      "totalQuantity": 4,
+      "cost": "230.00",
+      "status": "canceled",
+      "createdAt": "2025-05-13T07:07:39.272Z",
+      "items": [
+        {
+          "id": 628,
+          "productId": 25,
+          "handle": "סנסיוורות-גבוהות",
+          "title": "סנסיוורות גבוהות",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952027.jpg",
+          "imageAlt": "סנסיוורות גבוהות",
+          "quantity": 3,
+          "unitAmount": "70.00",
+          "totalAmount": "210.00"
+        },
+        {
+          "id": 629,
+          "productId": 25,
+          "handle": "סנסיוורות-גבוהות",
+          "title": "סנסיוורות גבוהות",
+          "imageUrl": "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952027.jpg",
+          "imageAlt": "סנסיוורות גבוהות",
+          "quantity": 3,
+          "unitAmount": "70.00",
+          "totalAmount": "210.00"
+        }
+      ]
+    }
+  ]
+}

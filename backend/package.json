@@ -1,0 +1,75 @@
+{
+  "name": "next-ecommerce-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Next.js e-commerce platform",
+  "author": "GILAD",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/src/lib/index.js",
+  "types": "dist/src/lib/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./*": "./dist/src/*"
+  },
+  "keywords": [
+    "express",
+    "ecommerce",
+    "typescript",
+    "typeorm",
+    "postgresql",
+    "jwt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giladfuchs/next-ecommerce"
+  },
+  "scripts": {
+    "dev": "tsx src/dev.ts SEED=true",
+    "nodemon": "nodemon --exec tsx src/dev.ts",
+    "debug": "tsx --inspect src/dev.ts",
+    "debug:script": "tsx --inspect-brk scripts/make_backup.ts",
+    "typecheck": "tsc --noEmit",
+    "format": "npx prettier --write .",
+    "build": "pnpm typecheck && tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "codegen:recored": "NODE_ENV=test SEED=true PORT=4010 tsx src/dev.ts"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.3.0",
+    "@vercel/node": "^5.6.7",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.0.2",
+    "nodemailer": "^8.0.1",
+    "pg": "^8.19.0",
+    "reflect-metadata": "^0.2.2",
+    "sharp": "^0.34.5",
+    "typeorm": "^0.3.28"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.3.0",
+    "@types/bcryptjs": "^3.0.0",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^25.3.1",
+    "@types/nodemailer": "^7.0.11",
+    "@types/supertest": "^7.2.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.2.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "packageManager": "pnpm@10.8.1"
+}

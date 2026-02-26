@@ -1,0 +1,129 @@
+:root {
+  --font-scale-factor: 1;
+}
+
+html {
+  font-size: calc(16px * var(--font-scale-factor)) !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body,
+button,
+input,
+textarea,
+select,
+p,
+span,
+div,
+a,
+label {
+  font-size: calc(1em * var(--font-scale-factor)) !important;
+}
+
+html.font-size-90 {
+  --font-scale-factor: 0.9;
+}
+html.font-size-95 {
+  --font-scale-factor: 0.95;
+}
+html.font-size-100 {
+  --font-scale-factor: 1;
+}
+html.font-size-105 {
+  --font-scale-factor: 1.05;
+}
+html.font-size-110 {
+  --font-scale-factor: 1.1;
+}
+html.font-size-115 {
+  --font-scale-factor: 1.15;
+}
+
+html.invert {
+  filter: invert(100%);
+}
+html.grayscale {
+  filter: grayscale(100%);
+}
+
+html.readable-font,
+html.readable-font body,
+html.readable-font input,
+html.readable-font textarea,
+html.readable-font button,
+html.readable-font select,
+html.readable-font label,
+html.readable-font span,
+html.readable-font p,
+html.readable-font div,
+html.readable-font a {
+  font-family:
+    "Arial Rounded MT Bold", "Tahoma", "Verdana", system-ui, sans-serif !important;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
+html.underline-links a,
+html.underline-links a *,
+html.underline-links button,
+html.underline-links [role="button"],
+html.underline-links [data-link="true"] {
+  text-decoration: underline !important;
+}
+
+html.high-contrast {
+  --category-hover-bg: #333 !important;
+  --category-active-bg: #444 !important;
+  --color-bg: #000 !important;
+  --color-text-strong: #ff0 !important;
+  --color-border: #ff0 !important;
+  --color-chip: #000 !important;
+}
+
+html.high-contrast,
+html.high-contrast body,
+html.high-contrast main {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-strong) !important;
+}
+
+html.high-contrast
+  :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    small,
+    strong,
+    em,
+    li,
+    dd,
+    dt,
+    a,
+    button,
+    label
+  ) {
+  color: var(--color-text-strong) !important;
+}
+
+html.high-contrast [class*="bg-"] {
+  background-color: var(--color-bg) !important;
+}
+html.high-contrast .border {
+  border-color: var(--color-border) !important;
+}
+
+html.high-contrast :is(button, input, textarea, select) {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-strong) !important;
+  border-color: var(--color-border) !important;
+}
+
+html.high-contrast img {
+  border: 2px solid var(--color-border) !important;
+  border-radius: 4px;
+}

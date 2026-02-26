@@ -1,0 +1,86 @@
+"use client";
+import { Grid, Button, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
+
+import FieldRenderer from "./field-renderer";
+
+import type { FormField, FieldValue } from "@/lib/types";
+import type { FormEvent } from "react";
+
+interface DynamicFormProps {
+  title: string;
+  fields: FormField[];
+  onSubmit: (send_fields: FormField[]) => void;
+}
+
+export default function DynamicForm({
+  title,
+  fields,
+  onSubmit,
+}: DynamicFormProps) {
+  const [localFields, setLocalFields] = useState<FormField[]>([]);
+
+  useEffect(() => {
+    setLocalFields(fields);
+  }, [fields]);
+
+  const handleChange = (value: FieldValue, key: string) => {
+    const updatedFields = localFields.map((field) =>
+      field.key === key ? { ...field, value } : field,
+    );
+    setLocalFields(updatedFields);
+  };
+
+  return (
+    <Grid<"form">
+      container
+      justifyContent="center"
+      component="form"
+      onSubmit={(e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        onSubmit(localFields);
+      }}
+    >
+      <Grid size={{ xs: 12, sm: 10, md: 6, lg: 5 }}>
+        <Typography
+          data-testid="form-title"
+          variant="h4"
+          textAlign="center"
+          fontWeight="bold"
+          mb={2}
+        >
+          <FormattedMessage id={title} />
+        </Typography>
+
+        <Grid container direction="column" spacing={3}>
+          {localFields.map((field) => (
+            <Grid key={field.key}>
+              <FieldRenderer field={field} onChange={handleChange} />
+            </Grid>
+          ))}
+
+          <Grid display="flex" justifyContent="center">
+            <Button
+              type="submit"
+              data-testid="form-submit-button"
+              variant="contained"
+              sx={{
+                px: 4,
+                py: 1.5,
+                fontWeight: "bold",
+                backgroundColor: "var(--color-accent)",
+                "&:hover": {
+                  backgroundColor: "var(--color-accent)",
+                  opacity: 0.9,
+                },
+              }}
+            >
+              <FormattedMessage id="form.button.submit" />
+            </Button>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+}

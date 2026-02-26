@@ -1,0 +1,222 @@
+:root {
+  --font-scale-factor: 1;
+
+  --color-bg: #f4f9f8;
+  --color-text: #0f1f1e;
+  --color-text-strong: #000000;
+  --color-chip: #bce3db;
+  --color-label-bg: #54d99b;
+  --color-accent: #24bfa7;
+  --color-border: #b0d6d1;
+}
+html {
+  font-family: "Assistant", sans-serif;
+  font-size: calc(16px * var(--font-scale-factor));
+  background-color: var(--color-bg);
+}
+
+body {
+  font-family: inherit;
+  font-size: calc(1em * var(--font-scale-factor));
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+}
+.order-status-vars {
+  --color-status-new: #009688;
+  --color-status-ready: #6cc067;
+  --color-status-done: #607d8b;
+  --color-status-canceled: #d9534f;
+}
+
+/* LTR/RTL universal layout fixes */
+[dir="rtl"] body {
+  text-align: right;
+}
+[dir="ltr"] body {
+  text-align: left;
+}
+
+body.admin .hide-in-admin {
+  display: none !important;
+}
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+html.readable-font,
+html.readable-font body,
+html.readable-font .MuiButton-root,
+html.readable-font .MuiTypography-root,
+html.readable-font input,
+html.readable-font textarea,
+html.readable-font button,
+html.readable-font select,
+html.readable-font label,
+html.readable-font span,
+html.readable-font p,
+html.readable-font div,
+html.readable-font a {
+  font-family:
+    "Arial Rounded MT Bold", "Tahoma", "Verdana", "system-ui", sans-serif !important;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
+/* Underline mode */
+html.underline-links a,
+html.underline-links a *,
+html.underline-links button,
+html.underline-links .MuiButtonBase-root,
+html.underline-links .MuiTypography-root,
+html.underline-links .MuiListItemButton-root,
+html.underline-links .MuiListItemText-root,
+html.underline-links .MuiLink-root {
+  text-decoration: underline !important;
+}
+/* High contrast mode */
+html.high-contrast {
+  --category-hover-bg: #333 !important;
+  --category-active-bg: #444 !important;
+  --color-bg: black !important;
+  --color-text-strong: yellow !important;
+  --color-border: yellow !important;
+  --color-chip: black !important;
+}
+
+html.high-contrast,
+body.high-contrast,
+html.high-contrast body,
+html.high-contrast #font-scale-wrapper,
+html.high-contrast .app,
+html.high-contrast main {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-strong) !important;
+}
+
+html.high-contrast * {
+  color: var(--color-text-strong) !important;
+  border-color: var(--color-border) !important;
+  caret-color: var(--color-text-strong) !important;
+}
+
+html.high-contrast .MuiButton-root,
+html.high-contrast button {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-strong) !important;
+  border-color: var(--color-border) !important;
+}
+
+html.high-contrast input,
+html.high-contrast textarea,
+html.high-contrast .MuiOutlinedInput-root {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-strong) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+html.high-contrast .MuiSvgIcon-root {
+  color: var(--color-text-strong) !important;
+}
+
+html.high-contrast img {
+  border: 2px solid var(--color-border) !important;
+  border-radius: 4px;
+}
+
+html.high-contrast .MuiAutocomplete-root,
+html.high-contrast .MuiAutocomplete-inputRoot,
+html.high-contrast .MuiFormLabel-root,
+html.high-contrast .MuiAutocomplete-listbox,
+html.high-contrast .MuiPaper-root,
+html.high-contrast .MuiAutocomplete-option {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-strong) !important;
+  border-color: var(--color-border) !important;
+}
+
+html.high-contrast label,
+html.high-contrast .MuiInputLabel-root {
+  color: var(--color-text-strong) !important;
+}
+
+html.high-contrast .footer,
+html.high-contrast .accessibility-panel {
+  background-color: var(--color-bg) !important;
+}
+
+html.high-contrast .price-badge {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+html.high-contrast .price-badge * {
+  color: yellow !important;
+}
+
+html.high-contrast .bg-blue-600 {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.MuiDialog-root,
+.MuiDialogContent-root,
+.MuiTypography-root,
+.dialog-panel * {
+  font-size: inherit !important;
+}
+html.invert {
+  filter: invert(100%);
+}
+
+html.grayscale {
+  filter: grayscale(100%);
+}
+
+/* Font scaling */
+html.font-size-80 {
+  --font-scale-factor: 0.8;
+}
+html.font-size-90 {
+  --font-scale-factor: 0.9;
+}
+html.font-size-100 {
+  --font-scale-factor: 1;
+}
+html.font-size-110 {
+  --font-scale-factor: 1.1;
+}
+html.font-size-120 {
+  --font-scale-factor: 1.2;
+}
+html.font-size-130 {
+  --font-scale-factor: 1.3;
+}
+html.font-size-140 {
+  --font-scale-factor: 1.4;
+}
+html.font-size-150 {
+  --font-scale-factor: 1.5;
+}
+html.font-size-160 {
+  --font-scale-factor: 1.6;
+}
+html.font-size-170 {
+  --font-scale-factor: 1.7;
+}
+html.font-size-180 {
+  --font-scale-factor: 1.8;
+}
+html.font-size-190 {
+  --font-scale-factor: 1.9;
+}
+html.font-size-200 {
+  --font-scale-factor: 2;
+}

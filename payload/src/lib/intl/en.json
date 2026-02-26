@@ -1,0 +1,114 @@
+{
+  "order": {
+    "adminNotification": "📦 New order received → ",
+    "email": {
+      "subjectPrefix": "Order Confirmation - No.",
+      "greeting": "Hello",
+      "confirmation": "Your order was received successfully.",
+      "total": "Total to Pay:",
+      "orderNumber": "Order Number:",
+      "thanks": "Thank you for shopping with us 💚",
+      "headers": {
+        "image": "Image",
+        "product": "Product",
+        "quantity": "Quantity",
+        "price": "Price",
+        "total": "Total"
+      }
+    }
+  },
+  "product": {
+    "not_found": "No products found.",
+
+    "stock": {
+      "onlyLeft": "Only {count} left in stock",
+      "inStock": "In stock",
+      "outOfStock": "Out of stock"
+    },
+    "addToCart": {
+      "button": "Add To Cart",
+      "selectVariant": "Please select a variant.",
+      "added": "Product added to cart."
+    },
+    "gallery": {
+      "previous": "Previous image",
+      "next": "Next image"
+    }
+  },
+
+  "general": {
+    "back": "Back",
+    "toggle_theme": "Toggle theme",
+    "categories": "Categories",
+    "category_all": "All Products"
+  },
+  "cart": {
+    "title": "My Cart",
+    "description": "Manage your cart here, add items to view the total.",
+    "emptyTitle": "Your cart is empty.",
+    "total": "Total",
+    "checkout": "Proceed to Checkout"
+  },
+  "checkout": {
+    "page": {
+      "emptyCart": "Your cart is empty.",
+      "continueShopping": "Continue shopping?",
+      "title": "Checkout",
+      "orderReceived": "Order received.",
+      "orderId": "Order ID: {id}",
+      "backToShop": "Back to shop",
+      "yourCart": "Your cart",
+      "total": "Total"
+    },
+    "fields": {
+      "name": {
+        "label": "Name",
+        "required": "Name is required."
+      },
+      "phone": {
+        "label": "Phone",
+        "required": "Phone is required.",
+        "invalid": "Phone number is not valid."
+      },
+      "email": {
+        "label": "Email",
+        "required": "Email is required.",
+        "invalid": "Email is not valid."
+      }
+    },
+    "submit": {
+      "sending": "Sending...",
+      "sendOrder": "Send order",
+      "success": "Order sent",
+      "failed": "Order failed"
+    }
+  },
+  "admin": {
+    "cacheControl": {
+      "title": "Cache Control",
+      "description": "After major changes (footer, products, categories), click revalidate.",
+      "readMore": "Read more...",
+      "hideDetails": "Hide details",
+      "revalidate": "Revalidate Cache",
+      "revalidating": "Revalidating...",
+      "success": "Cache revalidated successfully.",
+      "details": {
+        "footer": "Footer or home settings changed",
+        "products": "Many products added",
+        "category": "Category renamed or reordered",
+        "finish": "Finish edits → then revalidate once."
+      }
+    }
+  },
+  "accessibility": {
+    "title": "Accessibility Tools",
+    "contrast": "High Contrast",
+    "grayscale": "Grayscale",
+    "underline": "Underline Links",
+    "zoomIn": "Increase Text Size",
+    "zoomOut": "Decrease Text Size",
+    "invert": "Invert Colors",
+    "readableFont": "Readable Font",
+    "reset": "Reset"
+  }
+}

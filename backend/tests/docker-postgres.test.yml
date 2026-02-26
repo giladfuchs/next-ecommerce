@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: ecommerce-test-db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: ecommerce_test
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+    volumes:
+      - ecommerce_test_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U test"]
+      interval: 1s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  ecommerce_test_pgdata:
+#docker stop $(docker ps -aq)
+#docker rm $(docker ps -aq)
+#docker volume rm $(docker volume ls -q)
+#

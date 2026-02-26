@@ -1,0 +1,364 @@
+{
+  "user": {
+    "email": "admin@admin.com",
+    "password": "admin",
+    "roles": ["admin"],
+    "name": "admin"
+  },
+  "siteSettings": {
+    "home": {
+      "title": "PAYLOAD ECOMMERCE TEMPLATE",
+      "description": "Modern ecommerce template built with Payload CMS. Fast, simple and fully customizable."
+    },
+    "footer": {
+      "title": "ecommerce-payload",
+      "address": "Tel-Aviv",
+      "phone": "0521234567",
+      "email": "ecommerce@gmail.com",
+      "website": "https://github.com/giladfuchs/next-ecommerce/payload",
+      "social": {
+        "instagram": "ecommerce",
+        "facebook": "ecommerce",
+        "whatsappNumber": "972521234567",
+        "whatsappMessage": "Hi! I have a question."
+      }
+    }
+  },
+  "images": [
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-606506.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1302899.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1239387.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1521334884684-d80222895322.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-705310.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1464263866732-138a1da44860.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-937799.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1372896722-612x612.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1650627.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1508401531113-289ab4692d3b.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1701270631286-e2d64b957fa0.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3965563.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1568313081041-dbd174f69e3b.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1452767279788-ab97000beec6.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1715887643348-4d8f945cb0e3.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1545241047-6083a3684587.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1485902409384-e367af5b5c92.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/garden-rose-red-pink-56866.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1445962125599-30f582ac21f4.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-824572.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1597305877032-0668b3c6413a.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1103624.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3489128.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-247599.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952027.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-54300.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1520412099551-62b6bafeb5bb.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1569171181721-31a9e143e579.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1700213040248-254e9267dd3e.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-971360.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1859622.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2624677.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1470170.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395251.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4622253.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1974508.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-217763.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2026960.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1438404.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1006293.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/fern-leaf-roll-nature-66319.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1517848568502-d03fa74e1964.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-601047.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1615835624010-93a0138bfc10.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1614601750456-23f5823d2d6b.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1596046070666-473705748e6c.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1614876753060-0751185c9289.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-333634.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5706224.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2215534.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1495559493698-ae68846c94e8.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1634502.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1552248524-10d9a7e4841c.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1251026.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1072824.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1587131766835-e5dfaf70ea20.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-370472.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1380361370-612x612.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1471086569966-db3eebc25a59.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5858235.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2248529.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-370473.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1365772.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1464630043472-ebd571beafc4.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1090977.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1667385372949-ce58045f9d79.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1151418.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/wild-flower-background-flower-close-158711.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1437275537121-331a0457c8d6.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-395676.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1637424592613-0a99407a4925.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1613403210971-1fcefd3662b0.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1446292532430-3e76f6ab6444.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1302305.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952029.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4505469.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1604762525950-13c07ecdab8b.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/orchid-flower-plant-exotic-40744.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1532611322744-369123d95bd3.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1531875456634-3f5418280d20.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1517200578024-62d131797ec8.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1650989689559-c56d2c622019.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1547516508-e910d368d995.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1621788051568-dd6bbe1f2f5f.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5230925.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1607369799260-959137a24656.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395250.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5942506.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1700213151787-e787938dd6cc.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1458596376782-d1c25e7da40e.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1931155.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4065905.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1547414924-b71ebb598495.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-584764.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2421953.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1498735599329-ed6e3798cdcb.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/daisy-flower-spring-marguerite-67857.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-97801.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1181366400-612x612.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1582131503261-fca1d1c0589f.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395244.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1200225.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/basil-herbs-green-mediterranean-40720.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1312323.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1382195.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1605116958927-03653f6be547.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1525722752835-fdf3d77e9d03.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1530968348606-69c989d6efc9.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1584204559709-ca7d413229eb.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952031.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1527174843116-72e8211b429f.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-719756.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1353938.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1604762525953-2c80447cc4a6.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1509423350716-97f9360b4e09.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2552418.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1713953.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-132474.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-97260.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1048036.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-2143490032-612x612.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1566836610593-62a64888a216.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1616472875095-670bc3848f8d.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1566553253535-64c91138b407.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1487190296540-b92a6b829973.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1506784693919-ef06d93c28d2.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1495170.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1694424988548-1cea2d57c1e1.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1599148401005-fe6d7497cb5e.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1598764557991-b9f211b73b81.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1570949144026-8f8141748760.jpg"
+  ],
+  "categories": [
+    {
+      "title": "Trees",
+      "description": "A selection of ornamental and functional trees suited for gardens, landscapes, and urban environments. Includes shade trees, flowering varieties, and structural focal points."
+    },
+    {
+      "title": "Shrubs",
+      "description": "Versatile shrubs ideal for borders, hedges, and layered garden design. Includes evergreen and flowering varieties that add texture and seasonal interest."
+    },
+    {
+      "title": "Edibles",
+      "description": "Fruit trees, vegetables, and edible plants for home gardens and food forests. Perfect for sustainable growing and farm-to-table lifestyles."
+    },
+    {
+      "title": "Herbs",
+      "description": "Aromatic and medicinal herbs suitable for culinary use, natural remedies, and companion planting in garden beds or containers."
+    }
+  ],
+  "products": [
+    {
+      "title": "Rue",
+      "description": "An evergreen shrub 0.5–1 meter tall with blue-green aromatic leaves and striking yellow flowers. Used as a culinary herb and for its medicinal properties. Hardy and suitable for warm gardens."
+    },
+    {
+      "title": "Serrated Lavender",
+      "description": "An evergreen shrub 60–80 cm tall with serrated green leaves and vibrant purple flowers throughout most of the year. Emits a pleasant scent and repels mosquitoes. Hardy and suitable for warm gardens."
+    },
+    {
+      "title": "Lemon Verbena",
+      "description": "An evergreen shrub growing 1–2 meters tall with lemon-scented green leaves. Used as a culinary herb and valued for its medicinal benefits. Hardy and ideal for warm climates."
+    },
+    {
+      "title": "Tipuana (Pride of Bolivia)",
+      "description": "A majestic deciduous tree growing up to 30 meters tall, with a wide canopy and stunning yellow spring flowers. Popular as an ornamental shade tree in private and public gardens. Thrives in warm climates."
+    },
+    {
+      "title": "Small Bay Laurel",
+      "description": "A 1–3 meter tall evergreen shrub from the laurel family. Its fragrant leaves are used in cooking and contain essential oils with medicinal properties. Hardy and suitable for warm gardens."
+    },
+    {
+      "title": "Bush Lucerne",
+      "description": "An evergreen legume shrub growing 1–2 meters tall. Blooms in spring with yellow flowers and enriches the soil with nitrogen, making it an excellent ground cover. Hardy and ideal for gardens and warm climates."
+    },
+    {
+      "title": "Aloe Vera",
+      "description": "Aloe Vera is a succulent evergreen plant that grows 0.5–1 meters tall. Its gel is rich in medicinal properties and is used to treat burns and skin conditions. Hardy and suitable for gardens in warm climates."
+    },
+    {
+      "title": "Lemon Balm",
+      "description": "Lemon Balm is a perennial herbaceous plant from the mint family, growing 0.5–1 meters tall. Used as a culinary herb and known for its calming and mood-enhancing effects. Hardy and ideal for warm gardens."
+    },
+    {
+      "title": "Stinking Bean Trefoil",
+      "description": "A deciduous summer shrub from the legume family, growing 1–3 meters tall. Blooms in winter with yellow-green flowers. All parts except the fruit emit an unpleasant odor. Hardy and suited for warm gardens."
+    },
+    {
+      "title": "Strawberry Guava",
+      "description": "An evergreen shrub originating in Brazil, 2–6 meters tall. Its small red fruits taste like strawberries and are great for fresh eating, jams, and juices. Hardy and suited for warm-climate gardens."
+    },
+    {
+      "title": "Large Bay Laurel",
+      "description": "Large Bay Laurel is an evergreen tree reaching 5–10 meters, with fragrant green leaves used as a culinary herb. Also serves as an ornamental or hedge plant. Hardy and adaptable to warm climates. Includes Small Bay Laurel (Laurus nobilis), a 1–3 meter shrub with medicinal, aromatic leaves used in cooking."
+    },
+    {
+      "title": "Indian Hawthorn",
+      "description": "Indian Hawthorn is an evergreen shrub that grows 1–2 meters tall and blooms with pink flowers in spring. Used as an ornamental plant in gardens, as a hedge, or as ground cover. Hardy and well-suited for gardens and warm regions."
+    },
+    {
+      "title": "Lemongrass",
+      "description": "A perennial herbaceous plant reaching 1–1.5 meters tall, with narrow green leaves that emit a strong lemon scent. Used as a culinary herb in Asian cuisine and has multiple medicinal benefits. Hardy and suited for warm gardens."
+    },
+    {
+      "title": "Ice Cream Bean",
+      "description": "A striking tropical tree reaching 10–15 meters in height, with broad foliage and white blossoms. Its long pods contain sweet, vanilla-flavored pulp—hence the name. Ideal as a shade tree and for attracting pollinators. Suitable for warm climates."
+    },
+    {
+      "title": "Rimon Malisi (Pomegranate)",
+      "description": "A unique pomegranate variety with a light-colored peel and very soft seeds. Its taste is very sweet with almost no acidity—ideal for fresh eating. A deciduous tree suitable for private gardens."
+    },
+    {
+      "title": "Garlic Chives",
+      "description": "A perennial herbaceous plant in the Amaryllidaceae family, growing up to 30 cm tall. Has slender hollow green leaves with a mild flavor resembling a mix of onion and garlic. Blooms in spring and summer with small white flowers that attract bees and butterflies. Suitable for gardens, pots, and planters—adds flavor and aroma to any dish."
+    },
+    {
+      "title": "Artemisia (Wormwood)",
+      "description": "An evergreen shrub 1–2 meters tall with silvery-green fragrant leaves. Used as a spice and known for its medicinal properties. Hardy and well-suited to warm gardens."
+    },
+    {
+      "title": "Mediterranean Spiraea",
+      "description": "A hardy evergreen shrub growing 2–5 meters tall, with white blossoms in spring. Used as an ornamental plant in gardens and attracts many pollinators. Suitable for warm climate cultivation."
+    },
+    {
+      "title": "Sea Mallow",
+      "description": "An evergreen shrub growing 1–1.5 meters tall, with beautiful pink-purple blooms in spring and summer. Ideal for partial shade and adds color to gardens. Hardy and fits warm climates."
+    },
+    {
+      "title": "Common Sage",
+      "description": "A perennial herbaceous plant from the mint family, growing 0.5–1 meters tall. Used as a culinary herb. Also includes Salvia dominica (Fragrant Sage), an evergreen shrub about 70 cm tall with wrinkled, triangular leaves and long-lasting scent. Blooms in spring with pale yellowish flowers and attracts many pollinators."
+    },
+    {
+      "title": "Elderberry",
+      "description": "Black elder is a shrub or small tree growing 3–6 meters tall, with white blossoms in spring and purple-black fruits in summer. The berries are used for syrups, jams, and wine, known for their health benefits. Hardy and suitable for warm gardens."
+    },
+    {
+      "title": "Fig",
+      "description": "A deciduous tree 3–10 meters tall with large, lobed leaves. Its sweet, juicy fruits are one of the Seven Species of biblical Israel. Hardy and perfect for warm-region gardens."
+    },
+    {
+      "title": "Moringa",
+      "description": "Known as the 'Miracle Tree', Moringa is a fast-growing tropical tree that adapts to dry conditions. All parts—leaves, pods, flowers, and roots—are edible and highly nutritious. Traditionally used for its medicinal and antioxidant properties."
+    },
+    {
+      "title": "Pigeon Pea",
+      "description": "Pigeon Pea is a perennial legume shrub growing 2–3 meters tall. Produces colorful flowers and edible pods, making it both a food source and a soil improver. Hardy and suitable for gardens."
+    },
+    {
+      "title": "Lemon Tagetes",
+      "description": "An evergreen shrub 1–2 meters tall with lemon-scented green leaves and vibrant yellow flowers. Serves as an ornamental plant and natural pest repellent. Thrives in warm garden settings."
+    },
+    {
+      "title": "Comfrey",
+      "description": "Comfrey is a perennial herbaceous plant with green leaves and purple or pink flowers. Known for its traditional healing use on wounds and inflammation. Hardy and suitable for warm-climate gardens."
+    },
+    {
+      "title": "Sweet Pea",
+      "description": "An annual climbing plant reaching 1–2 meters. Blooms in spring with fragrant, colorful flowers that attract pollinators. Hardy and great for garden cultivation in warm areas."
+    },
+    {
+      "title": "Red Sabra Cactus",
+      "description": "A productive cactus 2–3 meters tall with medium-sized red fruits. The fruits are sweet and juicy, ideal for fresh eating or preserving. Drought-resistant and suited to hot climates."
+    },
+    {
+      "title": "Lemon Geranium",
+      "description": "An evergreen shrub growing 0.5–1 meters tall, with fragrant lemon-scented leaves. Grown for its ornamental appeal and medicinal properties. Hardy and suitable for warm garden environments."
+    },
+    {
+      "title": "Kraasi Plum",
+      "description": "A thorny shrub or small tree growing up to about 5 meters, with white spring blossoms. Its small blue fruits are great for making jams, liqueurs, and more. Hardy and well-suited for gardens and yards."
+    },
+    {
+      "title": "Feathery Lavender",
+      "description": "An evergreen shrub 60–80 cm tall with feathery leaves and long-blooming purple flowers. Has a pleasant aroma and helps repel mosquitoes. Thrives in warm garden conditions."
+    },
+    {
+      "title": "Spiny Broom",
+      "description": "A bushy, branched shrub growing 1–4 meters tall. Blooms in spring with bright yellow flowers that attract pollinators. Hardy and well-suited for warm garden environments."
+    },
+    {
+      "title": "Gray Lavender",
+      "description": "An evergreen shrub 60–80 cm tall with silvery-gray leaves and stunning purple flowers that bloom nearly year-round. Has a pleasant scent and repels mosquitoes. Ideal for warm garden environments."
+    },
+    {
+      "title": "Ofir Mulberry",
+      "description": "A local mulberry variety with dark red sweet fruits. Deciduous and ideal for gardens in warm areas. Ripens in spring, good for eating fresh or preserving."
+    },
+    {
+      "title": "Japanese Raisin Tree",
+      "description": "A deciduous tree reaching 5–10 meters high, with broad foliage and white spring blooms. The edible part is the fruit stem, which thickens and sweetens, resembling a raisin. Hardy and ideal for ornamental gardens in warm regions."
+    },
+    {
+      "title": "African Sage",
+      "description": "African Sage is an evergreen shrub growing 1–2 meters tall, with yellow-orange blossoms in spring and summer. It attracts pollinators and is often used as a decorative garden plant. Hardy and suitable for warm areas."
+    },
+    {
+      "title": "Saltbush",
+      "description": "Saltbush is a desert shrub reaching 0.5–2 meters tall with gray leaves and green flowers. Highly tolerant of salinity and drought. Used for grazing and land reclamation in arid zones."
+    },
+    {
+      "title": "Rimon Rosh Pered (Pomegranate)",
+      "description": "An Israeli pomegranate variety growing 2–5 meters tall, with red spring blossoms. Its pinkish, sweet fruits are perfect for fresh consumption and juice. Hardy and suitable for home gardens."
+    },
+    {
+      "title": "African Lion's Ear",
+      "description": "An evergreen shrub 1–2 meters tall, with vivid orange flowers blooming in spring and summer. Attracts pollinators and is used as an ornamental plant. Hardy and suitable for warm gardens."
+    },
+    {
+      "title": "Short White Mulberry",
+      "description": "A deciduous tree reaching 5–10 meters with short, white, sweet fruits. Ripens in spring and suitable for fresh use or preserving. Hardy and ideal for warm areas."
+    },
+    {
+      "title": "Rimon Shami (Pomegranate)",
+      "description": "A traditional variety with a red-pink peel and juicy seeds. Extremely sweet with a distinct aroma, ripens in late summer. Hardy and good for warm gardens."
+    },
+    {
+      "title": "Long White Mulberry",
+      "description": "A deciduous tree reaching 5–10 meters with long, white, sweet fruits. Ripens in spring, ideal for fresh eating or preserves. Hardy and suited for warm climates."
+    },
+    {
+      "title": "Mint",
+      "description": "Mint is a perennial herbaceous plant from the Lamiaceae family, growing 0.5–1 meters tall. Commonly used as a culinary herb and valued for its many medicinal properties. Thrives in warm gardens."
+    },
+    {
+      "title": "Shrubby Lucerne",
+      "description": "Shrubby Lucerne is an evergreen legume growing 1–2 meters tall. Blooms in spring with yellow flowers and enriches the soil with nitrogen. Excellent as ground cover. Hardy in warm climates."
+    },
+    {
+      "title": "Rimon Akko (Pomegranate)",
+      "description": "A local pomegranate variety reaching 3–4 meters, with red blossoms in spring. Large, sweet, juicy fruits with red peels and seeds. Suitable for gardens in warm climates."
+    },
+    {
+      "title": "Fragrant Sage",
+      "description": "An evergreen shrub about 70 cm tall with wrinkled, triangular leaves and a strong, pleasant scent that lingers. Blooms in spring with pale yellow-white flowers and attracts many pollinators. Hardy and suitable for warm gardens."
+    }
+  ]
+}
