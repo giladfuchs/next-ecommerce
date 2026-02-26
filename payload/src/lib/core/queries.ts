@@ -11,7 +11,11 @@ import type {
 } from "@/lib/core/types/payload-types";
 
 import { buildProductPurchaseSectionData } from "@/lib/core/adapter";
-import { CollectionSlug, type ProductSinglePage } from "@/lib/core/types/types";
+import {
+  CollectionSlug,
+  CombinedVariantData,
+  type ProductSinglePage,
+} from "@/lib/core/types/types";
 type CollectionName = "products" | CollectionSlug.category;
 
 export default class Queries {
@@ -56,36 +60,111 @@ export default class Queries {
     return (res.docs?.[0] as T) ?? null;
   }
 
+  static async queryCombinedVariantData(
+    productId: number,
+  ): Promise<CombinedVariantData> {
+    const payload = await Queries.getPayload();
+    const { isEnabled: draft } = await draftMode();
+
+    const variantsRes = await payload.find({
+      collection: "variants",
+      depth: 0,
+      limit: 20,
+      pagination: false,
+      where: {
+        and: [
+          { product: { equals: productId } },
+          ...(draft ? [] : [{ _status: { equals: "published" } }]),
+        ],
+      },
+      select: {
+        id: true,
+        inventory: true,
+        priceInUSD: true,
+        options: true,
+      },
+    });
+
+    if (!variantsRes.docs.length) return null;
+
+    const optionIds = [
+      ...new Set(variantsRes.docs.flatMap((v) => v.options).map(String)),
+    ];
+
+    const optionsRes = await payload.find({
+      collection: "variantOptions",
+      depth: 0,
+      limit: 20,
+      pagination: false,
+      where: {
+        id: { in: optionIds },
+      },
+      select: {
+        id: true,
+        label: true,
+        variantType: true,
+      },
+    });
+
+    if (!optionsRes.docs.length) return null;
+
+    const typeIds = [
+      ...new Set(optionsRes.docs.map((o) => String(o.variantType))),
+    ];
+
+    const variantTypesRes = await payload.find({
+      collection: "variantTypes",
+      depth: 0,
+      limit: 20,
+      pagination: false,
+      where: {
+        id: { in: typeIds },
+      },
+      select: {
+        id: true,
+        label: true,
+      },
+    });
+
+    if (!variantTypesRes.docs.length) return null;
+
+    return {
+      variants: variantsRes.docs,
+      variantTypes: variantTypesRes.docs,
+      options: optionsRes.docs,
+    } as CombinedVariantData;
+  }
+
   static queryProductBySlug(slug: string): Promise<ProductSinglePage | null> {
     return Queries.cache<ProductSinglePage | null>(
       async () => {
-        const product = await this.queryBySlug<Product>("products", slug, 2, {
+        const product = await this.queryBySlug<Product>("products", slug, 1, {
           title: true,
           description: true,
           updatedAt: true,
           gallery: true,
           priceInUSD: true,
           inventory: true,
-          variants: {
-            inventory: true,
-            priceInUSD: true,
-          }as unknown as true,
-          variantTypes: true,
+          enableVariants: true,
         });
+
         if (!product) return null;
+
+        const combined = product.enableVariants
+          ? await this.queryCombinedVariantData(product.id)
+          : null;
         return {
           title: product.title,
           description: product.description,
           updatedAt: product.updatedAt,
           gallery: product.gallery,
-          purchase_section: buildProductPurchaseSectionData(product),
+          purchase_section: buildProductPurchaseSectionData(product, combined),
         };
       },
       [`${CollectionSlug.product}-${slug}`],
       [`${CollectionSlug.product}-${slug}`],
     )();
   }
-
   static queryCategoryBySlug(slug: string): Promise<Category | null> {
     return Queries.cache<Category | null>(
       () =>

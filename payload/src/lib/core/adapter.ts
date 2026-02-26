@@ -1,14 +1,13 @@
 import type {
   Product,
   Variant,
-  VariantOption,
-  VariantType,
   Cart,
   Media,
 } from "@/lib/core/types/payload-types";
 import type {
   ProductPurchaseSectionData,
   CartItem,
+  CombinedVariantData,
 } from "@/lib/core/types/types";
 
 export const getCartQuantity = (
@@ -18,13 +17,13 @@ export const getCartQuantity = (
   return cart.items.reduce((sum, it) => sum + Number(it?.quantity ?? 0), 0);
 };
 const getCartItemData = (item: CartItem) => {
-  const product =item.product as Product
+  const product = item.product as Product;
   if (!product) return null;
 
   const variant =
     typeof item?.variant === "object" ? (item.variant as Variant) : null;
 
-  const image = product.gallery![0].image as Media
+  const image = product.gallery![0].image as Media;
 
   const price = variant?.priceInUSD ?? product.priceInUSD ?? undefined;
 
@@ -55,67 +54,59 @@ type PurchaseOption =
 
 export const buildProductPurchaseSectionData = (
   product: Product,
+  combined: CombinedVariantData,
 ): ProductPurchaseSectionData => {
-  const variants_product = (product.variants?.docs || []).filter(
-    (v): v is Variant => Boolean(v) && typeof v === "object",
-  );
+  const base_ans = {
+    id: product.id,
+    inventory: product.inventory!,
+    price: product.priceInUSD!,
+    variants: [],
+    priceRange: { min: 0, max: 0 },
+  };
+  if (!combined) {
+    return base_ans;
+  }
 
-  const variantTypes = (product.variantTypes || []).filter(
-    (t): t is VariantType => Boolean(t) && typeof t === "object",
-  );
-
-  const variants: ProductPurchaseSectionData["variants"] = variantTypes
+  const variants: ProductPurchaseSectionData["variants"] = combined.variantTypes
     .map((type) => {
-      const options = (type.options?.docs || []).filter(
-        (o): o is VariantOption => Boolean(o) && typeof o === "object",
-      );
+      const typeId = String(type.id);
 
-      const mappedOptions: PurchaseOption[] = options
-        .map((option) => {
-          const optionId = String(option.id);
+      const options: PurchaseOption[] = combined.options
+        .filter((o) => String(o.variantType) === typeId)
+        .map((o) => {
+          const v = combined.variants.find(
+            (x) =>
+              x.options && x.options.some((id) => String(id) === String(o.id)),
+          );
 
-          const matchingVariant = variants_product.find((variant) => {
-            return (
-              Array.isArray(variant.options) &&
-              variant.options.some((opt) => {
-                const id = typeof opt === "object" ? opt.id : opt;
-                return String(id) === optionId;
-              })
-            );
-          });
-
-          if (!matchingVariant) return null;
+          if (!v) return null;
 
           return {
-            id: String(matchingVariant.id),
-            label: option.label,
-            inventory: matchingVariant.inventory,
-            price: matchingVariant.priceInUSD,
+            id: String(v.id),
+            label: o.label,
+            inventory: v.inventory,
+            price: v.priceInUSD,
           };
         })
         .filter((x): x is PurchaseOption => Boolean(x))
         .sort((a, b) => a.price - b.price);
 
-      if (!mappedOptions.length) return [];
+      if (!options.length) return null;
 
-      return [
-        {
-          typeId: type.id,
-          typeLabel: type.label,
-          options: mappedOptions,
-        },
-      ];
+      return {
+        typeId,
+        typeLabel: type.label,
+        options,
+      };
     })
-    .flat();
+    .filter((x): x is NonNullable<typeof x> => Boolean(x));
 
   const prices = variants
     .flatMap((t) => t.options.map((o) => o.price))
     .sort((a, b) => a - b);
 
   return {
-    id: product.id,
-    inventory: Number(product.inventory ?? 0),
-    price: Number(product.priceInUSD ?? 0),
+    ...base_ans,
     variants,
     priceRange: prices.length
       ? { min: prices[0], max: prices[prices.length - 1] }

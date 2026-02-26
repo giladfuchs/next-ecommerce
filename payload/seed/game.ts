@@ -3,18 +3,25 @@ import dotenv from "dotenv";
 dotenv.config();
 import { getPayload } from "payload";
 import config from "../src/payload.config.js";
-
-async function readUsers() {
+// pnpm tsx  seed/game.ts
+async function readCol() {
   const payload = await getPayload({ config });
-
-  const res = await payload.find({
-    collection: "media",
-    limit: 10,
-    depth: 0,
+  //
+  // const res = await payload.find({
+  //   collection: "media",
+  //   limit: 10,
+  //   depth: 0,
+  // });
+  //
+  // console.log("=== USERS RESULT ===");
+  // console.dir(res, { depth: 10 });
+  const product = await payload.findByID({
+    collection: "products",
+    id: 45, // change to your id
+    depth: 2,
   });
 
-  console.log("=== USERS RESULT ===");
-  console.dir(res, { depth: 10 });
+  console.log(JSON.stringify(product, null, 1));
 }
 
 async function main1() {
@@ -70,7 +77,7 @@ async function main() {
   }
 }
 
-main()
+readCol()
   .then(() => {
     process.exit(0);
   })

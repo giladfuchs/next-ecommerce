@@ -17,12 +17,9 @@ export default function Providers({ children }: { children: ReactNode }) {
                 slug: true,
                 title: true,
                 gallery: true,
-                inventory: true,
                 priceInUSD: true,
               },
               variants: {
-                title: true,
-                inventory: true,
                 priceInUSD: true,
                 options: true,
               },

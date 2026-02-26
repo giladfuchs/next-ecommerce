@@ -14,11 +14,11 @@
       "title": "ecommerce-payload",
       "address": "Tel-Aviv",
       "phone": "0521234567",
-      "email": "ecommerce@gmail.com",
-      "website": "https://github.com/giladfuchs/next-ecommerce/payload",
+      "email": "ecommerce@payloadcms.com",
+      "website": "https://github.com/giladfuchs/next-ecommerce/tree/master/payload",
       "social": {
-        "instagram": "ecommerce",
-        "facebook": "ecommerce",
+        "instagram": "payloadcms",
+        "facebook": "payloadcms",
         "whatsappNumber": "972521234567",
         "whatsappMessage": "Hi! I have a question."
       }

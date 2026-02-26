@@ -15,11 +15,11 @@ import {
 import type { Cart } from "@/lib/core/types/payload-types";
 
 import { Price } from "@/components/shared/elements-ssr";
+import Media from "@/components/shared/media";
 import Button from "@/components/ui/button";
 import { buildCartRows, getCartQuantity } from "@/lib/core/adapter";
 import { CollectionSlug } from "@/lib/core/types/types";
 import { cn } from "@/lib/core/util";
-import Media from "@/components/shared/media";
 
 export const CART_OPEN_EVENT = "cart:open";
 
@@ -123,9 +123,9 @@ export default function CartModal() {
                         >
                           <div className="cart-subtle relative h-16 w-16 cursor-pointer overflow-hidden rounded-md">
                             <Media
-                                className="h-full w-full object-cover"
-                                resource={image}
-                              />
+                              className="h-full w-full object-cover"
+                              resource={image}
+                            />
                           </div>
 
                           <div className="flex flex-1 flex-col text-base">

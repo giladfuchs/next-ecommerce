@@ -29,6 +29,24 @@ export type ProductPurchaseSectionData = {
   };
 };
 
+export type CombinedVariantData = {
+  variants: {
+    id: number;
+    options: number[];
+    inventory: number;
+    priceInUSD: number;
+  }[];
+  variantTypes: {
+    id: number;
+    label: string;
+  }[];
+  options: {
+    id: number;
+    variantType: number;
+    label: string;
+  }[];
+} | null;
+
 export type ProductSinglePage = Pick<
   Product,
   "title" | "description" | "updatedAt" | "gallery"

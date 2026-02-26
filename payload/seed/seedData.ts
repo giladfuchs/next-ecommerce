@@ -28,7 +28,7 @@ export const resetDb = () => {
     shell: true,
   });
 };
-const IMAGE_LIMIT = 10;
+const IMAGE_LIMIT = false;
 const mockData = JSON.parse(await fs.readFile(DB_DATA_PATH, "utf8"));
 
 class SeedService {
