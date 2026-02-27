@@ -11,7 +11,10 @@ export const Variants: CollectionOverride = ({ defaultCollection }) => {
 
   return {
     ...defaultCollection,
-    access: adminOnlyAccess,
+    access: {
+      ...adminOnlyAccess,
+      read: () => true,
+    },
     admin: {
       ...(defaultCollection.admin ?? {}),
       defaultColumns: Array.from(
