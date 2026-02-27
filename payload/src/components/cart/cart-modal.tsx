@@ -18,7 +18,7 @@ import { Price } from "@/components/shared/elements-ssr";
 import Media from "@/components/shared/media";
 import Button from "@/components/ui/button";
 import { buildCartRows, getCartQuantity } from "@/lib/core/adapter";
-import { CollectionSlug } from "@/lib/core/types/types";
+import { RoutePath } from "@/lib/core/types/types";
 import { cn } from "@/lib/core/util";
 
 export const CART_OPEN_EVENT = "cart:open";
@@ -118,7 +118,7 @@ export default function CartModal() {
 
                         <Link
                           className="z-30 flex flex-row space-x-4"
-                          href={`/${CollectionSlug.product}/${product.slug}`}
+                          href={`/${RoutePath.product}/${product.slug}`}
                           onClick={() => setIsOpen(false)}
                         >
                           <div className="cart-subtle relative h-16 w-16 cursor-pointer overflow-hidden rounded-md">

@@ -6,14 +6,14 @@ import type {
 } from "@/lib/core/types/payload-types";
 
 import appConfig from "@/lib/core/config";
-import { CollectionSlug, ProductSinglePage } from "@/lib/core/types/types";
+import { RoutePath, ProductSinglePage } from "@/lib/core/types/types";
 import { extractRichTextText } from "@/lib/core/util";
 
 export const generateJsonLdProduct = (
   product: ProductSinglePage,
   slug: string,
 ) => {
-  const url = `${appConfig.BASE_URL}/${CollectionSlug.product}/${encodeURIComponent(slug)}`;
+  const url = `${appConfig.BASE_URL}/${RoutePath.product}/${encodeURIComponent(slug)}`;
   const image = `${appConfig.BASE_URL}${(product.gallery![0].image as Media).url}`;
   const { priceRange, inventory, variants } = product.purchase_section;
 
@@ -66,11 +66,11 @@ export const generateJsonLdItemListCategory = (
   category: Category,
   products: Product[],
 ) => {
-  const url = `${appConfig.BASE_URL}/${CollectionSlug.category}/${encodeURIComponent(category.slug)}`;
+  const url = `${appConfig.BASE_URL}/${RoutePath.category}/${encodeURIComponent(category.slug)}`;
   const description = extractRichTextText(category.description);
 
   const itemListElement = products.map((product, index) => {
-    const pUrl = `${appConfig.BASE_URL}/${CollectionSlug.product}/${encodeURIComponent(product.slug)}`;
+    const pUrl = `${appConfig.BASE_URL}/${RoutePath.product}/${encodeURIComponent(product.slug)}`;
     return {
       "@type": "ListItem",
       position: index + 1,
@@ -98,7 +98,7 @@ export const generateJsonLdItemListCategory = (
 };
 
 export const generateJsonLdBreadcrumbsCategory = (category: Category) => {
-  const url = `${appConfig.BASE_URL}/${CollectionSlug.category}/${encodeURIComponent(category.slug)}`;
+  const url = `${appConfig.BASE_URL}/${RoutePath.category}/${encodeURIComponent(category.slug)}`;
 
   return {
     "@context": "https://schema.org",

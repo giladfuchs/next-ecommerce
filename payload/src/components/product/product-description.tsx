@@ -1,6 +1,7 @@
 import type { ProductSinglePage } from "@/lib/core/types/types";
 
 import { Price } from "@/components/shared/elements-ssr";
+import { Faq } from "@/components/shared/faq";
 import { ProductPurchaseSection } from "@/components/shared/wrappers";
 import { RichText } from "@/components/ui/rich-text";
 
@@ -55,6 +56,8 @@ export function ProductDescription({
           </div>
         ) : null}
       </div>
+
+      <Faq faqs={product.faqs} />
     </div>
   );
 }

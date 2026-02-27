@@ -28,7 +28,7 @@ export const resetDb = () => {
     shell: true,
   });
 };
-const IMAGE_LIMIT = false;
+const IMAGE_LIMIT = 10;
 const mockData = JSON.parse(await fs.readFile(DB_DATA_PATH, "utf8"));
 
 class SeedService {
@@ -176,6 +176,7 @@ class SeedService {
         data: {
           _status: "published",
           title: c.title,
+          faqs: c.faqs,
           position: i,
           generateSlug: true,
           description: makeRichTextDescription(c.description),
@@ -207,6 +208,7 @@ class SeedService {
           collection: "products",
           data: {
             title: p.title,
+            faqs: p.faqs,
             generateSlug: true,
             _status: "published",
             categories: [getRandom(this.ids.categoryIds)],
@@ -255,6 +257,31 @@ class SeedService {
       }
     }
   }
+  async addRelatedProducts() {
+    const products = await this.payload.find({
+      collection: "products",
+      depth: 0,
+      limit: 1000,
+      pagination: false,
+      select: { id: true },
+    });
+
+    const ids = products.docs.map((p) => p.id);
+
+    for (const id of ids) {
+      const relatedProducts = getRandomSlice(
+        ids.filter((x) => x !== id),
+        3,
+        9,
+      );
+
+      await this.payload.update({
+        collection: "products",
+        id,
+        data: { relatedProducts },
+      });
+    }
+  }
 
   async run() {
     resetDb();
@@ -265,6 +292,7 @@ class SeedService {
     await this.seedCategories();
     await this.createVariantSetup();
     await this.seedProducts();
+    await this.addRelatedProducts();
   }
 }
 async function main() {

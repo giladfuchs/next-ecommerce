@@ -11,7 +11,7 @@ import {
 } from "@/lib/collections/base";
 import appConfig from "@/lib/core/config";
 import { OrderNotifier } from "@/lib/core/order-notifier";
-import { CollectionSlug, CartItem } from "@/lib/core/types/types";
+import { RoutePath, CartItem } from "@/lib/core/types/types";
 
 export const Orders: CollectionOverride = ({ defaultCollection }) => {
   return {
@@ -74,7 +74,7 @@ export const Orders: CollectionOverride = ({ defaultCollection }) => {
           {
             name: "product",
             type: "relationship",
-            relationTo: `${CollectionSlug.product}s`,
+            relationTo: `${RoutePath.product}s`,
             required: true,
           },
 

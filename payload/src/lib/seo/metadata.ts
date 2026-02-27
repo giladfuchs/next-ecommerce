@@ -6,7 +6,7 @@ import type {
 import type { Metadata } from "next";
 
 import appConfig from "@/lib/core/config";
-import { CollectionSlug, type ProductSinglePage } from "@/lib/core/types/types";
+import { RoutePath, type ProductSinglePage } from "@/lib/core/types/types";
 import { extractRichTextText } from "@/lib/core/util";
 
 export const generateMetadataLayout = (settings: SiteSetting): Metadata => {
@@ -63,7 +63,7 @@ export function generateMetadataProduct(
   product: ProductSinglePage,
   slug: string,
 ): Metadata {
-  const url = `${appConfig.BASE_URL}/${CollectionSlug.product}/${encodeURIComponent(slug)}`;
+  const url = `${appConfig.BASE_URL}/${RoutePath.product}/${encodeURIComponent(slug)}`;
   const title = product.title;
   const description = extractRichTextText(product.description);
 
@@ -97,7 +97,7 @@ export function generateMetadataProduct(
 }
 
 export function generateMetadataCategory(category: Category): Metadata {
-  const url = `${appConfig.BASE_URL}/${CollectionSlug.category}/${encodeURIComponent(category.slug)}`;
+  const url = `${appConfig.BASE_URL}/${RoutePath.category}/${encodeURIComponent(category.slug)}`;
   const title = category.title;
   const description = extractRichTextText(category.description);
 

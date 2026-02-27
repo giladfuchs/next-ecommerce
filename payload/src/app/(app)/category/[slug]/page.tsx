@@ -4,7 +4,8 @@ import type { PropsSlug } from "@/lib/core/types/types";
 import type { Metadata } from "next";
 
 import CategoryPageLayout from "@/components/category";
-import Queries from "@/lib/core/queries";
+import { FaqSchema } from "@/components/shared/faq";
+import DAL from "@/lib/core/dal";
 import { getDecodedSlug } from "@/lib/core/util";
 import {
   generateJsonLdBreadcrumbsCategory,
@@ -20,7 +21,7 @@ export async function generateMetadata({
 }: PropsSlug): Promise<Metadata> {
   const slug = await getDecodedSlug(params);
 
-  const category = await Queries.queryCategoryBySlug(slug);
+  const category = await DAL.queryCategoryBySlug(slug);
   if (!category) return { robots: "noindex" };
   return generateMetadataCategory(category);
 }
@@ -28,9 +29,9 @@ export async function generateMetadata({
 export default async function CategoryPage({ params }: PropsSlug) {
   const slug = await getDecodedSlug(params);
 
-  const category = await Queries.queryCategoryBySlug(slug);
+  const category = await DAL.queryCategoryBySlug(slug);
   if (!category) return notFound();
-  const products = await Queries.queryAllProducts();
+  const products = await DAL.queryAllProducts();
 
   const filtered = products.filter((p) => {
     const cats = p.categories || [];
@@ -41,7 +42,6 @@ export default async function CategoryPage({ params }: PropsSlug) {
 
   const jsonLdItemList = generateJsonLdItemListCategory(category, filtered);
   const jsonLdBreadcrumbs = generateJsonLdBreadcrumbsCategory(category);
-
   return (
     <>
       <script
@@ -52,12 +52,14 @@ export default async function CategoryPage({ params }: PropsSlug) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }}
       />
+      <FaqSchema faqs={category.faqs} title={category.title} />
 
       <CategoryPageLayout
         title={category.title}
         description={category.description}
         products={filtered}
         slug={slug}
+        faqs={category.faqs}
       />
     </>
   );

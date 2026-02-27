@@ -8,13 +8,18 @@ import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
 
+import type {
+  Media as MediaType,
+  User,
+  Product,
+} from "@/lib/core/types/payload-types";
 import type { PayloadAdminBarProps } from "@payloadcms/admin-bar";
 
 import CartModal from "@/components/cart/cart-modal";
+import Search from "@/components/layout/search";
 import Media from "@/components/shared/media";
 import Button from "@/components/ui/button";
 import appConfig from "@/lib/core/config";
-import { Media as MediaT, User } from "@/lib/core/types/payload-types";
 import { cn } from "@/lib/core/util";
 import { useTheme } from "@/lib/providers/theme";
 
@@ -26,52 +31,6 @@ const LivePreviewListener = () => {
       refresh={router.refresh}
       serverURL={appConfig.BASE_URL}
     />
-  );
-};
-
-const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
-  const t = useTranslations("general");
-
-  const isDark = theme === "dark";
-
-  return (
-    <Button
-      variant="nav"
-      className="mt-2"
-      size="icon"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
-      aria-label={t("toggle_theme")}
-    >
-      {isDark ? (
-        <FiSun className="h-7 w-7 text-yellow-400" />
-      ) : (
-        <FiMoon className="h-7 w-7 text-blue-400" />
-      )}
-    </Button>
-  );
-};
-const HeaderBar = ({ logo }: { logo: MediaT }) => {
-  return (
-    <div className="relative z-20 border-b md:px-18  max-h-17">
-      <nav className="container flex items-center justify-between py-1 md:items-end">
-        <div className="flex w-full items-end justify-between">
-          <div className="flex w-full items-end   gap-6 md:w-1/3">
-            <Link className="flex items-center max-h-15" href="/">
-              <Media
-                resource={logo}
-                imgClassName="h-15 w-auto object-contain"
-              />
-            </Link>
-          </div>
-
-          <div className="flex justify-end gap-4  md:w-1/3">
-            <ThemeToggle />
-            <CartModal />
-          </div>
-        </div>
-      </nav>
-    </div>
   );
 };
 
@@ -121,12 +80,67 @@ const AdminBar = ({
   );
 };
 
-export default function HeaderClient({ logo }: { logo: MediaT }) {
+const ThemeToggle = () => {
+  const { theme, setTheme } = useTheme();
+  const t = useTranslations("general");
+
+  const isDark = theme === "dark";
+
+  return (
+    <Button
+      variant="outline"
+      className="mb-1 border-0"
+      size="icon"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={t("toggle_theme")}
+    >
+      {isDark ? (
+        <FiSun className="h-7 w-7 text-yellow-400" />
+      ) : (
+        <FiMoon className="h-7 w-7 text-blue-400" />
+      )}
+    </Button>
+  );
+};
+
+type HeaderProps = {
+  logo: MediaType;
+  products: Product[];
+};
+
+const HeaderBar = ({ logo, products }: HeaderProps) => {
+  return (
+    <div className="relative z-20 border-b max-h-17 md:px-18">
+      <nav className="container flex items-center justify-between py-1 md:items-end">
+        <div className="flex w-full items-end justify-between gap-3 md:gap-6">
+          <div className="flex items-end gap-6">
+            <Link className="flex items-center max-h-15" href="/">
+              <Media
+                resource={logo}
+                imgClassName="h-15 w-auto object-contain"
+              />
+            </Link>
+          </div>
+
+          <div className="w-full flex-1 md:flex-none md:max-w-md">
+            <Search products={products} />
+          </div>
+
+          <div className="flex items-center justify-end gap-2 md:gap-4">
+            <ThemeToggle />
+            <CartModal />
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
+};
+export default function HeaderClient(props: HeaderProps) {
   return (
     <>
       <AdminBar />
       <LivePreviewListener />
-      <HeaderBar logo={logo} />
+      <HeaderBar {...props} />
     </>
   );
 }

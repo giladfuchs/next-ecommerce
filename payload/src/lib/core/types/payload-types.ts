@@ -219,6 +219,13 @@ export interface Category {
    */
   generateSlug?: boolean | null;
   slug: string;
+  faqs?:
+    | {
+        question: string;
+        answer: string;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -230,7 +237,6 @@ export interface Category {
 export interface Media {
   id: number;
   alt: string;
-  prefix?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -366,6 +372,14 @@ export interface Product {
     | {
         image: number | Media;
         variantOption?: (number | null) | VariantOption;
+        id?: string | null;
+      }[]
+    | null;
+  relatedProducts?: (number | Product)[] | null;
+  faqs?:
+    | {
+        question: string;
+        answer: string;
         id?: string | null;
       }[]
     | null;
@@ -635,6 +649,13 @@ export interface CategorySelect<T extends boolean = true> {
   description?: T;
   generateSlug?: T;
   slug?: T;
+  faqs?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -645,7 +666,6 @@ export interface CategorySelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
-  prefix?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -740,6 +760,14 @@ export interface ProductsSelect<T extends boolean = true> {
     | {
         image?: T;
         variantOption?: T;
+        id?: T;
+      };
+  relatedProducts?: T;
+  faqs?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
         id?: T;
       };
   updatedAt?: T;
@@ -899,6 +927,13 @@ export interface SiteSetting {
     };
     image_meta: number | Media;
     logo?: (number | null) | Media;
+    faqs?:
+      | {
+          question: string;
+          answer: string;
+          id?: string | null;
+        }[]
+      | null;
   };
   footer?: {
     title?: string | null;
@@ -928,6 +963,13 @@ export interface SiteSettingsSelect<T extends boolean = true> {
         description?: T;
         image_meta?: T;
         logo?: T;
+        faqs?:
+          | T
+          | {
+              question?: T;
+              answer?: T;
+              id?: T;
+            };
       };
   footer?:
     | T

@@ -4,13 +4,15 @@ import type { Field } from "payload";
 
 import {
   DESCRIPTION_FIELD,
+  FAQS_FIELD,
   adminOnlyAccess,
   makeAdminPreview,
   makeRevalidateHooks,
+  normalizeFaqs,
   patchPricesGroupField,
   mixedSlugField,
 } from "@/lib/collections/base";
-import { CollectionSlug } from "@/lib/core/types/types";
+import { CollectionName, RoutePath } from "@/lib/core/types/types";
 
 export const Products: CollectionOverride = ({ defaultCollection }) => ({
   ...defaultCollection,
@@ -23,12 +25,12 @@ export const Products: CollectionOverride = ({ defaultCollection }) => ({
   admin: {
     ...defaultCollection?.admin,
     defaultColumns: ["title", "enableVariants", "_status", "variants.variants"],
-    ...makeAdminPreview(CollectionSlug.product),
+    ...makeAdminPreview(RoutePath.product),
     useAsTitle: "title",
   },
 
   hooks: {
-    ...makeRevalidateHooks(CollectionSlug.product),
+    ...makeRevalidateHooks(CollectionName.products),
 
     beforeValidate: [
       ({ data }) => {
@@ -43,7 +45,8 @@ export const Products: CollectionOverride = ({ defaultCollection }) => ({
         );
 
         data.gallery = filtered.length ? filtered : [{ image: null }];
-        return data;
+
+        return normalizeFaqs(data);
       },
     ],
   },
@@ -56,7 +59,7 @@ export const Products: CollectionOverride = ({ defaultCollection }) => ({
       type: "relationship",
       admin: { position: "sidebar", sortOptions: "title" },
       hasMany: true,
-      relationTo: CollectionSlug.category,
+      relationTo: RoutePath.category,
     },
 
     mixedSlugField(),
@@ -115,5 +118,16 @@ export const Products: CollectionOverride = ({ defaultCollection }) => ({
         },
       ],
     },
+
+    {
+      name: "relatedProducts",
+      type: "relationship",
+      relationTo: "products",
+      hasMany: true,
+      filterOptions: ({ id }) => ({
+        id: id ? { not_in: [id] } : { exists: true },
+      }),
+    },
+    FAQS_FIELD,
   ],
 });

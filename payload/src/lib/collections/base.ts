@@ -8,6 +8,7 @@ import {
 import { revalidateTag } from "next/cache";
 import { slugField } from "payload";
 
+import type { Product } from "@/lib/core/types/payload-types";
 import type {
   CollectionAdminOptions,
   Field,
@@ -15,7 +16,7 @@ import type {
   CollectionAfterDeleteHook,
 } from "payload";
 
-import { CollectionSlug } from "@/lib/core/types/types";
+import { CollectionName, RoutePath } from "@/lib/core/types/types";
 import { generatePreviewPath, isAdmin } from "@/lib/core/util";
 
 type AdminConfig = {
@@ -142,7 +143,7 @@ export const DESCRIPTION_FIELD: Field = {
   label: false,
   required: true,
 };
-export function makeRevalidateHooks(collection: CollectionSlug): {
+export function makeRevalidateHooks(collection: CollectionName): {
   afterChange: CollectionAfterChangeHook[];
   afterDelete: CollectionAfterDeleteHook[];
 } {
@@ -169,7 +170,7 @@ export function makeRevalidateHooks(collection: CollectionSlug): {
   };
 }
 export function makeAdminPreview(
-  collection: CollectionSlug,
+  collection: RoutePath,
 ): Pick<NonNullable<CollectionAdminOptions>, "livePreview" | "preview"> {
   return {
     livePreview: {
@@ -193,4 +194,48 @@ export const adminOnlyAccess = {
   update: isAdmin,
   delete: isAdmin,
   admin: isAdmin,
+};
+
+export const FAQS_FIELD: Field = {
+  name: "faqs",
+  label: "FAQs",
+  type: "array",
+  labels: {
+    singular: "FAQ",
+    plural: "FAQs",
+  },
+  fields: [
+    {
+      name: "question",
+      label: "Question",
+      type: "text",
+      required: true,
+      localized: true,
+    },
+    {
+      name: "answer",
+      label: "Answer",
+      type: "textarea",
+      required: true,
+      localized: true,
+    },
+  ],
+};
+
+export const normalizeFaqs = <T extends { faqs?: unknown }>(
+  data: T | undefined | null,
+) => {
+  if (!data) return data;
+  const faqs = data.faqs as Product["faqs"];
+
+  if (Array.isArray(faqs)) {
+    const filteredFaqs = faqs.filter((item) => {
+      if (!item) return false;
+      return Boolean(item.question) || Boolean(item.answer);
+    });
+
+    data.faqs = filteredFaqs.length ? filteredFaqs : undefined;
+  }
+
+  return data;
 };

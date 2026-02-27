@@ -4,12 +4,12 @@ import { getTranslations } from "next-intl/server";
 import type { Category } from "@/lib/core/types/payload-types";
 
 import { CategoriesDropdown } from "@/components/shared/wrappers";
-import Queries from "@/lib/core/queries";
+import DAL from "@/lib/core/dal";
 import { buildCategoryHref } from "@/lib/core/util";
 
 export async function Categories({ currentSlug }: { currentSlug: string }) {
   const t = await getTranslations("general");
-  const categories = await Queries.queryCategoriesBasic();
+  const categories = await DAL.queryCategoriesBasic();
   categories.unshift({
     id: 0,
     title: t("category_all"),

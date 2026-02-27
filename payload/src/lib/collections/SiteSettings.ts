@@ -2,14 +2,31 @@ import { revalidateTag } from "next/cache";
 
 import type { GlobalConfig } from "payload";
 
-import { adminOnlyAccess, DESCRIPTION_FIELD } from "@/lib/collections/base";
+import {
+  adminOnlyAccess,
+  DESCRIPTION_FIELD,
+  FAQS_FIELD,
+  normalizeFaqs,
+} from "@/lib/collections/base";
 
 export const SiteSettings: GlobalConfig = {
   slug: "site-settings",
-  access: adminOnlyAccess,
+  access: {
+    ...adminOnlyAccess,
+    read: () => true,
+  },
 
   admin: { group: "Content" },
   hooks: {
+    beforeValidate: [
+      ({ data }) => {
+        if (!data) return data;
+        if (data.home) {
+          data.home = normalizeFaqs(data.home as { faqs?: unknown });
+        }
+        return data;
+      },
+    ],
     afterChange: [
       async () => {
         try {
@@ -72,6 +89,7 @@ export const SiteSettings: GlobalConfig = {
                   required: true,
                 },
                 { name: "logo", type: "upload", relationTo: "media" },
+                FAQS_FIELD,
               ],
             },
           ],

@@ -7,7 +7,7 @@ import type {
   Product,
   Variant,
   VariantOption,
-  Media as MediaT,
+  Media as MediaType,
 } from "@/lib/core/types/payload-types";
 
 import { Price } from "@/components/shared/elements-ssr";
@@ -33,7 +33,7 @@ export default function CheckoutSummary() {
 
         if (!quantity) return null;
 
-        const image = product.gallery?.[0]?.image as MediaT;
+        const image = product.gallery?.[0]?.image as MediaType;
         const price =
           variant?.priceInUSD != null ? variant.priceInUSD : product.priceInUSD;
 

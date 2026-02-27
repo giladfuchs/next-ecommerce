@@ -1,11 +1,11 @@
 import { MetadataRoute } from "next";
 
 import appConfig from "@/lib/core/config";
-import Queries from "@/lib/core/queries";
-import { CollectionSlug } from "@/lib/core/types/types";
+import DAL from "@/lib/core/dal";
+import { RoutePath } from "@/lib/core/types/types";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const { products, categories } = await Queries.querySitemapData();
+  const { products, categories } = await DAL.querySitemapData();
 
   return [
     {
@@ -13,11 +13,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: products[0]?.updatedAt,
     },
     ...categories.map((category) => ({
-      url: `${appConfig.BASE_URL}/${CollectionSlug.category}/${encodeURIComponent(category.slug)}`,
+      url: `${appConfig.BASE_URL}/${RoutePath.category}/${encodeURIComponent(category.slug)}`,
       lastModified: category.updatedAt,
     })),
     ...products.map((product) => ({
-      url: `${appConfig.BASE_URL}/${CollectionSlug.product}/${encodeURIComponent(product.slug)}`,
+      url: `${appConfig.BASE_URL}/${RoutePath.product}/${encodeURIComponent(product.slug)}`,
       lastModified: product.updatedAt,
     })),
   ];

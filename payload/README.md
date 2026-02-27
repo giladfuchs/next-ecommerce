@@ -63,12 +63,26 @@ This starter already includes structural adjustments to make it more production-
 - **Tailwind CSS 4** + **React Icons** + **next-intl** for i18n
 - **pnpm** as package manager (Node >= 22)
 
-### Data Fetching & Caching & Revalidation
+### Data Layer, Caching & Revalidation
 
-- All frontend queries use Next.js `unstable_cache` with tag-based revalidation.
-- Products & Categories automatically revalidate on save/delete via Payload collection hooks.
-- The storefront uses aggressive caching — after content changes (products, categories, layout, footer, sitemap), press **“Revalidate” in Admin → Site Settings** to refresh the storefront immediately.
-- Draft mode is supported for preview (published content stays cached separately).
+The project uses a simple DAL (Data Access Layer) abstraction.
+
+You can choose the implementation in:
+
+[`src/lib/core/dal/index.ts`](src/lib/core/dal/index.ts)
+
+- **Api** → Headless REST mode (recommended for production)
+- **Queries** → Direct Payload SDK mode (monolith)
+
+Both expose the same public methods.
+
+---
+
+### Caching & Revalidation
+
+- The frontend uses Next.js cache with tag-based revalidation. Products and categories auto-revalidate on save or delete. The storefront is aggressively cached for performance.
+- After changing products, categories, layout, footer or sitemap, click **“Revalidate” in Admin → Site Settings** to refresh immediately.
+- Draft mode is supported — preview content does not affect the published cache.
 
 ### Orders & Notifications
 

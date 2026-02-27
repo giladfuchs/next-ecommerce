@@ -2,6 +2,7 @@
 @import "./button.css";
 @import "./accessibility-bar.css";
 @import "./cart.css";
+@import "./faq.css";
 @plugin "@tailwindcss/typography";
 
 @layer utilities {
@@ -44,4 +45,12 @@ body {
     Helvetica,
     Arial,
     sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -17,7 +17,7 @@ async function readCol() {
   // console.dir(res, { depth: 10 });
   const product = await payload.findByID({
     collection: "products",
-    id: 45, // change to your id
+    id: 46, // change to your id
     depth: 2,
   });
 

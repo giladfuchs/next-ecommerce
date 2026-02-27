@@ -1,6 +1,5 @@
 import NextImage from "next/image";
 
-// import Image from 'next/image'
 import type { Media as MediaType } from "@/lib/core/types/payload-types";
 import type { StaticImageData } from "next/image";
 
@@ -89,7 +88,6 @@ const Video = ({ resource, videoClassName }: Props) => {
 export default function Media({ className, resource, ...rest }: Props) {
   const isVideo =
     typeof resource === "object" && resource?.mimeType?.includes("video");
-
   return (
     <div className={cn(className)}>
       {isVideo ? (

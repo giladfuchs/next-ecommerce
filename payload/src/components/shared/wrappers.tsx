@@ -28,6 +28,12 @@ export const CategoriesDropdown = dynamic(
   },
 );
 
+export const AutoScrollRow = dynamic(
+  () => import("@/components/shared/auto-scroll-row"),
+  {
+    ssr: false,
+  },
+);
 export const Header = dynamic(() => import("@/components/layout/header"), {
   ssr: false,
   loading: () => (

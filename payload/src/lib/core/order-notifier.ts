@@ -2,7 +2,7 @@ import type { Media, Order, Product } from "@/lib/core/types/payload-types";
 import type { Payload } from "payload";
 
 import appConfig from "@/lib/core/config";
-import { CollectionSlug, OrderItem } from "@/lib/core/types/types";
+import { RoutePath, OrderItem } from "@/lib/core/types/types";
 import { messages } from "@/lib/intl/request";
 
 type EmailItem = {
@@ -71,7 +71,7 @@ export class OrderNotifier {
     );
 
     const productsRes = await this.payload.find({
-      collection: `${CollectionSlug.product}s`,
+      collection: `${RoutePath.product}s`,
       depth: 0,
       limit: 0,
       pagination: false,

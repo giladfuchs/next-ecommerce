@@ -23,12 +23,15 @@ export const OpenCartButton = ({
 } & ComponentProps<typeof Button>) => {
   return (
     <Button
-      variant="nav"
+      variant="outline"
       size="clear"
-      className={clsx("relative flex items-center justify-center", className)}
+      className={clsx(
+        "relative flex items-center justify-center  border-0 mb-1",
+        className,
+      )}
       {...rest}
     >
-      <RiShoppingBagLine className="h-6 w-6" />
+      <RiShoppingBagLine className="h-8 w-8" />
 
       {quantity && quantity > 0 && (
         <span

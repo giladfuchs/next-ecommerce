@@ -4,7 +4,10 @@ import { useTranslations } from "next-intl";
 import React, { useEffect, useMemo, useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
-import type { Product, Media as MediaT } from "@/lib/core/types/payload-types";
+import type {
+  Product,
+  Media as MediaType,
+} from "@/lib/core/types/payload-types";
 
 import { GridTileImage } from "@/components/product/grid/tile";
 import Media from "@/components/shared/media";
@@ -63,7 +66,7 @@ export default function GalleryClient({ gallery }: Props) {
     <div>
       <div className="relative w-full overflow-hidden mb-6">
         <Media
-          resource={gallery[current]?.image as MediaT}
+          resource={gallery[current]?.image as MediaType}
           className="w-full"
           imgClassName="w-full rounded-lg"
         />

@@ -2,12 +2,14 @@ import type { CollectionConfig, CollectionAfterChangeHook } from "payload";
 
 import {
   DESCRIPTION_FIELD,
+  FAQS_FIELD,
   makeRevalidateHooks,
   makeAdminPreview,
   adminOnlyAccess,
   mixedSlugField,
+  normalizeFaqs,
 } from "@/lib/collections/base";
-import { CollectionSlug } from "@/lib/core/types/types";
+import { CollectionName, RoutePath } from "@/lib/core/types/types";
 
 const reorderCategoryPositions: CollectionAfterChangeHook = async ({
   req,
@@ -24,7 +26,7 @@ const reorderCategoryPositions: CollectionAfterChangeHook = async ({
   const payload = req.payload;
 
   const allRes = await payload.find({
-    collection: CollectionSlug.category,
+    collection: RoutePath.category,
     depth: 0,
     pagination: false,
     limit: 1000,
@@ -65,7 +67,7 @@ const reorderCategoryPositions: CollectionAfterChangeHook = async ({
   await Promise.all(
     toUpdate.map((row) =>
       payload.update({
-        collection: CollectionSlug.category,
+        collection: RoutePath.category,
         id: row.id,
         data: { position: row.position },
         depth: 0,
@@ -77,7 +79,7 @@ const reorderCategoryPositions: CollectionAfterChangeHook = async ({
   return doc;
 };
 export const Category: CollectionConfig = {
-  slug: CollectionSlug.category,
+  slug: RoutePath.category,
   versions: {
     drafts: true,
   },
@@ -90,14 +92,19 @@ export const Category: CollectionConfig = {
     useAsTitle: "title",
     group: "Content",
     defaultColumns: ["title", "position", "slug", "updatedAt"],
-    ...makeAdminPreview(CollectionSlug.category),
+    ...makeAdminPreview(RoutePath.category),
   },
   hooks: {
+    beforeValidate: [
+      ({ data }) => {
+        return normalizeFaqs(data as { faqs?: unknown });
+      },
+    ],
     afterChange: [
       reorderCategoryPositions,
-      ...makeRevalidateHooks(CollectionSlug.category).afterChange,
+      ...makeRevalidateHooks(CollectionName.category).afterChange,
     ],
-    afterDelete: makeRevalidateHooks(CollectionSlug.category).afterDelete,
+    afterDelete: makeRevalidateHooks(CollectionName.category).afterDelete,
   },
   fields: [
     { name: "title", type: "text", required: true, localized: true },
@@ -113,5 +120,6 @@ export const Category: CollectionConfig = {
 
     DESCRIPTION_FIELD,
     mixedSlugField(),
+    FAQS_FIELD,
   ],
 };

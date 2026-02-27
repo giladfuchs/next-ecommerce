@@ -19,7 +19,8 @@
   },
   "product": {
     "not_found": "No products found.",
-
+    "faq": "Frequently Asked Questions",
+    "relatedProducts": "Related Products",
     "stock": {
       "onlyLeft": "Only {count} left in stock",
       "inStock": "In stock",
@@ -38,6 +39,10 @@
 
   "general": {
     "back": "Back",
+    "products": "Products",
+    "search": "Search...",
+    "noMatch": "No products found",
+    "clear": "Clear search",
     "toggle_theme": "Toggle theme",
     "categories": "Categories",
     "category_all": "All Products"

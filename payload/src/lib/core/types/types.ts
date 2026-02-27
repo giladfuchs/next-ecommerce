@@ -1,7 +1,12 @@
 import type { Cart, Order, Product } from "@/lib/core/types/payload-types";
 
-export enum CollectionSlug {
+export enum RoutePath {
   product = "product",
+  category = "category",
+}
+
+export enum CollectionName {
+  products = "products",
   category = "category",
 }
 export type PropsSlug = { params: Promise<{ slug: string }> };
@@ -49,9 +54,10 @@ export type CombinedVariantData = {
 
 export type ProductSinglePage = Pick<
   Product,
-  "title" | "description" | "updatedAt" | "gallery"
+  "title" | "description" | "updatedAt" | "gallery" | "faqs"
 > & {
   purchase_section: ProductPurchaseSectionData;
+  relatedProducts: Product[];
 };
 
 export type CheckoutFormData = {

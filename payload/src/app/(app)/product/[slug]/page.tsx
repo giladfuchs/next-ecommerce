@@ -4,7 +4,8 @@ import type { PropsSlug } from "@/lib/core/types/types";
 import type { Metadata } from "next";
 
 import ProductPageLayout from "@/components/product";
-import Queries from "@/lib/core/queries";
+import { FaqSchema } from "@/components/shared/faq";
+import DAL from "@/lib/core/dal";
 import { getDecodedSlug } from "@/lib/core/util";
 import { generateJsonLdProduct } from "@/lib/seo/jsonld";
 import { generateMetadataProduct } from "@/lib/seo/metadata";
@@ -17,7 +18,7 @@ export async function generateMetadata({
 }: PropsSlug): Promise<Metadata> {
   const slug = await getDecodedSlug(params);
 
-  const product = await Queries.queryProductBySlug(slug);
+  const product = await DAL.queryProductBySlug(slug);
   if (!product) {
     return { robots: "noindex" };
   }
@@ -27,7 +28,7 @@ export async function generateMetadata({
 export default async function ProductPage({ params }: PropsSlug) {
   const slug = await getDecodedSlug(params);
 
-  const product = await Queries.queryProductBySlug(slug);
+  const product = await DAL.queryProductBySlug(slug);
   if (!product) return notFound();
   const jsonLd = generateJsonLdProduct(product, slug);
   return (
@@ -38,6 +39,7 @@ export default async function ProductPage({ params }: PropsSlug) {
           __html: JSON.stringify(jsonLd),
         }}
       />
+      <FaqSchema faqs={product.faqs} title={product.title} />
       <ProductPageLayout product={product} />
     </>
   );

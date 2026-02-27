@@ -6,7 +6,7 @@ import type { ReadonlyURLSearchParams } from "next/navigation";
 import type { PayloadRequest } from "payload";
 
 import appConfig from "@/lib/core/config";
-import { CollectionSlug } from "@/lib/core/types/types";
+import { RoutePath } from "@/lib/core/types/types";
 
 export const safeDecodeSlug = (value: string): string => {
   if (!value) return value;
@@ -29,7 +29,7 @@ export const generatePreviewPath = ({
   collection,
   slug,
 }: {
-  collection: CollectionSlug;
+  collection: RoutePath;
   slug: string;
 }) => {
   if (!slug) {
@@ -104,7 +104,7 @@ export const isAdmin = ({ req: { user } }: { req: PayloadRequest }) => {
 };
 
 export const buildCategoryHref = (slug: string) =>
-  slug === "/" ? "/" : `/${CollectionSlug.category}/${slug}`;
+  slug === "/" ? "/" : `/${RoutePath.category}/${slug}`;
 
 export const formatPrice = (n: number) =>
   new Intl.NumberFormat("en-US", {

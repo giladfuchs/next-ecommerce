@@ -2,10 +2,10 @@ import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import { TbWorld } from "react-icons/tb";
 
-import Queries from "@/lib/core/queries";
+import DAL from "@/lib/core/dal";
 
 export default async function Footer() {
-  const settings = await Queries.querySiteSettings();
+  const settings = await DAL.querySiteSettings();
   const footer = settings?.footer;
 
   if (!footer) return null;

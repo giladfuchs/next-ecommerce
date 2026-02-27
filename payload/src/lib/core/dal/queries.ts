@@ -1,22 +1,23 @@
 import configPromise from "@payload-config";
 import { unstable_cache } from "next/cache";
 import { draftMode } from "next/headers";
-import { getPayload as initPayload } from "payload";
+import { getPayload as initPayload, type PayloadRequest } from "payload";
 
+import type { SitemapData, SitemapItem } from "@/lib/core/dal/type";
 import type {
   Category,
   Media,
   Product,
   SiteSetting,
+  User,
 } from "@/lib/core/types/payload-types";
 
 import { buildProductPurchaseSectionData } from "@/lib/core/adapter";
 import {
-  CollectionSlug,
+  CollectionName,
   CombinedVariantData,
   type ProductSinglePage,
 } from "@/lib/core/types/types";
-type CollectionName = "products" | CollectionSlug.category;
 
 export default class Queries {
   private static _instance: Awaited<ReturnType<typeof initPayload>> | null =
@@ -31,6 +32,20 @@ export default class Queries {
 
   static cache<T>(fn: () => Promise<T>, keys: string[], tags: string[]) {
     return unstable_cache(fn, keys, { revalidate: false, tags });
+  }
+  static async queryCurrentUser(req: Request): Promise<User | null> {
+    try {
+      const payload = await this.getPayload();
+
+      const user = await payload.auth({
+        req: req as unknown as PayloadRequest,
+        headers: req.headers,
+      });
+
+      return (user?.user as User) ?? null;
+    } catch {
+      return null;
+    }
   }
   private static async queryBySlug<T>(
     collection: CollectionName,
@@ -96,9 +111,7 @@ export default class Queries {
       depth: 0,
       limit: 20,
       pagination: false,
-      where: {
-        id: { in: optionIds },
-      },
+      where: { id: { in: optionIds } },
       select: {
         id: true,
         label: true,
@@ -117,9 +130,7 @@ export default class Queries {
       depth: 0,
       limit: 20,
       pagination: false,
-      where: {
-        id: { in: typeIds },
-      },
+      where: { id: { in: typeIds } },
       select: {
         id: true,
         label: true,
@@ -138,55 +149,85 @@ export default class Queries {
   static queryProductBySlug(slug: string): Promise<ProductSinglePage | null> {
     return Queries.cache<ProductSinglePage | null>(
       async () => {
-        const product = await this.queryBySlug<Product>("products", slug, 1, {
-          title: true,
-          description: true,
-          updatedAt: true,
-          gallery: true,
-          priceInUSD: true,
-          inventory: true,
-          enableVariants: true,
-        });
+        const product = await this.queryBySlug<Product>(
+          CollectionName.products,
+          slug,
+          1,
+          {
+            title: true,
+            description: true,
+            updatedAt: true,
+            gallery: true,
+            priceInUSD: true,
+            inventory: true,
+            faqs: true,
+            enableVariants: true,
+          },
+        );
 
         if (!product) return null;
+
+        const payload = await Queries.getPayload();
+
+        let relatedProducts =
+          (
+            await payload.findByID({
+              collection: CollectionName.products,
+              id: product.id,
+              depth: 0,
+              select: { relatedProducts: true },
+            })
+          ).relatedProducts ?? [];
+
+        if (relatedProducts.length) {
+          const allProducts = await Queries.queryAllProducts();
+          relatedProducts = allProducts.filter((p) =>
+            relatedProducts.includes(p.id),
+          );
+        }
 
         const combined = product.enableVariants
           ? await this.queryCombinedVariantData(product.id)
           : null;
+
         return {
           title: product.title,
           description: product.description,
           updatedAt: product.updatedAt,
           gallery: product.gallery,
+          faqs: product.faqs,
+          relatedProducts: relatedProducts as Product[],
           purchase_section: buildProductPurchaseSectionData(product, combined),
         };
       },
-      [`${CollectionSlug.product}-${slug}`],
-      [`${CollectionSlug.product}-${slug}`],
+      [`${CollectionName.products}-${slug}`],
+      [`${CollectionName.products}-${slug}`],
     )();
   }
+
   static queryCategoryBySlug(slug: string): Promise<Category | null> {
     return Queries.cache<Category | null>(
       () =>
-        this.queryBySlug<Category>(CollectionSlug.category, slug, 1, {
-          id: true,
+        this.queryBySlug<Category>(CollectionName.category, slug, 1, {
           title: true,
           image: true,
           slug: true,
           description: true,
           updatedAt: true,
+          faqs: true,
         }),
-      [`${CollectionSlug.category}-${slug}`],
-      [`${CollectionSlug.category}-${slug}`],
+      [`${CollectionName.category}-${slug}`],
+      [`${CollectionName.category}-${slug}`],
     )();
   }
+
   static queryAllProducts(): Promise<Product[]> {
     return Queries.cache(
       async () => {
         const payload = await Queries.getPayload();
 
         const res = await payload.find({
-          collection: `${CollectionSlug.product}s`,
+          collection: CollectionName.products,
           draft: false,
           overrideAccess: false,
           limit: 0,
@@ -229,14 +270,14 @@ export default class Queries {
           ] as Product["gallery"],
         })) as Product[];
       },
-      [`bootstrap-${CollectionSlug.product}`],
+      [`bootstrap-${CollectionName.products}`],
       ["bootstrap"],
     )();
   }
 
   private static async fetchSlugs(
     collection: CollectionName,
-  ): Promise<{ slug: string; updatedAt: string }[]> {
+  ): Promise<SitemapItem[]> {
     const payload = await Queries.getPayload();
 
     const res = await payload.find({
@@ -247,22 +288,21 @@ export default class Queries {
       pagination: false,
       sort: "-updatedAt",
       depth: 0,
-      where: {
-        _status: { equals: "published" },
-      },
+      where: { _status: { equals: "published" } },
       select: { slug: true, updatedAt: true },
     });
 
-    return res.docs as { slug: string; updatedAt: string }[];
+    return res.docs as SitemapItem[];
   }
 
-  static querySitemapData() {
+  static querySitemapData(): Promise<SitemapData> {
     return Queries.cache(
-      async () => {
+      async (): Promise<SitemapData> => {
         const [products, categories] = await Promise.all([
-          Queries.fetchSlugs("products"),
-          Queries.fetchSlugs(CollectionSlug.category),
+          Queries.fetchSlugs(CollectionName.products),
+          Queries.fetchSlugs(CollectionName.category),
         ]);
+
         return { products, categories };
       },
       ["bootstrap-sitemap"],
@@ -292,23 +332,22 @@ export default class Queries {
         const payload = await Queries.getPayload();
 
         const res = await payload.find({
-          collection: CollectionSlug.category,
+          collection: CollectionName.category,
           depth: 0,
           limit: 0,
           pagination: false,
           sort: "position",
-          where: {
-            _status: { equals: "published" },
-          },
+          where: { _status: { equals: "published" } },
           select: {
             id: true,
             title: true,
             slug: true,
           },
         });
+
         return res.docs;
       },
-      [`bootstrap-${CollectionSlug.category}`],
+      [`bootstrap-${CollectionName.category}`],
       ["bootstrap"],
     )();
   }

@@ -1,10 +1,10 @@
 import { draftMode } from "next/headers";
 import { redirect } from "next/navigation";
 
-import type { CollectionSlug, PayloadRequest } from "payload";
+import type { CollectionSlug } from "payload";
 
 import appConfig from "@/lib/core/config";
-import Queries from "@/lib/core/queries";
+import DAL from "@/lib/core/dal";
 
 export async function GET(req: Request): Promise<Response> {
   const { searchParams } = new URL(req.url);
@@ -25,14 +25,8 @@ export async function GET(req: Request): Promise<Response> {
     return new Response("Path must be relative", { status: 400 });
   }
 
-  const payload = await Queries.getPayload();
-
   try {
-    const user = await payload.auth({
-      req: req as unknown as PayloadRequest,
-      headers: req.headers,
-    });
-
+    const user = await DAL.queryCurrentUser(req);
     if (!user) {
       (await draftMode()).disable();
       return new Response("Forbidden", { status: 403 });
