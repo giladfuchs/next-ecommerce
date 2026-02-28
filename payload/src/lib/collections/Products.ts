@@ -129,5 +129,11 @@ export const Products: CollectionOverride = ({ defaultCollection }) => ({
       }),
     },
     FAQS_FIELD,
+    {
+      name: "reviews",
+      type: "join",
+      collection: "reviews",
+      on: "product",
+    },
   ],
 });

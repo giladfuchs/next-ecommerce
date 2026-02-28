@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import type { Product } from "@/lib/core/types/payload-types";
 
 import { Categories } from "@/components/category/categories";
-import { ProductGridItem } from "@/components/product/grid/product-grid-item";
+import ProductGridItem from "@/components/product/grid/product-grid-item";
 import { Grid } from "@/components/shared/elements-ssr";
 
 export default async function ProductsGrid({

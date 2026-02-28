@@ -2,8 +2,9 @@ import { getTranslations } from "next-intl/server";
 
 import type { ProductSinglePage } from "@/lib/core/types/types";
 
-import { ProductGridItem } from "@/components/product/grid/product-grid-item";
-import { ProductDescription } from "@/components/product/product-description";
+import ProductGridItem from "@/components/product/grid/product-grid-item";
+import ProductDescription from "@/components/product/product-description";
+import ProductReviews from "@/components/product/review";
 import {
   AutoScrollRow,
   BackButton,
@@ -46,6 +47,7 @@ export default async function ProductPageLayout({
           </AutoScrollRow>
         </div>
       ) : null}
+      <ProductReviews reviews={product.reviews} productId={product.id} />
     </div>
   );
 }

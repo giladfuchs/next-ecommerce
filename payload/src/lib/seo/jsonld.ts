@@ -14,7 +14,7 @@ export const generateJsonLdProduct = (
   slug: string,
 ) => {
   const url = `${appConfig.BASE_URL}/${RoutePath.product}/${encodeURIComponent(slug)}`;
-  const image = `${appConfig.BASE_URL}${(product.gallery![0].image as Media).url}`;
+  const image = `${appConfig.SERVER_URL}${(product.gallery![0].image as Media).url}`;
   const { priceRange, inventory, variants } = product.purchase_section;
 
   const hasStock =
@@ -47,7 +47,41 @@ export const generateJsonLdProduct = (
             : "https://schema.org/OutOfStock",
           itemCondition: "https://schema.org/NewCondition",
         };
+
   const description = extractRichTextText(product.description);
+
+  const reviews = product.reviews ?? [];
+
+  const aggregateRating =
+    reviews.length > 0
+      ? {
+          "@type": "AggregateRating",
+          ratingValue: (
+            reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
+          ).toFixed(1),
+          reviewCount: reviews.length,
+        }
+      : undefined;
+
+  const review =
+    reviews.length > 0
+      ? reviews.map((r) => ({
+          "@type": "Review",
+          "@id": `${url}#review-${r.id}`,
+          author: {
+            "@type": "Person",
+            name: r.authorName,
+          },
+          datePublished: r.createdAt,
+          reviewBody: r.body,
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: r.rating,
+            bestRating: "5",
+            worstRating: "1",
+          },
+        }))
+      : undefined;
 
   return {
     "@context": "https://schema.org",
@@ -59,9 +93,10 @@ export const generateJsonLdProduct = (
     image,
     dateModified: product.updatedAt,
     offers,
+    ...(aggregateRating && { aggregateRating }),
+    ...(review && { review }),
   };
 };
-
 export const generateJsonLdItemListCategory = (
   category: Category,
   products: Product[],
@@ -142,7 +177,7 @@ export const generateJsonLdHome = (settings: SiteSetting) => {
       "@id": `${url}#organization`,
       name: settings.home.title,
       url,
-      logo: `${appConfig.BASE_URL}${image.url}`,
+      logo: `${appConfig.SERVER_URL}${image.url}`,
     },
   ];
 };

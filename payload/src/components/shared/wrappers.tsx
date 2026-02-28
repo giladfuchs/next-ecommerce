@@ -71,6 +71,12 @@ export const ProductPurchaseSection = dynamic(
 export const Gallery = dynamic(() => import("@/components/product/gallery"), {
   ssr: false,
 });
+export const ReviewForm = dynamic(
+  () => import("@/components/product/review/review-form"),
+  {
+    ssr: false,
+  },
+);
 
 export const AccessibilityBar = dynamic(
   () => import("@/components/layout/accessibility-bar"),

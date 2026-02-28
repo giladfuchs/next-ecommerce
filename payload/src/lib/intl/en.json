@@ -1,6 +1,33 @@
 {
-  "order": {
-    "adminNotification": "📦 New order received → ",
+  "review_form": {
+    "open_button": "Write a review",
+    "title": "Add a review",
+    "subtitle": "Share your experience with this product",
+    "close_button": "Close",
+    "cancel_button": "Cancel",
+    "submit_button": "Submit review",
+    "submit_sending": "Sending...",
+    "close_aria": "Close dialog",
+    "toast_success": "Thanks! Your review was added.",
+    "toast_failed": "Failed to submit review",
+    "validation": {
+      "too_short": "{field} is too short (min {min})",
+      "too_long": "{field} is too long (max {max})"
+    },
+    "fields": {
+      "authorName": { "label": "Name", "required": "Required" },
+      "authorEmail": {
+        "label": "Email (optional)",
+        "invalid": "Invalid email"
+      },
+      "title": { "label": "Title", "required": "Required" },
+      "rating": { "label": "Rating", "aria": "Rate {value} out of 5" },
+      "body": { "label": "Review", "required": "Required" }
+    }
+  },
+
+  "order_notifier": {
+    "whatsappAdmin": "📦 New order received → ",
     "email": {
       "subjectPrefix": "Order Confirmation - No.",
       "greeting": "Hello",
@@ -21,6 +48,8 @@
     "not_found": "No products found.",
     "faq": "Frequently Asked Questions",
     "relatedProducts": "Related Products",
+    "customer_reviews": "Customer Reviews",
+
     "stock": {
       "onlyLeft": "Only {count} left in stock",
       "inStock": "In stock",

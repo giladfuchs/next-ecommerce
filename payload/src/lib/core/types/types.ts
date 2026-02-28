@@ -1,4 +1,9 @@
-import type { Cart, Order, Product } from "@/lib/core/types/payload-types";
+import type {
+  Cart,
+  Order,
+  Product,
+  Review,
+} from "@/lib/core/types/payload-types";
 
 export enum RoutePath {
   product = "product",
@@ -54,10 +59,11 @@ export type CombinedVariantData = {
 
 export type ProductSinglePage = Pick<
   Product,
-  "title" | "description" | "updatedAt" | "gallery" | "faqs"
+  "title" | "description" | "updatedAt" | "gallery" | "faqs" | "id"
 > & {
   purchase_section: ProductPurchaseSectionData;
   relatedProducts: Product[];
+  reviews: Review[];
 };
 
 export type CheckoutFormData = {

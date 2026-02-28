@@ -42,7 +42,7 @@ const MediaImage = ({
   if (!src && resource && typeof resource === "object") {
     width = width ?? resource.width ?? undefined;
     height = height ?? resource.height ?? undefined;
-    src = `${appConfig.BASE_URL}${resource.url}`;
+    src = `${appConfig.SERVER_URL}${resource.url}`;
   }
 
   const sizes =
@@ -80,7 +80,7 @@ const Video = ({ resource, videoClassName }: Props) => {
       className={cn(videoClassName)}
       aria-label={resource.alt}
     >
-      <source src={`${appConfig.BASE_URL}/media/${resource.filename}`} />
+      <source src={`${appConfig.SERVER_URL}/media/${resource.filename}`} />
     </video>
   );
 };

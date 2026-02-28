@@ -5,7 +5,7 @@ import { Faq } from "@/components/shared/faq";
 import { ProductPurchaseSection } from "@/components/shared/wrappers";
 import { RichText } from "@/components/ui/rich-text";
 
-export function ProductDescription({
+export default function ProductDescription({
   product,
 }: {
   product: ProductSinglePage;

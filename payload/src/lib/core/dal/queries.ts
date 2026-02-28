@@ -13,6 +13,7 @@ import type {
 } from "@/lib/core/types/payload-types";
 
 import { buildProductPurchaseSectionData } from "@/lib/core/adapter";
+import { Review } from "@/lib/core/types/payload-types";
 import {
   CollectionName,
   CombinedVariantData,
@@ -161,6 +162,7 @@ export default class Queries {
             priceInUSD: true,
             inventory: true,
             faqs: true,
+            reviews: true,
             enableVariants: true,
           },
         );
@@ -191,12 +193,15 @@ export default class Queries {
           : null;
 
         return {
+          id: product.id,
           title: product.title,
           description: product.description,
           updatedAt: product.updatedAt,
           gallery: product.gallery,
           faqs: product.faqs,
           relatedProducts: relatedProducts as Product[],
+          reviews: product.reviews?.docs as Review[],
+
           purchase_section: buildProductPurchaseSectionData(product, combined),
         };
       },

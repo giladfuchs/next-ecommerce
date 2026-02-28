@@ -28,7 +28,7 @@ export const resetDb = () => {
     shell: true,
   });
 };
-const IMAGE_LIMIT = 10;
+const IMAGE_LIMIT = false;
 const mockData = JSON.parse(await fs.readFile(DB_DATA_PATH, "utf8"));
 
 class SeedService {
@@ -224,6 +224,18 @@ class SeedService {
             })),
           },
         });
+
+        const reviewsToCreate = Array.isArray(p.reviews) ? p.reviews : [];
+
+        for (const r of reviewsToCreate) {
+          await this.payload.create({
+            collection: "reviews",
+            data: {
+              product: createdProduct.id,
+              ...r,
+            },
+          });
+        }
 
         if (!enableVariants || chosenOptions.length === 0) continue;
 

@@ -60,7 +60,7 @@ This starter already includes structural adjustments to make it more production-
 ## Stack
 
 - **Next.js 16** (App Router) + **React 19** + **Payload CMS 3** + **PostgreSQL**
-- **Tailwind CSS 4** + **React Icons** + **next-intl** for i18n
+- **Tailwind CSS 4** + **React Icons** + **next-intl** + **React Hook Form**
 - **pnpm** as package manager (Node >= 22)
 
 ### Data Layer, Caching & Revalidation

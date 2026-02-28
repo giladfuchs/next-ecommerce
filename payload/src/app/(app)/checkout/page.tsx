@@ -13,9 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function CheckoutPage() {
   const t = await getTranslations("checkout.page");
-  // const sleep = (ms: number) =>
-  //     new Promise((resolve) => setTimeout(resolve, ms))
-  // await sleep(4000)
+
   return (
     <div className="container min-h-[90vh] flex flex-col">
       <h1 className="text-4xl font-semibold text-center">{t("title")}</h1>

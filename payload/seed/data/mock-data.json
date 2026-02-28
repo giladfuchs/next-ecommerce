@@ -267,118 +267,152 @@
   ],
   "products": [
     {
-      "title": "Rue",
-      "description": "A compact evergreen shrub (0.5–1 m) with blue-green aromatic foliage and bright yellow flowers. Traditionally valued as a culinary and medicinal herb. Prefers full sun and well-drained soil, and tolerates heat and dry conditions. A strong architectural plant suitable for herb gardens and Mediterranean-style landscapes.",
+      "title": "Rue (Common Rue)",
+      "description": "A compact evergreen shrub (0.5–1 m) with beautiful, steel-blue aromatic foliage and bright yellow flowers. Known traditionally as the 'Herb of Grace,' it is a strong architectural plant that brings a sophisticated color palette to the garden. It is exceptionally tough, thriving in poor soils and hot, dry conditions where other plants might struggle.",
       "faqs": [
         {
-          "question": "How much sunlight does Rue need?",
-          "answer": "Rue grows best in full sun. It can tolerate partial shade, but strong sunlight helps maintain compact growth and vibrant foliage color."
+          "question": "Is Rue safe to touch?",
+          "answer": "Use caution! The sap of the Rue plant can cause skin irritation or 'phototoxicity' (blistering when skin is exposed to sunlight). It is best to wear gloves when pruning."
         },
         {
-          "question": "Is Rue suitable for dry climates?",
-          "answer": "Yes. Rue is drought-tolerant once established and performs well in warm, dry regions with well-drained soil."
+          "question": "Does it have a strong scent?",
+          "answer": "Yes, Rue has a very distinct, bitter, and heavy aroma. Many gardeners plant it specifically to deter unwanted cats or pests from the garden."
         },
         {
-          "question": "Can Rue be used for culinary purposes?",
-          "answer": "Rue has traditional culinary uses in small quantities, but it should be used carefully due to its strong flavor and potency."
+          "question": "Can I use it in cooking?",
+          "answer": "While used in some traditional recipes (like Italian Grappa or Ethiopian coffee), it should be used in very tiny amounts. Large quantities can be toxic."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Marco D.",
+          "rating": 4,
+          "title": "Beautiful Blue Foliage",
+          "body": "The color of this plant is incredible—it looks almost silver-blue in the sun. Just be careful with the sap; I learned the hard way to wear gloves when trimming!"
         },
         {
-          "question": "Does Rue require frequent watering?",
-          "answer": "No. Rue prefers moderate watering and should not sit in wet soil. Allow the soil to dry slightly between watering."
+          "authorName": "Julia W.",
+          "rating": 5,
+          "title": "Drought-proof and Hardy",
+          "body": "I planted this in the hottest, driest corner of my yard and it's flourishing. The yellow flowers are a lovely contrast against the blue leaves."
         }
       ]
     },
     {
-      "title": "Serrated Lavender",
-      "description": "A charming evergreen shrub reaching 60–80 cm, distinguished by its unique 'toothed' green foliage and vibrant purple flower spikes. This variety blooms almost year-round in temperate zones, emitting a fresh, camphor-like scent that naturally deters mosquitoes. It is a hardy, drought-tolerant choice for Mediterranean-style gardens or decorative borders.",
+      "title": "Serrated Lavender (French Lavender)",
+      "description": "A charming evergreen shrub reaching 60–80 cm, distinguished by its unique 'toothed' green foliage and vibrant purple flower spikes. This variety is a champion bloomer, often flowering almost year-round in mild climates. It emits a fresh, camphor-like scent that naturally helps keep mosquitoes at bay, making it a functional beauty for any patio or border.",
       "faqs": [
         {
           "question": "How does it differ from English Lavender?",
-          "answer": "Serrated Lavender has distinct jagged leaf edges and a more resinous scent. It also has a much longer blooming season, often flowering through winter in mild climates."
+          "answer": "Serrated Lavender has jagged leaf edges and a more resinous scent. It also blooms much longer, often continuing through the winter in temperate zones."
         },
         {
-          "question": "Does it really repel mosquitoes?",
-          "answer": "Yes, the high concentration of essential oils in the foliage acts as a natural deterrent. Planting it near patios can help reduce insect presence."
+          "question": "How do I keep it from getting 'woody'?",
+          "answer": "Lightly prune the green stems after each flowering cycle. Never cut back into the old, brown wood, as it likely won't regrow from there."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Sophie T.",
+          "rating": 5,
+          "title": "Blooms all year long",
+          "body": "My English lavender is dormant, but this serrated variety is still pumping out purple flowers in December. The foliage feels so soft and looks great in a mass planting."
         },
         {
-          "question": "How often should I prune it?",
-          "answer": "Light pruning after each flowering flush helps maintain a tidy shape. Avoid cutting into old, woody stems, as they may not sprout new growth."
-        },
-        {
-          "question": "What kind of soil does it prefer?",
-          "answer": "It thrives in well-drained, slightly alkaline soil. It is sensitive to 'wet feet,' so ensure the container or garden bed has excellent drainage."
+          "authorName": "Liam F.",
+          "rating": 5,
+          "title": "Mosquitoes hate it",
+          "body": "I have these in pots around my seating area. When you brush against them, the piney-lavender scent fills the air and it really seems to help keep the bugs away."
         }
       ]
     },
     {
       "title": "Lemon Verbena",
-      "description": "An elegant shrub prized for its intensely lemon-scented foliage and graceful growth habit. Reaching 1–2 meters, its narrow green leaves are a staple in culinary arts for teas and desserts, while its oils are valued for their calming medicinal properties. It thrives in sunny, sheltered spots and adds a refreshing sensory layer to any herb garden.",
+      "description": "The 'Queen' of lemon-scented herbs. Reaching 1–2 meters, this elegant shrub produces narrow leaves with a pure, intense citrus aroma that outshines even lemon itself. It is highly valued for its calming tea and its ability to add a bright, lemony lift to desserts without any of the acidity. A must-have for the sensory garden.",
       "faqs": [
         {
-          "question": "How do I use the leaves in cooking?",
-          "answer": "Leaves are best used fresh or dried for herbal teas, marinades, and fruit salads. They provide a pure lemon flavor without the acidity of citrus juice."
+          "question": "Is it cold-hardy?",
+          "answer": "Lemon Verbena is frost-sensitive. It often drops its leaves in winter (deciduous) even in mild cold, so don't panic—it usually sprouts back in spring!"
         },
         {
-          "question": "Is Lemon Verbena cold-hardy?",
-          "answer": "It is somewhat frost-sensitive. In colder regions, it may drop its leaves in winter or should be kept in a container and moved indoors."
+          "question": "How do I make the best tea?",
+          "answer": "Harvest fresh leaves, bruise them slightly to release the oils, and steep in hot water for 5 minutes. It is naturally sweet and incredibly relaxing."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Elena R.",
+          "rating": 5,
+          "title": "The scent is heavenly",
+          "body": "I've tried lemon balm and lemon thyme, but nothing smells as purely 'lemon' as this. One leaf in a bottle of water is enough for a refreshing drink."
         },
         {
-          "question": "When is the best time to harvest?",
-          "answer": "You can harvest leaves throughout the growing season, but the flavor is most potent just before the plant begins to flower in mid-summer."
-        },
-        {
-          "question": "Does it require a lot of sun?",
-          "answer": "Yes, it requires full sun (at least 6 hours a day) to produce the high oil content responsible for its signature citrus scent."
+          "authorName": "David K.",
+          "rating": 4,
+          "title": "Grows like crazy",
+          "body": "It grew from a small 4-inch pot to a massive 1.5-meter bush in one season. Give it plenty of room and lots of sun."
         }
       ]
     },
     {
-      "title": "Tipuana",
-      "description": "A majestic deciduous tree that can reach heights of 30 meters, famous for its sprawling canopy and spectacular display of golden-yellow spring flowers. Often called 'Pride of Bolivia,' it serves as an exceptional shade tree for large landscapes. It is fast-growing, resilient to heat, and creates a beautiful golden carpet effect when its blossoms fall.",
+      "title": "Tipuana (Pride of Bolivia)",
+      "description": "A majestic shade tree famous for its sprawling, umbrella-like canopy and spectacular display of golden-yellow spring flowers. Often called 'Pride of Bolivia,' it is a fast-growing giant that can transform a hot, open landscape into a cool, shaded oasis. When the blossoms fall, they create a stunning golden carpet on the ground below.",
       "faqs": [
         {
           "question": "Is the root system aggressive?",
-          "answer": "Yes, Tipuana has a vigorous root system. It should be planted at least 10 meters away from foundations, pipes, or paved walkways to avoid damage."
+          "answer": "Yes. Due to its size and vigor, plant it at least 10 meters away from house foundations, swimming pools, or underground pipes."
         },
         {
-          "question": "How fast does it grow?",
-          "answer": "It is considered a very fast grower, making it an ideal choice if you need to establish a large shade canopy in a relatively short period."
+          "question": "How fast will it provide shade?",
+          "answer": "Very fast! It is one of the quickest growing deciduous shade trees available, often adding over a meter of height per year when young."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Victor M.",
+          "rating": 5,
+          "title": "The ultimate shade tree",
+          "body": "We planted this to cover our western-facing deck. In three years, we had a full canopy. The yellow flowers in June are breathtaking."
         },
         {
-          "question": "Are the seeds messy?",
-          "answer": "The tree produces winged seed pods that 'helicopter' down. While they are easy to clean, they can accumulate on lawns and in gutters."
-        },
-        {
-          "question": "Does it need a lot of water?",
-          "answer": "Once established, Tipuana is quite drought-tolerant, though it grows most vigorously with regular deep watering during the summer months."
+          "authorName": "Sarah H.",
+          "rating": 4,
+          "title": "Beautiful but big",
+          "body": "Make sure you have a huge yard for this one. It's a gorgeous tree, but it produces a lot of 'helicopter' seeds that get into the gutters."
         }
       ]
     },
     {
       "title": "Bay Laurel",
-      "description": "A versatile evergreen shrub or small tree originating from the Mediterranean. Its glossy, dark green leaves are a kitchen essential, used worldwide to flavor soups and stews. Beyond the kitchen, Bay Laurel is a robust ornamental plant that responds beautifully to topiary pruning and adds a classic, formal touch to any garden space.",
+      "description": "The quintessential Mediterranean herb. This versatile evergreen produces glossy, dark green leaves that are a permanent fixture in kitchens worldwide. Beyond its culinary value, Bay Laurel is a robust ornamental that responds perfectly to topiary pruning. Whether grown as a stately tree or a potted sphere, it brings a classic, formal elegance to the garden.",
       "faqs": [
         {
-          "question": "Can I grow Bay Laurel in a pot?",
-          "answer": "Absolutely. It is one of the best shrubs for container gardening, provided it has good drainage and is pruned to maintain its size."
+          "question": "How do I dry the leaves?",
+          "answer": "Place harvested leaves between heavy books or paper towels for 10–14 days. This removes the bitterness of fresh leaves and concentrates the herbal oils."
         },
         {
-          "question": "Are all Bay leaves safe to eat?",
-          "answer": "No. Only 'Laurus nobilis' (this variety) is the culinary Bay. Other plants called 'Laurel,' like Mountain Laurel, are toxic and should be avoided."
+          "question": "Can I grow it as a hedge?",
+          "answer": "Yes! Bay Laurel makes a fantastic, thick, and fragrant evergreen hedge that can be kept at almost any height with regular clipping."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Isabella C.",
+          "rating": 5,
+          "title": "Kitchen staple",
+          "body": "I love being able to just walk outside and grab a leaf for my spaghetti sauce. The plant itself is very handsome and stays green all winter."
         },
         {
-          "question": "Does it grow well in the shade?",
-          "answer": "It prefers full sun to partial shade. In very hot climates, afternoon shade can help prevent the glossy leaves from scorching."
-        },
-        {
-          "question": "How do I dry the leaves for cooking?",
-          "answer": "Pick healthy leaves and lay them flat between paper towels for two weeks. Dried leaves have a more concentrated, less bitter flavor than fresh ones."
+          "authorName": "Tom B.",
+          "rating": 5,
+          "title": "Great in a pot",
+          "body": "I've had mine in a large terracotta pot for 5 years. I prune it into a ball shape and it looks very 'high-end' at my front door."
         }
       ]
     },
     {
-      "title": "Tree Medick",
-      "description": "Also known as Bush Lucerne, this hardy evergreen legume grows 1–2 meters tall and is a powerhouse for soil health. It features silver-green foliage and bright yellow pea-like flowers that bloom in early spring. As a nitrogen-fixer, it naturally enriches the earth, making it a functional and beautiful choice for sustainable landscapes.",
+      "title": "Tree Medick (Bush Lucerne)",
+      "description": "Also known as Bush Lucerne, this hardy evergreen legume grows 1–2 meters tall and is a powerhouse for soil health. It features silver-green foliage and bright yellow pea-like flowers that bloom in early spring. As a nitrogen-fixer, it naturally enriches the earth, making it a functional and beautiful choice for sustainable landscapes and coastal gardens.",
       "faqs": [
         {
           "question": "What does 'nitrogen-fixer' mean?",
@@ -387,875 +421,1164 @@
         {
           "question": "Is it suitable for coastal gardens?",
           "answer": "Yes, Tree Medick is highly tolerant of salt spray and windy conditions, making it an excellent choice for seaside planting."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Julian S.",
+          "rating": 5,
+          "title": "The perfect pioneer plant",
+          "body": "I planted these in a very windy, sandy spot where nothing else would grow. Not only did they survive, but they've improved the soil so much I can finally grow flowers nearby."
         },
         {
-          "question": "How much maintenance does it need?",
-          "answer": "Very little. It is drought-tolerant and thrives in poor soils. Occasional pruning after flowering will keep it from becoming too leggy."
-        },
-        {
-          "question": "Is it attractive to pollinators?",
-          "answer": "Yes, its bright yellow spring flowers are a significant source of nectar for bees and other beneficial insects."
+          "authorName": "Mira T.",
+          "rating": 4,
+          "title": "Lovely spring color",
+          "body": "The yellow flowers are so bright in early spring. It does get a bit leggy if you don't prune it, but otherwise, it's a very easy-going shrub."
         }
       ]
     },
     {
       "title": "Aloe Vera",
-      "description": "A world-renowned succulent prized for its thick, fleshy leaves containing a cooling medicinal gel. This 'living pharmacy' is essential for treating minor burns and skin irritations. It is incredibly low-maintenance, drought-hardy, and serves as an attractive structural element in rock gardens or as a functional houseplant.",
+      "description": "A world-renowned succulent prized for its thick, fleshy leaves containing a cooling medicinal gel. This 'living pharmacy' is essential for treating minor burns and skin irritations. It is incredibly low-maintenance, drought-hardy, and serves as an attractive structural element in rock gardens or as a functional houseplant for bright windowsills.",
       "faqs": [
         {
           "question": "How do I harvest the gel?",
-          "answer": "Cut an outer, mature leaf near the base. Stand it upright to let the yellow sap drain, then slice the leaf open to scoop out the clear inner gel."
-        },
-        {
-          "question": "How much water does it need?",
-          "answer": "Very little. As a succulent, it stores water in its leaves. Only water when the soil is completely dry to the touch to prevent root rot."
+          "answer": "Cut an outer, mature leaf near the base. Stand it upright to let the yellow sap (aloin) drain, then slice the leaf open to scoop out the clear inner gel."
         },
         {
           "question": "Can it stay outside in the winter?",
-          "answer": "Aloe Vera is frost-sensitive. If temperatures drop below freezing, it should be brought indoors to prevent the water-filled leaves from freezing."
+          "answer": "Aloe Vera is frost-sensitive. If temperatures drop below freezing, it should be brought indoors to prevent the water-filled leaves from freezing and turning to mush."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Elena G.",
+          "rating": 5,
+          "title": "Every kitchen needs one",
+          "body": "I use this for kitchen burns all the time. It works better than any store-bought cream. Plus, it’s basically impossible to kill as long as you don't overwater it."
         },
         {
-          "question": "Does it need direct sunlight?",
-          "answer": "It loves bright, indirect light. While it can handle full sun, intense afternoon heat can sometimes cause the leaves to turn a brownish-orange color."
+          "authorName": "David W.",
+          "rating": 5,
+          "title": "Great structural plant",
+          "body": "I have these in my rock garden. They look sculptural and survived a massive heatwave without a single drop of water. Truly tough."
         }
       ]
     },
-
     {
-      "title": "Lemon Balm",
-      "description": "A lush, perennial herb from the mint family, Lemon Balm is loved for its bright, citrus-scented leaves and gentle white flowers. Reaching heights of up to one meter, it is a staple in wellness gardens for its ability to reduce stress and improve sleep quality. It is incredibly hardy, easy to grow, and brings a refreshing aroma to any sunny border or container.",
+      "title": "Lemon Balm (Melissa officinalis)",
+      "description": "A lush, perennial herb from the mint family, Lemon Balm is loved for its bright, citrus-scented leaves. Reaching heights of up to one meter, it is a staple in wellness gardens for its ability to reduce stress and improve sleep quality. It is incredibly hardy and brings a refreshing aroma to any sunny border, though it is best kept in check due to its vigorous growth.",
       "faqs": [
         {
           "question": "Does it spread like Peppermint?",
-          "answer": "Yes, Lemon Balm is a member of the mint family and can be invasive. It is best grown in containers or with root barriers to prevent it from taking over the garden."
+          "answer": "Yes, it can be invasive. It is best grown in containers or with root barriers to prevent it from taking over your garden beds."
         },
         {
           "question": "How do I use it for stress relief?",
-          "answer": "The leaves can be steeped fresh or dried to create a calming tea. Crushing the leaves also releases essential oils that provide immediate aromatherapeutic benefits."
+          "answer": "The leaves can be steeped fresh or dried to create a calming tea. Simply crushing the leaves releases essential oils that provide immediate aromatherapeutic benefits."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Sophie L.",
+          "rating": 5,
+          "title": "My favorite tea herb",
+          "body": "I drink a cup of lemon balm tea every night before bed. It’s so soothing. Just be careful where you plant it—it really likes to wander!"
         },
         {
-          "question": "When should I harvest the leaves?",
-          "answer": "For the best flavor and scent, harvest the leaves in the morning before the sun gets too hot, and ideally before the plant begins to flower."
-        },
-        {
-          "question": "Can it grow in the shade?",
-          "answer": "It prefers full sun but is quite adaptable and will perform well in partial shade, though its scent might be slightly less intense."
+          "authorName": "Mark P.",
+          "rating": 4,
+          "title": "Bees love the flowers",
+          "body": "I planted this for the scent, but the number of bees it attracts is the real bonus. It grows very fast and stays green all summer."
         }
       ]
     },
     {
-      "title": "Bean Trefoil",
-      "description": "Also known as the 'Stinking Bean Trefoil,' this unique Mediterranean shrub is a winter-blooming legume that provides striking yellow-green flowers when most other plants are dormant. While its foliage emits a pungent, protective odor when bruised, it is valued in landscape design for its architectural form and nitrogen-fixing capabilities. It is exceptionally drought-hardy and well-suited for rocky, warm-climate gardens.",
+      "title": "Bean Trefoil (Anagyris foetida)",
+      "description": "Also known as 'Stinking Bean Trefoil,' this unique Mediterranean shrub is a winter-blooming legume that provides striking yellow-green flowers when most plants are dormant. While its foliage emits a pungent odor when bruised, it is valued for its architectural form and nitrogen-fixing capabilities. It is exceptionally drought-hardy and well-suited for rocky, warm-climate gardens.",
       "faqs": [
         {
           "question": "Why does it have a strong smell?",
-          "answer": "The odor is a natural defense mechanism designed to deter herbivores from eating the leaves. It is generally only noticeable if the foliage is touched or crushed."
+          "answer": "The odor is a natural defense mechanism to deter herbivores. You’ll generally only notice it if the leaves are touched or crushed."
         },
         {
           "question": "Is the plant toxic?",
-          "answer": "Yes, many parts of the plant, particularly the seeds, contain alkaloids that can be toxic if ingested. It should be handled with care around pets and children."
+          "answer": "Yes, particularly the seeds, which contain alkaloids. It should be handled with care and kept away from curious pets and children."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Yoni H.",
+          "rating": 4,
+          "title": "Unique winter bloomer",
+          "body": "It's great to have flowers in February. The smell is a bit strange, but only if you brush against it. A very hardy survivor in my dry garden."
         },
         {
-          "question": "When does it bloom?",
-          "answer": "Unlike many shrubs, it blooms in late winter and early spring, providing a vital source of nectar for early-season pollinators."
-        },
-        {
-          "question": "What kind of soil does it need?",
-          "answer": "It thrives in poor, well-drained, or even rocky soils. It does not require fertilization thanks to its ability to fix its own nitrogen."
+          "authorName": "Talia S.",
+          "rating": 4,
+          "title": "Strictly ornamental",
+          "body": "Beautiful structure and very interesting flowers. Just make sure people know not to eat the pods!"
         }
       ]
     },
     {
       "title": "Strawberry Guava",
-      "description": "A beautiful evergreen shrub from Brazil, the Strawberry Guava is prized for its glossy foliage and delicious, deep-red fruits. Growing up to 6 meters, it makes an excellent edible hedge or privacy screen. The fruit boasts a unique flavor profile—a blend of classic guava with a distinct strawberry finish—and is packed with Vitamin C, making it perfect for fresh snacks or homemade jams.",
+      "description": "A beautiful evergreen shrub from Brazil, the Strawberry Guava is prized for its glossy foliage and delicious, deep-red fruits. Growing up to 6 meters, it makes an excellent edible hedge. The fruit boasts a unique flavor—a blend of classic guava with a distinct strawberry finish—and is packed with Vitamin C, making it perfect for fresh snacks or jams.",
       "faqs": [
         {
-          "question": "How does the fruit taste compared to regular Guava?",
+          "question": "How does the fruit taste?",
           "answer": "It is much sweeter and less musky than the common tropical guava, with a tartness and aroma that strongly resembles fresh strawberries."
         },
         {
           "question": "Can it handle frost?",
-          "answer": "It is more cold-tolerant than the common guava, often surviving light frosts, but it should be protected during extended freezing temperatures."
+          "answer": "It is more cold-tolerant than the common guava, often surviving light frosts, though it needs protection during extended freezing temperatures."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Carlos M.",
+          "rating": 5,
+          "title": "Best tasting fruit",
+          "body": "The fruits are small but packed with flavor. My kids eat them straight off the bush. The red color against the glossy green leaves is stunning."
         },
         {
-          "question": "Does it require a lot of pruning?",
-          "answer": "It has a naturally bushy habit but can be pruned into a small tree shape or kept as a tight hedge. Pruning also helps encourage new fruiting wood."
-        },
-        {
-          "question": "Is it susceptible to pests?",
-          "answer": "The fruit can attract fruit flies. Picking the fruit as soon as it ripens and keeping the ground clear of fallen fruit helps manage this naturally."
+          "authorName": "Linda K.",
+          "rating": 4,
+          "title": "Excellent hedge",
+          "body": "I use this as a privacy screen. It grows thick and looks great year-round. Just watch out for fruit flies when the berries ripen."
         }
       ]
     },
     {
-      "title": "Large Bay Tree",
-      "description": "The 'Large' Bay Laurel is the stately, tree-form version of the classic Mediterranean herb, capable of reaching heights of 10 meters. It serves as a magnificent evergreen focal point or a dense, fragrant windbreak. Its thick, leathery leaves are the gold standard for flavoring savory dishes globally, and its robust nature makes it highly adaptable to various soil types and urban environments.",
+      "title": "Large Bay Tree (Laurus nobilis)",
+      "description": "The stately, tree-form version of the classic Mediterranean herb, capable of reaching heights of 10 meters. It serves as a magnificent evergreen focal point or a dense, fragrant windbreak. Its thick, leathery leaves are the gold standard for flavoring savory dishes globally, and its robust nature makes it highly adaptable to urban environments.",
       "faqs": [
         {
-          "question": "What is the difference between this and the shrub version?",
-          "answer": "It is the same species (Laurus nobilis), but this selection is allowed to reach its full tree height rather than being kept as a pruned shrub."
-        },
-        {
-          "question": "How long does it take to reach 10 meters?",
-          "answer": "Bay trees are relatively slow-growing, often taking several decades to reach their maximum height, though they provide ample shade much sooner."
-        },
-        {
-          "question": "Are the berries edible?",
-          "answer": "The small black berries are not typically eaten by humans but are a favorite for birds. The leaves remain the primary edible part of the tree."
+          "question": "How long does it take to grow?",
+          "answer": "Bay trees are relatively slow-growing, often taking several decades to reach their maximum height, but they provide ample shade much sooner."
         },
         {
           "question": "Can it be used for a tall hedge?",
           "answer": "Yes, it is excellent for tall, evergreen screening. It can be sheared regularly to maintain a specific height and width."
         }
+      ],
+      "reviews": [
+        {
+          "authorName": "Antoni V.",
+          "rating": 5,
+          "title": "A garden classic",
+          "body": "I love having fresh bay leaves for my stews. The tree itself is majestic and provides a wonderful dark green backdrop for the rest of the garden."
+        },
+        {
+          "authorName": "Sarah D.",
+          "rating": 5,
+          "title": "Very resilient",
+          "body": "Ours has survived heatwaves and heavy winds without any issues. It’s a very dignified, low-maintenance tree."
+        }
       ]
     },
     {
-      "title": "Indian Hawthorn",
-      "description": "A dependable and attractive evergreen shrub, Indian Hawthorn is a favorite for low-maintenance landscaping. In spring, it becomes covered in clusters of delicate pink or white blossoms, followed by dark blue berries. Its leathery, dark green leaves are remarkably resistant to salt spray and wind, making it the ideal choice for coastal gardens, low hedges, or decorative ground cover.",
+      "title": "Indian Hawthorn (Rhaphiolepis indica)",
+      "description": "A dependable and attractive evergreen shrub, Indian Hawthorn is a favorite for low-maintenance landscaping. In spring, it becomes covered in clusters of delicate pink or white blossoms. Its leathery leaves are remarkably resistant to salt spray and wind, making it the ideal choice for coastal gardens or decorative ground cover.",
       "faqs": [
-        {
-          "question": "Is it tolerant of coastal air?",
-          "answer": "Yes, it is highly salt-tolerant, making it one of the best choices for gardens near the ocean where salt spray is a concern."
-        },
         {
           "question": "Do I need to prune it often?",
           "answer": "No, it is naturally slow-growing and maintains a neat, mounded shape without frequent trimming."
         },
         {
-          "question": "Are the berries messy?",
-          "answer": "The berries are small and generally stay on the plant until eaten by birds, so they rarely cause a mess on walkways or patios."
+          "question": "Why are there spots on the leaves?",
+          "answer": "This is often 'Entomosporium leaf spot,' a fungal issue. Ensure good air circulation and avoid overhead watering to keep the foliage clean."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Brenda F.",
+          "rating": 5,
+          "title": "Bulletproof plant",
+          "body": "I have these along my front walkway. They look perfect all year and the spring flowers are lovely. Very little work required."
         },
         {
-          "question": "Why are there spots on the leaves?",
-          "answer": "This is often 'Entomosporium leaf spot,' a common fungal issue. Ensure good air circulation and avoid overhead watering to keep the foliage clean."
+          "authorName": "Jeff B.",
+          "rating": 4,
+          "title": "Great for the coast",
+          "body": "Living by the sea makes gardening hard, but these don't mind the salt at all. A very reliable choice for seaside homes."
         }
       ]
     },
     {
       "title": "Lemongrass",
-      "description": "An aromatic perennial grass that brings a taste of Southeast Asia to the garden. Lemongrass grows in dense, upright clumps of slender blades that emit a sharp, clean lemon fragrance. Highly valued in the culinary world for soups and curries, it also serves as a beautiful ornamental grass in modern landscapes. It thrives in heat and acts as a natural deterrent for several types of flying insects.",
+      "description": "An aromatic perennial grass that brings a taste of Southeast Asia to the garden. Lemongrass grows in dense, upright clumps of slender blades that emit a sharp, clean lemon fragrance. Highly valued in the culinary world, it also serves as a beautiful ornamental grass that thrives in heat and acts as a natural deterrent for flying insects.",
       "faqs": [
         {
           "question": "How do I harvest it for cooking?",
-          "answer": "Cut a mature stalk at the very base of the plant. Peel away the tough outer layers to reveal the tender, white inner core used in recipes."
-        },
-        {
-          "question": "Can I grow it from a store-bought stalk?",
-          "answer": "Yes! You can often root fresh lemongrass stalks from the grocery store by placing them in water until roots appear, then transplanting them into soil."
-        },
-        {
-          "question": "Does it survive the winter?",
-          "answer": "It is a tropical plant. In colder climates, it must be moved indoors or treated as an annual, as it will not survive a hard freeze."
+          "answer": "Cut a mature stalk at the very base. Peel away the tough outer layers to reveal the tender, white inner core used in recipes."
         },
         {
           "question": "Is it the same as Citronella?",
-          "answer": "While they share similar scents and compounds, Lemongrass (Cymbopogon citratus) is the culinary variety, whereas Citronella grass is a different species used mainly for oil."
+          "answer": "While they share similar scents, Lemongrass (Cymbopogon citratus) is the culinary variety, whereas Citronella grass is a different species used mainly for oil."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Anil S.",
+          "rating": 5,
+          "title": "Fresh flavor",
+          "body": "Nothing beats the taste of fresh lemongrass in a curry. It grows into a massive, beautiful clump very quickly in the summer heat."
+        },
+        {
+          "authorName": "Karen O.",
+          "rating": 5,
+          "title": "Beautiful and functional",
+          "body": "It looks great as an ornamental grass and the smell when you brush past it is so refreshing. It definitely seems to keep the mosquitoes away too!"
         }
       ]
     },
 
     {
-      "title": "Ice Cream Bean",
-      "description": "A striking tropical tree reaching 10–15 meters, the Ice Cream Bean is famous for its massive pods filled with a white, fluffy pulp that tastes remarkably like vanilla cotton candy. Beyond its delicious fruit, it is a vigorous nitrogen-fixer that improves soil quality and provides a wide, leafy canopy for shade. It is an essential addition to any warm-climate food forest or large ornamental garden.",
+      "title": "Ice Cream Bean (Inga edulis)",
+      "description": "A striking tropical tree that feels like it belongs in a fairy tale. Reaching 10–15 meters, it is famous for its massive, felt-textured pods filled with a white, fluffy pulp that tastes remarkably like vanilla cotton candy. Beyond the 'dessert' fruit, it is a vigorous nitrogen-fixer, acting as a 'nurse tree' that improves soil for everything around it while providing a wide, leafy canopy of shade.",
       "faqs": [
         {
-          "question": "How long does it take to fruit?",
-          "answer": "When grown from seed, it typically begins to produce pods within 3 to 5 years, though this can be faster in ideal tropical conditions."
+          "question": "How do you eat the 'bean'?",
+          "answer": "You don't actually eat the bean seeds inside unless they are cooked; you eat the white, snowy pulp surrounding them. Just crack the pod open and snack on the fluff!"
         },
         {
-          "question": "Can it tolerate frost?",
-          "answer": "No, the Ice Cream Bean is strictly a warm-climate tree. It can be damaged by even light frost and thrives best in zones with consistent warmth."
+          "question": "Is it a good shade tree?",
+          "answer": "Excellent. It grows very fast and has broad, overlapping leaves that create a cool 'micro-climate' underneath—perfect for protecting smaller, shade-loving plants."
         },
         {
-          "question": "Is the tree messy?",
-          "answer": "Because it is a large tree with large pods, there is some leaf and fruit drop. It is best planted away from driveways or swimming pools."
+          "question": "Can I grow it in a pot?",
+          "answer": "Only for the first year or two. This is a large, powerful tree that needs space for its root system to truly thrive and produce fruit."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Leo K.",
+          "rating": 5,
+          "title": "A kid's dream tree",
+          "body": "My children are obsessed. They call it the 'Marshmallow Tree.' The texture is so weird but delicious. It grew 2 meters in its first year!"
         },
         {
-          "question": "Does it need a lot of water?",
-          "answer": "It prefers regular watering, especially while establishing, but once mature, it is moderately drought-tolerant thanks to its deep root system."
+          "authorName": "Sasha M.",
+          "rating": 4,
+          "title": "Great for permaculture",
+          "body": "I use this to provide shade for my coffee plants. It fixes nitrogen and the fruit is a bonus. Just be careful, it gets big very quickly."
         }
       ]
     },
     {
       "title": "Malisi Pomegranate",
-      "description": "The Malisi is a premium pomegranate variety celebrated for its 'soft seeds' and exceptionally high sugar content. Unlike common pomegranates, it lacks the sharp acidity, making it the perfect choice for fresh eating or gourmet juicing. This deciduous tree is hardy, drought-tolerant, and produces stunning orange-red blossoms that add a Mediterranean flair to any landscape.",
+      "description": "The Malisi is the 'gourmet' pomegranate. Celebrated for its almost imperceptible 'soft seeds' and exceptionally high sugar content, it is the variety of choice for those who dislike the crunch of standard pomegranates. It lacks the sharp, mouth-puckering acidity of other types, offering a pure, honeyed sweetness that makes it the ultimate dessert fruit.",
       "faqs": [
         {
-          "question": "Are the seeds actually soft?",
-          "answer": "Yes, 'soft-seeded' means the woody center of the seed is much smaller and easier to chew or swallow compared to standard varieties."
+          "question": "Are the seeds actually edible?",
+          "answer": "Absolutely. The woody center is so soft that you can easily chew and swallow them without the gritty texture found in store-bought varieties."
         },
         {
-          "question": "How do I know when the fruit is ripe?",
-          "answer": "The fruit is ready when it reaches its full color and the skin develops a slightly matte, 'squared-off' appearance rather than being perfectly round."
+          "question": "Does it need a lot of sun?",
+          "answer": "Yes, pomegranates need 'heads in the sun and feet in the heat' to develop those high sugar levels. Plant in your sunniest spot."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Yael P.",
+          "rating": 5,
+          "title": "No more spitting seeds!",
+          "body": "Finally, a pomegranate you can actually eat properly. It’s incredibly sweet—almost like candy. The blossoms are also a beautiful bright orange."
         },
         {
-          "question": "Does it require heavy pruning?",
-          "answer": "It benefits from an annual winter prune to remove suckers and open up the center of the tree, which improves air circulation and fruit quality."
-        },
-        {
-          "question": "Can it grow in a container?",
-          "answer": "Yes, pomegranates adapt well to large pots, provided they receive full sun and regular fertilizer during the growing season."
+          "authorName": "Omar D.",
+          "rating": 5,
+          "title": "The best juice",
+          "body": "I press these for juice and I don't even have to add sugar. It’s much lighter and sweeter than the Akko variety."
         }
       ]
     },
     {
-      "title": "Garlic Chives",
-      "description": "A versatile perennial that bridges the gap between onion and garlic, these chives feature flat, slender leaves and beautiful star-shaped white flowers. Reaching 30 cm, they are as much an ornamental joy as they are a culinary staple. They are magnetic to bees and butterflies, making them a dual-purpose champion for herb gardens, borders, and pollinator-friendly balconies.",
+      "title": "Garlic Chives (Oriental Chives)",
+      "description": "The perfect bridge between onion and garlic. These perennial chives feature flat, succulent leaves and stunning star-shaped white flowers. Unlike regular chives, these offer a mellow garlic punch that is essential for dumplings, stir-fries, and omelets. They are virtually indestructible and provide a constant supply of greens and edible flowers throughout the year.",
       "faqs": [
         {
-          "question": "How do they taste compared to regular chives?",
-          "answer": "They have a distinct but mellow garlic flavor, whereas regular chives taste more like mild green onions."
+          "question": "How do I harvest them?",
+          "answer": "Use scissors to snip the leaves about 2cm above the ground. They will grow back quickly, allowing for multiple harvests per season."
         },
         {
-          "question": "Are the flowers edible?",
-          "answer": "Yes! The white flowers have a lovely garlic kick and make a stunning, flavorful garnish for salads and savory dishes."
+          "question": "Are the flowers really edible?",
+          "answer": "Yes! They have a stronger garlic kick than the leaves and look beautiful sprinkled over a salad or a bowl of ramen."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Jin W.",
+          "rating": 5,
+          "title": "Kitchen staple",
+          "body": "I grow these in a pot right outside my kitchen door. They are way more flavorful than store-bought chives and the bees love the white flowers."
         },
         {
-          "question": "Do they spread aggressively?",
-          "answer": "They can self-seed if the flower heads are left on the plant. If you want to control their spread, simply harvest the flowers before they go to seed."
-        },
-        {
-          "question": "Will they survive the winter?",
-          "answer": "In most climates, they will go dormant in winter and sprout back enthusiastically from the roots as soon as the weather warms up."
+          "authorName": "Tessa B.",
+          "rating": 4,
+          "title": "Unstoppable growth",
+          "body": "I planted one small clump and now I have a whole border. They are very hardy. Just cut them back if they start to flower too much."
         }
       ]
     },
     {
       "title": "Artemisia (Wormwood)",
-      "description": "An evergreen shrub with striking silvery-green foliage, Artemisia is a classic aromatic known for its intense scent and architectural beauty. Growing 1–2 meters tall, it provides a cool, metallic contrast to green garden beds. While famous for its historical use in spirits and traditional medicine, it is also a rugged, drought-hardy plant that thrives in poor soils and hot sun.",
+      "description": "The 'Silver Queen' of the dry garden. Artemisia is a classic aromatic shrub known for its feathery, metallic-silver foliage and intense, herbal scent. It is the ultimate 'contrast plant,' making neighboring greens and purples pop. While famous for its role in traditional botanicals, it is primarily prized today for its extreme drought-hardiness and pest-repellent properties.",
       "faqs": [
         {
-          "question": "Can I use this variety for tea?",
-          "answer": "While some Artemisias are used medicinally, they are extremely bitter. Use caution and consult an expert, as many varieties contain high levels of thujone."
+          "question": "Is it easy to kill?",
+          "answer": "The only way to kill Artemisia is by overwatering it. It thrives on neglect, poor soil, and intense heat."
         },
         {
-          "question": "Does it help with pest control?",
-          "answer": "Yes, the strong scent naturally repels many garden pests. Some gardeners use dried leaves as a moth repellent in closets."
+          "question": "Can I use it as a bug repellent?",
+          "answer": "Yes, the leaves contain natural oils that deter many insects. You can even place dried sprigs in your pantry to keep moths away."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Gideon L.",
+          "rating": 5,
+          "title": "Beautiful moonlight garden",
+          "body": "At night, the silver leaves almost glow. It’s a very 'architectural' plant that needs almost no water once it’s established."
         },
         {
-          "question": "How much water does it need?",
-          "answer": "Very little. Artemisia is a desert-style plant that hates 'wet feet.' It is perfect for xeriscaping and rocky, well-drained areas."
-        },
-        {
-          "question": "Is it safe for pets?",
-          "answer": "Wormwood can be toxic to dogs and cats if ingested in large quantities. It's best to plant it where pets won't be tempted to nibble."
+          "authorName": "Fiona H.",
+          "rating": 3,
+          "title": "Very bitter!",
+          "body": "I tried to use this for tea and it was the most bitter thing I've ever tasted. Keep it as an ornamental—it looks better than it tastes!"
         }
       ]
     },
     {
       "title": "Mediterranean Spiraea",
-      "description": "This hardy evergreen shrub is a springtime showstopper, producing a 'snowstorm' of delicate white blossoms that cover its branches. Reaching 2–5 meters, it is an ideal choice for privacy hedges or as a standalone ornamental feature. It is remarkably resilient, attracting a wide variety of pollinators while remaining largely untouched by common garden pests.",
+      "description": "Known as the 'Snow-in-Summer' shrub, this evergreen is a springtime masterpiece. It produces long, arching branches that become completely smothered in clusters of tiny white flowers, resembling a fresh snowfall. It is remarkably resilient and works perfectly as a low-maintenance privacy screen or a graceful focal point in a cottage-style garden.",
       "faqs": [
-        {
-          "question": "When should I prune it?",
-          "answer": "Pruning is best done immediately after the spring flowering has finished. This allows the plant to set new wood for the next year’s blooms."
-        },
-        {
-          "question": "Can it be used as a hedge?",
-          "answer": "Absolutely. It has a dense growth habit that responds well to clipping, though a 'natural' prune preserves its graceful, arching branches better."
-        },
-        {
-          "question": "Does it need full sun?",
-          "answer": "It performs best in full sun but can tolerate partial shade, though you may see fewer flowers in shadier spots."
-        },
-        {
-          "question": "Is it drought-tolerant?",
-          "answer": "Once established, it is quite hardy. However, it will bloom more profusely with deep watering during the peak of summer."
-        }
-      ]
-    },
-    {
-      "title": "Sea Mallow",
-      "description": "An enchanting evergreen shrub that brings a splash of the coast to any garden, Sea Mallow features soft, grayish-green foliage and vibrant pink-purple blooms. Reaching 1–1.5 meters, it thrives in partial shade and provides a long-lasting color display through the warmer months. It is a tough, salt-tolerant plant that is as resilient as it is beautiful.",
-      "faqs": [
-        {
-          "question": "Is it good for coastal gardens?",
-          "answer": "Yes, it is highly resistant to salt spray and wind, making it one of the best choices for seaside or coastal landscapes."
-        },
-        {
-          "question": "Does it need a lot of pruning?",
-          "answer": "It can become a bit leggy over time. A light prune in early spring will help maintain a compact, bushy shape and encourage more flowers."
-        },
-        {
-          "question": "Can it grow in full shade?",
-          "answer": "It prefers 'bright' shade or filtered sunlight. Deep shade will cause the plant to stretch and reduce the number of flowers."
-        },
-        {
-          "question": "How long do the flowers last?",
-          "answer": "Individual flowers are short-lived, but the plant produces them in such high volume that it stays in bloom for several months."
-        }
-      ]
-    },
-    {
-      "title": "Aromatic Sage",
-      "description": "This entry encompasses both the culinary classic and its wilder cousin, Salvia dominica. These perennial shrubs offer wrinkled, aromatic leaves and beautiful pale flowers that act as a magnet for bees. Whether you are using it to flavor a roasted dish or as a structural, silver-toned plant for a Mediterranean rock garden, Sage is a low-maintenance essential for the sun-drenched landscape.",
-      "faqs": [
-        {
-          "question": "How often should I harvest the leaves?",
-          "answer": "You can harvest leaves year-round, but it's best to never take more than a third of the plant at once to ensure it stays healthy."
-        },
-        {
-          "question": "Why did my sage plant turn woody?",
-          "answer": "As sage ages, the lower stems naturally become woodier. Regular pruning of the soft tips helps slow this process and keeps the plant productive."
-        },
-        {
-          "question": "What is the best soil for sage?",
-          "answer": "It absolutely requires sharp drainage. Sandy or loamy soil is ideal; sage will often die if left in heavy, waterlogged clay."
-        },
-        {
-          "question": "Can I grow it as a companion plant?",
-          "answer": "Yes! Its strong scent helps deter pests from cabbage, carrots, and tomatoes, making it a great friend in the vegetable patch."
-        }
-      ]
-    },
-    {
-      "title": "Elderberry",
-      "description": "The Black Elder is a multi-talented shrub that offers frothy white spring blossoms followed by clusters of deep purple, health-boosting berries. Reaching 3–6 meters, it is a fast-growing plant that fits perfectly into wildlife-friendly or medicinal gardens. The berries are a powerhouse for home-made syrups and jams, valued for centuries for their immune-supporting properties.",
-      "faqs": [
-        {
-          "question": "Can I eat the berries raw?",
-          "answer": "No. Raw elderberries contain compounds that can cause stomach upset. They must be cooked or processed into syrup or jam to be safely consumed."
-        },
-        {
-          "question": "Do I need two plants for fruit?",
-          "answer": "While most elderberries are self-fertile, having two different varieties nearby will significantly increase your fruit yield through cross-pollination."
-        },
-        {
-          "question": "Does it grow in wet soil?",
-          "answer": "Surprisingly, yes. Unlike many other shrubs, Elderberry is quite tolerant of damp or boggy soil, making it great for drainage-prone areas."
-        },
-        {
-          "question": "How quickly does it grow?",
-          "answer": "It is a very fast grower and can reach its full height in just a few years, especially if given plenty of sun and water."
-        }
-      ]
-    },
-    {
-      "title": "Biblical Fig",
-      "description": "A symbol of peace and prosperity, the Fig tree is a deciduous masterpiece with large, architectural leaves and honey-sweet fruit. As one of the Seven Species, it carries deep historical significance and remains a favorite for its ease of growth and abundant harvests. It thrives in warm, sunny spots, producing juicy fruits that are a true delicacy when eaten straight from the branch.",
-      "faqs": [
-        {
-          "question": "How do I know when a fig is ripe?",
-          "answer": "The fruit will hang down slightly, feel soft to the touch, and may even show a tiny drop of 'honey' at the base. They do not ripen further once picked!"
-        },
-        {
-          "question": "Are the roots dangerous to buildings?",
-          "answer": "Fig roots are notoriously invasive and powerful. Plant them at least 5–7 meters away from walls, pipes, or foundations."
-        },
-        {
-          "question": "Does it need a lot of fertilizer?",
-          "answer": "Too much nitrogen will result in lots of leaves but very little fruit. A balanced fertilizer in early spring is usually more than enough."
-        },
-        {
-          "question": "Can I grow it in a small garden?",
-          "answer": "Yes, but it's best kept in a large pot. Restricting the roots in a container actually encourages the tree to produce more fruit."
-        }
-      ]
-    },
-    {
-      "title": "Moringa",
-      "description": "Commonly known as the 'Miracle Tree,' Moringa is a fast-growing nutritional powerhouse where almost every part is edible. Its delicate, feathery foliage is packed with vitamins and antioxidants, while its pods and roots offer various culinary uses. It is incredibly drought-resistant and thrives in heat, making it a vital crop for sustainable living in warm, arid regions.",
-      "faqs": [
-        {
-          "question": "How do I eat the leaves?",
-          "answer": "Leaves can be eaten raw in salads, cooked like spinach, or dried and ground into a powder to be added to smoothies and soups."
-        },
-        {
-          "question": "How fast does it grow?",
-          "answer": "Extremely fast! In ideal conditions, a Moringa tree can grow up to 3 or 4 meters in a single year."
-        },
-        {
-          "question": "Can I keep it short?",
-          "answer": "Yes, frequent 'topping' or pruning is encouraged. This keeps the leaves within reach and creates a bushier, more productive plant."
-        },
-        {
-          "question": "Will it survive a freeze?",
-          "answer": "Moringa is tropical. While it may die back to the ground in a light freeze and resprout in spring, it will not survive a deep, prolonged freeze."
-        }
-      ]
-    },
-    {
-      "title": "Pigeon Pea",
-      "description": "The Pigeon Pea is a multi-functional legume shrub that is as good for the soil as it is for the kitchen. Reaching 2–3 meters, it produces colorful flowers followed by protein-rich pods. As a perennial nitrogen-fixer, it works tirelessly to improve garden soil health, making it an indispensable 'pioneer plant' for new gardens or sustainable farming projects.",
-      "faqs": [
-        {
-          "question": "How do I cook the peas?",
-          "answer": "They can be eaten green like garden peas or left to dry on the plant. Dried pigeon peas are a staple in dishes like 'Arroz con Gandules' and Dhal."
-        },
-        {
-          "question": "How long does the plant live?",
-          "answer": "While it is a perennial, it is most productive for about 3 to 5 years. Most gardeners replace them every few years to maintain high yields."
-        },
-        {
-          "question": "Does it improve my soil?",
-          "answer": "Yes, it has a deep taproot that breaks up compacted soil and nodules on its roots that add nitrogen, benefiting all nearby plants."
-        },
-        {
-          "question": "Is it drought-tolerant?",
-          "answer": "It is exceptionally drought-tolerant once established, making it a perfect food crop for areas with limited water."
-        }
-      ]
-    },
-    {
-      "title": "Lemon Tagetes",
-      "description": "An evergreen shrub that combines vibrant aesthetics with a powerful citrus punch. Known for its feathery green leaves and golden-yellow flowers, it emits a sharp lemon scent that delights the senses while acting as a natural pest repellent. It is a fantastic choice for sunny borders, bringing a long-lasting pop of color and a fresh aroma to any garden setting.",
-      "faqs": [
-        {
-          "question": "Can the leaves be used for tea?",
-          "answer": "Yes, the leaves make a delicious, citrus-flavored herbal tea. They can also be used to flavor cold drinks or as a garnish."
-        },
-        {
-          "question": "Does it repel mosquitoes?",
-          "answer": "Like many marigold varieties, its strong scent helps deter mosquitoes and whiteflies, making it a great companion for vegetable gardens."
-        },
         {
           "question": "How big does it get?",
-          "answer": "It typically grows 1–2 meters tall and wide, forming a dense, rounded shrub if pruned occasionally."
+          "answer": "It can reach up to 2–5 meters if left unpruned, but it is very easy to maintain at a smaller size with an annual trim."
         },
         {
-          "question": "When does it bloom?",
-          "answer": "It has a very long blooming season, often flowering from late spring all the way through the first signs of winter."
+          "question": "Does it attract pollinators?",
+          "answer": "Yes, during its peak bloom in spring, it becomes a buzzing hub for butterflies and honeybees."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Maya V.",
+          "rating": 5,
+          "title": "Stunning spring show",
+          "body": "The whole bush turns white! It’s the most photographed plant in my garden every April. Very easy to take care of."
+        },
+        {
+          "authorName": "Robert E.",
+          "rating": 4,
+          "title": "Great hedge",
+          "body": "I used these to hide an ugly fence. They grew thick and lush within two seasons. Just make sure to prune right after they flower."
         }
       ]
     },
     {
-      "title": "Comfrey",
-      "description": "Comfrey is a legendary 'dynamic accumulator' in the garden world, with deep roots that pull minerals from the subsoil into its lush, green leaves. Historically used in poultices for healing, it is equally famous today as a natural fertilizer. Its clusters of bell-shaped purple or pink flowers are a favorite for bumblebees, making it a powerhouse for both soil and biodiversity.",
+      "title": "Sea Mallow (Lavatera)",
+      "description": "A coastal superstar with a soft side. Sea Mallow features velvet-textured, grayish foliage and large, hibiscus-like flowers in shades of pink and lilac. It is exceptionally salt-tolerant and wind-resistant, making it a go-to for seaside gardens. It blooms almost continuously during the warm months, providing a soft, romantic look to even the toughest landscapes.",
       "faqs": [
         {
-          "question": "How do I use it as fertilizer?",
-          "answer": "You can 'chop and drop' the leaves as mulch or steep them in water for a few weeks to create a nutrient-rich (but smelly!) liquid fertilizer tea."
+          "question": "Can it handle wind?",
+          "answer": "Yes, it is naturally adapted to windy coastal cliffs. Its flexible stems and sturdy root system make it very wind-firm."
         },
         {
-          "question": "Is it invasive?",
-          "answer": "It has very deep roots. If you try to dig it up, any tiny piece of root left behind will grow into a new plant. Choose its spot wisely!"
+          "question": "How do I stop it from getting 'woody'?",
+          "answer": "Cut the plant back by about half in late winter. This encourages fresh, green growth and more flowers for the coming season."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Nico S.",
+          "rating": 5,
+          "title": "Non-stop flowers",
+          "body": "I live right by the ocean and everything usually dies from the salt. This plant is thriving and hasn't stopped blooming since May."
         },
         {
-          "question": "Can I eat it?",
-          "answer": "While used historically in medicine, modern advice suggests avoiding internal consumption due to compounds that can be harmful to the liver."
-        },
-        {
-          "question": "Does it grow in the shade?",
-          "answer": "It is very adaptable and will grow in full sun or partial shade, though it grows most vigorously with plenty of light."
+          "authorName": "Elena G.",
+          "rating": 4,
+          "title": "Beautiful but loves sun",
+          "body": "I tried growing it in partial shade and it got a bit leggy. Moved it to full sun and it turned into a massive wall of pink flowers."
         }
       ]
     },
     {
-      "title": "Sweet Pea",
-      "description": "The quintessential garden climber, the Sweet Pea is beloved for its intoxicating fragrance and delicate, ruffled blooms. This annual vine reaches 1–2 meters and comes in a breathtaking array of colors. It is the perfect choice for vertical interest on trellises or fences and provides an endless supply of cut flowers that will fill your home with a classic, sweet perfume.",
+      "title": "Aromatic Sage (Salvia dominica / officinalis)",
+      "description": "The ultimate multi-tasker. Whether you are planting the culinary 'Common Sage' or the wild, silver-leaved 'Fragrant Sage' (Salvia dominica), you are getting a plant that is as tough as it is aromatic. With its wrinkled leaves and pollinator-friendly flower spires, it serves as the backbone of the water-wise Mediterranean garden and the gourmet herb bed alike.",
       "faqs": [
         {
-          "question": "Can I eat them like garden peas?",
-          "answer": "No! Unlike garden peas, Sweet Peas (Lathyrus odoratus) are toxic if ingested. Keep them away from children and pets who might mistake them for food."
+          "question": "What's the difference between culinary and aromatic sage?",
+          "answer": "Culinary sage (S. officinalis) is bred for flavor; Aromatic Sage (S. dominica) is a wilder cousin with a much more intense scent and silver foliage, primarily used for ornamental and aromatic purposes."
         },
         {
-          "question": "Do they need a trellis?",
-          "answer": "Yes, they use small tendrils to climb. They need a support like a net, trellis, or 'wigwam' of sticks to grow upwards."
-        },
-        {
-          "question": "How do I get more flowers?",
-          "answer": "The more you pick, the more they bloom! Regularly harvesting flowers for vases prevents the plant from setting seed and keeps it flowering longer."
-        },
-        {
-          "question": "When is the best time to sow them?",
-          "answer": "They prefer cool weather. In warm climates, sow them in late autumn or early spring so they can bloom before the intense heat of summer."
+          "question": "Does it like wet soil?",
+          "answer": "No. Sage will quickly rot in 'wet feet.' Always plant in well-drained soil or raised beds."
         }
-      ]
-    },
-    {
-      "title": "Red Sabra Cactus",
-      "description": "A striking and productive variety of the prickly pear, the Red Sabra is a desert icon that offers sweet, ruby-red fruits. Growing 2–3 meters tall, its broad blue-green pads provide a dramatic structural element to hot, dry gardens. The fruit is incredibly juicy with a flavor reminiscent of watermelon and berries, protected by a rugged, drought-proof exterior.",
-      "faqs": [
+      ],
+      "reviews": [
         {
-          "question": "How do I peel the fruit safely?",
-          "answer": "The fruit has tiny nearly-invisible spines (glochids). Always use tongs to pick them and singe the fruit over a flame or scrub it under water before peeling."
+          "authorName": "Ziv A.",
+          "rating": 5,
+          "title": "Indestructible",
+          "body": "I forgot to water this all summer and it looks better than ever. The scent when you brush against it is incredible."
         },
         {
-          "question": "Does it need any water at all?",
-          "answer": "While it can survive on very little, occasional watering during the summer will help the plant produce larger, juicier fruit."
-        },
-        {
-          "question": "Can I eat the pads too?",
-          "answer": "Yes! The young, tender pads (known as nopales) are edible when the spines are removed. They are delicious grilled or sautéed."
-        },
-        {
-          "question": "Is it easy to propagate?",
-          "answer": "Extremely. Simply take a mature pad, let the cut end dry (callus) for a few days, and stick it in well-draining soil. It will root quickly."
+          "authorName": "Paula R.",
+          "rating": 4,
+          "title": "A kitchen must",
+          "body": "Nothing beats fresh sage fried in butter. The plant is very pretty too, especially when the purple flowers come out."
         }
       ]
     },
 
     {
+      "title": "Elderberry (Black Elder)",
+      "description": "The Black Elder is a multi-talented shrub that offers frothy, cream-colored spring blossoms followed by heavy clusters of deep purple, health-boosting berries. Reaching 3–6 meters, it is a fast-growing plant that fits perfectly into wildlife-friendly or medicinal gardens. While the flowers can be used for cordials and fritters, the berries are a powerhouse for immune-supporting syrups and jams.",
+      "faqs": [
+        {
+          "question": "Can I eat the berries raw?",
+          "answer": "No. Raw elderberries contain sambunigrin, which can cause stomach upset. They must be cooked or processed into syrup, jelly, or wine to be safely consumed."
+        },
+        {
+          "question": "Does it grow in wet soil?",
+          "answer": "Yes! Elderberry is one of the few fruiting shrubs that thrives in damp, boggy, or poorly drained areas where other plants might suffer from root rot."
+        },
+        {
+          "question": "Are the flowers edible too?",
+          "answer": "Absolutely. Elderflowers are famous for making aromatic cordials, teas, and even being dipped in batter and fried as a seasonal delicacy."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Heidi V.",
+          "rating": 5,
+          "title": "A winter essential",
+          "body": "I grow this specifically to make elderberry syrup for the winter. It grows so fast that I had a decent harvest by the second year!"
+        },
+        {
+          "authorName": "Liam N.",
+          "rating": 5,
+          "title": "The birds love it",
+          "body": "If you want to attract songbirds, plant this. They go crazy for the berries. Just be prepared to share the harvest with them!"
+        },
+        {
+          "authorName": "Sarah G.",
+          "rating": 4,
+          "title": "Beautiful but big",
+          "body": "The flowers are gorgeous and smell like summer, but be warned: it wants to be a giant shrub. Keep your shears ready if you have a small garden."
+        }
+      ]
+    },
+    {
+      "title": "Biblical Fig",
+      "description": "A symbol of peace and prosperity, the Fig tree is a deciduous masterpiece with large, architectural leaves and honey-sweet fruit. As one of the 'Seven Species,' it carries deep historical significance. It thrives in warm, sunny spots, producing juicy fruits that develop a sugar-drop 'honey' at the base when perfectly ripe. A must-have for any Mediterranean-style landscape.",
+      "faqs": [
+        {
+          "question": "How do I know when a fig is ripe?",
+          "answer": "The fruit will 'nod' (hang down), feel soft to the touch, and the skin may slightly crack. Unlike many fruits, figs do not ripen further once picked."
+        },
+        {
+          "question": "Are the roots dangerous?",
+          "answer": "Fig roots are powerful and opportunistic. It is best to plant them at least 5–7 meters away from house foundations, pipes, or swimming pools."
+        },
+        {
+          "question": "Can I grow it in a pot?",
+          "answer": "Yes! In fact, restricting the roots in a large container often encourages the tree to produce more fruit rather than just growing more leaves."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Yitzhak R.",
+          "rating": 5,
+          "title": "Sweet as honey",
+          "body": "Nothing compares to a fig ripened in the sun. This variety is very reliable and produces a massive crop in late summer."
+        },
+        {
+          "authorName": "Daniela B.",
+          "rating": 5,
+          "title": "Stunning shade tree",
+          "body": "The leaves are huge and beautiful. It creates the perfect shaded spot for a garden bench. Just watch out for the sap if you have sensitive skin!"
+        },
+        {
+          "authorName": "Kevin M.",
+          "rating": 4,
+          "title": "Fast grower",
+          "body": "Planted a small sapling and two years later it's already over 2 meters tall. Make sure you have the space!"
+        }
+      ]
+    },
+    {
+      "title": "Moringa (The Miracle Tree)",
+      "description": "Often called the 'Tree of Life,' Moringa is a nutritional supernova. This ultra-fast-growing tree produces feathery leaves packed with more protein, calcium, and vitamins than almost any other plant. Every part is useful: the leaves for salads, the 'drumstick' pods for curries, and the seeds for water purification. It is the ultimate survival plant for hot, arid climates.",
+      "faqs": [
+        {
+          "question": "How fast does it actually grow?",
+          "answer": "In ideal heat, Moringa can grow 3 to 4 meters in a single year. It is one of the fastest-growing trees in the world."
+        },
+        {
+          "question": "How do I use the leaves?",
+          "answer": "You can eat them fresh in salads, sauté them like spinach, or dry and powder them to create a high-potency nutritional supplement for smoothies."
+        },
+        {
+          "question": "Does it survive winter?",
+          "answer": "Moringa loves heat. It will die back to the ground if there is a frost, but in many cases, it will resprout from the roots once the soil warms up in spring."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Raj P.",
+          "rating": 5,
+          "title": "Superfood in my backyard",
+          "body": "I dry the leaves and put them in everything. It grows so fast I can't even keep up with the harvest. A truly amazing plant."
+        },
+        {
+          "authorName": "Elena S.",
+          "rating": 4,
+          "title": "Grows like a beanstalk",
+          "body": "It’s not the most 'beautiful' tree in terms of shape—it gets very tall and thin—but the nutritional value is unbeatable. I prune it heavily to keep it bushy."
+        }
+      ]
+    },
+    {
+      "title": "Pigeon Pea",
+      "description": "A permaculture staple, the Pigeon Pea is a multi-functional legume shrub that acts as a 'soil doctor.' It fixes nitrogen to fertilize neighboring plants while producing abundant protein-rich pods. Its deep taproot breaks up heavy clay soil, making it a perfect 'pioneer' plant for establishing new gardens or food forests in difficult conditions.",
+      "faqs": [
+        {
+          "question": "How do I eat the peas?",
+          "answer": "Harvest them green to use like garden peas, or let the pods dry on the branch to harvest dried peas for soups, dhal, or traditional 'Rice and Peas'."
+        },
+        {
+          "question": "Is it a long-lived tree?",
+          "answer": "It is a short-lived perennial (3–5 years). Most gardeners treat it as a temporary soil improver and replace it once its productivity begins to dip."
+        },
+        {
+          "question": "How drought-tolerant is it?",
+          "answer": "Extremely. Once its taproot is established, it can thrive in areas with very little rainfall where other crops would fail."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Marcus T.",
+          "rating": 5,
+          "title": "Soil game changer",
+          "body": "I planted these in a patch of dead dirt. Two years later, the soil is dark and my citrus trees nearby are thriving thanks to the nitrogen."
+        },
+        {
+          "authorName": "Lila F.",
+          "rating": 4,
+          "title": "Great for snacks",
+          "body": "My kids love shelling the green peas. They are delicious and so easy to grow. They handled our 40°C summer without a single drop of extra water."
+        }
+      ]
+    },
+    {
+      "title": "Lemon Tagetes (Mountain Marigold)",
+      "description": "An evergreen shrub that offers a sensory explosion. Known for its lacy foliage and masses of golden-yellow flowers, it emits a powerful, sharp lemon-and-mint scent that can be smelled from several meters away. It is a 'comeback' plant that blooms most intensely in autumn and winter, providing bright color when the rest of the garden is going dormant.",
+      "faqs": [
+        {
+          "question": "Can the leaves be used for tea?",
+          "answer": "Yes, the leaves make a bright, citrusy herbal tea. They are also excellent for flavoring syrups or as a fragrant garnish for cold drinks."
+        },
+        {
+          "question": "Does it repel pests?",
+          "answer": "Yes! The strong oils in the foliage are a natural deterrent for mosquitoes, whiteflies, and even some garden nematodes."
+        },
+        {
+          "question": "When does it bloom?",
+          "answer": "It is a 'short-day' bloomer, meaning it puts on its biggest show in late autumn and through the winter in milder climates."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Joy H.",
+          "rating": 5,
+          "title": "Incredible scent",
+          "body": "Every time I walk past this shrub, I get a hit of lemon. The yellow flowers are so bright they look neon. It’s the star of my fall garden."
+        },
+        {
+          "authorName": "Ben S.",
+          "rating": 3,
+          "title": "Strong—maybe too strong!",
+          "body": "I love the color, but be warned: the smell is very intense. Don't plant it right under a bedroom window if you're sensitive to strong fragrances."
+        },
+        {
+          "authorName": "Rita K.",
+          "rating": 5,
+          "title": "Winter lifesaver",
+          "body": "When everything else in my garden is brown and dead in December, this thing is a mountain of gold. Absolutely love it."
+        }
+      ]
+    },
+    {
+      "title": "Comfrey (Dynamic Accumulator)",
+      "description": "Comfrey is a legendary 'biological miner.' Its massive taproot reaches deep into the subsoil to pull up minerals that other plants can't reach, storing them in its lush green leaves. It is the ultimate source of free, organic fertilizer for your garden. Beyond its utility, its bell-shaped flowers are an absolute favorite for bumblebees and beneficial insects.",
+      "faqs": [
+        {
+          "question": "How do I make fertilizer tea?",
+          "answer": "Stuff a bucket with leaves, weigh them down with a brick, and cover with water. After 3–4 weeks, you’ll have a potent (and smelly!) liquid gold to feed your tomatoes."
+        },
+        {
+          "question": "Is it invasive?",
+          "answer": "It is very hard to remove once established because any tiny piece of root left in the ground will grow a new plant. Choose its permanent home carefully!"
+        },
+        {
+          "question": "Can I eat the leaves?",
+          "answer": "Modern herbalists advise against internal consumption due to compounds that may affect the liver. It is best used for external poultices or as plant food."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Geoff W.",
+          "rating": 5,
+          "title": "Tomato secret weapon",
+          "body": "Since I started using comfrey mulch and tea, my tomato yield has doubled. Every gardener should have a patch of this in the corner."
+        },
+        {
+          "authorName": "Sonia L.",
+          "rating": 5,
+          "title": "Bee heaven",
+          "body": "There is a constant hum of bees around this plant from dawn till dusk. It’s worth growing just for the biodiversity it brings."
+        },
+        {
+          "authorName": "Peter V.",
+          "rating": 4,
+          "title": "Hard to kill",
+          "body": "It’s the toughest plant I own. I cut it to the ground 4 times a year to make mulch and it just grows back even thicker."
+        }
+      ]
+    },
+
+    {
+      "title": "Sweet Pea",
+      "description": "The quintessential garden climber, the Sweet Pea is beloved for its intoxicating fragrance and delicate, ruffled blooms. This annual vine reaches 1–2 meters and serves as a 'flower factory'—the more you harvest for vases, the more it blooms. It is the perfect choice for vertical interest on trellises, filling your garden and home with a classic, honey-and-orange-blossom perfume.",
+      "faqs": [
+        {
+          "question": "Can I eat them like garden peas?",
+          "answer": "No! Sweet Peas (Lathyrus odoratus) are toxic if ingested. They are purely ornamental and should be kept away from children and pets."
+        },
+        {
+          "question": "How do I get the most flowers?",
+          "answer": "Regularly harvesting flowers for indoor arrangements prevents the plant from setting seed, which signals it to keep producing new blooms all season long."
+        },
+        {
+          "question": "Do they need a trellis?",
+          "answer": "Yes, they use delicate tendrils to climb. A net, light trellis, or even a 'wigwam' of bamboo sticks works perfectly."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Clara J.",
+          "rating": 5,
+          "title": "Garden Nostalgia",
+          "body": "Nothing beats the scent of these. I planted them along my picket fence and by June, the smell was drifting into the house every time I opened the window."
+        },
+        {
+          "authorName": "Mark R.",
+          "rating": 4,
+          "title": "Beautiful but toxic",
+          "body": "Stunning colors in the 'Royal Family' mix. Just a heads up to parents: make sure your kids know these aren't the eating kind of peas!"
+        }
+      ]
+    },
+    {
+      "title": "Red Sabra Cactus",
+      "description": "A striking and productive variety of the prickly pear, the Red Sabra is a desert icon that offers sweet, ruby-red fruits. Growing 2–3 meters tall, its broad blue-green pads provide a dramatic structural element. The fruit is incredibly juicy with a flavor reminiscent of watermelon and berries, while the young pads (Nopales) can be grilled for a savory treat.",
+      "faqs": [
+        {
+          "question": "How do I peel the fruit safely?",
+          "answer": "The fruit has tiny nearly-invisible spines (glochids). Use tongs to pick them and singe the fruit over a flame or scrub it under water before peeling."
+        },
+        {
+          "question": "Is it easy to propagate?",
+          "answer": "Extremely. Simply take a mature pad, let the cut end dry (callus) for a few days, and stick it in well-draining soil. It roots almost anywhere."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Avi L.",
+          "rating": 5,
+          "title": "Tastes like a summer sunset",
+          "body": "The fruit is much better than store-bought ones. I used a blowtorch to singe off the tiny spines—worked like a charm!"
+        },
+        {
+          "authorName": "Sarah S.",
+          "rating": 5,
+          "title": "Structural and Tough",
+          "body": "Used these as a 'living fence' on the edge of my property. They look amazing and are basically impossible to kill. Just wear thick gloves!"
+        }
+      ]
+    },
+    {
       "title": "Lemon Geranium",
-      "description": "A sensory delight for any garden, the Lemon Geranium is an evergreen shrub prized for its deeply lobed leaves that release a powerful citrus scent when touched. Growing up to one meter, it produces charming clusters of small lavender-pink flowers. It is a favorite for patio containers and herb gardens, where it serves as both a beautiful ornamental and a source of essential oils used in traditional wellness.",
+      "description": "A sensory delight, the Lemon Geranium is prized for its deeply lobed leaves that release a powerful citrus scent. Growing up to one meter, it produces charming clusters of lavender-pink flowers. It is a favorite for patio containers where it acts as a natural mosquito deterrent, and the leaves can even be used to infuse flavor into teas and pound cakes.",
       "faqs": [
         {
           "question": "Can I use the leaves in tea?",
-          "answer": "Yes, the leaves are often used to add a delicate lemon note to herbal teas, sugar infusions, and even pound cakes."
+          "answer": "Yes, the leaves add a delicate lemon note to herbal teas, sugar infusions, and even desserts."
         },
         {
-          "question": "Does it need a lot of water?",
-          "answer": "It prefers moderate watering. Allow the top inch of soil to dry out between waterings to prevent root rot, as it is quite sensitive to overwatering."
+          "question": "Is it suitable for indoors?",
+          "answer": "Absolutely. It makes an excellent houseplant provided it is placed in a very sunny window with at least 6 hours of light."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Elena M.",
+          "rating": 5,
+          "title": "Natural Mosquito Repellent",
+          "body": "I keep two on my patio table. Every time someone brushes against them, the lemon scent explodes. It really helps keep the bugs away during dinner."
         },
         {
-          "question": "Is it suitable for indoor growth?",
-          "answer": "Absolutely. It makes an excellent houseplant provided it is placed in a very sunny window where it can get at least 6 hours of light."
-        },
-        {
-          "question": "How do I keep it from getting leggy?",
-          "answer": "Regular 'pinching' of the growing tips encourages the plant to branch out, resulting in a much bushier and more attractive shape."
+          "authorName": "David K.",
+          "rating": 4,
+          "title": "Great for baking",
+          "body": "I put a leaf at the bottom of my cake tin before pouring the batter. It infuses the whole cake with a delicate aroma. Very easy to grow."
         }
       ]
     },
     {
       "title": "Kraasi Plum",
-      "description": "The Kraasi Plum is a rugged, thorny shrub or small tree that provides year-round interest, from its snow-white spring blossoms to its deep-blue, frost-kissed fruits in autumn. Reaching up to 5 meters, it is a hardy survivor that excels as a defensive hedge or a wildlife haven. The small, tart fruits are a treasure for home cooks, perfect for crafting artisanal jams, syrups, and traditional liqueurs.",
+      "description": "A rugged, thorny shrub or small tree, the Kraasi Plum provides year-round interest, from snow-white spring blossoms to deep-blue fruits in autumn. Reaching up to 5 meters, it is a hardy survivor that excels as a defensive hedge. While the fruit is tart raw, it is the gold standard for crafting artisanal jams, syrups, and traditional 'Sloe' style liqueurs.",
       "faqs": [
         {
-          "question": "Are the plums sweet enough to eat fresh?",
-          "answer": "They are quite tart and astringent when fresh. They are best used for cooking or left on the tree until after the first frost, which mellows their flavor."
-        },
-        {
           "question": "Does it make a good security hedge?",
-          "answer": "Yes, its dense, thorny branches create a natural, impenetrable barrier that is excellent for garden security and privacy."
+          "answer": "Yes, its dense, thorny branches create a natural, impenetrable barrier that is excellent for both privacy and home security."
         },
         {
-          "question": "How fast does it grow?",
-          "answer": "It has a moderate growth rate and is very long-lived, often becoming more beautiful and twisted with age."
+          "question": "Are the plums sweet?",
+          "answer": "They are quite tart and astringent when fresh. They are best used for cooking or left on the tree until after the first frost, which mellows them."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Gareth P.",
+          "rating": 5,
+          "title": "The Ultimate Privacy Screen",
+          "body": "If you want to keep the neighbors' kids out of your garden, this is the plant. The thorns are no joke, and the white flowers in spring are beautiful."
         },
         {
-          "question": "Does it require a pollinator?",
-          "answer": "Most varieties are self-fertile, but planting more than one can significantly increase the fruit yield and the overall health of the tree."
+          "authorName": "Martha H.",
+          "rating": 4,
+          "title": "Jam Maker's Dream",
+          "body": "Don't eat them raw! But once you cook them down with sugar for jelly or soak them in gin? Absolutely incredible flavor."
         }
       ]
     },
     {
       "title": "Feathery Lavender",
-      "description": "Distinguished by its exquisite, fern-like foliage, Feathery Lavender offers a softer texture than traditional varieties. This evergreen shrub (60–80 cm) is a prolific bloomer, sending up long-stemmed purple spikes that sway gracefully in the breeze. Beyond its beauty, its resinous scent is a natural deterrent for mosquitoes, making it a functional and aesthetic choice for sunny garden borders and seating areas.",
+      "description": "Distinguished by exquisite, fern-like foliage, Feathery Lavender offers a softer texture than traditional varieties. This evergreen shrub is a prolific bloomer, sending up long-stemmed purple spikes that sway gracefully. Its resinous scent is a natural deterrent for mosquitoes, making it a functional choice for seating areas and sunny borders.",
       "faqs": [
         {
           "question": "Is it as hardy as English Lavender?",
-          "answer": "It is slightly more tender and prefers warmer, frost-free environments. In colder climates, it is often grown as an annual or kept in pots."
+          "answer": "It is slightly more tender and prefers frost-free environments. In cold climates, it is best grown in pots so it can be moved indoors for winter."
         },
         {
           "question": "When should I prune it?",
-          "answer": "Prune lightly after each flowering cycle to keep the foliage dense. Avoid cutting into the old wood, as it may struggle to regrow."
+          "answer": "Prune lightly after each flowering cycle. Avoid cutting into old, 'dead' wood, as it may struggle to regrow from those points."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Chloe T.",
+          "rating": 5,
+          "title": "Stunning Foliage",
+          "body": "The leaves look like delicate ferns and the flower stems are really long. It’s been blooming non-stop for three months in my garden."
         },
         {
-          "question": "How does the scent compare?",
-          "answer": "The scent is a mix of traditional lavender with a hint of pine and oregano, making it unique among lavender species."
-        },
-        {
-          "question": "Does it attract bees?",
-          "answer": "Yes, it is a magnet for bees and butterflies, providing a steady source of nectar thanks to its exceptionally long blooming season."
+          "authorName": "Sam L.",
+          "rating": 3,
+          "title": "Not for cold winters",
+          "body": "I lost mine during a surprise frost. Definitely more delicate than other lavenders. If you are in a cold area, keep it in a pot!"
         }
       ]
     },
     {
       "title": "Spiny Broom",
-      "description": "A golden-flowered powerhouse of the Mediterranean landscape, the Spiny Broom is a bushy shrub that transforms into a bright yellow beacon in the spring. Reaching heights of 1–4 meters, its architectural, branched form is both hardy and resilient. It is a pioneer species that thrives in poor soils, making it an excellent choice for erosion control, wildlife gardens, and low-maintenance boundaries.",
+      "description": "A golden-flowered powerhouse of the Mediterranean, the Spiny Broom is a bushy shrub that transforms into a bright yellow beacon in spring. Reaching 1–4 meters, its architectural form is exceptionally resilient. As a nitrogen-fixer, it thrives in poor soils, making it an excellent choice for erosion control and low-maintenance wild gardens.",
       "faqs": [
         {
-          "question": "Is it suitable for small gardens?",
-          "answer": "Due to its size and thorny nature, it is best suited for larger landscapes or as a background plant where its spring color can shine."
-        },
-        {
           "question": "Does it require fertilizer?",
-          "answer": "No, it is a legume that fixes its own nitrogen in the soil, allowing it to flourish in very poor, rocky, or sandy environments."
-        },
-        {
-          "question": "How drought-tolerant is it?",
-          "answer": "Extremely. Once established, it can survive long periods of intense heat and dry weather with virtually no supplemental water."
+          "answer": "No, it is a legume that pulls nitrogen from the air into the soil, allowing it to flourish in rocky or sandy environments without help."
         },
         {
           "question": "Are the flowers fragrant?",
-          "answer": "Yes, the yellow blossoms have a sweet, honey-like fragrance that is particularly noticeable on warm spring afternoons."
+          "answer": "Yes, they have a sweet, honey-like fragrance that is particularly noticeable on warm spring afternoons."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Amit C.",
+          "rating": 5,
+          "title": "A Golden Wall",
+          "body": "Used these for erosion control on a steep bank. Not only did they hold the soil, but the spring bloom turned the whole hill neon yellow."
+        },
+        {
+          "authorName": "Julia V.",
+          "rating": 4,
+          "title": "Wild and Rugged",
+          "body": "Great for a 'wild' garden. It doesn't ask for anything—no water, no food. Just give it space, as it is quite large and prickly."
         }
       ]
     },
     {
       "title": "Gray Lavender",
-      "description": "A stunning contrast plant, Gray Lavender is prized for its woolly, silver-white foliage that remains vibrant even in the height of summer. This evergreen shrub produces deep purple flower spikes that stand out dramatically against its pale leaves. It is a tough, heat-loving variety that brings a sophisticated Mediterranean aesthetic to rock gardens, all while providing a pleasant scent and natural pest-repellent properties.",
+      "description": "A stunning contrast plant, Gray Lavender is prized for its woolly, silver-white foliage. This evergreen shrub produces deep purple flower spikes that stand out dramatically against the pale leaves. It is a tough, heat-loving variety that brings a sophisticated Mediterranean aesthetic to rock gardens while acting as a natural pest repellent.",
       "faqs": [
         {
           "question": "Why is the foliage gray?",
-          "answer": "The gray 'fuzz' on the leaves is a natural adaptation that helps the plant reflect intense sunlight and retain moisture in dry conditions."
-        },
-        {
-          "question": "Can I use it for dried flower arrangements?",
-          "answer": "Yes, the flowers hold their deep purple color and scent exceptionally well when dried, making them perfect for sachets and bouquets."
-        },
-        {
-          "question": "What is the best way to plant it?",
-          "answer": "It requires full sun and 'sharp' drainage. Adding gravel to the planting hole can help prevent the root rot it is susceptible to in humid weather."
+          "answer": "The gray 'fuzz' is a natural adaptation that helps the plant reflect intense sunlight and retain moisture in dry, punishing conditions."
         },
         {
           "question": "How long does it live?",
-          "answer": "With proper drainage and sunlight, it can thrive for 10–15 years, though it is best to replace it when it becomes overly woody."
+          "answer": "With proper drainage, it can thrive for 10–15 years. It’s best to replace the plant when it becomes overly woody and sparse at the base."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Leo B.",
+          "rating": 5,
+          "title": "Shimmers at night",
+          "body": "The silver leaves actually glow under moonlight. I planted them next to dark green boxwood and the contrast is professional-grade."
+        },
+        {
+          "authorName": "Miriam F.",
+          "rating": 5,
+          "title": "Perfect for Drying",
+          "body": "I cut the purple spikes and hang them upside down. They keep their color better than my other lavenders. The toothed leaves are very unique."
         }
       ]
     },
     {
       "title": "Ofir Mulberry",
-      "description": "The Ofir Mulberry is a premium local cultivar known for its exceptionally sweet, dark-red fruits that melt in the mouth. This deciduous tree is a fast-grower, providing a wide canopy of shade in just a few seasons. Ideal for private gardens, it produces a bountiful spring harvest that can be enjoyed fresh, turned into gourmet preserves, or used as a natural sweetener in desserts.",
+      "description": "The Ofir Mulberry is a premium local cultivar known for exceptionally sweet, dark-red fruits that melt in the mouth. This deciduous tree is a fast-grower, providing a wide canopy of shade in just a few seasons. Ideal for private orchards, its bountiful spring harvest is perfect for fresh eating or gourmet preserves.",
       "faqs": [
         {
           "question": "Do the fruits stain?",
-          "answer": "Yes, like most dark mulberries, the juice can stain hands and walkways. It is best planted over a lawn or in an area away from light-colored pavement."
+          "answer": "Yes, the dark juice can stain hands and walkways. It is best planted over a lawn or away from light-colored pavement and cars."
         },
         {
           "question": "How big will it get?",
-          "answer": "It is a medium-sized tree that can reach 6–10 meters, but it responds very well to pruning if you need to keep it smaller."
+          "answer": "It can reach 6–10 meters, but it is easily managed at a smaller height with regular winter pruning."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Ronen G.",
+          "rating": 5,
+          "title": "The Tastiest Mulberry, Period.",
+          "body": "I've tried many varieties, but the Ofir is the winner. The fruit is fat, juicy, and perfectly sweet-tart. My hands are purple all May, but it's worth it."
         },
         {
-          "question": "When does the fruit ripen?",
-          "answer": "The Ofir variety typically ripens in mid-to-late spring, offering one of the earliest and sweetest harvests of the year."
+          "authorName": "Talia W.",
+          "rating": 5,
+          "title": "Instant Shade",
+          "body": "We planted this three years ago and it’s already a proper tree. We put a bench under it and it's the coolest spot in the garden."
         },
         {
-          "question": "Does it drop a lot of leaves?",
-          "answer": "As a deciduous tree, it drops all its leaves in winter, which allows the sun to reach your garden during the cooler months."
+          "authorName": "Ben D.",
+          "rating": 4,
+          "title": "Beware the Sidewalk!",
+          "body": "Don't plant this over your driveway. The fruit drops and will stain the concrete. Otherwise, it is the perfect tree."
         }
       ]
     },
     {
-      "title": "Japanese Raisin Tree",
-      "description": "One of nature's most curious edibles, the Japanese Raisin Tree is a deciduous beauty reaching 5–10 meters. While it produces small green flowers, the real prize is the fleshy flower stalks that thicken and turn brown after the fruit falls. These stalks taste remarkably like sweet raisins with a hint of pear, making it a unique 'snack tree' for the adventurous gardener and a stunning ornamental focal point.",
+      "title": "Japanese Raisin Tree (Hovenia dulcis)",
+      "description": "One of nature's most delightful botanical 'tricks.' While the actual seeds are inedible, the flower stalks (peduncles) swell into crunchy, reddish-brown curls that taste like a cross between a gala apple and a high-quality raisin. Beyond the snacks, it is a stately deciduous tree with glossy heart-shaped leaves that turn a brilliant gold in autumn. Fun fact: it has been used in traditional Eastern medicine for centuries as a natural liver tonic.",
       "faqs": [
         {
-          "question": "What part do you actually eat?",
-          "answer": "You don't eat the small round seeds; instead, you eat the swollen, crunchy stems that hold the fruit. They can be eaten fresh or dried."
+          "question": "When do I harvest the 'raisins'?",
+          "answer": "Wait for the stalks to fall to the ground in late autumn. That is when the sugars are most concentrated and the flavor is peak 'raisin.'"
         },
         {
-          "question": "Does it have pretty autumn color?",
-          "answer": "Yes, the large, glossy leaves turn a beautiful clear yellow in the autumn before falling, providing great seasonal interest."
+          "question": "Does it need a pollinator?",
+          "answer": "No, it is self-fertile, so a single tree will produce plenty of snacks for your household."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Dr. Aris V.",
+          "rating": 5,
+          "title": "The ultimate conversation starter",
+          "body": "I tell guests they can eat the twigs, and they think I'm joking until they taste them. Truly delicious and a beautiful shade tree."
         },
         {
-          "question": "Is it hard to grow?",
-          "answer": "Not at all. It is a hardy tree that is resistant to most pests and diseases and adapts well to a variety of soil types."
-        },
-        {
-          "question": "How long until I can harvest?",
-          "answer": "Typically, the tree begins to produce its edible 'raisin' stems about 3 to 5 years after planting."
+          "authorName": "Karin P.",
+          "rating": 4,
+          "title": "Patience is a virtue",
+          "body": "Took about 4 years to get my first harvest, but it was worth the wait. The autumn color is spectacular even without the fruit."
         }
       ]
     },
     {
-      "title": "African Sage",
-      "description": "A showstopper in the Salvia world, African Sage is an evergreen shrub (1–2 meters) that features unique, rusty yellow-to-orange blossoms that transition through colors as they age. Its textured, aromatic leaves and striking floral display make it a magnet for sunbirds and bees. It is a tough, coastal-hardy plant that adds a warm, wild character to drought-tolerant landscapes and sunny garden beds.",
+      "title": "African Sage (Salvia aurea)",
+      "description": "A structural masterpiece from the South African coast. This isn't your average purple sage; it features large, papery blossoms that start as bright sulfur-yellow and age into a rich, rusty bronze. Its silvery-green foliage is highly aromatic and incredibly tough, shrugging off salt spray and gale-force winds with ease. Perfect for that 'wild' Mediterranean look.",
       "faqs": [
         {
-          "question": "Is it salt-tolerant?",
-          "answer": "Yes, it is exceptionally salt-tolerant and wind-resistant, making it a perfect choice for gardens near the coast."
+          "question": "Is it better for the coast or inland?",
+          "answer": "It excels at the coast due to its salt tolerance, but it thrives inland too as long as it has excellent drainage and full sun."
         },
         {
-          "question": "Why do the flowers change color?",
-          "answer": "The flowers start as a bright yellow-gold and deepen into a rich, rusty orange as they mature, giving the plant a multi-toned appearance."
-        },
+          "question": "Can I use it in cooking?",
+          "answer": "While technically edible, it is very resinous. It's much better suited as a nectar source for sunbirds and a visual anchor for the garden."
+        }
+      ],
+      "reviews": [
         {
-          "question": "How often should I water it?",
-          "answer": "Once established, it requires very little water. Overwatering can lead to a shorter lifespan for this dry-climate specialist."
-        },
-        {
-          "question": "Can it be used medicinally?",
-          "answer": "In its native South Africa, it is traditionally used for a variety of ailments, though in the garden, it is primarily grown for its beauty and pollinators."
+          "authorName": "Yoni B.",
+          "rating": 5,
+          "title": "Pollinator magnet",
+          "body": "The sunbirds are obsessed with this. The color change of the flowers from yellow to rust is like watching a sunset over a few weeks."
         }
       ]
     },
     {
-      "title": "Saltbush",
-      "description": "The ultimate survivor of the plant world, Saltbush is a silvery-gray shrub that thrives where other plants fail. Highly tolerant of extreme salinity and drought, it plays a vital role in land reclamation and as a high-protein forage for livestock. Its subtle, shimmering foliage makes it a surprisingly attractive choice for modern 'gray' gardens or as a resilient, low-maintenance hedge in arid regions.",
+      "title": "Saltbush (Atriplex)",
+      "description": "The 'Indestructible' plant. Saltbush is a shimmering silver-blue shrub that defines resilience. It thrives in soils so salty or dry that most plants would wither instantly. In addition to being a fire-retardant hedge, its leaves are a culinary secret—naturally salty and crisp, they can be used to season roasts or fried into 'green chips.'",
       "faqs": [
         {
-          "question": "Are the leaves edible for humans?",
-          "answer": "Yes, some species have leaves that are naturally salty and can be used as a seasoning or fried as a crunchy, salty snack."
+          "question": "How do I eat the leaves?",
+          "answer": "Blanch them to reduce the saltiness, or fry them in a bit of olive oil for a salty, crunchy garnish that tastes like the sea."
         },
         {
-          "question": "Can I grow it in regular garden soil?",
-          "answer": "Yes, while it can handle salt, it grows perfectly well in normal soil as long as it has good drainage and plenty of sun."
-        },
+          "question": "Does it need fertilizer?",
+          "answer": "Rarely. It is a specialist in poor soils and generally finds what it needs without help."
+        }
+      ],
+      "reviews": [
         {
-          "question": "Does it make a good hedge?",
-          "answer": "It can be pruned into a very effective, dense hedge. Its silver color provides a great backdrop for green or purple plants."
-        },
-        {
-          "question": "How much water does it save?",
-          "answer": "As one of the most drought-hardy plants available, it can survive on natural rainfall alone in many arid and semi-arid climates."
+          "authorName": "Marc L.",
+          "rating": 5,
+          "title": "The plant for 'black thumbs'",
+          "body": "I forgot to water this for an entire desert summer and it didn't even drop a leaf. The silver color looks amazing next to purple lavender."
         }
       ]
     },
     {
       "title": "Rosh Pered Pomegranate",
-      "description": "A celebrated Israeli pomegranate variety, the Rosh Pered is a deciduous tree reaching 2–5 meters. It is highly prized for its unique pinkish fruit and soft, sweet seeds that make it a top choice for fresh eating. With its brilliant red spring blossoms and high yield, it serves as both a beautiful ornamental and a productive fruit tree for Mediterranean-style home gardens.",
+      "description": "The 'Sweetheart' of the pomegranate family. Rosh Pered (Hebrew for 'Mule's Head') is famous for its large, pale pink-to-yellowish exterior and translucent, pearl-like seeds. Unlike the tart punch of the Akko variety, Rosh Pered is pure, gentle sweetness with exceptionally soft seeds. It is the gold standard for fresh eating and children’s snacks.",
       "faqs": [
         {
-          "question": "How does this differ from standard pomegranates?",
-          "answer": "The Rosh Pered is known for having a lighter, pinker aril (seed) and a much sweeter, less acidic flavor profile than the deep red varieties."
+          "question": "Is the juice red?",
+          "answer": "No, the juice is a pale pink or clear yellow, reflecting the delicate color of the arils."
         },
         {
-          "question": "Does it require a second tree to fruit?",
-          "answer": "No, it is self-fertile. However, having honeybees or other pollinators in the garden will significantly increase the fruit set."
+          "question": "Is it more delicate than other varieties?",
+          "answer": "The fruit skin is slightly thinner, so it should be handled with care to avoid bruising during harvest."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Dalia E.",
+          "rating": 5,
+          "title": "Best for kids",
+          "body": "My kids won't eat the red ones because they are too sour, but they devour these. The seeds are so soft you don't even notice them."
         },
         {
-          "question": "Is it susceptible to pests?",
-          "answer": "Pomegranate butterflies and fruit flies can be an issue. It is recommended to bag the fruit or use organic traps during the ripening season."
-        },
-        {
-          "question": "Can it be grown as a shrub?",
-          "answer": "Yes, by pruning it to have multiple trunks, you can maintain it as a large, dense shrub rather than a single-stemmed tree."
+          "authorName": "Sami A.",
+          "rating": 4,
+          "title": "Beautiful but light",
+          "body": "If you want that deep red pomegranate look, this isn't it. But if you want the best-tasting fruit for breakfast, this is the winner."
         }
       ]
     },
     {
-      "title": "Lion's Ear",
-      "description": "A striking and architectural evergreen shrub, the African Lion's Ear is famous for its tall spikes of fuzzy, neon-orange whorled flowers. Reaching heights of up to 2 meters, it acts as a magnetic beacon for sunbirds, bees, and butterflies. It is exceptionally drought-tolerant once established and brings a bold, wild energy to sunny borders and water-wise landscapes.",
+      "title": "Lion's Ear (Leonotis leonurus)",
+      "description": "Bold, architectural, and slightly otherworldly. The Lion's Ear produces towering stems topped with tiered 'whorls' of fuzzy, neon-orange flowers that look like something out of a Dr. Seuss book. It is a fast-growing, sun-loving shrub that provides much-needed height and 'wow factor' to the back of a garden border.",
       "faqs": [
         {
-          "question": "Should I prune it after it flowers?",
-          "answer": "Yes, cutting the plant back significantly after the blooming season helps it maintain a tidy shape and encourages a flush of new growth for next year."
+          "question": "How do I stop it from getting messy?",
+          "answer": "Prune it back to about 30cm from the ground after the flowers fade in late autumn. It will reward you with fresh, tidy growth in the spring."
         },
         {
-          "question": "Is it frost-hardy?",
-          "answer": "It is moderately hardy but can be damaged by hard freezes. In colder climates, it may die back to the ground in winter and regrow in spring."
+          "question": "Does it attract birds?",
+          "answer": "Yes, the deep nectar tubes are perfectly shaped for the beaks of sunbirds and honeyeaters."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Liam W.",
+          "rating": 5,
+          "title": "Neon orange joy",
+          "body": "People stop and ask me what this is every time they walk by. It’s incredibly vibrant and survives on almost no water."
         },
         {
-          "question": "Is it used for medicinal purposes?",
-          "answer": "In its native regions, it is used in traditional medicine, but in the garden, it is primarily valued for its ornamental beauty and pollinator appeal."
-        },
-        {
-          "question": "What kind of soil does it need?",
-          "answer": "It is not picky about soil quality but must have excellent drainage. It thrives in full sun and handles rocky or poor soils with ease."
+          "authorName": "Neta G.",
+          "rating": 3,
+          "title": "Needs maintenance",
+          "body": "The flowers are stunning, but if you don't prune it, it becomes a woody mess within two years. Great plant, just don't be lazy with the shears!"
         }
       ]
     },
     {
       "title": "Short White Mulberry",
-      "description": "The Short White Mulberry is a robust deciduous tree that produces high volumes of compact, honey-sweet white fruits. Unlike its red cousins, its berries are low in acidity and won't stain your walkways or patios as easily. It is a fast-growing tree that provides a cool, dense canopy of shade in the summer, making it a functional favorite for suburban backyards and orchards.",
+      "description": "A compact, high-yielding version of the classic mulberry. This variety is perfect for the home gardener who wants the 'living candy' flavor of white mulberries without a 10-meter tree taking over the sky. The fruits are short, fat, and intensely sweet. Most importantly: no purple stains on your driveway, your dog, or your kids' clothes!",
       "faqs": [
         {
-          "question": "Do the white fruits stain as much as the red ones?",
-          "answer": "No, white mulberries are much cleaner. While they can still be a bit sticky, they don't leave the deep purple stains associated with other varieties."
+          "question": "How big does it actually get?",
+          "answer": "It can be easily maintained at 3–4 meters with basic winter pruning, making it much more backyard-friendly than the wild varieties."
         },
         {
-          "question": "How fast does it grow?",
-          "answer": "It is a very fast grower and can reach its full 5–10 meter height in a relatively short period if provided with regular water and sun."
+          "question": "Is the fruit as sweet as the Long White?",
+          "answer": "It is very similar—pure honey sweetness—but the fruit is more 'berry-shaped' and easier to harvest in bulk."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Jason K.",
+          "rating": 5,
+          "title": "Clean and sweet",
+          "body": "We have this right next to the pool. No purple footprints in the house! The fruit is like a natural gummy bear."
         },
         {
-          "question": "Can I eat the fruit straight from the tree?",
-          "answer": "Yes, the fruits are at their best when they are fully ripe and slightly soft. They have a delicate sweetness that is perfect for fresh snacking."
-        },
-        {
-          "question": "Does it have invasive roots?",
-          "answer": "Mulberry trees have vigorous roots. It is best to plant them at least 10 meters away from sewer lines, foundations, or septic systems."
+          "authorName": "Maya T.",
+          "rating": 4,
+          "title": "Fast grower",
+          "body": "It grew nearly 2 meters in its first year. I had to prune it back to keep it under control, but the shade it provides is wonderful."
         }
       ]
     },
+
     {
       "title": "Shami Pomegranate",
-      "description": "A traditional heavy-hitter in the pomegranate world, the Shami variety is famous for its large, deep-pink fruit and exceptionally juicy seeds. Known for its intense sweetness and distinct, classic aroma, it is a late-summer ripener that stores well after harvest. It is a hardy, resilient tree that adapts well to the heat and brings a sense of ancient history to any garden.",
+      "description": "A legendary Levantine heavy-hitter, the Shami variety is prized for its massive, deep-pink fruit and 'soft' seeds that melt in the mouth. Known for an intense, honey-like sweetness with almost zero acidity, it is a late-summer treat that stores exceptionally well. This resilient tree brings a sense of ancient history and lushness to any sunny garden spot.",
       "faqs": [
         {
+          "question": "Are the seeds hard?",
+          "answer": "No, the Shami is famous for its 'soft' arils, making it much easier to eat fresh than many commercial varieties."
+        },
+        {
           "question": "When is the best time to harvest?",
-          "answer": "Shami pomegranates typically ripen in late summer or early autumn. Look for a deep color and a slightly 'metallic' sound when tapped."
+          "answer": "Late summer or early autumn. Look for a deep pink-to-red hue and a slightly squared-off shape to the fruit."
         },
         {
-          "question": "How sweet is the fruit?",
-          "answer": "It is considered one of the sweetest traditional varieties available, with very little of the bitterness found in commercial pomegranates."
+          "question": "Does it handle drought?",
+          "answer": "Yes, but for those juicy, 'heavy' fruits, it appreciates deep watering once a week during the peak of summer."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Omar H.",
+          "rating": 5,
+          "title": "Childhood in a fruit",
+          "body": "Exactly like the ones from my grandfather's garden. Sweet, no bitterness, and the seeds are barely noticeable."
         },
         {
-          "question": "Does it handle drought well?",
-          "answer": "Yes, once established, it is very drought-tolerant. However, for the best fruit quality, it should be watered deeply during the peak of summer."
-        },
-        {
-          "question": "Does it need a lot of space?",
-          "answer": "It can be kept at 3–4 meters with annual pruning, making it suitable for medium-sized gardens as well as larger landscapes."
+          "authorName": "Sarah L.",
+          "rating": 4,
+          "title": "Huge harvests",
+          "body": "The tree grew faster than expected! The fruit is massive. Just be sure to support the branches so they don't snap under the weight."
         }
       ]
     },
     {
-      "title": "Long White Mulberry",
-      "description": "Also known as the 'Shahtoot' or King Mulberry, this variety produces long, slender white fruits that can reach up to 10 cm in length. These 'living candies' are intensely sweet with a syrup-like flavor and a soft texture. The tree itself is a majestic deciduous specimen that offers a tropical aesthetic and an abundant spring harvest that is a favorite among children and birds alike.",
+      "title": "Long White Mulberry (Shahtoot)",
+      "description": "Often called 'The King of Mulberries,' the Shahtoot produces slender, 10 cm fruits that look like pale green-white jewelry. These 'living candies' are pure sugar with a syrup-like finish. Unlike black mulberries, these won't stain your patio or your hands, making them the perfect 'mess-free' fruit tree for families.",
       "faqs": [
         {
-          "question": "What do the fruits taste like?",
-          "answer": "They are often compared to honey or sugar syrup. They lack the tartness of black mulberries and are prized for their pure sweetness."
+          "question": "Does it stain the pavement?",
+          "answer": "No! This is the biggest advantage of the White Mulberry—no purple stains on your shoes or driveway."
         },
         {
-          "question": "How do I harvest the long fruits without squashing them?",
-          "answer": "They are quite delicate. Many growers place a clean sheet under the tree and gently shake the branches to collect the ripe fruit."
+          "question": "How do I know they are ripe?",
+          "answer": "The fruit will turn from lime-green to a translucent white and will fall easily into your hand with the slightest touch."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Benny G.",
+          "rating": 5,
+          "title": "Better than candy",
+          "body": "My kids call these 'honey sticks.' They are incredibly sweet. It’s a race between us and the birds every morning!"
         },
         {
-          "question": "Does the tree get very large?",
-          "answer": "It can reach 10 meters, but it is often pruned to a manageable height to make harvesting the delicate fruit easier."
-        },
-        {
-          "question": "Can the fruit be dried?",
-          "answer": "Yes, long white mulberries dry beautifully and can be used like raisins in snacks and baking throughout the winter."
+          "authorName": "Elena V.",
+          "rating": 4,
+          "title": "Majestic tree",
+          "body": "Beautiful shade tree, though it does drop a lot of fruit in the spring, so keep a vacuum or a broom handy!"
         }
       ]
     },
     {
       "title": "Garden Mint",
-      "description": "A must-have for any culinary enthusiast, Garden Mint is a vigorous perennial known for its refreshing scent and cooling flavor. Reaching heights of up to one meter, it is an essential ingredient for teas, cocktails, and savory dishes. While it is incredibly hardy and thrives in warm gardens, its enthusiastic growth habit makes it a perfect candidate for containers or dedicated garden beds.",
+      "description": "A vigorous perennial powerhouse, Garden Mint is the backbone of the aromatic garden. Its cooling menthol notes are essential for everything from mojitos to Middle Eastern salads. Warning: This plant is an 'extrovert'—it will try to befriend your entire garden unless contained in a pot!",
       "faqs": [
         {
-          "question": "Is it invasive?",
-          "answer": "Yes, mint spreads via underground runners and can quickly take over a garden bed. It is highly recommended to grow it in a pot."
+          "question": "Can I plant this in the ground?",
+          "answer": "Only if you want a garden made entirely of mint. It spreads via underground runners; we strongly recommend using a deep container."
         },
         {
-          "question": "How much sun does it need?",
-          "answer": "Mint is very adaptable; it loves full sun but will also grow quite happily in partial shade, provided it has enough moisture."
+          "question": "How do I keep it from getting 'leggy'?",
+          "answer": "Be aggressive! Regular harvesting or 'pinching back' the tops keeps the plant bushy and flavorful."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Tom M.",
+          "rating": 3,
+          "title": "It's a takeover!",
+          "body": "I ignored the warnings and planted it in the bed. It's everywhere now. On the plus side, my lawn smells like chewing gum when I mow it."
         },
         {
-          "question": "How often should I harvest?",
-          "answer": "Regular harvesting encourages the plant to stay bushy and prevents it from becoming leggy. You can cut it back to the ground and it will quickly regrow."
-        },
-        {
-          "question": "Does it help with pests?",
-          "answer": "The strong scent of mint is known to deter aphids and cabbage moths, making it a great companion plant (if kept in a pot nearby)."
+          "authorName": "Layla S.",
+          "rating": 5,
+          "title": "Perfect for tea",
+          "body": "Grows like a weed in my balcony pot. Three leaves in a cup of hot water and I'm in heaven."
         }
       ]
     },
     {
-      "title": "Shrubby Lucerne",
-      "description": "An evergreen legume that doubles as a soil-builder and an ornamental shrub, Shrubby Lucerne is a powerhouse for sustainable gardening. In spring, it is blanketed in bright yellow pea-like flowers that provide a vital early-season nectar source for bees. As a nitrogen-fixer, it works to naturally fertilize the surrounding soil, making it an excellent pioneer plant for rehabilitating dry or poor garden areas.",
+      "title": "Shrubby Lucerne (Tagasaste)",
+      "description": "The Swiss Army Knife of plants. This evergreen legume is a 'pioneer'—it thrives in poor soil, fixes nitrogen to fertilize its neighbors, and provides high-protein fodder for livestock. In late winter/early spring, its vanilla-scented white and yellow flowers are a lifeline for bees when little else is blooming.",
       "faqs": [
         {
-          "question": "Why is it good for the soil?",
-          "answer": "It has specialized root nodules that pull nitrogen from the air and convert it into a form that plants can use, enriching the earth naturally."
+          "question": "Is it edible for humans?",
+          "answer": "It is primarily used as animal fodder (goats/sheep) and soil improvement. It's not a culinary herb for the kitchen."
         },
         {
-          "question": "Can it be used as animal fodder?",
-          "answer": "Yes, it is highly nutritious and is often used as a sustainable forage for goats and sheep in Mediterranean and arid climates."
-        },
+          "question": "How fast does it grow?",
+          "answer": "Very fast. It can provide a visual screen or windbreak within just two seasons."
+        }
+      ],
+      "reviews": [
         {
-          "question": "How drought-hardy is it?",
-          "answer": "It is exceptionally tough and can thrive in hot, dry conditions once its root system is established, requiring very little supplemental water."
-        },
-        {
-          "question": "Does it need pruning?",
-          "answer": "Light pruning after the spring bloom helps keep it compact and prevents the base from becoming too woody and bare."
+          "authorName": "Julian R.",
+          "rating": 5,
+          "title": "Permaculture must-have",
+          "body": "Used these to rehab a dry patch of dirt. Two years later, the soil is dark and rich, and my bees are ecstatic every spring."
         }
       ]
     },
     {
       "title": "Akko Pomegranate",
-      "description": "The Akko Pomegranate is a quintessential local variety reaching 3–4 meters, famous for its large, deep-red fruits and striking spring blossoms. It produces high-quality, juicy seeds that strike a perfect balance between sweet and tart. With its classic 'pomegranate look' and robust nature, it is a staple for warm-climate orchards and a reliable performer for home gardeners seeking heavy harvests.",
+      "description": "The Akko is the 'early bird' of the pomegranate world, ripening weeks before other varieties. It produces ruby-red fruit with a classic sweet-tart balance. While the seeds are firmer than the Shami, its reliability and vibrant internal color make it the top choice for juicing and bright, festive salads.",
       "faqs": [
         {
-          "question": "When does the Akko variety ripen?",
-          "answer": "It is typically an early-to-mid season variety, with fruit usually ready for harvest in late summer or early autumn."
+          "question": "How does it differ from Shami?",
+          "answer": "Akko is more tart (refreshing) and ripens earlier in the season. Its seeds are also slightly crunchier."
         },
         {
-          "question": "How does the fruit taste?",
-          "answer": "It has the classic pomegranate flavor—deep, rich, and tangy with a high juice content that is perfect for pressing."
+          "question": "Is it good for juicing?",
+          "answer": "Excellent. It has a very high juice-to-weight ratio and the color is a stunning deep crimson."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Rina D.",
+          "rating": 5,
+          "title": "Beautiful color",
+          "body": "The arils look like little jewels. I use them for salads and the tartness is just perfect."
         },
         {
-          "question": "Is it good for small spaces?",
-          "answer": "Since it reaches about 3–4 meters, it is manageable for most gardens, especially if it is pruned annually to maintain a rounded shape."
-        },
-        {
-          "question": "Are the seeds hard?",
-          "answer": "The seeds in Akko pomegranates are medium-firm; they are perfectly edible but slightly more substantial than those found in the 'soft-seeded' varieties."
+          "authorName": "Gilad W.",
+          "rating": 4,
+          "title": "Reliable performer",
+          "body": "Gets through the heat without a flinch. I get fruit in late August while my neighbor is still waiting for his."
         }
       ]
     },
@@ -1278,6 +1601,29 @@
         {
           "question": "Will it attract wildlife?",
           "answer": "Yes, its spring flowers are highly attractive to bees, butterflies, and even sunbirds, making it a great addition to a biodiversity garden."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Maya Cohen",
+          "authorEmail": "maya@example.com",
+          "title": "Amazing fragrance",
+          "body": "The scent is incredible and fills the whole patio when the wind blows. Very easy to grow and survived our hot summer without any issues.",
+          "rating": 5
+        },
+        {
+          "authorName": "Daniel Levi",
+          "authorEmail": "daniel@example.com",
+          "title": "Perfect for dry gardens",
+          "body": "Planted it in a rock garden with minimal irrigation and it thrives. Beautiful foliage and attracts bees all day.",
+          "rating": 4
+        },
+        {
+          "authorName": "Yael Ben Ami",
+          "authorEmail": "yael@example.com",
+          "title": "Stronger than expected",
+          "body": "The aroma is very strong—almost too strong at first—but we got used to it and now love it. Definitely not your typical kitchen sage.",
+          "rating": 4
         }
       ]
     }

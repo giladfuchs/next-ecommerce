@@ -31,7 +31,7 @@ export const generateMetadataLayout = (settings: SiteSetting): Metadata => {
       siteName: title,
       images: [
         {
-          url: `${appConfig.BASE_URL}${image.url}`,
+          url: `${appConfig.SERVER_URL}${image.url}`,
           width: 1200,
           height: 630,
         },
@@ -68,7 +68,7 @@ export function generateMetadataProduct(
   const description = extractRichTextText(product.description);
 
   const image = product.gallery![0].image as Media;
-  const imageUrl = `${appConfig.BASE_URL}${image.url}`;
+  const imageUrl = `${appConfig.SERVER_URL}${image.url}`;
 
   return {
     title,
@@ -102,7 +102,7 @@ export function generateMetadataCategory(category: Category): Metadata {
   const description = extractRichTextText(category.description);
 
   const image = category.image as Media;
-  const imageUrl = `${appConfig.BASE_URL}${image.url}`;
+  const imageUrl = `${appConfig.SERVER_URL}${image.url}`;
 
   return {
     title,

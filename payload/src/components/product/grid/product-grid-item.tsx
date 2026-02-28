@@ -9,10 +9,8 @@ import { Price } from "@/components/shared/elements-ssr";
 import Media from "@/components/shared/media";
 import { RoutePath } from "@/lib/core/types/types";
 
-export const ProductGridItem = ({ product }: { product: Product }) => {
+export default function ProductGridItem({ product }: { product: Product }) {
   const { gallery, priceInUSD, title, slug } = product;
-
-  if (!slug) return null;
 
   return (
     <Link
@@ -33,4 +31,4 @@ export const ProductGridItem = ({ product }: { product: Product }) => {
       </div>
     </Link>
   );
-};
+}

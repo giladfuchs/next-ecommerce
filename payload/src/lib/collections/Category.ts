@@ -86,6 +86,7 @@ export const Category: CollectionConfig = {
   access: {
     ...adminOnlyAccess,
     read: () => true,
+    create: () => true,
   },
 
   admin: {

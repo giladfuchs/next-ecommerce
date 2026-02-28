@@ -16,7 +16,13 @@ import {
 } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
 
-import { Media, SiteSettings, Category, Users } from "@/lib/collections";
+import {
+  Media,
+  SiteSettings,
+  Category,
+  Users,
+  Reviews,
+} from "@/lib/collections";
 import appConfig from "@/lib/core/config";
 import { plugins } from "@/lib/providers/plugins";
 
@@ -29,7 +35,7 @@ export default buildConfig({
   },
   globals: [SiteSettings],
 
-  collections: [Users, Category, Media],
+  collections: [Users, Category, Media, Reviews],
   db: postgresAdapter({
     pool: {
       connectionString: appConfig.DATABASE_URL,

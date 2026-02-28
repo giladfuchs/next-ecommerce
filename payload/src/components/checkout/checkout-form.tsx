@@ -9,21 +9,9 @@ import { Message } from "@/components/shared/message";
 import Button from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { checkoutFields } from "@/lib/core/types/form";
 import { CheckoutFormData, CheckoutFormProps } from "@/lib/core/types/types";
-
-const checkoutFields = [
-  { key: "name", inputProps: { type: "text", autoComplete: "name" } },
-  {
-    key: "phone",
-    pattern: /^\+?[0-9]{7,15}$/,
-    inputProps: { type: "tel", autoComplete: "tel" },
-  },
-  {
-    key: "email",
-    pattern: /^\S+@\S+\.\S+$/,
-    inputProps: { type: "email", autoComplete: "email" },
-  },
-] as const;
+import { postJson } from "@/lib/core/util";
 
 export default function CheckoutForm({
   cartId,
@@ -53,23 +41,21 @@ export default function CheckoutForm({
       setIsSubmitting(true);
 
       try {
-        const res = await fetch("/api/orders?depth=0", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ cart: cartId, ...data }),
+        const json = await postJson<{
+          doc: { id: number };
+        }>("orders?depth=0", {
+          cart: cartId,
+          ...data,
         });
 
-        const json = await res.json();
-        if (!res.ok) throw new Error(json?.message || JSON.stringify(json));
-
-        const orderId = String(json?.orderId || json?.doc?.id || "");
-        onSuccess(orderId || "OK");
+        onSuccess(String(json.doc.id));
         toast.success(tSubmit("success"));
 
-        if (typeof clearCart === "function") await clearCart();
+        if (typeof clearCart === "function") {
+          await clearCart();
+        }
       } catch (e: unknown) {
         const msg = e instanceof Error ? e.message : tSubmit("failed");
-
         setError(msg);
         toast.error(msg);
       } finally {

@@ -2,22 +2,26 @@
   Data Access Layer (DAL)
   ========================
 
-  This file selects which data layer implementation the app uses.
+  This file defines which data layer the app uses.
 
-  Two available modes:
+  Available modes:
 
   1) Api (Headless / REST mode)
      - Uses fetch() against Payload REST endpoints (/api/*)
-     - Uses Next.js fetch caching (force-cache + tags)
-     - Easier to debug in production
-     - Cleaner separation between frontend and Payload
-     - Recommended for real-world headless deployments
-     - Lighter runtime (Payload admin can live separately)
+     - Uses Next.js cache with force-cache + tags
+     - Clean frontend/backend separation
+     - Recommended for real headless deployments
+     - Lighter runtime (Payload can live on a separate server)
+
+  IMPORTANT:
+  In headless mode you MUST add a revalidation endpoint.
+  Do NOT use revalidateTag inside Payload collections.
+  Call the Next.js revalidation endpoint after mutations.
 
   2) Queries (Local Payload SDK mode)
      - Uses payload.find / payload.auth directly
-     - Runs Payload + Next in same runtime (monolith style)
-     - Uses unstable_cache (can be harder to debug)
+     - Payload + Next run in same runtime (monolith)
+     - Uses unstable_cache (harder to debug)
 
   Switch implementation below.
 */

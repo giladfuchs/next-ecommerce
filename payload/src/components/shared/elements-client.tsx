@@ -18,7 +18,7 @@ import { toast } from "sonner";
 import type { Category } from "@/lib/core/types/payload-types";
 
 import Button from "@/components/ui/button";
-import { buildCategoryHref } from "@/lib/core/util";
+import { buildCategoryHref, postJson } from "@/lib/core/util";
 import { IntlProvider } from "@/lib/providers/intl";
 import { SonnerProvider } from "@/lib/providers/sonner";
 
@@ -29,9 +29,7 @@ const RevalidateFieldInner = () => {
   const handleClick = async () => {
     setLoading(true);
     try {
-      await fetch("/api/globals/site-settings/revalidate-bootstrap", {
-        method: "POST",
-      });
+      await postJson<unknown>("globals/site-settings/revalidate-bootstrap", {});
       toast.success(t("success"));
     } finally {
       setLoading(false);

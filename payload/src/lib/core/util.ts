@@ -8,6 +8,42 @@ import type { PayloadRequest } from "payload";
 import appConfig from "@/lib/core/config";
 import { RoutePath } from "@/lib/core/types/types";
 
+export const postJson = async <TResponse>(
+  url: string,
+  body: Record<string, unknown>,
+): Promise<TResponse> => {
+  const preparedBody: Record<string, unknown> = Object.fromEntries(
+    Object.entries(body).map(([key, value]) => {
+      if (typeof value === "string") {
+        const trimmed = value.trim();
+        return [key, trimmed === "" ? null : trimmed];
+      }
+      return [key, value];
+    }),
+  );
+
+  const res = await fetch(`${appConfig.SERVER_URL}/api/${url}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(preparedBody),
+  });
+
+  const json: unknown = await res.json().catch(() => ({}));
+
+  if (!res.ok) {
+    const message =
+      typeof json === "object" &&
+      json !== null &&
+      "message" in json &&
+      typeof (json as { message: unknown }).message === "string"
+        ? (json as { message: string }).message
+        : "Request failed";
+
+    throw new Error(message);
+  }
+
+  return json as TResponse;
+};
 export const safeDecodeSlug = (value: string): string => {
   if (!value) return value;
   if (!value.includes("%")) return value;
@@ -114,3 +150,10 @@ export const formatPrice = (n: number) =>
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,
   }).format(n);
+
+export const formatDate = (date: string) =>
+  new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });

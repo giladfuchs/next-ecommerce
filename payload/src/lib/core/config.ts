@@ -1,5 +1,6 @@
 export type AppConfig = {
   BASE_URL: string;
+  SERVER_URL: string;
   BLOB_READ_WRITE_TOKEN: string;
   DATABASE_URL: string;
   PREVIEW_SECRET: string;
@@ -26,6 +27,8 @@ export type AppConfig = {
 export const appConfig: AppConfig = {
   BLOB_READ_WRITE_TOKEN: process.env.BLOB_READ_WRITE_TOKEN as string,
   BASE_URL: process.env.NEXT_PUBLIC_BASE_URL as string,
+  SERVER_URL: (process.env.NEXT_PUBLIC_SERVER_URL ??
+    process.env.NEXT_PUBLIC_BASE_URL) as string,
   DATABASE_URL: process.env.DATABASE_URL as string,
   PREVIEW_SECRET: process.env.PREVIEW_SECRET as string,
   PAYLOAD_SECRET: process.env.PAYLOAD_SECRET as string,

@@ -1,4 +1,5 @@
 export { Category } from "./Category";
+export { Reviews } from "./Reviews";
 export { Media } from "./Media";
 export { Orders } from "./Orders";
 export { Products } from "./Products";

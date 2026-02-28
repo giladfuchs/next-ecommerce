@@ -29,7 +29,7 @@ export class OrderNotifier {
     try {
       await this.payload.sendEmail({
         to: order.email,
-        subject: `${messages.order.email.subjectPrefix}${order.id}`,
+        subject: `${messages.order_notifier.email.subjectPrefix}${order.id}`,
         html,
       });
       console.log(`✅ Order email sent #${order.id}`);
@@ -39,7 +39,7 @@ export class OrderNotifier {
   }
 
   private async sendWhatsappAdmin(orderId: number) {
-    const text = `${messages.order.adminNotification}${appConfig.BASE_URL}/admin/collections/orders/${orderId}`;
+    const text = `${messages.order_notifier.whatsappAdmin}${appConfig.BASE_URL}/admin/collections/orders/${orderId}`;
     const url = `https://api.callmebot.com/whatsapp.php?phone=${appConfig.WHATSAPP_NUMBER}&text=${encodeURIComponent(
       text,
     )}&apikey=${appConfig.CALLMEBOT_API_KEY}`;
@@ -147,21 +147,21 @@ export class OrderNotifier {
     return `
 <div dir="ltr" style="font-family: sans-serif; padding: 10px; max-width: 600px; margin: auto;">
   <h2 style="margin-bottom: 10px;">
-    ${messages.order.email.greeting} ${order.name},
+    ${messages.order_notifier.email.greeting} ${order.name},
   </h2>
 
   <p style="margin: 0 0 20px 0;">
-    ${messages.order.email.confirmation}
+    ${messages.order_notifier.email.confirmation}
   </p>
 
   <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
     <thead style="background-color: #f5f5f5;">
       <tr style="text-align: center;">
-        <th style="padding: 10px;">${messages.order.email.headers.image}</th>
-        <th style="padding: 10px;">${messages.order.email.headers.product}</th>
-        <th style="padding: 10px;">${messages.order.email.headers.quantity}</th>
-        <th style="padding: 10px;">${messages.order.email.headers.price}</th>
-        <th style="padding: 10px;">${messages.order.email.headers.total}</th>
+        <th style="padding: 10px;">${messages.order_notifier.email.headers.image}</th>
+        <th style="padding: 10px;">${messages.order_notifier.email.headers.product}</th>
+        <th style="padding: 10px;">${messages.order_notifier.email.headers.quantity}</th>
+        <th style="padding: 10px;">${messages.order_notifier.email.headers.price}</th>
+        <th style="padding: 10px;">${messages.order_notifier.email.headers.total}</th>
       </tr>
     </thead>
     <tbody>
@@ -170,16 +170,16 @@ export class OrderNotifier {
   </table>
 
   <h3 style="margin-top: 20px;">
-    ${messages.order.email.total} ${currency}${Number(order.amount ?? 0).toFixed(2)}
+    ${messages.order_notifier.email.total} ${currency}${Number(order.amount ?? 0).toFixed(2)}
   </h3>
 
   <p>
-    ${messages.order.email.orderNumber}
+    ${messages.order_notifier.email.orderNumber}
     <strong>#${order.id}</strong>
   </p>
 
   <p>
-    ${messages.order.email.thanks}
+    ${messages.order_notifier.email.thanks}
   </p>
 </div>
 `;

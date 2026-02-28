@@ -10,6 +10,7 @@ import type {
   VariantType,
   Variant,
   User,
+  Review,
 } from "@/lib/core/types/payload-types";
 
 import { buildProductPurchaseSectionData } from "@/lib/core/adapter";
@@ -24,14 +25,12 @@ export default class Api {
   static async fetchApi<T>(
     path: string,
     {
-      keys,
       tags,
       params,
       select,
       expect,
       req,
     }: {
-      keys?: string[];
       tags?: string[];
       params?: Record<string, string | number | boolean | null | undefined>;
       select?: Record<string, true>;
@@ -59,15 +58,16 @@ export default class Api {
     if (!qs.has("limit")) qs.set("limit", "100");
 
     const url =
-      `${appConfig.BASE_URL}${path}` +
+      `${appConfig.SERVER_URL}${path}` +
       (qs.toString() ? `?${qs.toString()}` : "");
 
-    const shouldCache = Boolean(keys?.length);
+    const shouldCache = Boolean(tags?.length);
+
     const cookie = req?.headers.get("cookie") ?? "";
 
     const res = await fetch(url, {
       cache: shouldCache ? "force-cache" : "no-store",
-      next: shouldCache && tags?.length ? { tags } : undefined,
+      next: shouldCache ? { tags } : undefined,
       headers: cookie ? { cookie } : undefined,
     });
 
@@ -90,6 +90,7 @@ export default class Api {
       return null;
     }
   }
+
   private static async queryBySlug<T>(
     collection: CollectionName,
     slug: string,
@@ -111,12 +112,7 @@ export default class Api {
       params,
       select,
       expect: "first",
-      ...(draft
-        ? {}
-        : {
-            keys: [`${collection}-${slug}-${depth}`],
-            tags: [`${collection}-${slug}`],
-          }),
+      ...(draft ? {} : { tags: [`${collection}-${slug}`] }),
     });
   }
 
@@ -144,7 +140,7 @@ export default class Api {
         options: true,
       },
       expect: "docs",
-      ...(draft ? {} : { keys: [`variants-${productSlug}-0`], tags: [tag] }),
+      ...(draft ? {} : { tags: [tag] }),
     });
 
     if (!variants.length) return null;
@@ -167,8 +163,7 @@ export default class Api {
           variantType: true,
         },
         expect: "docs",
-        keys: [`variantOptions-${productSlug}-0`],
-        tags: [tag],
+        ...(draft ? {} : { tags: [tag] }),
       },
     );
 
@@ -191,14 +186,15 @@ export default class Api {
           label: true,
         },
         expect: "docs",
-        keys: [`variantTypes-${productSlug}-0`],
-        tags: [tag],
+        ...(draft ? {} : { tags: [tag] }),
       },
     );
+
     if (!variantTypes.length) return null;
 
     return { variants, options, variantTypes } as CombinedVariantData;
   }
+
   static async queryProductBySlug(
     slug: string,
   ): Promise<ProductSinglePage | null> {
@@ -214,18 +210,20 @@ export default class Api {
         priceInUSD: true,
         inventory: true,
         faqs: true,
+        reviews: true,
         enableVariants: true,
       },
     );
 
     if (!product) return null;
-
     const relatedProducts = await (async () => {
       const p = (await this.queryBySlug<Product>(
         CollectionName.products,
         slug,
         0,
-        { relatedProducts: true },
+        {
+          relatedProducts: true,
+        },
       )) as Product;
       const relatedIds = (p.relatedProducts ?? []) as number[];
       return relatedIds.length
@@ -240,12 +238,14 @@ export default class Api {
       : null;
 
     return {
+      id: product.id,
       title: product.title,
       description: product.description,
       updatedAt: product.updatedAt,
       gallery: product.gallery,
       faqs: product.faqs,
       relatedProducts,
+      reviews: product.reviews?.docs as Review[],
       purchase_section: buildProductPurchaseSectionData(product, combined),
     };
   }
@@ -260,6 +260,7 @@ export default class Api {
       faqs: true,
     });
   }
+
   static async queryAllProducts(): Promise<Product[]> {
     const products = await this.fetchApi<Product[]>(
       `/api/${CollectionName.products}`,
@@ -277,7 +278,6 @@ export default class Api {
           priceInUSD: true,
         },
         expect: "docs",
-        keys: [`bootstrap-${CollectionName.products}`],
         tags: ["bootstrap"],
       },
     );
@@ -293,7 +293,6 @@ export default class Api {
             "where[id][in]": firstImageIds.join(","),
           },
           expect: "docs",
-          keys: ["bootstrap-media"],
           tags: ["bootstrap"],
         })
       : [];
@@ -323,7 +322,6 @@ export default class Api {
         updatedAt: true,
       },
       expect: "docs",
-      keys: [`bootstrap-slugs-${collection}`],
       tags: ["bootstrap"],
     });
   }
@@ -341,7 +339,6 @@ export default class Api {
     return this.fetchApi<SiteSetting>(`/api/globals/site-settings`, {
       params: { depth: 2 },
       expect: "json",
-      keys: ["bootstrap-settings"],
       tags: ["bootstrap"],
     });
   }
@@ -359,7 +356,6 @@ export default class Api {
         slug: true,
       },
       expect: "docs",
-      keys: [`bootstrap-${CollectionName.category}`],
       tags: ["bootstrap"],
     });
   }
