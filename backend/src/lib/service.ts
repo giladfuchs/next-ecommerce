@@ -152,6 +152,14 @@ export function generateOrderEmailHtml(order: Order) {
   const align = dir === "rtl" ? "right" : "left";
   const currency = dir === "rtl" ? "₪" : "$";
 
+  const whatsappDigits = (process.env.WHATSAPP_NUMBER || "").replace(/\D/g, "");
+
+  const whatsappHref = whatsappDigits ? `https://wa.me/${whatsappDigits}` : "";
+
+  const whatsappDisplay = whatsappDigits.startsWith("972")
+    ? "0" + whatsappDigits.slice(3)
+    : whatsappDigits;
+
   const itemsHtml = order.items
     .map(
       (item) => `
@@ -171,7 +179,7 @@ export function generateOrderEmailHtml(order: Order) {
       <h2 style="margin-bottom: 10px;">${messages.greeting} ${order.name},</h2>
       <p style="margin: 0 0 20px 0;">${messages.confirmation}</p>
 
-<table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
         <thead style="background-color: #f5f5f5;">
           <tr style="text-align: center;">
             <th style="padding: 10px;">${messages.headers.image}</th>
@@ -189,10 +197,22 @@ export function generateOrderEmailHtml(order: Order) {
       <h3 style="margin-top: 20px; text-align: ${align};">${messages.total} ${currency}${Number(order.cost).toFixed(2)}</h3>
       <p style="text-align: ${align};">${messages.orderNumber} <strong>#${order.id}</strong></p>
       <p style="text-align: ${align};">${messages.thanks}</p>
+
+      <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #eee; text-align: ${align};">
+        <p style="margin: 0 0 6px 0;">${messages.noReplyTitle}</p>
+<p style="margin: 0;">
+  ${messages.noReplyText}
+  ${
+    whatsappHref
+      ? `<a href="${whatsappHref}" target="_blank" rel="noopener noreferrer" style="color: #6a1b9a; font-weight: 700; text-decoration: none;">${whatsappDisplay}</a>`
+      : `<strong>${whatsappDisplay}</strong>`
+  }
+  ${messages.noReplyThanks}
+</p>
+      </div>
     </div>
   `;
 }
-
 export async function sendOrderConfirmationEmail(order: Order) {
   const messages = getMessages();
   const html = generateOrderEmailHtml(order);

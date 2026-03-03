@@ -18,7 +18,6 @@ async function DBToJsonForMockMode(): Promise<void> {
   const orders = await DB.getRepository(Order).find({ relations: ["items"] });
   const { products, categories } = await PublicController.getData();
 
-
   const data = { products, categories, orders };
 
   await fs.writeFile(MOCK_DATA_PATH, JSON.stringify(data, null, 2), "utf8");
@@ -33,7 +32,6 @@ async function createUser(
   email: string,
   password: string,
 ): Promise<void> {
-
   await PublicController.register({ username, email, password });
   console.log(`✅ Created user: ${username}`);
 }
@@ -43,7 +41,7 @@ async function createUser(
  */
 async function resetSchema(): Promise<void> {
   await PublicController.resetMockDb();
-  return
+  return;
   const em = DB.manager;
   console.log("🧨 Dropping and recreating public schema...");
   await em.query(`DROP SCHEMA public CASCADE;`);

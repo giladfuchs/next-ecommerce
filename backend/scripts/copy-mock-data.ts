@@ -13,4 +13,3 @@ if (!fs.existsSync(src)) {
 
 fs.mkdirSync(destDir, { recursive: true });
 fs.copyFileSync(src, dest);
-

@@ -108,7 +108,6 @@ export class PublicController {
     return { message: "User registered successfully" };
   }
 
-
   static async resetMockDb() {
     if (process.env.ALLOW_RESET_MOCK_DATA !== "true") {
       throw new HttpError(403, "Reset Mock Data is disabled");

@@ -97,11 +97,16 @@ const messages = {
     adminOrderNotification: (id: number) =>
       `📦 התקבלה הזמנה חדשה באתר ${process.env.EMAIL_FROM_NAME}!\n\n🔗 לצפייה בהזמנה: ${process.env.STORE_BASE_URL}/admin/${ModelType.order}/${id}`,
     emailOrderHtml: {
-      greeting: "שלום", // he
+      greeting: "שלום",
       confirmation: "ההזמנה שלך התקבלה בהצלחה.",
       total: 'סה"כ לתשלום:',
       orderNumber: "מספר הזמנה:",
       thanks: "תודה שקנית אצלנו 💚",
+
+      noReplyTitle: "ההזמנה שלך התקבלה בהצלחה.",
+      noReplyText: "אין לכתוב למייל זה. זמינים בוואטסאפ מספר ",
+      noReplyThanks: " תודה",
+
       headers: {
         image: "תמונה",
         product: "מוצר",
@@ -125,6 +130,12 @@ const messages = {
       total: "Total to Pay:",
       orderNumber: "Order Number:",
       thanks: "Thank you for shopping with us 💚",
+
+      noReplyTitle: "Your order was received successfully.",
+      noReplyText:
+        "Please do not reply to this email. We're available on WhatsApp: ",
+      noReplyThanks: " Thanks",
+
       headers: {
         image: "Image",
         product: "Product",
@@ -135,7 +146,6 @@ const messages = {
     },
   },
 };
-
 export function getMessages(): (typeof messages)["en"] {
   const lang = process.env.LANGUAGE === "he" ? "he" : "en";
   return messages[lang];

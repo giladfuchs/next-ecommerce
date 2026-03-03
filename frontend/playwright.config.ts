@@ -1,5 +1,6 @@
 import { defineConfig } from "@playwright/test";
 export { ModelType as TestModelType } from "@/lib/types/enums";
+// export const TEST_BASE_URL = "https://modern-ecommerce-store.vercel.app";
 export const TEST_BASE_URL = "http://localhost:3000";
 export default defineConfig({
   testDir: "./e2e",
