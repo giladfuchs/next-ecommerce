@@ -1,0 +1,37 @@
+
+public/media
+seed/update.sh
+# local env files
+.env
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+
+/node_modules
+.idea
+.vscode
+.claude
+.DS_Store
+
+
+
+/.next/
+/out/
+/build
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+
+
+
+
+
+
+

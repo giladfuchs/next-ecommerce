@@ -1,0 +1,93 @@
+@config "../../../tailwind.config.mjs";
+
+@import "tailwindcss";
+
+@import "./button.css";
+@import "./accessibility-bar.css";
+@import "./cart.css";
+@import "./faq.css";
+
+@plugin "@tailwindcss/typography";
+
+@layer utilities {
+  .layout-container {
+    @apply w-full mx-auto max-w-[86rem] px-2 md:px-8;
+  }
+}
+
+:root {
+  --background: 100% 0 0;
+  --foreground: 15% 0 0;
+
+  --border: 92% 0 0;
+  --ring: 70% 0 0;
+
+  --success: 75% 0.16 150deg;
+  --warning: 82% 0.17 75deg;
+  --error: 70% 0.2 25deg;
+
+  --radius: 0.625rem;
+}
+
+html[data-theme="dark"] {
+  --background: 15% 0 0;
+  --foreground: 98% 0 0;
+
+  --border: 26% 0 0;
+  --ring: 45% 0 0;
+
+  --success: 55% 0.18 150deg;
+  --warning: 60% 0.18 75deg;
+  --error: 55% 0.22 25deg;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-[100vh] flex flex-col;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Helvetica,
+      Arial,
+      sans-serif;
+  }
+
+  a,
+  input,
+  button,
+  textarea,
+  select {
+    @apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-50;
+  }
+
+  html[data-theme="dark"] a,
+  html[data-theme="dark"] input,
+  html[data-theme="dark"] button,
+  html[data-theme="dark"] textarea,
+  html[data-theme="dark"] select {
+    @apply focus-visible:ring-neutral-600 focus-visible:ring-offset-neutral-900;
+  }
+}
+
+html {
+  opacity: 1;
+}
+html[data-theme="light"],
+html[data-theme="dark"] {
+  opacity: 1;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

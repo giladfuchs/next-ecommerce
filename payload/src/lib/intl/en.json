@@ -1,0 +1,156 @@
+{
+  "review_form": {
+    "open_button": "Write a review",
+    "title": "Add a review",
+    "subtitle": "Share your experience with this product",
+    "close_button": "Close",
+    "cancel_button": "Cancel",
+    "submit_button": "Submit review",
+    "submit_sending": "Sending...",
+    "close_aria": "Close dialog",
+    "toast_success": "Thanks! Your review was added.",
+    "toast_failed": "Failed to submit review",
+    "validation": {
+      "too_short": "{field} is too short (min {min})",
+      "too_long": "{field} is too long (max {max})"
+    },
+    "fields": {
+      "authorName": { "label": "Name", "required": "Required" },
+      "authorEmail": {
+        "label": "Email (optional)",
+        "invalid": "Invalid email"
+      },
+      "title": { "label": "Title", "required": "Required" },
+      "rating": { "label": "Rating", "aria": "Rate {value} out of 5" },
+      "body": { "label": "Review", "required": "Required" }
+    }
+  },
+
+  "order_notifier": {
+    "whatsappAdmin": "📦 New order received → ",
+    "email": {
+      "subjectPrefix": "Order Confirmation - No.",
+      "greeting": "Hello",
+      "confirmation": "Your order was received successfully.",
+      "total": "Total to Pay:",
+      "orderNumber": "Order Number:",
+      "thanks": "Thank you for shopping with us 💚",
+      "headers": {
+        "image": "Image",
+        "product": "Product",
+        "quantity": "Quantity",
+        "price": "Price",
+        "total": "Total"
+      }
+    }
+  },
+  "product": {
+    "not_found": "No products found.",
+    "relatedProducts": "Related Products",
+    "customer_reviews": "Customer Reviews",
+
+    "stock": {
+      "onlyLeft": "Only {count} left in stock",
+      "inStock": "In stock",
+      "outOfStock": "Out of stock"
+    },
+    "addToCart": {
+      "share": "Share",
+      "shareNotSupported": "Sharing is not supported on this device.",
+      "button": "Add To Cart",
+      "selectVariant": "Please select a variant.",
+      "added": "Product added to cart."
+    },
+    "gallery": {
+      "previous": "Previous image",
+      "next": "Next image"
+    }
+  },
+
+  "general": {
+    "back": "Back",
+    "products": "Products",
+    "search": "Search...",
+    "noMatch": "No products found",
+    "clear": "Clear search",
+    "faq": "Frequently Asked Questions",
+
+    "toggle_theme": "Toggle theme",
+    "categories": "Categories",
+    "category_all": "All Products",
+    "pageNotFound": "This page could not be found.",
+    "goHome": "Go home",
+    "somethingWentWrongTitle": "Something went wrong",
+    "somethingWentWrongDescription": "There was an issue with our storefront. This may be temporary. Please try again.",
+    "tryAgain": "Try again"
+  },
+  "cart": {
+    "title": "My Cart",
+    "description": "Manage your cart here, add items to view the total.",
+    "emptyTitle": "Your cart is empty.",
+    "total": "Total",
+    "checkout": "Proceed to Checkout"
+  },
+  "checkout": {
+    "page": {
+      "emptyCart": "Your cart is empty.",
+      "continueShopping": "Continue shopping?",
+      "title": "Checkout",
+      "orderReceived": "Order received.",
+      "orderId": "Order ID: {id}",
+      "backToShop": "Back to shop",
+      "yourCart": "Your cart",
+      "total": "Total"
+    },
+    "fields": {
+      "name": {
+        "label": "Name",
+        "required": "Name is required."
+      },
+      "phone": {
+        "label": "Phone",
+        "required": "Phone is required.",
+        "invalid": "Phone number is not valid."
+      },
+      "email": {
+        "label": "Email",
+        "required": "Email is required.",
+        "invalid": "Email is not valid."
+      }
+    },
+    "submit": {
+      "sending": "Sending...",
+      "sendOrder": "Send order",
+      "success": "Order sent",
+      "failed": "Order failed"
+    }
+  },
+  "admin": {
+    "cacheControl": {
+      "title": "Cache Control",
+      "description": "After major changes (footer, products, categories), click revalidate.",
+      "readMore": "Read more...",
+      "hideDetails": "Hide details",
+      "revalidate": "Revalidate Cache",
+      "revalidating": "Revalidating...",
+      "success": "Cache revalidated successfully.",
+      "details": {
+        "footer": "Footer or home settings changed",
+        "products": "Many products added",
+        "category": "Category renamed or reordered",
+        "finish": "Finish edits → then revalidate once."
+      }
+    }
+  },
+  "accessibility": {
+    "title": "Accessibility Tools",
+    "contrast": "High Contrast",
+    "grayscale": "Grayscale",
+    "underline": "Underline Links",
+    "zoomIn": "Increase Text Size",
+    "zoomOut": "Decrease Text Size",
+    "invert": "Invert Colors",
+    "readableFont": "Readable Font",
+    "reset": "Reset"
+  }
+}

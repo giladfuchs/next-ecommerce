@@ -1,0 +1,156 @@
+{
+  "review_form": {
+    "open_button": "כתיבת ביקורת",
+    "title": "הוספת ביקורת",
+    "subtitle": "שתפו את החוויה שלכם מהמוצר",
+    "close_button": "סגירה",
+    "cancel_button": "ביטול",
+    "submit_button": "שליחת ביקורת",
+    "submit_sending": "שולח...",
+    "close_aria": "סגירת הדיאלוג",
+    "toast_success": "תודה! הביקורת שלך נוספה.",
+    "toast_failed": "שליחת הביקורת נכשלה",
+    "validation": {
+      "too_short": "{field} קצר מדי (מינימום {min})",
+      "too_long": "{field} ארוך מדי (מקסימום {max})"
+    },
+    "fields": {
+      "authorName": { "label": "שם", "required": "חובה" },
+      "authorEmail": {
+        "label": "אימייל (אופציונלי)",
+        "invalid": "אימייל לא תקין"
+      },
+      "title": { "label": "כותרת", "required": "חובה" },
+      "rating": { "label": "דירוג", "aria": "דרג {value} מתוך 5" },
+      "body": { "label": "ביקורת", "required": "חובה" }
+    }
+  },
+
+  "order_notifier": {
+    "whatsappAdmin": "📦 הזמנה חדשה התקבלה ← ",
+    "email": {
+      "subjectPrefix": "אישור הזמנה - מס'",
+      "greeting": "שלום",
+      "confirmation": "הזמנתך התקבלה בהצלחה.",
+      "total": "סה\"כ לתשלום:",
+      "orderNumber": "מספר הזמנה:",
+      "thanks": "תודה שקנית אצלנו 💚",
+      "headers": {
+        "image": "תמונה",
+        "product": "מוצר",
+        "quantity": "כמות",
+        "price": "מחיר",
+        "total": "סה\"כ"
+      }
+    }
+  },
+  "product": {
+    "not_found": "לא נמצאו מוצרים.",
+    "relatedProducts": "מוצרים קשורים",
+    "customer_reviews": "ביקורות לקוחות",
+
+    "stock": {
+      "onlyLeft": "נשארו רק {count} במלאי",
+      "inStock": "במלאי",
+      "outOfStock": "אזל מהמלאי"
+    },
+    "addToCart": {
+      "share": "שתף",
+      "shareNotSupported": "שיתוף אינו נתמך במכשיר זה.",
+      "button": "הוספה לסל",
+      "selectVariant": "אנא בחר דגם.",
+      "added": "המוצר נוסף לסל."
+    },
+    "gallery": {
+      "previous": "תמונה קודמת",
+      "next": "תמונה הבאה"
+    }
+  },
+
+  "general": {
+    "back": "חזרה",
+    "products": "מוצרים",
+    "search": "חיפוש...",
+    "noMatch": "לא נמצאו מוצרים",
+    "clear": "ניקוי חיפוש",
+    "faq": "שאלות ותשובות",
+
+    "toggle_theme": "שינוי מצב תצוגה",
+    "categories": "קטגוריות",
+    "category_all": "כל המוצרים",
+    "pageNotFound": "העמוד שחיפשת לא נמצא.",
+    "goHome": "חזרה לדף הבית",
+    "somethingWentWrongTitle": "אירעה שגיאה",
+    "somethingWentWrongDescription": "אירעה תקלה בחנות. ייתכן שמדובר בבעיה זמנית. אנא נסה שוב.",
+    "tryAgain": "נסה שוב"
+  },
+  "cart": {
+    "title": "הסל שלי",
+    "description": "נהלו את הסל שלכם כאן, הוסיפו פריטים לצפייה בסה\"כ.",
+    "emptyTitle": "הסל שלך ריק.",
+    "total": "סה\"כ",
+    "checkout": "המשך לתשלום"
+  },
+  "checkout": {
+    "page": {
+      "emptyCart": "הסל שלך ריק.",
+      "continueShopping": "להמשיך בקניות?",
+      "title": "תשלום",
+      "orderReceived": "ההזמנה התקבלה.",
+      "orderId": "מספר הזמנה: {id}",
+      "backToShop": "חזרה לחנות",
+      "yourCart": "הסל שלך",
+      "total": "סה\"כ"
+    },
+    "fields": {
+      "name": {
+        "label": "שם",
+        "required": "שם הוא שדה חובה."
+      },
+      "phone": {
+        "label": "טלפון",
+        "required": "טלפון הוא שדה חובה.",
+        "invalid": "מספר הטלפון אינו תקין."
+      },
+      "email": {
+        "label": "אימייל",
+        "required": "אימייל הוא שדה חובה.",
+        "invalid": "כתובת האימייל אינה תקינה."
+      }
+    },
+    "submit": {
+      "sending": "שולח...",
+      "sendOrder": "שלח הזמנה",
+      "success": "ההזמנה נשלחה",
+      "failed": "ההזמנה נכשלה"
+    }
+  },
+  "admin": {
+    "cacheControl": {
+      "title": "ניהול מטמון (Cache)",
+      "description": "לאחר שינויים משמעותיים (פוטר, מוצרים, קטגוריות), לחצו על רענון.",
+      "readMore": "קרא עוד...",
+      "hideDetails": "הסתר פרטים",
+      "revalidate": "רענן מטמון",
+      "revalidating": "מרענן...",
+      "success": "המטמון רוענן בהצלחה.",
+      "details": {
+        "footer": "הגדרות פוטר או דף הבית השתנו",
+        "products": "נוספו מוצרים רבים",
+        "category": "שם קטגוריה שונה או סדר השתנה",
+        "finish": "סיימו את העריכות ← ואז רעננו פעם אחת."
+      }
+    }
+  },
+  "accessibility": {
+    "title": "כלי נגישות",
+    "contrast": "ניגודיות גבוהה",
+    "grayscale": "גווני אפור",
+    "underline": "קו תחתון לקישורים",
+    "zoomIn": "הגדלת טקסט",
+    "zoomOut": "הקטנת טקסט",
+    "invert": "היפוך צבעים",
+    "readableFont": "גופן קריא",
+    "reset": "איפוס"
+  }
+}
