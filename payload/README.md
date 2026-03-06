@@ -19,10 +19,10 @@ Clone, configure, and launch your store.
 ## Live Preview
 
 **Main Site:**  
-https://payload-storefront.vercel.app
+https://payload.url-link.org
 
 **Admin Panel:**  
-https://payload-storefront.vercel.app/admin
+https://payload.url-link.org/admin
 
 **Demo Login:**  
 Email: `admin@admin.com`  
@@ -31,7 +31,7 @@ Password: `admin`
 🔄 Reset Demo Data
 
 If demo data was modified while you or another user were testing, you can restore it to a fresh state by visiting:
-https://payload-storefront.vercel.app/reset
+https://payload.url-link.org/reset
 
 #### This will reset and reseed the database (media preserved).
 

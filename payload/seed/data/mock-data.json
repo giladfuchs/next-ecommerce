@@ -7,24 +7,48 @@
   },
   "siteSettings": {
     "home": {
-      "title": "PAYLOAD ECOMMERCE TEMPLATE",
-      "description": "Modern ecommerce template built with Payload CMS. Fast, simple and fully customizable.",
+      "title": "Payload CMS 3 E-commerce Starter | Next.js 16 & React 19 Template",
+      "description": "Production-ready e-commerce starter built with Payload CMS 3, Next.js 16, React 19, and Tailwind 4. Open-source storefront template with category pages, product pages, shopping cart, checkout flow, and admin dashboard.",
       "faqs": [
         {
-          "question": "Do you offer nationwide delivery?",
-          "answer": "Yes, we deliver plants and garden products nationwide with secure packaging to ensure safe arrival."
+          "question": "What core features are included in this Payload CMS 3 ecommerce starter?",
+          "answer": "This comprehensive starter provides a full-stack e-commerce solution using Payload CMS 3 and Next.js 16. It includes pre-built Category and Product pages, a functional shopping cart, a secure checkout flow, and automated order confirmations. Beyond the basics, it features an advanced Data Access Layer (DAL), tag-based caching for lightning-fast performance, and a sleek admin dashboard for managing media, products, and global site settings without touching the code."
         },
         {
-          "question": "Are your plants grown locally?",
-          "answer": "Most of our plants are grown locally in sustainable conditions, carefully selected for quality and resilience."
+          "question": "Is this Payload CMS ecommerce template truly free and open-source?",
+          "answer": "Yes, this is a 100% free open-source e-commerce template. It is designed to be cloned, customized, and deployed by developers and agencies. You have full ownership of the code, meaning there are no hidden monthly fees or vendor lock-ins. You can host it on Vercel, Railway, or your own VPS while maintaining total control over your PostgreSQL database and customer data."
         },
         {
-          "question": "How do I choose the right plant for my garden?",
-          "answer": "Each product page includes detailed care information, sunlight requirements, and growth size to help you choose confidently."
+          "question": "How does the Next.js 16 and React 19 stack benefit my online store?",
+          "answer": "By leveraging Next.js 16 and React 19, this template stays at the cutting edge of web performance. React 19 brings optimized rendering and improved 'Actions' for form handling (like checkout and cart updates), while Next.js 16 provides the most stable App Router experience. This results in faster page loads, better Core Web Vitals, and a smoother user experience that directly leads to higher conversion rates."
         },
         {
-          "question": "Can I get help planning my garden?",
-          "answer": "Absolutely. We’re happy to guide you with recommendations based on your space, climate, and preferences."
+          "question": "Is the storefront optimized for high SEO rankings and search visibility?",
+          "answer": "Yes, SEO is baked into the architecture. The template automatically generates dynamic metadata for every product and category, creates a 'sitemap.xml', and configures 'robots.txt'. It also includes deep integration for JSON-LD structured data, which helps search engines understand your products, prices, and availability, often resulting in rich snippets and improved click-through rates (CTR) from Google."
+        },
+        {
+          "question": "Can I customize the Payload collections and frontend UI easily?",
+          "answer": "Absolutely. The project is built with a 'developer-first' mindset. Since it uses Tailwind CSS 4, styling is fast and modern. You can easily extend the Payload CMS collections to add custom fields (like 'Brand', 'Warranty', or 'Technical Specs') and the React frontend will automatically have access to that data through the flexible Data Access Layer. It is designed to be a foundation, not a restrictive framework."
+        },
+        {
+          "question": "How does the 'Revalidate' and caching system work in production?",
+          "answer": "To ensure maximum speed, the storefront uses aggressive tag-based caching. When you update a product or price in the Payload Admin panel, you can trigger a manual revalidation that clears only the necessary data. This means your customers always see the latest information without the performance hit of constantly fetching data from the database, making it capable of handling high-traffic launches."
+        },
+        {
+          "question": "Does this template support automated order notifications like WhatsApp?",
+          "answer": "Yes, one of the unique features of this starter is the built-in notification system. Upon a successful checkout, the customer receives a professional HTML email confirmation. Simultaneously, the store owner can receive an instant WhatsApp notification via Callmebot. This ensures you never miss an order and can provide immediate customer service or start the fulfillment process right away."
+        },
+        {
+          "question": "What is the difference between 'Api' and 'Queries' mode in the DAL?",
+          "answer": "The Data Access Layer (DAL) gives you architectural flexibility. 'Api' mode uses the Headless REST approach, which is recommended for high-performance production environments where the frontend and backend might scale separately. 'Queries' mode uses the direct Payload SDK, which is ideal for monolith setups where simplicity and speed of development are the priority. You can switch between them easily in the configuration files."
+        },
+        {
+          "question": "How does this starter handle analytics and conversion tracking?",
+          "answer": "Tracking is essential for e-commerce growth. This template comes pre-configured with support for Google Analytics 4 (GA4), Meta Pixel (Facebook), and TikTok Pixel. It doesn't just track page views; it includes built-in events for 'add_to_cart', 'begin_checkout', and 'purchase', allowing you to see exactly where users are dropping off and how to optimize your marketing spend."
+        },
+        {
+          "question": "Is it possible to integrate payment gateways like Stripe or PayPal?",
+          "answer": "Yes. While the template provides the checkout flow, it is 'payment-agnostic' by design. It includes dedicated order hooks where you can easily plug in Stripe, PayPal, or any local payment provider. The architecture is already set up to handle the 'pending' to 'paid' order status transitions once the payment callback is received from your provider of choice."
         }
       ]
     },

@@ -10,7 +10,7 @@ import { RoutePath, type ProductSinglePage } from "@/lib/core/types/types";
 import { extractRichTextText, resolveMediaUrl } from "@/lib/core/util";
 
 export const generateMetadataLayout = (settings: SiteSetting): Metadata => {
-  const title = settings.home.title;
+  const title = appConfig.SITE_NAME;
   const description = extractRichTextText(settings.home.description);
 
   const image = settings.home.image_meta as Media;

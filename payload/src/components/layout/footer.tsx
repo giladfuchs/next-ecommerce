@@ -56,7 +56,7 @@ export default async function Footer() {
 
           {footer.social?.whatsappNumber && (
             <a
-              href={`https://wa.me/${footer.social.whatsappNumber}`}
+              href={`https://wa.me/${footer.social.whatsappNumber}${footer.social.whatsappMessage ? `?text=${encodeURIComponent(footer.social.whatsappMessage)}` : ""}`}
               target="_blank"
               rel="noopener noreferrer"
               className="h-10 w-10 flex items-center justify-center rounded-full hover:bg-green-100 transition"

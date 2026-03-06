@@ -1,8 +1,9 @@
 import "dotenv/config";
 import dotenv from "dotenv";
-
 dotenv.config();
 import { run_seed_reset } from "./seedData";
+
+// pnpm tsx  seed/run.ts
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   run_seed_reset("seed")

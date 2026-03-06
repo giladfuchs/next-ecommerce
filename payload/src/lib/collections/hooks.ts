@@ -9,6 +9,7 @@ import type {
   CollectionBeforeChangeHook,
 } from "payload";
 
+import appConfig from "@/lib/core/config";
 import { CollectionName } from "@/lib/core/types/types";
 
 export const normalizeFaqs = <T extends { faqs?: unknown }>(
@@ -151,7 +152,7 @@ export const mediaTransformUploadHook: CollectionBeforeChangeHook = async ({
     file?: UploadFile;
     context?: CloudContext;
   };
-
+  if (!Boolean(appConfig.BLOB_URL)) return;
   const file = typedReq.file ?? typedReq.context?._payloadCloudStorage?.file;
 
   if (!file?.data) return;
