@@ -2,7 +2,7 @@ import "dotenv/config";
 import dotenv from "dotenv";
 dotenv.config();
 import { getPayload } from "payload";
-import config from "../src/payload.config.js";
+import config from "../src/payload.config";
 import { SeedService } from "./seedData";
 // pnpm tsx  seed/game.ts
 async function readCol() {

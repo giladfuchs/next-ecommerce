@@ -34,6 +34,7 @@ export default class Queries {
   static cache<T>(fn: () => Promise<T>, keys: string[], tags: string[]) {
     return unstable_cache(fn, keys, { revalidate: false, tags });
   }
+
   static async queryCurrentUser(req: Request): Promise<User | null> {
     try {
       const payload = await this.getPayload();

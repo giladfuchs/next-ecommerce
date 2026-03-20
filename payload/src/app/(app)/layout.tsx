@@ -27,6 +27,7 @@ export default async function RootLayout({
     DAL.querySiteSettings(),
     DAL.queryAllProducts(),
   ]);
+
   return (
     <html
       lang={appConfig.LOCAL.lang}
@@ -34,6 +35,22 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {appConfig.BLOB_URL && (
+          <>
+            <link
+              rel="preconnect"
+              href={appConfig.BLOB_URL}
+              crossOrigin="anonymous"
+            />
+            <link rel="dns-prefetch" href={appConfig.BLOB_URL} />
+          </>
+        )}
+        <link
+          rel="preconnect"
+          href={appConfig.SERVER_URL}
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href={appConfig.SERVER_URL} />
         <script
           id="theme-script"
           dangerouslySetInnerHTML={{

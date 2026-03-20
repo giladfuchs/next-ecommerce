@@ -8,7 +8,7 @@ import appConfig from "@/lib/core/config";
 
 const withNextIntl = createNextIntlPlugin("./src/lib/intl/request.ts");
 
-export const remotePatternsFromConfig = (): RemotePattern[] => {
+const remotePatternsFromConfig = (): RemotePattern[] => {
   const patterns: RemotePattern[] = [];
 
   if (appConfig.SERVER_URL) {
@@ -40,7 +40,6 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
-
   typescript: { ignoreBuildErrors: false },
   images: {
     unoptimized: false,
@@ -51,21 +50,19 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["sharp"],
 
   experimental: {
-    optimizePackageImports: ["react-icons", "@radix-ui/react-label"],
+    optimizePackageImports: ["react-icons"],
   },
 
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          { key: "X-DNS-Prefetch-Control", value: "on" },
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-        ],
-      },
-    ];
-  },
+  headers: async () => [
+    {
+      source: "/:path*",
+      headers: [
+        { key: "X-DNS-Prefetch-Control", value: "on" },
+        { key: "X-Content-Type-Options", value: "nosniff" },
+        { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+      ],
+    },
+  ],
 };
 
 export default withPayload(withNextIntl(nextConfig));

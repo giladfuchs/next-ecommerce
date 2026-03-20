@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
-import { run_seed_reset } from "seed/seedData";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
+    const { run_seed_reset } = await import("seed/seedData");
     await run_seed_reset("reset");
 
     return NextResponse.json({
@@ -14,8 +17,6 @@ export async function GET() {
       err instanceof Error
         ? err.message.slice(0, 200)
         : String(err).slice(0, 200);
-
-    console.error("❌ Reset failed:", errorMessage);
 
     return NextResponse.json(
       {

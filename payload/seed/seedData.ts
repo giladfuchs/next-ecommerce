@@ -1,10 +1,6 @@
 // @ts-nocheck
-import fs from "fs/promises";
-import path from "path";
-import { execSync } from "node:child_process";
 
 import { getPayload, type Payload } from "payload";
-import config from "@/payload.config";
 
 import {
   makeRichTextDescription,
@@ -15,22 +11,33 @@ import {
   randFloat,
 } from "./helpers";
 
-// pnpm tsx  seed/run.ts
+// pnpm tsx seed/run.ts
+const getDbDataPath = () => {
+  const path = require("path");
 
-const DB_DATA_PATH = "seed/data/mock-data.json";
+  return path.join(process.cwd(), "seed", "data", "mock-data.json");
+};
 
-export const resetDb = () => {
+const loadMockData = async () => {
+  const { readFile } = await import("fs/promises");
+  const dbDataPath = getDbDataPath();
+  return JSON.parse(await readFile(dbDataPath, "utf8"));
+};
+export const resetDb = async () => {
+  const { execSync } = await import("node:child_process");
+
   execSync("yes | payload migrate:fresh", {
     stdio: "inherit",
     env: process.env,
     shell: true,
   });
 };
-const IMAGE_LIMIT = false;
-const mockData = JSON.parse(await fs.readFile(DB_DATA_PATH, "utf8"));
+const IMAGE_LIMIT = 11;
 
 export class SeedService {
   private payload!: Payload;
+  private mockData: any;
+
   private ids: SeedIds = {
     mediaIds: [],
     categoryIds: [],
@@ -39,12 +46,18 @@ export class SeedService {
   };
 
   async init() {
+    const { default: config } = await import("../src/payload.config");
+
     this.payload = await getPayload({ config });
+    this.mockData = await loadMockData();
   }
 
   async uploadMediaFromDisk(filePath: string, alt = "Product image") {
+    const path = await import("path");
+    const { readFile } = await import("fs/promises");
+
     const absolutePath = path.resolve(process.cwd(), filePath);
-    const buf = await fs.readFile(absolutePath);
+    const buf = await readFile(absolutePath);
     const filename = path.basename(filePath);
 
     const mimetype = filename.endsWith(".webp")
@@ -92,15 +105,15 @@ export class SeedService {
   async createUser() {
     await this.payload.create({
       collection: "users",
-      data: mockData.user,
+      data: this.mockData.user,
     });
   }
 
   async seedMedia() {
     const imagesToUse =
-      IMAGE_LIMIT && IMAGE_LIMIT < mockData.images.length
-        ? mockData.images.slice(0, IMAGE_LIMIT)
-        : mockData.images;
+      IMAGE_LIMIT && IMAGE_LIMIT < this.mockData.images.length
+        ? this.mockData.images.slice(0, IMAGE_LIMIT)
+        : this.mockData.images;
 
     for (const url of imagesToUse) {
       const id = await this.uploadMediaFromUrl(url);
@@ -117,11 +130,11 @@ export class SeedService {
     await this.payload.updateGlobal({
       slug: "site-settings",
       data: {
-        ...mockData.siteSettings,
+        ...this.mockData.siteSettings,
         home: {
-          ...mockData.siteSettings.home,
+          ...this.mockData.siteSettings.home,
           description: makeRichTextDescription(
-            mockData.siteSettings.home.description,
+            this.mockData.siteSettings.home.description,
           ),
           image_meta,
           logo,
@@ -133,7 +146,7 @@ export class SeedService {
     this.ids.variantTypeIds = {};
     this.ids.variantOptionIds = {};
 
-    for (const def of mockData.variants) {
+    for (const def of this.mockData.variants) {
       const type = await this.payload.create({
         collection: "variantTypes",
         data: { label: def.label, name: def.name },
@@ -157,8 +170,8 @@ export class SeedService {
     }
   }
   async seedCategories() {
-    for (let i = 0; i < mockData.categories.length; i++) {
-      const c = mockData.categories[i];
+    for (let i = 0; i < this.mockData.categories.length; i++) {
+      const c = this.mockData.categories[i];
 
       const created = await this.payload.create({
         collection: "category",
@@ -179,7 +192,7 @@ export class SeedService {
   async seedProducts() {
     const typeKeys = Object.keys(this.ids.variantTypeIds);
 
-    for (const p of mockData.products) {
+    for (const p of this.mockData.products) {
       try {
         const enableVariants = Math.random() > 0.3 && typeKeys.length > 0;
 
