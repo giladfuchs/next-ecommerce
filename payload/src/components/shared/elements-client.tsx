@@ -1,8 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { useState, type ChangeEvent, ComponentType } from "react";
+import { useState,useEffect, type ChangeEvent, type ComponentType } from "react";
+import { FaEnvelope, FaPhoneAlt,  FaWhatsapp } from "react-icons/fa";
 import {
   HiChevronLeft,
   HiOutlineAdjustmentsHorizontal,
@@ -21,6 +22,41 @@ import Button from "@/components/ui/button";
 import { buildCategoryHref, postJson } from "@/lib/core/util";
 import { IntlProvider } from "@/lib/providers/intl";
 import { SonnerProvider } from "@/lib/providers/sonner";
+
+export const OrderContactActions = () => {
+    const params = useParams()
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
+    useEffect(() => {
+        const id = params?.segments?.at(-1) ?? window.location.pathname.split('/').at(-1)
+        if (!id || id === 'create') return
+        fetch(`/api/orders/${id}?depth=0&select[phone]=true&select[email]=true`)
+            .then(r => r.json())
+            .then(({ phone, email }) => {
+                setPhone(phone )
+                setEmail(email)
+            })
+    }, [])
+
+    if (!phone && !email) return null
+
+    const base = {
+        width: '2.5rem', height: '2.5rem', borderRadius: '9999px',
+        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+        textDecoration: 'none', border: '1px solid var(--theme-elevation-150)',
+        background: 'var(--theme-elevation-50)',
+    }
+
+    return (
+        <div style={{ display: 'flex', gap: '1rem', padding: '0.5rem 0.25rem' }}>
+            <a href={`tel:${phone}`} style={{ ...base, color: '#16a34a' }}><FaPhoneAlt size="1.3rem" /></a>
+            <a href={`https://wa.me/${phone.replace(/^0/, '972')}`} target="_blank" rel="noopener noreferrer" style={{ ...base, color: '#25D366' }}><FaWhatsapp size="1.3rem" /></a>
+            <a href={`mailto:${email}`} style={{ ...base, color: '#2563eb' }}><FaEnvelope size="1.3rem" /></a>
+        </div>
+    )
+}
+
+
 
 const RevalidateFieldInner = () => {
   const [loading, setLoading] = useState(false);

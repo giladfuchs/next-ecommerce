@@ -1,6 +1,6 @@
-import { DalStatic } from "@/lib/core/dal/type";
-
 import Api from "@/lib/core/dal/api";
+import type { DalStatic } from "@/lib/core/dal/type";
+
 const DAL: DalStatic = Api;
 
 // import Queries from "@/lib/core/dal/queries";

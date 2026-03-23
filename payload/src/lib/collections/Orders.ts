@@ -11,7 +11,7 @@ import {
 } from "@/lib/collections/base-fields";
 import appConfig from "@/lib/core/config";
 import { OrderNotifier } from "@/lib/core/OrderNotifier";
-import { RoutePath, CartItem } from "@/lib/core/types/types";
+import {type CartItem, CollectionName} from "@/lib/core/types/types";
 
 export const Orders: CollectionOverride = ({ defaultCollection }) => {
   return {
@@ -65,7 +65,15 @@ export const Orders: CollectionOverride = ({ defaultCollection }) => {
       { name: "name", type: "text", required: true },
       { name: "phone", type: "text", required: true },
       { name: "email", type: "email", required: true },
-
+      {
+        name: "contactActions",
+        type: "ui",
+        admin: {
+          components: {
+            Field: "@/components/shared/elements-client#OrderContactActions",
+          },
+        },
+      },
       {
         name: "items",
         type: "array",
@@ -74,7 +82,7 @@ export const Orders: CollectionOverride = ({ defaultCollection }) => {
           {
             name: "product",
             type: "relationship",
-            relationTo: `${RoutePath.product}s`,
+            relationTo: CollectionName.products,
             required: true,
           },
 

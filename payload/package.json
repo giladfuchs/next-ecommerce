@@ -13,6 +13,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "payload": "payload",
+    "seed": "pnpm tsx  seed/run.ts",
     "generate:importmap": "payload generate:importmap",
     "generate:types": "payload generate:types",
     "reinstall": "rm -rf node_modules tsconfig.tsbuildinfo .next pnpm-lock.yaml && pnpm install"

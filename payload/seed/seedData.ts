@@ -1,5 +1,6 @@
 // @ts-nocheck
-
+import { resolve, basename, join } from "node:path";
+import { readFile } from "node:fs/promises";
 import { getPayload, type Payload } from "payload";
 
 import {
@@ -12,15 +13,11 @@ import {
 } from "./helpers";
 
 // pnpm tsx seed/run.ts
-const getDbDataPath = () => {
-  const path = require("path");
 
-  return path.join(process.cwd(), "seed", "data", "mock-data.json");
-};
+
 
 const loadMockData = async () => {
-  const { readFile } = await import("fs/promises");
-  const dbDataPath = getDbDataPath();
+  const dbDataPath = join(process.cwd(), "seed", "data", "mock-data.json");
   return JSON.parse(await readFile(dbDataPath, "utf8"));
 };
 export const resetDb = async () => {
@@ -32,7 +29,7 @@ export const resetDb = async () => {
     shell: true,
   });
 };
-const IMAGE_LIMIT = 11;
+const IMAGE_LIMIT = false;
 
 export class SeedService {
   private payload!: Payload;
@@ -52,33 +49,32 @@ export class SeedService {
     this.mockData = await loadMockData();
   }
 
-  async uploadMediaFromDisk(filePath: string, alt = "Product image") {
-    const path = await import("path");
-    const { readFile } = await import("fs/promises");
 
-    const absolutePath = path.resolve(process.cwd(), filePath);
-    const buf = await readFile(absolutePath);
-    const filename = path.basename(filePath);
 
-    const mimetype = filename.endsWith(".webp")
+async uploadMediaFromDisk(filePath: string, alt = "Product image") {
+  const absolutePath = resolve(process.cwd(), filePath);
+  const buf = await readFile(absolutePath);
+  const filename = basename(filePath);
+
+  const mimetype = filename.endsWith(".webp")
       ? "image/webp"
       : filename.endsWith(".png")
-        ? "image/png"
-        : "image/jpeg";
+          ? "image/png"
+          : "image/jpeg";
 
-    const created = await this.payload.create({
-      collection: "media",
-      data: { alt },
-      file: {
-        data: buf,
-        mimetype,
-        name: filename,
-        size: buf.length,
-      },
-    });
+  const created = await this.payload.create({
+    collection: "media",
+    data: { alt },
+    file: {
+      data: buf,
+      mimetype,
+      name: filename,
+      size: buf.length,
+    },
+  });
 
-    return created.id;
-  }
+  return created.id;
+}
 
   async uploadMediaFromUrl(url: string, alt = "Product image") {
     const res = await fetch(url);
