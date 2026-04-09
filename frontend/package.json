@@ -32,7 +32,8 @@
     "test:e2e:headed": "TS_NODE_PROJECT=tsconfig.playwright.json playwright test --headed",
     "test": "pnpm exec playwright test --workers=1",
     "test:headed": "pnpm exec playwright test --headed --workers=1",
-    "test:file": "pnpm exec playwright test e2e/crud.spec.ts --headed --workers=1 "
+    "test:file": "pnpm exec playwright test e2e/crud.spec.ts --headed --workers=1 ",
+
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
