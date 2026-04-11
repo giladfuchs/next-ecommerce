@@ -15,11 +15,25 @@ import appConfig from "@/lib/core/config";
 
 // pnpm tsx seed/run.ts
 
-const IMAGE_LIMIT = false;
+const IMAGE_LIMIT = 11;
 
 export default class SeedService {
   private payload!: Payload;
-  private mockData: any;
+  private mockData: {
+    siteSettings: any;
+    user: {};
+    variants: any[];
+    categories: any[];
+    products: any[];
+    images: any[];
+  } = {
+    user: {},
+    siteSettings: {},
+    variants: [],
+    categories: [],
+    products: [],
+    images: [],
+  };
 
   private ids: SeedIds = {
     mediaIds: [],
@@ -95,32 +109,48 @@ export default class SeedService {
   }
 
   async createUser() {
+    this.payload.logger.info("createUser:start");
+
     await this.payload.create({
       collection: "users",
       data: this.mockData.user,
     });
+    this.payload.logger.info("createUser:done");
   }
 
   async seedMedia() {
     if (!appConfig.BLOB_URL) {
+      this.payload.logger.info("seedMedia:remove-local-media-dir");
       await rm(resolve(process.cwd(), "public", "media"), {
         recursive: true,
         force: true,
       });
     }
+
     const imagesToUse =
       IMAGE_LIMIT && IMAGE_LIMIT < this.mockData.images.length
         ? this.mockData.images.slice(0, IMAGE_LIMIT)
         : this.mockData.images;
 
+    this.payload.logger.info(
+      `seedMedia:uploading ${imagesToUse.length} images`,
+    );
+
     for (const url of imagesToUse) {
       const id = await this.uploadMediaFromUrl(url);
       this.ids.mediaIds.push(id);
     }
+
+    this.payload.logger.info(
+      `seedMedia:done total=${this.ids.mediaIds.length}`,
+    );
   }
 
   async seedSiteSettings() {
+    this.payload.logger.info("seedSiteSettings:start");
+
     const image_meta = await this.uploadMediaFromDisk("image_meta.webp");
+
     const logo = await this.uploadMediaFromDisk("logo.webp");
 
     await this.payload.updateGlobal({
@@ -137,8 +167,13 @@ export default class SeedService {
         },
       },
     });
+
+    this.payload.logger.info("seedSiteSettings:done");
   }
+
   async createVariantSetup() {
+    this.payload.logger.info("createVariantSetup:start");
+
     this.ids.variantTypeIds = {};
     this.ids.variantOptionIds = {};
 
@@ -164,8 +199,13 @@ export default class SeedService {
         this.ids.variantOptionIds[def.name].push(created.id);
       }
     }
+
+    this.payload.logger.info("createVariantSetup:done");
   }
+
   async seedCategories() {
+    this.payload.logger.info("seedCategories:start");
+
     for (let i = 0; i < this.mockData.categories.length; i++) {
       const c = this.mockData.categories[i];
 
@@ -184,8 +224,15 @@ export default class SeedService {
 
       this.ids.categoryIds.push(created.id);
     }
+
+    this.payload.logger.info(
+      `seedCategories:done total=${this.ids.categoryIds.length}`,
+    );
   }
+
   async seedProducts() {
+    this.payload.logger.info("seedProducts:start");
+
     const typeKeys = Object.keys(this.ids.variantTypeIds);
 
     for (const p of this.mockData.products) {
@@ -201,7 +248,9 @@ export default class SeedService {
           chosenTypeId = this.ids.variantTypeIds[chosenTypeKey] ?? null;
           chosenOptions = this.ids.variantOptionIds[chosenTypeKey] ?? [];
         }
+
         let priceInUSD = randFloat(5, 40);
+
         const createdProduct = await this.payload.create({
           collection: "products",
           data: {
@@ -244,10 +293,13 @@ export default class SeedService {
             chosenOptions[Math.floor(Math.random() * chosenOptions.length)],
           );
         }
+
         let first = true;
+
         for (const option of optionsToUse) {
           if (first) first = false;
           else priceInUSD = randFloat(priceInUSD, 120);
+
           await this.payload.create({
             collection: "variants",
             data: {
@@ -262,12 +314,18 @@ export default class SeedService {
           });
         }
       } catch (err) {
-        console.error("❌ Failed to create product:", p.title);
-        console.error(err);
+        this.payload.logger.error({
+          msg: `seedProducts:failed ${p.title}`,
+          err,
+        });
       }
     }
+
+    this.payload.logger.info("seedProducts:done");
   }
   async addRelatedProducts() {
+    this.payload.logger.info("addRelatedProducts:start");
+
     const products = await this.payload.find({
       collection: "products",
       depth: 0,
@@ -277,6 +335,8 @@ export default class SeedService {
     });
 
     const ids = products.docs.map((p) => p.id);
+
+    this.payload.logger.info(`addRelatedProducts:found ${ids.length} products`);
 
     for (const id of ids) {
       const relatedProducts = getRandomSlice(
@@ -291,9 +351,13 @@ export default class SeedService {
         data: { relatedProducts },
       });
     }
+
+    this.payload.logger.info("addRelatedProducts:done");
   }
 
   async cleanAllExceptMedia() {
+    this.payload.logger.info("cleanAllExceptMedia:start");
+
     const collections = [
       "reviews",
       "variants",
@@ -302,20 +366,30 @@ export default class SeedService {
       "variantOptions",
       "variantTypes",
       "users",
-    ];
+    ] as const;
 
     for (const collection of collections) {
-      await this.payload.delete({
+      await this.payload.db.deleteMany({
         collection,
-        where: {
-          id: {
-            exists: true,
-          },
-        },
+        where: {},
       });
     }
+
+    for (const collection of collections) {
+      if (!this.payload.collections[collection].config.versions) continue;
+
+      await this.payload.db.deleteVersions({
+        collection,
+        where: {},
+      });
+    }
+
+    this.payload.logger.info("cleanAllExceptMedia:done");
   }
+
   async loadExistingMediaIds() {
+    this.payload.logger.info("loadExistingMediaIds:start");
+
     const res = await this.payload.find({
       collection: "media",
       depth: 0,
@@ -325,22 +399,31 @@ export default class SeedService {
     });
 
     this.ids.mediaIds = res.docs.map((doc: any) => doc.id);
+
+    this.payload.logger.info(
+      `loadExistingMediaIds:done total=${this.ids.mediaIds.length}`,
+    );
   }
+
   async run() {
     await this.init();
+    this.payload.logger.info(`run:start mode=${this.mode}`);
+
     if (this.mode === "seed") {
       await this.seedMedia();
     } else {
-      await this.init();
       await this.loadExistingMediaIds();
       await this.cleanAllExceptMedia();
     }
 
     await this.createUser();
+
     await this.seedSiteSettings();
     await this.seedCategories();
     await this.createVariantSetup();
     await this.seedProducts();
     await this.addRelatedProducts();
+
+    this.payload.logger.info("run:done");
   }
 }

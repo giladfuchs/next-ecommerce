@@ -1,10 +1,10 @@
 import type { DalStatic } from "@/lib/core/types/types";
 
-// import Api from "@/lib/core/dal/api";
-// const DAL: DalStatic = Api;
+import Api from "@/lib/core/dal/api";
+const DAL: DalStatic = Api;
 
-import Queries from "@/lib/core/dal/queries";
-const DAL: DalStatic = Queries;
+// import Queries from "@/lib/core/dal/queries";
+// const DAL: DalStatic = Queries;
 
 export default DAL;
 

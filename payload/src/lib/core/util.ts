@@ -9,6 +9,7 @@ import { Media, Review } from "@/lib/core/types/payload-types";
 import { RoutePath } from "@/lib/core/types/types";
 
 export const resolveMediaUrl = (media: Media) => {
+  if (!media) return "";
   const url = media.url!;
   return url.startsWith("http") ? url : `${appConfig.SERVER_URL}${url}`;
 };

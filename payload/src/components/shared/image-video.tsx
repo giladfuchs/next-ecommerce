@@ -68,6 +68,9 @@ const MediaVideo = ({ resource, videoClassName }: Props) => (
 );
 
 export default function ImageVideo({ className, resource, ...rest }: Props) {
+  if (!resource) {
+    return <div className={cn(className)} />;
+  }
   const isVideo = !!resource.mimeType?.includes("video");
 
   return (

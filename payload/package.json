@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Ecommerce template for Payload",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "next dev -p 3344",
     "build": "next build",
@@ -45,6 +46,7 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
+    "@next/env": "16.2.3",
     "@next/eslint-plugin-next": "16.2.3",
     "@tailwindcss/postcss": "4.2.2",
     "@tailwindcss/typography": "^0.5.19",
@@ -77,5 +79,8 @@
       "sharp"
     ]
   },
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@10.33.0",
+  "volta": {
+    "node": "22.22.2"
+  }
 }

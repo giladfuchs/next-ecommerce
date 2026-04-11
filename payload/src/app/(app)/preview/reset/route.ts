@@ -8,7 +8,6 @@ export const dynamic = "force-dynamic";
 export async function GET() {
   try {
     const { default: SeedService } = await import("seed");
-
     await new SeedService("reset").run();
 
     return NextResponse.json({

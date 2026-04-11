@@ -15,7 +15,7 @@ export const resetDb = async () => {
 };
 
 async function run() {
-  // await resetDb();
+  await resetDb();
   await new SeedService("seed").run();
 
   process.exit(0);
