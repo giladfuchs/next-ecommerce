@@ -33,7 +33,7 @@ const ActionItem = ({
   );
 };
 
-export default function AccessibilityBarClient() {
+export default function AccessibilityBar() {
   const t = useTranslations("accessibility");
   const panelRef = useRef<HTMLDivElement | null>(null);
 

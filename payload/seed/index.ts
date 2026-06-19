@@ -15,7 +15,7 @@ import appConfig from "@/lib/core/config";
 
 // pnpm tsx seed/run.ts
 
-const IMAGE_LIMIT = 11;
+const IMAGE_LIMIT = false;
 
 export default class SeedService {
   private payload!: Payload;
@@ -49,7 +49,12 @@ export default class SeedService {
     this.payload = await getPayload({ config });
     this.mockData = JSON.parse(
       await readFile(
-        join(process.cwd(), "seed", "data", "mock-data.json"),
+        join(
+          process.cwd(),
+          "seed",
+          "data",
+          `mock-data-${appConfig.LOCAL.lang}.json`,
+        ),
         "utf8",
       ),
     );

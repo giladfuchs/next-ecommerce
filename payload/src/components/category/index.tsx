@@ -24,7 +24,7 @@ export default async function CategoryPageLayout({
       <h1 className="text-4xl font-semibold tracking-tight">{title}</h1>
 
       {description ? (
-        <div className="text-[1.125rem] text-start leading-relaxed max-w-[48rem] mx-auto">
+        <div className="text-[1.125rem] mt-2 text-start leading-relaxed max-w-[48rem] mx-auto">
           <RichText
             data={description}
             enableGutter={false}

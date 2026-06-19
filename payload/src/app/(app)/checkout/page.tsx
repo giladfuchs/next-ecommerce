@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import { Checkout } from "@/components/shared/wrappers";
 
 export const dynamic = "force-static";
-export const revalidate = false;
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("checkout.page");

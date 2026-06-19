@@ -32,6 +32,20 @@ export const AutoScrollRow = dynamic(
   () => import("@/components/shared/auto-scroll-row"),
   {
     ssr: false,
+    loading: () => (
+      <div className="flex gap-4 overflow-hidden">
+        {Array.from({ length: 4 }).map((_, i) => (
+          <div
+            key={i}
+            className="min-w-[75%] sm:min-w-[50%] md:min-w-[33%] lg:min-w-[25%] animate-pulse"
+          >
+            <div className="aspect-square w-full rounded-lg bg-gray-200 dark:bg-gray-800" />
+            <div className="mt-2 h-4 w-3/4 rounded bg-gray-200 dark:bg-gray-800" />
+            <div className="mt-1 h-4 w-1/2 rounded bg-gray-200 dark:bg-gray-800" />
+          </div>
+        ))}
+      </div>
+    ),
   },
 );
 export const Header = dynamic(() => import("@/components/layout/header"), {
@@ -70,13 +84,6 @@ export const ProductPurchaseSection = dynamic(
 
 export const ReviewForm = dynamic(
   () => import("@/components/product/review/review-form"),
-  {
-    ssr: false,
-  },
-);
-
-export const AccessibilityBar = dynamic(
-  () => import("@/components/layout/accessibility-bar"),
   {
     ssr: false,
   },

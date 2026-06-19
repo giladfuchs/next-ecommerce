@@ -27,7 +27,6 @@ const jsonLdTemplate = {
 };
 
 export const dynamic = "force-static";
-export const revalidate = false;
 
 export default async function MainPage() {
   const products = await DAL.queryAllProducts();

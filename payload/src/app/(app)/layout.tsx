@@ -7,7 +7,6 @@ import type { ReactNode } from "react";
 import { AnalyticsLayout } from "@/components/layout/analytics";
 import Footer from "@/components/layout/footer";
 import HeaderWrapper from "@/components/layout/header-wrapper";
-import { AccessibilityBar } from "@/components/shared/wrappers";
 import appConfig from "@/lib/core/config";
 import DAL from "@/lib/core/dal";
 import Providers from "@/lib/providers";
@@ -62,7 +61,6 @@ export default async function RootLayout({
       <body>
         <AnalyticsLayout />
         <Providers>
-          <AccessibilityBar />
           <div className="min-h-screen flex flex-col">
             <div className="layout-container flex flex-col flex-1">
               <Suspense

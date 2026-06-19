@@ -10,6 +10,7 @@ export const plugins: Plugin[] = [
   vercelBlobStorage({
     enabled: !!appConfig.BLOB_TOKEN,
     token: appConfig.BLOB_TOKEN,
+    addRandomSuffix: true,
     collections: {
       media: {
         prefix: appConfig.BUCKET_PREFIX,

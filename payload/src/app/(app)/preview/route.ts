@@ -38,5 +38,10 @@ export async function GET(req: Request): Promise<Response> {
   }
 
   draft.enable();
-  redirect(path);
+  const parts = path.split("/");
+  const slug = parts.pop();
+
+  const p = `${parts.join("/")}/${encodeURIComponent(slug ?? "")}`;
+
+  redirect(p);
 }

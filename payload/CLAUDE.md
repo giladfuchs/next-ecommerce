@@ -12,24 +12,11 @@ pnpm lint             # ESLint check
 pnpm lint:fix         # Fix lint issues
 pnpm format           # Prettier formatting
 pnpm generate:types   # Regenerate Payload TypeScript types → src/lib/core/types/payload-types.ts
-pnpm test:e2e         # Playwright E2E tests
-```
-
-Local PostgreSQL (Docker):
-
-```bash
-docker run --name payload-db \
-  -e POSTGRES_USER=admin \
-  -e POSTGRES_PASSWORD=admin \
-  -e POSTGRES_DB=payload \
-  -p 5442:5432 \
-  -v payload_data:/var/lib/postgresql/data \
-  -d postgres:17
 ```
 
 ## Stack
 
-- **Next.js 15** (App Router) + **React 19**
+- **Next.js 16** (App Router) + **React 19**
 - **Payload CMS 3** — headless CMS, REST API, admin UI at `/admin`
 - **PostgreSQL** via `@payloadcms/db-postgres`
 - **Vercel Blob** for media storage (prefix: `payload_ecommerce`)

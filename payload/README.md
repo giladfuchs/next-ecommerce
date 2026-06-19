@@ -103,13 +103,13 @@ Both expose the same public methods.
 Clone the repo and start a local PostgreSQL with Docker:
 
 ```bash
-docker run --name payload-db \
+docker run --name payload-ecommerce \
   -e POSTGRES_USER=admin \
   -e POSTGRES_PASSWORD=admin \
   -e POSTGRES_DB=payload \
-  -p 5442:5432 \
-  -v payload_data:/var/lib/postgresql/data \
-  -d postgres:17
+  -p 5443:5432 \
+  -v payload_ecommerce_data:/var/lib/postgresql \
+  -d postgres:18
 ```
 
 Create a `.env` file based on [`.env.example`](.env.example) and configure your environment variables, then install and run:
@@ -122,7 +122,7 @@ pnpm dev
 To seed mock data for local development, run the [`seeder script`](seed/index.ts):
 
 ```bash
-pnpm tsx  seed/index.ts
+pnpm seed
 ```
 
 ### Key Directories

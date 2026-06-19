@@ -12,6 +12,7 @@ import type { Media, User, Product } from "@/lib/core/types/payload-types";
 import type { PayloadAdminBarProps } from "@payloadcms/admin-bar";
 
 import CartModal from "@/components/cart/cart-modal";
+import AccessibilityBar from "@/components/layout/accessibility-bar";
 import Search from "@/components/layout/search";
 import ImageVideo from "@/components/shared/image-video";
 import Button from "@/components/ui/button";
@@ -147,6 +148,7 @@ export default function HeaderClient({ adminBarProps, ...props }: HeaderProps) {
       <AdminBar adminBarProps={adminBarProps} />
       <LivePreviewListener />
       <HeaderBar {...props} />
+      <AccessibilityBar />
     </>
   );
 }
