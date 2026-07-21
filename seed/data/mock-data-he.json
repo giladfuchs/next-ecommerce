@@ -1,0 +1,1658 @@
+{
+  "user": {
+    "email": "admin@admin.com",
+    "password": "admin",
+    "roles": ["admin"],
+    "name": "admin"
+  },
+  "siteSettings": {
+    "home": {
+      "title": "בניית חנות דיגיטלית לעסק שלך | חנות אונליין מהירה, מתקדמת ומניבה במחיר חד-פעמי",
+      "description": "הגיע הזמן לעבור לחנות דיגיטלית מודרנית משלך. אנו בונים חנויות אונליין בעיצוב אישי, עם חוויית קנייה מהירה בטירוף, ללא תלות בפלטפורמות סגורות, ללא עמלות מכירה חבויות, ועם עלויות תחזוקה אפסיות לחלוטין. הדרך הבטוחה להגדיל את המכירות בעסק.",
+      "faqs": [
+        {
+          "question": "מהן התכונות המרכזיות שאקבל בחנות הדיגיטלית החדשה שלי?",
+          "answer": "אתה מקבל חנות אונליין מלאה ומקצועית הכוללת דפי קטגוריות מעוצבים, דפי מוצר מפורטים, עגלת קניות חכמה ותהליך תשלום (Checkout) מהיר ומאובטח. מעבר לכך, תקבל מערכת ניהול נוחה וידידותית בעברית, המאפשרת לך לעדכן מוצרים, מחירים, מלאי ותמונות בקליק אחד ובאופן עצמאי לחלוטין, ללא צורך בידע טכני או בקוד."
+        },
+        {
+          "question": "כמה באמת עולה להחזיק את החנות? האם יש דמי מנוי חודשיים כמו בשופיפיי?",
+          "answer": "לא! החנות נבנית בקוד פתוח והיא בבעלותך המלאה. בניגוד לפלטפורמות כמו Shopify או Wix שגובות מאות שקלים בחודש ועמלות על כל מכירה, כאן אין דמי מנוי חודשיים ואין עמלות על המחזור שלך. יתרה מכך, עבור עסקים בתחילת הדרך או עם תנועה בינונית (Low-Mid Traffic), אנו מגדירים שרתים מתקדמים שמאפשרים לכם ליהנות מ-0 שקלים עלויות שרת חודשיות! אתה משלם על הבנייה פעם אחת, והחנות שלך לתמיד."
+        },
+        {
+          "question": "מדוע הטכנולוגיה של החנות הזו טובה יותר עבור העסק שלי מחנויות אחרות בשוק?",
+          "answer": "אנחנו בונים את החנות בטכנולוגיות המתקדמות ביותר בעולם (Next.js & React). בשפה פשוטה: זה גורם לאתר שלך לעלות במהירות הבזק (פחות משנייה). חנויות איטיות גורמות ללקוחות לעזוב ולנטוש את העגלה; החנות המהירה שלנו מייצרת חוויית קנייה חלקה בנייד ובמחשב, מה שמעלה משמעותית את אחוז הלקוחות שמשלימים רכישה ומכניסים לך כסף."
+        },
+        {
+          "question": "האם החנות מותאמת לקידום בגוגל (SEO) כדי שלקוחות ימצאו אותי?",
+          "answer": "בהחלט. קידום אורגני מובנה בתוך הארכיטקטורה של החנות. המערכת מייצרת באופן אוטומטי תגיות מטא, מפות אתר וקוד ייעודי שגורם למנוע החיפוש של גוגל להבין בדיוק אילו מוצרים אתה מוכר, מה המחיר שלהם והאם הם במלאי. זה עוזר לחנות שלך להתברג במיקומים גבוהים יותר בתוצאות החיפוש ומביא לקוחות חדשים בחינם."
+        },
+        {
+          "question": "האם אוכל לעדכן את עיצוב החנות או להוסיף שדות מיוחדים למוצרים בעתיד?",
+          "answer": "כן, הגמישות היא מוחלטת. החנות מתוכננת כך שהיא יכולה לצמוח יחד עם העסק שלך. אם תרצה להוסיף בעתיד שדות מיוחדים (כמו 'תעודת אחריות', 'מותג', או 'מפרט טכני לפריט'), המערכת תומכת בכך בקלות. העיצוב מודרני ונקי וניתן להתאמה אישית מלאה לפי המיתוג והשפה של העסק שלך."
+        },
+        {
+          "question": "איך אתם מבטיחים שהאתר יישאר מהיר גם אם יש הרבה מוצרים או שינויי מחירים?",
+          "answer": "האתר משתמש במערכת זיכרון מטמון (Caching) חכמה במיוחד. המשמעות היא שהאתר 'זוכר' את דפי המוצרים ולא צריך לטעון אותם מחדש מהבסיס בכל פעם שלקוח נכנס. ברגע שאתה משנה מחיר או מעדכן מוצר במערכת הניהול, האתר מעדכן באופן מיידי רק את מה שהשתנה. כך הלקוחות תמיד רואים מידע מעודכן והאתר נשאר מהיר כמו שד."
+        },
+        {
+          "question": "האם אקבל התראות אוטומטיות כשיש הזמנה חדשה באתר?",
+          "answer": "בוודאי, וזה אחד היתרונות הגדולים ביותר שלנו. ברגע שלקוח משלים רכישה, הוא מקבל באופן אוטומטי אישור הזמנה מעוצב למייל שלו. במקביל, אתה כבעל העסק יכול לקבל התראה מיידית והודעה ישירות ל-WhatsApp שלך! כך תדע על כל הזמנה בשנייה שהיא מבוצעת ותוכל להתחיל בהכנת המשלוח ללא עיכובים."
+        },
+        {
+          "question": "האם החנות כוללת חיבור לכלי ניתוח ומדידת ביצועים?",
+          "answer": "מדידה היא המפתח לצמיחה. החנות מגיעה מוכנה ומחוברת לכלי האנליטיקס המובילים בשוק: Google Analytics 4, הפיקסל של פייסבוק (Meta) והפיקסל של טיקטוק. המערכת לא רק מודדת מי נכנס לאתר, אלא עוקבת אחרי פעולות קריטיות: מי הוסיף מוצר לעגלה, מי התחיל תהליך תשלום ומי רכש בפועל. זה יאפשר לך לדעת בדיוק איזה קמפיין פרסומי מביא לך לקוחות ואיפה שווה להשקיע את תקציב השיווק."
+        },
+        {
+          "question": "האם החנות תומכת במכירת מוצרים עם וריאציות (כמו מידות או צבעים)?",
+          "answer": "בוודאי! החנות כוללת תמיכה מלאה במוצרים מורכבים בעלי מאפיינים משתנים (Variants). הלקוחות שלכם יוכלו לבחור בקלות את המידה המתאימה (למשל: S, M, L), את הצבע המבוקש (למשל: אדום, ירוק, כחול) או כל שילוב אחר של תכונות מוצר, כאשר המחיר והמלאי יכולים להתעדכן באופן אוטומטי בהתאם לבחירה שלהם."
+        }
+      ]
+    },
+    "footer": {
+      "title": "משתלת האונליין שלי",
+      "address": "תל-אביב",
+      "phone": "052-1234567",
+      "email": "ecommerce@payloadcms.com",
+      "website": "https://payloadcms.com",
+      "social": {
+        "instagram": "payloadcms",
+        "facebook": "payloadcms",
+        "whatsappNumber": "972521234567",
+        "whatsappMessage": "היי! יש לי שאלה לגבי הצמחים והעצים בחנות."
+      }
+    }
+  },
+
+  "variants": [
+    {
+      "label": "בחר מידה",
+      "name": "size",
+      "options": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "label": "בחר צבע",
+      "name": "color",
+      "options": ["אדום", "ירוק", "כחול"]
+    }
+  ],
+  "images": [
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-606506.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1302899.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1239387.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1521334884684-d80222895322.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-705310.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1464263866732-138a1da44860.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-937799.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1372896722-612x612.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1650627.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1508401531113-289ab4692d3b.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1701270631286-e2d64b957fa0.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3965563.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1568313081041-dbd174f69e3b.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1452767279788-ab97000beec6.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1715887643348-4d8f945cb0e3.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1545241047-6083a3684587.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1485902409384-e367af5b5c92.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/garden-rose-red-pink-56866.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1445962125599-30f582ac21f4.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-824572.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1597305877032-0668b3c6413a.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1103624.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3489128.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-247599.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952027.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-54300.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1520412099551-62b6bafeb5bb.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1569171181721-31a9e143e579.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1700213040248-254e9267dd3e.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-971360.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1859622.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2624677.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1470170.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395251.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4622253.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1974508.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-217763.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2026960.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1438404.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1006293.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/fern-leaf-roll-nature-66319.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1517848568502-d03fa74e1964.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-601047.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1615835624010-93a0138bfc10.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1614601750456-23f5823d2d6b.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1596046070666-473705748e6c.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1614876753060-0751185c9289.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-333634.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5706224.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2215534.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1495559493698-ae68846c94e8.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1634502.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1552248524-10d9a7e4841c.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1251026.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1072824.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1587131766835-e5dfaf70ea20.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-370472.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1380361370-612x612.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1471086569966-db3eebc25a59.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5858235.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2248529.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-370473.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1365772.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1464630043472-ebd571beafc4.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1090977.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1667385372949-ce58045f9d79.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1151418.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/wild-flower-background-flower-close-158711.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1437275537121-331a0457c8d6.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-395676.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1637424592613-0a99407a4925.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1613403210971-1fcefd3662b0.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1446292532430-3e76f6ab6444.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1302305.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952029.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4505469.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1604762525950-13c07ecdab8b.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/orchid-flower-plant-exotic-40744.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1532611322744-369123d95bd3.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1531875456634-3f5418280d20.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1517200578024-62d131797ec8.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1650989689559-c56d2c622019.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1547516508-e910d368d995.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1621788051568-dd6bbe1f2f5f.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5230925.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1607369799260-959137a24656.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395250.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-5942506.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1700213151787-e787938dd6cc.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1458596376782-d1c25e7da40e.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1931155.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-4065905.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1547414924-b71ebb598495.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-584764.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2421953.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1498735599329-ed6e3798cdcb.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/daisy-flower-spring-marguerite-67857.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-97801.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-1181366400-612x612.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1582131503261-fca1d1c0589f.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2395244.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1200225.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/basil-herbs-green-mediterranean-40720.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1312323.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1382195.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1605116958927-03653f6be547.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1525722752835-fdf3d77e9d03.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1530968348606-69c989d6efc9.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1584204559709-ca7d413229eb.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-3952031.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1527174843116-72e8211b429f.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-719756.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1353938.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1604762525953-2c80447cc4a6.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1509423350716-97f9360b4e09.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-2552418.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1713953.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-132474.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-97260.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1048036.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/istockphoto-2143490032-612x612.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1566836610593-62a64888a216.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1616472875095-670bc3848f8d.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1566553253535-64c91138b407.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1487190296540-b92a6b829973.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1506784693919-ef06d93c28d2.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/pexels-photo-1495170.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1694424988548-1cea2d57c1e1.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1599148401005-fe6d7497cb5e.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1598764557991-b9f211b73b81.jpg",
+    "https://racit0uja2cckwpw.public.blob.vercel-storage.com/products/photo-1570949144026-8f8141748760.jpg"
+  ],
+
+  "categories": [
+    {
+      "title": "עצים ארכיטקטוניים",
+      "description": "מבחר יוקרתי של עצים מלאי הוד והדר, שנועדו להעניק לגינה מבנה, צל ומחזה עונתי מרהיב. מעצים בעלי חופה רחבה וצמיחה מהירה כמו הטיפואנה, ועד לעצים עתיקים, מקודשים ונושאי פרי כמו התאנה – קטגוריה זו מציגה מינים המעצבים את קו הרקיע של הגינה ומעניקים יתרונות סביבתיים לדורות קדימה.",
+      "faqs": [
+        {
+          "question": "אילו עצים מתאימים ביותר לגינות עירוניות קטנות?",
+          "answer": "זנים קומפקטיים כמו רימון מליסי או ער אציל (דפנה) גזום הם אידיאליים, שכן הם מעניקים עניין אנכי ומראה מרשים מבלי לפתח מערכת שורשים אגרסיבית."
+        },
+        {
+          "question": "כל כמה זמן יש להשקות עצים שנשתלו לאחרונה?",
+          "answer": "עצים חדשים זקוקים להשקיה עמוקה פעם עד פעמיים בשבוע כדי להבטיח שגוש השורשים יתבסס היטב בעומק האדמה, במיוחד במהלך שני הקיצים הראשונים."
+        },
+        {
+          "question": "האם עצים דקורטיביים זקוקים לגיזום שנתי?",
+          "answer": "למרות שזה לא תמיד חובה, גיזום קל מדי שנה במהלך תקופת התרדמת מסייע בשמירה על מבנה בריא, מסיר ענפים יבשים ומעודד פריחה שופעת יותר."
+        },
+        {
+          "question": "כיצד בוחרים בין עץ נשיר לעץ ירוק-עד?",
+          "answer": "עצים ירוקי-עד מספקים פרטיות וחסימת רוח לאורך כל השנה, בעוד שעצים נשירים (כמו התות) מאפשרים לקרני השמש החמימות של החורף להגיע לגינה לאחר נשירת העלים."
+        }
+      ]
+    },
+    {
+      "title": "שיחים רב-תכליתיים",
+      "description": "עמוד השדרה של כל נוף פתוח. קולקציית השיחים שלנו מציעה הכל – החל משיחי פריחה מושכי מאביקים כמו נטופית רפואית (חמית), ועד לגדרות חיות, קשוחות ומגוננות כמו שזיף קראסי. צמחים רב-גזעיים אלו מוסיפים מרקם חיוני, מגדירים 'חדרים' בגינה ומספקים בתי גידול קריטיים לחיות הבר המקומיות, וכל זאת תוך דרישה לתחזוקה מינימלית לטווח הארוך.",
+      "faqs": [
+        {
+          "question": "אילו שיחים יוצרים את גדרות הפרטיות הטובות ביותר?",
+          "answer": "זנים ירוקי-עד בעלי עלווה צפופה, כגון ער אציל או קטלב (בן-עוזרר הודי), מצוינים ליצירת מחסומים חזותיים ואקוסטיים לאורך כל השנה."
+        },
+        {
+          "question": "מתי הזמן האופטימלי לשתילת שיחים חדשים?",
+          "answer": "תחילת הסתיו או תחילת האביב הן התקופות הטובות ביותר. הדבר מאפשר למערכת השורשים להתבסס בטמפרטורות מתונות לפני אתגרי חום הקיץ או קרה חורפית."
+        },
+        {
+          "question": "כיצד ניתן למנוע מהשיחים להפוך לדלילים וארוכים מדי?",
+          "answer": "גיזום קצוות קבוע או קיטום הצימוח החדש מעודדים את הצמח להתפצל נמוך יותר, מה שיוצר מראה מלא, עשיר וקומפקטי יותר."
+        },
+        {
+          "question": "האם ישנם שיחים המשגשגים באדמה דלה או סלעית?",
+          "answer": "בהחלט. שיחים מקבעי חנקן כמו אספסת שיחנית ומינים עמידים למליחות כמו מלוח, מותאמים במיוחד לשגשג ולפרוח בתנאי קרקע מאתגרים."
+        }
+      ]
+    },
+    {
+      "title": "גידולי גורמה למאכל",
+      "description": "הפכו את הגינה שלכם למזווה חי ותוסס עם עצי פרי בעלי תנובה גבוהה וצמחים עשירים ברכיבים תזונתיים. קטגוריה זו כוללת מעדנים אקזוטיים כמו שעועית הגלידה (אינגה), גידולים מסורתיים כמו רימוני 'שבעת המינים', ואת המורינגה המכונה 'עץ הפלא'. מושלם עבור אלו השואפים לאורח חיים בר-קיימא של 'מהגינה לצלחת'.",
+      "faqs": [
+        {
+          "question": "האם ניתן לגדל צמחי מאכל נושאי פרי במיכלים ועציצים?",
+          "answer": "צמחי מאכל רבים, כולל אלוורה, רימונים ואפילו זנים מסוימים של תות, יכולים לשגשג בעציצים גדולים, כל עוד מספקים להם חומרי הזנה ודשן באופן קבוע."
+        },
+        {
+          "question": "האם צריך לשתול שני זנים שונים לצורך האבקה?",
+          "answer": "למרות שרבים מהזנים שנבחרו אצלנו (כמו תאנים) הם פוריים מעצמם, שתילת זן שני מאותו המין מובילה לרוב ליבולים שופעים יותר ופירות באיכות גבוהה יותר."
+        },
+        {
+          "question": "מהם היתרונות של צמחי מאכל 'מקבעי חנקן'?",
+          "answer": "צמחים כמו אפונת היונה או אספסת שיחנית למעשה משביחים את האדמה תוך כדי צמיחתם – הם מספקים לכם מזון ובמקביל מדשנים את הצמחים שסביבם."
+        },
+        {
+          "question": "כיצד ניתן לטפל במזיקים בצמחי מאכל ללא חמיקלים?",
+          "answer": "שתילת חברים (שתילה משולבת) לצד עשבי תיבול ארומטיים (כמו מנטה או טגטס לימוני) יכולה להרחיק מזיקים באופן טבעי, ועטיפת הפירות בשקיות הגנה היא שיטה יעילה ביותר לעצירת זבובי פירות."
+        }
+      ]
+    },
+    {
+      "title": "עשבי תיבול ארומטיים",
+      "description": "קולקציה חושית של עשבי תיבול קולינריים, רפואיים וניחוחים. צמחים אלו, החל מלואיזה (מליסה) מרגיעה ועד למרווה ריחנית ועוצמתית, נבחרו בשל תכולת השמנים האתריים הגבוהה שבהם וקלות גידולם. אידיאלי עבור גינות מטבח, ארומתרפיה ומשיכת מאביקים מועילים לחצר האחורית שלכם.",
+      "faqs": [
+        {
+          "question": "אילו עשבי תיבול הם הטובים ביותר לדחיית מזיקים באופן טבעי?",
+          "answer": "לבנדר, טגטס לימוני ומנטה ידועים ביכולתם המוכחת להרחיק יתושים, כנימות וחרקי גינה מציקים אחרים."
+        },
+        {
+          "question": "כיצד אוכל להבטיח שלעשבי התיבול שלי יהיה את הטעם החזק ביותר?",
+          "answer": "מרבית עשבי התיבול מייצרים את השמנים העוצמתיים ביותר כאשר הם גדלים בשמש מלאה ונמצאים תחת 'סטרס' מתון של השקיה מבוקרת, במקום דישון יתר."
+        },
+        {
+          "question": "האם ניתן לגדל עשבי תיבול ארומטיים בהצלחה בתוך הבית?",
+          "answer": "כן, כל עוד יש לכם חלון פונה לדרום. גרניום לימוני ועירית שום מתאימים במיוחד לאדני חלונות פנימיים ומוארים."
+        },
+        {
+          "question": "מדוע קטיף קבוע כל כך חשוב לעשבי תיבול?",
+          "answer": "הקטיף מונע מהצמח להשקיע את האנרגיה שלו בייצור זרעים (פריחה ופריצה). גיזום תכוף שומר על העלווה צעירה, רכה, רעננה ומלאת טעם."
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "title": "פיגם מצוי (רודה)",
+      "description": "שיח ירוק-עד קומפקטי ומהפנט (בגובה 0.5–1 מטר) המתהדר בעלווה ארומטית בגוון כחול-פלדה ייחודי ובפריחה צהובה ועזה המושכת את העין. לפיגם המצוי, המוכר בפולקלור ובמסורות עתיקות כ-'עשב החסד', יש נוכחות ארכיטקטונית פיסולית המעניקה לגינה פלטת צבעים מתוחכמת ואצילית. הוא ניחן בעמידות יוצאת דופן לתנאי קיצון, ומשגשג באדמות דלות ובתנאי יובש וחום כבדים – דווקא במקומות שבהם צמחים אחרים ירימו ידיים.",
+      "faqs": [
+        {
+          "question": "האם בטוח לגעת בצמח הפיגם?",
+          "answer": "יש לנקוט במשנה זהירות! המוהל (השרף) של הפיגם המצוי עלול לגרום לגירויים קשים בעור או לתגובה 'פוטוטוקסית' (היווצרות שלפוחיות וכוויות כאשר העור בא במגע עם השרף ונחשף לאור השמש). מומלץ מאוד לעטות כפפות מגן עבות בכל פעולת גיזום או טיפול בצמח."
+        },
+        {
+          "question": "האם לצמח יש ריח חזק?",
+          "answer": "בהחלט. לפיגם יש ניחוח דומיננטי מאוד, מריר, כבד ועמוק. גננים רבים בוחרים לשתול אותו בנקודות אסטרטגיות בגינה בדיוק בגלל התכונה הזו, שכן הניחוח העז שלו משמש כדוחה טבעי מעולה לעטלפים, חתולים משוטטים או מזיקים לא רצויים."
+        },
+        {
+          "question": "האם ניתן להשתמש בו בבישול ובקולינריה?",
+          "answer": "הפיגם משתלב במספר מתכונים מסורתיים ומשקאות חריפים (כמו ה-'גראפה' האיטלקית או שילובו המסורתי בקפה אתיופי), אך יש להשתמש בו במשורה ובכמויות זעירות בלבד (עלים בודדים). צריכה של כמויות גדולות מהצמח עלולה להיות רעילה ומסוכנת לגוף."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "מרקו ד.",
+          "rating": 4,
+          "title": "עלווה כחולה משגעת",
+          "body": "הצבע של הצמח הזה פשוט לא מהעולם הזה – תחת קרני השמש הוא מקבל גוון כחול-כסוף מהמם. רק תהיו זהירים עם השרף שלו; למדתי בדרך הקשה שחייבים ללבוש כפפות כשגוזמים אותו!"
+        },
+        {
+          "authorName": "ג'וליה ו.",
+          "rating": 5,
+          "title": "חסין לחלוטין מפני יובש",
+          "body": "שתלתי אותו בפינה הכי חמה ויבשה אצלי בחצר, והוא פשוט משגשג ופורח. הפרחים הצהובים שלו יוצרים קונטרסט משגע ומרהיב על רקע העלים הכחלחלים."
+        }
+      ]
+    },
+    {
+      "title": "לבנדר משונן (לוונדר צרפתי)",
+      "description": "שיח ירוק-עד שובבה ומקסים המגיע לגובה של 60–80 ס\"מ, המצטיין בעלווה ירוקה וייחודית בעלת שוליים 'משוננים' (כמו מסור) ובגבעולי פריחה זקופים בצבע סגול ויברנטי עמוק. זן זה הוא אלוף פריחה אמיתי, המציג חגיגה ססגונית כמעט לאורך כל השנה באקלים ים-תיכוני מתון. הוא מפיץ ניחוח רענן, נקי ודומיננטי המזכיר קמפור, המסייע באופן טבעי בהרחקת יתושים ומזיקים מעופפים – מה הופך אותו לתוספת פונקציונלית, ריחנית ויפהפייה לכל מרפסת, פטיו או ערוגת גינה.",
+      "faqs": [
+        {
+          "question": "במה שונה הלבנדר המשונן מהלבנדר האנגלי הנפוץ?",
+          "answer": "הלבנדר המשונן מתאפיין בשולי עלים גזורים ומשוננים ובניחוח יותר שרפי, רענן ומעורר. בנוסף, תקופת הפריחה שלו ארוכה ורציפה משמעותית, ובאזורים בעלי חורף מתון הוא ממשיך להוציא פרחים סגולים מרהיבים גם בעיצומו של החורף."
+        },
+        {
+          "question": "כיצד ניתן למנוע מהלבנדר להפוך ל'עצי' ודליל בחלקו התחתון?",
+          "answer": "הסוד הוא גיזום קל ותכוף של הגבעולים הירוקים מיד לאחר סיום כל גל פריחה. חשוב מאוד לעולם לא לגזום עמוק מדי לתוך הענפים הישנים והחומים (החלק המעוצה), מכיוון שהצמח יתקשה מאוד ללבלב ולצמוח מחדש מתוך עץ זקן."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "סופי ט.",
+          "rating": 5,
+          "title": "פורח ללא הפסקה כל השנה",
+          "body": "בזמן שהלבנדר האנגלי שלי נמצא בתרדמת חורף, הזן המשונן הזה ממשיך לייצר פרא של פרחים סגולים ויפים אפילו בדצמבר. העלווה שלו רכה למגע ונראית מדהים כששתולים כמה שיחים יחד במקבץ."
+        },
+        {
+          "authorName": "ליאם פ.",
+          "rating": 5,
+          "title": "יתושים פשוט שונאים אותו",
+          "body": "מיקמתי כמה כאלה בעציצים גדולים סביב פינת הישיבה שלנו בחצר. בכל פעם שנוגעים בצמח או עוברים לידו, ניחוח רענן של אורנים ולבנדר ממלא את האוויר, וזה באמת עושה עבודה מעולה בהרחקת המעופפים המציקים."
+        }
+      ]
+    },
+    {
+      "title": "לואיזה לימונית (לואיזה)",
+      "description": "המלכה הבלתי מעורערת של עשבי התיבול בעלי ניחוח הלימון. שיח אלגנטי ושופע זה מגיע לגובה של 1–2 מטרים, ומצמיח עלים צרים ומוארכים המכילים שמן אתרי בניחוח ציטרוס טהור, עמוק ואינטנסיבי – העולה בעוצמתו אפילו על הפרי עצמו. הלואיזה מוערכת מאוד בזכות חליטות התה המרגיעות והבריאות שניתן להכין מעליה, ובזכות היכולת שלה להעניק נגיעה לימונית מרעננת ומתוחכמת לקינוחים ומאפים ללא החמיצות המאפיינת מיץ לימון. צמח חובה מנצח לכל גינה חושית.",
+      "faqs": [
+        {
+          "question": "האם הלואיזה עמידה בפני קור וחורף?",
+          "answer": "הלואיזה רגישה למצבי קרה וקפיאה. באזורים רבים היא מתנהגת כנשירה ומשירה את עליה במהלך החורף כחלק ממנגנון ההגנה שלה, לכן אין צורך להיכנס לפאניקה אם השיח נראה עירום – עם בוא האביב והתחממות מזג האוויר, היא תלבלב מחדש במהירות ובעוצמה."
+        },
+        {
+          "question": "כיצד מכינים את חליטת התה המושלמת מעלי לואיזה?",
+          "answer": "קטפו עלים טריים ובריאים, כווצו או חרצו אותם קלות ביד כדי לפצוע את התאים ולשחרר את השמנים האתריים המרוכזים, והשרו אותם במים רותחים למשך כ-5 דקות. מתקבל תה בעל מתיקות טבעית מעודנת, ניחוח משכר ותכונות מרגיעות להפליא."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אלנה ר.",
+          "rating": 5,
+          "title": "הניחוח פשוט אלוהי",
+          "body": "ניסיתי בעבר לגדל מליסה וקורנית לימונית, אבל שום דבר לא מתקרב לריח הלימון הטהור והנקי של הלואיזה הזו. מספיק עלה אחד קטן בתוך בקבוק מים כדי לקבל משקה מרענן וטעים בטירוף."
+        },
+        {
+          "authorName": "דוד ק.",
+          "rating": 4,
+          "title": "צומחת בקצב מטורף",
+          "body": "התחיל אצלי כשתיל קטן בעציץ צנוע והפך בתוך עונה אחת בלבד לשיח ענק ומפואר בגובה מטר וחצי! תנו לה המון מקום להתפרס ושפע של שמש ישירה."
+        }
+      ]
+    },
+    {
+      "title": "טיפואנה טיפו (גאווה של בוליביה)",
+      "description": "עץ צל מפואר, מלכותי ונוטף הוד, המפורסם בזכות חופתו הרחבה והמרהיבה הנפרסת כמו שמשיית ענק, ובזכות תצוגת פריחה אביבית עוצרת נשימה של פרחים בצבע צהוב-זהב עז. עץ זה, המכונה לעיתים 'הגאווה של בוליביה', הוא ענק בעל קצב צמיחה מהיר במיוחד שיכול להפוך נוף פתוח, צרוב שמש וחם לנווה מדבר קריר, מוצל ונעים. כאשר הפרחים מסיימים את תפקידם ונושרים, הם מרהטים את הקרקע שמתחת לעץ בשטיח זהוב ומהפנט ביופיו.",
+      "faqs": [
+        {
+          "question": "האם מערכת השורשים של הטיפואנה נחשבת לאגרסיבית?",
+          "answer": "כן, בהחלט. בשל ממדיו הגדולים, חיוניותו המרשימה ומערכת השורשים החזקה שלו, חשוב מאוד לשתול את העץ במרחק ביטחון של לפחות 10 מטרים מיסודות של מבנים, בריכות שחייה, קירות תמך או צינורות תשתית תת-קרקעיים."
+        },
+        {
+          "question": "תוך כמה זמן העץ יתחיל לספק צל משמעותי בגינה?",
+          "answer": "מהר מאוד! הטיפואנה הוא אחד מעצי הצל הנשירים בעלי קצב הצימוח המהיר ביותר שניתן למצוא. בשנותיו הראשונות, תחת תנאים אופטימליים, הוא מסוגל להוסיף לגובהו למעלה ממטר שלם בכל שנה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ויקטור מ.",
+          "rating": 5,
+          "title": "עץ הצל האולטימטיבי",
+          "body": "שתלנו אותו כדי לחסום את השמש המערבית החזקה מעל דק העץ שלנו. בתוך שלוש שנים בלבד קיבלנו חופת צל מלאה ומפנקת. הפריחה הצהובה שמכסה אותו פשוט עוצרת נשימה."
+        },
+        {
+          "authorName": "שרה ה.",
+          "rating": 4,
+          "title": "יפהפה, אבל דורש מרחב",
+          "body": "ודאו היטב שיש לכם חצר גדולה ומרווחת מספיק לפני שאתם בוחרים בו. זה עץ מדהים ביופיו, אבל הוא מייצר כמות גדולה של זרעים מכונפים (הנראים כמו מסוקים קטנים) שנוטים לעוף ולהצטבר במרזבים."
+        }
+      ]
+    },
+    {
+      "title": "ער אציל (עץ דפנה)",
+      "description": "עשב התיבול הים-תיכוני האולטימטיבי והקלאסי. שיח או עץ ירוק-עד ורב-תכליתי זה מייצר עלים גלדניים, מבריקים ובגוון ירוק-כהה עמוק, המהווים רכיב קבוע ובלתי נפרד במטבחים ובקדרה ברחבי העולם כולו. מעבר לערכו הקולינרי העצום, הער האציל הוא צמח נוי חסון ומרשים המגיב בצורה יוצאת מן הכלל לגיזום עיצובי (טופיארי). בין אם הוא גדל כעץ זקוף וגבוה ובין אם הוא מעוצב ככדור סימטרי בעציץ מהודר, הוא מביא עמו אלגנטיות קלאסית ואירופאית לכל גינה.",
+      "faqs": [
+        {
+          "question": "כיצד מומלץ לייבש את עלי הדפנה לאחר הקטיף?",
+          "answer": "הניחו את העלים שקטפתם בין דפים של ספרים כבדים או בין ניירות סופגים למשך 10–14 ימים במקום יבש. תהליך הייבוש המבוקר מעלים את המרירות הקלה הקיימת בעלים הטריים ומנטרל אותה, ובמקביל מרכז ומעצים את השמנים הארומטיים הנפלאים שבהם."
+        },
+        {
+          "question": "האם ניתן לגדל ער אציל כגדר חיה?",
+          "answer": "בהחלט כן! הער האציל יוצר גדר חיה עבותה, ירוקת-עד, צפופה וריחנית להפליא. בעזרת גיזום ותספורת קבועה, ניתן לשמור עליו בקלות בכל גובה ורוחב רצויים כדי ליצור מיסוך מושלם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "איזבלה ס.",
+          "rating": 5,
+          "title": "חלק בלתי נפרד מהמטבח",
+          "body": "אני פשוט מתה על האפשרות לצאת לרגע לגינה, לקטוף עלה טרי של דפנה ולזרוק אותו ישר לתוך רוטב הספגטי שלי. הצמח עצמו נראה מרשים מאוד, אלגנטי ושומר על צבע ירוק רענן לאורך כל החורף."
+        },
+        {
+          "authorName": "תום ב.",
+          "rating": 5,
+          "title": "מצוין לגידול בעציצים",
+          "body": "אני מגדל את עץ הדפנה שלי בתוך כד חרס גדול כבר 5 שנים. אני גוזם ומעצב אותו בקפידה לצורת כדור מושלם, והוא מעניק מראה יוקרתי ואריסטוקרטי ממש בכניסה לבית."
+        }
+      ]
+    },
+    {
+      "title": "אספסת שיחנית",
+      "description": "שיח ירוק-עד חסון וקשוח ממשפחת הקטניות, הצומח לגובה של 1–2 מטרים ומהווה תחנת כוח אמיתית לשיבוח והעשרת בריאות הקרקע. השיח מצטיין בעלווה עדינה בגוון ירוק-כסוף ובפריחה שופעת של פרחים פרפרניים בצבע צהוב זרחני הפורחים בשלהי החורף ובאביב המוקדם. כצמח מקבע חנקן, הוא מעשיר ומדשן את האדמה באופן טבעי לחלוטין, מה שהופך אותו לבחירה פונקציונלית, אקולוגית ויפהפייה עבור גינות בנות-קיימא, בוסתנים וגינות באזורי קו חוף.",
+      "faqs": [
+        {
+          "question": "מה המשמעות של היות הצמח 'מקבע חנקן'?",
+          "answer": "לאספסת השיחנית יש יכולת מרתקת לקלוט חנקן חופשי מהאוויר, לעבד אותו באמצעות בקטריות סימביוטיות באזור השורשים ולתרגם אותו לחנקן זמין באדמה. בכך הוא מתפקד כדשן טבעי ואורגני לחלוטין המזין את עצמו ואת כל הצמחים השכנים שגדלים סביבו."
+        },
+        {
+          "question": "האם הצמח מתאים לשתילה בגינות קרובות לים?",
+          "answer": "כן, ובאופן מושלם. אספסת שיחנית מגלה עמידות יוצאת דופן לרסס מלח מהים, לרוחות חזקות וליובש, מה שהופך אותה לפתרון אידיאלי ומנצח עבור פרויקטים של גינון וייצוב קרקע באזורי חוף מאתגרים."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ג'וליאן ס.",
+          "rating": 5,
+          "title": "צמח חלוץ מושלם לקרקע",
+          "body": "שתלתי כמה שיחים כאלה בנקודה חולית ושטופת רוחות חזקות ששום דבר אחר לא הצליח לשרוד בה. לא רק שהם שרדו בגבורה, הם שיבחו את האדמה בצורה כזו שהיום אני יכול סוף סוף לגדל פרחים עדינים ממש לידם."
+        },
+        {
+          "authorName": "מירה ת.",
+          "rating": 4,
+          "title": "צבע אביבי משגע",
+          "body": "הפריחה הצהובה שלו פשוט מאירה את הגינה בסוף החורף. הוא עלול להפוך למעט דליל ופרוע אם לא מקפידים לגזום אותו מדי פעם, אבל מעבר לזה – מדובר בשיח קל לגידול בצורה בלתי רגילה."
+        }
+      ]
+    },
+    {
+      "title": "אלוורה (אלו ורה)",
+      "description": "סוקולנט בעל שם עולמי, המוערך והנערץ מזה אלפי שנים בזכות עליו הבשרניים והעבים המכילים ג'ל רפואי בעל אפקט קירור והרגעה מיידי. 'בית מרקחת חי' זה הוא פריט חובה בכל בית לטיפול מהיר בכוויות קלות, עקיצות וגירויי עור שונים. האלוורה היא צמח חסכוני במים בצורה קיצונית, קלה לתחזוקה באופן מעורר השראה, ומהווה אלמנט פיסולי ומבני מרשים בגינות סלעים, כמו גם צמח בית שימושי ומרהיב על אדני חלונות מוארים.",
+      "faqs": [
+        {
+          "question": "כיצד מומלץ להפיק ולחלץ את הג'ל מתוך העלה?",
+          "answer": "חתכו בעזרת סכין חדה את אחד העלים החיצוניים והבוגרים ביותר קרוב לבסיס הצמח. העמידו את העלה במצב אנכי למשך מספר דקות כדי לאפשר למוהל הצהוב והמר (אלואין) להתנקז החוצה. לאחר מכן, חתכו את שולי העלה הקוצניים, קלפו את הקליפה הירוקה וגרדו בעזרת כפית את הג'ל השקוף, הטהור והמרענן שנמצא בפנים."
+        },
+        {
+          "question": "האם צמח האלוורה יכול להישאר בחוץ במהלך החורף?",
+          "answer": "האלוורה רגישה מאוד לקרה ולטמפרטורות קיפאון. העלים שלה מלאים במים, ולכן אם הטמפרטורות צונחות מתחת לאפס, המים בתוך העלים עלולים לקפוא, מה שיוביל לפיצוץ תאי הצמח ויהפוך את העלים הסוקולנטיים לסמרטוטים רכים ורקובים. באזורים קרים מומלץ להעביר אותה למקום מוגן או לתוך הבית."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אלנה ג.",
+          "rating": 5,
+          "title": "פריט חובה בכל מטבח",
+          "body": "אני משתמשת בו קבוע לכוויות קטנות של תנור ומחבתות במטבח. הג'ל הטרי מרגיע את העור ועובד מהר יותר מכל משחה קנויה. מה גם שכמעט בלתי אפשרי להרוג את הצמח הזה, כל עוד לא מגזימים איתו בהשקיה."
+        },
+        {
+          "authorName": "דוד ו.",
+          "rating": 5,
+          "title": "צמח מבני ופיסולי נהדר",
+          "body": "שילבתי קבוצה שלהם בגינת הסלעים שלי. יש להם מראה אקזוטי ומפוסל והם שרדו גל חום קיצוני וממושך בלי לקבל טיפת מים אחת. קשוחים אמיתיים."
+        }
+      ]
+    },
+    {
+      "title": "מליסה רפואית",
+      "description": "עשב תיבול רב-שנתי שופע, רענן וירוק ממשפחת השפתניים (משפחת המנטה), האהוב והמוערך בזכות עליו המפיצים ניחוח לימוני-הדרי משכר ומרגיע. המליסה הרפואית, המסוגלת להגיע לגובה של עד מטר אחד, היא עמוד תווך בגינות מרפא ורווחה (Wellness) בזכות סגולותיה המוכחות להפחתת מתחים, הרגעת מערכת העצבים ושיפור איכות השינה. היא חסונה וקלה לגידול, ומעניקה מראה רענן לכל ערוגה שמשית, אם כי מומלץ לנהל את צמיחתה בשל נטייתה להתפשט במרחב.",
+      "faqs": [
+        {
+          "question": "האם המליסה מתפשטת באגרסיביות באדמה בדומה לצמח הנענע?",
+          "answer": "כן, בהחלט. למליסה יש מערכת שורשים נמרצת מאוד והיא נוטה להתפשט ולזרוע את עצמה בקלות. כדי למנוע ממנה להשתלט על ערוגות הגינה שלכם ולדחוק צמחים אחרים, מומלץ מאוד לגדל אותה בתוך מיכלים ועציצים מוגדרים או להשתמש במחסומי שורשים תת-קרקעיים."
+        },
+        {
+          "question": "כיצד משתמשים במליסה להפגת מתחים והרגעה?",
+          "answer": "הדרך הקלאסית והיעילה ביותר היא לחלוט עלים טריים או מיובשים במים חמים להכנת תה מרגיע. בנוסף, עצם פעולת המילול והשפשוף של העלים בין האצבעות משחררת שרשרת של שמנים אתריים נדיפים המעניקים אפקט ארומתרפי מרגיע ומפקס באופן מיידי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "סופי ל.",
+          "rating": 5,
+          "title": "עשב התיבול האהוב עליי לתה",
+          "body": "אני שותה כוס של חליטת מליסה בכל ערב לפני השינה וזה פשוט עושה פלאים להרגעה. רק תהיו חכמים לגבי המיקום שבו אתם שותלים אותה – יש לה נטייה רצינית לטייל ולתפוס שטח בגינה!"
+        },
+        {
+          "authorName": "ברק פ.",
+          "rating": 4,
+          "title": "הדבורים משוגעות על הפרחים",
+          "body": "שתלתי אותה בעיקר בשביל הריח הלימוני, אבל הבונוס האמיתי הוא כמות הדבורים והמאביקים שהיא מושכת לגינה. היא צומחת מהר מאוד ונשארת ירוקה ושופעת לאורך כל הקיץ."
+        }
+      ]
+    },
+    {
+      "title": "צחנן מבאיש",
+      "description": "שיח ים-תיכוני ייחודי ויוצא דופן ממשפחת הפרפרניים, המוכר בזכות תכונתו המרתקת לפרוח דווקא בעיצומו של החורף. הצמח מייצר תפרחות מרשימות בגוון צהוב-ירקרק ייחודי בתקופה שבה מרבית הצמחים בגינה נמצאים בתרדמת עמוקה. בעוד שעלוותו מפיצה ריח חריף ודומיננטי כאשר ממוללים או פוצעים אותה (ומכאן שמו), השיח מוערך מאוד בזכות המבנה הפיסולי שלו, עמידותו המוחלטת ליובש קיצוני, ויכולתו לקבע חנקן ולשפר את איכות הקרקעות הסלעיות והקשות ביותר.",
+      "faqs": [
+        {
+          "question": "מדוע לצמח יש ריח כה חזק וחריף?",
+          "answer": "הריח החריף והדומיננטי הוא מנגנון הגנה אבולוציוני מתוחכם שפיתח הצמח כדי להרחיק ממנו בעלי חיים צמחוניים ורעיית יתר. הניחוח מורגש בעיקר אם פוגעים בעלים, מועכים אותם או גוזמים את הענפים."
+        },
+        {
+          "question": "האם צמח הצחנן נחשב לרעיל?",
+          "answer": "כן, הצמח כולו, ובעיקר הזרעים השחורים המתפתחים בתוך התרמילים שלו, מכילים אלקלואידים רעילים בריכוז גבוה. יש לטפל בצמח בזהירות, לשטוף ידיים לאחר הטיפול בו, ולהרחיק אותו מאזורי משחק של ילדים קטנים או חיות מחמד סקרניות."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "יוני ה.",
+          "rating": 4,
+          "title": "פורח חורפי ייחודי ומעניין",
+          "body": "זה פשוט תענוג לראות פריחה מלאה אצלך בגינה בחודש פברואר. הריח שלו אכן מעט מוזר, אבל מרגישים אותו רק אם ממש נוגעים ומחככים את העלים. שורד קשוח ואמיתי בגינה היבשה שלי."
+        },
+        {
+          "authorName": "טליה ש.",
+          "rating": 4,
+          "title": "נוי בלבד – ללא מאכל!",
+          "body": "מבנה ארכיטקטוני יפה ומרשים, ופרחים בעלי מראה סקרן ומיוחד מאוד. פשוט ודאו שכל מי שמסתובב בגינה מבין שלא מדובר בתרמילים אכילים ושאסור לגעת בזרעים."
+        }
+      ]
+    },
+    {
+      "title": "גויאבה תותית",
+      "description": "שיח או עץ קטן ירוק-עד ויפהפה שמקורו בברזיל, הנערץ בזכות עלוותו המבריקה והגלדנית ופירותיו האדומים-עמוקים והטעימים. הצמח מסוגל להגיע לגובה של עד 6 מטרים, ומצטיין כגדר חיה אכילה, צפופה ודקורטיבית להפליא. הפירות הריחניים מציעים פרופיל טעם ייחודי וממכר – שילוב מושלם בין המתיקות הטרופית של הגויאבה הקלאסית לבין סיומת חמצמצה של תות שדה טרי. הפרי עשיר בויטמין C ונוגדי חמצון, ומתאים לקטיף ישיר מהעץ, להכנת ריבות משובחות, ג'לי או קינוחים.",
+      "faqs": [
+        {
+          "question": "מהו פרופיל הטעם המדויק של הפרי?",
+          "answer": "הגויאבה התותית מתוקה משמעותית מהגויאבה הטרופית הרגילה, והיא נטולת הריח הדומיננטי והמוסקטי שלעיתים מרתיע אנשים בגויאבה הלבנה. יש לה ארומה פירותית נהדרת וטעם מעודן שמזכיר שילוב של תות שדה, שסק וציטרוס."
+        },
+        {
+          "question": "האם הגויאבה התותית מסוגלת להתמודד עם תנאי קרה וחורף?",
+          "answer": "כן, היא נחשבת לעמידה משמעותית לקור בהשוואה לגויאבה המסחרית הרגילה. היא מסוגלת לשרוד אירועי קרה קלים ללא נזק משמעותי, אך במקרים של טמפרטורות קפיאה ממושכות מומלץ להגן עליה כדי למנוע פגיעה בנוף העץ וביעילות הפריצה באביב."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "קרלוס מ.",
+          "rating": 5,
+          "title": "הפרי הכי טעים בבוסתן שלי",
+          "body": "הפירות אמנם קטנים יחסית (בגודל של כדור פינג-פונג), אבל הם מפוצצים בטעם משגע. הילדים שלי טורפים אותם ישירות מהשיח. המראה של הפירות האדומים על רקע העלים הירוקים והמבריקים הוא פשוט מחזה מרהיב."
+        },
+        {
+          "authorName": "לינדה ק.",
+          "rating": 4,
+          "title": "גדר חיה מצוינת ופוטוגנית",
+          "body": "אני משתמשת בצמח הזה כמסך פרטיות מול השכנים. הוא צומח בצפיפות ונראה נהדר וירוק לאורך כל השנה. הטיפ היחיד שלי הוא לעקוב ולטפל בזבובי פירות כשהפירות מתחילים להבשיל ולהאדים."
+        }
+      ]
+    },
+    {
+      "title": "ער אציל - עץ גדול",
+      "description": "הגרסה המלכותית והמעוצבת כעץ מפותח של צמח התבלין הים-תיכוני הקלאסי, המסוגלת להגיע בתנאים אופטימליים לגובה מרשים של עד 10 מטרים. הוא משמש כנקודת מיקוד (פוקוס) ירוקת-עד ומפוארת בנוף הגינה, או כמסך רוח צפוף, חסון וריחני להפליא. עליו העבים, הנוקשים והגלדניים מהווים את חותם האיכות והסטנדרט המוביל לתיבול תבשילי קדרה, מרקים ורטבים ברחבי הגלובוס כולו. חסנותו הטבעית והמבנה החזק שלו הופכים אותו לעץ עמיד במיוחד המסתגל בקלות גם לתנאי זיהום אוויר ועירוניים מאתגרים.",
+      "faqs": [
+        {
+          "question": "מהו קצב הצמיחה של עץ הער האציל בגרסתו הגדולה?",
+          "answer": "עצי ער אציל מתאפיינים בקצב צמיחה איטי עד בינוני. עשויים לחלוף מספר עשורים עד שהעץ יגיע לשיא גובהו המקסימלי, אך הוא מפתח חופה יפה, מעוצבת ומלאה המעניקה צל נעים ואיכותי כבר בשלבים מוקדמים יחסית של צמיחתו."
+        },
+        {
+          "question": "האם ניתן להשתמש בעץ דפנה גדול ליצירת גדר חיה גבוהה במיוחד?",
+          "answer": "כן, ובהצלחה יתרה. הוא פתרון מושלם ליצירת חומות ירוקות גבוהות וירוקות-עד לצורך הסתרה מלאה או חסימת רוחות. העץ מגיב מצוין לגיזום ועיצוב קבוע, מה שמאפשר לשמור עליו בקלות במידות הגובה והרוחב המדויקות הנדרשות לכם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אנטוני ו.",
+          "rating": 5,
+          "title": "קלאסיקה נצחית בגינה",
+          "body": "אין תחליף להרגשה של לצאת לחצר ולקטוף עלי דפנה טריים ובשרניים ישירות מהעץ בשביל תבשילי החורף שלנו. העץ עצמו פשוט מרשים, בעל נוכחות אצילית ומעניק רקע ירוק-כהה ועמוק שמקפיץ את המראה של שאר הצמחים סביבו."
+        },
+        {
+          "authorName": "שרה ד.",
+          "rating": 5,
+          "title": "עמיד וחסין בצורה בלתי רגילה",
+          "body": "העץ שלנו עבר גלי חום קשים, ימי שרב ורוחות חורף מטורפות מבלי להראות שמץ של פגיעה או סימני מצוקה. עץ אצילי, מכובד ומאוד דל בדרישות תחזוקה."
+        }
+      ]
+    },
+
+    {
+      "title": "עוזרר הודי (רפיוליפיס הודי)",
+      "description": "שיח ירוק-עד חסון, אמין ומלא חן, המהווה בחירה מועדפת עבור פרויקטים של גינון ועיצוב נוף הדורשים תחזוקה מינימלית. עם בוא האביב, השיח מתכסה במרבדים מרהיבים של אשכולות פריחה עדינים בגווני ורוד ולבן רך. עליו הגלדניים והחזקים מפגינים עמידות יוצאת דופן לרסס מלח מן הים ולרוחות עזות, מה שכתיר אותו כבחירה המושלמת עבור גינות בקו חוף, מדרונות מאתגרים או ככיסוי קרקע דקורטיבי ושופע.",
+      "faqs": [
+        {
+          "question": "האם השיח זקוק לגיזום תכוף?",
+          "answer": "בכלל לא. העוזרר ההודי ניחן בקצב צמיחה איטי ומתון באופן טבעי, והוא שומר על מבנה כדורי, צפוף ומסודר גם ללא התערבות או תספורות תכופות."
+        },
+        {
+          "question": "מדוע מופיעים כתמים כהים על גבי העלים?",
+          "answer": "תופעה זו נגרמת לרוב על ידי פטריית ה-'אנטומוספוריום' (Entomosporium). כדי לשמור על עלווה נקייה ובריאה, ודאו כי הצמח נהנה מזרימת אוויר טובה וסביבה מאווררת, והימנעו ככל הניתן מהשקיה עיליית המרטיבה את העלים ישירות."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ברנדה פ.",
+          "rating": 5,
+          "title": "צמח חסין כדורים",
+          "body": "שתלתי שורה של שיחי עוזרר לאורך שביל הגישה המרכזי לבית. הם נראים פשוט מושלם לאורך כל השנה, והפריחה האביבית שלהם משגעת. אפס מאמץ ותמורה מקסימלית."
+        },
+        {
+          "authorName": "ג'ף ב.",
+          "rating": 4,
+          "title": "פתרון מנצח לקו החוף",
+          "body": "מגורים בקרבת הים הופכים את הגינון למשימה קשה ומאתגרת, אבל השיח הזה פשוט מצפצף על המליחות באוויר. בחירה סופר אמינה לבתי חוף."
+        }
+      ]
+    },
+    {
+      "title": "עשב לימון (למון גראס)",
+      "description": "עשב דגני ארומטי ורב-שנתי המביא את הניחוחות והטעמים הקסומים של דרום-מזרח אסיה ישירות אל הגינה שלכם. עשב הלימון צומח במקבצים (גושים) זקופים וצפופים של עלים צרים ומוארכים, המפיצים ניחוח לימוני חד, נקי ומשכר בכל מגע קל. מעבר למעמדו הנערץ בעולם הקולינריה, הוא משמש כעשב נוי דקורטיבי ומרהיב המשגשג בתנאי חום כבדים ומתפקד כדוחה טבעי ויעיל מפני חרקים ומעופפים.",
+      "faqs": [
+        {
+          "question": "כיצד קוטפים ומכינים את עשב הלימון לבישול?",
+          "answer": "יש לחתוך גבעול בוגר ומפותח ממש בבסיס הצמח בגובה הקרקע. לאחר מכן, קלפו והסירו את השכבות החיצוניות הסיביות והנוקשות עד שתחשפו את הליבה הפנימית, הלבנה והרכה – זהו החלק העסיסי והארומטי המשולב במתכונים."
+        },
+        {
+          "question": "האם עשב לימון וציטרונלה הם אותו הצמח?",
+          "answer": "לא, למרות שהם חולקים פרופיל ריח דומה מאוד. עשב הלימון (Cymbopogon citratus) הוא הצמח המשמש למאכל וקולינריה, בעוד שעשב הציטרונלה הוא מין שונה לחלוטין, שאינו מיועד למאכל ומשמש בעיקר להפקת שמנים אתריים תעשייתיים לדחיית יתושים."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אניל ס.",
+          "rating": 5,
+          "title": "טעם טרי ומשגע",
+          "body": "אין שום דבר בעולם שמשתווה לטעם של למון גראס טרי שנקטף הרגע מהגינה ונזרק לתוך קארי אסייתי. הוא מתפתח לגוש ענק ויפהפה במהירות מטורפת תחת חום הקיץ."
+        },
+        {
+          "authorName": "קארן או.",
+          "rating": 5,
+          "title": "יופי ופונקציונליות במוצר אחד",
+          "body": "הוא נראה נהדר כעשב נוי, והריח שמתפרץ כשעוברים לידו פשוט מרענן את כל החצר. נראה שהוא גם עושה עבודה מצוינת בשמירה על פינת הישיבה נקייה מיתושים!"
+        }
+      ]
+    },
+    {
+      "title": "שעועית הגלידה (אינגה אדוליס)",
+      "description": "עץ טרופי יוצא דופן ומרתק, הלקוח כאילו מתוך סיפורי אגדות. העץ, המסוגל להגיע לגובה של 10–15 מטרים, מפורסם בזכות תרמילי הענק שלו בעלי המרקם הלֶבֶדִי, המלאים בציפת פרי לבנה, אוורירית ונימוחה – שטעמה מזכיר באופן מדהים צמר גפן מתוק בניחוח וניל עמוק. מעבר לחוויית ה-'קינוח' הייחודית של פירותיו, מדובר בעץ מקבע חנקן נמרץ במיוחד המתפקד כ-'עץ אומנת' (Nurse tree) – הוא משביח ומדשן את האדמה עבור כל הצמחים שסביבו, ומעניק חופת צל רחבה, רעננה ומזמינה.",
+      "faqs": [
+        {
+          "question": "כיצד אוכלים את 'שעועית הגלידה'?",
+          "answer": "אין לאכול את זרעי השעועית הכהים עצמם (אלא אם כן הם עוברים בישול ממושך); החלק האכיל והנחשק הוא הציפה הלבנה, הרכה והמושלגת שעוטפת אותם. פשוט פותחים קלות את תרמיל הענק בלחיצה, שולפים את ה-'עננים' הלבנים ונהנים מחוויה מתוקה."
+        },
+        {
+          "question": "האם הוא נחשב לעץ צל איכותי?",
+          "answer": "מעולה ביותר. העץ צומח בקצב מהיר במיוחד ומתאפיין בעלים רחבים החופפים זה את זה. מבנה זה מייצר תחת העץ מיקרו-אקלים קריר ומוצל – אידיאלי להגנה על צמחים קטנים ועדינים יותר האוהבים צל."
+        },
+        {
+          "question": "האם ניתן לגדל את עץ שעועית הגלידה בעציץ?",
+          "answer": "בשנה-שנתיים הראשונות בלבד. מדובר בעץ חזק, מהיר ורחב ממדים הזקוק למרחב אדמה פתוח ועמוק כדי שמערכת השורשים שלו תתבסס, תפרח ותניב פרי כראוי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ליאו ק.",
+          "rating": 5,
+          "title": "עץ החלומות של כל ילד",
+          "body": "הילדים שלי פשוט מכורים אליו וקוראים לו 'עץ המרשמלו'. המרקם של הפרי כזה מיוחד, אוורירי וטעים. העץ צמח לגובה של שני מטרים כבר בשנה הראשונה שלו באדמה!"
+        },
+        {
+          "authorName": "סשה מ.",
+          "rating": 4,
+          "title": "נכס אדיר לפרמקלצ'ר",
+          "body": "שתלתי אותו כדי לספק צל לעצי הקפה שלי. הוא מקבע חנקן ומשפר את האדמה, והפרי המתוק הוא בונוס מטורף. רק קחו בחשבון שהוא גדל ותופס נפח מהר מאוד."
+        }
+      ]
+    },
+    {
+      "title": "רימון מליסי",
+      "description": "זן המליסי הוא ה-'גורמה' של עולם הרימונים. הוא נודע ומוערך ברחבי העולם בזכות זרעיו (חרצניו) הרכים והכמעט בלתי מורגשים, לצד תכולת סוכר גבוהה במיוחד – מה שהופך אותו לבחירה המושלמת עבור מי שאינו מחבב את המרקם הנוקשה והמפריע של חרצני הרימון הסטנדרטיים. הרימון המליסי נטול את החמיצות העזה והעפיצות המאפיינת זנים אחרים, ומציע מתיקות צרופה, דבשית ומעודנת שהופכת אותו לפרי הקינוח האולטימטיבי.",
+      "faqs": [
+        {
+          "question": "האם החרצנים של רימון מליסי באמת אכילים ונוחים ללעיסה?",
+          "answer": "בהחלט כן. הליבה המעוצת של הזרע רכה ועדינה כל כך, שניתן ללעוס ולבלוע את הכל בקלות רבה, ללא המרקם החולי או הסיבי המאפיין את הרימונים הנמכרים ברשתות השיווק."
+        },
+        {
+          "question": "האם העץ זקוק לחשיפה מלאה לשמש?",
+          "answer": "כן, עצי רימון זקוקים לתנאים של 'ראש בשמש ורגליים בחום' כדי לפתח את רמות הסוכר הגבוהות והמרוכזות בפירותיהם. מומלץ לשתול אותו בנקודה השמשית והחמה ביותר בגינה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "יעל פ.",
+          "rating": 5,
+          "title": "סוף סוף רימון שלא צריך לירוק!",
+          "body": "סוף סוף זן של רימון שאפשר לאכול וליהנות מכל ביס. הוא מתוק ברמות מטורפות – כמעט כמו סוכרייה. חוץ מזה, פריחת הכתום-אש שלו באביב פשוט מהממת."
+        },
+        {
+          "authorName": "עומר ד.",
+          "rating": 5,
+          "title": "המיץ הכי טוב שיצא לכם לטעום",
+          "body": "אני סוחט מהרימונים האלה מיץ טבעי ולא צריך להוסיף אפילו גרם אחד של סוכר. הטעם הרבה יותר קליל, עשיר ומתוק בהשוואה לזן עכו."
+        }
+      ]
+    },
+    {
+      "title": "עירית שום (עירית סינית)",
+      "description": "הגשר הקולינרי המושלם בין עולם הבצל לעולם השום. עירית רב-שנתית ושופעת זו מתאפיינת בעלים שטוחים, בשרניים ורעננים, ובפריחה כוכבית מרהיבה בצבע לבן צחור. בניגוד לעירית הרגילה, עירית השום מעניקה נגיעה מעודנת, עמוקה ומתוחכמת של שום, המהווה רכיב מפתח ובלתי נפרד בהכנת מוקפצים, כיסונים (דמפלינגס) וחביתות גורמה. מדובר בצמח חסון באופן בלתי רגיל, המעניק אספקה שוטפת וקבועה של עלים ירוקים ופרחים אכילים לאורך כל השנה.",
+      "faqs": [
+        {
+          "question": "כיצד מומלץ לקטוף ולגזום את עירית השום?",
+          "answer": "השתמשו במספריים חדות וגזרו את העלים בגובה של כ-2 ס\"מ מעל פני האדמה. הצמח יתאושש וילבלב מחדש במהירות אדירה, מה שיאפשר לכם ליהנות ממספר רב של סבבי קטיף לאורך העונה."
+        },
+        {
+          "question": "האם הפרחים הלבנים של העירית באמת אכילים?",
+          "answer": "כן, לחלוטין! לפרחים יש אפילו בעיטת שום דומיננטית וחזקה יותר מאשר לעלים עצמם, והם נראים מדהים כאלמנט קישוט יוקרתי המפוזר מעל סלטים טריים או קערת ראמן חמה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ג'ין ו.",
+          "rating": 5,
+          "title": "נכס קבוע במטבח שלי",
+          "body": "אני מגדל אותה בעציץ ממש ליד דלת המטבח. יש לה הרבה יותר טעם וארומה מאשר לעירית הקנויה, והדבורים בגינה פשוט משתגעות על הפרחים הלבנים היפים שלה."
+        },
+        {
+          "authorName": "טסה ב.",
+          "rating": 4,
+          "title": "קצב צמיחה בלתי ניתן לעצירה",
+          "body": "התחלתי מגוש קטן ותוך זמן קצר קיבלתי ערוגה שלמה ומלאה. צמח חסון וקשוח מאוד. פשוט תגזמו אותם באגרסיביות אם הם מתחילים לפרוח יותר מדי."
+        }
+      ]
+    },
+    {
+      "title": "לענה שיחנית (שיבא)",
+      "description": "ה-'מלכה הכסופה' של הגינה היבשה והחסכונית. הלענה השיחנית היא שיח ארומטי קלאסי ונוסטלגי, המוכר והאהוב בזכות עלוותו הגזורה והנוצתית בגוון כסוף-מתכתי מהפנט, ובזכות ניחוחה העשבוני המרוכז והעוצמתי. היא מתפקדת כצמח הקונטרסט המושלם בגינה – היא גורמת לגוונים הירוקים והסגולים של הצמחים השכנים לבלוט ולהיראות חיים יותר. בעוד שבעבר נודעה בעיקר בזכות שילובה בחליטות ובמסורות עתיקות, כיום היא מוערכת בעיקר בזכות עמידותה הקיצונית לתנאי יובש וחום, ותכונותיה הטבעיות לדחיית מזיקים.",
+      "faqs": [
+        {
+          "question": "האם קל לפגוע בצמח או להרוג אותו?",
+          "answer": "הדרך היחידה כמעט לפגוע בלענה היא השקיית יתר ורטיבות ממושכת בשורשים. מדובר בצמח שמשגשג דווקא מתוך 'הזנחה מכוונת', אדמות דלות וסלעיות, ותנאי שרב כבדים."
+        },
+        {
+          "question": "האם ניתן להשתמש בעלים כדוחה חרקים טבעי?",
+          "answer": "בהחלט כן. עלי השיבא עשירים בשמנים אתריים חזקים הדוחים מגוון רחב של חרקים. ניתן אף לייבש ענפים של הצמח ולהניחם בארונות הבגדים או במזווה כדי להרחיק עשים ומזיקי מזון באופן טבעי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "גדעון ל.",
+          "rating": 5,
+          "title": "מראה קסום בלילות שטופי ירח",
+          "body": "בלילה, העלים הכסופים שלה כמעט זוהרים בחושך. זהו צמח בעל מבנה פיסוליי מדהים שלא מבקש כמעט טיפה של מים ברגע שהוא מתבסס באדמה."
+        },
+        {
+          "authorName": "פיונה ה.",
+          "rating": 3,
+          "title": "מריר בצורה קיצונית!",
+          "body": "ניסיתי להכין מהעלים חליטת תה מרוכזת וזה היה הדבר הכי מריר שטעמתי בחיים שלי. עדיף להשאיר אותו כצמח נוי בגינה – הוא נראה הרבה יותר טוב מאיך שהוא נטעם!"
+        }
+      ]
+    },
+    {
+      "title": "ספיראה ים-תיכונית",
+      "description": "השיח המוכר והאהוב המכונה לעיתים 'שלג בקיץ', הוא יצירת מופת אמיתית של עונת האביב. השיח ירוק-העד מייצר ענפים ארוכים וקשתיים, המתכסים לחלוטין באשכולות צפופים של פרחים לבנים קטנים וצחורים – מחזה המזכיר סופת שלג טרייה בעיצומו של האביב. מדובר בצמח עמיד וסתגלן להפליא, המתאים בצורה מושלמת לשמש כמסך פרטיות ירוק ודל תחזוקה, או כנקודת מיקוד אלגנטית ושופעת בגינות בסגנון כפרי.",
+      "faqs": [
+        {
+          "question": "לאילו ממדים מסוגל השיח להגיע?",
+          "answer": "ללא גיזום, הספיראה יכולה להגיע לגובה ורוחב של 2–5 מטרים. עם זאת, קל מאוד לשלוט בממדיה ולשמור עליה בגודל קומפקטי ורצוי באמצעות גיזום שנתי קל בתום תקופת הפריחה."
+        },
+        {
+          "question": "האם הצמח מושך מאביקים לגינה?",
+          "answer": "כן, ובהמוניהם. במהלך שיא הפריחה האביבית שלו, השיח הופך למוקד משיכה תוסס ורוחש עבור פרפרים, דבורי דבש ומאביקים מועילים רבים."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "מיה ו.",
+          "rating": 5,
+          "title": "מופע אביבי עוצר נשימה",
+          "body": "כל השיח פשוט נצבע בלבן מוחלט! זה הצמח הכי מצולם אצלי בגינה בכל חודש אפריל. קל מאוד לטיפול ותמיד מספק את הסחורה."
+        },
+        {
+          "authorName": "רוברט א.",
+          "rating": 4,
+          "title": "גדר חיה נהדרת",
+          "body": "השתמשתי בשיחים האלה כדי להסתיר גדר ישנה ומכוערת. הם צמחו בצפיפות והפכו למסך ירוק ושופע תוך שתי עונות בלבד. רק הקפידו לגזום מיד אחרי שהפריחה מסתיימת."
+        }
+      ]
+    },
+    {
+      "title": "חמית החוף (לבטרה)",
+      "description": "כוכבת אמיתית של אזורי החוף, המציגה שילוב נדיר בין קשיחות למראה רך ורומנטי. חמית החוף מתאפיינת בעלווה קטיפתית בגוון ירוק-אפרפר ייחודי, ובפרחי ענק מרהיבים המזכירים את פרחי ההיביסקוס, בגווני ורוד רך ולילך (סגול בהיר). השיח מפגין חסינות יוצאת דופן לרסס מלח מן הים ולרוחות חזקות, מה שהופך אותו לפתרון המושלם לגינות חוף מאתגרות. הוא פורח כמעט ללא הפסקה לאורך כל החודשים החמים של השנה, ומעניק מראה מעודן ואלגנטי גם לנופים הקשוחים ביותר.",
+      "faqs": [
+        {
+          "question": "האם הצמח מסוגל להתמודד עם רוחות חזקות?",
+          "answer": "כן, באופן טבעי. חמית החוף מותאמת אבולוציונית לצמיחה על גבי צוקי חוף שטופי רוח. הגבעולים הגמישים שלה ומערכת השורשים המעוגנת היטב מעניקים לה עמידות מעולה ויציבות רבה בפני רוחות סוערות."
+        },
+        {
+          "question": "כיצד ניתן למנוע מהשיח להפוך לקרח ודליל בחלקו התחתון?",
+          "answer": "הסוד הוא לבצע גיזום חידוש משמעותי (קיצוץ של כחצי מנפח הצמח) בשלהי החורף. פעולה זו מעודדת פריצה של ענפים ירוקים, צפופים ורעננים מבסיס הצמח, ומבטיחה שפע של פרחים בעונה הבאה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ניקו ס.",
+          "rating": 5,
+          "title": "פריחה בלתי פוסקת",
+          "body": "אני גר ממש על קו המים ובדרך כלל הכל מת אצלי בגלל המלח מהים. השיח הזה לא רק שורד – הוא פשוט משגשג ולא הפסיק לפרוח מאז מאי."
+        },
+        {
+          "authorName": "אלנה ג.",
+          "rating": 4,
+          "title": "יפהפייה, אבל חייבת שמש מלאה",
+          "body": "ניסיתי לגדל אותה באזור עם צל חלקי והיא הפכה לקצת דלילה וארוכה. ברגע שהעברתי אותה לשמש מלאה, היא הפכה לקיר ענק ומטורף של פרחים ורודים."
+        }
+      ]
+    },
+    {
+      "title": "מרווה רפואית / מרווה ריחנית",
+      "description": "הצמח הרב-תכליתי האולטימטיבי של הגינה. בין אם אתם בוחרים לשתול את ה-'מרווה הרפואית' הקלאסית המשמשת לבישול, ובין אם אתם בוחרים ב-'מרווה הריחנית' המשגעת בעלת העלים הכסופים (Salvia dominica), אתם מקבלים צמח חזק, קשוח וארומטי מאין כמוהו. עם עלים מקומטים בעלי מרקם ייחודי וגבעולי פריחה זקופים המהווים מוקד משיכה לדבורים ומאביקים, המרווה משמשת כעמוד השדרה של הגינה הים-תיכונית החסכונית במים ושל ערוגת עשבי התיבול לחובבי הגורמה כאחד.",
+      "faqs": [
+        {
+          "question": "מהו ההבדל בין מרווה רפואית לקולינריה למרווה ריחנית מהבר?",
+          "answer": "המרווה הרפואית (S. officinalis) תורבתה ונבחרה בעיקר בשל פרופיל הטעם המאוזן והעשיר שלה המתאים לבישול; המרווה הריחנית (S. dominica) היא קרובת משפחה פראית יותר, בעלת עלווה כסופה וניחוח דומיננטי, עז ואינטנסיבי משמעותית, המשמשת בעיקר כצמח נוי ארומטי עוצר נשימה."
+        },
+        {
+          "question": "האם המרווה אוהבת קרקע לחה או רטובה?",
+          "answer": "בשום אופן לא. מרווה תפתח במהירות ריקבון שורשים קטלני בתנאים של עודפי מים או אדמה לא מנוקזת ('רגליים רטובות'). הקפידו תמיד לשתול אותה באדמה קלה ומנוקזת היטב, במסלעות או בערוגות מוגבהות."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "זיו א.",
+          "rating": 5,
+          "title": "פשוט בלתי ניתנת להריסה",
+          "body": "שכחתי להשקות את המרווה הזו כמעט כל הקיץ והיא נראית טוב יותר מאי פעם. הניחוח שמתפרץ ממנה בכל פעם שנוגעים בה הוא פשוט מטורף."
+        },
+        {
+          "authorName": "פאולה ר.",
+          "rating": 4,
+          "title": "חובה בכל מטבח",
+          "body": "אין שום דבר בעולם שמשתווה לעלי מרווה טריים מטוגנים בחמאה מומסת. הצמח עצמו יפהפה ומקשט את הגינה בצורה נהדרת, במיוחד כשהפרחים הסגולים יוצאים."
+        }
+      ]
+    },
+    {
+      "title": "מוחשן שחור (סמבוק שחור)",
+      "description": "הסמבוק השחור הוא שיח רב-כישרונות ושופע, המציע באביב פריחה אוורירית וריחנית בגווני שמנת, שלאחריה מגיעים אשכולות כבדים ועמוסים של פירות יער בצבע סגול-שחור עמוק, הידועים בסגולותיהם הרפואיות הרבות לתמיכה במערכת החיסון. השיח, המגיע לגובה של 3–6 מטרים, מתאפיין בקצב צמיחה מהיר במיוחד ומשתלב בצורה מושלמת בגינות מרפא, בוסתנים או גינות אקולוגיות. בעוד שמהפרחים הריחניים ניתן להכין סירופים ומשקאות מרעננים, הפירות השחורים מהווים תחנת כוח להכנת סירופים רפואיים, מרקחות וריבות עשירות.",
+      "faqs": [
+        {
+          "question": "האם ניתן לאכול את פירות הסמבוק ישירות מהשיח כשהם טריים?",
+          "answer": "בשום אופן לא. פירות סמבוק טריים ואינם מבושלים מכילים חומרים (כגון סמבוניגרין) שעלולים לגרום לכאבי בטן והקאות. יש לבשל או לעבד את הפירות תמיד (להכנת סירופ, ריבה, ג'לי או יין) כדי לנטרל חומרים אלו ולהפוך את הצריכה לבטוחה לחלוטין."
+        },
+        {
+          "question": "האם הסמבוק השחור מסוגל לצמוח באדמות לחות או מוצפות?",
+          "answer": "כן, ובהצלחה רבה! הסמבוק השחור הוא אחד משיחי הפרי הבודדים שמשגשגים דווקא באזורים לחים, בוציים או בעלי ניקוז גרוע – מקומות שבהם צמחים אחרים יפתחו במהירות ריקבון שורשים קטלני."
+        },
+        {
+          "question": "האם גם הפרחים הלבנים של השיח ניתנים למאכל?",
+          "answer": "בהחלט כן. פרחי הסמבוק (Elderflowers) מפורסמים בכל העולם בזכות הניחוח המשכר שלהם המשמש להכנת סירופים, ליקרים וחליטות תה, ואף נהוג לטבול אותם בבלילה ולטגן אותם בשמן עמוק כמעדן עונתי משגע."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "היידי ו.",
+          "rating": 5,
+          "title": "פריט חובה להתגוננות מפני החורף",
+          "body": "אני מגדלת את השיח הזה במיוחד כדי להכין סירופ סמבוק ביתי לתקופת החורף. הוא צומח כל כך מהר שכבר בשנה השנייה זכיתי ליבול מכובד ביותר!"
+        },
+        {
+          "authorName": "ליאם נ.",
+          "rating": 5,
+          "title": "הציפורים פשוט משתגעות עליו",
+          "body": "אם אתם רוצים למשוך ציפורי שיר יפות לגינה שלכם, זה הצמח בשבילכם. הן פשוט משתגעות על הפירות האלה. רק קחו בחשבון שתצטרכו להתחלק איתן ביבול!"
+        },
+        {
+          "authorName": "שרה ג.",
+          "rating": 4,
+          "title": "יפהפה, אך דורש מקום",
+          "body": "הפרחים פשוט מדהימים ומפיצים ריח של קיץ, אבל ראו הוזהרתם: הוא שואף להפוך לשיח ענק ורחב. שמרו את מזמרת הגיזום שלכם מוכנה לעבודה אם יש לכם חצר קטנה."
+        }
+      ]
+    },
+    {
+      "title": "תאנה מקראית (תאנה)",
+      "description": "כסמל עתיק ונצחי של שלום, שפע ומשגשג, עץ התאנה הוא יצירת מופת נשירה בעלת עלים ארכיטקטוניים ענקיים ופירות מתוקים כדבש. כאחד מ-'שבעת המינים' שבהם נשתבחה ארץ ישראל, יש לו חשיבות היסטורית ותרבותית עמוקה. התאנה משגשגת באזורים חמים ושטופי שמש, ומניבה פירות עסיסיים ומלאי עסיס שמפתחים טיפת 'דבש' מתוקה בבסיסם כאשר הם מגיעים לבשלות מושלמת. צמח חובה לכל בוסתן או גינה בסגנון ים-תיכוני אותנטי.",
+      "faqs": [
+        {
+          "question": "כיצד יודעים מתי פרי התאנה מוכן ובשל לקטיף?",
+          "answer": "הפרי הבשל ישנה את זוויתו ו-'יהנהן' (יתלה כלפי מטה), יהיה רך מאוד למגע עדין, ועל קליפתו עשויים להופיע סדקים קלים. בניגוד לפירות רבים אחרים, תאנים מפסיקות את תהליך ההבשלה שלהן ברגע שהן נקטפות מהעץ, ולכן חשוב לקטוף אותן רק בשיא בשלותן."
+        },
+        {
+          "question": "האם מערכת השורשים של התאנה נחשבת למסוכנת למבנים?",
+          "answer": "כן, שורשי התאנה חזקים, אגרסיביים ואופורטוניסטיים ביותר בחיפושם אחר מקורות מים. מומלץ מאוד לשתול את העץ במרחק ביטחון של לפחות 5–7 מטרים מיסודות של בתים, קווי ביוב או בריכות שחייה."
+        },
+        {
+          "question": "האם ניתן לגדל עץ תאנה בתוך עציץ או מיכל?",
+          "answer": "כן, ובהצלחה רבה! למעשה, הגבלת נפח השורשים בתוך מיכל גדול מעודדת וממריצה את העץ להפנות את האנרגיה שלו לייצור פירות מתוקים ושופעים, במקום להשקיע אותה בצימוח מוגזם של עלים וענפים."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "יצחק ר.",
+          "rating": 5,
+          "title": "מתוקה כמו דבש טהור",
+          "body": "אין שום דבר בעולם שמשתווה לתאנה שהבשילה לאיטה תחת השמש החמה. הזן הזה סופר אמין ומספק כמות עצומה של פירות מדהימים בשלהי הקיץ."
+        },
+        {
+          "authorName": "דניאלה ב.",
+          "rating": 5,
+          "title": "עץ צל מושלם ומרהיב",
+          "body": "העלים ענקיים ויפהפיים. העץ מייצר את פינת הצל המושלמת למקם תחתיה ספסל גינה. רק היזהרו מהשרף החלבי הלבן של העץ אם יש לכם עור רגיש!"
+        },
+        {
+          "authorName": "קוין מ.",
+          "rating": 4,
+          "title": "קצב צימוח מהיר",
+          "body": "שתלתי שתיל צעיר וקטן ושנתיים לאחר מכן הוא כבר עבר את גובה ה-2 מטרים. ודאו היטב שיש לכם את המרחב המתאים עבורו לפני השתילה!"
+        }
+      ]
+    },
+    {
+      "title": "מורינגה מכונפת (עץ הפלא)",
+      "description": "המכונה לעיתים קרובות 'עץ החיים', המורינגה היא סופרנובה תזונתית אמיתית ויוצאת דופן. עץ בעל קצב צמיחה מהיר בצורה קיצונית, המייצר עלים עדינים ונוצתיים העשירים בחלבון, סידן, ברזל וויטמינים בריכוז הגבוה ביותר בממלכת הצמחים. כל חלק בצמח הוא נכס: העלים מצוינים לסלטים, התרמילים הארוכים משתלבים בתבשילי קארי ומרקים, והזרעים משמשים לטיהור מים. זהו צמח ההישרדות האולטימטיבי לאקלים חם, צרוב שמש ויבש.",
+      "faqs": [
+        {
+          "question": "עד כמה מהר העץ באמת מסוגל לצמוח?",
+          "answer": "תחת תנאי חום אופטימליים, המורינגה מסוגלת להוסיף לגובהה בין 3 ל-4 מטרים שלמים בתוך שנה אחת בלבד! מדובר באחד העצים בעלי קצב הצמיחה המהיר ביותר בכדור הארץ."
+        },
+        {
+          "question": "כיצד משלבים ומשתמשים בעלי המורינגה?",
+          "answer": "ניתן לאכול את העלים כשהם טריים בתוך סלטים, להקפיץ אותם במחבת בדיוק כמו שנוהגים לעשות עם תרד, או לייבש אותם בצל ולטחון אותם לאבקה מרוכזת וירוקה המשמשת כתוסף תזונה עוצמתי לשייקים ומשקאות בריאות."
+        },
+        {
+          "question": "האם העץ מסוגל לשרוד את תקופת החורף?",
+          "answer": "המורינגה מאוהבת בחום בצורה קיצונית. אם יתרחש אירוע קרה או קפיאה, נוף העץ יתייבש וימות לחלוטין עד לגובה הקרקע, אך במרבית המקרים, עם התחממות האדמה באביב, העץ יפרוץ וילבלב מחדש בעוצמה ישירות מתוך השורשים החסונים שלו."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ראג' פ.",
+          "rating": 5,
+          "title": "מזון-על אצלי בחצר האחורית",
+          "body": "אני מייבש את העלים וטוחן אותם לאבקה ומוסיף אותה לכל תבשיל ושייק. העץ צומח כל כך מהר שאני בקושי מצליח לעמוד בקצב של הקטיף. צמח מדהים פשוט."
+        },
+        {
+          "authorName": "אלנה ס.",
+          "rating": 4,
+          "title": "צומח כמו אפונה מהאגדות",
+          "body": "הוא אולי לא העץ הכי 'דקורטיבי' מבחינת המבנה שלו – הוא נוטה להיות גבוה ודק מאוד – אבל הערך התזונתי שלו פשוט מטורף. אני גוזמת אותו באגרסיביות כדי לאלץ אותו להישאר שיחי וצפוף."
+        }
+      ]
+    },
+    {
+      "title": "אפונת היונה",
+      "description": "עמוד תווך בעולם הפרמקלצ'ר, אפונת היונה היא שיח קטניות רב-תכליתי המתפקד כ-'רופא של האדמה'. השיח מקבע חנקן באטמוספירה ומדשן את הצמחים השכנים באופן טבעי, ובמקביל מניב כמות שופעת של תרמילים עשירים בחלבון איכותי. שורש השיפוד העמוק והחזק שלו חודר ומבקע אדמות חרסיתיות וקשות, מה שהופך אותו לצמח חלוץ (Pioneer plant) מושלם להקמת גינות חדשות, בוסתנים או יערות מאכל בתנאי שטח מאתגרים.",
+      "faqs": [
+        {
+          "question": "כיצד אוכלים ומשתמשים באפונת היונה?",
+          "answer": "ניתן לקטוף את התרמילים כשהם עדיין ירוקים וצעירים ולהשתמש באפונים הטריים בדיוק כמו אפונת גינה רגילה, או להשאיר את התרמילים להתייבש על גבי הענפים ולקטוף את האפונים היבשים להכנת מרקים, תבשילי דאל או מנות אורז מסורתיות."
+        },
+        {
+          "question": "האם מדובר בשיח שמאריך ימים בגינה?",
+          "answer": "לא, מדובר בצמח רב-שנתי קצר ימים (חי לרוב בין 3 ל-5 שנים). מרבית הגננים משתמשים בו כפתרון זמני ומתוחכם לשיבוח איכות הקרקע ומחליפים אותו בזנים חדשים ברגע שתנובת הפרי שלו מתחילה לרדת."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "מרקוס ת.",
+          "rating": 5,
+          "title": "משנה את חוקי המשחק עבור הקרקע",
+          "body": "שתלתי את השיחים האלה באזור עם אדמה מתה ויבשה לחלוטין. שנתיים לאחר מכן, האדמה הפכה לכהה ועשירה, ועצי ההדר ששתלתי בסמוך פשוט משגשגים בזכות החנקן שהיא סיפקה להם."
+        },
+        {
+          "authorName": "לילה פ.",
+          "rating": 4,
+          "title": "מעולה לנשנוש בריא",
+          "body": "הילדים שלי מתים על קילוף האפונים הירוקים מהתרמילים. קל מאוד לגדל אותם והם שרדו אצלנו קיץ קשוח של 40 מעלות בלי לבקש טיפת מים מעבר לרגיל."
+        }
+      ]
+    },
+    {
+      "title": "טגטס לימוני",
+      "description": "שיח ירוק-עד המעניק פיצוץ חושים מרהיב בגינה. הצמח, המפורסם בזכות עלוותו הגזורה והתחרתית ומסות אדירות של פריחה מוזהבת בצבע צהוב-חלמון עז, מפיץ ניחוח עוצמתי וחד של לימון ומנטה רעננה שניתן להרגיש בו ממרחק של מספר מטרים. זהו צמח 'קאמבק' מנצח, הפורח בעוצמה הגבוהה ביותר דווקא במהלך הסתיו והחורף, ומעניק צבעוניות חמה, תוססת ומאירה בדיוק בתקופה שבה שאר הגינה נכנסת לתרדמת חורף.",
+      "faqs": [
+        {
+          "question": "האם ניתן להשתמש בעלי הטגטס הלימוני להכנת חליטות תה?",
+          "answer": "כן, בהחלט. מהעלים ניתן להכין חליטת תה רעננה, נקייה ובעלת ארומה הדרית משגעת. הם מתאימים מאוד גם לתיבול ובישול סירופים מתוקים או כקישוט ריחני ומרענן למשקאות קרים."
+        },
+        {
+          "question": "האם הצמח יעיל בדחיית מזיקים וחרקים?",
+          "answer": "כן, ובאופן מוכח. השמנים האתריים העוצמתיים הנמצאים בעלווה של הטגטס משמשים כחומר דחייה טבעי ומצוין עבור יתושים, כנימות עש הטבק, ואפילו נגד נמטודות מזיקות באדמה באזור השורשים."
+        },
+        {
+          "question": "מתי חלה עונת הפריחה המרכזית של הצמח?",
+          "answer": "הטגטס הלימוני הוא צמח של 'יום קצר', מה שאומר שהוא מתחיל את מופע הפריחה המרכזי והאדיר שלו בשלהי הסתיו וממשיך לאורך כל החורף באזורים בעלי אקלים מתון."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ג'וי ה.",
+          "rating": 5,
+          "title": "ניחוח פשוט בלתי נתפס",
+          "body": "בכל פעם שאני עוברת ליד השיח הזה, אני מקבלת זריקת אנרגיה של ריח לימון מטורף. הפרחים הצהובים כל כך בהירים שהם נראים כמעט זרחניים. הכוכב הבלתי מעורער של גינת הסתיו שלי."
+        },
+        {
+          "authorName": "בן ס.",
+          "rating": 3,
+          "title": "חזק – אולי חזק מדי!",
+          "body": "הצבעוניות שלו מדהימה, אבל ראו הוזהרתם: הריח שלו סופר אינטנסיבי ודומיננטי. אל תשתלו אותו ממש מתחת לחלון חדר השינה שלכם אם אתם רגישים לניחוחות חזקים."
+        },
+        {
+          "authorName": "ריטה ק.",
+          "rating": 5,
+          "title": "גלגל הצלה לימי החורף",
+          "body": "כשכל שאר הצמחים בגינה שלי נראים חומים, יבשים או רדומים בחודש דצמבר, הדבר הזה הופך להר של זהב טהור. מאוהבת בצמח הזה לחלוטין."
+        }
+      ]
+    },
+    {
+      "title": "קומפריי רפואי (קמפרי)",
+      "description": "הקומפריי הוא צמח אגדי המכונה בעולם האקולוגיה 'כורה ביולוגי' (Dynamic accumulator). שורש השיפוד המסיבי והעמוק שלו חודר אל מעמקי תת-הקרקע כדי לשלוף משם מינרלים ויסודות קורט יקרי ערך שצמחים אחרים אינם מסוגלים להגיע אליהם, ומאחסן אותם בריכוז גבוה בתוך עליו הירוקים והשופעים. מדובר במקור האולטימטיבי והחינמי לייצור דשן אורגני איכותי ועשיר עבור הגינה שלכם. מעבר לתועלתו העצומה לאדמה, פרחיו דמויי הפעמון הם מוקד משיכה אהוב ונערץ עבור דבורי בומבוס וחרקים מועילים.",
+      "faqs": [
+        {
+          "question": "כיצד מכינים 'תה דשן' מרוכז מעלי קומפריי?",
+          "answer": "דחסו כמות גדולה של עלים לתוך דלי עמוק, הצמידו אותם לתחתית בעזרת אבן או לבנה כבדה, ומלאו את הדלי במים עד לכיסוי. לאחר 3–4 שבועות של תסיסה, תקבלו נוזל מרוכז, עוצמתי (ובעל ריח חזק!) המהווה 'זהב נוזלי' מעולה להזנת עגבניות וצמחי פרי בגינה."
+        },
+        {
+          "question": "האם הקומפריי נחשב לצמח פולשני שקשה להסרה?",
+          "answer": "כן, ברגע שהקומפריי התבסס באדמה, קשה מאוד לעקור אותו לחלוטין, מכיוון שכל חתיכת שורש קטנה ביותר שתישאר באדמה תתפתח במהירות לצמח חדש לחלוטין. בחרו את מיקום הקבע שלו בגינה בתבונה ובתשומת לב!"
+        },
+        {
+          "question": "האם ניתן לצרוך ולאכול את עלי הקומפריי?",
+          "answer": "הרבליסטים מודרניים ומחקרים עכשיוויים מורים שלא לצרוך את הצמח באופן פנימי (בבליעה), עקב הימצאותן של תרכובות מסוימות שעלולות להעמיס על תפקודי הכבד. השימוש הטוב והבטוח ביותר בו הוא כדשן ומזון לצמחים, או כרטייה חיצונית (חבישה) לעור."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ג'אוף ו.",
+          "rating": 5,
+          "title": "נשק הסתרים שלי לעגבניות",
+          "body": "מאז שהתחלתי להשתמש בעלי הקומפריי כחיפוי קרקע וכדשן נוזלי, יבול העגבניות שלי הכפיל את עצמו. כל גנן שמכבד את עצמו חייב לגדל פינה של הצמח הזה בחצר."
+        },
+        {
+          "authorName": "סוניה ל.",
+          "rating": 5,
+          "title": "גן עדן אמיתי לדבורים",
+          "body": "יש זמזום קבוע, נעים ובלתי פוסק של דבורים סביב הצמח הזה מעלות השחר ועד השקיעה. שווה לגדל אותו רק בשביל המגוון הביולוגי המדהים שהוא מביא איתו לחצר."
+        },
+        {
+          "authorName": "פיטר ו.",
+          "rating": 4,
+          "title": "קשוח ברמות אחרות",
+          "body": "זה הצמח הכי עמיד וקשוח שיש לי בגינה. אני קוצר אותו לחלוטין עד גובה הקרקע 4 פעמים בשנה כדי לייצר ממנו חיפוי לערוגות, והוא פשוט חוזר בכל פעם מחדש כשהוא צפוף וירוק עוד יותר."
+        }
+      ]
+    },
+    {
+      "title": "טופח ריחני (אפונה ריחנית)",
+      "description": "צמח המטפס הקלאסי של הגינה, האהוב בזכות ניחוחו המשכר ופרחיו המגוונים בעלי המראה הגלי והעדין. מטפס חד-שנתי זה מגיע לגובה של 1–2 מטרים ומתפקד כ-'מפעל פרחים' אמיתי – ככל שתקפידו לקטוף ממנו יותר ענפי פריחה לתוך אגרטלים בבית, כך הוא יגביר את קצב הפריחה שלו בגינה. זוהי הבחירה המושלמת ליצירת עניין אנכי על גבי סורגים ומשרביות, והוא ימלא את הגינה והבית בבושם נוסטלגי של דבש ופריחת הדרים.",
+      "faqs": [
+        {
+          "question": "האם ניתן לאכול את התרמילים כמו אפונת גינה רגילה?",
+          "answer": "בשום אופן לא! הטופח הריחני (Lathyrus odoratus) הוא צמח רעיל למאכל. הוא מיועד לנוי בלבד ויש להרחיק אותו מהישג ידם של ילדים וחיות מחמד."
+        },
+        {
+          "question": "כיצד ניתן להפיק מהצמח את כמות הפרחים המקסימלית?",
+          "answer": "קטיף קבוע של הפרחים לסידורי פרחים בתוך הבית מונע מהצמח לייצר זרעים. מניעת ייצור הזרעים מאותתת לצמח להמשיך ולהפיק גלי פריחה חדשים ושופעים לאורך כל העונה."
+        },
+        {
+          "question": "האם הצמח זקוק לתמיכה או הדליה?",
+          "answer": "כן, הוא מטפס באמצעות קנוקנות עדינות. רשת, סבכה קלה או אפילו מבנה 'וויגוואם' פשוט עשוי מקלות במבוק יעשו עבודה מושלמת."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "קלרה ג'.",
+          "rating": 5,
+          "title": "נוסטלגיה בגינה",
+          "body": "אין שום דבר בעולם שמשתווה לריח של הפרחים האלה. שתלתי אותם לאורך גדר העץ הלבנה שלי, ובחודש יוני הניחוח פשוט זרם לתוך הבית בכל פעם שפתחתי את החלון."
+        },
+        {
+          "authorName": "מארק ר.",
+          "rating": 4,
+          "title": "יפהפה אבל רעיל",
+          "body": "צבעים מדהימים מתוך מיקס הזנים 'Royal Family'. רק אזהרה קטנה להורים: ודאו שהילדים שלכם מבינים היטב שאלו לא האפונים שמיועדים לאכילה!"
+        }
+      ]
+    },
+    {
+      "title": "צבר אדום (סברה אדום)",
+      "description": "זן מרשים ופרודוקטיבי במיוחד של קקטוס הצבר האהוב. הצבר האדום הוא אייקון מדברי מובהק המציע פירות מתוקים ועסיסיים בצבע אדום-רובי עמוק. הקקטוס מגיע לגובה של 2–3 מטרים, וענפיו הרחבים והבשרניים (כפות) בגוון ירוק-כחלחל מעניקים אלמנט מבני דרמטי ומרהיב לגינה. הפרי עסיסי להפליא ובעל טעם המזכיר שילוב של אבטיח ופירות יער, בעוד שהכפות הצעירות והרכות (נופאלס) ניתנות לצלייה על הגריל כמעדן קולינרי מלוח וטעים.",
+      "faqs": [
+        {
+          "question": "כיצד מקלפים את הפרי בצורה בטוחה?",
+          "answer": "על גבי הפרי ישנם קוצים זעירים וכמעט בלתי נראים (גלוכידים). השתמשו במלקחיים כדי לקטוף אותם, וצרבו את הפרי קלות מעל להבת גז או שפשפו אותו היטב תחת זרם מים חזקים לפני הקילוף."
+        },
+        {
+          "question": "האם קל להרבות את הקקטוס?",
+          "answer": "בקלות מטורפת. פשוט חתכו כפה בוגרת ומפותחת, השאירו את אזור החתך להתייבש ולהגליד (ליצור קלוס) במשך מספר ימים במקום מוצל, ושתלו אותה באדמה מנוקזת היטב. היא תפתח שורשים כמעט בכל מקום."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אבי ל.",
+          "rating": 5,
+          "title": "טעם של שקיעה קיצית",
+          "body": "הפרי הרבה יותר טעים ואיכותי מאלו שקונים בסופרמרקט. השתמשתי במבער ידני קטן כדי לחרוך את הקוצים הזעירים – שיטה שעובדת כמו קסם!"
+        },
+        {
+          "authorName": "שרה ס.",
+          "rating": 5,
+          "title": "פיסולי וחזק כמו פלדה",
+          "body": "שתלתי אותם כגדר חיה לאורך קו גבול הנחלה שלי. הם נראים מדהים וכמעט בלתי אפשרי להרוג אותם. רק אל תשכחו ללבוש כפפות עבות ועמידות כשאתם מטפלים בהם!"
+        }
+      ]
+    },
+    {
+      "title": "גרניום לימוני (פלרגוניום לימוני)",
+      "description": "תענוג אמיתי לחושים, הגרניום הלימוני מוערך מאוד בזכות עליו הגזורים והעמוקים המפיצים ניחוח הדרי עוצמתי ומשכר בכל מגע קל. הצמח מגיע לגובה של עד מטר אחד, ומייצר אשכולות חינניים של פרחים בגווני סגול-לבנדר וורוד. הוא מהווה בחירה מועדפת לשתילה בעציצים ומיכלים במרפסות ובפינות ישיבה, שם הוא מתפקד כדוחה יתושים טבעי, ואת עליו הריחניים ניתן אף לשלב בחליטות תה ובעוגות בחושות להוספת ארומה מיוחדת.",
+      "faqs": [
+        {
+          "question": "האם ניתן להשתמש בעלים להכנת תה?",
+          "answer": "כן, בהחלט. העלים מעניקים נגיעה לימונית מעודנת ומתוחכמת לחליטות תה צמחים, להכנת סוכר ארומטי ואפילו לקינוחים ומאפים."
+        },
+        {
+          "question": "האם הוא מתאים לגידול כצמח בית בתוך מבנה?",
+          "answer": "בהחלט כן. הוא יכול לתפקד כצמח בית נהדר, בתנאי שתמקמו אותו ליד חלון שטוף שמש המקבל לפחות 6 שעות של אור שמש ישיר ביום."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אלנה מ.",
+          "rating": 5,
+          "title": "דוחה יתושים טבעי ויעיל",
+          "body": "אני מגדלת שני עציצים כאלה ממש על שולחן האירוח במרפסת. בכל פעם שמישהו מבין האורחים נוגע בהם בטעות, ריח הלימון מתפרץ באוויר. זה באמת עוזר להרחיק את המעופפים בזמן ארוחת הערב."
+        },
+        {
+          "authorName": "דוד ק.",
+          "rating": 4,
+          "title": "תוספת מעולה לאפייה",
+          "body": "אני מניח עלה אחד בתחתית תבנית העוגה לפני מזיגת הבלילה. הוא סופג ומפיץ לתוך כל העוגה ארומה עדינה ומשגעת. צמח סופר קל לגידול."
+        }
+      ]
+    },
+    {
+      "title": "חוחן הקרסי (שזיף קרסי / חוחן)",
+      "description": "שיח קשוח וקוצני או עץ קטן, חוחן הקרסי מעניק עניין ויופי לאורך כל עונות השנה – החל מפריחה אביבית צחורה כשלג ועד לפירות בצבע כחול-עמוק וכהה בסתיו. הצמח מגיע לגובה של עד 5 מטרים, והוא שורד חסון ומצטיין במיוחד ביצירת גדר חיה חוסמת ומגוננת. למרות שהפירות חמוצים ועפיצים מאוד כשהם נאכלים טריים, הם נחשבים לתקן הזהב להכנת ריבות בוטיק, סירופים עשירים וליקרים מסורתיים בסגנון 'סלו ג'ין' (Sloe Gin).",
+      "faqs": [
+        {
+          "question": "האם הוא מתאים לשמש כגדר חיה להגנה וביטחון?",
+          "answer": "כן, בהחלט. ענפיו הצפופים והקוצניים מייצרים מחסום טבעי ובלתי חדיר, המצטיין הן ביצירת פרטיות והן כאלמנט אבטחה היקפי מסביב לבית."
+        },
+        {
+          "question": "האם פירות השזיף מתוקים?",
+          "answer": "הם חמוצים ועפיצים למדי כשהם טריים. מומלץ ביותר להשתמש בהם לבישול ורוקחות, או להשאיר אותם על גבי העץ עד לאחר אירוע הקרה או הצינון הראשון של העונה, תהליך המעדן וממתיק את טעמם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "גארת' פ.",
+          "rating": 5,
+          "title": "מסך הפרטיות האולטימטיבי",
+          "body": "אם אתם רוצים למנוע מילדי השכנים להיכנס לכם לתוך הגינה, זה הצמח המושלם. הקוצים שלו הם לא בדיחה, והפריחה הלבנה שלו באביב פשוט מהממת."
+        },
+        {
+          "authorName": "מרתה ה.",
+          "rating": 4,
+          "title": "חלום של כל יצרן ריבות",
+          "body": "אל תנסו לאכול אותם ישר מהעץ! אבל ברגע שמבשלים אותם עם סוכר לריבה, או משרים אותם בתוך ג'ין? מקבלים פרופיל טעם עשיר ובלתי נתפס."
+        }
+      ]
+    },
+    {
+      "title": "לבנדר מנוצה",
+      "description": "מתאפיין בעלווה גזורה, עדינה וייחודית המזכירה שרך, הלבנדר המנוצה מציע מרקם רך ומעודן יותר בהשוואה לזנים המסורתיים. שיח ירוק-עד זה ניחן בפריחה שופעת במיוחד, והוא שולח גבעולי פריחה ארוכים הנושאים שיבולים סגולות המתנועעות בחן ברוח. ניחוחו השרפי והעשיר מהווה חומר דחייה טבעי מפני יתושים, מה ש הופך אותו לבחירה פונקציונלית ונהדרת לשתילה בקרבת פינות ישיבה או לאורך ערוגות שטופות שמש.",
+      "faqs": [
+        {
+          "question": "האם הוא חסון ועמיד לקור כמו הלבנדר האנגלי?",
+          "answer": "הוא מעט רגיש ועדין יותר, ומעדיף סביבה נטולת קרה וקפיאה. באזורים בעלי חורף קר במיוחד, מומלץ לגדל אותו בעציצים כדי שניתן יהיה להעבירו למקום מוגן או פנימי במהלך חודשי החורף."
+        },
+        {
+          "question": "מתי מומלץ לגזום את הצמח?",
+          "answer": "בצעו גיזום קל בתום כל סבב פריחה. הימנעו מלחתוך לתוך ענפים מעוצים ויבשים לחלוטין ('עץ מת'), שכן הצמח עלול להתקשות לפרוץ וללבלב מנקודות אלו מחדש."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "קלואי ת.",
+          "rating": 5,
+          "title": "עלווה פשוט מהממת",
+          "body": "העלים נראים כמו שרכים עדינים וגבעולי הפרחים ארוכים ויפים מאוד. הוא פורח אצלי בגינה ללא הפסקה כבר שלושה חודשים רצופים."
+        },
+        {
+          "authorName": "סאם ל.",
+          "rating": 3,
+          "title": "לא מתאים לחורף קר",
+          "body": "איבדתי את הצמח שלי בגלל אירוע קרה מפתיע בחורף האחרון. הוא בהחלט עדין ורגיש יותר מסוגי לבנדר אחרים. אם אתם גרים באזור קר, גדלו אותו רק בעציץ!"
+        }
+      ]
+    },
+    {
+      "title": "קידה שעירה (רותם קוצני)",
+      "description": "תחנת כוח של פריחה מוזהבת שמקורה באגן הים התיכון, הקידה השעירה היא שיח עבות וצפוף המשנה את פניו באביב והופך למגדלור בוהק של צבע צהוב עז. השיח מגיע לגובה של 1–4 מטרים, ומבנהו הארכיטקטוני מפגין עמידות יוצאת דופן. כצמח ממשפחת הקטניות המקבע חנקן באדמה, הוא משגשג גם בקרקעות דלות, סלעיות או שחוקות, מה שכתיר אותו כבחירה מצוינת למניעת סחף קרקע במדרונות ולגינות בר הדורשות אפס תחזוקה.",
+      "faqs": [
+        {
+          "question": "האם השיח זקוק לתוספת דשן?",
+          "answer": "בכלל לא. מדובר בצמח קטניות המסוגל לקלוט חנקן מהאוויר ולהעשיר בו את האדמה דרך שורשיו, מה שמאפשר לו לשגשג בסביבה סלעית או חולית ללא כל עזרה חיצונית."
+        },
+        {
+          "question": "האם הפרחים הצהובים ריחניים?",
+          "answer": "כן, יש להם ניחוח מתוק ונעים המזכיר דבש, המורגש במיוחד בשעות אחר הצהריים החמימות של עונת האביב."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "עמית כ.",
+          "rating": 5,
+          "title": "קיר מוזהב ומרהיב",
+          "body": "שתלתי אותם לצורך ייצוב אדמה ומניעת סחף במדרון תלול בחצר. הם לא רק החזיקו את הקרקע בצורה מושלמת, אלא שהפריחה האביבית צבעה את כל הגבעה בצהוב זרחני משגע."
+        },
+        {
+          "authorName": "ג'וליה ו.",
+          "rating": 4,
+          "title": "פראי וקשוח",
+          "body": "מעולה עבור גינה בסגנון טבעי ופראי. הוא לא מבקש שום דבר – לא מים ולא תוספות מזון. רק תנו לו מספיק מרחב להתפתח, כי הוא גדל לממדים יפים ודי קוצני."
+        }
+      ]
+    },
+    {
+      "title": "לבנדר אפור",
+      "description": "צמח קונטרסט מרהיב ויוצא דופן, הלבנדר האפור מוערך בזכות עלוותו הצמרית והצפופה בגוון לבן-כסוף מהפנט. שיח ירוק-עד זה מפיק שיבולי פריחה בצבע סגול עמוק, הבולטים בצורה דרמטית על רקע העלים הבהירים של הצמח. מדובר בזן חזק, חובב חום ושמש, המביא איתו אסתטיקה ים-תיכונית מתוחכמת ואלגנטית למסלעות וגינות יבשות, תוך שהוא מתפקד כדוחה מזיקים טבעי.",
+      "faqs": [
+        {
+          "question": "מדוע העלווה של הלבנדר היא בצבע אפור-כסוף?",
+          "answer": "הכסות ה-'פלומתית' והאפורה היא מנגנון הגנה ואדפטציה טבעית המסייעת לצמח להחזיר את קרינת השמש החזקה ולשמור על הלחות הפנימית שלו בתנאי יובש וחום קיצוניים."
+        },
+        {
+          "question": "מהו אורך החיים של הצמח בגינה?",
+          "answer": "תחת תנאים של אדמה קלה וניקוז מעולה, הוא יכול לשגשג במשך 10–15 שנים. מומלץ לחדש את הצמח כאשר הוא הופך למעוץ, דליל וקרח בחלקו התחתון."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ליאו ב.",
+          "rating": 5,
+          "title": "מנצנץ בלילה",
+          "body": "העלים הכסופים שלו ממש זוהרים תחת אור הירח. שתלתי אותם בצמוד לשיחי אקסוודוס בירוק כהה, והניגודיות שנוצרה נראית ברמה של עיצוב נוף מקצועי."
+        },
+        {
+          "authorName": "מרים פ.",
+          "rating": 5,
+          "title": "מושלם לייבוש פרחים",
+          "body": "אני קוטפת את שיבולי הפריחה הסגולות ותולה אותן הפוכות לייבוש. הן שומרות על הצבע שלהן הרבה יותר טוב מסוגי לבנדר אחרים שיש לי. העלים המשוננים שלו מיוחדים מאוד."
+        }
+      ]
+    },
+    {
+      "title": "תות אופיר (תות שדה עץ זן אופיר)",
+      "description": "זן מקומי מובחר ויוצא דופן, תות אופיר מפורסם בזכות פירותיו הגדולים, המתוקים להפליא ובצבע אדום-כהה ועמוק הנמסים בפה. עץ נשיר זה מתאפיין בקצב צמיחה מהיר במיוחד, ומעניק חופת צל רחבה ומפנקת בתוך עונות ספורות בלבד. הוא אידיאלי לשתילה בבוסתנים פרטיים, ויבול האביב השופע שלו מושלם לאכילה טרייה ישירות מהעץ או להכנת מרקחות וריבות גורמה עשירות.",
+      "faqs": [
+        {
+          "question": "האם הפירות מכתימים?",
+          "answer": "כן, המיץ הכהה והעשיר של הפירות עלול להכתים את הידיים, הבגדים ושבילי גישה בהירים. מומלץ ביותר לשתול את העץ מעל מדשאה או במרחק בטוח ממשטחי בטון בהירים, חניות ומכוניות."
+        },
+        {
+          "question": "לאיזה גובה מסוגל העץ להגיע?",
+          "answer": "הוא יכול להגיע לגובה של 6–10 מטרים, אך קל מאוד לשלוט בממדיו ולשמור עליו בגובה נמוך ונוח לקטיף באמצעות גיזום חורף קבוע ומסודר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "רונן ג.",
+          "rating": 5,
+          "title": "זן התות הכי טעים שיש, נקודה.",
+          "body": "טעמתי המון זנים של תות עץ, אבל זן אופיר הוא המנצח הבלתי מעורער. הפרי שמן, עסיסי ובעל איזון מושלם בין מתיקות לחמיצות מעודנת. הידיים שלי סגולות לאורך כל חודש מאי, אבל זה שווה כל רגע."
+        },
+        {
+          "authorName": "טליה ו.",
+          "rating": 5,
+          "title": "צל מושלם ברגע",
+          "body": "שתלנו את העץ הזה לפני שלוש שנים והוא כבר הפך לעץ אמיתי ומפותח. מיקמנו תחתיו ספסל וזו הפינה הכי קרירה ונעימה אצלנו בגינה."
+        },
+        {
+          "authorName": "בן ד.",
+          "rating": 4,
+          "title": "היזהרו מהמדרכות!",
+          "body": "אל תשתלו אותו ממש מעל שביל הגישה לרכב. הפירות שנושרים יכתימו את הבטון. חוץ מהעניין הזה, מדובר בעץ המושלם."
+        }
+      ]
+    },
+    {
+      "title": "עץ הצימוקים היפני (הובניה מתוקה)",
+      "description": "אחד ה-'טריקים' הבוטניים המשעשעים והטעימים ביותר של הטבע. בעוד שהזרעים האמיתיים עצמם אינם אכילים, גבעולי הפריחה (הפדונקלים) הופכים לבשרניים, מתנפחים ומתפתלים לצורות חומות-אדמדמות פריכות, שטעמן מזכיר שילוב מדהים בין תפוח עץ פריך לצימוק איכותי ועשיר. מעבר לנשנושים המפתיעים, מדובר בעץ נשיר ואלגנטי בעל עלים מבריקים בצורת לב, הנצבעים בגוון זהב משגע עם בוא הסתיו. פרט טריוויה מרתק: הצמח נמצא בשימוש ברפואה המזרחית המסורתית מזה מאות שנים כתרופה טבעית לניקוי ותמיכה בכבד.",
+      "faqs": [
+        {
+          "question": "מתי חלה עונת הקטיף של 'הצימוקים'?",
+          "answer": "השגיחו על הגבעולים והמתינו שינשרו באופן טבעי אל הקרקע בשלהי הסתיו. זהו השלב שבו רמת הסוכר מגיעה לריכוז הגבוה ביותר ופרופיל הטעם מגיע לשיא המזכיר צימוק אמיתי."
+        },
+        {
+          "question": "האם העץ זקוק לצמח מפרה נוסף בסביבתו?",
+          "answer": "לא, העץ ניחן בפוריות עצמית (הפריה עצמית), כך שעץ בודד יספק כמות שופעת של נשנושים מתוקים עבור כל בני הבית."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ד\"ר אריס ו.",
+          "rating": 5,
+          "title": "הצמח שמייצר את השיחות הכי מעניינות בגינה",
+          "body": "אני מספר לאורחים שלי שהם יכולים לאכול את הענפים הקטנים של העץ, והם תמיד בטוחים שאני צוחק עליהם – עד שהם טועמים בעצמם. פשוט טעים להפליא ומשמש גם כעץ צל יפהפה."
+        },
+        {
+          "authorName": "קארין פ.",
+          "rating": 4,
+          "title": "סבלנות היא מעלה",
+          "body": "לקח לעץ כ-4 שנים עד שקיבלתי את היבול המשמעותי הראשון שלי, אבל ההמתנה הייתה שווה את זה. הצבעים של השלכת בסתיו פשוט מרהיבים, גם בלי קשר לפרי."
+        }
+      ]
+    },
+    {
+      "title": "מרווה אפריקאית",
+      "description": "יצירת מופת מבנית ופיסולית שמקורה בחופיה של דרום אפריקה. זוהי אינה המרווה הסגולה הסטנדרטית שלכם; היא מתאפיינת בפרחי ענק בעלי מרקם קשיח ונייר, המתחילים את חייהם בגוון צהוב-גופרית בוהק ומשנים את צבעם עם הזמן לגוון ברונזה-חלודה עשיר ועמוק. העלווה שלה בגוון ירוק-כסוף ארומטית מאוד וקשוחה להפליא, והשיח מתמודד בקלות ובאדישות עם רסס מלח מן הים ורוחות עזות במיוחד. מושלם ליצירת מראה ים-תיכוני פראי ומלא אופי.",
+      "faqs": [
+        {
+          "question": "האם הצמח מתאים יותר לאזורי חוף או לאזורים פנימיים?",
+          "answer": "הוא מצטיין במיוחד באזורי חוף הודות לעמידותו הגבוהה למליחות, אך ישגשג ללא שום בעיה גם באזורים פנימיים ויבשתיים, בתנאי שיקבל חשיפה מלאה לשמש ואדמה בעלת ניקוז מעולה."
+        },
+        {
+          "question": "האם ניתן לשלב את העלים בבישול ומאכל?",
+          "answer": "למרות שמבחינה טכנית העלים אינם רעילים, הם עשירים מאוד בשרף ובעלי טעם חזק מדי. הצמח מתאים הרבה יותר לשמש כמקור צוף עשיר עבור ציפורים ומאביקים, וכעוגן ויזואלי מרהיב בעיצוב הגינה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "יוני ב.",
+          "rating": 5,
+          "title": "מגנט אמיתי לציפורי שיר ומאביקים",
+          "body": "הצופיות אצלנו בגינה פשוט מכורות לצמח הזה. שינוי הצבע של הפרחים מצהוב לחלודה לאורך השבועות מרגיש ממש כמו לצפות בשקיעה איטית ומהפנטת."
+        }
+      ]
+    },
+    {
+      "title": "מלוח (שיח מלוח)",
+      "description": "הצמח ה-'בלתי ניתן להריסה'. המלוח הוא שיח בעל עלווה בגוון כסוף-כחלחל מנצנץ, המגדיר מחדש את המושג עמידות וקשיחות. הוא משגשג בקרקעות כה מלוחות או יבשות, שבהן מרבית הצמחים היו נובלים ומתים תוך זמן קצר. מעבר להתאמתו לשמש כגדר חיה חסינת אש, עליו הבשרניים נחשבים לסוד קולינרי מרתק – הם בעלי מליחות טבעית ופריכות נהדרת, וניתן לשלבם בתיבול צלי בשר או לטגן אותם בשמן עמוק ליצירת 'צ'יפס ירוק' ופריך.",
+      "faqs": [
+        {
+          "question": "כיצד מומלץ להכין ולצרוך את העלים?",
+          "answer": "ניתן לחלוט אותם בקצררה במים רותחים כדי למתן מעט את רמת המליחות הטבעית, או לטגן אותם קלות בשמן זית איכותי לקבלת תוספת פריכה ומלוחה בעלת טעם עמוק המזכיר את הים."
+        },
+        {
+          "question": "האם הצמח זקוק לדישון?",
+          "answer": "לעיתים נדירות ביותר. המלוח הוא מומחה לשגשוג באדמות דלות וקשות, והוא מוצא את כל רכיבי המזון הדרושים לו בכוחות עצמו ללא עזרה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "מארק ל.",
+          "rating": 5,
+          "title": "הצמח המושלם למי שאין לו מושג בגינון",
+          "body": "שכחתי להשקות את השיח הזה לאורך קיץ שלם ותנאי מדבר קיצוניים, והוא אפילו לא הפיל עלה אחד. הגוון הכסוף שלו נראה פשוט מדהים לצד שיחי הלבנדר הסגולים."
+        }
+      ]
+    },
+    {
+      "title": "רימון ראש פרד",
+      "description": "ה-'חביב' והעדין של משפחת הרימונים. זן 'ראש פרד' מפורסם בזכות פירותיו הגדולים בעלי קליפה בגוון ורוד-בהיר עד צהבהב, וזרעים שקופים ומנצנצים הדומים לפנינים. בניגוד לבעיטת החמיצות העזה המאפיינת זנים כמו 'עכו', רימון ראש פרד מציע מתיקות טהורה, עדינה ונקייה עם חרצנים (זרעים) רכים במיוחד. זהו תקן הזהב לאכילה טרייה, גרגור מעל קינוחים ונשנוש בריא עבור ילדים.",
+      "faqs": [
+        {
+          "question": "האם המיץ של הרימון הוא בצבע אדום עמוק?",
+          "answer": "לא, המיץ המופק מזן זה הוא בצבע ורוד בהיר או צהבהב-שקוף, המשקף במדויק את הגוון הפנימי העדין של גרגירי הפרי."
+        },
+        {
+          "question": "האם הפרי עדין ורגיש יותר בהשוואה לזנים אחרים?",
+          "answer": "קליפת הפרי של זן זה מעט דקה יותר, ולכן מומלץ לנהוג בה בעדינות ובתשומת לב במהלך הקטיף כדי למנוע פציעות או סימני חבלה בקליפה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "דליה א.",
+          "rating": 5,
+          "title": "הזן המושלם עבור ילדים",
+          "body": "הילדים שלי מסרבים לאכול את הרימונים האדומים הרגילים בטענה שהם חמוצים מדי, אבל את הזן הזה הם פשוט טורפים. החרצנים כל כך רכים ועדינים שאתה בכלל לא מרגיש אותם בלעיסה."
+        },
+        {
+          "authorName": "סאמי א.",
+          "rating": 4,
+          "title": "יפהפה אך בהיר",
+          "body": "אם אתם מחפשים את המראה הקלאסי של רימון בצבע אדום-דם עמוק, זה לא הזן בשבילכם. אבל אם המטרה שלכם היא לקבל את הפרי הכי טעים ומתוק לארוחת הבוקר, מדובר במנצח."
+        }
+      ]
+    },
+    {
+      "title": "אוזן האריה",
+      "description": "צמח נועז, ארכיטקטוני ובעל מראה מעט מעולם אחר. אוזן האריה מייצר גבעולים זקופים וגבוהים הנושאים קומות-קומות של דורוורת (מקבצים מעגליים) של פרחים פלומתיים בצבע כתום-ניאון עוצמתי, המזכירים סצנה מתוך ספרי ילדים מצוירים. מדובר בשיח בעל קצב צמיחה מהיר במיוחד, חובב שמש מושבע, המעניק את גובה הנוף והעניין הויזואלי הדרוש לחלקם האחורי של ערוגות הגינה.",
+      "faqs": [
+        {
+          "question": "כיצד ניתן למנוע מהשיח להפוך למראה מפוזר או פרוע?",
+          "answer": "גזמו את השיח באגרסיביות לגובה של כ-30 ס\"מ מעל פני הקרקע לאחר תום עונת הפריחה בשלהי הסתיו. הוא יגמול לכם בלבלוב רענן, צפוף ומסודר עם בוא האביב."
+        },
+        {
+          "question": "האם הצמח מושך ציפורים?",
+          "answer": "כן, בהחלט. צינורות הנוף הארוכים והעמוקים של הפרחים מותאמים בצורה מושלמת למבנה המקור של צופיות וציפורי שיר חובבות צוף."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ליאם ו.",
+          "rating": 5,
+          "title": "חגיגה של כתום ניאון",
+          "body": "אנשים פשוט עוצרים ליד הגדר שלי ושואלים מה זה הצמח הזה בכל פעם שהם עוברים ברחוב. הוא צבעוני ברמות מטורפות ומסתפק בכמויות אפסיות של מים."
+        },
+        {
+          "authorName": "נטע ג.",
+          "rating": 3,
+          "title": "דורש תחזוקה וגיזום",
+          "body": "הפרחים פשוט משגעים, אבל אם תזניחו אותו ולא תגזמו אותו בזמן, הוא יהפוך לגוש מעוץ, יבש ומכוער תוך שנתיים. צמח נהדר, רק אל תהיו עצלנים עם המזמרה!"
+        }
+      ]
+    },
+    {
+      "title": "תות לבן קצר (תות לבן נמוך)",
+      "description": "גרסה קומפקטית, נמוכה ובעלת תנובת יבול גבוהה במיוחד של עץ התות הקלאסי. זן זה מושלם עבור הגנן הביתי המעוניין ליהנות מטעם ה-'סוכרייה החיה' המאפיין את תות העץ הלבן, מבלי שיצטרך להתמודד עם עץ ענק בגובה 10 מטרים המשתלט על קו הרקיע של החצר. הפירות קצרים, שמנים ומתוקים באופן מרוכז. והיתרון הגדול מכולם: אפס כתמים סגולים על שביל הגישה, על הרכב, או על הבגדים של הילדים!",
+      "faqs": [
+        {
+          "question": "לאיזה גובה מקסימלי העץ מגיע?",
+          "answer": "ניתן לשמור עליו בקלות בגובה של 3–4 מטרים בלבד באמצעות גיזום חורף בסיסי וקל, מה שהופך אותו להתאמה מושלמת לחצרות אחוריות וגינות קטנות."
+        },
+        {
+          "question": "האם הפרי מתוק כמו זן התות הלבן הארוך?",
+          "answer": "דומה מאוד – מתיקות דבשית צרופה – אך מבנה הפרי מזכיר יותר צורה של גרגיר יער מסורתי ונוח בהרבה לקטיף מרוכז בכמויות."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ג'ייסון כ.",
+          "rating": 5,
+          "title": "נקי, מתוק ומושלם",
+          "body": "שתלנו אותו ממש בצמוד לבריכת השחייה. אין יותר עקבות רגליים סגולות ומלכלכות בתוך הבית! הפרי מרגיש בטעם כמו סוכריית גומי טבעית מהטבע."
+        },
+        {
+          "authorName": "מיה ת.",
+          "rating": 4,
+          "title": "קצב צימוח מהיר",
+          "body": "העץ צמח לגובה של כמעט שני מטרים כבר בשנה הראשונה שלו. נאלצתי לגזום אותו כדי לשמור עליו במידות הנכונות, אבל הצל שהוא מעניק בפינת החצר פשוט נפלא."
+        }
+      ]
+    },
+    {
+      "title": "רימון שאמי",
+      "description": "זן לבנטיני אגדי ומוביל, רימון השאמי מוערך ברחבי המזרח התיכון בזכות פירות הענק שלו בעלי גוון ורוד עמוק וזרעים (חרצנים) רכים במיוחד הנמסים בפה. הוא נודע בזכות מתיקות עשירה ודבשית עם אפס אחוז חמיצות, ומהווה מעדן מושלם של סוף הקיץ הניחן בכושר השתמרות ואחסון מעולה לאורך זמן. עץ חסון וסתגלן זה מביא איתו תחושה של היסטוריה עתיקה ושפע שופע לכל פינה שמשית בגינה.",
+      "faqs": [
+        {
+          "question": "האם החרצנים של רימון השאמי נוקשים?",
+          "answer": "לא, זן השאמי מפורסם ברחבי העולם בזכות הגרגירים הרכים שלו, מה ש הופך את חווית האכילה הטבעית שלו לנוחה ונעימה בהרבה בהשוואה לזנים מסחריים נפוצים."
+        },
+        {
+          "question": "מתי חלה העונה הטובה ביותר לקטיף הפירות?",
+          "answer": "בשלהי הקיץ או בתחילת הסתיו. חפשו פירות שקיבלו גוון ורוד עמוק עד אדמדם, ובעלי מבנה חיצוני מעט 'מרובע' ולא עגול לחלוטין."
+        },
+        {
+          "question": "האם העץ מסוגל להתמודד עם תנאי יובש?",
+          "answer": "כן, אך כדי לקבל פירות עסיסיים, כבדים ומלאי מיץ, הוא ישמח לקבל השקיה עמוקה ומסודרת פעם בשבוע במהלך שיא חודשי הקיץ החמים."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "עומר ח.",
+          "rating": 5,
+          "title": "טעם של ילדות",
+          "body": "בדיוק כמו הרימונים שהיו גדלים בגינה של סבא שלי. מתוק ברמות, בלי שום טיפה של מרירות, והחרצנים כמעט ולא מורגשים בפה."
+        },
+        {
+          "authorName": "שרה ל.",
+          "rating": 4,
+          "title": "יבול פשוט מטורף",
+          "body": "העץ התפתח וצמח הרבה יותר מהר ממה שציפינו! הפירות עצמם ענקיים וכבדים. רק הקפידו לתמוך בענפים העמוסים כדי שלא יישברו תחת משקל היבול."
+        }
+      ]
+    },
+    {
+      "title": "תות לבן ארוך (שאחטוט)",
+      "description": "מכונה לעיתים קרובות בתואר 'מלך תותי העץ', זן השאחטוט מייצר פירות מוארכים וצרים באורך של עד 10 ס\"מ, הנראים כמו תכשיטים בצבע ירוק-לבן בהיר חצי שקוף. פירות אלו, המכונים 'סוכריות חיות', ניחנים במתיקות של סוכר טהור עם סיומת סירופית עשירה. בניגוד לתות העץ השחור, פירות אלו אינם מכתימים את המרצפות, הרהיטים או הידיים, מה ש הופך אותו לעץ הפרי המושלם והנקי ביותר עבור משפחות וילדים.",
+      "faqs": [
+        {
+          "question": "האם הפירות הנושרים יכתימו את הריצוף בחצר?",
+          "answer": "בכלל לא! זהו היתרון הבלתי מעורער והגדול ביותר של התות הלבן הארוך – אפס סימנים או כתמים סגולים על נעליים, רכבים או שבילי גישה."
+        },
+        {
+          "question": "כיצד יודעים מתי הפירות מוכנים ובשלים לקטיף?",
+          "answer": "הפרי ישנה את צבעו מגוון ירוק-ליים לגוון לבן-פנינה חצי שקוף, וייפרד מהענף וייפול לתוך היד שלכם בקלות רבה ובמגע הקל ביותר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "בני ג.",
+          "rating": 5,
+          "title": "הרבה יותר טעים מסוכרייה",
+          "body": "הילדים שלי קוראים להם 'מקלות דבש'. הם מתוקים ברמות שאי אפשר לתאר. בכל בוקר מחדש יש אצלנו תחרות מטורפת בינינו לבין הציפורים מי יגיע ראשון לפירות!"
+        },
+        {
+          "authorName": "אלנה ו.",
+          "rating": 4,
+          "title": "עץ מלכותי ומרשים",
+          "body": "עץ צל יפהפה ורחב, למרות שהוא מפיל לא מעט פירות בשלים במהלך עונת האביב, אז כדאי לשמור על מטאטא זמין בהישג יד!"
+        }
+      ]
+    },
+    {
+      "title": "נענע הגינה (מנטה / נענע)",
+      "description": "צמח רב-שנתי נמרץ, חזק ושופע, המהווה את עמוד השדרה של כל ערוגת תבלינים ארומטית. ניחוחות המנתול המרעננים והמקררים שלו הם רכיב חובה ובלתי נפרד להכנת הכל – החל ממשקאות מוחיטו קרירים ועד לסלטים ים-תיכוניים רעננים. אזהרה חשובה: צמח זה הוא 'אקסטרוורט' (מוחצן) קיצוני – הוא ינסה להשתלט ולהתיידד עם כל הגינה שלכם אלא אם כן תגבילו את שורשיו ותגדלו אותו בתוך עציץ מבודד!",
+      "faqs": [
+        {
+          "question": "האם מומלץ לשתול את הנענע ישירות באדמת הגינה?",
+          "answer": "רק אם אתם מעוניינים שכל הגינה שלכם תהפוך לחלקת נענע אחת גדולה. הצמח מתפשט במהירות אגרסיבית באמצעות שלוחות תת-קרקעיות (רצים); אנו ממליצים בחום לגדל אותו אך ורק בתוך מיכל או עציץ עמוק."
+        },
+        {
+          "question": "כיצד ניתן למנוע מהצמח להפוך לארוך, דליל וגבעולי (Leggy)?",
+          "answer": "היו אגרסיביים איתו! קטיף וגיזום תכוף של החלקים העליונים וקטימת הראשים מאלצים את הצמח להישאר שיחי, צפוף, שופע ומלא בטעם עז."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "תום מ.",
+          "rating": 3,
+          "title": "השתלטות עוינת בחצר!",
+          "body": "התעלמתי מכל האזהרות שקראתי ושתלתי אותה ישירות בערוגה באדמה. עכשיו היא נמצאת בכל פינה. מצד שני, המדשאה שלי מריחה כמו מסטיק מנטה בכל פעם שאני עובר עם המכסחת."
+        },
+        {
+          "authorName": "לילה ס.",
+          "rating": 5,
+          "title": "מושלמת לחליטות תה",
+          "body": "צומחת כמו עשב שוטה בתוך עציץ אצלי במרפסת. שלושה עלים טריים בתוך כוס מים חמים ואני בגן עדן."
+        }
+      ]
+    },
+    {
+      "title": "טגססטה (אספסת שיחנית)",
+      "description": "אולר שוויצרי אמיתי של עולם הצומח. קטנית ירוקת-עד זו היא צמח חלוץ (Pioneer) קלאסי – היא משגשגת באדמות דלות וקשות, מקבעת חנקן כדי לדשן ולהשביח את סביבתה, ומספקת מספוא עשיר בחלבון עבור בעלי חיים ומשק. בשלהי החורף ובתחילת האביב, פרחיה הלבנים-צהבהבים בעלי ניחוח הוניל העדין מהווים חבל הצלה ומוקד משיכה קריטי עבור דבורים ומאביקים, בתקופה שבה כמעט שום דבר אחר אינו פורח.",
+      "faqs": [
+        {
+          "question": "האם הצמח ראוי ונכון למאכל אדם?",
+          "answer": "לא, הצמח משמש בעיקר כמספוא מזין לבעלי חיים (עיזים/כבשים) ולשיפור איכות ומבנה הקרקע. הוא אינו משמש כעשב תיבול קולינרי למטבח הבית."
+        },
+        {
+          "question": "מהו קצב הצמיחה של השיח?",
+          "answer": "מהיר ביותר. הוא מסוגל לייצר מסך פרטיות ירוק, צפוף ושופע או לתפקד כשובר רוח יעיל בתוך שתי עונות צימוח בלבד."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ג'וליאן ר.",
+          "rating": 5,
+          "title": "פריט חובה לכל חובב פרמקלצ'ר",
+          "body": "השתמשתי בשיחים האלה כדי לשקם ולהחיות חלקת אדמה יבשה ומתה לחלוטין בחצר. שנתיים לאחר מכן, האדמה הפכה לכהה ועשירה, והדבורים שלי פשוט מאושרות בכל אביב מחדש."
+        }
+      ]
+    },
+    {
+      "title": "רימון עכו",
+      "description": "זן עכו הוא ה-'סנונית הראשונה' של עולם הרימונים, והוא מקדים להבשל רפרפת שבועות ארוכים לפני שאר הזנים. הוא מניב פירות בצבע אדום-רובי בוהק, הניחנים באיזון המושלם והקלאסי שבין מתיקות עשירה לחמיצות רעננה ומעוררת. למרות שגרגיריו (חרצניו) נוקשים מעט יותר מאלו של זן השאמי, האמינות המוחלטת שלו, קצב הבשלתו המוקדם וצבעו הפנימי העז והחגיגי הופכים אותו לבחירה המובילה לסחיטת מיץ טבעי ולשילוב בסלטים צבעוניים וחגיגיים.",
+      "faqs": [
+        {
+          "question": "במה הוא שונה בעיקר מזן השאמי?",
+          "answer": "זן עכו מתאפיין בפרופיל טעם חמצמץ ומרענן יותר, והוא מגיע לבשלות מוקדם משמעותית במהלך העונה. כמו כן, הציפה והזרעים שלו מעט פריכים ונוקשים יותר בלעיסה."
+        },
+        {
+          "question": "האם הוא מתאים ומומלץ לסחיטת מיץ?",
+          "answer": "מעולה ביותר. הוא ניחן ביחס גבוה מאוד של מיץ למשקל הפרי, והמיץ המופק ממנו מתאפיין בגוון ארגמני עמוק, עשיר ויפהפה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "רינה ד.",
+          "rating": 5,
+          "title": "צבע פשוט משגע",
+          "body": "הגרגירים נראים ממש כמו אבני חן קטנות ומנצנצות. אני משלבת אותם קבוע בתוך סלטים והחמיצות המעודנת שלהם פשוט מושלמת ומשדרגת כל מנה."
+        },
+        {
+          "authorName": "גלעד ו.",
+          "rating": 4,
+          "title": "צמח אמין ויציב",
+          "body": "עובר את גלי החום של הקיץ בלי למצמץ אפילו. אני נהנה מפירות בשלים כבר בשלהי אוגוסט, בזמן שהשכן שלי עדיין מחכה ומביט בעץ שלו."
+        }
+      ]
+    },
+    {
+      "title": "מרווה ריחנית",
+      "description": "ידועה גם בשם המדעי Salvia dominica, שיח ירוק-עד זה (המגיע לגובה של כ-70 ס\"מ) הוא יצירת מופת חושית אמיתית, בעל עלים מקומטים בצורת משולש המפיצים ניחוח עוצמתי, דומיננטי ומתמשך. באביב, המרווה מעלה גבעולי פריחה אלגנטיים הנושאים פרחים בגווני צהוב-חיוור ולבן, המושכים אליהם מאביקים מכל רחבי הגינה. זוהי בחירה חזקה וחסכונית במים, המצטיינת במסלעות ובגינות נוף ים-תיכוניות, שבהן עלוותה בגוון ירוק-כסוף מעניקה עניין ויופי לאורך כל השנה.",
+      "faqs": [
+        {
+          "question": "עד כמה חזק ודומיננטי הריח של המרווה הריחנית?",
+          "answer": "הניחוח עוצמתי, מרוכז וייחודי במיוחד – והוא אינטנסיבי משמעותית מהמרווה הרפואית הרגילה המשמשת למאכל. מגע קל או הברשה של העלים מספיקים כדי לשחרר ענן ריח משכר לחלל האוויר."
+        },
+        {
+          "question": "האם ניתן לשלב זן זה בבישול ומאכל קולינרי?",
+          "answer": "למרות שהצמח אכיל ואינו רעיל, הטעם שלו חזק, מרוכז ושרפי בהרבה מהמרווה הסטנדרטית. השימוש המרכזי בו הוא בשל תכונותיו הארומטיות והיותו צמח נוי פיסולי ומרהיב בגינה."
+        },
+        {
+          "question": "האם השיח זקוק להשקיה מרובה?",
+          "answer": "בכלל לא, מדובר בצמח המומחה לאקלים יבש וצרוב שמש. השקיית יתר היא הגורם השכיח ביותר לכישלון או ריקבון של הצמח; הוא זקוק לאדמה קלה ומנוקזת היטב ולכמויות מים מינימליות במהלך הקיץ."
+        },
+        {
+          "question": "האם הצמח מושך בעלי חיים וציפורים לגינה?",
+          "answer": "כן, בהחלט. פריחת האביב השופעת שלו מהווה מוקד משיכה אהוב במיוחד עבור דבורים, פרפרים ואפילו צופיות, מה ש הופך אותו לתוספת נהדרת לגינות אקולוגיות המעודדות מגוון ביולוגי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "מיה כהן",
+          "authorEmail": "maya@example.com",
+          "title": "ניחוח פשוט מדהים",
+          "body": "הריח פשוט משגע וממלא את כל אזור המרפסת בכל פעם שהרוח מנשבת קלות. קלה מאוד לגידול ושרדה את הקיץ הלוהט שלנו בלי שום בעיה או סימני מצוקה.",
+          "rating": 5
+        },
+        {
+          "authorName": "דניאל לוי",
+          "authorEmail": "daniel@example.com",
+          "title": "מושלמת לגינות חסכוניות במים",
+          "body": "שתלתי אותה במסלעה יבשה עם מינימום השקיה והיא פשוט משגשגת. עלווה יפהפייה ומושכת דבורים ומאביקים לאורך כל שעות היום.",
+          "rating": 4
+        },
+        {
+          "authorName": "יעל בן עמי",
+          "authorEmail": "yael@example.com",
+          "title": "עוצמת ריח חזקה מהצפוי",
+          "body": "הארומה סופר חזקה – בהתחלה זה היה כמעט דומיננטי מדי, אבל התרגלנו לזה ועכשיו אנחנו פשוט מאוהבים בריח. בהחלט לא המרווה הרגילה שאתם מכירים מהמטבח.",
+          "rating": 4
+        }
+      ]
+    }
+  ]
+}
