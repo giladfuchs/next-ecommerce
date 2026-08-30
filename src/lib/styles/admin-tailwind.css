@@ -1,0 +1,67 @@
+@tailwind components;
+@tailwind utilities;
+
+.order-status-vars {
+  --color-status-new: #009688;
+  --color-status-ready: #6cc067;
+  --color-status-done: #607d8b;
+  --color-status-canceled: #d9534f;
+  --color-status-refunded: #9e9e9e;
+}
+@media (max-width: 768px) {
+  .document-fields {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .document-fields__sidebar-wrap {
+    order: -1;
+  }
+}
+.order-status-chip {
+  --order-status-color: var(--color-status-new);
+
+  display: inline-flex;
+  width: fit-content;
+  align-self: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid
+    color-mix(in srgb, var(--order-status-color) 33%, transparent);
+  border-radius: 9999px;
+  padding: 0.875rem 1rem;
+  color: var(--order-status-color);
+  background: color-mix(in srgb, var(--order-status-color) 8%, transparent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.order-status-chip[data-status="new"] {
+  --order-status-color: var(--color-status-new);
+}
+
+.order-status-chip[data-status="ready"] {
+  --order-status-color: var(--color-status-ready);
+}
+
+.order-status-chip[data-status="done"] {
+  --order-status-color: var(--color-status-done);
+}
+
+.order-status-chip[data-status="canceled"] {
+  --order-status-color: var(--color-status-canceled);
+}
+
+.order-status-chip[data-status="refunded"] {
+  --order-status-color: var(--color-status-refunded);
+}
+
+.order-status-chip__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  flex: none;
+  border-radius: 9999px;
+  background: currentColor;
+}

@@ -1,0 +1,18 @@
+.gallery-radio {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery-main-item,
+.gallery-prev-label,
+.gallery-next-label {
+  display: none;
+}
+
+.gallery-hidden-inputs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

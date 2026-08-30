@@ -1,0 +1,92 @@
+{
+  "name": "payload-ecommerce",
+  "version": "1.0.0",
+  "description": "Ecommerce template for Payload",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3344",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "check": "pnpm typecheck && pnpm lint:fix && pnpm format",
+    "payload": "payload",
+    "seed": "pnpm tsx  seed/run.ts",
+    "reset": "yes | payload migrate:fresh",
+    "generate:importmap": "payload generate:importmap",
+    "generate:types": "payload generate:types",
+    "reinstall": "rm -rf tsconfig.tsbuildinfo .next node_modules  pnpm-lock.yaml && pnpm install",
+    "reinstall:full": "rm -rf pnpm-lock.yaml .next .turbo node_modules && pnpm store prune && pnpm install"
+  },
+  "dependencies": {
+    "@payloadcms/admin-bar": "3.88.0",
+    "@payloadcms/db-postgres": "3.88.0",
+    "@payloadcms/email-nodemailer": "3.88.0",
+    "@payloadcms/live-preview-react": "3.88.0",
+    "@payloadcms/next": "3.88.0",
+    "@payloadcms/plugin-ecommerce": "3.88.0",
+    "@payloadcms/plugin-seo": "3.88.0",
+    "@payloadcms/richtext-lexical": "3.88.0",
+    "@payloadcms/storage-vercel-blob": "3.88.0",
+    "@payloadcms/storage-s3": "3.88.0",
+    "@payloadcms/ui": "3.88.0",
+    "@radix-ui/react-label": "2.1.15",
+    "@vercel/analytics": "2.0.1",
+    "@vercel/blob": "2.8.0",
+    "@vercel/speed-insights": "2.0.0",
+    "apexcharts": "^7.0.0",
+    "clsx": "2.1.1",
+    "embla-carousel-auto-scroll": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "next": "16.3.2",
+    "next-intl": "4.13.7",
+    "payload": "3.88.0",
+    "react": "19.2.8",
+    "react-apexcharts": "^2.1.1",
+    "react-dom": "19.2.8",
+    "react-hook-form": "7.86.0",
+    "react-icons": "5.7.0",
+    "sharp": "0.34.5",
+    "sonner": "2.0.8",
+    "tailwind-merge": "3.6.0"
+  },
+  "devDependencies": {
+    "@next/env": "16.3.2",
+    "@next/eslint-plugin-next": "16.3.2",
+    "@tailwindcss/postcss": "4.3.3",
+    "@tailwindcss/typography": "0.5.20",
+    "@types/node": "26.2.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "dotenv": "17.4.2",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.3.2",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-unused-imports": "4.4.1",
+    "postcss": "8.5.26",
+    "prettier": "3.9.6",
+    "prettier-plugin-tailwindcss": "0.8.1",
+    "tailwindcss": "4.1.18",
+    "tsx": "4.23.12",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.67.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not op_mini all"
+  ],
+  "engines": {
+    "node": "24.x",
+    "pnpm": ">=10"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
+  },
+  "packageManager": "pnpm@10.33.0"
+}

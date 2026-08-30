@@ -1,0 +1,2816 @@
+{
+  "user": {
+    "email": "admin@admin.com",
+    "password": "admin",
+    "roles": ["admin"],
+    "name": "admin"
+  },
+  "pages": [
+    {
+      "title": "Home",
+      "slug": "home",
+      "_status": "published",
+      "hero": {
+        "type": "highImpact",
+        "media": "giphy-hero-home.gif",
+        "richText": {
+          "root": {
+            "type": "root",
+            "children": [
+              {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Online Shoe Store Template 👟",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "tag": "h1",
+                "version": 1
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "A full online store demo, built with ",
+                    "version": 1
+                  },
+                  {
+                    "type": "link",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Next.js",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "fields": {
+                      "linkType": "custom",
+                      "newTab": true,
+                      "url": "https://nextjs.org"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 3
+                  },
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": " and ",
+                    "version": 1
+                  },
+                  {
+                    "type": "link",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Payload CMS",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "fields": {
+                      "linkType": "custom",
+                      "newTab": true,
+                      "url": "https://payloadcms.com"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 3
+                  },
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": " — including products, variants, cart and full content management.",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "textFormat": 0,
+                "textStyle": "",
+                "version": 1
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Go to the admin dashboard",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "fields": {
+                      "linkType": "custom",
+                      "newTab": true,
+                      "url": "/admin"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 3
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "textFormat": 0,
+                "textStyle": "",
+                "version": 1
+              },
+              {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Demo Login",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "tag": "h3",
+                "version": 1
+              },
+              {
+                "type": "list",
+                "children": [
+                  {
+                    "type": "listitem",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Email: admin@admin.com",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "value": 1,
+                    "version": 1
+                  },
+                  {
+                    "type": "listitem",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Password: admin",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "value": 2,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "listType": "bullet",
+                "start": 1,
+                "tag": "ul",
+                "version": 1
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "This project is open source and available ",
+                    "version": 1
+                  },
+                  {
+                    "type": "link",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "on GitHub",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "fields": {
+                      "linkType": "custom",
+                      "newTab": true,
+                      "url": "https://github.com/giladfuchs/next-ecommerce"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 3
+                  },
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": ".",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "textFormat": 0,
+                "textStyle": "",
+                "version": 1
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "version": 1
+          }
+        }
+      },
+      "layout": [
+        {
+          "blockType": "archive",
+          "blockName": "Shop by category",
+          "introContent": {
+            "root": {
+              "type": "root",
+              "children": [
+                {
+                  "type": "heading",
+                  "children": [
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "SHOP BY CATEGORY",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "center",
+                  "indent": 0,
+                  "tag": "h2",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            }
+          },
+          "introAlignment": "center",
+          "contentType": "categories",
+          "displayMode": "grid",
+          "populateBy": "collection",
+          "limit": 4
+        },
+
+        {
+          "blockType": "content",
+          "columns": [
+            {
+              "size": "full",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "Everything an online store needs, right here",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "tag": "h2",
+                      "version": 1
+                    },
+                    {
+                      "type": "list",
+                      "children": [
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "A complete, ready-to-use online store",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr",
+                          "format": "",
+                          "indent": 0,
+                          "value": 1,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "A complete purchase flow: category → product → cart → checkout → order",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr",
+                          "format": "",
+                          "indent": 0,
+                          "value": 2,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "Option to add online payments, or run without them — with store pickup or by contacting the customer and closing the payment by phone",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr",
+                          "format": "",
+                          "indent": 0,
+                          "value": 3,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "Dynamic content pages you can edit and design yourself (home page, \"About\", and more)",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr",
+                          "format": "",
+                          "indent": 0,
+                          "value": 4,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "Optimized for Google and AI search engines (SEO), so the business shows up in both regular search and AI-based results",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr",
+                          "format": "",
+                          "indent": 0,
+                          "value": 5,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "Connected to analytics and advertising tools (Google, Meta, TikTok) with order and sales tracking",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr",
+                          "format": "",
+                          "indent": 0,
+                          "value": 6,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "Automatic order confirmation email + WhatsApp notification for every new order",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr",
+                          "format": "",
+                          "indent": 0,
+                          "value": 7,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "No monthly server costs — hosting is free for a site with low-to-medium traffic",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr",
+                          "format": "",
+                          "indent": 0,
+                          "value": 8,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "listType": "bullet",
+                      "start": 1,
+                      "tag": "ul",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1
+                }
+              }
+            }
+          ]
+        },
+
+        {
+          "blockType": "cta",
+          "blockName": "Contact",
+          "richText": {
+            "root": {
+              "type": "root",
+              "children": [
+                {
+                  "type": "heading",
+                  "children": [
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "Looking for a specialist to build your store?",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "center",
+                  "indent": 0,
+                  "tag": "h2",
+                  "version": 1
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "Contact us at ",
+                      "version": 1
+                    },
+                    {
+                      "type": "link",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "info@studiopo.net",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "fields": {
+                        "linkType": "custom",
+                        "newTab": false,
+                        "url": "mailto:info@studiopo.net"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 3
+                    },
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": " and tell us a bit about your project!",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "center",
+                  "indent": 0,
+                  "textFormat": 0,
+                  "textStyle": "",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            }
+          },
+          "links": []
+        },
+        {
+          "blockType": "archive",
+          "blockName": "Best sellers",
+          "introContent": {
+            "root": {
+              "type": "root",
+              "children": [
+                {
+                  "type": "heading",
+                  "children": [
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "BEST SELLERS",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "center",
+                  "indent": 0,
+                  "tag": "h2",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            }
+          },
+          "introAlignment": "center",
+          "contentType": "products",
+          "displayMode": "autoScroll",
+          "populateBy": "collection",
+          "limit": 10
+        },
+        {
+          "blockType": "faq",
+          "blockName": "Frequently asked questions",
+          "faqs": [
+            {
+              "question": "What do I get with the store template?",
+              "answer": "A complete online store including category and product pages, variants, inventory management, shopping cart, checkout flow, and a friendly management system powered by Payload CMS."
+            },
+            {
+              "question": "What can I edit through the admin panel?",
+              "answer": "You can independently manage the home page, the hero section, content sections, products, categories, prices, inventory, images, FAQs, and SEO data — with no code changes needed."
+            },
+            {
+              "question": "Does the store support products with sizes, colors, or other variants?",
+              "answer": "Yes. You can define variant types like size and color for each product, with separate price and inventory per combination, and add more option types as your store needs."
+            },
+            {
+              "question": "Is the store fast and mobile-friendly?",
+              "answer": "Yes. The store is built with Next.js and React, adapts to any screen size, and uses smart caching and revalidation to stay fast even as the catalog grows."
+            },
+            {
+              "question": "Is the store ready for Google SEO?",
+              "answer": "Yes. Every page has managed metadata, a share image, and a canonical link, and a sitemap and structured data are generated automatically to help search engines understand the store and product content."
+            },
+            {
+              "question": "Are there subscription fees or a cut of sales?",
+              "answer": "The store is open source and fully owned by you, so there's no built-in fee on your sales volume or dependency on a closed commerce platform. Third-party service and hosting costs depend on what you choose to use."
+            },
+            {
+              "question": "Can the store be extended later?",
+              "answer": "Yes. You can add fields to products, new content types, pages, content blocks, and additional integrations, so the store can grow and change along with the business."
+            },
+            {
+              "question": "Does the store support analytics tools and order notifications?",
+              "answer": "Yes. The template is ready to connect with Google Analytics, Meta Pixel, and TikTok Pixel, and includes infrastructure for sending messages and order confirmations based on your store settings."
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "title": "Online Shoe Store | Next.js & Payload CMS",
+        "description": "A fast, modern shoe store with a full product catalog, variants, shopping cart, and complete content management via Payload CMS.",
+        "image": "image_meta.webp"
+      }
+    },
+    {
+      "title": "Privacy Policy",
+      "slug": "privacy-policy",
+      "_status": "published",
+      "hero": {
+        "type": "lowImpact",
+        "richText": {
+          "root": {
+            "type": "root",
+            "children": [
+              {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Privacy Policy",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "tag": "h1",
+                "version": 1
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "version": 1
+          }
+        }
+      },
+      "layout": [
+        {
+          "blockType": "htmlEmbed",
+          "blockName": "Privacy policy",
+          "contentHtml": "<section dir=\"ltr\" style=\"max-width:48rem;margin:0 auto;padding:0 1rem 4rem;line-height:1.8\"><p>Information submitted on the site is used to process orders, provide service, and improve the shopping experience. We do not sell personal information to third parties.</p><p>For questions, contact us by email: <a href=\"mailto:ecommerce@payloadcms.com\" style=\"text-decoration:underline\">ecommerce@payloadcms.com</a>.</p></section>"
+        }
+      ],
+      "meta": {
+        "title": "Privacy Policy | Shoe Store",
+        "description": "A brief overview of how information is collected and used at the shoe store.",
+        "image": "image_meta.webp"
+      }
+    },
+    {
+      "title": "Accessibility Statement",
+      "slug": "accessibility",
+      "_status": "published",
+      "hero": {
+        "type": "lowImpact",
+        "richText": {
+          "root": {
+            "type": "root",
+            "children": [
+              {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Accessibility Statement",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "tag": "h1",
+                "version": 1
+              }
+            ],
+            "direction": "ltr",
+            "format": "",
+            "indent": 0,
+            "version": 1
+          }
+        }
+      },
+      "layout": [
+        {
+          "blockType": "htmlEmbed",
+          "blockName": "Accessibility statement",
+          "contentHtml": "<section dir=\"ltr\" style=\"max-width:48rem;margin:0 auto;padding:0 1rem 4rem;line-height:1.8\"><p>We work to make the site accessible to all users, including keyboard navigation support, clear text, and compatibility with different devices.</p><p>Having trouble? Write to us: <a href=\"mailto:ecommerce@payloadcms.com\" style=\"text-decoration:underline\">ecommerce@payloadcms.com</a>.</p></section>"
+        }
+      ],
+      "meta": {
+        "title": "Accessibility Statement | Shoe Store",
+        "description": "A brief overview of the site's accessibility accommodations and how to contact us.",
+        "image": "image_meta.webp"
+      }
+    }
+  ],
+  "siteSettings": {
+    "general": {
+      "logo": "logo.webp"
+    },
+    "header": {
+      "navItems": [
+        {
+          "link": {
+            "type": "custom",
+            "label": "Home",
+            "url": "/"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "Nike",
+            "url": "/category/nike"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "Adidas",
+            "url": "/category/adidas"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "Asics",
+            "url": "/category/asics"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "New Balance",
+            "url": "/category/new-balance"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "Privacy Policy",
+            "url": "/privacy-policy"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "Accessibility Statement",
+            "url": "/accessibility"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "Admin",
+            "url": "/admin"
+          }
+        }
+      ]
+    },
+    "footer": {
+      "blocks": [
+        {
+          "blockType": "footerNav",
+          "title": "Quick Links",
+          "links": [
+            {
+              "link": {
+                "type": "custom",
+                "label": "Home",
+                "url": "/"
+              }
+            },
+            {
+              "link": {
+                "type": "custom",
+                "label": "Admin",
+                "url": "/admin"
+              }
+            },
+            {
+              "link": {
+                "type": "custom",
+                "label": "Source Code",
+                "newTab": true,
+                "url": "https://github.com/giladfuchs/payload-cms"
+              }
+            },
+            {
+              "link": {
+                "type": "custom",
+                "label": "Payload",
+                "newTab": true,
+                "url": "https://payloadcms.com/"
+              }
+            }
+          ]
+        },
+        {
+          "blockType": "footerNav",
+          "title": "Policies",
+          "links": [
+            {
+              "link": {
+                "type": "custom",
+                "label": "Privacy Policy",
+                "url": "/privacy-policy"
+              }
+            },
+            {
+              "link": {
+                "type": "custom",
+                "label": "Accessibility Statement",
+                "url": "/accessibility"
+              }
+            }
+          ]
+        },
+        {
+          "blockType": "content",
+          "columns": [
+            {
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "A Modern Shoe Store",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "tag": "h3",
+                      "version": 1
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "A full product catalog, variants, shopping cart, and a fast checkout on any device.",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "textFormat": 0,
+                      "textStyle": "",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1
+                }
+              }
+            },
+            {
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "Simple, Flexible Management",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "tag": "h3",
+                      "version": 1
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "Manage products, prices, inventory, pages, and content all in one place with Payload CMS.",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "textFormat": 0,
+                      "textStyle": "",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1
+                }
+              },
+              "enableLink": true,
+              "link": {
+                "type": "custom",
+                "label": "Go to admin",
+                "url": "/admin"
+              }
+            },
+            {
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "Open Source, Fully Owned",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "tag": "h3",
+                      "version": 1
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "The store is built on open technologies and can be extended to fit your business needs.",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "format": "",
+                      "indent": 0,
+                      "textFormat": 0,
+                      "textStyle": "",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1
+                }
+              },
+              "enableLink": true,
+              "link": {
+                "type": "custom",
+                "label": "View source code",
+                "newTab": true,
+                "url": "https://github.com/giladfuchs/payload-cms"
+              }
+            }
+          ]
+        },
+        {
+          "blockType": "footerIcons",
+          "title": "Follow Us",
+          "items": [
+            {
+              "icon": "instagram",
+              "link": {
+                "type": "custom",
+                "label": "Instagram",
+                "newTab": true,
+                "url": "https://instagram.com/payloadcms"
+              }
+            },
+            {
+              "icon": "facebook",
+              "link": {
+                "type": "custom",
+                "label": "Facebook",
+                "newTab": true,
+                "url": "https://facebook.com/payloadcms"
+              }
+            },
+            {
+              "icon": "tiktok",
+              "link": {
+                "type": "custom",
+                "label": "TikTok",
+                "newTab": true,
+                "url": "https://tiktok.com/@payloadcms"
+              }
+            },
+            {
+              "icon": "linkedin",
+              "link": {
+                "type": "custom",
+                "label": "LinkedIn",
+                "newTab": true,
+                "url": "https://linkedin.com/company/payload-cms"
+              }
+            },
+            {
+              "icon": "youtube",
+              "link": {
+                "type": "custom",
+                "label": "YouTube",
+                "newTab": true,
+                "url": "https://youtube.com/@payloadcms"
+              }
+            },
+            {
+              "icon": "x",
+              "link": {
+                "type": "custom",
+                "label": "X",
+                "newTab": true,
+                "url": "https://x.com/payloadcms"
+              }
+            }
+          ]
+        },
+        {
+          "blockType": "footerIcons",
+          "title": "Contact Us",
+          "items": [
+            {
+              "icon": "whatsapp",
+              "link": {
+                "type": "custom",
+                "label": "WhatsApp",
+                "newTab": true,
+                "url": "https://wa.me/972521234567?text=Hi!%20I%20have%20a%20question%20about%20the%20store."
+              }
+            },
+            {
+              "icon": "phone",
+              "link": {
+                "type": "custom",
+                "label": "Phone",
+                "url": "tel:+972521234567"
+              }
+            },
+            {
+              "icon": "email",
+              "link": {
+                "type": "custom",
+                "label": "Email",
+                "url": "mailto:ecommerce@payloadcms.com"
+              }
+            },
+            {
+              "icon": "website",
+              "link": {
+                "type": "custom",
+                "label": "Website",
+                "newTab": true,
+                "url": "https://payloadcms.com/"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": [
+    {
+      "label": "Choose Color",
+      "name": "color",
+      "selectorStyle": "swatch",
+      "options": [
+        { "label": "Black", "value": "black", "swatch": "#111827" },
+        { "label": "White", "value": "white", "swatch": "#FFFFFF" },
+        { "label": "Red", "value": "red", "swatch": "#EF4444" },
+        { "label": "Orange", "value": "orange", "swatch": "#F97316" },
+        { "label": "Yellow", "value": "yellow", "swatch": "#EAB308" },
+        { "label": "Green", "value": "green", "swatch": "#22C55E" },
+        { "label": "Blue", "value": "blue", "swatch": "#3B82F6" },
+        { "label": "Purple", "value": "purple", "swatch": "#A855F7" },
+        { "label": "Pink", "value": "pink", "swatch": "#EC4899" },
+        { "label": "Gray", "value": "gray", "swatch": "#6B7280" },
+        { "label": "Beige", "value": "beige", "swatch": "#D6C7A1" },
+        { "label": "Brown", "value": "brown", "swatch": "#92400E" }
+      ]
+    },
+    {
+      "label": "Choose Size",
+      "name": "size",
+      "selectorStyle": "buttons",
+      "options": ["XS", "S", "M", "L", "XL", "XXL"]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "vendor": "Nike",
+      "title": "Nike",
+      "description": "Our original Nike collection combines technological innovation with iconic design that has followed the world of sports for decades.\n- Legendary Air Max models with visible air cushioning\n- Advanced running shoes in the React line\n- Advanced shock-absorption technology for every workout\nEvery pair combines quality materials and uncompromising comfort, whether for a daily workout or street style.",
+      "faqs": [
+        {
+          "question": "What's the difference between Air Max and React models?",
+          "answer": "Air Max is based on visible air units that provide cushioning and a distinctive look, while React uses an especially soft polymer foam that gives a lighter, more flexible running feel."
+        },
+        {
+          "question": "Does Nike sizing match my regular size?",
+          "answer": "Most Nike models tend to run slightly small compared to the standard, so it's sometimes recommended to size up by half a size, especially in running and basketball models."
+        },
+        {
+          "question": "How do I keep white canvas or leather shoes clean?",
+          "answer": "Clean gently with a soft brush, a little soap, and lukewarm water, and avoid machine washing to preserve the shoe's structure and internal adhesives."
+        },
+        {
+          "question": "Which models are best suited for daily fitness training?",
+          "answer": "The Metcon and Pegasus lines offer excellent support for multi-directional movement, good ankle stability, and a level of cushioning suited to both weight training and cardio."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "vendor": "Adidas",
+      "title": "Adidas",
+      "description": "German heritage of precision and quality meets contemporary innovation. The Adidas collection includes the legendary Boost models known for maximum comfort, alongside the classic Samba and Gazelle lines that have come back to life as sought-after everyday fashion items.",
+      "faqs": [
+        {
+          "question": "What is Boost technology and how does it improve comfort?",
+          "answer": "Boost is a unique foam midsole made of thousands of tiny energy capsules that provide especially high energy return and a soft cushioned feel under the foot with every step."
+        },
+        {
+          "question": "Are Samba and Gazelle models also suitable for sports activity?",
+          "answer": "These are classic models originally designed for football and running, but today they're mainly used as everyday fashion sneakers and aren't recommended for intense training."
+        },
+        {
+          "question": "How do I know which Adidas size to order?",
+          "answer": "It's best to use the brand's official size chart and measure your foot at the end of the day, when it's at its largest, for the most accurate fit."
+        },
+        {
+          "question": "What's the difference between a Boost sole and a Lightstrike sole?",
+          "answer": "Lightstrike is a lightweight sole designed for fast, competitive runs, while Boost focuses on comfort and shock absorption for long-duration training and everyday use."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "vendor": "Asics",
+      "title": "Asics",
+      "description": "Asics brings a rich Japanese heritage of precise running engineering, combining iconic archival designs with up-to-date performance technologies.\n- GEL inserts placed at key pressure points\n- A perfect balance of cushioning, stability, and refined finish\n- Suitable for both athletic use and urban lifestyle",
+      "faqs": [
+        {
+          "question": "What makes Asics' GEL technology special?",
+          "answer": "It refers to gel inserts placed at key pressure points in the sole, providing targeted shock absorption and improving stability on landing."
+        },
+        {
+          "question": "Are Asics archive models suitable for actual running?",
+          "answer": "Most of the reissued models are based on older designs and are mainly intended for lifestyle use, so it's worth checking the technical spec of each model before intense use."
+        },
+        {
+          "question": "How do I choose the right size in Asics shoes?",
+          "answer": "Asics tends to run fairly true to size, but it's still recommended to measure your foot at the end of the day and check the brand's official size chart before purchasing."
+        },
+        {
+          "question": "What's the difference between GEL-KAYANO models and GT models?",
+          "answer": "The GEL-KAYANO line focuses on stability and support for feet prone to overpronation, while the GT line offers a broader balance between cushioning and flexibility for general daily running."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "vendor": "New Balance",
+      "title": "New Balance",
+      "description": "New Balance combines a rich American running heritage with a retro-futuristic design language that's reclaiming the world of lifestyle fashion. From the legendary 990 models to technical collections inspired by the 2000s, every pair combines top-quality materials. The brand offers advanced shock-absorption technologies like ABZORB and FuelCell for maximum support. The distinctive aesthetic suits everyday use, work, and athletic settings alike.",
+      "faqs": [
+        {
+          "question": "What's the difference between the 990 models and the 574 models?",
+          "answer": "The 990 line offers a higher level of cushioning and support at a higher price, while the 574 is a lighter, more accessible option mainly suited for everyday use."
+        },
+        {
+          "question": "Are New Balance shoes suitable for wide feet?",
+          "answer": "The brand is known for dedicated wide options (Wide and Extra Wide) in many of its models, making it a popular choice for those who need extra room in the toe area."
+        },
+        {
+          "question": "What is ABZORB technology and how does it work?",
+          "answer": "ABZORB is a foam sole designed to absorb shock on landing, providing a cushioned feel while maintaining responsiveness and stability throughout your stride."
+        },
+        {
+          "question": "How do I know if a certain model is meant for running or just lifestyle?",
+          "answer": "It's worth checking the model's technical spec — dedicated running shoes will include details about support and shock absorption for training, while lifestyle models focus mainly on aesthetics and everyday comfort."
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "name": "Noa Cohen",
+      "phone": "0501234501",
+      "email": "noa.cohen@example.com"
+    },
+    {
+      "name": "Yonatan Levi",
+      "phone": "0521234502",
+      "email": "yonatan.levi@example.com"
+    },
+    {
+      "name": "Maya Israeli",
+      "phone": "0541234503",
+      "email": "maya.israeli@example.com"
+    },
+    {
+      "name": "Itay Mizrahi",
+      "phone": "0531234504",
+      "email": "itay.mizrahi@example.com"
+    },
+    {
+      "name": "Shira Avraham",
+      "phone": "0501234505",
+      "email": "shira.avraham@example.com"
+    },
+    {
+      "name": "Daniel Peretz",
+      "phone": "0521234506",
+      "email": "daniel.peretz@example.com"
+    },
+    {
+      "name": "Roni Alon",
+      "phone": "0541234507",
+      "email": "roni.alon@example.com"
+    },
+    {
+      "name": "Omer Barak",
+      "phone": "0531234508",
+      "email": "omer.barak@example.com"
+    },
+    {
+      "name": "Yael Shapira",
+      "phone": "0501234509",
+      "email": "yael.shapira@example.com"
+    },
+    {
+      "name": "Noam Rozen",
+      "phone": "0521234510",
+      "email": "noam.rozen@example.com"
+    }
+  ],
+  "products": [
+    {
+      "title": "Adidas Hyper Boost Euphoria",
+      "image_name": "adidas-01",
+      "vendor": "Adidas",
+      "description": "Combines contemporary aesthetics with high-level cushioning for all-day comfort.\n- BOOST midsole for powerful energy return\n- Breathable fabric upper with synthetic reinforcements\n- Durable rubber outsole with high traction",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the shoe suitable for long walks?",
+          "answer": "Yes, BOOST technology provides excellent softness and cushioning even after many hours of walking."
+        },
+        {
+          "question": "How should I clean the shoe?",
+          "answer": "Hand cleaning with a damp cloth and mild soap will preserve the fabric fibers and the sole."
+        },
+        {
+          "question": "How do I keep the shoe's shape between wears?",
+          "answer": "It's recommended to store it in the original box or with shoe trees to help maintain its shape over time."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Anna Cohen",
+          "rating": 5,
+          "title": "Unbelievable comfort",
+          "body": "The most comfortable shoe I've ever worn, the BOOST really makes a difference with every step."
+        },
+        {
+          "authorName": "Yonatan Levi",
+          "rating": 5,
+          "title": "Style and quality",
+          "body": "Clean, premium design, works with jeans and with sportswear alike."
+        }
+      ]
+    },
+    {
+      "title": "Adidas Climacool Laced",
+      "image_name": "adidas-02",
+      "vendor": "Adidas",
+      "description": "3D-printing innovation and a seamless mesh structure for a lightweight wrap around the foot. The lacing system allows a precise fit alongside full 360-degree ventilation.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the shoe suitable for hot summer days?",
+          "answer": "Absolutely, the mesh structure provides maximum ventilation that prevents the foot from overheating."
+        },
+        {
+          "question": "How long does it take to get used to the printed structure?",
+          "answer": "Most customers report immediate adjustment thanks to the flexibility of the mesh around the foot."
+        },
+        {
+          "question": "Is there a warranty on the shoe?",
+          "answer": "Yes, the product comes with a manufacturer's warranty against manufacturing defects for one year from the date of purchase, excluding normal wear and tear."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Daniel Mizrahi",
+          "rating": 5,
+          "title": "Insane ventilation",
+          "body": "You can feel the breeze passing through the shoe, perfect for Israeli summers."
+        },
+        {
+          "authorName": "Noa Avraham",
+          "rating": 4,
+          "title": "Cool and unique",
+          "body": "Futuristic, very distinctive look, requires matching socks."
+        }
+      ]
+    },
+    {
+      "title": "Adidas ClimaCool",
+      "image_name": "adidas-03",
+      "vendor": "Adidas",
+      "description": "Brings high-level running innovation to the lifestyle world with the DNA of the Adizero line.\n- Unique zipper closure over the laces\n- Especially lightweight Lightstrike Pro sole\nA clean look that fits perfectly with any modern urban outfit.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the zipper durable?",
+          "answer": "Yes, the zipper is high quality and built for long-term daily use without wearing out."
+        },
+        {
+          "question": "Is it easy to put on and take off the shoe?",
+          "answer": "Very much so, the zipper allows quick entry and exit without needing to open the laces."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        },
+        {
+          "question": "How do I keep the shoe's shape between wears?",
+          "answer": "It's recommended to store it in the original box or with shoe trees to help maintain its shape over time."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Michael Peretz",
+          "rating": 5,
+          "title": "Showstopping design",
+          "body": "The zipper gives it a crazy look, people stop me on the street to ask where I got them."
+        },
+        {
+          "authorName": "Shira Israeli",
+          "rating": 5,
+          "title": "Insanely light",
+          "body": "Feels like air on your foot. Highly recommend."
+        }
+      ]
+    },
+    {
+      "title": "Adidas Adizero Evo SL Zip White",
+      "image_name": "adidas-04",
+      "vendor": "Adidas",
+      "description": "Brings high-level running innovation to the lifestyle world. Inspired by adidas athletic shoes from the 2000s, featuring a unique closure system with a zipper over the laces, a Lightstrike Pro midsole, and a light design that combines speed, technology, and contemporary style.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the shoe suitable for wide feet?",
+          "answer": "The model has a snug athletic fit, it's recommended to consider going half a size up for wide feet."
+        },
+        {
+          "question": "Can the shoe actually be used for running training?",
+          "answer": "The model is mainly designed for lifestyle use, but the Lightstrike Pro sole also provides good support for light runs."
+        },
+        {
+          "question": "Is there a warranty on the shoe?",
+          "answer": "Yes, the product comes with a manufacturer's warranty against manufacturing defects for one year from the date of purchase, excluding normal wear and tear."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Itai Friedman",
+          "rating": 5,
+          "title": "Adidas quality at its best",
+          "body": "A perfect combination of an athletic look and urban comfort."
+        },
+        {
+          "authorName": "Rotem Alon",
+          "rating": 4,
+          "title": "White that doesn't get dirty fast",
+          "body": "The material stays clean over time, worth every penny."
+        }
+      ]
+    },
+    {
+      "title": "Adidas Adizero Evo SL Zip Black",
+      "image_name": "adidas-05",
+      "vendor": "Adidas",
+      "description": "Brings the technical language of the Adizero line into a contemporary everyday item.\n- Light, ergonomic fit\n- Comfortable half-zip closure\n- Advanced shock-absorbing sole\n- Minimalist look inspired by adidas Originals",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Does the sole wear out quickly?",
+          "answer": "No, the rubber blend provides great durability on asphalt and urban surfaces."
+        },
+        {
+          "question": "What's the difference between this model and the 'White' version?",
+          "answer": "It's the same design concept, the only difference is the color of the upper."
+        },
+        {
+          "question": "How long does shipping take?",
+          "answer": "Standard shipping arrives within 3-5 business days, depending on your location and stock availability."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Adi Golan",
+          "rating": 5,
+          "title": "Simply practical",
+          "body": "You put it on in a second with the zipper and it's incredibly comfortable."
+        },
+        {
+          "authorName": "Tomer Ezra",
+          "rating": 4,
+          "title": "Clean look",
+          "body": "Great for both work and everyday lifestyle."
+        }
+      ]
+    },
+    {
+      "title": "Adidas Tenis Japan Lux",
+      "image_name": "adidas-06",
+      "vendor": "Adidas",
+      "description": "Reinterprets a historic model from the adidas archive with a refined, contemporary approach.\n- Upper made of premium leather\n- Combined with refined suede details\n- Thin, flexible sole in a classic style",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "What material is the shoe made from?",
+          "answer": "Natural premium leather combined with quality suede accents."
+        },
+        {
+          "question": "Is the shoe suitable for formal wear?",
+          "answer": "Yes, the clean, thin design also suits a neat look, not just an urban lifestyle one."
+        },
+        {
+          "question": "How do I keep the shoe's shape between wears?",
+          "answer": "It's recommended to store it in the original box or with shoe trees to help maintain its shape over time."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Roni Shapira",
+          "rating": 5,
+          "title": "Uncompromising quality",
+          "body": "The leather is incredibly soft and the classic look is simply worth every penny."
+        },
+        {
+          "authorName": "Ben Zion Halevi",
+          "rating": 5,
+          "title": "Minimalism that wins",
+          "body": "Exactly what I was looking for, a quiet, elegant shoe."
+        }
+      ]
+    },
+    {
+      "title": "Adidas Adizero F50",
+      "image_name": "adidas-07",
+      "vendor": "Adidas",
+      "description": "Iconic football boots reinterpreted for contemporary lifestyle. An especially light fit, premium materials, and a limited edition for sport and style fans alike.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the shoe meant for playing football?",
+          "answer": "This model is designed as an everyday lifestyle version inspired by football boots, not for playing on grass."
+        },
+        {
+          "question": "Is this a limited edition?",
+          "answer": "Yes, the quantity is limited and based on limited stock only."
+        },
+        {
+          "question": "Is there a warranty on the shoe?",
+          "answer": "Yes, the product comes with a manufacturer's warranty against manufacturing defects for one year from the date of purchase, excluding normal wear and tear."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Gilad Katz",
+          "rating": 5,
+          "title": "Pure nostalgia",
+          "body": "Reminds me of the good old days of the F50 shoes, but in a version comfortable for the street."
+        },
+        {
+          "authorName": "Or Dayan",
+          "rating": 4,
+          "title": "Especially light",
+          "body": "You feel like there's nothing on your foot, really lightweight."
+        }
+      ]
+    },
+    {
+      "title": "Adidas Superstar CLOT by Edison Chen",
+      "image_name": "adidas-08",
+      "vendor": "Adidas",
+      "description": "A sophisticated interpretation by Edison Chen of the legendary Superstar, inspired by high-end tailoring.\n- Unique wavy sole with real presence\n- Reworked Shell Toe cap made of premium leather\nAn especially limited, collectible edition.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the sizing standard?",
+          "answer": "Yes, the sizing matches the standard adidas Superstar sizing."
+        },
+        {
+          "question": "Is this a numbered edition?",
+          "answer": "Yes, every pair comes with a unique box and packaging for the collaboration with CLOT."
+        },
+        {
+          "question": "How long does shipping take?",
+          "answer": "Standard shipping arrives within 3-5 business days, depending on your location and stock availability."
+        },
+        {
+          "question": "Is there a warranty on the shoe?",
+          "answer": "Yes, the product comes with a manufacturer's warranty against manufacturing defects for one year from the date of purchase, excluding normal wear and tear."
+        },
+        {
+          "question": "Can I pay in installments?",
+          "answer": "Yes, at checkout you can split the payment into several credit card installments according to the site's policy."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Alon Hadad",
+          "rating": 5,
+          "title": "A work of art",
+          "body": "The small details and the special sole make this the most unique sneaker in my collection."
+        },
+        {
+          "authorName": "Nerya Abutbul",
+          "rating": 5,
+          "title": "A collector's item",
+          "body": "I bought it as an investment but end up wearing it every week."
+        }
+      ]
+    },
+    {
+      "title": "Adidas x Willy Chavarria Megaride AG XL",
+      "image_name": "adidas-09",
+      "vendor": "Adidas",
+      "description": "Reinterprets the iconic Megaride line with a futuristic inspiration and a bold design approach. Developed together with Willy Chavarria, combining a premium upper, unique details, and a robust build that turns adidas Originals' running heritage into a contemporary, limited-edition statement with an unforgettable presence.",
+      "images": 11,
+      "faqs": [
+        {
+          "question": "Who is this design suited for?",
+          "answer": "Fans of contemporary fashion, oversized fits, and unique designs that grab attention."
+        },
+        {
+          "question": "Is the shoe comfortable despite the large build?",
+          "answer": "Yes, the thick internal cushioning provides good comfort even with the chunky look."
+        },
+        {
+          "question": "Can I return or exchange the shoe?",
+          "answer": "Yes, you can return or exchange it within 14 days of receiving the product, provided it hasn't been worn outdoors and the original packaging is kept."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Yael Malka",
+          "rating": 5,
+          "title": "A style like no other",
+          "body": "A bold shoe full of character. Gets me tons of compliments on the street."
+        },
+        {
+          "authorName": "Avitar Shani",
+          "rating": 5,
+          "title": "Boundary-breaking design",
+          "body": "Everyone who sees the shoe asks where it's from, an amazing collaboration."
+        }
+      ]
+    },
+    {
+      "title": "Asics Gel-Kinetic 2.0",
+      "image_name": "asics-01",
+      "vendor": "Asics",
+      "description": "Inspired by the archives of the GEL-KINETIC™ line from the 2000s.\n- PU-designed upper layers\n- FF BLAST™ PLUS technology for advanced cushioning\n- GEL™ Scutoid unit for shock absorption\n- TRUSSTIC™ system for maximum stability",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "Is the shoe suitable for running or just walking?",
+          "answer": "It works great for both light runs and prolonged everyday use thanks to the dual cushioning systems."
+        },
+        {
+          "question": "What makes the TRUSSTIC system special?",
+          "answer": "It's a reinforcing midsole support that prevents excessive twisting of the sole and improves stability."
+        },
+        {
+          "question": "How long does shipping take?",
+          "answer": "Standard shipping arrives within 3-5 business days, depending on your location and stock availability."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "David Shimoni",
+          "rating": 5,
+          "title": "Fantastic cushioning",
+          "body": "Asics as usual doesn't disappoint when it comes to foot and back comfort."
+        },
+        {
+          "authorName": "Ella Vaknin",
+          "rating": 4,
+          "title": "A bonus for your lower back",
+          "body": "I feel a real difference even standing for long periods at work."
+        }
+      ]
+    },
+    {
+      "title": "Asics Gel-Cumulus 16 Cream",
+      "image_name": "asics-02",
+      "vendor": "Asics",
+      "description": "A classic from 2014 with especially soft cushioning designed for long distances.\n- Double GEL™ inserts at the heel and arch\n- FLUIDRIDE™ technology for a smooth stride\n- Iridescent stripes and pearlescent finishes",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "Is the shoe breathable?",
+          "answer": "Yes, the upper is made of open mesh that allows excellent airflow."
+        },
+        {
+          "question": "How long does the internal cushioning last?",
+          "answer": "With regular use, the cushioning retains its properties for hundreds of kilometers."
+        },
+        {
+          "question": "What's included in the packaging?",
+          "answer": "The packaging includes the pair of shoes in the original box, and sometimes spare laces or wrapping paper depending on the model."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Tamar Dahan",
+          "rating": 5,
+          "title": "Clouds on my feet",
+          "body": "I walked a full day abroad in them and didn't feel any fatigue."
+        },
+        {
+          "authorName": "Roi Avitan",
+          "rating": 5,
+          "title": "A classic that never ages",
+          "body": "I bought it on a recommendation and wasn't disappointed for a second."
+        }
+      ]
+    },
+    {
+      "title": "Asics Gel-NYC 2.0",
+      "image_name": "asics-03",
+      "vendor": "Asics",
+      "description": "A fusion of 2000s running aesthetics and modern performance. Contemporary suede layers and a soft sole unit that provides stability and lightness with every step.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "What is the upper made of?",
+          "answer": "A combination of breathable textile and quality suede layers for a rich look."
+        },
+        {
+          "question": "Is the model suitable for intensive daily use?",
+          "answer": "Absolutely, the materials are durable and designed for frequent city wear."
+        },
+        {
+          "question": "How long does shipping take?",
+          "answer": "Standard shipping arrives within 3-5 business days, depending on your location and stock availability."
+        },
+        {
+          "question": "Can I return or exchange the shoe?",
+          "answer": "Yes, you can return or exchange it within 14 days of receiving the product, provided it hasn't been worn outdoors and the original packaging is kept."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Ariel Biton",
+          "rating": 5,
+          "title": "Perfect colors",
+          "body": "The 'cream concrete' tones look amazing in real life and go with any pants."
+        },
+        {
+          "authorName": "Hila Tzur",
+          "rating": 4,
+          "title": "A wardrobe upgrade shoe",
+          "body": "Adds a lot of style effortlessly."
+        }
+      ]
+    },
+    {
+      "title": "Asics Gel-Kinetic Fluent Blue",
+      "image_name": "asics-04",
+      "vendor": "Asics",
+      "description": "A design inspired by the 2010s with advanced technology in a retro look.\n- Thermal-sealed elements and transparent TPU layers\n- Pearlescent accents that give a unique shine\nAdvanced midsole to improve shock absorption with every step.",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "Is the shoe waterproof?",
+          "answer": "It's not waterproof, but the synthetic materials are easy to clean and dry."
+        },
+        {
+          "question": "What's special about the transparent TPU layers?",
+          "answer": "They add visual depth and structural support without weighing the shoe down."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Michal Levin",
+          "rating": 5,
+          "title": "Amazing color",
+          "body": "The light blue-gray shade is mesmerizing, and the comfort is 10/10."
+        },
+        {
+          "authorName": "Nadav Fisher",
+          "rating": 5,
+          "title": "One of the most special ones I own",
+          "body": "Everyone who sees it asks about the shoes, looks like something from the future."
+        }
+      ]
+    },
+    {
+      "title": "Asics Gel-Kinetic Fluent White",
+      "image_name": "asics-05",
+      "vendor": "Asics",
+      "description": "The essence of the GEL-KINETIC FLUENT reflects classic running aesthetics reinterpreted in a contemporary approach. The upper combines elements like thermal sealing and loops inspired by the 2010s, updated with pearlescent accents and semi-transparent TPU layers. The ASICS stripes add an iridescent finish reminiscent of a northern glow, while the midsole combines advanced technologies that improve cushioning and comfort.",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "What's special about the 'White Blush' version?",
+          "answer": "The iridescent finish on the stripes that shifts color under different lighting for a striking look."
+        },
+        {
+          "question": "Is the shoe suitable for narrow feet?",
+          "answer": "Yes, the loop lacing system allows a precise, snug fit even for narrower feet."
+        },
+        {
+          "question": "How do I keep the shoe's shape between wears?",
+          "answer": "It's recommended to store it in the original box or with shoe trees to help maintain its shape over time."
+        },
+        {
+          "question": "How long does shipping take?",
+          "answer": "Standard shipping arrives within 3-5 business days, depending on your location and stock availability."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Maya Barak",
+          "rating": 5,
+          "title": "Delicate and beautiful",
+          "body": "The shoe looks feminine, clean, and super chic."
+        },
+        {
+          "authorName": "Shani Kadosh",
+          "rating": 4,
+          "title": "Shiny in every light",
+          "body": "In sunlight and artificial light it looks completely different, really fun."
+        }
+      ]
+    },
+    {
+      "title": "Asics Gel-Cumulus 16 Blue",
+      "image_name": "asics-06",
+      "vendor": "Asics",
+      "description": "A classic running model from 2014 focused on soft cushioning for long distances.\n- Semi-transparent TPU panels\n- Open mesh base for maximum ventilation\n- Shiny synthetic leather layers",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "Is the shoe suitable for standing for long periods?",
+          "answer": "Yes, the GEL system provides excellent support that reduces the strain of prolonged standing."
+        },
+        {
+          "question": "Does the fabric wrinkle over time?",
+          "answer": "No, the combination of mesh and synthetic leather keeps its shape even after extended use."
+        },
+        {
+          "question": "Can I return or exchange the shoe?",
+          "answer": "Yes, you can return or exchange it within 14 days of receiving the product, provided it hasn't been worn outdoors and the original packaging is kept."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Ido Shalom",
+          "rating": 5,
+          "title": "Recommended for work",
+          "body": "I'm on my feet 8 hours a day and this shoe simply saved me."
+        },
+        {
+          "authorName": "Keren Azoulay",
+          "rating": 5,
+          "title": "A subtle, special shade",
+          "body": "The light blue pairs great with any outfit."
+        }
+      ]
+    },
+    {
+      "title": "Asics GT-2160",
+      "image_name": "asics-07",
+      "vendor": "Asics",
+      "description": "Faithful to the original codes of the GT-2000 line from the early 2010s.\n- Detailed forefoot with wavy lines\n- Split midsole with GEL technology\n- Contemporary industrial aesthetic",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "Is this a retro model?",
+          "answer": "Yes, it's a reissue of GT models from the early 2010s with an updated design."
+        },
+        {
+          "question": "What's the purpose of the split sole?",
+          "answer": "It allows greater flexibility at every stage of the stride while maintaining support."
+        },
+        {
+          "question": "How long does shipping take?",
+          "answer": "Standard shipping arrives within 3-5 business days, depending on your location and stock availability."
+        },
+        {
+          "question": "How do I keep the shoe's shape between wears?",
+          "answer": "It's recommended to store it in the original box or with shoe trees to help maintain its shape over time."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Oren Mor",
+          "rating": 5,
+          "title": "Spot-on Y2K style",
+          "body": "Looks great with wide pants and jeans."
+        },
+        {
+          "authorName": "Lihi Or",
+          "rating": 4,
+          "title": "A shoe that goes with everything",
+          "body": "Easy to pair with any outfit style, I recommend it."
+        }
+      ]
+    },
+    {
+      "title": "Asics Gel-Nimbus 10.1",
+      "image_name": "asics-08",
+      "vendor": "Asics",
+      "description": "Inspired by the 2008 version with an asymmetrical toe box, dual-layer EVA foam, and a TRUSSTIC system for maximum stability and uncompromising comfort.",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "What's the advantage of the asymmetrical build?",
+          "answer": "It's more naturally adapted to the shape of the foot and reduces pressure points."
+        },
+        {
+          "question": "Does the dual-layer EVA foam feel stiff?",
+          "answer": "No, it's an especially soft foam that combines support with a pleasant cushioned feel."
+        },
+        {
+          "question": "Can I pay in installments?",
+          "answer": "Yes, at checkout you can split the payment into several credit card installments according to the site's policy."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Lior Amouyal",
+          "rating": 5,
+          "title": "Peak technology",
+          "body": "Very comfortable and fits my foot perfectly."
+        },
+        {
+          "authorName": "Tal Baruch",
+          "rating": 5,
+          "title": "Retro look, real cushioning",
+          "body": "Nostalgic look but in practice as comfortable as a modern shoe."
+        }
+      ]
+    },
+    {
+      "title": "Asics Gel-Kayano 12.1 Cream",
+      "image_name": "asics-09",
+      "vendor": "Asics",
+      "description": "A unique collaboration with KITH combining elements from 2006 with modern performance.\n- Design inspired by gothic armor with metallic finishes\n- Open mesh layers for improved ventilation\nAn advanced midsole ensuring cushioned comfort all day long.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "Is this a limited model?",
+          "answer": "Yes, it's a limited-edition capsule collection in collaboration with KITH."
+        },
+        {
+          "question": "Do the metallic finishes need special care?",
+          "answer": "It's recommended to avoid direct friction with rough surfaces to preserve the shine."
+        },
+        {
+          "question": "Can I pay in installments?",
+          "answer": "Yes, at checkout you can split the payment into several credit card installments according to the site's policy."
+        },
+        {
+          "question": "What's included in the packaging?",
+          "answer": "The packaging includes the pair of shoes in the original box, and sometimes spare laces or wrapping paper depending on the model."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Niv Tzur",
+          "rating": 5,
+          "title": "A masterpiece",
+          "body": "The combination of the metallic armor look and the comfort is simply incredible."
+        },
+        {
+          "authorName": "Raz Aviv",
+          "rating": 5,
+          "title": "A winning collaboration",
+          "body": "One of the most successful KITH x Asics shoes so far."
+        }
+      ]
+    },
+    {
+      "title": "Asics Gel-Kayano 12.1 Graphite",
+      "image_name": "asics-10",
+      "vendor": "Asics",
+      "description": "This shoe was developed in collaboration with KITH, revisiting the design codes of the GEL-KAYANO™ 12.1 from 2006. The upper evokes European gothic armor through metallic structures and open mesh panels for ventilation. The midsole incorporates a build inspired by the GEL-NIMBUS™ 17, designed to provide lasting comfort thanks to GEL™ technology and FLUIDRIDE™ cushioning.",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "Is the shoe suitable for everyday wear?",
+          "answer": "Absolutely, a combination of a unique style and first-class cushioning."
+        },
+        {
+          "question": "What's the difference between the White Graphite version and the Cream Carbon version?",
+          "answer": "The design is identical, the only difference is the base color and the metallic details."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        },
+        {
+          "question": "How long does shipping take?",
+          "answer": "Standard shipping arrives within 3-5 business days, depending on your location and stock availability."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Hadar Shalev",
+          "rating": 5,
+          "title": "Worth every penny",
+          "body": "One of the most beautiful shoes I own."
+        },
+        {
+          "authorName": "Omer Sasson",
+          "rating": 4,
+          "title": "Truly unique design",
+          "body": "I haven't seen anyone else with these shoes, it feels exclusive."
+        }
+      ]
+    },
+    {
+      "title": "Nike Air Force 1 Low",
+      "image_name": "nike-01",
+      "vendor": "Nike",
+      "description": "The '07 LV8 version preserves the classic heritage of the Air Force 1 line.\n- Durable, quality premium leather\n- Encapsulated Nike Air shock-absorbing unit\n- Reinforced stitching in an '80s basketball style\n- Timeless aesthetic that suits any look",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "Is the shoe made of real leather?",
+          "answer": "Yes, the upper is made of quality, durable premium leather."
+        },
+        {
+          "question": "Do I need a break-in period?",
+          "answer": "No, thanks to the Air unit, the shoe is comfortable right from the first wear."
+        },
+        {
+          "question": "Can I return or exchange the shoe?",
+          "answer": "Yes, you can return or exchange it within 14 days of receiving the product, provided it hasn't been worn outdoors and the original packaging is kept."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Omri Dagan",
+          "rating": 5,
+          "title": "The ultimate classic",
+          "body": "Nothing beats the Air Force, always looks good and works with everything."
+        },
+        {
+          "authorName": "Shachar Noy",
+          "rating": 5,
+          "title": "No other model replaces it",
+          "body": "This is already my third pair, there's no substitute."
+        }
+      ]
+    },
+    {
+      "title": "Nike Air Force 1 Low QS Gold",
+      "image_name": "nike-02",
+      "vendor": "Nike",
+      "description": "A shiny, luxurious look in a golden patent leather finish.\n- Perforated toe box for optimal ventilation\n- Encapsulated Air unit in the midsole\n- Rubber sole with multi-directional traction",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "How do I care for the patent leather finish?",
+          "answer": "Wipe gently with a damp microfiber cloth to keep the shine."
+        },
+        {
+          "question": "Can the gold finish peel?",
+          "answer": "Not under normal use, but it's best to avoid prolonged friction with rough surfaces."
+        },
+        {
+          "question": "Can I pay in installments?",
+          "answer": "Yes, at checkout you can split the payment into several credit card installments according to the site's policy."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Karin Rozen",
+          "rating": 5,
+          "title": "Eye-catching",
+          "body": "The gold shines with a luxurious touch, perfect shoes for an event or evening out."
+        },
+        {
+          "authorName": "Mor Logasi",
+          "rating": 5,
+          "title": "Shiny and impressive",
+          "body": "Everyone who sees me in them asks where they're from, simply stunning."
+        }
+      ]
+    },
+    {
+      "title": "Nike Air Force 1 Low QS Red",
+      "image_name": "nike-03",
+      "vendor": "Nike",
+      "description": "A shiny patent leather finish in a deep red tone. A durable build with an Air unit for shock absorption and excellent urban traction.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the red color the same as in the photos?",
+          "answer": "Yes, it's a deep, glossy burgundy-red tone."
+        },
+        {
+          "question": "Is the shoe suitable for both men and women?",
+          "answer": "Yes, the model has a unisex fit and can be ordered according to Nike's standard size chart."
+        },
+        {
+          "question": "Can I return or exchange the shoe?",
+          "answer": "Yes, you can return or exchange it within 14 days of receiving the product, provided it hasn't been worn outdoors and the original packaging is kept."
+        },
+        {
+          "question": "Can I pay in installments?",
+          "answer": "Yes, at checkout you can split the payment into several credit card installments according to the site's policy."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Asaf Cohen",
+          "rating": 5,
+          "title": "Rich color",
+          "body": "Looks even better in person than in the photos."
+        },
+        {
+          "authorName": "Gal Frankel",
+          "rating": 4,
+          "title": "A winning burgundy",
+          "body": "A rare, special color that's hard to find in other models."
+        }
+      ]
+    },
+    {
+      "title": "Nike Air Force 1 Low QS Navy",
+      "image_name": "nike-04",
+      "vendor": "Nike",
+      "description": "An everyday design focused on support and durability in a glossy blue look.\n- High-shine patent leather finish\n- Strong lacing system for a stable fit\nDurable rubber sole ensuring multi-directional traction.",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "Is the sole hard?",
+          "answer": "The sole is stable with an internal Air unit for a soft step."
+        },
+        {
+          "question": "Is there a matching version in other colors?",
+          "answer": "Yes, the QS collection includes several other shades in the exact same design."
+        },
+        {
+          "question": "What's included in the packaging?",
+          "answer": "The packaging includes the pair of shoes in the original box, and sometimes spare laces or wrapping paper depending on the model."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Roi Nachum",
+          "rating": 5,
+          "title": "Insanely high quality",
+          "body": "The blue is shiny and gives a crazy pop to a neutral outfit."
+        },
+        {
+          "authorName": "Dana Amar",
+          "rating": 5,
+          "title": "Deep and special blue",
+          "body": "Pairs great with both dark jeans and bright clothes."
+        }
+      ]
+    },
+    {
+      "title": "Nike Air Max 95 OG Big Bubble",
+      "image_name": "nike-05",
+      "vendor": "Nike",
+      "description": "Straight from the '90s archive, the Nike Air Max 95 OG Big Bubble Comet brings back one of the most memorable flagship colorways of the silhouette designed by Sergio Lozano. The signature gray gradient, inspired by human anatomy, is inverted and highlighted with comet-red touches that add contrast and visual energy.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "What does Big Bubble mean?",
+          "answer": "A recreation of the enlarged air window that was in the original 1995 prototypes."
+        },
+        {
+          "question": "Is the shoe meant for collectors only?",
+          "answer": "No, despite its collectible value it's very comfortable and also suits everyday use."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        },
+        {
+          "question": "Is there a warranty on the shoe?",
+          "answer": "Yes, the product comes with a manufacturer's warranty against manufacturing defects for one year from the date of purchase, excluding normal wear and tear."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Yuval Biran",
+          "rating": 5,
+          "title": "Every collector's dream",
+          "body": "The Big Bubble completely changes the shoe's proportions, perfection."
+        },
+        {
+          "authorName": "Elad Weiss",
+          "rating": 5,
+          "title": "True to the original",
+          "body": "Anyone who knows the original model will appreciate the level of detail here."
+        }
+      ]
+    },
+    {
+      "title": "Nike Vomero Plus QS",
+      "image_name": "nike-06",
+      "vendor": "Nike",
+      "description": "A versatile evolution of the Vomero line that prioritizes a soft stride.\n- Elegant Sail and Baroque Brown tones\n- Lightweight materials for a breathable build\n- A perfect balance of support and flexibility",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the shoe meant for running or walking?",
+          "answer": "It's excellent for both — suitable for daily runs and full days on your feet."
+        },
+        {
+          "question": "Do the delicate tones get dirty easily?",
+          "answer": "It's recommended to treat stains right away with gentle cleaning to keep the light tone."
+        },
+        {
+          "question": "Is there a warranty on the shoe?",
+          "answer": "Yes, the product comes with a manufacturer's warranty against manufacturing defects for one year from the date of purchase, excluding normal wear and tear."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Charlotte Ben David",
+          "rating": 5,
+          "title": "A stunning color combo",
+          "body": "The brown and off-white work together amazingly."
+        },
+        {
+          "authorName": "Noam Barda",
+          "rating": 5,
+          "title": "Elegant and comfortable",
+          "body": "Great for both office work and long walks."
+        }
+      ]
+    },
+    {
+      "title": "Nike ACG ZoomX Ultrafly Trail SP",
+      "image_name": "nike-07",
+      "vendor": "Nike",
+      "description": "A technical trail shoe combining Nike's most advanced running technologies.\n- Especially responsive ZoomX foam\n- Full-length carbon plate\n- Special traction sole for uneven terrain",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the carbon plate noticeable?",
+          "answer": "Yes, it provides a forward push and powerful energy return with every step."
+        },
+        {
+          "question": "Is the shoe suitable for muddy terrain?",
+          "answer": "Yes, the traction sole is specifically designed for uneven terrain and tough trail conditions."
+        },
+        {
+          "question": "Can I return or exchange the shoe?",
+          "answer": "Yes, you can return or exchange it within 14 days of receiving the product, provided it hasn't been worn outdoors and the original packaging is kept."
+        },
+        {
+          "question": "Can I pay in installments?",
+          "answer": "Yes, at checkout you can split the payment into several credit card installments according to the site's policy."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Itamar Shor",
+          "rating": 5,
+          "title": "A trail monster",
+          "body": "I flew through the trails in them, the traction and responsiveness are on another level."
+        },
+        {
+          "authorName": "Yuval Sharon",
+          "rating": 5,
+          "title": "Competition-level performance",
+          "body": "The carbon plate feels like a turbo boost on every climb."
+        }
+      ]
+    },
+    {
+      "title": "Nike Vomero Plus Light",
+      "image_name": "nike-08",
+      "vendor": "Nike",
+      "description": "Made for the everyday pace with maximum softness. A light, breathable build that absorbs impact without sacrificing stability.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the shoe wide?",
+          "answer": "The fit is standard and provides comfortable room in the toe area."
+        },
+        {
+          "question": "Is it suitable for daily walking workouts?",
+          "answer": "Yes, the soft cushioning is designed exactly for this use."
+        },
+        {
+          "question": "Is there a warranty on the shoe?",
+          "answer": "Yes, the product comes with a manufacturer's warranty against manufacturing defects for one year from the date of purchase, excluding normal wear and tear."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Liad Amit",
+          "rating": 5,
+          "title": "A joy to wear",
+          "body": "The simplest, most comfortable shoe I own, I wear it everywhere."
+        },
+        {
+          "authorName": "Neta Oren",
+          "rating": 5,
+          "title": "Simply perfect for everyday",
+          "body": "You don't feel it on your foot at all, highly recommend."
+        }
+      ]
+    },
+    {
+      "title": "Nike Vomero Plus Black White",
+      "image_name": "nike-09",
+      "vendor": "Nike",
+      "description": "Cushioning and comfort designed for constant movement in a clean black-and-white look.\n- Advanced midsole for support and responsiveness\n- Classic, versatile Black/White design\nA perfect solution for everyday use and staying active at work.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the shoe suitable for the gym?",
+          "answer": "Yes, the stability and cushioning suit a variety of workouts and aerobic activity."
+        },
+        {
+          "question": "Does the black-and-white color get dirty easily?",
+          "answer": "The white part needs occasional cleaning, but the rest of the shoe is very resistant to dirt."
+        },
+        {
+          "question": "What's included in the packaging?",
+          "answer": "The packaging includes the pair of shoes in the original box, and sometimes spare laces or wrapping paper depending on the model."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Daniela Gottlieb",
+          "rating": 5,
+          "title": "A winning basic",
+          "body": "Goes with any sports outfit, very comfortable."
+        },
+        {
+          "authorName": "Uri Lavi",
+          "rating": 4,
+          "title": "A combo that never gets old",
+          "body": "Black-and-white is a safe choice that always works."
+        }
+      ]
+    },
+    {
+      "title": "Nike SB Air Force 1 Low",
+      "image_name": "nike-10",
+      "vendor": "Nike",
+      "description": "The Nike Air Force 1 in its SB version keeps its original essence while incorporating adjustments designed for skateboarding: more durable materials, better control, and more precise board feel. The white leather upper creates a clean base, broken up by the contrasting black Swoosh, while the gum sole adds a technical touch that matches the real wear of actual use.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "What's different about the SB version compared to the regular one?",
+          "answer": "Extra cushioning in the tongue, more wear-resistant materials, and Zoom Air cushioning in the insole."
+        },
+        {
+          "question": "Is the shoe suitable for actual skateboarding?",
+          "answer": "Yes, the model is specifically designed for high board feel and resistance to real skate wear."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        },
+        {
+          "question": "What's included in the packaging?",
+          "answer": "The packaging includes the pair of shoes in the original box, and sometimes spare laces or wrapping paper depending on the model."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Tom Elbaz",
+          "rating": 5,
+          "title": "SB quality",
+          "body": "Whether skating or just walking - this shoe is simply tough."
+        },
+        {
+          "authorName": "Idan Malka",
+          "rating": 5,
+          "title": "Insanely durable",
+          "body": "After months of daily use it still looks brand new."
+        }
+      ]
+    },
+    {
+      "title": "New Balance TF100",
+      "image_name": "new-balance-01",
+      "vendor": "New Balance",
+      "description": "A futuristic vision of contemporary running in a lifestyle style.\n- Combination of suede, fabric, and synthetic details\n- FuelCell technology for energy return\n- A dynamic, lightweight silhouette",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "What is FuelCell technology?",
+          "answer": "A special foam that provides a bouncy feel and high energy return with every step."
+        },
+        {
+          "question": "Is the shoe suitable for actual sports use?",
+          "answer": "It's mainly designed for lifestyle, but also provides reasonable support for light activity."
+        },
+        {
+          "question": "How long does shipping take?",
+          "answer": "Standard shipping arrives within 3-5 business days, depending on your location and stock availability."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Sagi Zahavi",
+          "rating": 5,
+          "title": "Light and comfortable",
+          "body": "A super bouncy feel, a very unique design."
+        },
+        {
+          "authorName": "Meirav Shoshan",
+          "rating": 4,
+          "title": "Futuristic design",
+          "body": "I haven't seen a similar model, really stands out."
+        }
+      ]
+    },
+    {
+      "title": "New Balance Abzorb 5030 Grey Days",
+      "image_name": "new-balance-02",
+      "vendor": "New Balance",
+      "description": "A retro-futuristic take on the technical running shoes of the 2000s.\n- Metallic upper with pronounced lines\n- Visible ABZORB SBS technology in the sole\n- Part of the legendary Grey Days collection",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "What's the recommended sizing for women?",
+          "answer": "Women are advised to choose one to one-and-a-half sizes smaller than their usual size, since this is a men's-sized model."
+        },
+        {
+          "question": "What is the Grey Days collection?",
+          "answer": "A special New Balance collection dedicated to the brand's iconic gray tone in different interpretations."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        },
+        {
+          "question": "Is there a warranty on the shoe?",
+          "answer": "Yes, the product comes with a manufacturer's warranty against manufacturing defects for one year from the date of purchase, excluding normal wear and tear."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Shiran Ashkenazi",
+          "rating": 5,
+          "title": "Grey Days at its best",
+          "body": "New Balance's gray tone wins me over every time."
+        },
+        {
+          "authorName": "Ofir Tzadok",
+          "rating": 5,
+          "title": "Impressive technical design",
+          "body": "The metallic build gives the shoe a lot of character."
+        }
+      ]
+    },
+    {
+      "title": "New Balance Abzorb 1890 Silver",
+      "image_name": "new-balance-03",
+      "vendor": "New Balance",
+      "description": "A contemporary Y2K aesthetic with exposed mesh, metallic layers, and a full-length ABZORB sole for advanced shock absorption and stability.",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "Is the shoe's mesh breathable?",
+          "answer": "Yes, the exposed mesh allows excellent ventilation all day long."
+        },
+        {
+          "question": "Is the metallic finish too flashy for everyday wear?",
+          "answer": "No, it's a subtle finish that blends well even with simple everyday outfits."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        },
+        {
+          "question": "How do I keep the shoe's shape between wears?",
+          "answer": "It's recommended to store it in the original box or with shoe trees to help maintain its shape over time."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Yonatan Bernstein",
+          "rating": 5,
+          "title": "Futuristic look",
+          "body": "The metallic silver is just crazy, a real showstopper shoe."
+        },
+        {
+          "authorName": "Romi Levi",
+          "rating": 5,
+          "title": "A winning combo",
+          "body": "Works great with jeans and with technical pants alike."
+        }
+      ]
+    },
+    {
+      "title": "New Balance Abzorb 1890 Grey Days",
+      "image_name": "new-balance-04",
+      "vendor": "New Balance",
+      "description": "The Grey Days collection takes the brand's iconic gray to a technical, futuristic dimension.\n- Exposed mesh and wavy layers\n- ABZORB midsole for shock absorption\nAn experimental design combining performance heritage with contemporary lifestyle.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the sizing in men's sizes?",
+          "answer": "Yes, women are advised to go down one to one-and-a-half sizes from their usual size."
+        },
+        {
+          "question": "Is this model different from the 5030 Grey Days version?",
+          "answer": "Yes, it's a completely different silhouette based on the 1890, but belongs to the same collection."
+        },
+        {
+          "question": "How long does shipping take?",
+          "answer": "Standard shipping arrives within 3-5 business days, depending on your location and stock availability."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Guy Rosenblum",
+          "rating": 5,
+          "title": "New Balance at its peak",
+          "body": "Unmatched comfort and a classic gray style."
+        },
+        {
+          "authorName": "Linoy Cohen",
+          "rating": 5,
+          "title": "Gray that works with everything",
+          "body": "It matches almost every outfit combination I have."
+        }
+      ]
+    },
+    {
+      "title": "New Balance Abzorb 1890 Linen",
+      "image_name": "new-balance-05",
+      "vendor": "New Balance",
+      "description": "A new offering in New Balance's retro-futuristic world, combining references from the running archive with a contemporary technical language. The 1890 draws inspiration from models like the 890v3 and 2002R, combining wavy layers, exposed mesh, and an ABZORB midsole focused on shock absorption and stability.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "Does the yellow stand out on the shoe?",
+          "answer": "The yellow touches give a light, fresh pop against the neutral Linen base."
+        },
+        {
+          "question": "Which models inspired this shoe?",
+          "answer": "The model combines elements from the classic 890v3 and 2002R of the brand."
+        },
+        {
+          "question": "Can I return or exchange the shoe?",
+          "answer": "Yes, you can return or exchange it within 14 days of receiving the product, provided it hasn't been worn outdoors and the original packaging is kept."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Amit Blum",
+          "rating": 5,
+          "title": "An amazing color combo",
+          "body": "The yellow gives it a cool twist."
+        },
+        {
+          "authorName": "Shaked Nir",
+          "rating": 4,
+          "title": "Subtle and original",
+          "body": "Not a shoe you see everywhere, really worth it."
+        }
+      ]
+    },
+    {
+      "title": "New Balance 5030 Black",
+      "image_name": "new-balance-06",
+      "vendor": "New Balance",
+      "description": "A technical style from the 2000s in a dark, innovative aesthetic.\n- Breathable mesh combined with synthetic layers\n- Depth and support in a dark build\n- Split midsole for stability\n- Advanced shock absorption for everyday use",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the shoe suitable for winter?",
+          "answer": "The upper includes mesh, so it's mainly suitable for dry days and transitional/summer seasons."
+        },
+        {
+          "question": "Does the black color hold up over time?",
+          "answer": "Yes, the fabric is resistant to fading even with frequent sun exposure."
+        },
+        {
+          "question": "What's included in the packaging?",
+          "answer": "The packaging includes the pair of shoes in the original box, and sometimes spare laces or wrapping paper depending on the model."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Idan Kaplan",
+          "rating": 5,
+          "title": "The ultimate black",
+          "body": "All the benefits of a running shoe in an elegant black look."
+        },
+        {
+          "authorName": "Meital Dagan",
+          "rating": 5,
+          "title": "Goes with everything",
+          "body": "The black gives it crazy styling flexibility."
+        }
+      ]
+    },
+    {
+      "title": "New Balance 5030 Light",
+      "image_name": "new-balance-07",
+      "vendor": "New Balance",
+      "description": "A connection between performance archives and retro-futuristic aesthetics.\n- Contemporary build focused on volume and stability\n- Breathable mesh mixed with synthetic layers\n- Cushioned midsole for prolonged walking",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "Is the shoe heavy?",
+          "answer": "No, despite the chunky look, the materials are light and breathable."
+        },
+        {
+          "question": "Is the cushioned sole suitable for prolonged walking?",
+          "answer": "Yes, that's exactly the main purpose of the cushioned midsole in this model."
+        },
+        {
+          "question": "Is the product officially imported?",
+          "answer": "Yes, all products in the store are officially imported directly from the manufacturer or authorized distributor."
+        },
+        {
+          "question": "What's included in the packaging?",
+          "answer": "The packaging includes the pair of shoes in the original box, and sometimes spare laces or wrapping paper depending on the model."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Natalie Herskovitz",
+          "rating": 5,
+          "title": "Crazy style",
+          "body": "Looks amazing with wide jeans."
+        },
+        {
+          "authorName": "Boaz Eshed",
+          "rating": 4,
+          "title": "Impressive build",
+          "body": "The volume gives it a strong presence without feeling heavy."
+        }
+      ]
+    },
+    {
+      "title": "New Balance 2010",
+      "image_name": "new-balance-08",
+      "vendor": "New Balance",
+      "description": "Soft natural tones combined with ABZORB and SBS technologies in a split sole, creating a unique lifestyle look and advanced shock absorption.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "Where does the color inspiration come from?",
+          "answer": "The tones draw inspiration from natural elements like forest and sunset light."
+        },
+        {
+          "question": "Do the soft colors suit men too?",
+          "answer": "Yes, it's a unisex model that suits anyone who likes a delicate color palette."
+        },
+        {
+          "question": "Is there a warranty on the shoe?",
+          "answer": "Yes, the product comes with a manufacturer's warranty against manufacturing defects for one year from the date of purchase, excluding normal wear and tear."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Maor Alfasi",
+          "rating": 5,
+          "title": "A unique shade",
+          "body": "The combination of olive-green and soft orange hits it just right."
+        },
+        {
+          "authorName": "Yael Peretz",
+          "rating": 5,
+          "title": "Colors you don't see everywhere",
+          "body": "I feel like I have something no one else has."
+        }
+      ]
+    },
+    {
+      "title": "New Balance 1890 JFG",
+      "image_name": "new-balance-09",
+      "vendor": "New Balance",
+      "description": "A sought-after collaboration with star designer Joe Freshgoods (JFG).\n- Premium suede and open mesh layers\n- Split ABZORB sole for maximum comfort\nA collector's item bridging cultural storytelling and high-end streetwear.",
+      "images": 9,
+      "faqs": [
+        {
+          "question": "What's special about the JFG edition?",
+          "answer": "Exceptional premium materials, unique packaging, and Joe Freshgoods' personal design touches."
+        },
+        {
+          "question": "Is it worth buying as a collector's item?",
+          "answer": "Absolutely, it's a sought-after collaboration that sometimes becomes a highly desired item on the resale market."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Lev Ariel",
+          "rating": 5,
+          "title": "A crazy collection",
+          "body": "The premium suede is the highest quality I've seen."
+        },
+        {
+          "authorName": "Din Ohayon",
+          "rating": 5,
+          "title": "A must-have for any collector",
+          "body": "The packaging and small details make it a complete experience."
+        }
+      ]
+    },
+    {
+      "title": "New Balance 509",
+      "image_name": "new-balance-10",
+      "vendor": "New Balance",
+      "description": "Inspired by the technical running language of the 2000s, this silhouette combines a light build and dynamic proportions in a contemporary read. The upper combines open mesh with golden synthetic layers to add visual depth and ventilation, while the split midsole keeps a stable, cushioned feel for everyday use.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "Is the metallic finish durable?",
+          "answer": "Yes, the coating is very resistant to everyday wear."
+        },
+        {
+          "question": "Is the shoe suitable for average foot width?",
+          "answer": "Yes, the fit is standard and matches most common foot measurements."
+        },
+        {
+          "question": "How do I keep the shoe's shape between wears?",
+          "answer": "It's recommended to store it in the original box or with shoe trees to help maintain its shape over time."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "Noam Goldstein",
+          "rating": 5,
+          "title": "Shiny and right",
+          "body": "Adds a lot to any simple look."
+        },
+        {
+          "authorName": "Avigail Tal",
+          "rating": 4,
+          "title": "Delicate and shiny",
+          "body": "The golden finish gives a luxurious touch without being too flashy."
+        }
+      ]
+    }
+  ]
+}
