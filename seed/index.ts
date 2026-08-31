@@ -191,6 +191,7 @@ export default class SeedService {
         );
         this.ids.mediaIds.push(id);
         productMediaIds.push(id);
+        await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
       this.ids.productMediaIds.push(productMediaIds);

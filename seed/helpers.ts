@@ -145,5 +145,3 @@ export function makeRichTextDescription(text: string) {
   return makeRichText(children);
 }
 
-// מה מכיל החנות
-// חנות אונליין מלאה: תשלום, איסוף עצמי, SEO, אנליטיקס והתראות — ללא עלות שרתים.

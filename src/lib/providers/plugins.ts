@@ -62,6 +62,8 @@ if (appConfig.STORAGE_PROVIDER === "vercel") {
         accessKeyId: appConfig.R2_ACCESS_KEY_ID,
         secretAccessKey: appConfig.R2_SECRET_ACCESS_KEY,
       },
+      requestChecksumCalculation: "WHEN_REQUIRED",
+      responseChecksumValidation: "WHEN_REQUIRED",
       forcePathStyle: true,
     },
   });
