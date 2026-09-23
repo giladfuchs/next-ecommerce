@@ -123,7 +123,7 @@ export const checkoutFormConfig: FormConfig<CheckoutFormData> = {
     labelKey: "submit.sendOrder",
     submittingLabelKey: "submit.sending",
     eventName: "purchase",
-    variant: "outline",
+    variant: "default",
   },
 };
 

@@ -7,6 +7,7 @@ import {
   FAQS_FIELD,
   adminOnlyAccess,
   makeAdminPreview,
+  metaTab,
   mixedSlugField,
   patchPricesGroupField,
 } from "@/lib/collections/base-fields";
@@ -87,13 +88,6 @@ export const Products: CollectionOverride = ({ defaultCollection }) => {
       hasMany: true,
       relationTo: CollectionName.category,
     },
-    {
-      name: "image",
-      type: "upload",
-      relationTo: "media",
-      required: true,
-      admin: { hidden: true },
-    },
     mixedSlugField(),
     ...pluginFields,
     {
@@ -114,7 +108,7 @@ export const Products: CollectionOverride = ({ defaultCollection }) => {
         {
           name: "image",
           type: "upload",
-          relationTo: "media",
+          relationTo: "gallery-media",
           required: true,
         },
       ],
@@ -138,9 +132,7 @@ export const Products: CollectionOverride = ({ defaultCollection }) => {
   ];
 
   const variantNames = new Set(["enableVariants", "variantTypes", "variants"]);
-  const sidebarFields = allFields.filter(
-    (field) => isSidebarField(field) || getFieldName(field) === "image",
-  );
+  const sidebarFields = allFields.filter(isSidebarField);
   const variantFields = allFields.filter((field) =>
     variantNames.has(getFieldName(field) ?? ""),
   );
@@ -172,15 +164,15 @@ export const Products: CollectionOverride = ({ defaultCollection }) => {
           if (!data) return data;
 
           const gallery = data.gallery as Product["gallery"] | undefined;
-          if (!gallery) return data;
+          if (gallery) {
+            const filtered = gallery.filter(
+              (item): item is NonNullable<Product["gallery"]>[number] =>
+                Boolean(item) && item.image !== null,
+            );
 
-          const filtered = gallery.filter(
-            (item): item is NonNullable<Product["gallery"]>[number] =>
-              Boolean(item) && item.image !== null,
-          );
+            data.gallery = filtered.length ? filtered : [{ image: null }];
+          }
 
-          data.gallery = filtered.length ? filtered : [{ image: null }];
-          data.image = data.gallery[0].image;
           return normalizeFaqs(data);
         },
       ],
@@ -198,6 +190,7 @@ export const Products: CollectionOverride = ({ defaultCollection }) => {
             label: "Variants",
             fields: variantFields,
           },
+          metaTab(),
         ],
       },
     ],

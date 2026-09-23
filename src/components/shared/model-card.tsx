@@ -1,17 +1,18 @@
 import Link from "next/link";
 
 import type { DisplayMode } from "@/components/shared/grid-or-auto-scroll";
-import type { Category, Media, Page, Product } from "@/payload-types";
+import type { Category, Page, Product, SeoMedia } from "@/payload-types";
 
 import { Price } from "@/components/shared/elements-ssr";
 import ImageVideo from "@/components/shared/image-video";
+import { getProductPricing } from "@/lib/core/adapter";
 import appConfig from "@/lib/core/config";
 import { RoutePath } from "@/lib/core/types/types";
 import { cn, isRtl } from "@/lib/core/util";
 
 export type CardModel = Product | Page | Category;
 
-const resolveMedia = (media: number | Media): Media | null =>
+const resolveMedia = (media: number | SeoMedia): SeoMedia | null =>
   typeof media === "object" ? media : null;
 
 const resolveModel = (model: CardModel, route: RoutePath) => {
@@ -29,7 +30,7 @@ const resolveModel = (model: CardModel, route: RoutePath) => {
     const product = model as Product;
     return {
       href: `/${route}/${product.slug}`,
-      image: resolveMedia(product.image),
+      image: resolveMedia(product.meta.image),
       description: null,
       product,
     };
@@ -38,7 +39,7 @@ const resolveModel = (model: CardModel, route: RoutePath) => {
   const category = model as Category;
   return {
     href: `/${route}/${category.slug}`,
-    image: resolveMedia(category.image),
+    image: category.meta?.image ? resolveMedia(category.meta.image) : null,
     description: null,
     product: null,
   };
@@ -48,26 +49,25 @@ export default function ModelCard({
   model,
   route,
   displayMode = "grid",
+  tabIndex,
 }: {
   model: CardModel;
   route: RoutePath;
   displayMode?: DisplayMode;
+  tabIndex?: number;
 }) {
   const { description, href, image, product } = resolveModel(model, route);
-  const price = product?.priceInUSD;
-  const originalPrice = product?.originalPriceInUSD;
-  const hasDiscount =
-    typeof price === "number" &&
-    typeof originalPrice === "number" &&
-    originalPrice > price;
-  const discountPercent = hasDiscount
-    ? Math.round(((originalPrice - price) / originalPrice) * 100)
-    : null;
+  const pricing = product ? getProductPricing(product) : null;
+  const price = pricing?.price;
+  const originalPrice = pricing?.originalPrice;
+  const hasDiscount = originalPrice !== undefined;
+  const discountPercent = pricing?.discountPercent ?? null;
   const rtl = isRtl(model.title);
 
   return (
     <Link
       href={href}
+      tabIndex={tabIndex}
       className="group flex h-full min-w-0 w-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-2 shadow-sm transition-shadow duration-300 hover:shadow-md sm:rounded-3xl dark:border-neutral-800 dark:bg-black lg:p-3"
     >
       <div
@@ -81,6 +81,7 @@ export default function ModelCard({
         {image ? (
           <ImageVideo
             resource={image}
+            variant="card"
             fill
             imgClassName="object-cover transition duration-300 ease-in-out group-hover:scale-105"
             videoClassName="h-full w-full object-cover"

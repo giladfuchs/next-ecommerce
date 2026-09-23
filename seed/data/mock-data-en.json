@@ -224,6 +224,75 @@
                 "version": 1
               },
               {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Sample Payment (Stripe test mode)",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "tag": "h3",
+                "version": 1
+              },
+              {
+                "type": "list",
+                "children": [
+                  {
+                    "type": "listitem",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Card number: 4242 4242 4242 4242",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "value": 1,
+                    "version": 1
+                  },
+                  {
+                    "type": "listitem",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Expiry: any future date · CVC: any 3 digits",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "value": 2,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "listType": "bullet",
+                "start": 1,
+                "tag": "ul",
+                "version": 1
+              },
+              {
                 "type": "paragraph",
                 "children": [
                   {

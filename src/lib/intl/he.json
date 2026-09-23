@@ -1,4 +1,9 @@
 {
+  "blocks": {
+    "gallery": {
+      "select_image": "בחר תמונה"
+    }
+  },
   "review_form": {
     "open_button": "כתיבת ביקורת",
     "title": "הוספת ביקורת",
@@ -62,11 +67,6 @@
       "soldOut": "אזל מהמלאי",
       "selectVariant": "אנא בחר דגם.",
       "added": "המוצר נוסף לסל."
-    },
-    "gallery": {
-      "previous": "תמונה קודמת",
-      "next": "תמונה הבאה",
-      "select_image": "בחר תמונה"
     }
   },
 
@@ -108,7 +108,11 @@
       "orderId": "מספר הזמנה: {id}",
       "backToShop": "חזרה לחנות",
       "yourCart": "הסל שלך",
-      "total": "סה\"כ"
+      "total": "סה\"כ",
+      "payment": {
+        "preparing": "מכין את התשלום...",
+        "failed": "התשלום נכשל. נסו שוב."
+      }
     },
     "fields": {
       "name": {
@@ -130,7 +134,10 @@
       "sending": "שולח...",
       "sendOrder": "שלח הזמנה",
       "success": "ההזמנה נשלחה",
-      "failed": "ההזמנה נכשלה"
+      "failed": "ההזמנה נכשלה",
+      "pay": "שלם עכשיו",
+      "paying": "מעבד את התשלום...",
+      "paid": "התשלום התקבל"
     }
   },
   "admin": {
@@ -139,6 +146,14 @@
       "title": "לוח הזמנות",
       "description": "תמונה ברורה של ההזמנות וההכנסות בחנות",
       "allOrders": "לכל ההזמנות",
+      "viewStore": "לעמוד הראשי של החנות",
+      "quickAccess": "גישה מהירה",
+      "productsLink": "מוצרים",
+      "cartsLink": "סלי קניות",
+      "pagesLink": "עמודים",
+      "categoriesLink": "קטגוריות",
+      "siteSettingsLink": "הגדרות האתר",
+      "mediaLink": "קובצי מדיה",
       "dateRange": "טווח תאריכים",
       "from": "מתאריך",
       "to": "עד תאריך",
@@ -187,8 +202,36 @@
       "details": {
         "footer": "הגדרות פוטר או דף הבית השתנו",
         "products": "נוספו מוצרים רבים",
-        "category": "שם קטגוריה שונה או סדר השתנה",
+        "category": "שם קטגוריה שונה",
         "finish": "סיימו את העריכות ← ואז רעננו פעם אחת."
+      }
+    },
+    "colorPicker": {
+      "presetsLabel": "צבעים מוכנים",
+      "usePreset": "בחירת {label}",
+      "openPicker": "פתיחת בורר צבעים",
+      "customColorLabel": "בחירת צבע מותאם אישית",
+      "colorValueLabel": "ערך הצבע",
+      "clear": "ניקוי",
+      "presets": {
+        "black": "שחור",
+        "slate": "אפור צפחה",
+        "white": "לבן",
+        "red": "אדום",
+        "orange": "כתום",
+        "amber": "ענבר",
+        "yellow": "צהוב",
+        "lime": "ליים",
+        "green": "ירוק",
+        "teal": "טורקיז",
+        "cyan": "תכלת",
+        "blue": "כחול",
+        "indigo": "אינדיגו",
+        "purple": "סגול",
+        "pink": "ורוד",
+        "brown": "חום",
+        "beige": "בז׳",
+        "roseGold": "זהב ורוד"
       }
     }
   },

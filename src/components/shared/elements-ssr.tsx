@@ -2,14 +2,22 @@ import type { ComponentProps } from "react";
 
 import appConfig from "@/lib/core/config";
 import { formatPrice } from "@/lib/core/util";
+import { createJsonLdByModel, type JsonLdView } from "@/lib/seo/jsonld";
 
 export const JsonLd = ({ data }: { data: unknown }) => (
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
-      __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      __html: JSON.stringify(data)
+        .replace(/</g, "\\u003c")
+        .replace(/>/g, "\\u003e")
+        .replace(/&/g, "\\u0026"),
     }}
   />
+);
+
+export const JsonLdViewScript = (view: JsonLdView) => (
+  <JsonLd data={createJsonLdByModel(view)} />
 );
 
 export const Price = ({

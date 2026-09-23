@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { FiSearch, FiX } from "react-icons/fi";
 
-import type { Media, Product } from "@/lib/core/types/payload-types";
+import type { Product } from "@/lib/core/types/payload-types";
 
 import { Price } from "@/components/shared/elements-ssr";
 import ImageVideo from "@/components/shared/image-video";
@@ -85,7 +85,7 @@ export default function Search({
   }, [onClose]);
 
   return (
-    <div ref={rootRef} className="relative w-full">
+    <div ref={rootRef} className="relative  max-w-2xl mx-auto w-full">
       <div className="relative">
         <input
           ref={inputRef}
@@ -125,7 +125,7 @@ export default function Search({
       <div
         id="search-results"
         className="
-        mt-2 overflow-hidden rounded-xl border shadow-lg
+        mt-1 overflow-hidden rounded-xl border shadow-lg
         border-neutral-200 bg-white
         dark:border-neutral-700 dark:bg-neutral-900
       "
@@ -154,7 +154,9 @@ export default function Search({
                   dark:border-neutral-700 dark:bg-neutral-800
                 "
                 >
-                  <ImageVideo resource={product.image as Media} />
+                  {typeof product.meta?.image === "object" && (
+                    <ImageVideo resource={product.meta.image} variant="card" />
+                  )}
                 </div>
 
                 <div className="min-w-0 flex-1">

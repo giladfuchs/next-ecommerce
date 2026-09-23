@@ -4,16 +4,16 @@
   --btn-default-bg-active: #6d0f2e;
   --btn-default-text: #ffffff;
 
-  --btn-outline-bg: #ffffff;
-  --btn-outline-bg-hover: #f9fafb;
-  --btn-outline-bg-active: #f3f4f6;
-  --btn-outline-border: #e5e7eb;
-  --btn-outline-text: #0a0a0a;
+  --btn-outline-bg: #fff1f2;
+  --btn-outline-bg-hover: #ffe4e6;
+  --btn-outline-bg-active: #fecdd3;
+  --btn-outline-border: #be123c;
+  --btn-outline-text: #881337;
 
-  --btn-secondary-bg: #e5e7eb;
-  --btn-secondary-bg-hover: #d1d5db;
-  --btn-secondary-bg-active: #9ca3af;
-  --btn-secondary-text: #0a0a0a;
+  --btn-secondary-bg: #fda4af;
+  --btn-secondary-bg-hover: #fb7185;
+  --btn-secondary-bg-active: #f43f5e;
+  --btn-secondary-text: #4c0519;
 
   --btn-ghost-bg: #ffffff;
   --btn-ghost-bg-hover: #f9fafb;
@@ -40,15 +40,15 @@
   --btn-default-bg-active: #fb7185;
   --btn-default-text: #ffffff;
 
-  --btn-outline-bg: #0a0a0a;
-  --btn-outline-bg-hover: #171717;
-  --btn-outline-bg-active: #262626;
-  --btn-outline-border: #404040;
-  --btn-outline-text: #ffffff;
+  --btn-outline-bg: #2a1018;
+  --btn-outline-bg-hover: #4c0519;
+  --btn-outline-bg-active: #6d0f2e;
+  --btn-outline-border: #fb7185;
+  --btn-outline-text: #fecdd3;
 
-  --btn-secondary-bg: #262626;
-  --btn-secondary-bg-hover: #404040;
-  --btn-secondary-bg-active: #525252;
+  --btn-secondary-bg: #9f1239;
+  --btn-secondary-bg-hover: #be123c;
+  --btn-secondary-bg-active: #e11d48;
   --btn-secondary-text: #ffffff;
 
   --btn-ghost-bg: #171717;

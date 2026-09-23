@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
@@ -15,6 +15,7 @@ import type {
 
 import { Button, Input, Message, Rating } from "@/components/ui";
 import Label from "@/components/ui/label";
+import { cn } from "@/lib/core/util";
 
 type GenericFormProps<T extends FieldValues, Result> = {
   config: FormConfig<T>;
@@ -22,6 +23,8 @@ type GenericFormProps<T extends FieldValues, Result> = {
   onSuccess?: (result: Result) => Promise<void> | void;
   onCancel?: () => void;
   disabled?: boolean;
+  /** Extra content rendered inside the <form>, after the fields and before the actions. */
+  children?: ReactNode;
 };
 
 export default function GenericForm<T extends FieldValues, Result = void>({
@@ -30,6 +33,7 @@ export default function GenericForm<T extends FieldValues, Result = void>({
   onSuccess,
   onCancel,
   disabled,
+  children,
 }: GenericFormProps<T, Result>) {
   const {
     translationNamespace,
@@ -180,7 +184,9 @@ export default function GenericForm<T extends FieldValues, Result = void>({
         })}
       </div>
 
-      <div className={actionsClassName}>
+      {children}
+
+      <div className={cn("mx-auto", actionsClassName)}>
         {cancel ? (
           <Button
             type="button"

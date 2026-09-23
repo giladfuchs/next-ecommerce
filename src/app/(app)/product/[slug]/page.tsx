@@ -1,17 +1,14 @@
 import { notFound } from "next/navigation";
+import ProductPage from "src/components/shop/product";
 
 import type { PropsSlug } from "@/lib/core/types/types";
 import type { Metadata } from "next";
 
-import ProductPageLayout from "@/components/product";
-import { JsonLd } from "@/components/shared/elements-ssr";
+import { JsonLdViewScript } from "@/components/shared/elements-ssr";
 import DAL from "@/lib/core/dal";
+import { CollectionName } from "@/lib/core/types/types";
 import { getDecodedSlug } from "@/lib/core/util";
-import {
-  generateJsonLdBreadcrumbsProduct,
-  generateJsonLdProduct,
-} from "@/lib/seo/jsonld";
-import { generateMetadataProduct } from "@/lib/seo/metadata";
+import { buildMetadataByModel } from "@/lib/seo/metadata";
 
 export const dynamic = "force-dynamic";
 
@@ -24,23 +21,22 @@ export async function generateMetadata({
   if (!product) {
     return { robots: "noindex" };
   }
-  return generateMetadataProduct(product, slug);
+  return buildMetadataByModel(CollectionName.products, product, slug);
 }
 
-export default async function ProductPage({ params }: PropsSlug) {
+export default async function PageProduct({ params }: PropsSlug) {
   const slug = await getDecodedSlug(params);
 
   const product = await DAL.queryProductBySlug(slug);
   if (!product) return notFound();
   return (
     <>
-      <JsonLd
-        data={[
-          generateJsonLdProduct(product, slug),
-          generateJsonLdBreadcrumbsProduct(product, slug),
-        ]}
+      <JsonLdViewScript
+        collection={CollectionName.products}
+        entity={product}
+        slug={slug}
       />
-      <ProductPageLayout product={product} />
+      <ProductPage product={product} />
     </>
   );
 }

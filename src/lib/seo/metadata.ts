@@ -1,13 +1,9 @@
-import type { Category, Media } from "@/lib/core/types/payload-types";
+import type { Page } from "@/lib/core/types/payload-types";
 import type { Metadata } from "next";
 
 import appConfig from "@/lib/core/config";
-import {
-  RoutePath,
-  type MetaInput,
-  type ProductSinglePage,
-} from "@/lib/core/types/types";
-import { extractRichTextText, resolveMediaUrl } from "@/lib/core/util";
+import { CollectionName, RoutePath } from "@/lib/core/types/types";
+import { resolveMediaUrl } from "@/lib/core/util";
 
 export const generateMetadataLayout = (): Metadata => {
   return {
@@ -35,13 +31,21 @@ export const generateMetadataLayout = (): Metadata => {
   };
 };
 
-export const buildMetadata = ({
-  title,
-  description,
-  image,
-  path,
-  modifiedTime,
-}: MetaInput): Metadata => {
+type MetadataModel = Pick<Page, "meta">;
+
+const routeByCollection: Record<CollectionName, string> = {
+  [CollectionName.pages]: "",
+  [CollectionName.products]: RoutePath.product,
+  [CollectionName.category]: RoutePath.category,
+};
+
+export const buildMetadataByModel = (
+  collection: CollectionName,
+  model: MetadataModel,
+  slug: string,
+): Metadata => {
+  const { title, description, image: imageRelation } = model.meta;
+
   if (!title) {
     return {
       robots: {
@@ -51,8 +55,17 @@ export const buildMetadata = ({
     };
   }
 
-  const url = `${appConfig.BASE_URL}/${path}`;
-  const imageUrl = resolveMediaUrl(image);
+  const prefix = routeByCollection[collection];
+  const path =
+    collection === CollectionName.pages && slug === appConfig.HOME_SLUG
+      ? ""
+      : `${prefix ? `${prefix}/` : ""}${encodeURIComponent(slug)}`;
+  const url = new URL(path, new URL("/", appConfig.BASE_URL)).toString();
+  const image =
+    typeof imageRelation === "object" && imageRelation !== null
+      ? imageRelation
+      : null;
+  const imageUrl = image?.url ? resolveMediaUrl(image, "og") : undefined;
 
   return {
     title,
@@ -60,98 +73,28 @@ export const buildMetadata = ({
     twitter: {
       title,
       description,
-      images: [imageUrl],
       card: "summary_large_image",
+      ...(imageUrl ? { images: [imageUrl] } : {}),
     },
     openGraph: {
       title,
       description,
       url,
-      ...(modifiedTime && {
-        type: "article",
-        modifiedTime,
-      }),
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-        },
-      ],
+      ...(imageUrl
+        ? {
+            images: [
+              {
+                url: imageUrl,
+                width: 1200,
+                height: 630,
+                ...(image?.alt ? { alt: image.alt } : {}),
+              },
+            ],
+          }
+        : {}),
     },
     alternates: {
       canonical: url,
     },
   };
 };
-
-export function generateMetadataProduct(
-  product: ProductSinglePage,
-  slug: string,
-): Metadata {
-  const url = `${appConfig.BASE_URL}/${RoutePath.product}/${encodeURIComponent(slug)}`;
-  const title = product.title;
-  const description = extractRichTextText(product.description);
-
-  const image = product.gallery![0].image as Media;
-  const imageUrl = resolveMediaUrl(image);
-
-  return {
-    title,
-    description,
-    alternates: { canonical: url },
-    openGraph: {
-      title,
-      description,
-      url,
-      images: [
-        {
-          url: imageUrl,
-          width: image.width ?? 1200,
-          height: image.height ?? 630,
-          alt: image.alt,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [imageUrl],
-    },
-  };
-}
-
-export function generateMetadataCategory(category: Category): Metadata {
-  const url = `${appConfig.BASE_URL}/${RoutePath.category}/${encodeURIComponent(category.slug)}`;
-  const title = category.title;
-  const description = extractRichTextText(category.description);
-
-  const image = category.image as Media;
-  const imageUrl = resolveMediaUrl(image);
-
-  return {
-    title,
-    description,
-    alternates: { canonical: url },
-    openGraph: {
-      title,
-      description,
-      url,
-      images: [
-        {
-          url: imageUrl,
-          width: image.width ?? 1200,
-          height: image.height ?? 630,
-          alt: image.alt,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [imageUrl],
-    },
-  };
-}

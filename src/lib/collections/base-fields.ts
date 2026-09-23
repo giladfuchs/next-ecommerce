@@ -1,4 +1,11 @@
 import {
+  MetaDescriptionField,
+  MetaImageField,
+  MetaTitleField,
+  OverviewField,
+  PreviewField,
+} from "@payloadcms/plugin-seo/fields";
+import {
   BoldFeature,
   EXPERIMENTAL_TableFeature,
   FixedToolbarFeature,
@@ -17,7 +24,13 @@ import {
 import { slugField } from "payload";
 
 import type { User } from "@/payload-types";
-import type { PayloadRequest, CollectionAdminOptions, Field } from "payload";
+import type {
+  PayloadRequest,
+  CollectionAdminOptions,
+  Field,
+  GroupField,
+  Tab,
+} from "payload";
 
 import { CollectionName, RoutePath } from "@/lib/core/types/types";
 import { generatePreviewPath } from "@/lib/core/util";
@@ -243,6 +256,40 @@ export const DESCRIPTION_FIELD: Field = {
   required: true,
 };
 
+export const metaTab = (): Tab => ({
+  name: "meta",
+  label: "SEO",
+  fields: [
+    OverviewField({
+      titlePath: "meta.title",
+      descriptionPath: "meta.description",
+      imagePath: "meta.image",
+    }),
+    MetaTitleField({
+      hasGenerateFn: true,
+      overrides: {
+        required: true,
+      },
+    }),
+    MetaImageField({
+      relationTo: "seo-media",
+      overrides: {
+        required: true,
+      },
+    }),
+    MetaDescriptionField({
+      overrides: {
+        required: true,
+      },
+    }),
+    PreviewField({
+      hasGenerateFn: true,
+      titlePath: "meta.title",
+      descriptionPath: "meta.description",
+    }),
+  ],
+});
+
 export function makeAdminPreview(
   collection: RoutePath,
 ): Pick<NonNullable<CollectionAdminOptions>, "livePreview" | "preview"> {
@@ -314,3 +361,72 @@ export const FAQS_FIELD: Field = {
     },
   ],
 };
+
+const linkFields = ({
+  appearances,
+}: {
+  appearances?: Array<"default" | "outline">;
+} = {}): Field[] => [
+  {
+    name: "type",
+    type: "radio",
+    defaultValue: "reference",
+    options: [
+      { label: "Internal link", value: "reference" },
+      { label: "Custom URL", value: "custom" },
+    ],
+  },
+  {
+    name: "reference",
+    type: "relationship",
+    relationTo: [
+      CollectionName.pages,
+      CollectionName.products,
+      CollectionName.category,
+    ],
+    required: true,
+    admin: {
+      condition: (_data, siblingData) => siblingData?.type === "reference",
+    },
+  },
+  {
+    name: "url",
+    type: "text",
+    required: true,
+    admin: {
+      condition: (_data, siblingData) => siblingData?.type === "custom",
+    },
+  },
+  {
+    name: "label",
+    type: "text",
+    required: true,
+    localized: true,
+  },
+  {
+    name: "newTab",
+    type: "checkbox",
+    label: "Open in a new tab",
+  },
+  ...(appearances
+    ? [
+        {
+          name: "appearance",
+          type: "select",
+          defaultValue: "default",
+          options: appearances.map((appearance) => ({
+            label: appearance === "default" ? "Default" : "Outline",
+            value: appearance,
+          })),
+        } satisfies Field,
+      ]
+    : []),
+];
+
+export const linkField = (
+  appearances?: Array<"default" | "outline">,
+): GroupField => ({
+  name: "link",
+  type: "group",
+  fields: linkFields({ appearances }),
+});

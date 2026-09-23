@@ -12,15 +12,22 @@ import {
   isAdmin,
   stripAdminFieldComponent,
 } from "@/lib/collections/base-fields";
-import { getOrderDashboard } from "@/lib/collections/order-dashboard";
+import { revalidate } from "@/lib/collections/hooks";
 import appConfig from "@/lib/core/config";
+import { getOrderDashboard } from "@/lib/core/dal/order-dashboard";
 import { OrderNotifier } from "@/lib/core/OrderNotifier";
 import {
   type CartItem,
+  type OrderItem,
   CollectionName,
   OrderStatus,
 } from "@/lib/core/types/types";
 import { isValidOrderStatusTransition } from "@/lib/core/util";
+import { stripeConfig } from "@/lib/stripe/config";
+import {
+  stripePaymentIntentField,
+  verifyStripePaymentIntent,
+} from "@/lib/stripe/server";
 
 export const Orders: CollectionOverride = ({ defaultCollection }) => {
   return {
@@ -89,6 +96,14 @@ export const Orders: CollectionOverride = ({ defaultCollection }) => {
       { name: "phone", type: "text", required: true },
       { name: "email", type: "email", required: true },
       {
+        name: "cart",
+        type: "relationship",
+        relationTo: "carts",
+        admin: { position: "sidebar", readOnly: true },
+      },
+      // Stripe integration touch point 1/2 — see @/lib/stripe/server
+      stripePaymentIntentField,
+      {
         name: "OrderView",
         type: "ui",
         admin: {
@@ -109,6 +124,11 @@ export const Orders: CollectionOverride = ({ defaultCollection }) => {
             type: "relationship",
             relationTo: CollectionName.products,
             required: true,
+          },
+          {
+            name: "variant",
+            type: "relationship",
+            relationTo: "variants",
           },
 
           { name: "title", type: "text", required: true },
@@ -182,6 +202,60 @@ export const Orders: CollectionOverride = ({ defaultCollection }) => {
 
         async (args) => {
           const { operation, doc, req } = args;
+          if (operation !== "create" || req.context?.skipOrderNotification)
+            return doc;
+
+          const items: OrderItem[] = Array.isArray(doc.items) ? doc.items : [];
+          const touchedProductIds = new Set<number>();
+
+          for (const item of items) {
+            const quantity = Number(item?.quantity ?? 0);
+            if (!quantity) continue;
+
+            const variantId =
+              typeof item.variant === "object"
+                ? item.variant?.id
+                : item.variant;
+            const productId =
+              typeof item.product === "object"
+                ? item.product?.id
+                : item.product;
+
+            const targetId = variantId ?? productId;
+            if (!targetId) continue;
+
+            await req.payload.db.updateOne({
+              collection: variantId ? "variants" : CollectionName.products,
+              id: targetId,
+              data: { inventory: { $inc: quantity * -1 } },
+              req,
+            });
+
+            if (productId) touchedProductIds.add(productId);
+          }
+
+          if (touchedProductIds.size) {
+            const products = await req.payload.find({
+              collection: CollectionName.products,
+              depth: 0,
+              pagination: false,
+              limit: touchedProductIds.size,
+              where: { id: { in: Array.from(touchedProductIds) } },
+              select: { slug: true },
+            });
+
+            for (const product of products.docs) {
+              if (product.slug) {
+                revalidate(`${CollectionName.products}-${product.slug}`);
+              }
+            }
+          }
+
+          return doc;
+        },
+
+        async (args) => {
+          const { operation, doc, req } = args;
           if (
             operation !== "create" ||
             req.context?.skipOrderNotification ||
@@ -215,6 +289,56 @@ export const Orders: CollectionOverride = ({ defaultCollection }) => {
           const items: CartItem[] = Array.isArray(cart?.items)
             ? cart.items
             : [];
+
+          if (operation === "create") {
+            for (const item of items) {
+              const productId =
+                typeof item.product === "object"
+                  ? item.product?.id
+                  : item.product;
+              const variantId =
+                typeof item.variant === "object"
+                  ? item.variant?.id
+                  : item.variant;
+
+              if (!variantId) continue;
+
+              const variant =
+                typeof item.variant === "object" && item.variant
+                  ? item.variant
+                  : await req.payload.findByID({
+                      collection: "variants",
+                      id: variantId,
+                      depth: 0,
+                      select: { product: true },
+                    });
+              const variantProductId =
+                typeof variant.product === "object"
+                  ? variant.product?.id
+                  : variant.product;
+
+              if (
+                !productId ||
+                String(variantProductId) !== String(productId)
+              ) {
+                throw new Error("Cart variant does not belong to its product.");
+              }
+            }
+          }
+
+          // Stripe integration touch point 2/2 — see @/lib/stripe/server
+          if (
+            stripeConfig.ENABLED &&
+            operation === "create" &&
+            !isAdmin({ req })
+          ) {
+            await verifyStripePaymentIntent({
+              paymentIntentId: data.paymentIntentId,
+              cartId,
+              expectedAmount: cart?.subtotal ?? 0,
+              payload: req.payload,
+            });
+          }
 
           const snapshot = items
             .map((it) => {
@@ -253,6 +377,7 @@ export const Orders: CollectionOverride = ({ defaultCollection }) => {
 
               return {
                 product: productId,
+                variant: variant?.id,
                 title,
                 quantity,
                 unitPrice,
@@ -264,6 +389,7 @@ export const Orders: CollectionOverride = ({ defaultCollection }) => {
                 x,
               ): x is {
                 product: number;
+                variant: number | undefined;
                 title: string;
                 quantity: number;
                 unitPrice: number;

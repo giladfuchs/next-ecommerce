@@ -10,7 +10,7 @@ import { toast } from "sonner";
 import type { Order } from "@/payload-types";
 
 import { withProviders } from "@/components/admin";
-import BaseApi from "@/lib/core/dal/base-api";
+import BaseDal from "@/lib/core/dal/base-dal";
 import { OrderStatus } from "@/lib/core/types/types";
 import { cn, ORDER_STATUS_FLOW, postJson } from "@/lib/core/util";
 
@@ -80,7 +80,7 @@ const OrderViewInner = () => {
     if (!id) return;
     let isCurrent = true;
 
-    BaseApi.fetchApi<Pick<Order, "phone" | "email" | "status">>(
+    BaseDal.fetchApi<Pick<Order, "phone" | "email" | "status">>(
       `orders/${id}`,
       {
         expect: "json",

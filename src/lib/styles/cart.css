@@ -46,6 +46,18 @@ html.high-contrast {
   color: var(--cart-muted);
 }
 
+.cart-drawer .cart-sale-price {
+  color: #dc2626;
+}
+
+html[data-theme="dark"] .cart-drawer .cart-sale-price {
+  color: #f87171;
+}
+
+.cart-drawer .cart-discount-badge {
+  color: white;
+}
+
 .cart-subtle {
   background: var(--cart-subtle);
   border: 0.0625rem solid var(--cart-border);
@@ -55,6 +67,11 @@ html.high-contrast {
 .cart-drawer img {
   border: 0.0625rem solid var(--cart-border);
   border-radius: 0.375rem;
+}
+
+.cart-drawer .cart-subtle img {
+  border: 0;
+  border-radius: 0;
 }
 
 .cart-drawer button {

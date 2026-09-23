@@ -1,4 +1,4 @@
-import type { Media, Order, Product } from "@/lib/core/types/payload-types";
+import type { Order, Product, SeoMedia } from "@/lib/core/types/payload-types";
 import type { Payload } from "payload";
 
 import appConfig from "@/lib/core/config";
@@ -77,7 +77,7 @@ export class OrderNotifier {
       limit: 0,
       pagination: false,
       where: { id: { in: productIds } },
-      select: { id: true, image: true },
+      select: { id: true, meta: true },
     });
 
     const productById = new Map(productsRes.docs.map((p) => [Number(p.id), p]));
@@ -95,14 +95,14 @@ export class OrderNotifier {
         const product = productById.get(productId) as Product;
         if (!product) return null;
 
-        const media = product.image as Media;
+        const media = product.meta.image as SeoMedia;
 
         return {
           title: item.title,
           quantity: item.quantity,
           unitPrice: item.unitPrice,
           lineTotal: item.lineTotal,
-          imageUrl: resolveMediaUrl(media),
+          imageUrl: resolveMediaUrl(media, "card"),
           imageAlt: media.alt,
         } satisfies EmailItem;
       })

@@ -1,7 +1,7 @@
 import type { Block } from "payload";
 
 import { ContentBlock } from "@/lib/blocks/config";
-import { linkField } from "@/lib/fields/link";
+import { linkField } from "@/lib/collections/base-fields";
 
 export const FOOTER_ICON_OPTIONS = [
   { label: "Instagram", value: "instagram" },

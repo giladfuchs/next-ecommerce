@@ -1,12 +1,14 @@
 export type SeedIds = {
-  mediaIds: number[];
+  seoMediaIds: number[];
+  galleryMediaIds: number[];
   categoryIds: number[];
-  // media grouped by category "vendor" (e.g. "Nike"), used for the category thumbnail
-  mediaIdsByVendor: Record<string, number[]>;
+  // SEO media grouped by vendor, used for category cards and metadata.
+  seoMediaIdsByVendor: Record<string, number[]>;
   // category id keyed by vendor, so products can find their category via product.vendor
   categoryIdsByVendor: Record<string, number>;
-  // per-product uploaded media ids, in the same order as mockData.products (1..images, in order)
-  productMediaIds: number[][];
+  // SEO/card image and gallery uploads, in the same order as mockData.products.
+  productSeoMediaIds: number[];
+  productGalleryMediaIds: number[][];
   variantTypeIds: Record<string, number>;
   variantOptionIds: Record<string, number[]>;
 };
@@ -145,3 +147,5 @@ export function makeRichTextDescription(text: string) {
   return makeRichText(children);
 }
 
+// מה מכיל החנות
+// חנות אונליין מלאה: תשלום, איסוף עצמי, SEO, אנליטיקס והתראות — ללא עלות שרתים.

@@ -5,9 +5,8 @@ import { isAdmin } from "@/lib/collections/base-fields";
 export const Users: CollectionConfig = {
   slug: "users",
   admin: {
-    hidden: true,
     useAsTitle: "email",
-    group: "Internal",
+    group: "Other",
     defaultColumns: ["email"],
   },
   auth: true,

@@ -1,0 +1,9 @@
+@layer payload-default {
+  .dashboard-nav-link {
+    margin-bottom: var(--base);
+
+    .nav__link {
+      font-weight: 600;
+    }
+  }
+}

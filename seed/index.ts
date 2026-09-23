@@ -2,7 +2,7 @@
 import { readFile, rm } from "node:fs/promises";
 import { basename, join, resolve } from "node:path";
 
-import { getPayload, type Payload } from "payload";
+import { getPayload, type CollectionSlug, type Payload } from "payload";
 
 import appConfig from "@/lib/core/config";
 import { OrderStatus } from "@/lib/core/types/types";
@@ -30,6 +30,7 @@ export default class SeedService {
   private availableMedia: Array<{
     id: number;
     alt?: string | null;
+    collection: CollectionSlug;
     filename?: string | null;
   }> = [];
   private mockData: {
@@ -51,11 +52,13 @@ export default class SeedService {
   };
 
   private ids: SeedIds = {
-    mediaIds: [],
+    seoMediaIds: [],
+    galleryMediaIds: [],
     categoryIds: [],
-    mediaIdsByVendor: {},
+    seoMediaIdsByVendor: {},
     categoryIdsByVendor: {},
-    productMediaIds: [],
+    productSeoMediaIds: [],
+    productGalleryMediaIds: [],
     variantTypeIds: {},
     variantOptionIds: {},
   };
@@ -78,7 +81,11 @@ export default class SeedService {
     );
   }
 
-  async uploadMediaFromDisk(filePath: string, alt = "Product image") {
+  async uploadMediaFromDisk(
+    filePath: string,
+    alt = "Product image",
+    collection: CollectionSlug = "media",
+  ) {
     const absolutePath = resolve(process.cwd(), "seed", "data", filePath);
 
     const buf = await readFile(absolutePath);
@@ -93,7 +100,7 @@ export default class SeedService {
           : "image/jpeg";
 
     const created = await this.payload.create({
-      collection: "media",
+      collection,
       data: { alt },
       file: {
         data: buf,
@@ -106,6 +113,7 @@ export default class SeedService {
     this.availableMedia.push({
       id: created.id,
       alt: created.alt ?? alt,
+      collection,
       filename: created.filename ?? filename,
     });
 
@@ -123,38 +131,54 @@ export default class SeedService {
     return normalized.normalize("NFKC").trim().toLocaleLowerCase();
   }
 
-  findAvailableMedia(filePath: string, alt: string) {
+  findAvailableMedia(
+    filePath: string,
+    alt: string,
+    collection: CollectionSlug,
+  ) {
     const filename = this.normalizeMediaLookupValue(basename(filePath));
     const normalizedAlt = this.normalizeMediaLookupValue(alt);
 
     const filenameMatch = this.availableMedia.find(
-      (media) => this.normalizeMediaLookupValue(media.filename) === filename,
+      (media) =>
+        media.collection === collection &&
+        this.normalizeMediaLookupValue(media.filename) === filename,
     );
     if (filenameMatch) {
       return { media: filenameMatch, matchedBy: "filename" as const };
     }
 
     const altMatch = this.availableMedia.find(
-      (media) => this.normalizeMediaLookupValue(media.alt) === normalizedAlt,
+      (media) =>
+        media.collection === collection &&
+        this.normalizeMediaLookupValue(media.alt) === normalizedAlt,
     );
     if (altMatch) return { media: altMatch, matchedBy: "alt" as const };
 
     return null;
   }
 
-  async resolveMediaFromDisk(filePath: string, alt?: string) {
+  async resolveMediaFromDisk(
+    filePath: string,
+    alt?: string,
+    collection: CollectionSlug = "media",
+  ) {
     const resolvedAlt = alt?.trim() || basename(filePath);
     if (this.mode !== "seed") {
-      const existing = this.findAvailableMedia(filePath, resolvedAlt);
+      const existing = this.findAvailableMedia(
+        filePath,
+        resolvedAlt,
+        collection,
+      );
       if (existing) {
         this.payload.logger.info(
-          `media:reuse ${basename(filePath)} matchedBy=${existing.matchedBy}`,
+          `${collection}:reuse ${basename(filePath)} matchedBy=${existing.matchedBy}`,
         );
         return existing.media.id;
       }
     }
-    this.payload.logger.info(`media:upload ${basename(filePath)}`);
-    return this.uploadMediaFromDisk(filePath, resolvedAlt);
+    this.payload.logger.info(`${collection}:upload ${basename(filePath)}`);
+    return this.uploadMediaFromDisk(filePath, resolvedAlt, collection);
   }
 
   async createUser() {
@@ -168,40 +192,65 @@ export default class SeedService {
   }
 
   async seedMedia() {
-    if (!appConfig.STORAGE_URL) {
-      this.payload.logger.info("seedMedia:remove-local-media-dir");
-      await rm(resolve(process.cwd(), "public", "media"), {
-        recursive: true,
-        force: true,
-      });
-    }
-
-    this.ids.mediaIdsByVendor = {};
-    this.ids.productMediaIds = [];
-
-    for (const product of this.mockData.products) {
-      const imageCount = Number(product.images) || 0;
-      const productMediaIds: number[] = [];
-
-      for (let i = 1; i <= imageCount; i++) {
-        const filename = `${product.image_name}_${i}${IMAGE_EXTENSION}`;
-        const id = await this.uploadMediaFromDisk(
-          join("images", filename),
-          product.image_name,
-        );
-        this.ids.mediaIds.push(id);
-        productMediaIds.push(id);
-        await new Promise((resolve) => setTimeout(resolve, 100));
-      }
-
-      this.ids.productMediaIds.push(productMediaIds);
-      (this.ids.mediaIdsByVendor[product.vendor] ??= []).push(
-        ...productMediaIds,
+    if (!appConfig.STORAGE_PROVIDER) {
+      this.payload.logger.info("seedMedia:remove-local-media-dirs");
+      await Promise.all(
+        ["media", "seo-media", "gallery-media"].map((collection) =>
+          rm(resolve(process.cwd(), "public", collection), {
+            recursive: true,
+            force: true,
+          }),
+        ),
       );
     }
 
+    this.ids.seoMediaIds = [];
+    this.ids.galleryMediaIds = [];
+    this.ids.seoMediaIdsByVendor = {};
+    this.ids.productSeoMediaIds = [];
+    this.ids.productGalleryMediaIds = [];
+
+    for (const product of this.mockData.products) {
+      const imageCount = Number(product.images) || 0;
+      const productGalleryMediaIds: number[] = [];
+      let productSeoMediaId: number | undefined;
+
+      for (let i = 1; i <= imageCount; i++) {
+        const filename = `${product.image_name}_${i}${IMAGE_EXTENSION}`;
+        const filePath = join("images", filename);
+
+        if (i === 1) {
+          productSeoMediaId = await this.uploadMediaFromDisk(
+            filePath,
+            product.image_name,
+            "seo-media",
+          );
+
+          this.ids.seoMediaIds.push(productSeoMediaId);
+          (this.ids.seoMediaIdsByVendor[product.vendor] ??= []).push(
+            productSeoMediaId,
+          );
+        }
+
+        const galleryMediaId = await this.uploadMediaFromDisk(
+          filePath,
+          product.image_name,
+          "gallery-media",
+        );
+        this.ids.galleryMediaIds.push(galleryMediaId);
+        productGalleryMediaIds.push(galleryMediaId);
+      }
+
+      if (!productSeoMediaId) {
+        throw new Error(`No SEO image found for product ${product.title}`);
+      }
+
+      this.ids.productSeoMediaIds.push(productSeoMediaId);
+      this.ids.productGalleryMediaIds.push(productGalleryMediaIds);
+    }
+
     this.payload.logger.info(
-      `seedMedia:done total=${this.ids.mediaIds.length}`,
+      `seedMedia:done seo=${this.ids.seoMediaIds.length} gallery=${this.ids.galleryMediaIds.length}`,
     );
   }
 
@@ -273,9 +322,9 @@ export default class SeedService {
 
     for (let i = 0; i < this.mockData.categories.length; i++) {
       const c = this.mockData.categories[i];
-      const vendorMediaIds = this.ids.mediaIdsByVendor[c.vendor];
+      const vendorSeoMediaIds = this.ids.seoMediaIdsByVendor[c.vendor];
 
-      if (!vendorMediaIds?.length) {
+      if (!vendorSeoMediaIds?.length) {
         throw new Error(`No media found for vendor ${c.vendor}`);
       }
 
@@ -285,10 +334,13 @@ export default class SeedService {
           _status: "published",
           title: c.title,
           faqs: c.faqs,
-          position: i,
           generateSlug: true,
           description: makeRichTextDescription(c.description),
-          image: getRandom(vendorMediaIds),
+          meta: {
+            title: c.title,
+            description: c.description,
+            image: getRandom(vendorSeoMediaIds),
+          },
         },
       });
 
@@ -320,14 +372,16 @@ export default class SeedService {
     for (const [productIndex, p] of this.mockData.products.entries()) {
       try {
         const categoryId = this.ids.categoryIdsByVendor[p.vendor];
-        const productMediaIds = this.ids.productMediaIds[productIndex];
+        const productSeoMediaId = this.ids.productSeoMediaIds[productIndex];
+        const productGalleryMediaIds =
+          this.ids.productGalleryMediaIds[productIndex];
 
         if (!categoryId) {
           throw new Error(`No category found for vendor ${p.vendor}`);
         }
 
-        if (!productMediaIds?.length) {
-          throw new Error(`No media found for product ${p.title}`);
+        if (!productSeoMediaId || !productGalleryMediaIds?.length) {
+          throw new Error(`Product media is incomplete for ${p.title}`);
         }
 
         const enableVariants =
@@ -347,6 +401,11 @@ export default class SeedService {
             generateSlug: true,
             _status: "published",
             categories: [categoryId],
+            meta: {
+              title: p.title,
+              description: p.description,
+              image: productSeoMediaId,
+            },
             inventory: randInt(11, 62),
             priceInUSD,
             originalPriceInUSD,
@@ -354,10 +413,7 @@ export default class SeedService {
             enableVariants,
             variantTypes: enableVariants ? variantTypeIds : [],
             description: makeRichTextDescription(p.description),
-            gallery: productMediaIds.map((id) => ({
-              image: id,
-              variantOption: null,
-            })),
+            gallery: productGalleryMediaIds.map((id) => ({ image: id })),
           },
         });
 
@@ -560,7 +616,23 @@ export default class SeedService {
         page.meta.image = await this.resolveMediaFromDisk(
           page.meta.image,
           page.meta.title,
+          "seo-media",
         );
+      }
+
+      for (const block of page.layout ?? []) {
+        if (block?.blockType !== "gallery" || !Array.isArray(block.images)) {
+          continue;
+        }
+
+        for (const item of block.images) {
+          if (typeof item?.image !== "string") continue;
+          item.image = await this.resolveMediaFromDisk(
+            item.image,
+            page.title,
+            "gallery-media",
+          );
+        }
       }
 
       await this.payload.create({
@@ -614,26 +686,42 @@ export default class SeedService {
   async loadExistingMediaIds() {
     this.payload.logger.info("loadExistingMediaIds:start");
 
-    const res = await this.payload.find({
-      collection: "media",
-      depth: 0,
-      limit: 1000,
-      pagination: false,
-      select: { id: true, alt: true, filename: true },
-    });
+    const collections = ["media", "seo-media", "gallery-media"] as const;
+    const results = await Promise.all(
+      collections.map(async (collection) => ({
+        collection,
+        result: await this.payload.find({
+          collection,
+          depth: 0,
+          limit: 1000,
+          pagination: false,
+          select: { id: true, alt: true, filename: true },
+        }),
+      })),
+    );
+    const docsByCollection = Object.fromEntries(
+      results.map(({ collection, result }) => [collection, result.docs]),
+    );
+    const mediaDocs = docsByCollection.media ?? [];
+    const seoMediaDocs = docsByCollection["seo-media"] ?? [];
+    const galleryMediaDocs = docsByCollection["gallery-media"] ?? [];
 
-    this.availableMedia = res.docs.map((doc: any) => ({
-      id: doc.id,
-      alt: doc.alt,
-      filename: doc.filename,
-    }));
-    this.ids.mediaIds = res.docs.map((doc: any) => doc.id);
-    this.ids.mediaIdsByVendor = {};
-    this.ids.productMediaIds = [];
+    this.availableMedia = results.flatMap(({ collection, result }) =>
+      result.docs.map((doc: any) => ({
+        id: doc.id,
+        alt: doc.alt,
+        collection,
+        filename: doc.filename,
+      })),
+    );
+    this.ids.seoMediaIds = seoMediaDocs.map((doc: any) => doc.id);
+    this.ids.galleryMediaIds = galleryMediaDocs.map((doc: any) => doc.id);
+    this.ids.seoMediaIdsByVendor = {};
+    this.ids.productSeoMediaIds = [];
+    this.ids.productGalleryMediaIds = [];
 
-    for (const product of this.mockData.products) {
-      const prefix = `${product.image_name}_`;
-      const productMediaIds = res.docs
+    const findProductMedia = (docs: any[], prefix: string) =>
+      docs
         .filter(
           (doc: any) =>
             typeof doc.filename === "string" && doc.filename.startsWith(prefix),
@@ -643,16 +731,22 @@ export default class SeedService {
         )
         .map((doc: any) => doc.id);
 
-      this.ids.productMediaIds.push(productMediaIds);
-      if (productMediaIds.length) {
-        (this.ids.mediaIdsByVendor[product.vendor] ??= []).push(
-          ...productMediaIds,
+    for (const product of this.mockData.products) {
+      const prefix = `${product.image_name}_`;
+      const productSeoMediaIds = findProductMedia(seoMediaDocs, prefix);
+      const productGalleryMediaIds = findProductMedia(galleryMediaDocs, prefix);
+
+      this.ids.productSeoMediaIds.push(productSeoMediaIds[0] ?? 0);
+      this.ids.productGalleryMediaIds.push(productGalleryMediaIds);
+      if (productSeoMediaIds.length) {
+        (this.ids.seoMediaIdsByVendor[product.vendor] ??= []).push(
+          ...productSeoMediaIds,
         );
       }
     }
 
     this.payload.logger.info(
-      `loadExistingMediaIds:done total=${this.ids.mediaIds.length}`,
+      `loadExistingMediaIds:done media=${mediaDocs.length} seo=${this.ids.seoMediaIds.length} gallery=${this.ids.galleryMediaIds.length}`,
     );
   }
 

@@ -10,7 +10,7 @@ export const AutoScrollRow = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex gap-4 overflow-hidden">
+      <div className="flex gap-4 overflow-hidden" aria-hidden="true">
         {Array.from({ length: 4 }).map((_, i) => (
           <div
             key={i}
@@ -50,17 +50,17 @@ export const Header = dynamic(() => import("@/components/layout/header"), {
     </header>
   ),
 });
-export const Checkout = dynamic(() => import("@/components/checkout"), {
+export const Checkout = dynamic(() => import("src/components/shop/checkout"), {
   ssr: false,
 });
 
 export const ProductPurchaseSection = dynamic(
-  () => import("@/components/product/product-purchase-section"),
+  () => import("@/components/shop/product/product-purchase-section"),
   { ssr: false, loading: () => <div className="min-h-[280px]" /> },
 );
 
 export const ReviewForm = dynamic(
-  () => import("@/components/product/review/review-form"),
+  () => import("@/components/shop/product/review/review-form"),
   {
     ssr: false,
   },

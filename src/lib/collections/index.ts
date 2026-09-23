@@ -1,7 +1,7 @@
 export { Category } from "./Category";
 export { Carts } from "./Carts";
 export { Reviews } from "./Reviews";
-export { Media } from "./Media";
+export { GalleryMedia, Media, SeoMedia } from "./MediaCollections";
 export { Orders } from "./Orders";
 export { Pages } from "./Pages";
 export { Products } from "./Products";

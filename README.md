@@ -10,7 +10,7 @@ Clone, configure, and launch your store.
 
 - Full Payload E-commerce CMS integration
 - Complete Category → Product → Add to Cart → Checkout → Purchase storefront flow
-- Store pickup flow ready
+- Checkout supports store pickup or online payment (Stripe integration included) — enable/switch per store
 - Admin dashboard for tracking sales and orders
 - Aggressive tag-based caching with manual revalidation
 - SEO-ready (metadata + JSON-LD + sitemap + robots.txt)
@@ -49,22 +49,6 @@ and update your environment variables based on [.env.example](.env.example)
 
 ---
 
-## Notes on Payload E-commerce
-
-Payload is a powerful CMS, and the e-commerce plugin gives you many features out of the box.
-
-However, in real production use you may need to customize parts of it.
-
-For example:
-
-- Slug field was customized to properly support non-Latin characters.
-- Image upload hook converts images to WebP and resizes them automatically for optimized performance and reduced bandwidth usage.
-- Some behaviors are opinionated and may require collection overrides.
-
-This starter already includes structural adjustments to make it more production-ready.
-
----
-
 ## Stack
 
 - **Next.js 16** (App Router) + **React 19** + **Payload CMS 3** + **PostgreSQL**
@@ -96,8 +80,8 @@ Both expose the same public methods.
 
 - On order creation, a confirmation email is automatically sent to the customer.
 - A WhatsApp notification is sent to the store owner via Callmebot.
-- The architecture is ready for store pickup flow.
-- Payment gateway integration can be added easily (Stripe, PayPal, etc.) using order hooks.
+- At checkout, choose between store pickup or online payment.
+- Stripe integration included for online payment. Other gateways can be added the same way via order hooks.
 
 ### Local Development
 

@@ -18,11 +18,14 @@ export default function Providers({ children }: { children: ReactNode }) {
               products: {
                 slug: true,
                 title: true,
-                image: true,
+                meta: { image: true },
                 priceInUSD: true,
+                originalPriceInUSD: true,
               },
               variants: {
                 priceInUSD: true,
+                priceInUSDEnabled: true,
+                originalPriceInUSD: true,
                 options: true,
               },
             },

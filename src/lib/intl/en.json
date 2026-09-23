@@ -1,4 +1,9 @@
 {
+  "blocks": {
+    "gallery": {
+      "select_image": "Select image"
+    }
+  },
   "review_form": {
     "open_button": "Write a review",
     "title": "Add a review",
@@ -62,11 +67,6 @@
       "soldOut": "Sold out",
       "selectVariant": "Please select a variant.",
       "added": "Product added to cart."
-    },
-    "gallery": {
-      "previous": "Previous image",
-      "next": "Next image",
-      "select_image": "Select image"
     }
   },
 
@@ -108,7 +108,11 @@
       "orderId": "Order ID: {id}",
       "backToShop": "Back to shop",
       "yourCart": "Your cart",
-      "total": "Total"
+      "total": "Total",
+      "payment": {
+        "preparing": "Preparing payment...",
+        "failed": "Payment failed. Please try again."
+      }
     },
     "fields": {
       "name": {
@@ -130,7 +134,10 @@
       "sending": "Sending...",
       "sendOrder": "Send order",
       "success": "Order sent",
-      "failed": "Order failed"
+      "failed": "Order failed",
+      "pay": "Pay now",
+      "paying": "Processing payment...",
+      "paid": "Payment received"
     }
   },
   "admin": {
@@ -139,6 +146,14 @@
       "title": "Orders dashboard",
       "description": "A clear view of your store orders and revenue",
       "allOrders": "View all orders",
+      "viewStore": "Open store homepage",
+      "quickAccess": "Quick access",
+      "productsLink": "Products",
+      "cartsLink": "Carts",
+      "pagesLink": "Pages",
+      "categoriesLink": "Categories",
+      "siteSettingsLink": "Site settings",
+      "mediaLink": "Media files",
       "dateRange": "Date range",
       "from": "From",
       "to": "To",
@@ -187,8 +202,36 @@
       "details": {
         "footer": "Footer or home settings changed",
         "products": "Many products added",
-        "category": "Category renamed or reordered",
+        "category": "Category renamed",
         "finish": "Finish edits → then revalidate once."
+      }
+    },
+    "colorPicker": {
+      "presetsLabel": "Color presets",
+      "usePreset": "Use {label}",
+      "openPicker": "Open color picker",
+      "customColorLabel": "Choose a custom color",
+      "colorValueLabel": "Color value",
+      "clear": "Clear",
+      "presets": {
+        "black": "Black",
+        "slate": "Slate",
+        "white": "White",
+        "red": "Red",
+        "orange": "Orange",
+        "amber": "Amber",
+        "yellow": "Yellow",
+        "lime": "Lime",
+        "green": "Green",
+        "teal": "Teal",
+        "cyan": "Cyan",
+        "blue": "Blue",
+        "indigo": "Indigo",
+        "purple": "Purple",
+        "pink": "Pink",
+        "brown": "Brown",
+        "beige": "Beige",
+        "roseGold": "Rose gold"
       }
     }
   },

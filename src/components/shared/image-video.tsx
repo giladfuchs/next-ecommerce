@@ -1,8 +1,8 @@
 import NextImage from "next/image";
 
-import type { Media } from "@/lib/core/types/payload-types";
+import type { MediaVariant, UploadMedia } from "@/lib/core/util";
 
-import { cn, resolveMediaUrl } from "@/lib/core/util";
+import { cn, getSizedVariant, resolveMediaUrl } from "@/lib/core/util";
 
 const breakpoints = {
   l: 1440,
@@ -16,8 +16,9 @@ interface Props {
   height?: number;
   imgClassName?: string;
   priority?: boolean;
-  resource: Media;
+  resource: UploadMedia;
   size?: string;
+  variant?: MediaVariant;
   videoClassName?: string;
   width?: number;
 }
@@ -29,10 +30,14 @@ const MediaImage = ({
   priority,
   resource,
   size: sizeFromProps,
+  variant,
   width: widthFromProps,
 }: Props) => {
-  const width = widthFromProps ?? resource.width ?? undefined;
-  const height = heightFromProps ?? resource.height ?? undefined;
+  const sizedResource = getSizedVariant(resource, variant);
+  const width =
+    widthFromProps ?? sizedResource?.width ?? resource.width ?? undefined;
+  const height =
+    heightFromProps ?? sizedResource?.height ?? resource.height ?? undefined;
   const sizes =
     sizeFromProps ??
     Object.values(breakpoints)
@@ -45,7 +50,7 @@ const MediaImage = ({
       fill={fill}
       height={!fill ? height : undefined}
       width={!fill ? width : undefined}
-      src={resolveMediaUrl(resource)}
+      src={resolveMediaUrl(resource, variant)}
       sizes={sizes}
       priority={priority}
       quality={90}

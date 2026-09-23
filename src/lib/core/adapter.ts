@@ -18,15 +18,13 @@ const getCartItemData = (item: CartItem) => {
   const variant =
     typeof item?.variant === "object" ? (item.variant as Variant) : null;
   console.log(variant);
-  const price = variant
-    ? getEffectiveVariantPrice(product.priceInUSD, variant)
-    : (product.priceInUSD ?? undefined);
+  const pricing = getProductPricing(product, variant);
 
   return {
     product,
     variant,
     isVariant: Boolean(variant),
-    price,
+    ...pricing,
   };
 };
 type CartRow = {
@@ -43,19 +41,59 @@ export const buildCartRows = (cart: Cart | null | undefined): CartRow[] => {
     return acc;
   }, []);
 };
-type PriceVariant = Pick<Variant, "priceInUSD" | "priceInUSDEnabled">;
+type PriceVariant = Pick<
+  Variant,
+  "priceInUSD" | "priceInUSDEnabled" | "originalPriceInUSD"
+>;
+type PricedProduct = Pick<Product, "priceInUSD" | "originalPriceInUSD">;
 
 export const getEffectiveVariantPrice = (
   productPrice: number | null | undefined,
   variant: PriceVariant,
 ) =>
-  typeof variant.priceInUSD === "number" ? variant.priceInUSD : productPrice;
+  variant.priceInUSDEnabled && typeof variant.priceInUSD === "number"
+    ? variant.priceInUSD
+    : productPrice;
+
+export const getProductPricing = (
+  product: PricedProduct,
+  variant?: PriceVariant | null,
+) => {
+  const usesCustomPrice =
+    Boolean(variant?.priceInUSDEnabled) &&
+    typeof variant?.priceInUSD === "number";
+  const effectivePrice = variant
+    ? getEffectiveVariantPrice(product.priceInUSD, variant)
+    : product.priceInUSD;
+  const price = typeof effectivePrice === "number" ? effectivePrice : undefined;
+  const possibleOriginalPrice =
+    variant?.originalPriceInUSD ??
+    (usesCustomPrice ? undefined : product.originalPriceInUSD);
+  const originalPrice =
+    typeof price === "number" &&
+    typeof possibleOriginalPrice === "number" &&
+    possibleOriginalPrice > price
+      ? possibleOriginalPrice
+      : undefined;
+
+  return {
+    price,
+    originalPrice,
+    discountPercent:
+      originalPrice === undefined || price === undefined
+        ? null
+        : Math.round(((originalPrice - price) / originalPrice) * 100),
+  };
+};
 
 const relationID = (value: number | { id: number }) =>
   String(typeof value === "object" ? value.id : value);
 
 export const buildProductPurchaseSectionData = (
-  product: Product,
+  product: Pick<
+    Product,
+    "id" | "priceInUSD" | "inventory" | "originalPriceInUSD" | "variantTypes"
+  >,
   combined: CombinedVariantData,
 ): ProductPurchaseSectionData => {
   const productPrice = Number(product.priceInUSD ?? 0);

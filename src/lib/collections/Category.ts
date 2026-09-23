@@ -5,13 +5,10 @@ import {
   FAQS_FIELD,
   makeAdminPreview,
   adminOnlyAccess,
+  metaTab,
   mixedSlugField,
 } from "@/lib/collections/base-fields";
-import {
-  makeRevalidateHooks,
-  normalizeFaqs,
-  reorderCategoryPositions,
-} from "@/lib/collections/hooks";
+import { makeRevalidateHooks, normalizeFaqs } from "@/lib/collections/hooks";
 import { CollectionName, RoutePath } from "@/lib/core/types/types";
 
 export const Category: CollectionConfig = {
@@ -27,7 +24,7 @@ export const Category: CollectionConfig = {
   admin: {
     useAsTitle: "title",
     group: "Content",
-    defaultColumns: ["title", "position", "slug", "updatedAt"],
+    defaultColumns: ["title", "slug", "updatedAt"],
     ...makeAdminPreview(RoutePath.category),
   },
   hooks: {
@@ -36,26 +33,21 @@ export const Category: CollectionConfig = {
         return normalizeFaqs(data as { faqs?: unknown });
       },
     ],
-    afterChange: [
-      reorderCategoryPositions,
-      ...makeRevalidateHooks(CollectionName.category).afterChange,
-    ],
+    afterChange: makeRevalidateHooks(CollectionName.category).afterChange,
     afterDelete: makeRevalidateHooks(CollectionName.category).afterDelete,
   },
   fields: [
     { name: "title", type: "text", required: true, localized: true },
-
     {
-      name: "position",
-      type: "number",
-      required: true,
-      defaultValue: 0,
-      min: 0,
+      type: "tabs",
+      tabs: [
+        {
+          label: "Category details",
+          fields: [DESCRIPTION_FIELD, FAQS_FIELD],
+        },
+        metaTab(),
+      ],
     },
-    { name: "image", type: "upload", relationTo: "media", required: true },
-
-    DESCRIPTION_FIELD,
     mixedSlugField(),
-    FAQS_FIELD,
   ],
 };

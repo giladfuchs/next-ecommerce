@@ -36,21 +36,41 @@ export default async function GridOrAutoScroll({
 
   if (displayMode === "autoScroll") {
     return (
-      <AutoScrollRow
-        className={cn("snap-x snap-proximity", autoScrollClassName)}
-      >
-        {models.map((model) => (
-          <div
-            key={model.id}
-            className={cn(
-              "min-w-0 flex-[0_0_48%] max-w-[21rem] sm:flex-[0_0_48%] md:flex-[0_0_31%] lg:flex-[0_0_23%] lg:max-w-[20rem]",
-              autoScrollItemClassName,
-            )}
+      <div className="min-w-0">
+        <ul className="sr-only focus-within:not-sr-only focus-within:space-y-2">
+          {models.map((model) => (
+            <li key={model.id}>
+              <ModelCard
+                model={model}
+                route={route}
+                displayMode={displayMode}
+              />
+            </li>
+          ))}
+        </ul>
+        <div aria-hidden="true">
+          <AutoScrollRow
+            className={cn("snap-x snap-proximity", autoScrollClassName)}
           >
-            <ModelCard model={model} route={route} displayMode={displayMode} />
-          </div>
-        ))}
-      </AutoScrollRow>
+            {models.map((model) => (
+              <div
+                key={model.id}
+                className={cn(
+                  "min-w-0 flex-[0_0_48%] max-w-[21rem] sm:flex-[0_0_48%] md:flex-[0_0_31%] lg:flex-[0_0_23%] lg:max-w-[20rem]",
+                  autoScrollItemClassName,
+                )}
+              >
+                <ModelCard
+                  model={model}
+                  route={route}
+                  displayMode={displayMode}
+                  tabIndex={-1}
+                />
+              </div>
+            ))}
+          </AutoScrollRow>
+        </div>
+      </div>
     );
   }
 

@@ -53,10 +53,15 @@ const beforeChangeCart: CollectionBeforeChangeHook = async ({
         id: variantID,
         depth: 0,
         select: {
+          product: true,
           priceInUSD: true,
           priceInUSDEnabled: true,
         },
       });
+
+      if (String(relationID(variant.product)) !== String(productID)) {
+        throw new Error("Cart variant does not belong to its product.");
+      }
 
       if (variant.priceInUSDEnabled && typeof variant.priceInUSD === "number") {
         price = variant.priceInUSD;

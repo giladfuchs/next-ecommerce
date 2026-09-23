@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState, type ComponentType } from "react";
+import { BsUniversalAccessCircle } from "react-icons/bs";
 import {
   HiOutlineAdjustmentsHorizontal,
   HiOutlineArrowPath,
@@ -11,7 +12,6 @@ import {
   HiOutlineMagnifyingGlassPlus,
   HiOutlineUnderline,
 } from "react-icons/hi2";
-import { RiWheelchairLine } from "react-icons/ri";
 
 import { Button } from "@/components/ui";
 
@@ -164,9 +164,9 @@ export default function AccessibilityBar() {
     <div className="fixed bottom-16 left-0 z-[999999] flex items-center">
       <Button
         onClick={() => setOpen((v) => !v)}
-        className="h-10 w-10 rounded-r-full rounded-l-none bg-black p-0 text-white shadow-lg"
+        className="h-8 w-7 rounded-r-full rounded-l-none bg-black p-0 text-white shadow-lg"
       >
-        <RiWheelchairLine className="h-5 w-5" />
+        <BsUniversalAccessCircle />
       </Button>
 
       {open && (

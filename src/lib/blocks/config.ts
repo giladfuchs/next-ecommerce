@@ -1,8 +1,11 @@
 import type { Block, Field } from "payload";
 
-import { FAQS_FIELD, pageEditor } from "@/lib/collections/base-fields";
+import {
+  FAQS_FIELD,
+  linkField,
+  pageEditor,
+} from "@/lib/collections/base-fields";
 import { CollectionName } from "@/lib/core/types/types";
-import { linkField } from "@/lib/fields/link";
 
 export const contentColumnFields: Field[] = [
   {
@@ -229,10 +232,42 @@ export const HtmlEmbedBlock: Block = {
   },
 };
 
+export const GalleryBlock: Block = {
+  slug: "gallery",
+  interfaceName: "GalleryBlock",
+  fields: [
+    {
+      name: "title",
+      type: "text",
+      label: "Title",
+    },
+    {
+      name: "images",
+      type: "array",
+      label: "Images",
+      required: true,
+      minRows: 1,
+      fields: [
+        {
+          name: "image",
+          type: "upload",
+          relationTo: "gallery-media",
+          required: true,
+        },
+      ],
+    },
+  ],
+  labels: {
+    singular: "Gallery",
+    plural: "Galleries",
+  },
+};
+
 export const pageBlocks = [
   CallToActionBlock,
   ArchiveBlock,
   FaqBlock,
   ContentBlock,
+  GalleryBlock,
   HtmlEmbedBlock,
 ];

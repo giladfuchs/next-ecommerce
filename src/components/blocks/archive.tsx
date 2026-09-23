@@ -1,80 +1,34 @@
-import type { CardModel } from "@/components/shared/model-card";
-import type {
-  ArchiveBlock as ArchiveBlockProps,
-  Category,
-  Page,
-  Product,
-} from "@/payload-types";
+import type { ResolvedArchiveBlock } from "@/lib/core/types/types";
 
 import GridOrAutoScroll from "@/components/shared/grid-or-auto-scroll";
 import { RichText } from "@/components/ui";
-import DAL from "@/lib/core/dal";
 import { RoutePath } from "@/lib/core/types/types";
 import { cn } from "@/lib/core/util";
 
-const relationIds = <T extends { id: number }>(
-  values?: Array<number | T> | null,
-) => values?.map((value) => (typeof value === "object" ? value.id : value));
+type ArchiveBlockProps = Pick<ResolvedArchiveBlock, "items"> &
+  Partial<
+    Pick<
+      ResolvedArchiveBlock,
+      "contentType" | "displayMode" | "introAlignment" | "introContent"
+    >
+  > & {
+    gridClassName?: string;
+  };
 
-export default async function ArchiveBlock({
-  categories,
+export default function ArchiveBlock({
   contentType = "products",
   displayMode = "grid",
+  gridClassName,
   introAlignment = "center",
   introContent,
-  limit,
-  populateBy,
-  selectedCategories,
-  selectedDocs,
-  selectedPages,
-  currentPageId,
-}: ArchiveBlockProps & { currentPageId: number }) {
-  let models: CardModel[] = [];
+  items,
+}: ArchiveBlockProps) {
   const route =
     contentType === "pages"
       ? RoutePath.page
       : contentType === "categories"
         ? RoutePath.category
         : RoutePath.product;
-
-  if (contentType === "pages") {
-    const pages = await DAL.queryArchivePages(
-      populateBy === "selection"
-        ? {
-            ids: relationIds<Page>(selectedPages),
-            excludeId: currentPageId,
-            limit: selectedPages?.length ?? 0,
-          }
-        : {
-            excludeId: currentPageId,
-            limit: limit ?? 10,
-          },
-    );
-    models = pages;
-  } else if (contentType === "categories") {
-    const archiveCategories = await DAL.queryArchiveCategories(
-      populateBy === "selection"
-        ? {
-            ids: relationIds<Category>(selectedCategories),
-            limit: selectedCategories?.length ?? 0,
-          }
-        : { limit: limit ?? 10 },
-    );
-    models = archiveCategories;
-  } else {
-    const products = await DAL.queryArchiveProducts(
-      populateBy === "selection"
-        ? {
-            productIds: relationIds<Product>(selectedDocs),
-            limit: selectedDocs?.length ?? 0,
-          }
-        : {
-            categoryIds: relationIds<Category>(categories),
-            limit: limit ?? 10,
-          },
-    );
-    models = products;
-  }
 
   return (
     <section className="min-w-0">
@@ -93,9 +47,10 @@ export default async function ArchiveBlock({
       ) : null}
 
       <GridOrAutoScroll
-        models={models}
+        models={items}
         route={route}
         displayMode={displayMode}
+        gridClassName={gridClassName}
       />
     </section>
   );

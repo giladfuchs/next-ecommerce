@@ -1,15 +1,42 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+import type {
+  GalleryMedia,
+  Media,
+  Review,
+  SeoMedia,
+} from "@/lib/core/types/payload-types";
 import type { ReadonlyURLSearchParams } from "next/navigation";
 
 import appConfig from "@/lib/core/config";
-import { Media, Review } from "@/lib/core/types/payload-types";
 import { OrderStatus, RoutePath } from "@/lib/core/types/types";
 
-export const resolveMediaUrl = (media: Media) => {
+export type MediaVariant = "og" | "card" | "gallery";
+export type UploadMedia = Media | SeoMedia | GalleryMedia;
+
+type SizedVariant = {
+  url?: string | null;
+  width?: number | null;
+  height?: number | null;
+};
+
+export const getSizedVariant = (
+  media: UploadMedia,
+  variant?: MediaVariant,
+): SizedVariant | undefined => {
+  if (!media || !variant || !("sizes" in media)) return undefined;
+
+  return (
+    (media.sizes as Partial<Record<MediaVariant, SizedVariant | null>>)?.[
+      variant
+    ] ?? undefined
+  );
+};
+
+export const resolveMediaUrl = (media: UploadMedia, variant?: MediaVariant) => {
   if (!media) return "";
-  const url = media.url!;
+  const url = getSizedVariant(media, variant)?.url || media.url!;
   return url.startsWith("http") ? url : `${appConfig.SERVER_URL}${url}`;
 };
 
@@ -88,7 +115,7 @@ export const generatePreviewPath = ({
     path:
       collection === RoutePath.page
         ? `/${slug === appConfig.HOME_SLUG ? "" : slug}`
-        : `/${collection}/${encodeURIComponent(slug)}`,
+        : `/${collection}/${slug}`,
     previewSecret: appConfig.PREVIEW_SECRET,
   });
   return `/preview?${encodedParams.toString()}`;
@@ -136,34 +163,6 @@ export const extractRichTextText = (description: unknown): string => {
   };
 
   return collect(root.children as RichTextNode[]).trim();
-};
-
-export const extractHtmlAssets = (
-  html: string,
-): {
-  html: string;
-  css: string;
-  js: string;
-} => {
-  let css = "";
-  let js = "";
-
-  const cleanedHtml = html
-    .replace(/<style[^>]*>([\s\S]*?)<\/style>/gi, (_, block: string) => {
-      css += `${block.trim()}\n`;
-      return "";
-    })
-    .replace(/<script[^>]*>([\s\S]*?)<\/script>/gi, (_, block: string) => {
-      js += `${block.trim()}\n`;
-      return "";
-    })
-    .trim();
-
-  return {
-    html: cleanedHtml,
-    css: css.trim(),
-    js: js.trim(),
-  };
 };
 
 export const calculateAverageRating = (reviews: Review[]) =>

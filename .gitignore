@@ -1,5 +1,7 @@
 seed/data/images
 public/media
+public/seo-media
+public/gallery-media
 seed/update.sh
 note.txt
 # local env files

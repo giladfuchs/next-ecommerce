@@ -1,0 +1,2874 @@
+{
+  "user": {
+    "email": "admin@admin.com",
+    "password": "admin",
+    "roles": ["admin"],
+    "name": "admin"
+  },
+  "pages": [
+    {
+      "title": "Home",
+      "slug": "home",
+      "_status": "published",
+      "hero": {
+        "type": "highImpact",
+        "media": "giphy-hero-home.gif",
+        "richText": {
+          "root": {
+            "type": "root",
+            "children": [
+              {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "תבנית חנות אונליין לנעליים 👟",
+                    "version": 1
+                  }
+                ],
+                "direction": "rtl",
+                "format": "center",
+                "indent": 0,
+                "tag": "h1",
+                "version": 1
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "דמו מלא של חנות אונליין, בנוי עם ",
+                    "version": 1
+                  },
+                  {
+                    "type": "link",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Next.js",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "fields": {
+                      "linkType": "custom",
+                      "newTab": true,
+                      "url": "https://nextjs.org"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 3
+                  },
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": " ו-",
+                    "version": 1
+                  },
+                  {
+                    "type": "link",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Payload CMS",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "fields": {
+                      "linkType": "custom",
+                      "newTab": true,
+                      "url": "https://payloadcms.com"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 3
+                  },
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": " — כולל מוצרים, וריאציות, עגלה וניהול תוכן מלא.",
+                    "version": 1
+                  }
+                ],
+                "direction": "rtl",
+                "format": "center",
+                "indent": 0,
+                "textFormat": 0,
+                "textStyle": "",
+                "version": 1
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "link",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "כניסה ללוח הבקרה",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "rtl",
+                    "fields": {
+                      "linkType": "custom",
+                      "newTab": true,
+                      "url": "/admin"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 3
+                  }
+                ],
+                "direction": "rtl",
+                "format": "center",
+                "indent": 0,
+                "textFormat": 0,
+                "textStyle": "",
+                "version": 1
+              },
+              {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "Demo Login",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "tag": "h3",
+                "version": 1
+              },
+              {
+                "type": "list",
+                "children": [
+                  {
+                    "type": "listitem",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Email: admin@admin.com",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "value": 1,
+                    "version": 1
+                  },
+                  {
+                    "type": "listitem",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "Password: admin",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "format": "",
+                    "indent": 0,
+                    "value": 2,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "format": "center",
+                "indent": 0,
+                "listType": "bullet",
+                "start": 1,
+                "tag": "ul",
+                "version": 1
+              },
+              {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "תשלום לדוגמה (מצב בדיקה של Stripe)",
+                    "version": 1
+                  }
+                ],
+                "direction": "rtl",
+                "format": "center",
+                "indent": 0,
+                "tag": "h3",
+                "version": 1
+              },
+              {
+                "type": "list",
+                "children": [
+                  {
+                    "type": "listitem",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "מספר כרטיס: 4242 4242 4242 4242",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "rtl",
+                    "format": "",
+                    "indent": 0,
+                    "value": 1,
+                    "version": 1
+                  },
+                  {
+                    "type": "listitem",
+                    "children": [
+                      {
+                        "type": "text",
+                        "detail": 0,
+                        "format": 0,
+                        "mode": "normal",
+                        "style": "",
+                        "text": "תוקף: כל תאריך עתידי · CVC: כל 3 ספרות",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "rtl",
+                    "format": "",
+                    "indent": 0,
+                    "value": 2,
+                    "version": 1
+                  }
+                ],
+                "direction": "rtl",
+                "format": "center",
+                "indent": 0,
+                "listType": "bullet",
+                "start": 1,
+                "tag": "ul",
+                "version": 1
+              }
+            ],
+            "direction": "rtl",
+            "format": "",
+            "indent": 0,
+            "version": 1
+          }
+        }
+      },
+      "layout": [
+        {
+          "blockType": "archive",
+          "blockName": "Shop by category",
+          "introContent": {
+            "root": {
+              "type": "root",
+              "children": [
+                {
+                  "type": "heading",
+                  "children": [
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "SHOP BY CATEGORY",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "rtl",
+                  "format": "center",
+                  "indent": 0,
+                  "tag": "h2",
+                  "version": 1
+                }
+              ],
+              "direction": "rtl",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            }
+          },
+          "introAlignment": "center",
+          "contentType": "categories",
+          "displayMode": "grid",
+          "populateBy": "collection",
+          "limit": 4
+        },
+
+        {
+          "blockType": "content",
+          "columns": [
+            {
+              "size": "full",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "כל מה שחנות אונליין צריכה, כבר כאן",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "rtl",
+                      "format": "",
+                      "indent": 0,
+                      "tag": "h2",
+                      "version": 1
+                    },
+                    {
+                      "type": "list",
+                      "children": [
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "חנות אונליין מלאה ומוכנה לעבודה",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "rtl",
+                          "format": "",
+                          "indent": 0,
+                          "value": 1,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "מסלול קנייה שלם: קטגוריה ← מוצר ← עגלה ← תשלום ← הזמנה",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "rtl",
+                          "format": "",
+                          "indent": 0,
+                          "value": 2,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "אפשרות להוסיף סליקה מקוונת, או לעבוד בלעדיה – עם איסוף עצמי או יצירת קשר עם הלקוח וסגירת התשלום מולו בטלפון",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "rtl",
+                          "format": "",
+                          "indent": 0,
+                          "value": 3,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "דפי תוכן דינמיים שניתן לערוך ולעצב בעצמכם (עמוד הבית, \"אודות\" ועוד)",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "rtl",
+                          "format": "",
+                          "indent": 0,
+                          "value": 4,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "מותאם לגוגל ולמנועי AI (SEO), כדי שהעסק יופיע גם בחיפוש בגוגל וגם בתוצאות מבוססות בינה מלאכותית",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "rtl",
+                          "format": "",
+                          "indent": 0,
+                          "value": 5,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "חיבור לכלי אנליטיקס ופרסום (גוגל, מטא, טיקטוק) עם מעקב אחרי הזמנות ומכירות",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "rtl",
+                          "format": "",
+                          "indent": 0,
+                          "value": 6,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "שליחת מייל אישור אוטומטי ללקוח + התראת וואטסאפ על כל הזמנה חדשה",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "rtl",
+                          "format": "",
+                          "indent": 0,
+                          "value": 7,
+                          "version": 1
+                        },
+                        {
+                          "type": "listitem",
+                          "children": [
+                            {
+                              "type": "text",
+                              "detail": 0,
+                              "format": 0,
+                              "mode": "normal",
+                              "style": "",
+                              "text": "ללא עלות שרתים חודשית – באתר בעומס תעבורה נמוך-בינוני האחסון ניתן בחינם",
+                              "version": 1
+                            }
+                          ],
+                          "direction": "rtl",
+                          "format": "",
+                          "indent": 0,
+                          "value": 8,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "rtl",
+                      "format": "",
+                      "indent": 0,
+                      "listType": "bullet",
+                      "start": 1,
+                      "tag": "ul",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "rtl",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1
+                }
+              }
+            }
+          ]
+        },
+
+        {
+          "blockType": "cta",
+          "blockName": "Contact",
+          "richText": {
+            "root": {
+              "type": "root",
+              "children": [
+                {
+                  "type": "heading",
+                  "children": [
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "מחפשים מומחה שיבנה לכם את החנות?",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "rtl",
+                  "format": "center",
+                  "indent": 0,
+                  "tag": "h2",
+                  "version": 1
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "צרו איתנו קשר במייל ",
+                      "version": 1
+                    },
+                    {
+                      "type": "link",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "info@studiopo.net",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "rtl",
+                      "fields": {
+                        "linkType": "custom",
+                        "newTab": false,
+                        "url": "mailto:info@studiopo.net"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 3
+                    },
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": " וספרו לנו קצת על הפרויקט שלכם!",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "rtl",
+                  "format": "center",
+                  "indent": 0,
+                  "textFormat": 0,
+                  "textStyle": "",
+                  "version": 1
+                }
+              ],
+              "direction": "rtl",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            }
+          },
+          "links": []
+        },
+        {
+          "blockType": "archive",
+          "blockName": "Best sellers",
+          "introContent": {
+            "root": {
+              "type": "root",
+              "children": [
+                {
+                  "type": "heading",
+                  "children": [
+                    {
+                      "type": "text",
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "BEST SELLERS",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "rtl",
+                  "format": "center",
+                  "indent": 0,
+                  "tag": "h2",
+                  "version": 1
+                }
+              ],
+              "direction": "rtl",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            }
+          },
+          "introAlignment": "center",
+          "contentType": "products",
+          "displayMode": "autoScroll",
+          "populateBy": "collection",
+          "limit": 10
+        },
+        {
+          "blockType": "faq",
+          "blockName": "Frequently asked questions",
+          "faqs": [
+            {
+              "question": "מה מקבלים בתבנית החנות?",
+              "answer": "חנות אונליין מלאה הכוללת דפי קטגוריות ומוצרים, וריאציות, ניהול מלאי, עגלת קניות, תהליך תשלום ומערכת ניהול ידידותית באמצעות Payload CMS."
+            },
+            {
+              "question": "מה אפשר לערוך דרך מערכת הניהול?",
+              "answer": "אפשר לנהל באופן עצמאי את דף הבית, ה-Hero, אזורי התוכן, המוצרים, הקטגוריות, המחירים, המלאי, התמונות, השאלות הנפוצות ונתוני ה-SEO — ללא צורך בשינוי קוד."
+            },
+            {
+              "question": "האם החנות תומכת במוצרים עם מידות, צבעים או וריאציות אחרות?",
+              "answer": "כן. ניתן להגדיר לכל מוצר סוגי וריאציות כמו מידה וצבע, מחיר ומלאי נפרדים לכל שילוב, ולהוסיף סוגי אפשרויות נוספים בהתאם לצורכי החנות."
+            },
+            {
+              "question": "האם החנות מהירה ומותאמת לנייד?",
+              "answer": "כן. החנות בנויה עם Next.js ו-React, מותאמת לכל גודל מסך ומשתמשת במנגנוני מטמון ועדכון חכם כדי לשמור על טעינה מהירה גם כשהקטלוג גדל."
+            },
+            {
+              "question": "האם החנות מוכנה לקידום בגוגל?",
+              "answer": "כן. לכל עמוד יש ניהול מטא-דאטה, תמונת שיתוף וקישור קנוני, ובנוסף נוצרים Sitemap ונתונים מובנים שעוזרים למנועי החיפוש להבין את תוכן החנות והמוצרים."
+            },
+            {
+              "question": "האם יש דמי מנוי או עמלה על המכירות?",
+              "answer": "החנות מבוססת על קוד פתוח ונמצאת בבעלותכם, ולכן אין עמלה מובנית על מחזור המכירות או תלות בפלטפורמת מסחר סגורה. עלויות שירותי צד שלישי ואחסון נקבעות לפי השירותים שתבחרו."
+            },
+            {
+              "question": "האם אפשר להרחיב את החנות בעתיד?",
+              "answer": "כן. ניתן להוסיף שדות למוצרים, סוגי תוכן, עמודים, רכיבי תוכן ואינטגרציות נוספות, כך שהחנות יכולה לצמוח ולהשתנות יחד עם העסק."
+            },
+            {
+              "question": "האם החנות תומכת בכלי מדידה ובהתראות על הזמנות?",
+              "answer": "כן. התבנית מוכנה לחיבור ל-Google Analytics, Meta Pixel ו-TikTok Pixel, וכוללת תשתית לשליחת הודעות ואישורי הזמנה בהתאם להגדרות החנות."
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "title": "חנות נעליים אונליין | Next.js ו-Payload CMS",
+        "description": "חנות נעליים מהירה ומודרנית עם קטלוג מוצרים, וריאציות, עגלת קניות וניהול תוכן מלא באמצעות Payload CMS.",
+        "image": "image_meta.webp"
+      }
+    },
+    {
+      "title": "מדיניות פרטיות",
+      "slug": "privacy-policy",
+      "_status": "published",
+      "hero": {
+        "type": "lowImpact",
+        "richText": {
+          "root": {
+            "type": "root",
+            "children": [
+              {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "מדיניות פרטיות",
+                    "version": 1
+                  }
+                ],
+                "direction": "rtl",
+                "format": "center",
+                "indent": 0,
+                "tag": "h1",
+                "version": 1
+              }
+            ],
+            "direction": "rtl",
+            "format": "",
+            "indent": 0,
+            "version": 1
+          }
+        }
+      },
+      "layout": [
+        {
+          "blockType": "htmlEmbed",
+          "blockName": "Privacy policy",
+          "contentHtml": "<section dir=\"rtl\" style=\"max-width:48rem;margin:0 auto;padding:0 1rem 4rem;line-height:1.8\"><p>המידע שנמסר באתר משמש לטיפול בהזמנות, למתן שירות ולשיפור חוויית הקנייה. איננו מוכרים מידע אישי לצדדים שלישיים.</p><p>לשאלות ניתן לפנות אלינו בדוא״ל: <a href=\"mailto:ecommerce@payloadcms.com\" style=\"text-decoration:underline\">ecommerce@payloadcms.com</a>.</p></section>"
+        }
+      ],
+      "meta": {
+        "title": "מדיניות פרטיות | חנות הנעליים",
+        "description": "מידע קצר על איסוף המידע והשימוש בו בחנות הנעליים.",
+        "image": "image_meta.webp"
+      }
+    },
+    {
+      "title": "הצהרת נגישות",
+      "slug": "accessibility",
+      "_status": "published",
+      "hero": {
+        "type": "lowImpact",
+        "richText": {
+          "root": {
+            "type": "root",
+            "children": [
+              {
+                "type": "heading",
+                "children": [
+                  {
+                    "type": "text",
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "הצהרת נגישות",
+                    "version": 1
+                  }
+                ],
+                "direction": "rtl",
+                "format": "center",
+                "indent": 0,
+                "tag": "h1",
+                "version": 1
+              }
+            ],
+            "direction": "rtl",
+            "format": "",
+            "indent": 0,
+            "version": 1
+          }
+        }
+      },
+      "layout": [
+        {
+          "blockType": "htmlEmbed",
+          "blockName": "Accessibility statement",
+          "contentHtml": "<section dir=\"rtl\" style=\"max-width:48rem;margin:0 auto;padding:0 1rem 4rem;line-height:1.8\"><p>אנו פועלים להנגשת האתר לכלל המשתמשים, לרבות תמיכה בניווט מקלדת, טקסטים ברורים והתאמה למכשירים שונים.</p><p>נתקלתם בקושי? כתבו לנו: <a href=\"mailto:ecommerce@payloadcms.com\" style=\"text-decoration:underline\">ecommerce@payloadcms.com</a>.</p></section>"
+        }
+      ],
+      "meta": {
+        "title": "הצהרת נגישות | חנות הנעליים",
+        "description": "מידע קצר על התאמות הנגישות באתר ודרכי יצירת קשר.",
+        "image": "image_meta.webp"
+      }
+    }
+  ],
+  "siteSettings": {
+    "general": {
+      "logo": "logo.webp"
+    },
+    "header": {
+      "navItems": [
+        {
+          "link": {
+            "type": "custom",
+            "label": "דף הבית",
+            "url": "/"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "נייקי",
+            "url": "/category/נייקי"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "אדידס",
+            "url": "/category/אדידס"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "אסיקס",
+            "url": "/category/אסיקס"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "ניו באלאנס",
+            "url": "/category/ניו-באלאנס"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "מדיניות פרטיות",
+            "url": "/privacy-policy"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "הצהרת נגישות",
+            "url": "/accessibility"
+          }
+        },
+        {
+          "link": {
+            "type": "custom",
+            "label": "ניהול",
+            "url": "/admin"
+          }
+        }
+      ]
+    },
+    "footer": {
+      "blocks": [
+        {
+          "blockType": "footerNav",
+          "title": "קישורים מהירים",
+          "links": [
+            {
+              "link": {
+                "type": "custom",
+                "label": "דף הבית",
+                "url": "/"
+              }
+            },
+            {
+              "link": {
+                "type": "custom",
+                "label": "ניהול",
+                "url": "/admin"
+              }
+            },
+            {
+              "link": {
+                "type": "custom",
+                "label": "Payload",
+                "newTab": true,
+                "url": "https://payloadcms.com/"
+              }
+            }
+          ]
+        },
+        {
+          "blockType": "footerNav",
+          "title": "מדיניות",
+          "links": [
+            {
+              "link": {
+                "type": "custom",
+                "label": "מדיניות פרטיות",
+                "url": "/privacy-policy"
+              }
+            },
+            {
+              "link": {
+                "type": "custom",
+                "label": "הצהרת נגישות",
+                "url": "/accessibility"
+              }
+            }
+          ]
+        },
+        {
+          "blockType": "content",
+          "columns": [
+            {
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "חנות נעליים מודרנית",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "rtl",
+                      "format": "",
+                      "indent": 0,
+                      "tag": "h3",
+                      "version": 1
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "קטלוג מוצרים מלא, וריאציות, עגלת קניות ותהליך תשלום מהיר בכל מכשיר.",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "rtl",
+                      "format": "",
+                      "indent": 0,
+                      "textFormat": 0,
+                      "textStyle": "",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "rtl",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1
+                }
+              }
+            },
+            {
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "ניהול פשוט וגמיש",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "rtl",
+                      "format": "",
+                      "indent": 0,
+                      "tag": "h3",
+                      "version": 1
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "מנהלים מוצרים, מחירים, מלאי, עמודים ותוכן במקום אחד באמצעות Payload CMS.",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "rtl",
+                      "format": "",
+                      "indent": 0,
+                      "textFormat": 0,
+                      "textStyle": "",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "rtl",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1
+                }
+              },
+              "enableLink": true,
+              "link": {
+                "type": "custom",
+                "label": "למערכת הניהול",
+                "url": "/admin"
+              }
+            },
+            {
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "מה החנות מכילה",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "rtl",
+                      "format": "",
+                      "indent": 0,
+                      "tag": "h3",
+                      "version": 1
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "detail": 0,
+                          "format": 0,
+                          "mode": "normal",
+                          "style": "",
+                          "text": "חנות אונליין מלאה: תשלום, איסוף עצמי, SEO, אנליטיקס והתראות — ללא עלות שרתים.",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "rtl",
+                      "format": "",
+                      "indent": 0,
+                      "textFormat": 0,
+                      "textStyle": "",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "rtl",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "blockType": "footerIcons",
+          "title": "עקבו אחרינו",
+          "items": [
+            {
+              "icon": "instagram",
+              "link": {
+                "type": "custom",
+                "label": "Instagram",
+                "newTab": true,
+                "url": "https://instagram.com/payloadcms"
+              }
+            },
+            {
+              "icon": "facebook",
+              "link": {
+                "type": "custom",
+                "label": "Facebook",
+                "newTab": true,
+                "url": "https://facebook.com/payloadcms"
+              }
+            },
+            {
+              "icon": "tiktok",
+              "link": {
+                "type": "custom",
+                "label": "TikTok",
+                "newTab": true,
+                "url": "https://tiktok.com/@payloadcms"
+              }
+            },
+            {
+              "icon": "linkedin",
+              "link": {
+                "type": "custom",
+                "label": "LinkedIn",
+                "newTab": true,
+                "url": "https://linkedin.com/company/payload-cms"
+              }
+            },
+            {
+              "icon": "youtube",
+              "link": {
+                "type": "custom",
+                "label": "YouTube",
+                "newTab": true,
+                "url": "https://youtube.com/@payloadcms"
+              }
+            },
+            {
+              "icon": "x",
+              "link": {
+                "type": "custom",
+                "label": "X",
+                "newTab": true,
+                "url": "https://x.com/payloadcms"
+              }
+            }
+          ]
+        },
+        {
+          "blockType": "footerIcons",
+          "title": "צרו קשר",
+          "items": [
+            {
+              "icon": "whatsapp",
+              "link": {
+                "type": "custom",
+                "label": "WhatsApp",
+                "newTab": true,
+                "url": "https://wa.me/972521234567?text=%D7%94%D7%99%D7%99!%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99%20%D7%94%D7%97%D7%A0%D7%95%D7%AA."
+              }
+            },
+            {
+              "icon": "phone",
+              "link": {
+                "type": "custom",
+                "label": "טלפון",
+                "url": "tel:+972521234567"
+              }
+            },
+            {
+              "icon": "email",
+              "link": {
+                "type": "custom",
+                "label": "אימייל",
+                "url": "mailto:ecommerce@payloadcms.com"
+              }
+            },
+            {
+              "icon": "website",
+              "link": {
+                "type": "custom",
+                "label": "אתר",
+                "newTab": true,
+                "url": "https://payloadcms.com/"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "variants": [
+    {
+      "label": "בחר צבע",
+      "name": "color",
+      "selectorStyle": "swatch",
+      "options": [
+        {
+          "label": "שחור",
+          "value": "black",
+          "swatch": "#111827"
+        },
+        {
+          "label": "לבן",
+          "value": "white",
+          "swatch": "#FFFFFF"
+        },
+        {
+          "label": "אדום",
+          "value": "red",
+          "swatch": "#EF4444"
+        },
+        {
+          "label": "כתום",
+          "value": "orange",
+          "swatch": "#F97316"
+        },
+        {
+          "label": "צהוב",
+          "value": "yellow",
+          "swatch": "#EAB308"
+        },
+        {
+          "label": "ירוק",
+          "value": "green",
+          "swatch": "#22C55E"
+        },
+        {
+          "label": "כחול",
+          "value": "blue",
+          "swatch": "#3B82F6"
+        },
+        {
+          "label": "סגול",
+          "value": "purple",
+          "swatch": "#A855F7"
+        },
+        {
+          "label": "ורוד",
+          "value": "pink",
+          "swatch": "#EC4899"
+        },
+        {
+          "label": "אפור",
+          "value": "gray",
+          "swatch": "#6B7280"
+        },
+        {
+          "label": "בז׳",
+          "value": "beige",
+          "swatch": "#D6C7A1"
+        },
+        {
+          "label": "חום",
+          "value": "brown",
+          "swatch": "#92400E"
+        }
+      ]
+    },
+    {
+      "label": "בחר מידה",
+      "name": "size",
+      "selectorStyle": "buttons",
+      "options": ["XS", "S", "M", "L", "XL", "XXL"]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "vendor": "Nike",
+      "title": "נייקי",
+      "description": "קולקציית נייקי המקורית שלנו משלבת חדשנות טכנולוגית עם עיצוב אייקוני שמלווה את עולם הספורט כבר עשרות שנים.\n- דגמי אייר מקס האגדיים עם כריות אוויר גלויות\n- נעלי ריצה מתקדמות בסדרת ריאקט\n- טכנולוגיית בולם זעזועים מתקדמת לכל אימון\nכל זוג משלב חומרים איכותיים ונוחות שלא מתפשרת, בין אם מדובר באימון יומיומי או בסטייל רחוב.",
+      "faqs": [
+        {
+          "question": "מה ההבדל בין דגמי אייר מקס לדגמי ריאקט?",
+          "answer": "אייר מקס מתבססת על כריות אוויר גלויות המספקות בולם זעזועים ומראה ייחודי, בעוד ריאקט משתמשת בקצף פולימרי רך במיוחד המעניק תחושת ריצה קלילה וגמישה יותר."
+        },
+        {
+          "question": "האם המידות של נייקי זהות למידות הרגילות שלי?",
+          "answer": "ברוב הדגמים נייקי נוטה למידה מעט קטנה יחסית לתקן הרגיל, ולכן מומלץ לעיתים לעלות חצי מידה, בייחוד בדגמי ריצה וכדורסל."
+        },
+        {
+          "question": "כיצד שומרים על ניקיון נעלי בד או עור לבנות?",
+          "answer": "יש לנקות בעדינות במברשת רכה עם מעט סבון ומים פושרים, ולהימנע מכביסה במכונה כדי לשמור על מבנה הנעל ועל הדבקים הפנימיים."
+        },
+        {
+          "question": "אילו דגמים מתאימים ביותר לאימוני כושר יומיומיים?",
+          "answer": "סדרת מטקון ופגסוס מציעות תמיכה מיטבית לתנועות רב-כיווניות, ייצוב טוב לקרסול ורמת בולם זעזועים המתאימה לאימוני משקולות וקרדיו כאחד."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "vendor": "Adidas",
+      "title": "אדידס",
+      "description": "מורשת גרמנית של דיוק ואיכות נפגשת עם חדשנות עכשווית. קולקציית אדידס כוללת את דגמי הבוסט האגדיים המוכרים בנוחות המקסימלית, לצד סדרת סמבה וגאזל הקלאסיות ששבות לחיים כפריטי אופנה מבוקשים לשימוש יומיומי.",
+      "faqs": [
+        {
+          "question": "מהי טכנולוגיית הבוסט וכיצד היא משפרת את הנוחות?",
+          "answer": "בוסט היא סוליית קצף ייחודית העשויה מאלפי כמוסות אנרגיה זעירות, המספקות החזרת אנרגיה גבוהה במיוחד ותחושת ריכוך רך תחת כף הרגל בכל צעד."
+        },
+        {
+          "question": "האם דגמי סמבה וגאזל מתאימים גם לפעילות ספורטיבית?",
+          "answer": "מדובר בדגמים קלאסיים שתוכננו במקור לכדורגל ולריצה, אך כיום הם משמשים בעיקר כנעלי אופנה יומיומיות ואינם מומלצים לאימונים אינטנסיביים."
+        },
+        {
+          "question": "כיצד יודעים איזו מידת אדידס להזמין?",
+          "answer": "מומלץ להיעזר בטבלת המידות הרשמית של המותג ולמדוד את כף הרגל בסוף היום, כאשר היא במידתה המקסימלית, לקבלת ההתאמה המדויקת ביותר."
+        },
+        {
+          "question": "מה ההבדל בין סוליית בוסט לסוליית לייטסטרייק?",
+          "answer": "לייטסטרייק היא סוליה קלת משקל המיועדת לריצות תחרותיות ומהירות, בעוד בוסט מתמקדת בנוחות ובספיגת זעזועים לאימונים ארוכי טווח ולשימוש יומיומי."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "vendor": "Asics",
+      "title": "אסיקס",
+      "description": "אסיקס מביאה איתה מורשת יפנית עשירה של הנדסת ריצה מדויקת, המשלבת ארכיון עיצובים אייקוני עם טכנולוגיות ביצועים עדכניות.\n- תוספות GEL ממוקמות באזורי לחץ מרכזיים\n- איזון מושלם בין בולם זעזועים, יציבות וגימור מוקפד\n- מתאים לשימוש ספורטיבי וללייף-סטייל אורבני",
+      "faqs": [
+        {
+          "question": "מה מייחד את טכנולוגיית הג'ל של אסיקס?",
+          "answer": "מדובר בתוספות ג'ל ממוקמות באזורי לחץ מרכזיים בסוליה, המספקות ספיגת זעזועים ממוקדת ומשפרות את היציבות בזמן הנחיתה."
+        },
+        {
+          "question": "האם דגמי הארכיון של אסיקס מתאימים לריצה בפועל?",
+          "answer": "רוב הדגמים המחודשים מבוססים על עיצובים ישנים ומיועדים בעיקר ללייף-סטייל, ומומלץ לבדוק את המפרט הטכני של כל דגם לפני שימוש אינטנסיבי."
+        },
+        {
+          "question": "כיצד בוחרים מידה נכונה בנעלי אסיקס?",
+          "answer": "אסיקס נוטה למידות מדויקות יחסית לתקן, אך מומלץ למדוד את כף הרגל בסוף היום ולבדוק את טבלת המידות הרשמית של המותג לפני הרכישה."
+        },
+        {
+          "question": "מהו ההבדל בין דגמי GEL-KAYANO לדגמי GT?",
+          "answer": "סדרת GEL-KAYANO מתמקדת בייצוב ותמיכה לכף רגל הנוטה לפרונציה, בעוד סדרת GT מציעה איזון רחב יותר בין ריפוד לגמישות עבור ריצה יומיומית כללית."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "vendor": "New Balance",
+      "title": "ניו באלאנס",
+      "description": "ניו באלאנס מחברת בין מורשת ריצה אמריקאית עשירה לשפה עיצובית רטרו-עתידנית שכובשת מחדש את עולם הלייף-סטייל. מדגמי ה-990 האגדיים ועד לקולקציות הטכניות בהשראת שנות ה-2000, כל זוג משלב חומרים איכותיים ברמה הגבוהה ביותר. המותג מציע טכנולוגיות בולם זעזועים מתקדמות כמו ABZORB ו-FuelCell למקסימום תמיכה. האסתטיקה הייחודית מתאימה לשימוש יומיומי, לעבודה ולסביבה ספורטיבית כאחד.",
+      "faqs": [
+        {
+          "question": "מה ההבדל בין דגמי 990 לדגמי 574?",
+          "answer": "סדרת 990 מציעה בולם זעזועים ותמיכה ברמה גבוהה יותר עם מחיר גבוה יותר, בעוד 574 היא אפשרות קלילה ונגישה יותר המתאימה בעיקר לשימוש יומיומי."
+        },
+        {
+          "question": "האם נעלי ניו באלאנס מתאימות לכף רגל רחבה?",
+          "answer": "המותג ידוע במגוון רחבים ייעודי (Wide ו-Extra Wide) ברבים מהדגמים, מה שהופך אותו לבחירה פופולרית עבור מי שזקוק למרווח נוסף באזור האצבעות."
+        },
+        {
+          "question": "מהי טכנולוגיית ABZORB וכיצד היא פועלת?",
+          "answer": "ABZORB היא סוליית קצף המיועדת לספוג זעזועים בעת נחיתה, ומעניקה תחושת ריכוך תוך שמירה על תגובתיות ויציבות לאורך הצעידה."
+        },
+        {
+          "question": "כיצד יודעים אם דגם מסוים מתאים לריצה או ללייף-סטייל בלבד?",
+          "answer": "כדאי לבדוק את המפרט הטכני של הדגם – נעלי ריצה ייעודיות יכללו פרטים על תמיכה ובולם זעזועים לאימון, בעוד דגמי לייף-סטייל מתמקדים בעיקר באסתטיקה ובנוחות יומיומית."
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "name": "נועה כהן",
+      "phone": "0501234501",
+      "email": "noa.cohen@example.com"
+    },
+    {
+      "name": "יונתן לוי",
+      "phone": "0521234502",
+      "email": "yonatan.levi@example.com"
+    },
+    {
+      "name": "מאיה ישראלי",
+      "phone": "0541234503",
+      "email": "maya.israeli@example.com"
+    },
+    {
+      "name": "איתי מזרחי",
+      "phone": "0531234504",
+      "email": "itay.mizrahi@example.com"
+    },
+    {
+      "name": "שירה אברהם",
+      "phone": "0501234505",
+      "email": "shira.avraham@example.com"
+    },
+    {
+      "name": "דניאל פרץ",
+      "phone": "0521234506",
+      "email": "daniel.peretz@example.com"
+    },
+    {
+      "name": "רוני אלון",
+      "phone": "0541234507",
+      "email": "roni.alon@example.com"
+    },
+    {
+      "name": "עומר ברק",
+      "phone": "0531234508",
+      "email": "omer.barak@example.com"
+    },
+    {
+      "name": "יעל שפירא",
+      "phone": "0501234509",
+      "email": "yael.shapira@example.com"
+    },
+    {
+      "name": "נועם רוזן",
+      "phone": "0521234510",
+      "email": "noam.rozen@example.com"
+    }
+  ],
+  "products": [
+    {
+      "title": "אדידס הייפר בוסט אופוריה",
+      "image_name": "adidas-01",
+      "vendor": "Adidas",
+      "description": "משלבות אסתטיקה עכשווית עם בולם זעזועים ברמה גבוהה, לנוחות לאורך כל היום.\n- סוליית ביניים BOOST להחזר אנרגיה עוצמתי\n- חלק עליון מבד נושם עם חיזוקים סינתטיים\n- סוליית גומי עמידה בעלת אחיזה גבוהה",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הנעל מתאימה להליכות ארוכות?",
+          "answer": "כן, טכנולוגיית ה-BOOST מעניקה רכות ושיכוך מצוין גם לאחר שעות רבות של הליכה."
+        },
+        {
+          "question": "איך מומלץ לנקות את הנעל?",
+          "answer": "ניקוי ידני באמצעות מטלית לחה וסבון עדין ישמור על סיבי הבד והסוליה."
+        },
+        {
+          "question": "איך שומרים על צורת הנעל בין לבישות?",
+          "answer": "מומלץ לאחסן בקופסה המקורית או עם תומכי נעליים (shoe trees) כדי לשמר את הצורה למשך זמן רב יותר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אנה כהן",
+          "rating": 5,
+          "title": "נוחות שאין לתאר",
+          "body": "הנעל הכי נוחה שנעליתי, ה-BOOST פשוט עושה את ההבדל בכל צעד."
+        },
+        {
+          "authorName": "יונתן לוי",
+          "rating": 5,
+          "title": "סגנון ואיכות",
+          "body": "עיצוב נקי ויוקרתי, מתאימה גם לג'ינס וגם למכנס ספורט."
+        }
+      ]
+    },
+    {
+      "title": "אדידס קליימקול לייסד",
+      "image_name": "adidas-02",
+      "vendor": "Adidas",
+      "description": "חדשנות של הדפסת תלת-ממד ומבנה רשת רציף לעטיפה קלילה של הרגל. מערכת השרוכים מאפשרת התאמה מדויקת לצד אוורור מלא של 360 מעלות.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הנעל מתאימה לימי הקיץ החמים?",
+          "answer": "בהחלט, מבנה הרשת מספק אוורור מקסימלי שמונע התחממות של כף הרגל."
+        },
+        {
+          "question": "כמה זמן לוקח להתרגל לתחושת המבנה המודפס?",
+          "answer": "רוב הלקוחות מדווחים על הסתגלות מיידית הודות לגמישות הרשת סביב כף הרגל."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "דניאל מזרחי",
+          "rating": 5,
+          "title": "אוורור מטורף",
+          "body": "תרגישו את הרוח עוברת בתוך הנעל, מושלם לקיץ הישראלי."
+        },
+        {
+          "authorName": "נועה אברהם",
+          "rating": 4,
+          "title": "מגניב ויוצא דופן",
+          "body": "מראה עתידני ומאוד ייחודי, דורש גריבת גרביים מתאימות."
+        }
+      ]
+    },
+    {
+      "title": "אדידס קליימקול",
+      "image_name": "adidas-03",
+      "vendor": "Adidas",
+      "description": "מעבירות את חדשנות הריצה ברמה הגבוהה לעולם הלייף-סטייל עם ה-DNA של סדרת Adizero.\n- סגירת רוכסן ייחודית מעל השרוכים\n- סוליית Lightstrike Pro קלילה במיוחד\nמראה נקי שמתאים בול לכל לוק אורבני עכשווי.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הרוכסן עמיד?",
+          "answer": "כן, הרוכסן איכותי ומיועד לשימוש יומיומי ממושך ללא שחיקה."
+        },
+        {
+          "question": "האם קל לנעול ולחלוץ את הנעל?",
+          "answer": "מאוד, הרוכסן מאפשר כניסה ויציאה מהירה בלי צורך לפתוח את השרוכים."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        },
+        {
+          "question": "איך שומרים על צורת הנעל בין לבישות?",
+          "answer": "מומלץ לאחסן בקופסה המקורית או עם תומכי נעליים (shoe trees) כדי לשמר את הצורה למשך זמן רב יותר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "מיכאל פרץ",
+          "rating": 5,
+          "title": "עיצוב הצגה",
+          "body": "הרוכסן נותן לוק מטורף, אנשים עוצרים אותי ברחוב לשאול איפה קניתי."
+        },
+        {
+          "authorName": "שירה ישראלי",
+          "rating": 5,
+          "title": "קלה ברמות",
+          "body": "מרגישה כמו אוויר על הרגל. מומלץ בחום."
+        }
+      ]
+    },
+    {
+      "title": "אדידס אדיזירו אבו אס.אל זיפ לבן",
+      "image_name": "adidas-04",
+      "vendor": "Adidas",
+      "description": "מעבירות את חדשנות הריצה ברמה הגבוהה לעולם הלייף-סטייל. בהשראת נעלי האתלטיקה של adidas משנות ה-2000, כוללות מערכת סגירה ייחודית עם רוכסן מעל השרוכים, סוליית ביניים Lightstrike Pro ועיצוב קליל המשלב מהירות, טכנולוגיה וסגנון עכשווי.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הנעל מתאימה לרגל רחבה?",
+          "answer": "הדגם בעל גזרה ספורטיבית הדוקה, מומלץ לשקול חצי מידה למעלה לרגל רחבה."
+        },
+        {
+          "question": "האם ניתן להשתמש בנעל לאימוני ריצה בפועל?",
+          "answer": "הדגם מיועד בעיקר ללייף-סטייל, אך סוליית ה-Lightstrike Pro מספקת גם תמיכה טובה לריצות קלות."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "איתי פרידמן",
+          "rating": 5,
+          "title": "איכות אדידס במיטבה",
+          "body": "שילוב מושלם של מראה ספורטיבי ונוחות אורבנית."
+        },
+        {
+          "authorName": "רותם אלון",
+          "rating": 4,
+          "title": "לבן שלא מתלכלך מהר",
+          "body": "החומר שומר על ניקיון לאורך זמן, שווה כל שקל."
+        }
+      ]
+    },
+    {
+      "title": "אדידס אדיזירו אבו אס.אל זיפ שחור",
+      "image_name": "adidas-05",
+      "vendor": "Adidas",
+      "description": "מעבירות את השפה הטכנית של סדרת Adizero לפריט עכשווי לשימוש יומיומי.\n- גזרה קלילה וארגונומית\n- סגירת חצי-רוכסן נוחה\n- סוליה בולמת זעזועים מתקדמת\n- מראה מינימליסטי בהשראת adidas Originals",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הסוליה נשחקת במהירות?",
+          "answer": "לא, תערובת הגומי מעניקה עמידות נהדרת לאספלט ולמשטחים עירוניים."
+        },
+        {
+          "question": "מה ההבדל בין דגם זה לגרסת ה-'White'?",
+          "answer": "מדובר בעיקרון עיצוב זהה, ההבדל היחיד הוא גוון החלק העליון."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "עדי גולן",
+          "rating": 5,
+          "title": "פשוט פרקטי",
+          "body": "שמים אותה בשניה עם הרוכסן והיא נוחה בטירוף."
+        },
+        {
+          "authorName": "תומר עזרא",
+          "rating": 4,
+          "title": "מראה נקי",
+          "body": "מתאים מאוד לעבודה וללייף סטייל יומיומי."
+        }
+      ]
+    },
+    {
+      "title": "אדידס טניס ג'פאן לאקס",
+      "image_name": "adidas-06",
+      "vendor": "Adidas",
+      "description": "מפרשות מחדש דגם היסטורי מארכיון adidas בגישה מעודנת ועכשווית.\n- חלק עליון עשוי עור פרימיום משובח\n- שילוב פרטי זמש מעודנים\n- סוליה דקה וגמישה בסגנון קלאסי",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "מאיזה חומר הנעל עשויה?",
+          "answer": "עור פרימיום טבעי בשילוב נגיעות זמש איכותי."
+        },
+        {
+          "question": "האם הנעל מתאימה ללבוש רשמי?",
+          "answer": "כן, העיצוב הנקי והדק מתאים גם למראה מסודר ולא רק ללייף-סטייל אורבני."
+        },
+        {
+          "question": "איך שומרים על צורת הנעל בין לבישות?",
+          "answer": "מומלץ לאחסן בקופסה המקורית או עם תומכי נעליים (shoe trees) כדי לשמר את הצורה למשך זמן רב יותר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "רוני שפירא",
+          "rating": 5,
+          "title": "איכות ללא פשרות",
+          "body": "העור רך בטירוף והלוק הקלאסי פשוט שווה כל שקל."
+        },
+        {
+          "authorName": "בן ציון הלוי",
+          "rating": 5,
+          "title": "מינימליזם מנצח",
+          "body": "בדיוק מה שחיפשתי, נעל שקטה ואלגנטית."
+        }
+      ]
+    },
+    {
+      "title": "אדידס אדיזירו F50",
+      "image_name": "adidas-07",
+      "vendor": "Adidas",
+      "description": "נעלי כדורגל אייקוניות בפרשנות לייף-סטייל עכשווית. גזרה קלה במיוחד, חומרי פרימיום ומהדורה מוגבלת לחובבי ספורט וסטייל.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הנעל מיועדת למשחק כדורגל?",
+          "answer": "דגם זה מעוצב כגרסת לייף-סטייל יומיומית בהשראת נעלי הכדורגל, ולא למשחק דשא."
+        },
+        {
+          "question": "האם מדובר במהדורה מוגבלת?",
+          "answer": "כן, הכמות מוגבלת ומבוססת על מלאי מוגבל בלבד."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "גלעד כץ",
+          "rating": 5,
+          "title": "נוסטלגיה טהורה",
+          "body": "מזכיר את הימים הטובים של נעלי ה-F50, אבל בגרסה נוחה לרחוב."
+        },
+        {
+          "authorName": "אור דיין",
+          "rating": 4,
+          "title": "קלה במיוחד",
+          "body": "מרגישים שאין כלום על הרגל, ממש קלילה."
+        }
+      ]
+    },
+    {
+      "title": "אדידס סופרסטאר CLOT מאת אדיסון צ'ן",
+      "image_name": "adidas-08",
+      "vendor": "Adidas",
+      "description": "פרשנות מתוחכמת של אדיסון צ'ן ל-Superstar האגדית בהשראת חייטות עילית.\n- סוליה גלית ייחודית בעלת נוכחות\n- מעטפת כפת Shell Toe מחודשת מעור פרימיום\nמהדורה מוגבלת ואספנית במיוחד.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם המידות רגילות?",
+          "answer": "כן, המידות תואמות למידות הסטנדרטיות של adidas Superstar."
+        },
+        {
+          "question": "האם זו מהדורה מספרת?",
+          "answer": "כן, כל זוג מגיע עם קופסה ואריזה ייחודית לשיתוף הפעולה עם CLOT."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        },
+        {
+          "question": "האם ניתן לשלם בתשלומים?",
+          "answer": "כן, בקופה ניתן לפצל את התשלום למספר תשלומים בכרטיס אשראי בהתאם למדיניות האתר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אלון חדד",
+          "rating": 5,
+          "title": "יצירת אמנות",
+          "body": "הפרטים הקטנים והסוליה המיוחדת הופכים אותה לסניקר הכי מיוחד באוסף שלי."
+        },
+        {
+          "authorName": "נריה אבוטבול",
+          "rating": 5,
+          "title": "פריט אספנות",
+          "body": "קניתי כהשקעה אבל בסוף אני נועל אותה כל שבוע."
+        }
+      ]
+    },
+    {
+      "title": "אדידס x וילי צ'ווארייה מגה-רייד AG XL",
+      "image_name": "adidas-09",
+      "vendor": "Adidas",
+      "description": "מפרשות מחדש את סדרת Megaride האייקונית בצורה בהשראה עתידנית ובגישת עיצוב נועזת. פותחו יחד עם וילי צ'ווארייה, ומשלבות חלק עליון פרימיום, פרטים ייחודיים ומבנה חזק ההופך את מורשת הריצה של adidas Originals להצעה עכשווית במהדורה מוגבלת עם נוכחות בלתי נשכחת.",
+      "images": 11,
+      "faqs": [
+        {
+          "question": "למי מתאים העיצוב הזה?",
+          "answer": "לחובבי אופנה עכשווית, גזרות אוברסייז ועיצובים ייחודיים שמושכים תשומת לב."
+        },
+        {
+          "question": "האם הנעל נוחה למרות המבנה הגדול?",
+          "answer": "כן, הריפוד הפנימי עבה ומספק נוחות טובה גם בלוק המחוספס."
+        },
+        {
+          "question": "האם ניתן להחזיר או להחליף את הנעל?",
+          "answer": "כן, ניתן להחזיר או להחליף תוך 14 יום מקבלת המוצר, בתנאי שלא נעשה בו שימוש בחוץ ואריזתו המקורית נשמרה."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "יעל מלכה",
+          "rating": 5,
+          "title": "סטייל שאין לאחרים",
+          "body": "נעל נועזת ומלאת אופי. מקבלת המון מחמאות ברחוב."
+        },
+        {
+          "authorName": "אביתר שני",
+          "rating": 5,
+          "title": "עיצוב שובר גבולות",
+          "body": "כל מי שרואה את הנעל שואל מאיפה זה, שיתוף פעולה מדהים."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס ג'ל-קינטיק 2.0",
+      "image_name": "asics-01",
+      "vendor": "Asics",
+      "description": "בהשראת ארכיוני סדרות GEL-KINETIC™ משנות ה-2000.\n- שכבות עליונות מעוצבות ב-PU\n- טכנולוגיית FF BLAST™ PLUS לשיכוך מתקדם\n- יחידת GEL™ Scutoid לספיגת זעזועים\n- מערכת TRUSSTIC™ ליציבות מקסימלית",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "האם הנעל מתאימה לריצה או רק להליכה?",
+          "answer": "מתאימה מצוין גם לריצות קלות וגם לשימוש יומיומי ממושך הודות למערכות השיכוך הכפולות."
+        },
+        {
+          "question": "מה מייחד את מערכת TRUSSTIC?",
+          "answer": "מדובר בתמיכת ביניים מחזקת המונעת פיתול יתר של הסוליה ומשפרת יציבות."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "דוד שמעוני",
+          "rating": 5,
+          "title": "שיכוך פנטסטי",
+          "body": "אסיקס כרגיל לא מאכזבים בכל מה שקשור לנוחות הרגל והגב."
+        },
+        {
+          "authorName": "אלה וקנין",
+          "rating": 4,
+          "title": "בונוס לגב התחתון",
+          "body": "מרגישה הבדל אמיתי גם בעמידה ממושכת בעבודה."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס ג'ל-קומולוס 16 קרם",
+      "image_name": "asics-02",
+      "vendor": "Asics",
+      "description": "קלאסיקה משנת 2014 עם שיכוך רך במיוחד המיועד למרחקים ארוכים.\n- תוספות GEL™ כפולות בעקב ובקשת\n- טכנולוגיית FLUIDRIDE™ לצעידה זורמת\n- פסים אירידיסנטיים וגימורים פנינתיים",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "האם הנעל נושמת?",
+          "answer": "כן, החלק העליון עשוי רשת פתוחה המאפשרת זרימת אוויר מצוינת."
+        },
+        {
+          "question": "כמה זמן מחזיקה הריפוד הפנימי?",
+          "answer": "עם שימוש רגיל, הריפוד שומר על תכונותיו למשך מאות קילומטרים."
+        },
+        {
+          "question": "מה כלול באריזה?",
+          "answer": "האריזה כוללת את זוג הנעליים בקופסה המקורית, ולעיתים גם שרוכים חלופיים או נייר עטיפה בהתאם לדגם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "תמר דהן",
+          "rating": 5,
+          "title": "עננים ברגליים",
+          "body": "הלכתי איתן יום שלם בחו\"ל ולא הרגשתי שום עייפות."
+        },
+        {
+          "authorName": "רועי אביטן",
+          "rating": 5,
+          "title": "קלאסיקה שלא מתיישנת",
+          "body": "רכשתי בעקבות המלצה ולא התאכזבתי לרגע."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס ג'ל-NYC 2.0",
+      "image_name": "asics-03",
+      "vendor": "Asics",
+      "description": "מיזוג בין אסתטיקת הריצה של שנות ה-2000 לביצועים מודרניים. שכבות זמש עכשוויות ויחידת סוליה רכה המעניקה יציבות וקלילות לכל צעד.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "ממה עשוי החלק העליון?",
+          "answer": "שילוב של טקסטיל נושם ושכבות זמש איכותיות למראה עשיר."
+        },
+        {
+          "question": "האם הדגם מתאים לשימוש יומיומי אינטנסיבי?",
+          "answer": "בהחלט, החומרים עמידים ומיועדים ללבישה תכופה בעיר."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        },
+        {
+          "question": "האם ניתן להחזיר או להחליף את הנעל?",
+          "answer": "כן, ניתן להחזיר או להחליף תוך 14 יום מקבלת המוצר, בתנאי שלא נעשה בו שימוש בחוץ ואריזתו המקורית נשמרה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אריאל ביטון",
+          "rating": 5,
+          "title": "צבעים מושלמים",
+          "body": "גווני ה'קרים קונקריט' נראים מדהים במציאות ומשתלבים עם כל מכנס."
+        },
+        {
+          "authorName": "הילה צור",
+          "rating": 4,
+          "title": "נעל שדרוג לארון",
+          "body": "מוסיפה המון סגנון בלי מאמץ."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס ג'ל-קינטיק פלואנט כחול",
+      "image_name": "asics-04",
+      "vendor": "Asics",
+      "description": "עיצוב בהשראת שנות ה-2010 עם טכנולוגיה מתקדמת במראה רטרו.\n- אלמנטים של איטום חום ושכבות TPU שקופות\n- תוספות פנינתיות המעניקות ברק ייחודי\nסוליית ביניים מתקדמת לשיפור ספיגת הזעזועים בכל דריכה.",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "האם הנעל עמידה למים?",
+          "answer": "היא אינה אטומה למים, אך החומרים הסינתטיים קלים לניקוי וייבוש."
+        },
+        {
+          "question": "מה מייחד את שכבות ה-TPU השקופות?",
+          "answer": "הן מוסיפות עומק חזותי ותמיכה מבנית מבלי להכביד על הנעל."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "מיכל לוין",
+          "rating": 5,
+          "title": "צבע מטורף",
+          "body": "הגוון התכלת-אפרפר פשוט מהפנט, והנוחות 10/10."
+        },
+        {
+          "authorName": "נדב פישר",
+          "rating": 5,
+          "title": "אחת המיוחדות שיש לי",
+          "body": "כל מי שרואה שואל על הנעליים, נראית כמו משהו מהעתיד."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס ג'ל-קינטיק פלואנט לבן",
+      "image_name": "asics-05",
+      "vendor": "Asics",
+      "description": "מהות ה-GEL-KINETIC FLUENT משקפת את האסתטיקה של ריצה קלאסית ומפרשת אותה מחדש בגישה עכשווית. בחלק העליון משולבים פרטים כמו איטום חום ולולאות בהשראת שנות ה-2010, מעודכנים עם תוספות פנינתיות ושכבות TPU חצי-שקוף. פסי ASICS מוסיפים גימור אירידיסנטי המזכיר זוהר צפוני, בעוד סוליית הביניים משלבת טכנולוגיות מתקדמות המשפרות את הבולם ואת הנוחות.",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "מה מיוחד בגרסת ה-'White Blush'?",
+          "answer": "הגימור האירידיסנטי בפסים שמשנה גוונים בתאורה שונה למראה מרהיב."
+        },
+        {
+          "question": "האם הנעל מתאימה לרגל צרה?",
+          "answer": "כן, מערכת הלולאות מאפשרת הידוק מדויק גם לכפות רגליים צרות."
+        },
+        {
+          "question": "איך שומרים על צורת הנעל בין לבישות?",
+          "answer": "מומלץ לאחסן בקופסה המקורית או עם תומכי נעליים (shoe trees) כדי לשמר את הצורה למשך זמן רב יותר."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "מאיה ברק",
+          "rating": 5,
+          "title": "עדין ויפה",
+          "body": "הנעל נראית נשית, נקייה וסופר שיקית."
+        },
+        {
+          "authorName": "שני קדוש",
+          "rating": 4,
+          "title": "מבריקה בכל תאורה",
+          "body": "בשמש ובאור מלאכותי היא נראית אחרת לגמרי, ממש כיף."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס ג'ל-קומולוס 16 כחול",
+      "image_name": "asics-06",
+      "vendor": "Asics",
+      "description": "דגם ריצה קלאסי מ-2014 המתמקד בבולם זעזועים רך למרחקים ארוכים.\n- פאנלים מ-TPU חצי-שקוף\n- בסיסי רשת פתוחה לאוורור מירבי\n- שכבות עור סינתטי נוצץ",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "האם הנעל מתאימה לעמידה ממושכת?",
+          "answer": "כן, מערכת ה-GEL מעניקה תמיכה מצוינת המפחיתה עומס מבעמידה ממושכת."
+        },
+        {
+          "question": "האם הבד עשוי להתקמט עם הזמן?",
+          "answer": "לא, שילוב הרשת עם עור סינתטי שומר על צורתו גם לאחר שימוש ממושך."
+        },
+        {
+          "question": "האם ניתן להחזיר או להחליף את הנעל?",
+          "answer": "כן, ניתן להחזיר או להחליף תוך 14 יום מקבלת המוצר, בתנאי שלא נעשה בו שימוש בחוץ ואריזתו המקורית נשמרה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "עידו שלום",
+          "rating": 5,
+          "title": "מומלץ לעבודה",
+          "body": "אני עומד 8 שעות ביום והנעל הזאת פשוט הצילה אותי."
+        },
+        {
+          "authorName": "קרן אזולאי",
+          "rating": 5,
+          "title": "גוון עדין ומיוחד",
+          "body": "הכחול הבהיר משתלב מצוין עם כל בגד."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס GT-2160",
+      "image_name": "asics-07",
+      "vendor": "Asics",
+      "description": "נאמנה לקודים המקוריים של סדרת GT-2000 מתחילת שנות ה-2010.\n- כף רגל קדמית מפורטת בקווים גליים\n- סוליית ביניים מחולקת עם טכנולוגיית GEL\n- אסתטיקה תעשייתית עכשווית",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "האם זה דגם רטרו?",
+          "answer": "כן, מדובר בשחזור של דגמי GT מתחילת שנות ה-2010 בעיצוב מעודכן."
+        },
+        {
+          "question": "מה תפקיד הסוליה המחולקת?",
+          "answer": "היא מאפשרת גמישות רבה יותר בכל שלב בצעידה תוך שמירה על תמיכה."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        },
+        {
+          "question": "איך שומרים על צורת הנעל בין לבישות?",
+          "answer": "מומלץ לאחסן בקופסה המקורית או עם תומכי נעליים (shoe trees) כדי לשמר את הצורה למשך זמן רב יותר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אורן מור",
+          "rating": 5,
+          "title": "סגנון Y2K מדויק",
+          "body": "נראית מעולה עם מכנסיים רחבים וג'ינסים."
+        },
+        {
+          "authorName": "ליהי אור",
+          "rating": 4,
+          "title": "נעל שמתאימה לכל",
+          "body": "קלה לשילוב עם כל סגנון לבוש, ממליצה."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס ג'ל-נימבוס 10.1",
+      "image_name": "asics-08",
+      "vendor": "Asics",
+      "description": "השראה מגרסת 2008 עם כף רגל אסימטרית, קצף EVA דו-שכבתי ומערכת TRUSSTIC ליציבות מרבית ונוחות ללא פשרות.",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "מה היתרון של המבנה האסימטרי?",
+          "answer": "הוא מותאם בצורה טבעית יותר לקווי המבנה של כף הרגל ומפחית נקודות לחץ."
+        },
+        {
+          "question": "האם קצף ה-EVA הדו-שכבתי מרגיש קשיח?",
+          "answer": "לא, מדובר בקצף רך במיוחד המשלב תמיכה עם תחושת ריכוך נעימה."
+        },
+        {
+          "question": "האם ניתן לשלם בתשלומים?",
+          "answer": "כן, בקופה ניתן לפצל את התשלום למספר תשלומים בכרטיס אשראי בהתאם למדיניות האתר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ליאור אמויאל",
+          "rating": 5,
+          "title": "שיא הטכנולוגיה",
+          "body": "נוחה מאוד ויושת בול על הרגל."
+        },
+        {
+          "authorName": "טל ברוך",
+          "rating": 5,
+          "title": "רטרו עם שיכוך אמיתי",
+          "body": "מראה נוסטלגי אבל בפועל נוחה כמו נעל מודרנית."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס ג'ל-קאיאנו 12.1 קרם",
+      "image_name": "asics-09",
+      "vendor": "Asics",
+      "description": "שיתוף פעולה ייחודי עם KITH המשלב אלמנטים מ-2006 עם ביצועים מודרניים.\n- עיצוב בהשראת שריון גותי עם גימורים מתכתיים\n- שכבות רשת פתוחה לאוורור משופר\nסוליית ביניים מתקדמת המבטיחה נוחות מרופדת לאורך כל היום.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "האם הדגם מוגבל?",
+          "answer": "כן, זוהי קולקציית קפסולה במהדורה מוגבלת בשיתוף KITH."
+        },
+        {
+          "question": "האם הגימורים המתכתיים דורשים טיפול מיוחד?",
+          "answer": "מומלץ להימנע מחיכוך ישיר עם משטחים מחוספסים כדי לשמר את הברק."
+        },
+        {
+          "question": "האם ניתן לשלם בתשלומים?",
+          "answer": "כן, בקופה ניתן לפצל את התשלום למספר תשלומים בכרטיס אשראי בהתאם למדיניות האתר."
+        },
+        {
+          "question": "מה כלול באריזה?",
+          "answer": "האריזה כוללת את זוג הנעליים בקופסה המקורית, ולעיתים גם שרוכים חלופיים או נייר עטיפה בהתאם לדגם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ניב צור",
+          "rating": 5,
+          "title": "מאסטרפיס",
+          "body": "השילוב של השריון המתכתי והנוחות פשוט מטורף."
+        },
+        {
+          "authorName": "רז אביב",
+          "rating": 5,
+          "title": "שיתוף פעולה מנצח",
+          "body": "אחת הנעליים המוצלחות ביותר של KITH x Asics עד כה."
+        }
+      ]
+    },
+    {
+      "title": "אסיקס ג'ל-קאיאנו 12.1 גרפיט",
+      "image_name": "asics-10",
+      "vendor": "Asics",
+      "description": "נעל זו פותחה בשיתוף פעולה עם KITH, וחוזרת לקודי העיצוב של ה-GEL-KAYANO™ 12.1 משנת 2006. החלק העליון מזכיר שריון גותי אירופאי באמצעות מבנים מתכתיים ופאנלים מרשת פתוחה לאוורור. סוליית הביניים משלבת מבנה בהשראת ה-GEL-NIMBUS™ 17, שנועד להעניק נוחות ממושכת הודות לטכנולוגיית GEL™ ובולם הזעזועים FLUIDRIDE™.",
+      "images": 5,
+      "faqs": [
+        {
+          "question": "האם הנעל מתאימה ליום-יום?",
+          "answer": "לחלוטין, שילוב של סגנון ייחודי ושיכוך מהשורה הראשונה."
+        },
+        {
+          "question": "מה ההבדל בין גרסת ה-White Graphite לגרסת ה-Cream Carbon?",
+          "answer": "העיצוב זהה לחלוטין, ההבדל היחיד הוא בגוון הבסיס והפרטים המתכתיים."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "הדר שלו",
+          "rating": 5,
+          "title": "שווה כל שקל",
+          "body": "אחת הנעליים הכי יפות שיש לי בארון."
+        },
+        {
+          "authorName": "עומר ששון",
+          "rating": 4,
+          "title": "עיצוב ייחודי באמת",
+          "body": "לא ראיתי עוד אחד עם הנעליים האלה, מרגיש בלעדי."
+        }
+      ]
+    },
+    {
+      "title": "נייקי אייר פורס 1 לואו",
+      "image_name": "nike-01",
+      "vendor": "Nike",
+      "description": "גרסת '07 LV8 שומרת על המורשת הקלאסית של סדרת Air Force 1.\n- עור פרימיום עמיד ואיכותי\n- יחידת בולם זעזועים Nike Air כבושה\n- תפירות מחוזקות בסגנון כדורסל שנות ה-80\n- אסתטיקה חסרת זמן המתאימה לכל לוק",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "האם הנעל עשויה מעור אמיתי?",
+          "answer": "כן, חלק העליון עשוי עור פרימיום איכותי ועמיד."
+        },
+        {
+          "question": "האם צריך תקופת התרגלות?",
+          "answer": "לא, בזכות יחידת ה-Air הנעל נוחה כבר מהנעילה הראשונה."
+        },
+        {
+          "question": "האם ניתן להחזיר או להחליף את הנעל?",
+          "answer": "כן, ניתן להחזיר או להחליף תוך 14 יום מקבלת המוצר, בתנאי שלא נעשה בו שימוש בחוץ ואריזתו המקורית נשמרה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "עומרי דגן",
+          "rating": 5,
+          "title": "הקלאסיקה האולטימטיבית",
+          "body": "אין על אייר פורס, תמיד נראה טוב ומתאים לכל דבר."
+        },
+        {
+          "authorName": "שחר נוי",
+          "rating": 5,
+          "title": "לא מתחלף בשום דגם אחר",
+          "body": "כבר הזוג השלישי שלי, אין תחליף."
+        }
+      ]
+    },
+    {
+      "title": "נייקי אייר פורס 1 לואו QS זהב",
+      "image_name": "nike-02",
+      "vendor": "Nike",
+      "description": "מראה מבריק ויוקרתי בגימור פטנט-לדר מוזהב.\n- כף רגל מחוררת לאוורור מיטבי\n- יחידת Air אנקפסולציה בסוליית הביניים\n- סוליית גומי עם אחיזה רב-כיוונית",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "איך מטפלים בגימור הפטנט-לדר?",
+          "answer": "מנגבים בעדינות עם מטלית מיקרופייבר לחה לשמירה על הברק."
+        },
+        {
+          "question": "האם הזהב עשוי להתקלף?",
+          "answer": "לא בשימוש רגיל, אך מומלץ להימנע מחיכוך ממושך עם משטחים מחוספסים."
+        },
+        {
+          "question": "האם ניתן לשלם בתשלומים?",
+          "answer": "כן, בקופה ניתן לפצל את התשלום למספר תשלומים בכרטיס אשראי בהתאם למדיניות האתר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "קרין רוזן",
+          "rating": 5,
+          "title": "תופס את העין",
+          "body": "הזהב מבריק ברמה יוקרתית, נעליים מושלמות לאירוע או לערב."
+        },
+        {
+          "authorName": "מור לוגסי",
+          "rating": 5,
+          "title": "בוהקת ומרשימה",
+          "body": "כל מי שרואה אותי איתה שואל מאיפה, פשוט מדהימה."
+        }
+      ]
+    },
+    {
+      "title": "נייקי אייר פורס 1 לואו QS אדום",
+      "image_name": "nike-03",
+      "vendor": "Nike",
+      "description": "גימור פטנט-לדר מבריק בגוון אדום עמוק. מבנה עמיד עם יחידת Air לספיגת זעזועים ואחיזה עירונית מצוינת.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הצבע האדום זהה לתמונות?",
+          "answer": "כן, מדובר בגוון בורדו-אדום עמוק ומבריק."
+        },
+        {
+          "question": "האם הנעל מתאימה גם לגברים וגם לנשים?",
+          "answer": "כן, הדגם בגזרה יוניסקס וניתן להזמין לפי טבלת המידות הרגילה של נייקי."
+        },
+        {
+          "question": "האם ניתן להחזיר או להחליף את הנעל?",
+          "answer": "כן, ניתן להחזיר או להחליף תוך 14 יום מקבלת המוצר, בתנאי שלא נעשה בו שימוש בחוץ ואריזתו המקורית נשמרה."
+        },
+        {
+          "question": "האם ניתן לשלם בתשלומים?",
+          "answer": "כן, בקופה ניתן לפצל את התשלום למספר תשלומים בכרטיס אשראי בהתאם למדיניות האתר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "אסף כהן",
+          "rating": 5,
+          "title": "צבע עשיר",
+          "body": "נראה אפילו יותר טוב במציאות מאשר בתמונות."
+        },
+        {
+          "authorName": "גל פרנקל",
+          "rating": 4,
+          "title": "בורדו מנצח",
+          "body": "צבע נדיר ומיוחד שקשה למצוא בדגמים אחרים."
+        }
+      ]
+    },
+    {
+      "title": "נייקי אייר פורס 1 לואו QS נייבי",
+      "image_name": "nike-04",
+      "vendor": "Nike",
+      "description": "עיצוב יומיומי בדגש על תמיכה ועמידות במראה כחול מבריק.\n- גימור פטנט-לדר בברק גבוה\n- מערכת שרוכים חזקה להתאמה יציבה\nסוליית גומי עמידה המבטיחה אחיזה רב-כיוונית.",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "האם סוליית הנעל קשה?",
+          "answer": "הסוליה יציבה עם יחידת Air פנימית לרכות בדריכה."
+        },
+        {
+          "question": "האם קיימת גרסה תואמת בצבעים אחרים?",
+          "answer": "כן, קולקציית ה-QS כוללת מספר גוונים נוספים באותו עיצוב בדיוק."
+        },
+        {
+          "question": "מה כלול באריזה?",
+          "answer": "האריזה כוללת את זוג הנעליים בקופסה המקורית, ולעיתים גם שרוכים חלופיים או נייר עטיפה בהתאם לדגם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "רועי נחום",
+          "rating": 5,
+          "title": "איכותי בטירוף",
+          "body": "הכחול מבריק ונותן פופ מטורף להופעה ניטרלית."
+        },
+        {
+          "authorName": "דנה עמר",
+          "rating": 5,
+          "title": "כחול עמוק ומיוחד",
+          "body": "מתאימה מצוין גם לג'ינס כהה וגם לבגדים בהירים."
+        }
+      ]
+    },
+    {
+      "title": "נייקי אייר מקס 95 OG ביג באבל",
+      "image_name": "nike-05",
+      "vendor": "Nike",
+      "description": "ישירות מארכיון שנות ה-90, ה-Nike Air Max 95 OG Big Bubble Comet משיבה לחיים אחד מצבעי הדגל הזכורים ביותר של הסיליואטה שעוצבה על ידי סרחיו לוזאנו. הגרדיאנט האפור האופייני, בהשראת האנטומיה האנושית, הפוך ומודגש בנגיעות אדום קומטה המוסיפות ניגודיות ואנרגיה חזותית.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "מה פירוש Big Bubble?",
+          "answer": "שחזור של חלון האוויר המוגדל שהיה באבטיפוסים המקוריים מ-1995."
+        },
+        {
+          "question": "האם הנעל מיועדת לאספנים בלבד?",
+          "answer": "לא, למרות הערך האספני היא נוחה מאוד ומתאימה גם לשימוש יומיומי."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "יובל בירן",
+          "rating": 5,
+          "title": "חלום של כל אספן",
+          "body": "הביג באבל פשוט משנה את כל הפרופורציה של הנעל, שלמות."
+        },
+        {
+          "authorName": "אלעד וייס",
+          "rating": 5,
+          "title": "נאמן למקור",
+          "body": "כל מי שמכיר את הדגם המקורי יעריך את רמת הפרטים כאן."
+        }
+      ]
+    },
+    {
+      "title": "נייקי וומרו פלוס QS",
+      "image_name": "nike-06",
+      "vendor": "Nike",
+      "description": "אבולוציה רב-תכליתית של סדרת Vomero המעניקה עדיפות לצעידה רכה.\n- גווני Sail ו-Baroque Brown אלגנטיים\n- חומרים קלילים למבנה נושם\n- איזון מושלם בין תמיכה לגמישות",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הנעל מיועדת לריצה או להליכה?",
+          "answer": "היא מצוינת לשניהם – מתאימה לריצות יומיות ועד ימים שלמים על הרגליים."
+        },
+        {
+          "question": "האם הגוונים העדינים מתלכלכים בקלות?",
+          "answer": "מומלץ לטפל בכתמים מיד עם ניקוי עדין כדי לשמור על הגוון הבהיר."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "שרלוט בן דוד",
+          "rating": 5,
+          "title": "שילוב צבעים הורס",
+          "body": "החום והאופוואיט עובדים יחד מדהים."
+        },
+        {
+          "authorName": "נועם ברדה",
+          "rating": 5,
+          "title": "אלגנטית ונוחה",
+          "body": "מתאימה גם לעבודה משרדית וגם להליכה ארוכה."
+        }
+      ]
+    },
+    {
+      "title": "נייקי ACG זום-אקס אולטראפליי טרייל SP",
+      "image_name": "nike-07",
+      "vendor": "Nike",
+      "description": "נעל שטח טכנית המשלבת את טכנולוגיות הריצה המתקדמות ביותר של Nike.\n- קצף ZoomX תגובתי במיוחד\n- לוח פחמן (Carbon Plate) באורך מלא\n- סוליית אחיזה מיוחדת לשטחים לא אחידים",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם לוח הפחמן מורגש?",
+          "answer": "כן, הוא מעניק דחיפה קדימה והחזר אנרגיה עוצמתי בכל צעד."
+        },
+        {
+          "question": "האם הנעל מתאימה לשטחים בוציים?",
+          "answer": "כן, סוליית האחיזה מיועדת במיוחד לשטחים לא אחידים ותנאי שטח קשים."
+        },
+        {
+          "question": "האם ניתן להחזיר או להחליף את הנעל?",
+          "answer": "כן, ניתן להחזיר או להחליף תוך 14 יום מקבלת המוצר, בתנאי שלא נעשה בו שימוש בחוץ ואריזתו המקורית נשמרה."
+        },
+        {
+          "question": "האם ניתן לשלם בתשלומים?",
+          "answer": "כן, בקופה ניתן לפצל את התשלום למספר תשלומים בכרטיס אשראי בהתאם למדיניות האתר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "איתמר שור",
+          "rating": 5,
+          "title": "מפלצת שטח",
+          "body": "טסתי איתה בשבילים, האחיזה והתגובתיות פשוט ברמה אחרת."
+        },
+        {
+          "authorName": "יובל שרון",
+          "rating": 5,
+          "title": "ביצועים ברמה תחרותית",
+          "body": "לוח הפחמן מרגיש כמו טורבו לכל טיפוס."
+        }
+      ]
+    },
+    {
+      "title": "נייקי וומרו פלוס בהיר",
+      "image_name": "nike-08",
+      "vendor": "Nike",
+      "description": "מיועדות לקצב היומיומי עם רכות מרבית. מבנה קליל ונושם הסופג מכות מכה מבלי לוותר על יציבות.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הנעל רחבה?",
+          "answer": "הגזרה סטנדרטית ומעניקה מרחב נוח באזור אצבעות כף הרגל."
+        },
+        {
+          "question": "האם מתאימה לאימוני הליכה יומיים?",
+          "answer": "כן, השיכוך הרך מיועד בדיוק לשימוש הזה."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "ליעד עמית",
+          "rating": 5,
+          "title": "כיף לנעול",
+          "body": "הנעל הכי פשוטה ונוחה שיש לי, לובש אותה לכל מקום."
+        },
+        {
+          "authorName": "נטע אורן",
+          "rating": 5,
+          "title": "פשוט מושלמת ליום יום",
+          "body": "לא מרגישה בכלל על הרגל, ממליצה בחום."
+        }
+      ]
+    },
+    {
+      "title": "נייקי וומרו פלוס שחור-לבן",
+      "image_name": "nike-09",
+      "vendor": "Nike",
+      "description": "בולם זעזועים ונוחות שעוצבו לתנועה מתמדת במראה שחור-לבן נקי.\n- סוליית ביניים מתקדמת לתמיכה ותגובתיות\n- עיצוב Black/White קלאסי ורב-תכליתי\nפתרון מושלם לשימוש יומיומי ולעבודה בתנועה.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הנעל מתאימה לחדר כושר?",
+          "answer": "כן, היציבות והשיכוך מתאימים לאימונים מגוונים ולעבודה אירובית."
+        },
+        {
+          "question": "האם הצבע השחור-לבן מלכלך בקלות?",
+          "answer": "החלק הלבן דורש ניקוי מדי פעם, אך שאר הנעל עמידה מאוד ללכלוך."
+        },
+        {
+          "question": "מה כלול באריזה?",
+          "answer": "האריזה כוללת את זוג הנעליים בקופסה המקורית, ולעיתים גם שרוכים חלופיים או נייר עטיפה בהתאם לדגם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "דניאלה גוטליב",
+          "rating": 5,
+          "title": "בייסיק מנצח",
+          "body": "מתאים לכל בגד ספורט, נוחה מאד."
+        },
+        {
+          "authorName": "אורי לביא",
+          "rating": 4,
+          "title": "קומבינציה שלא מתחלפת",
+          "body": "שחור-לבן זו בחירה בטוחה שתמיד עובדת."
+        }
+      ]
+    },
+    {
+      "title": "נייקי SB אייר פורס 1 לואו",
+      "image_name": "nike-10",
+      "vendor": "Nike",
+      "description": "Nike Air Force 1 בגרסת SB שומרת על המהות המקורית שלה תוך שילוב התאמות שעוצבו עבור סקייטבורדינג: חומרים עמידים יותר, שליטה גבוהה יותר וקריאה מדויקת יותר של מגע עם המשטח. הכפה מעור לבן יוצרת בסיס נקי, המופר בניגודיות ה-Swoosh השחור, בעוד סוליית הגם מוסיפה מרכיב טכני התואם לשחיקה האמיתית של השימוש.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "מה השוני בין גרסת SB לגרסה הרגילה?",
+          "answer": "ריפוד מוגבר בלשונית, חומרים עמידים יותר לשחיקה וריפוד Zoom Air ברפידה."
+        },
+        {
+          "question": "האם הנעל מתאימה לגלישה על סקייטבורד בפועל?",
+          "answer": "כן, הדגם תוכנן במיוחד לחוש מגע גבוה ולעמידות בפני שחיקה מסקייטינג אמיתי."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        },
+        {
+          "question": "מה כלול באריזה?",
+          "answer": "האריזה כוללת את זוג הנעליים בקופסה המקורית, ולעיתים גם שרוכים חלופיים או נייר עטיפה בהתאם לדגם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "תום אלבז",
+          "rating": 5,
+          "title": "איכות של SB",
+          "body": "תרגילים על הסקייטבורד או סתם הליכה - הנעל הזו פשוט חזקה."
+        },
+        {
+          "authorName": "עידן מלכה",
+          "rating": 5,
+          "title": "עמידה בטירוף",
+          "body": "אחרי חודשים של שימוש יומיומי היא עדיין נראית כמו חדשה."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס TF100",
+      "image_name": "new-balance-01",
+      "vendor": "New Balance",
+      "description": "חזון עתידני של ריצה עכשווית בסגנון לייף-סטייל.\n- שילוב חומרי זמש, בד ופרטים סינתטיים\n- טכנולוגיית FuelCell להחזר אנרגיה\n- סיליואטה דינמית וקלילה",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "מהי טכנולוגיית FuelCell?",
+          "answer": "קצף מיוחד המעניק תחושת קפיציות והחזר אנרגיה גבוה בכל צעד."
+        },
+        {
+          "question": "האם הנעל מתאימה לשימוש ספורטיבי אמיתי?",
+          "answer": "היא מתוכננת בעיקר ללייף-סטייל, אך מספקת גם תמיכה סבירה לפעילות קלה."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "שגיא זהבי",
+          "rating": 5,
+          "title": "קלילה ונוחה",
+          "body": "תחושה סופר קפיצית, עיצוב ייחודי מאד."
+        },
+        {
+          "authorName": "מירב שושן",
+          "rating": 4,
+          "title": "עיצוב עתידני",
+          "body": "לא ראיתי דגם דומה, ממש בולטת."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס אבזורב 5030 גריי דייז",
+      "image_name": "new-balance-02",
+      "vendor": "New Balance",
+      "description": "פרשנות רטרו-עתידנית לנעלי הריצה הטכניות של שנות ה-2000.\n- חלק עליון מתכתי בקווים בולטים\n- טכנולוגיית ABZORB SBS גלויה בסוליה\n- חלק מקולקציית Grey Days האגדית",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "מה מומלץ לגבי המידות לנשים?",
+          "answer": "מומלץ לנשים לבחור מידה או מידה וחצי פחות ממידתן הרגילה, מכיוון שזהו דגם במידות גברים."
+        },
+        {
+          "question": "מה זו קולקציית Grey Days?",
+          "answer": "קולקציה מיוחדת של ניו באלאנס המוקדשת לגוון האפור האייקוני של המותג בפרשנויות שונות."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "שירן אשכנזי",
+          "rating": 5,
+          "title": "גריי דייז במיטבו",
+          "body": "הגוון האפור של ניו באלנס מנצח כל פעם מחדש."
+        },
+        {
+          "authorName": "אופיר צדוק",
+          "rating": 5,
+          "title": "עיצוב טכני מרשים",
+          "body": "המבנה המתכתי נותן המון אופי לנעל."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס אבזורב 1890 כסף",
+      "image_name": "new-balance-03",
+      "vendor": "New Balance",
+      "description": "אסתטיקת Y2K עכשווית עם רשת חשופה, שכבות מתכתיות וסוליית ABZORB באורך מלא לבולם זעזועים ויציבות מתקדמת.",
+      "images": 7,
+      "faqs": [
+        {
+          "question": "האם רשת הנעל נושמת?",
+          "answer": "כן, הרשת החשופה מאפשרת אוורור מעולה לאורך כל היום."
+        },
+        {
+          "question": "האם הגימור המתכתי בולט מדי ליום-יום?",
+          "answer": "לא, מדובר בגימור עדין המשתלב היטב גם עם לבוש יומיומי פשוט."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        },
+        {
+          "question": "איך שומרים על צורת הנעל בין לבישות?",
+          "answer": "מומלץ לאחסן בקופסה המקורית או עם תומכי נעליים (shoe trees) כדי לשמר את הצורה למשך זמן רב יותר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "יונתן ברנשטיין",
+          "rating": 5,
+          "title": "מראה עתידני",
+          "body": "הכסף המתכתי פשוט מטורף, נעל הצגה."
+        },
+        {
+          "authorName": "רומי לוי",
+          "rating": 5,
+          "title": "שילוב מנצח",
+          "body": "מתאימה גם לג'ינס וגם למכנס טכני."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס אבזורב 1890 גריי דייז",
+      "image_name": "new-balance-04",
+      "vendor": "New Balance",
+      "description": "קולקציית Grey Days שלוקחת את האפור האייקוני למימד טכני ועתידני.\n- רשת חשופה ושכבות גליות\n- סוליית ביניים ABZORB לשיכוך זעזועים\nעיצוב ניסיוני המשלב מורשת ביצועים עם לייף-סטייל עכשווי.",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם המידות הן במידות גברים?",
+          "answer": "כן, מומלץ לנשים להפחית מידה עד מידה וחצי ממידתן הרגילה."
+        },
+        {
+          "question": "האם הדגם הזה שונה מגרסת ה-5030 Grey Days?",
+          "answer": "כן, מדובר בסיליואטה שונה לגמרי בבסיס ה-1890, אך משתייכת לאותה קולקציה."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "גיא רוזנבלום",
+          "rating": 5,
+          "title": "ניו באלנס בשיאם",
+          "body": "נוחות ללא תחרות וסגנון אפור קלאסי."
+        },
+        {
+          "authorName": "לינוי כהן",
+          "rating": 5,
+          "title": "אפור שעובד על הכל",
+          "body": "מתאימה כמעט לכל שילוב בגדים שיש לי."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס אבזורב 1890 לינן",
+      "image_name": "new-balance-05",
+      "vendor": "New Balance",
+      "description": "הצעה חדשה בעולם הרטרו-עתידני של New Balance, המשלבת התייחסויות מארכיון הריצה עם שפה טכנית עכשווית. ה-1890 שואבת השראה מדגמים כמו ה-890v3 וה-2002R, ומשלבת שכבות גליות, רשת חשופה וסוליית ביניים ABZORB המתמקדת בבולם זעזועים ויציבות.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "האם הצהוב בולט בנעל?",
+          "answer": "הנגיעות הצהובות מעניקות פופ קל ורענן על בסיס ה-Linen הנייטרלי."
+        },
+        {
+          "question": "מאילו דגמים שאבה הנעל השראה?",
+          "answer": "הדגם משלב אלמנטים מה-890v3 וה-2002R הקלאסיים של המותג."
+        },
+        {
+          "question": "האם ניתן להחזיר או להחליף את הנעל?",
+          "answer": "כן, ניתן להחזיר או להחליף תוך 14 יום מקבלת המוצר, בתנאי שלא נעשה בו שימוש בחוץ ואריזתו המקורית נשמרה."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "עמית בלום",
+          "rating": 5,
+          "title": "שילוב צבעים פצצה",
+          "body": "הצהוב נותן טוויסט מגניב בטירוף."
+        },
+        {
+          "authorName": "שקד ניר",
+          "rating": 4,
+          "title": "עדינה ומקורית",
+          "body": "לא נעל שרואים בכל פינה, ממש שווה."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס 5030 שחור",
+      "image_name": "new-balance-06",
+      "vendor": "New Balance",
+      "description": "סגנון טכני משנות ה-2000 באסתטיקה כהה וחדשנית.\n- רשת נושמת בשילוב שכבות סינתטיות\n- עומק ותמיכה במבנה כהה\n- סוליית ביניים מחולקת ליציבות\n- בולם זעזועים מתקדם ליום-יום",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הנעל מתאימה לחורף?",
+          "answer": "החלק העליון כולל רשת, ולכן מתאים בעיקר לימים יבשים ולעונות המעבר/קיץ."
+        },
+        {
+          "question": "האם הצבע השחור נשמר לאורך זמן?",
+          "answer": "כן, הבד עמיד בפני דהייה גם עם שימוש תכוף בשמש."
+        },
+        {
+          "question": "מה כלול באריזה?",
+          "answer": "האריזה כוללת את זוג הנעליים בקופסה המקורית, ולעיתים גם שרוכים חלופיים או נייר עטיפה בהתאם לדגם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "עידן קפלן",
+          "rating": 5,
+          "title": "השחור האולטימטיבי",
+          "body": "כל היתרונות של נעל ריצה במראה שחור אלגנטי."
+        },
+        {
+          "authorName": "מיטל דגן",
+          "rating": 5,
+          "title": "משתלבת עם הכל",
+          "body": "השחור נותן לה גמישות עיצובית מטורפת."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס 5030 בהיר",
+      "image_name": "new-balance-07",
+      "vendor": "New Balance",
+      "description": "חיבור בין ארכיון ביצועים לאסתטיקה רטרו-עתידנית.\n- מבנה עכשווי המתמקד בנפח ויציבות\n- רשת נושמת מעורבת בשכבות סינתטיות\n- סוליית ביניים מרופדת להליכה ממושכת",
+      "images": 8,
+      "faqs": [
+        {
+          "question": "האם הנעל כבדה?",
+          "answer": "לא, למרות המראה המסיבי, החומרים קלים ומאווררים."
+        },
+        {
+          "question": "האם הסוליה המרופדת מתאימה להליכה ממושכת?",
+          "answer": "כן, זהו בדיוק היעד העיקרי של סוליית הביניים המרופדת בדגם זה."
+        },
+        {
+          "question": "האם המוצר מיובא באופן רשמי?",
+          "answer": "כן, כל המוצרים בחנות מיובאים באופן רשמי וישירות מול היצרן או המפיץ המורשה."
+        },
+        {
+          "question": "מה כלול באריזה?",
+          "answer": "האריזה כוללת את זוג הנעליים בקופסה המקורית, ולעיתים גם שרוכים חלופיים או נייר עטיפה בהתאם לדגם."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "נטלי הרשקוביץ",
+          "rating": 5,
+          "title": "סטייל מטורף",
+          "body": "נראית נפלא עם ג'ינס רחב."
+        },
+        {
+          "authorName": "בועז אשד",
+          "rating": 4,
+          "title": "מבנה מרשים",
+          "body": "הנפח נותן לה נוכחות חזקה בלי להיות כבדה בפועל."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס 2010",
+      "image_name": "new-balance-08",
+      "vendor": "New Balance",
+      "description": "גווני טבע עדינים בשילוב טכנולוגיות ABZORB ו-SBS בסוליה מחולקת, ליצירת מראה לייף-סטייל יחודי ושיכוך זעזועים מתקדם.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "מאיפה ההשראה לצבעים?",
+          "answer": "הגוונים שואבים השראה מאלמנטים טבעיים של יער ואור שקיעה."
+        },
+        {
+          "question": "האם הצבעים הרכים מתאימים גם לגברים?",
+          "answer": "כן, מדובר בדגם יוניסקס שמתאים לכל מי שאוהב פלטת גוונים עדינה."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "מאור אלפסי",
+          "rating": 5,
+          "title": "גוון ייחודי",
+          "body": "השילוב של הירוק-זית והאורנג' העדין פשוט פוגע בול."
+        },
+        {
+          "authorName": "יעל פרץ",
+          "rating": 5,
+          "title": "צבעים שלא רואים בכל מקום",
+          "body": "מרגישה שיש לי משהו שאין לאף אחד אחר."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס 1890 JFG",
+      "image_name": "new-balance-09",
+      "vendor": "New Balance",
+      "description": "שיתוף פעולה נחשק עם מעצב העל Joe Freshgoods (JFG).\n- זמש פרימיום ושכבות רשת פתוחה\n- סוליית ABZORB מחולקת לנוחות מרבית\nפריט אספנים המחבר בין סיפור תרבותי לאופנת רחוב עילית.",
+      "images": 9,
+      "faqs": [
+        {
+          "question": "מה מיוחד במהדורת JFG?",
+          "answer": "חומרי פרימיום יוצאי דופן, קופסה ייחודית ונגיעות עיצוב אישיות של ג'ו פרשגודס."
+        },
+        {
+          "question": "האם כדאי לרכוש כפריט אספנות?",
+          "answer": "בהחלט, מדובר בשיתוף פעולה נחשק שהופך לעיתים לפריט מבוקש בשוק המשני."
+        },
+        {
+          "question": "האם קיימת אחריות על הנעל?",
+          "answer": "כן, המוצר מגיע עם אחריות יצרן לפגמי ייצור למשך שנה מיום הרכישה, לא כולל בלאי משימוש רגיל."
+        },
+        {
+          "question": "כמה זמן אורך המשלוח?",
+          "answer": "משלוח סטנדרטי מגיע תוך 3-5 ימי עסקים, בהתאם לאזור המגורים וזמינות המלאי."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "לב אריאל",
+          "rating": 5,
+          "title": "קולקציה מטורפת",
+          "body": "הזמש פרימיום ברמה הגבוהה ביותר שראיתי."
+        },
+        {
+          "authorName": "דין אוחיון",
+          "rating": 5,
+          "title": "פריט חובה לכל אספן",
+          "body": "האריזה והפרטים הקטנים הופכים את זה לחוויה שלמה."
+        }
+      ]
+    },
+    {
+      "title": "ניו באלאנס 509",
+      "image_name": "new-balance-10",
+      "vendor": "New Balance",
+      "description": "בהשראת שפת הריצה הטכנית של שנות ה-2000, סיליואטה זו משלבת מבנה קליל ופרופורציות דינמיות בקריאה עכשווית. החלק העליון משלב רשת פתוחה עם שכבות סינתטיות מוזהבות להוספת עומק חזותי ואוורור, בעוד סוליית הביניים המחולקת שומרת על תחושה יציבה ומרופדת לשימוש יומיומי.",
+      "images": 6,
+      "faqs": [
+        {
+          "question": "האם הגימור המתכתי עמיד?",
+          "answer": "כן, הציפוי עמיד מאוד בפני שחיקה יומיומית."
+        },
+        {
+          "question": "האם הנעל מתאימה לרוחב רגל ממוצע?",
+          "answer": "כן, הגזרה סטנדרטית ותואמת את מרבית מדידות הרגל המקובלות."
+        },
+        {
+          "question": "איך שומרים על צורת הנעל בין לבישות?",
+          "answer": "מומלץ לאחסן בקופסה המקורית או עם תומכי נעליים (shoe trees) כדי לשמר את הצורה למשך זמן רב יותר."
+        }
+      ],
+      "reviews": [
+        {
+          "authorName": "נועם גולדשטיין",
+          "rating": 5,
+          "title": "נוצץ ונכון",
+          "body": "מוסיף המון לכל לוק פשוט."
+        },
+        {
+          "authorName": "אביגיל טל",
+          "rating": 4,
+          "title": "עדינה ומבריקה",
+          "body": "הגימור המוזהב נותן טאץ' יוקרתי בלי להיות בולט מדי."
+        }
+      ]
+    }
+  ]
+}

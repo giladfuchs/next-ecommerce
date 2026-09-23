@@ -1,22 +1,15 @@
-import {
-  MetaDescriptionField,
-  MetaImageField,
-  MetaTitleField,
-  OverviewField,
-  PreviewField,
-} from "@payloadcms/plugin-seo/fields";
-
 import type { CollectionConfig } from "payload";
 
 import { pageBlocks } from "@/lib/blocks/config";
+import { hero } from "@/lib/blocks/hero";
 import {
   adminOnlyAccess,
   makeAdminPreview,
+  metaTab,
   mixedSlugField,
 } from "@/lib/collections/base-fields";
 import { makeRevalidateHooks, normalizeFaqs } from "@/lib/collections/hooks";
 import { CollectionName, RoutePath } from "@/lib/core/types/types";
-import { hero } from "@/lib/heros/config";
 
 const RESERVED_PAGE_SLUGS = [
   "admin",
@@ -109,39 +102,7 @@ export const Pages: CollectionConfig = {
             },
           ],
         },
-        {
-          name: "meta",
-          label: "SEO",
-          fields: [
-            OverviewField({
-              titlePath: "meta.title",
-              descriptionPath: "meta.description",
-              imagePath: "meta.image",
-            }),
-            MetaTitleField({
-              hasGenerateFn: true,
-              overrides: {
-                required: true,
-              },
-            }),
-            MetaImageField({
-              relationTo: "media",
-              overrides: {
-                required: true,
-              },
-            }),
-            MetaDescriptionField({
-              overrides: {
-                required: true,
-              },
-            }),
-            PreviewField({
-              hasGenerateFn: true,
-              titlePath: "meta.title",
-              descriptionPath: "meta.description",
-            }),
-          ],
-        },
+        metaTab(),
       ],
     },
     mixedSlugField(RESERVED_PAGE_SLUGS),

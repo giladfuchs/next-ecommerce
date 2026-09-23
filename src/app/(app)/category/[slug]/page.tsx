@@ -1,17 +1,14 @@
 import { notFound } from "next/navigation";
+import CategoryPage from "src/components/shop/category";
 
 import type { PropsSlug } from "@/lib/core/types/types";
 import type { Metadata } from "next";
 
-import CategoryPageLayout from "@/components/category";
-import { JsonLd } from "@/components/shared/elements-ssr";
+import { JsonLdViewScript } from "@/components/shared/elements-ssr";
 import DAL from "@/lib/core/dal";
+import { CollectionName } from "@/lib/core/types/types";
 import { getDecodedSlug } from "@/lib/core/util";
-import {
-  generateJsonLdBreadcrumbsCategory,
-  generateJsonLdItemListCategory,
-} from "@/lib/seo/jsonld";
-import { generateMetadataCategory } from "@/lib/seo/metadata";
+import { buildMetadataByModel } from "@/lib/seo/metadata";
 
 export const dynamic = "force-dynamic";
 
@@ -22,12 +19,11 @@ export async function generateMetadata({
 
   const category = await DAL.queryCategoryBySlug(slug);
   if (!category) return { robots: "noindex" };
-  return generateMetadataCategory(category);
+  return buildMetadataByModel(CollectionName.category, category, slug);
 }
 
-export default async function CategoryPage({ params }: PropsSlug) {
+export default async function PageCategory({ params }: PropsSlug) {
   const slug = await getDecodedSlug(params);
-
   const category = await DAL.queryCategoryBySlug(slug);
   if (!category) return notFound();
   const products = await DAL.queryAllProducts();
@@ -41,14 +37,14 @@ export default async function CategoryPage({ params }: PropsSlug) {
 
   return (
     <>
-      <JsonLd
-        data={[
-          generateJsonLdItemListCategory(category, filtered),
-          generateJsonLdBreadcrumbsCategory(category),
-        ]}
+      <JsonLdViewScript
+        collection={CollectionName.category}
+        entity={category}
+        products={filtered}
+        slug={slug}
       />
 
-      <CategoryPageLayout
+      <CategoryPage
         title={category.title}
         description={category.description}
         products={filtered}

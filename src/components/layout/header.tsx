@@ -13,11 +13,11 @@ import type { Media, User, Product } from "@/lib/core/types/payload-types";
 import type { SiteSetting } from "@/payload-types";
 import type { PayloadAdminBarProps } from "@payloadcms/admin-bar";
 
-import CartModal from "@/components/cart/cart-modal";
 import AccessibilityBar from "@/components/layout/accessibility-bar";
 import Search from "@/components/layout/search";
 import CmsLink from "@/components/shared/cms-link";
 import ImageVideo from "@/components/shared/image-video";
+import CartModal from "@/components/shop/cart/cart-modal";
 import { Button } from "@/components/ui";
 import appConfig from "@/lib/core/config";
 import { cn } from "@/lib/core/util";
@@ -230,7 +230,7 @@ const HeaderBar = ({ logo, products, navItems }: HeaderProps) => {
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
-    <div className="border-b bg-background md:px-18">
+    <div className="relative border-b bg-background md:px-18">
       <nav className="container flex min-w-0 items-center justify-between px-2 py-1 sm:px-4 md:max-h-17 md:items-end md:px-0">
         <div className="grid w-full min-w-0 grid-cols-3 items-center gap-2 sm:gap-3 md:items-end">
           <div className="flex shrink-0 items-center justify-start gap-2">
@@ -255,8 +255,10 @@ const HeaderBar = ({ logo, products, navItems }: HeaderProps) => {
       </nav>
 
       {searchOpen ? (
-        <div className="container px-2 py-3 sm:px-4 md:px-0">
-          <Search products={products} onClose={() => setSearchOpen(false)} />
+        <div className="absolute inset-x-0 lg:top-[calc(100%-3.5rem)] z-50 px-2 py-3 sm:px-4 md:px-18">
+          <div className="container mx-auto">
+            <Search products={products} onClose={() => setSearchOpen(false)} />
+          </div>
         </div>
       ) : null}
     </div>

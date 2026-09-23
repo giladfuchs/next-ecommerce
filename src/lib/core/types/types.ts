@@ -1,11 +1,11 @@
 import type {
   Cart,
-  Media,
-  Order,
-  Product,
-  Page,
-  Review,
+  ArchiveBlock,
   Category,
+  Order,
+  Page,
+  Product,
+  Review,
   SiteSetting,
   User,
 } from "@/lib/core/types/payload-types";
@@ -36,14 +36,6 @@ export const AppConst = {
 
 export type PropsSlug = { params: Promise<{ slug: string }> };
 
-export type MetaInput = {
-  title: string;
-  description: string;
-  image: Media;
-  path: string;
-  modifiedTime?: string;
-};
-
 export type SitemapItem = { slug: string; updatedAt: string };
 
 export type SitemapData = {
@@ -70,11 +62,27 @@ export type FaqItem = {
   id?: string | null;
 };
 
+export type ArchiveModel = Product | Page | Category;
+
+export type ResolvedArchiveBlock = ArchiveBlock & {
+  items: ArchiveModel[];
+};
+
+export type CategoryDetail = Omit<Category, "slug">;
+
+export type ResolvedPageBlock =
+  | Exclude<Page["layout"][number], { blockType: "archive" }>
+  | ResolvedArchiveBlock;
+
+export type ResolvedPage = Omit<Page, "layout" | "slug"> & {
+  layout: ResolvedPageBlock[];
+};
+
 export type DalStatic = {
   queryAllProducts(): Promise<Product[]>;
-  queryCategoryBySlug(slug: string): Promise<Category | null>;
+  queryCategoryBySlug(slug: string): Promise<CategoryDetail | null>;
   queryProductBySlug(slug: string): Promise<ProductSinglePage | null>;
-  queryPageBySlug(slug: string): Promise<Page | null>;
+  queryPageBySlug(slug: string): Promise<ResolvedPage | null>;
   queryArchiveProducts(options: ArchiveProductsOptions): Promise<Product[]>;
   queryArchivePages(options: ArchiveEntriesOptions): Promise<Page[]>;
   queryArchiveCategories(options: ArchiveEntriesOptions): Promise<Category[]>;
@@ -143,7 +151,7 @@ export type CombinedVariantData = {
 
 export type ProductSinglePage = Pick<
   Product,
-  "title" | "description" | "updatedAt" | "gallery" | "faqs" | "id"
+  "title" | "description" | "updatedAt" | "meta" | "gallery" | "faqs" | "id"
 > & {
   purchase_section: ProductPurchaseSectionData;
   relatedProducts: Product[];

@@ -3,10 +3,10 @@ import { draftMode } from "next/headers";
 
 import type {
   Category,
-  Media,
   Page,
   Product,
   Review,
+  SeoMedia,
   SiteSetting,
   User,
   Variant,
@@ -15,21 +15,20 @@ import type {
 } from "@/lib/core/types/payload-types";
 
 import { buildProductPurchaseSectionData } from "@/lib/core/adapter";
-import BaseApi from "@/lib/core/dal/base-api";
-import { createMediaResolver } from "@/lib/core/media";
+import BaseDal from "@/lib/core/dal/base-dal";
 import {
-  type ArchiveEntriesOptions,
-  type ArchiveProductsOptions,
+  type CategoryDetail,
   type SitemapData,
   type SitemapItem,
   AppConst,
   CollectionName,
   type CombinedVariantData,
   type ProductSinglePage,
+  type ResolvedPage,
 } from "@/lib/core/types/types";
 import { getRevalidateTag } from "@/lib/core/util";
 
-export default class Api extends BaseApi {
+export default class Api extends BaseDal {
   private static cache<T>(fn: () => Promise<T>, key: string, tag: string) {
     return unstable_cache(fn, [key], {
       revalidate: false,
@@ -175,7 +174,7 @@ export default class Api extends BaseApi {
             select: {
               title: true,
               slug: true,
-              image: true,
+              meta: true,
               categories: true,
               priceInUSD: true,
               originalPriceInUSD: true,
@@ -185,23 +184,16 @@ export default class Api extends BaseApi {
           },
         );
 
-        const resolveMedia = await createMediaResolver(
-          products.map((product) => product.image),
-          (ids) =>
-            Api.fetchApi<Media[]>("media", {
-              params: {
-                depth: 0,
-                "where[id][in]": ids.join(","),
-              },
-              expect: "docs",
-              tag: AppConst.CACHE_TAG_BOOTSTRAP,
-            }),
+        return Api.resolveProductMedia(products, (ids) =>
+          Api.fetchApi<SeoMedia[]>("seo-media", {
+            params: {
+              depth: 0,
+              "where[id][in]": ids.join(","),
+            },
+            expect: "docs",
+            tag: AppConst.CACHE_TAG_BOOTSTRAP,
+          }),
         );
-
-        return products.map((product) => ({
-          ...product,
-          image: resolveMedia(product.image),
-        })) as Product[];
       },
       "all-products",
       AppConst.CACHE_TAG_BOOTSTRAP,
@@ -211,7 +203,7 @@ export default class Api extends BaseApi {
   static async queryProductBySlug(
     slug: string,
   ): Promise<ProductSinglePage | null> {
-    const product = await Api.queryBySlug<Product>(
+    const product = await Api.queryBySlug<Omit<Product, "slug">>(
       CollectionName.products,
       slug,
       1,
@@ -219,6 +211,7 @@ export default class Api extends BaseApi {
         title: true,
         description: true,
         updatedAt: true,
+        meta: true,
         gallery: true,
         priceInUSD: true,
         originalPriceInUSD: true,
@@ -264,6 +257,7 @@ export default class Api extends BaseApi {
       title: product.title,
       description: product.description,
       updatedAt: product.updatedAt,
+      meta: product.meta,
       gallery: product.gallery,
       faqs: product.faqs,
       relatedProducts,
@@ -272,26 +266,32 @@ export default class Api extends BaseApi {
     };
   }
 
-  static queryCategoryBySlug(slug: string): Promise<Category | null> {
-    return Api.queryBySlug<Category>(CollectionName.category, slug, 1, {
-      title: true,
-      image: true,
-      slug: true,
-      description: true,
-      updatedAt: true,
-      faqs: true,
-    });
-  }
-
-  static async queryPageBySlug(slug: string): Promise<Page | null> {
-    const tag = `${CollectionName.pages}-${slug}`;
-    const page = await Api.queryBySlug<Page>(
-      CollectionName.pages,
+  static async queryCategoryBySlug(
+    slug: string,
+  ): Promise<CategoryDetail | null> {
+    const category = await Api.queryBySlug<CategoryDetail>(
+      CollectionName.category,
       slug,
-      0,
+      1,
       {
         title: true,
-        slug: true,
+        description: true,
+        meta: true,
+        updatedAt: true,
+        faqs: true,
+      },
+    );
+
+    return category;
+  }
+
+  static async queryPageBySlug(slug: string): Promise<ResolvedPage | null> {
+    const page = await Api.queryBySlug<Omit<Page, "slug">>(
+      CollectionName.pages,
+      slug,
+      1,
+      {
+        title: true,
         hero: true,
         layout: true,
         meta: true,
@@ -300,73 +300,11 @@ export default class Api extends BaseApi {
       [AppConst.CACHE_TAG_BOOTSTRAP],
     );
 
-    if (!page) return null;
-
-    const { isEnabled: draft } = await draftMode();
-    const resolveMedia = await createMediaResolver(
-      [page.meta.image, page.hero.media],
-      (ids) =>
-        Api.fetchApi<Media[]>("media", {
-          params: {
-            depth: 0,
-            "where[id][in]": ids.join(","),
-          },
-          expect: "docs",
-          ...(draft ? {} : { tag, tags: [AppConst.CACHE_TAG_BOOTSTRAP] }),
-        }),
-    );
-
-    return {
-      ...page,
-      hero: {
-        ...page.hero,
-        media: resolveMedia(page.hero.media),
-      },
-      meta: {
-        ...page.meta,
-        image: resolveMedia(page.meta.image),
-      },
-    } as Page;
+    return page ? Api.resolvePageLayout(page) : null;
   }
 
-  static async queryArchiveProducts({
-    categoryIds,
-    productIds,
-    limit = 10,
-  }: ArchiveProductsOptions): Promise<Product[]> {
-    const products = await Api.queryAllProducts();
-
-    if (productIds) {
-      const productById = new Map(
-        products.map((product) => [String(product.id), product]),
-      );
-
-      return productIds
-        .slice(0, Math.max(0, limit))
-        .map((id) => productById.get(String(id)))
-        .filter((product): product is Product => Boolean(product));
-    }
-
-    const categorySet = new Set(categoryIds?.map(String) ?? []);
-    const filtered = categorySet.size
-      ? products.filter((product) =>
-          product.categories?.some((category) =>
-            categorySet.has(
-              String(typeof category === "object" ? category.id : category),
-            ),
-          ),
-        )
-      : products;
-
-    return filtered.slice(0, Math.max(0, Math.min(limit, 24)));
-  }
-
-  static async queryArchivePages({
-    ids,
-    excludeId,
-    limit = 10,
-  }: ArchiveEntriesOptions): Promise<Page[]> {
-    const pages = await Api.fetchApi<Page[]>(`${CollectionName.pages}`, {
+  static fetchArchivePages(): Promise<Page[]> {
+    return Api.fetchApi<Page[]>(`${CollectionName.pages}`, {
       params: {
         depth: 1,
         limit: 1000,
@@ -381,59 +319,24 @@ export default class Api extends BaseApi {
       expect: "docs",
       tag: AppConst.CACHE_TAG_BOOTSTRAP,
     });
-    const available = pages.filter(
-      (page) =>
-        excludeId === undefined || String(page.id) !== String(excludeId),
-    );
-
-    if (ids) {
-      const pageById = new Map(
-        available.map((page) => [String(page.id), page]),
-      );
-      return ids
-        .slice(0, Math.max(0, limit))
-        .map((id) => pageById.get(String(id)))
-        .filter((page): page is Page => Boolean(page));
-    }
-
-    return available.slice(0, Math.max(0, Math.min(limit, 24)));
   }
 
-  static async queryArchiveCategories({
-    ids,
-    limit = 10,
-  }: ArchiveEntriesOptions): Promise<Category[]> {
-    const categories = await Api.fetchApi<Category[]>(
-      `${CollectionName.category}`,
-      {
-        params: {
-          depth: 1,
-          limit: 1000,
-          sort: "position",
-          "where[_status][equals]": "published",
-        },
-        select: {
-          title: true,
-          slug: true,
-          image: true,
-          description: true,
-        },
-        expect: "docs",
-        tag: AppConst.CACHE_TAG_BOOTSTRAP,
+  static fetchArchiveCategories(): Promise<Category[]> {
+    return Api.fetchApi<Category[]>(`${CollectionName.category}`, {
+      params: {
+        depth: 1,
+        limit: 1000,
+        sort: "title",
+        "where[_status][equals]": "published",
       },
-    );
-
-    if (ids) {
-      const categoryById = new Map(
-        categories.map((category) => [String(category.id), category]),
-      );
-      return ids
-        .slice(0, Math.max(0, limit))
-        .map((id) => categoryById.get(String(id)))
-        .filter((category): category is Category => Boolean(category));
-    }
-
-    return categories.slice(0, Math.max(0, Math.min(limit, 24)));
+      select: {
+        title: true,
+        slug: true,
+        meta: true,
+      },
+      expect: "docs",
+      tag: AppConst.CACHE_TAG_BOOTSTRAP,
+    });
   }
 
   private static async fetchSlugs(

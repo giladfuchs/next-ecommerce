@@ -44,10 +44,10 @@ export type AppConfig = {
   BLOB_TOKEN: string;
   BUCKET_PREFIX: string;
 
-  R2_BUCKET: string;
-  R2_ENDPOINT: string;
-  R2_ACCESS_KEY_ID: string;
-  R2_SECRET_ACCESS_KEY: string;
+  S3_BUCKET: string;
+  S3_ENDPOINT: string;
+  S3_ACCESS_KEY_ID: string;
+  S3_SECRET_ACCESS_KEY: string;
 
   SEND_EMAIL_WHATSAPP: boolean;
 
@@ -87,10 +87,10 @@ export const appConfig: AppConfig = {
   BLOB_TOKEN: process.env.BLOB_TOKEN as string,
   BUCKET_PREFIX: process.env.BUCKET_PREFIX ?? "payload_ecommerce",
 
-  R2_BUCKET: process.env.R2_BUCKET as string,
-  R2_ENDPOINT: process.env.R2_ENDPOINT as string,
-  R2_ACCESS_KEY_ID: process.env.R2_ACCESS_KEY_ID as string,
-  R2_SECRET_ACCESS_KEY: process.env.R2_SECRET_ACCESS_KEY as string,
+  S3_BUCKET: process.env.S3_BUCKET as string,
+  S3_ENDPOINT: process.env.S3_ENDPOINT as string,
+  S3_ACCESS_KEY_ID: process.env.S3_ACCESS_KEY_ID as string,
+  S3_SECRET_ACCESS_KEY: process.env.S3_SECRET_ACCESS_KEY as string,
 
   SEND_EMAIL_WHATSAPP: process.env.SEND_EMAIL_WHATSAPP === "true",
 

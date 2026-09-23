@@ -3,7 +3,7 @@ import { seoPlugin } from "@payloadcms/plugin-seo";
 import { s3Storage } from "@payloadcms/storage-s3";
 import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 
-import type { Page } from "@/payload-types";
+import type { Category, Page, Product } from "@/payload-types";
 import type { GenerateTitle, GenerateURL } from "@payloadcms/plugin-seo/types";
 import type { Plugin } from "payload";
 
@@ -18,49 +18,79 @@ import {
 } from "@/lib/collections";
 import { isAdmin } from "@/lib/collections/base-fields";
 import appConfig from "@/lib/core/config";
+import { CollectionName, RoutePath } from "@/lib/core/types/types";
+import { adminTranslationsPlugin } from "@/lib/intl/admin";
 
-const generateTitle: GenerateTitle<Page> = ({ doc }) =>
+type SeoDocument = Page | Product | Category;
+
+const generateTitle: GenerateTitle<SeoDocument> = ({ doc }) =>
   doc?.title ? `${doc.title} | ${appConfig.SITE_NAME}` : appConfig.SITE_NAME;
 
-const generateURL: GenerateURL<Page> = ({ doc }) =>
-  doc?.slug
-    ? `${appConfig.BASE_URL}/${encodeURIComponent(doc.slug)}`
-    : appConfig.BASE_URL;
+const generateURL: GenerateURL<SeoDocument> = ({ collectionSlug, doc }) => {
+  if (!doc?.slug) {
+    return appConfig.BASE_URL;
+  }
+
+  const slug = encodeURIComponent(doc.slug);
+
+  if (collectionSlug === CollectionName.products) {
+    return `${appConfig.BASE_URL}/${RoutePath.product}/${slug}`;
+  }
+
+  if (collectionSlug === CollectionName.category) {
+    return `${appConfig.BASE_URL}/${RoutePath.category}/${slug}`;
+  }
+
+  if (doc.slug === appConfig.HOME_SLUG) {
+    return appConfig.BASE_URL;
+  }
+
+  return `${appConfig.BASE_URL}/${slug}`;
+};
 
 let storagePlugin: Plugin | undefined;
+
+const uploadCollections = ["media", "seo-media", "gallery-media"] as const;
+type UploadCollection = (typeof uploadCollections)[number];
+
+const createStorageCollections = <T>(
+  getOptions: (collection: UploadCollection) => T,
+): Record<UploadCollection, T> =>
+  Object.fromEntries(
+    uploadCollections.map((collection) => [collection, getOptions(collection)]),
+  ) as Record<UploadCollection, T>;
+
+const storagePrefix = (collection: UploadCollection) =>
+  `${appConfig.BUCKET_PREFIX}/${collection}`;
 
 if (appConfig.STORAGE_PROVIDER === "vercel") {
   storagePlugin = vercelBlobStorage({
     enabled: !!appConfig.BLOB_TOKEN,
     token: appConfig.BLOB_TOKEN,
     addRandomSuffix: true,
-    collections: {
-      media: {
-        prefix: appConfig.BUCKET_PREFIX,
-        ...(appConfig.STORAGE_URL ? { disablePayloadAccessControl: true } : {}),
-      },
-    },
+    collections: createStorageCollections((collection) => ({
+      prefix: storagePrefix(collection),
+      ...(appConfig.STORAGE_URL ? { disablePayloadAccessControl: true } : {}),
+    })),
   });
 } else if (appConfig.STORAGE_PROVIDER === "s3") {
   storagePlugin = s3Storage({
-    collections: {
-      media: {
-        disableLocalStorage: true,
-        disablePayloadAccessControl: true,
-        prefix: appConfig.BUCKET_PREFIX,
-        generateFileURL: ({ filename, prefix }) => {
-          const key = prefix ? `${prefix}/${filename}` : filename;
-          return `${appConfig.STORAGE_URL}/${key}`;
-        },
+    collections: createStorageCollections((collection) => ({
+      disableLocalStorage: true,
+      disablePayloadAccessControl: true,
+      prefix: storagePrefix(collection),
+      generateFileURL: ({ filename, prefix }) => {
+        const key = prefix ? `${prefix}/${filename}` : filename;
+        return `${appConfig.STORAGE_URL}/${key}`;
       },
-    },
-    bucket: appConfig.R2_BUCKET,
+    })),
+    bucket: appConfig.S3_BUCKET,
     config: {
-      endpoint: appConfig.R2_ENDPOINT,
+      endpoint: appConfig.S3_ENDPOINT,
       region: "auto",
       credentials: {
-        accessKeyId: appConfig.R2_ACCESS_KEY_ID,
-        secretAccessKey: appConfig.R2_SECRET_ACCESS_KEY,
+        accessKeyId: appConfig.S3_ACCESS_KEY_ID,
+        secretAccessKey: appConfig.S3_SECRET_ACCESS_KEY,
       },
       requestChecksumCalculation: "WHEN_REQUIRED",
       responseChecksumValidation: "WHEN_REQUIRED",
@@ -105,4 +135,5 @@ export const plugins: Plugin[] = [
     generateTitle,
     generateURL,
   }),
+  adminTranslationsPlugin,
 ];

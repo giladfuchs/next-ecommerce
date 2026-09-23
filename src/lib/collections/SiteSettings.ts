@@ -1,10 +1,9 @@
 import type { GlobalConfig } from "payload";
 
 import { footerBlocks } from "@/lib/blocks/footer";
-import { adminOnlyAccess } from "@/lib/collections/base-fields";
+import { adminOnlyAccess, linkField } from "@/lib/collections/base-fields";
 import { revalidate } from "@/lib/collections/hooks";
 import { AppConst } from "@/lib/core/types/types";
-import { linkField } from "@/lib/fields/link";
 
 export const SiteSettings: GlobalConfig = {
   slug: "site-settings",

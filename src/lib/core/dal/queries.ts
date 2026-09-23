@@ -5,10 +5,10 @@ import { getPayload as initPayload, type PayloadRequest } from "payload";
 
 import type {
   Category,
-  Media,
   Page,
   Product,
   Review,
+  SeoMedia,
   SiteSetting,
   User,
   Variant,
@@ -17,16 +17,16 @@ import type {
 } from "@/lib/core/types/payload-types";
 
 import { buildProductPurchaseSectionData } from "@/lib/core/adapter";
-import { createMediaResolver } from "@/lib/core/media";
+import BaseDal from "@/lib/core/dal/base-dal";
 import {
-  type ArchiveEntriesOptions,
-  type ArchiveProductsOptions,
+  type CategoryDetail,
   type SitemapData,
   type SitemapItem,
   AppConst,
   CollectionName,
   type CombinedVariantData,
   type ProductSinglePage,
+  type ResolvedPage,
 } from "@/lib/core/types/types";
 import { getRevalidateTag } from "@/lib/core/util";
 
@@ -49,7 +49,7 @@ type PayloadGlobalOptions = PayloadQueryOptions & {
   params: PayloadFindGlobalArgs;
 };
 
-export default class Queries {
+export default class Queries extends BaseDal {
   private static instance: PayloadInstance | null = null;
 
   private static async getPayload() {
@@ -280,7 +280,7 @@ export default class Queries {
         select: {
           title: true,
           slug: true,
-          image: true,
+          meta: true,
           categories: true,
           priceInUSD: true,
           originalPriceInUSD: true,
@@ -288,33 +288,26 @@ export default class Queries {
       },
     });
 
-    const resolveMedia = await createMediaResolver(
-      products.map((product) => product.image),
-      (ids) =>
-        Queries.runPayloadFind<Media>({
-          collection: "media",
-          tag: AppConst.CACHE_TAG_BOOTSTRAP,
-          params: {
-            depth: 0,
-            limit: 0,
-            pagination: false,
-            where: {
-              id: { in: ids },
-            },
+    return Queries.resolveProductMedia(products, (ids) =>
+      Queries.runPayloadFind<SeoMedia>({
+        collection: "seo-media",
+        tag: AppConst.CACHE_TAG_BOOTSTRAP,
+        params: {
+          depth: 0,
+          limit: 0,
+          pagination: false,
+          where: {
+            id: { in: ids },
           },
-        }),
+        },
+      }),
     );
-
-    return products.map((product) => ({
-      ...product,
-      image: resolveMedia(product.image),
-    })) as Product[];
   }
 
   static async queryProductBySlug(
     slug: string,
   ): Promise<ProductSinglePage | null> {
-    const product = await Queries.queryBySlug<Product>(
+    const product = await Queries.queryBySlug<Omit<Product, "slug">>(
       CollectionName.products,
       slug,
       1,
@@ -322,6 +315,7 @@ export default class Queries {
         title: true,
         description: true,
         updatedAt: true,
+        meta: true,
         gallery: true,
         priceInUSD: true,
         originalPriceInUSD: true,
@@ -382,6 +376,7 @@ export default class Queries {
       title: product.title,
       description: product.description,
       updatedAt: product.updatedAt,
+      meta: product.meta,
       gallery: product.gallery,
       faqs: product.faqs,
       relatedProducts,
@@ -390,26 +385,32 @@ export default class Queries {
     };
   }
 
-  static queryCategoryBySlug(slug: string): Promise<Category | null> {
-    return Queries.queryBySlug<Category>(CollectionName.category, slug, 1, {
-      title: true,
-      image: true,
-      slug: true,
-      description: true,
-      updatedAt: true,
-      faqs: true,
-    });
-  }
-
-  static async queryPageBySlug(slug: string): Promise<Page | null> {
-    const tag = `${CollectionName.pages}-${slug}`;
-    const page = await Queries.queryBySlug<Page>(
-      CollectionName.pages,
+  static async queryCategoryBySlug(
+    slug: string,
+  ): Promise<CategoryDetail | null> {
+    const category = await Queries.queryBySlug<CategoryDetail>(
+      CollectionName.category,
       slug,
-      0,
+      1,
       {
         title: true,
-        slug: true,
+        description: true,
+        meta: true,
+        updatedAt: true,
+        faqs: true,
+      },
+    );
+
+    return category;
+  }
+
+  static async queryPageBySlug(slug: string): Promise<ResolvedPage | null> {
+    const page = await Queries.queryBySlug<Omit<Page, "slug">>(
+      CollectionName.pages,
+      slug,
+      1,
+      {
+        title: true,
         hero: true,
         layout: true,
         meta: true,
@@ -418,79 +419,11 @@ export default class Queries {
       [AppConst.CACHE_TAG_BOOTSTRAP],
     );
 
-    if (!page) return null;
-
-    const { isEnabled: draft } = await draftMode();
-    const resolveMedia = await createMediaResolver(
-      [page.meta.image, page.hero.media],
-      (ids) =>
-        Queries.runPayloadFind<Media>({
-          collection: "media",
-          tag,
-          tags: [AppConst.CACHE_TAG_BOOTSTRAP],
-          cache: !draft,
-          params: {
-            depth: 0,
-            limit: 0,
-            pagination: false,
-            where: {
-              id: { in: ids },
-            },
-          },
-        }),
-    );
-
-    return {
-      ...page,
-      hero: {
-        ...page.hero,
-        media: resolveMedia(page.hero.media),
-      },
-      meta: {
-        ...page.meta,
-        image: resolveMedia(page.meta.image),
-      },
-    } as Page;
+    return page ? Queries.resolvePageLayout(page) : null;
   }
 
-  static async queryArchiveProducts({
-    categoryIds,
-    productIds,
-    limit = 10,
-  }: ArchiveProductsOptions): Promise<Product[]> {
-    const products = await Queries.queryAllProducts();
-
-    if (productIds) {
-      const productById = new Map(
-        products.map((product) => [String(product.id), product]),
-      );
-
-      return productIds
-        .slice(0, Math.max(0, limit))
-        .map((id) => productById.get(String(id)))
-        .filter((product): product is Product => Boolean(product));
-    }
-
-    const categorySet = new Set(categoryIds?.map(String) ?? []);
-    const filtered = categorySet.size
-      ? products.filter((product) =>
-          product.categories?.some((category) =>
-            categorySet.has(
-              String(typeof category === "object" ? category.id : category),
-            ),
-          ),
-        )
-      : products;
-
-    return filtered.slice(0, Math.max(0, Math.min(limit, 24)));
-  }
-
-  static async queryArchivePages({
-    ids,
-    excludeId,
-    limit = 10,
-  }: ArchiveEntriesOptions): Promise<Page[]> {
-    const pages = await Queries.runPayloadFind<Page>({
+  static fetchArchivePages(): Promise<Page[]> {
+    return Queries.runPayloadFind<Page>({
       collection: CollectionName.pages,
       tag: AppConst.CACHE_TAG_BOOTSTRAP,
       params: {
@@ -508,29 +441,10 @@ export default class Queries {
         },
       },
     });
-    const available = pages.filter(
-      (page) =>
-        excludeId === undefined || String(page.id) !== String(excludeId),
-    );
-
-    if (ids) {
-      const pageById = new Map(
-        available.map((page) => [String(page.id), page]),
-      );
-      return ids
-        .slice(0, Math.max(0, limit))
-        .map((id) => pageById.get(String(id)))
-        .filter((page): page is Page => Boolean(page));
-    }
-
-    return available.slice(0, Math.max(0, Math.min(limit, 24)));
   }
 
-  static async queryArchiveCategories({
-    ids,
-    limit = 10,
-  }: ArchiveEntriesOptions): Promise<Category[]> {
-    const categories = await Queries.runPayloadFind<Category>({
+  static fetchArchiveCategories(): Promise<Category[]> {
+    return Queries.runPayloadFind<Category>({
       collection: CollectionName.category,
       tag: AppConst.CACHE_TAG_BOOTSTRAP,
       params: {
@@ -539,27 +453,15 @@ export default class Queries {
         overrideAccess: false,
         limit: 0,
         pagination: false,
-        sort: "position",
+        sort: "title",
         where: { _status: { equals: "published" } },
         select: {
           title: true,
           slug: true,
-          image: true,
+          meta: true,
         },
       },
     });
-
-    if (ids) {
-      const categoryById = new Map(
-        categories.map((category) => [String(category.id), category]),
-      );
-      return ids
-        .slice(0, Math.max(0, limit))
-        .map((id) => categoryById.get(String(id)))
-        .filter((category): category is Category => Boolean(category));
-    }
-
-    return categories.slice(0, Math.max(0, Math.min(limit, 24)));
   }
 
   private static async fetchSlugs(

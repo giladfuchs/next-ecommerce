@@ -6,30 +6,33 @@ import {
   FieldLabel,
   useField,
 } from "@payloadcms/ui";
+import { useTranslations } from "next-intl";
 
 import type { TextFieldClientComponent } from "payload";
+
+import { withProviders } from "@/components/admin";
 
 import "./color-picker-field.scss";
 
 const COLOR_PRESETS = [
-  { label: "Black", value: "#111827" },
-  { label: "Slate", value: "#475569" },
-  { label: "White", value: "#FFFFFF" },
-  { label: "Red", value: "#EF4444" },
-  { label: "Orange", value: "#F97316" },
-  { label: "Amber", value: "#F59E0B" },
-  { label: "Yellow", value: "#EAB308" },
-  { label: "Lime", value: "#84CC16" },
-  { label: "Green", value: "#22C55E" },
-  { label: "Teal", value: "#14B8A6" },
-  { label: "Cyan", value: "#06B6D4" },
-  { label: "Blue", value: "#3B82F6" },
-  { label: "Indigo", value: "#6366F1" },
-  { label: "Purple", value: "#A855F7" },
-  { label: "Pink", value: "#EC4899" },
-  { label: "Brown", value: "#92400E" },
-  { label: "Beige", value: "#D6C7A1" },
-  { label: "Rose gold", value: "#B76E79" },
+  { key: "black", value: "#111827" },
+  { key: "slate", value: "#475569" },
+  { key: "white", value: "#FFFFFF" },
+  { key: "red", value: "#EF4444" },
+  { key: "orange", value: "#F97316" },
+  { key: "amber", value: "#F59E0B" },
+  { key: "yellow", value: "#EAB308" },
+  { key: "lime", value: "#84CC16" },
+  { key: "green", value: "#22C55E" },
+  { key: "teal", value: "#14B8A6" },
+  { key: "cyan", value: "#06B6D4" },
+  { key: "blue", value: "#3B82F6" },
+  { key: "indigo", value: "#6366F1" },
+  { key: "purple", value: "#A855F7" },
+  { key: "pink", value: "#EC4899" },
+  { key: "brown", value: "#92400E" },
+  { key: "beige", value: "#D6C7A1" },
+  { key: "roseGold", value: "#B76E79" },
 ] as const;
 
 const normalizeHexForPicker = (value: string) => {
@@ -42,11 +45,12 @@ const normalizeHexForPicker = (value: string) => {
   return "#3B82F6";
 };
 
-export const ColorPickerField: TextFieldClientComponent = ({
+const ColorPickerFieldInner: TextFieldClientComponent = ({
   field,
   path: pathFromProps,
   readOnly,
 }) => {
+  const t = useTranslations("admin.colorPicker");
   const {
     admin: { description, placeholder } = {},
     label,
@@ -76,10 +80,14 @@ export const ColorPickerField: TextFieldClientComponent = ({
         ) : null}
       </div>
 
-      <div className="color-picker-field__presets" aria-label="Color presets">
+      <div
+        className="color-picker-field__presets"
+        aria-label={t("presetsLabel")}
+      >
         {COLOR_PRESETS.map((preset) => {
           const selected =
             currentValue.toLocaleLowerCase() === preset.value.toLowerCase();
+          const presetLabel = t(`presets.${preset.key}`);
 
           return (
             <button
@@ -88,8 +96,8 @@ export const ColorPickerField: TextFieldClientComponent = ({
               className="color-picker-field__preset"
               data-selected={selected || undefined}
               disabled={isReadOnly}
-              title={preset.label}
-              aria-label={`Use ${preset.label}`}
+              title={presetLabel}
+              aria-label={t("usePreset", { label: presetLabel })}
               aria-pressed={selected}
               onClick={() => setValue(preset.value)}
             >
@@ -102,12 +110,12 @@ export const ColorPickerField: TextFieldClientComponent = ({
       <div className="color-picker-field__controls">
         <label
           className="color-picker-field__native"
-          title="Open color picker"
+          title={t("openPicker")}
           style={{ background: preview }}
         >
           <input
             type="color"
-            aria-label="Choose a custom color"
+            aria-label={t("customColorLabel")}
             disabled={isReadOnly}
             value={normalizeHexForPicker(currentValue)}
             onChange={(event) => setValue(event.target.value.toUpperCase())}
@@ -125,7 +133,7 @@ export const ColorPickerField: TextFieldClientComponent = ({
             placeholder={
               typeof placeholder === "string" ? placeholder : "#3B82F6"
             }
-            aria-label="Color value"
+            aria-label={t("colorValueLabel")}
             onChange={(event) => setValue(event.target.value)}
           />
         </div>
@@ -136,7 +144,7 @@ export const ColorPickerField: TextFieldClientComponent = ({
             className="color-picker-field__clear"
             onClick={() => setValue("")}
           >
-            Clear
+            {t("clear")}
           </button>
         ) : null}
       </div>
@@ -145,3 +153,5 @@ export const ColorPickerField: TextFieldClientComponent = ({
     </div>
   );
 };
+
+export const ColorPickerField = withProviders(ColorPickerFieldInner);

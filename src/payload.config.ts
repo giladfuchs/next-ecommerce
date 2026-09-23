@@ -6,10 +6,13 @@ import { nodemailerAdapter } from "@payloadcms/email-nodemailer";
 import { buildConfig } from "payload";
 import { en } from "payload/i18n/en";
 import { he } from "payload/i18n/he";
+import sharp from "sharp";
 
 import {
+  GalleryMedia,
   Media,
   Pages,
+  SeoMedia,
   SiteSettings,
   Category,
   Users,
@@ -18,11 +21,15 @@ import {
 import { baseEditor } from "@/lib/collections/base-fields";
 import appConfig from "@/lib/core/config";
 import { plugins } from "@/lib/providers/plugins";
+import { stripeEndpoints } from "@/lib/stripe/endpoints";
 
 export default buildConfig({
   admin: {
     user: Users.slug,
     components: {
+      beforeNavLinks: [
+        "@/components/admin/dashboard-nav-link#DashboardNavLink",
+      ],
       views: {
         dashboard: {
           Component: "@/components/admin/order-dashboard#OrderDashboard",
@@ -59,7 +66,9 @@ export default buildConfig({
     supportedLanguages: appConfig.LOCAL.lang === "he" ? { he } : { en },
   },
 
-  collections: [Users, Pages, Category, Media, Reviews],
+  sharp,
+
+  collections: [Users, Pages, Category, Media, SeoMedia, GalleryMedia, Reviews],
   db: postgresAdapter({
     pool: {
       connectionString: appConfig.DATABASE_URL,
@@ -82,6 +91,7 @@ export default buildConfig({
       })
     : undefined,
   cors: [appConfig.BASE_URL],
+  endpoints: stripeEndpoints,
   plugins,
   secret: appConfig.PAYLOAD_SECRET,
   typescript: {

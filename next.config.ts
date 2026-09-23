@@ -13,12 +13,14 @@ const remotePatternsFromConfig = (): RemotePattern[] => {
 
   if (appConfig.SERVER_URL) {
     const baseUrl = new URL(appConfig.SERVER_URL);
-    patterns.push({
-      protocol: baseUrl.protocol.slice(0, -1) as "http" | "https",
-      hostname: baseUrl.hostname,
-      ...(baseUrl.port ? { port: baseUrl.port } : {}),
-      pathname: "/api/media/file/**",
-    });
+    patterns.push(
+      ...["media", "seo-media", "gallery-media"].map((collection) => ({
+        protocol: baseUrl.protocol.slice(0, -1) as "http" | "https",
+        hostname: baseUrl.hostname,
+        ...(baseUrl.port ? { port: baseUrl.port } : {}),
+        pathname: `/api/${collection}/file/**`,
+      })),
+    );
   }
 
   if (appConfig.STORAGE_URL) {
